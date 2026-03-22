@@ -1,0 +1,16 @@
+{
+  "book_id": 2,
+  "filename": "unique_b.pdf",
+  "passes": {
+    "pdfplumber": {},
+    "ocr": null,
+    "filename_heuristic": {}
+  },
+  "pdfplumber_text_length": 0,
+  "ocr_text_length": 0,
+  "merged": {
+    "confidence_score": 0.0,
+    "status": "error"
+  },
+  "timestamp": "2026-03-22T20:53:17.695111"
+}

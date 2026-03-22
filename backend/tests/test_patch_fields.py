@@ -17,9 +17,11 @@ def client_and_book(tmp_path, monkeypatch):
     monkeypatch.setenv("API_KEY", "")  # disable auth
 
     import backend.app as app_module
+    import backend.auth as auth_module
     import backend.db as db_module
 
     monkeypatch.setattr(app_module, "DB_PATH", db_file)
+    monkeypatch.setattr(auth_module, "_API_KEY", "")
     # Reset thread-local connection so get_conn() opens the new DB
     db_module._local.conn = None
 
