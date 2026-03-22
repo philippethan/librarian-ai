@@ -73,3 +73,32 @@ async def call_ollama(text: str, filepath: str, pass_name: str) -> dict:
 
 def call_ollama_sync(text: str, filepath: str, pass_name: str) -> dict:
     return asyncio.run(call_ollama(text, filepath, pass_name))
+
+
+async def call_ollama_chat(system: str, context: str, message: str) -> str:
+    """Call Ollama chat API; returns the reply string."""
+    payload = {
+        "model": OLLAMA_MODEL,
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": f"Context:\n{context}\n\nQuestion: {message}"},
+        ],
+        "stream": False,
+    }
+    timeout = httpx.Timeout(45.0)
+    async with _get_semaphore():
+        for attempt in range(2):
+            try:
+                async with httpx.AsyncClient(timeout=timeout) as client:
+                    resp = await client.post(f"{OLLAMA_URL}/api/chat", json=payload)
+                if resp.status_code == 500:
+                    if attempt == 0:
+                        continue
+                    return "Sorry, the AI service is unavailable."
+                resp.raise_for_status()
+                return resp.json().get("message", {}).get("content", "")
+            except (httpx.TimeoutException, httpx.RequestError):
+                if attempt == 0:
+                    continue
+                return "Sorry, the AI service timed out."
+    return ""
