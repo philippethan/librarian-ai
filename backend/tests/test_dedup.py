@@ -83,8 +83,7 @@ def _run_process(book_id: int, filepath: str, db_file: str):
     db_module._local.conn = None
 
     with patch("backend.process.call_ollama_sync", return_value={}), \
-         patch("backend.process.enrich_book", return_value=None), \
-         patch("backend.process.extract_cover", return_value=None):
+         patch("backend.covers.extract_cover", return_value=None):
         from backend.process import process_book_sync
         process_book_sync(book_id, filepath, db_file)
 
@@ -98,8 +97,7 @@ def _run_two_phase(book_id: int, filepath: str, db_file: str):
     hash_book_sync(book_id, filepath, db_file)
 
     with patch("backend.process.call_ollama_sync", return_value={}), \
-         patch("backend.process.enrich_book", return_value=None), \
-         patch("backend.process.extract_cover", return_value=None):
+         patch("backend.covers.extract_cover", return_value=None):
         from backend.process import extract_book_sync
         extract_book_sync(book_id, filepath, db_file)
 
@@ -239,8 +237,7 @@ def test_two_phase_duplicate_detected_before_extraction(dedup_env):
 
     # Phase 2 for B — should be skipped entirely
     with patch("backend.process.call_ollama_sync", return_value={}), \
-         patch("backend.process.enrich_book", return_value=None), \
-         patch("backend.process.extract_cover", return_value=None):
+         patch("backend.covers.extract_cover", return_value=None):
         from backend.process import extract_book_sync
         extract_book_sync(env["id_b"], env["file_b"], env["db_file"])
 

@@ -11,13 +11,11 @@ from backend.llm import call_ollama_sync
 
 logger = logging.getLogger(__name__)
 
-ENABLE_OCR = os.getenv("ENABLE_OCR", "true").lower() == "true"
-TESSERACT_PATH = os.getenv("TESSERACT_PATH", r"C:/Program Files/Tesseract-OCR/tesseract.exe")
 POPPLER_PATH = os.getenv("POPPLER_PATH", r"C:/poppler/Library/bin")
 
 
 # ---------------------------------------------------------------------------
-# Extraction helpers (stubs — will be moved to their own modules later)
+# Extraction helpers
 # ---------------------------------------------------------------------------
 
 def extract_pdfplumber(filepath: str) -> str:
@@ -33,32 +31,6 @@ def extract_pdfplumber(filepath: str) -> str:
         return "\n".join(text_parts)
     except Exception as exc:
         logger.warning("extract_pdfplumber failed for %s: %s", filepath, exc)
-        return ""
-
-
-def extract_ocr(filepath: str) -> str:
-    """OCR first 2 pages via pdf2image + pytesseract. Returns '' if ENABLE_OCR is false."""
-    if not ENABLE_OCR:
-        return ""
-    try:
-        from pdf2image import convert_from_path
-        import pytesseract
-        pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
-        pages = convert_from_path(
-            filepath,
-            first_page=1,
-            last_page=2,
-            dpi=150,
-            poppler_path=POPPLER_PATH,
-        )
-        text_parts = []
-        for page_img in pages:
-            t = pytesseract.image_to_string(page_img)
-            if t:
-                text_parts.append(t)
-        return "\n".join(text_parts)
-    except Exception as exc:
-        logger.warning("extract_ocr failed for %s: %s", filepath, exc)
         return ""
 
 
@@ -84,18 +56,33 @@ def extract_ebooklib(filepath: str) -> dict:
         return {}
 
 
-# ---------------------------------------------------------------------------
-# Stub hooks for future modules
-# ---------------------------------------------------------------------------
+def extract_epub_text(filepath: str) -> str:
+    """Extract plain text from first few content items of an EPUB."""
+    try:
+        from ebooklib import epub, ITEM_DOCUMENT
+        from html.parser import HTMLParser
 
-def enrich_book(book_id: int, db_path: str) -> None:
-    """Open Library enrichment — not yet implemented."""
-    logger.debug("enrich_book: not yet implemented (book_id=%d)", book_id)
+        class _TextExtractor(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.parts = []
+            def handle_data(self, data):
+                self.parts.append(data)
+            def get_text(self):
+                return " ".join(self.parts)
 
-
-def extract_cover(book_id: int, filepath: str, db_path: str) -> None:
-    """Cover extraction — not yet implemented."""
-    logger.debug("extract_cover: not yet implemented (book_id=%d)", book_id)
+        book = epub.read_epub(filepath, options={"ignore_ncx": True})
+        text_parts = []
+        for item in list(book.get_items_of_type(ITEM_DOCUMENT))[:5]:
+            parser = _TextExtractor()
+            parser.feed(item.get_content().decode("utf-8", errors="ignore"))
+            t = parser.get_text().strip()
+            if t:
+                text_parts.append(t)
+        return "\n".join(text_parts)
+    except Exception as exc:
+        logger.warning("extract_epub_text failed for %s: %s", filepath, exc)
+        return ""
 
 
 # ---------------------------------------------------------------------------
@@ -168,11 +155,7 @@ def _save_merged(conn, book_id: int, merged: dict) -> None:
 # ---------------------------------------------------------------------------
 
 def hash_book_sync(book_id: int, filepath: str, db_path: str) -> None:
-    """Phase 1: hash file and check for duplicates.
-
-    Sets status='pending' if unique, status='duplicate' if a matching hash
-    already exists in the DB.  Extraction is NOT run here.
-    """
+    """Phase 1: hash file and check for duplicates."""
     conn = get_conn(db_path)
     file_bytes = Path(filepath).read_bytes()
     file_hash = hashlib.sha256(file_bytes).hexdigest()
@@ -194,12 +177,7 @@ def hash_book_sync(book_id: int, filepath: str, db_path: str) -> None:
 
 
 def extract_book_sync(book_id: int, filepath: str, db_path: str) -> None:
-    """Phase 2: run the full extraction pipeline for a book already hashed.
-
-    Assumes hash_book_sync() has already been called and set status='pending'.
-    Skips the book silently if it is no longer pending (e.g. was marked
-    duplicate by a concurrent hash phase).
-    """
+    """Phase 2: run the full extraction pipeline for a book already hashed."""
     conn = get_conn(db_path)
     row = conn.execute("SELECT status FROM books WHERE id=?", (book_id,)).fetchone()
     if not row or row["status"] != "pending":
@@ -208,44 +186,38 @@ def extract_book_sync(book_id: int, filepath: str, db_path: str) -> None:
     conn.execute("UPDATE books SET status='processing' WHERE id=?", (book_id,))
     conn.commit()
 
-    # Step 1: Text extraction
-    pdf_text: str = ""
-    ocr_text: str | None = None
-    epub_meta: dict = {}
     fp_lower = filepath.lower()
 
+    # Step 1: Text extraction
+    raw_text: str = ""
+    epub_meta: dict = {}
+
     if fp_lower.endswith(".pdf"):
-        pdf_text = extract_pdfplumber(filepath)
-        if len(pdf_text) < 100:
-            ocr_text = extract_ocr(filepath)
+        raw_text = extract_pdfplumber(filepath)
     elif fp_lower.endswith(".epub"):
         epub_meta = extract_ebooklib(filepath)
+        raw_text = extract_epub_text(filepath)
 
-    # Step 2: Run Ollama passes
-    pdfplumber_result = (
-        call_ollama_sync(pdf_text, filepath, "pdfplumber")
-        if len(pdf_text) >= 100
+    text_extracted = len(raw_text) >= 100
+
+    # Step 2: LLM passes
+    llm_result = (
+        call_ollama_sync(raw_text, filepath, "text")
+        if text_extracted
         else {}
     )
-    if pdfplumber_result:
-        pdfplumber_result["extraction_method"] = "pdfplumber"
-
-    ocr_result: dict | None = None
-    if ocr_text:
-        ocr_result = call_ollama_sync(ocr_text, filepath, "ocr")
-        if ocr_result:
-            ocr_result["extraction_method"] = "ocr"
+    if llm_result:
+        llm_result["extraction_method"] = "pdfplumber" if fp_lower.endswith(".pdf") else "epub_text"
 
     fn_result = call_ollama_sync("", filepath, "filename_heuristic")
     if fn_result:
         fn_result["extraction_method"] = "filename_heuristic"
 
     # Step 3: Merge
-    results = [r for r in [pdfplumber_result, ocr_result, fn_result, epub_meta] if r]
+    results = [r for r in [llm_result, fn_result, epub_meta] if r]
     merged = merge_metadata(results) if results else {}
 
     # Step 4: Confidence score + status
-    text_extracted = len(pdf_text) >= 100 or bool(ocr_text)
     merged["confidence_score"] = compute_confidence(merged, text_extracted)
     merged["status"] = (
         "done"    if merged["confidence_score"] >= 0.4 else
@@ -256,28 +228,24 @@ def extract_book_sync(book_id: int, filepath: str, db_path: str) -> None:
     # Step 5: Write text cache (chat endpoint depends on this)
     text_cache_dir = Path(os.getenv("TEXT_CACHE_PATH", "./data/text_cache"))
     text_cache_dir.mkdir(parents=True, exist_ok=True)
-    cache_content = pdf_text or (ocr_text or "")
-    (text_cache_dir / f"{book_id}.txt").write_text(cache_content, encoding="utf-8")
+    (text_cache_dir / f"{book_id}.txt").write_text(raw_text, encoding="utf-8")
 
-    # Step 6: Open Library enrichment (stub)
-    enrich_book(book_id, db_path)
-
-    # Step 7: Cover extraction (stub)
+    # Step 6: Cover extraction
+    from backend.covers import extract_cover
     extract_cover(book_id, filepath, db_path)
 
-    # Step 8: Debug JSON
+    # Step 7: Debug JSON
     debug_dir = Path(os.getenv("DEBUG_PATH", "./data/debug"))
     debug_dir.mkdir(parents=True, exist_ok=True)
     debug_payload = {
         "book_id":  book_id,
         "filename": Path(filepath).name,
         "passes": {
-            "pdfplumber":         pdfplumber_result,
-            "ocr":                ocr_result,
+            "llm":                llm_result,
             "filename_heuristic": fn_result,
+            "epub_meta":          epub_meta,
         },
-        "pdfplumber_text_length": len(pdf_text),
-        "ocr_text_length":        len(ocr_text) if ocr_text else 0,
+        "raw_text_length": len(raw_text),
         "merged":    merged,
         "timestamp": datetime.datetime.utcnow().isoformat(),
     }
@@ -286,12 +254,12 @@ def extract_book_sync(book_id: int, filepath: str, db_path: str) -> None:
         encoding="utf-8",
     )
 
-    # Step 9: Save to DB
-    n_sources = sum(1 for r in [pdfplumber_result, ocr_result, fn_result] if r)
+    # Step 8: Save to DB
+    n_sources = sum(1 for r in [llm_result, fn_result] if r)
     merged["extraction_method"] = (
         "merged"             if n_sources > 1 else
-        "pdfplumber"         if pdfplumber_result else
-        "ocr"                if ocr_result        else
+        ("pdfplumber" if fp_lower.endswith(".pdf") else "epub_text") if llm_result else
+        "ebooklib"           if epub_meta           else
         "filename_heuristic"
     )
     _save_merged(conn, book_id, merged)

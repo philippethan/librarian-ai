@@ -2,15 +2,14 @@
   "book_id": 2,
   "filename": "unique_b.pdf",
   "passes": {
-    "pdfplumber": {},
-    "ocr": null,
-    "filename_heuristic": {}
+    "llm": {},
+    "filename_heuristic": {},
+    "epub_meta": {}
   },
-  "pdfplumber_text_length": 0,
-  "ocr_text_length": 0,
+  "raw_text_length": 0,
   "merged": {
     "confidence_score": 0.0,
     "status": "error"
   },
-  "timestamp": "2026-03-23T21:50:26.883659"
+  "timestamp": "2026-03-23T22:17:37.155575"
 }

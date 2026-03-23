@@ -47,8 +47,7 @@ def _run_process(book_id: int, filepath: str, db_file: str):
     db_module._local.conn = None
 
     with patch("backend.process.call_ollama_sync", return_value={}), \
-         patch("backend.process.enrich_book", return_value=None), \
-         patch("backend.process.extract_cover", return_value=None):
+         patch("backend.covers.extract_cover", return_value=None):
         from backend.process import process_book_sync
         process_book_sync(book_id, filepath, db_file)
 
@@ -94,15 +93,15 @@ def test_debug_json_has_required_keys(tmp_path, monkeypatch):
     assert payload["book_id"] == book_id
     assert "filename" in payload
     assert "passes" in payload
-    assert "pdfplumber" in payload["passes"]
-    assert "ocr" in payload["passes"]
+    assert "llm" in payload["passes"]
     assert "filename_heuristic" in payload["passes"]
+    assert "epub_meta" in payload["passes"]
     assert "merged" in payload
     assert "timestamp" in payload
 
 
 def test_debug_json_text_lengths_present(tmp_path, monkeypatch):
-    """Debug JSON includes pdfplumber_text_length and ocr_text_length."""
+    """Debug JSON includes raw_text_length."""
     debug_dir = tmp_path / "debug"
     monkeypatch.setenv("DEBUG_PATH", str(debug_dir))
 
@@ -117,10 +116,8 @@ def test_debug_json_text_lengths_present(tmp_path, monkeypatch):
     payload = json.loads(
         (debug_dir / f"{book_id}.json").read_text(encoding="utf-8")
     )
-    assert "pdfplumber_text_length" in payload
-    assert "ocr_text_length" in payload
-    assert isinstance(payload["pdfplumber_text_length"], int)
-    assert isinstance(payload["ocr_text_length"], int)
+    assert "raw_text_length" in payload
+    assert isinstance(payload["raw_text_length"], int)
 
 
 # ---------------------------------------------------------------------------
