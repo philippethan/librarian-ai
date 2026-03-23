@@ -466,6 +466,7 @@ async def scan_library(body: dict, _=Depends(require_auth)):
 
 @app.get("/api/duplicates")
 async def list_duplicates(_=Depends(require_auth)):
+    import os
     conn = get_conn(DB_PATH)
     rows = conn.execute(
         "SELECT id, filename, filepath, file_hash FROM books "
@@ -476,8 +477,13 @@ async def list_duplicates(_=Depends(require_auth)):
     groups: dict[str, list] = {}
     for row in rows:
         h = row["file_hash"]
+        fp = row["filepath"]
+        try:
+            filesize = os.path.getsize(fp) if fp and os.path.exists(fp) else None
+        except OSError:
+            filesize = None
         groups.setdefault(h, []).append(
-            {"id": row["id"], "filename": row["filename"], "filepath": row["filepath"]}
+            {"id": row["id"], "filename": row["filename"], "filepath": fp, "filesize": filesize}
         )
     return [{"hash": h, "books": books} for h, books in groups.items()]
 
@@ -502,7 +508,11 @@ async def dismiss_duplicate(body: dict, _=Depends(require_auth)):
 @app.get("/api/shelves")
 async def list_shelves(_=Depends(require_auth)):
     conn = get_conn(DB_PATH)
-    rows = conn.execute("SELECT * FROM shelves ORDER BY name").fetchall()
+    rows = conn.execute(
+        "SELECT s.*, COUNT(bs.book_id) AS book_count "
+        "FROM shelves s LEFT JOIN book_shelves bs ON s.id = bs.shelf_id "
+        "GROUP BY s.id ORDER BY s.name"
+    ).fetchall()
     return [dict(r) for r in rows]
 
 
