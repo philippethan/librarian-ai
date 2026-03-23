@@ -27,11 +27,12 @@ export default function SettingsPage() {
   const [exportLoading, setExportLoading] = useState({ csv: false, json: false });
 
   const [health, setHealth] = useState(null);
+  const [healthError, setHealthError] = useState(false);
 
   useEffect(() => {
     client.get('/api/health')
       .then(r => setHealth(r.data))
-      .catch(() => {});
+      .catch(() => setHealthError(true));
   }, []);
 
   function handleSaveKey() {
@@ -111,6 +112,8 @@ export default function SettingsPage() {
             <dt>Backend</dt>
             <dd><span className="settings-status settings-status--ok">{health.status}</span></dd>
           </dl>
+        ) : healthError ? (
+          <p className="settings-muted">Backend unreachable.</p>
         ) : (
           <p className="settings-muted">Loading…</p>
         )}
