@@ -167,10 +167,13 @@ def _save_merged(conn, book_id: int, merged: dict) -> None:
 # Main pipeline — SRS §1.17
 # ---------------------------------------------------------------------------
 
-def process_book_sync(book_id: int, filepath: str, db_path: str) -> None:
-    conn = get_conn(db_path)
+def hash_book_sync(book_id: int, filepath: str, db_path: str) -> None:
+    """Phase 1: hash file and check for duplicates.
 
-    # Step 1: Hash + duplicate check
+    Sets status='pending' if unique, status='duplicate' if a matching hash
+    already exists in the DB.  Extraction is NOT run here.
+    """
+    conn = get_conn(db_path)
     file_bytes = Path(filepath).read_bytes()
     file_hash = hashlib.sha256(file_bytes).hexdigest()
     existing = conn.execute(
@@ -186,10 +189,26 @@ def process_book_sync(book_id: int, filepath: str, db_path: str) -> None:
         logger.info("book_id=%d is a duplicate of book_id=%d — skipping extraction", book_id, existing["id"])
         return
 
-    conn.execute("UPDATE books SET file_hash=? WHERE id=?", (file_hash, book_id))
+    conn.execute("UPDATE books SET file_hash=?, status='pending' WHERE id=?", (file_hash, book_id))
     conn.commit()
 
-    # Step 2: Text extraction
+
+def extract_book_sync(book_id: int, filepath: str, db_path: str) -> None:
+    """Phase 2: run the full extraction pipeline for a book already hashed.
+
+    Assumes hash_book_sync() has already been called and set status='pending'.
+    Skips the book silently if it is no longer pending (e.g. was marked
+    duplicate by a concurrent hash phase).
+    """
+    conn = get_conn(db_path)
+    row = conn.execute("SELECT status FROM books WHERE id=?", (book_id,)).fetchone()
+    if not row or row["status"] != "pending":
+        return
+
+    conn.execute("UPDATE books SET status='processing' WHERE id=?", (book_id,))
+    conn.commit()
+
+    # Step 1: Text extraction
     pdf_text: str = ""
     ocr_text: str | None = None
     epub_meta: dict = {}
@@ -202,7 +221,7 @@ def process_book_sync(book_id: int, filepath: str, db_path: str) -> None:
     elif fp_lower.endswith(".epub"):
         epub_meta = extract_ebooklib(filepath)
 
-    # Step 3: Run Ollama passes
+    # Step 2: Run Ollama passes
     pdfplumber_result = (
         call_ollama_sync(pdf_text, filepath, "pdfplumber")
         if len(pdf_text) >= 100
@@ -221,11 +240,11 @@ def process_book_sync(book_id: int, filepath: str, db_path: str) -> None:
     if fn_result:
         fn_result["extraction_method"] = "filename_heuristic"
 
-    # Step 4: Merge
+    # Step 3: Merge
     results = [r for r in [pdfplumber_result, ocr_result, fn_result, epub_meta] if r]
     merged = merge_metadata(results) if results else {}
 
-    # Step 5: Confidence score + status
+    # Step 4: Confidence score + status
     text_extracted = len(pdf_text) >= 100 or bool(ocr_text)
     merged["confidence_score"] = compute_confidence(merged, text_extracted)
     merged["status"] = (
@@ -234,19 +253,19 @@ def process_book_sync(book_id: int, filepath: str, db_path: str) -> None:
         "error"
     )
 
-    # Step 6: Write text cache (chat endpoint depends on this)
+    # Step 5: Write text cache (chat endpoint depends on this)
     text_cache_dir = Path(os.getenv("TEXT_CACHE_PATH", "./data/text_cache"))
     text_cache_dir.mkdir(parents=True, exist_ok=True)
     cache_content = pdf_text or (ocr_text or "")
     (text_cache_dir / f"{book_id}.txt").write_text(cache_content, encoding="utf-8")
 
-    # Step 7: Open Library enrichment (stub)
+    # Step 6: Open Library enrichment (stub)
     enrich_book(book_id, db_path)
 
-    # Step 8: Cover extraction (stub)
+    # Step 7: Cover extraction (stub)
     extract_cover(book_id, filepath, db_path)
 
-    # Step 9: Debug JSON
+    # Step 8: Debug JSON
     debug_dir = Path(os.getenv("DEBUG_PATH", "./data/debug"))
     debug_dir.mkdir(parents=True, exist_ok=True)
     debug_payload = {
@@ -267,7 +286,7 @@ def process_book_sync(book_id: int, filepath: str, db_path: str) -> None:
         encoding="utf-8",
     )
 
-    # Step 10: Save to DB
+    # Step 9: Save to DB
     n_sources = sum(1 for r in [pdfplumber_result, ocr_result, fn_result] if r)
     merged["extraction_method"] = (
         "merged"             if n_sources > 1 else
@@ -277,6 +296,12 @@ def process_book_sync(book_id: int, filepath: str, db_path: str) -> None:
     )
     _save_merged(conn, book_id, merged)
     logger.info(
-        "process_book_sync done: book_id=%d status=%s confidence=%.4f",
+        "extract_book_sync done: book_id=%d status=%s confidence=%.4f",
         book_id, merged.get("status"), merged.get("confidence_score", 0),
     )
+
+
+def process_book_sync(book_id: int, filepath: str, db_path: str) -> None:
+    """Full pipeline (hash + extract) — used by the reprocess endpoint."""
+    hash_book_sync(book_id, filepath, db_path)
+    extract_book_sync(book_id, filepath, db_path)

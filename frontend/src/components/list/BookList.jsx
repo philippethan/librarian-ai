@@ -43,6 +43,7 @@ export default function BookList() {
   const [scanLoading, setScanLoading] = useState(false);
   const [loading, setLoading] = useState(true);
   const [scanError, setScanError] = useState('');
+  const [scanResult, setScanResult] = useState(null);
 
   const fetchBooks = useCallback(() => {
     const params = {};
@@ -76,10 +77,10 @@ export default function BookList() {
     if (!scanPath.trim()) return;
     setScanLoading(true);
     setScanError('');
+    setScanResult(null);
     try {
-      await scanBooks({ path: scanPath.trim() });
-      setScanOpen(false);
-      setScanPath('');
+      const res = await scanBooks({ path: scanPath.trim() });
+      setScanResult(res.data);
       fetchBooks();
       fetchStats();
     } catch (err) {
@@ -93,6 +94,7 @@ export default function BookList() {
     setScanOpen(false);
     setScanPath('');
     setScanError('');
+    setScanResult(null);
   }
 
   return (
@@ -111,6 +113,11 @@ export default function BookList() {
           <span className="stats-bar__item stats-bar__item--error">
             Error <strong>{stats.error}</strong>
           </span>
+          {stats.pending > 0 && (
+            <span className="stats-bar__item stats-bar__item--pending">
+              Pending <strong>{stats.pending}</strong>
+            </span>
+          )}
           {stats.processing > 0 && (
             <span className="stats-bar__item stats-bar__item--processing">
               Processing <strong>{stats.processing}</strong>
@@ -217,28 +224,53 @@ export default function BookList() {
         <div className="modal-overlay" onClick={closeScan}>
           <div className="modal" onClick={e => e.stopPropagation()}>
             <h2 className="modal__title">Scan folder</h2>
-            <input
-              className="modal__input"
-              type="text"
-              placeholder="C:/Users/Than/Books"
-              value={scanPath}
-              onChange={e => setScanPath(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && handleScan()}
-              autoFocus
-            />
-            {scanError && <p className="modal__error">{scanError}</p>}
-            <div className="modal__actions">
-              <button className="btn btn--secondary" onClick={closeScan}>
-                Cancel
-              </button>
-              <button
-                className="btn btn--primary"
-                onClick={handleScan}
-                disabled={scanLoading || !scanPath.trim()}
-              >
-                {scanLoading ? 'Scanning…' : 'Scan'}
-              </button>
-            </div>
+            {!scanResult ? (
+              <>
+                <input
+                  className="modal__input"
+                  type="text"
+                  placeholder="C:/Users/Than/Books"
+                  value={scanPath}
+                  onChange={e => setScanPath(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && handleScan()}
+                  autoFocus
+                />
+                {scanError && <p className="modal__error">{scanError}</p>}
+                <div className="modal__actions">
+                  <button className="btn btn--secondary" onClick={closeScan}>
+                    Cancel
+                  </button>
+                  <button
+                    className="btn btn--primary"
+                    onClick={handleScan}
+                    disabled={scanLoading || !scanPath.trim()}
+                  >
+                    {scanLoading ? 'Checking for duplicates…' : 'Scan'}
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="scan-result">
+                  <p className="scan-result__row">
+                    <strong>{scanResult.hashed}</strong> files found
+                  </p>
+                  {scanResult.duplicates > 0 && (
+                    <p className="scan-result__row scan-result__row--warn">
+                      <strong>{scanResult.duplicates}</strong> duplicate{scanResult.duplicates !== 1 ? 's' : ''} detected — skipped
+                    </p>
+                  )}
+                  <p className="scan-result__row scan-result__row--ok">
+                    <strong>{scanResult.queued}</strong> book{scanResult.queued !== 1 ? 's' : ''} queued for extraction
+                  </p>
+                </div>
+                <div className="modal__actions">
+                  <button className="btn btn--primary" onClick={closeScan}>
+                    Close
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}

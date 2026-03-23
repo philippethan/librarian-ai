@@ -30,6 +30,7 @@
 .stats-bar__item--partial strong { color: var(--badge-partial-text); }
 .stats-bar__item--error strong   { color: var(--badge-error-text); }
 .stats-bar__item--processing strong { color: var(--badge-processing-text); }
+.stats-bar__item--pending strong    { color: var(--badge-processing-text); }
 
 /* ── Loading ── */
 .book-list-page__loading {
@@ -270,6 +271,22 @@
   justify-content: flex-end;
   gap: 0.5rem;
 }
+
+/* ── Scan result summary ── */
+.scan-result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.scan-result__row {
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.scan-result__row--warn strong { color: var(--badge-error-text); }
+.scan-result__row--ok   strong { color: var(--badge-done-text); }
 
 .btn {
   padding: 0.5rem 1rem;

@@ -78,7 +78,7 @@ def _read_book(db_file: str, book_id: int) -> dict:
 
 
 def _run_process(book_id: int, filepath: str, db_file: str):
-    """Run process_book_sync with Ollama mocked to return empty dict."""
+    """Run process_book_sync (full pipeline) with Ollama mocked to return empty dict."""
     import backend.db as db_module
     db_module._local.conn = None
 
@@ -87,6 +87,21 @@ def _run_process(book_id: int, filepath: str, db_file: str):
          patch("backend.process.extract_cover", return_value=None):
         from backend.process import process_book_sync
         process_book_sync(book_id, filepath, db_file)
+
+
+def _run_two_phase(book_id: int, filepath: str, db_file: str):
+    """Run hash_book_sync then extract_book_sync (two-phase pipeline)."""
+    import backend.db as db_module
+    db_module._local.conn = None
+
+    from backend.process import hash_book_sync
+    hash_book_sync(book_id, filepath, db_file)
+
+    with patch("backend.process.call_ollama_sync", return_value={}), \
+         patch("backend.process.enrich_book", return_value=None), \
+         patch("backend.process.extract_cover", return_value=None):
+        from backend.process import extract_book_sync
+        extract_book_sync(book_id, filepath, db_file)
 
 
 # ---------------------------------------------------------------------------
@@ -186,3 +201,60 @@ def test_duplicate_stops_pipeline(dedup_env):
     assert book_b["status"] == "duplicate"
     # Title should remain None — extraction was not run
     assert book_b["title"] is None
+
+
+# ---------------------------------------------------------------------------
+# Two-phase pipeline tests
+# ---------------------------------------------------------------------------
+
+def test_two_phase_hash_sets_pending(dedup_env):
+    """hash_book_sync sets status='pending' for a unique file."""
+    import backend.db as db_module
+    db_module._local.conn = None
+
+    from backend.process import hash_book_sync
+    env = dedup_env
+    hash_book_sync(env["id_a"], env["file_a"], env["db_file"])
+
+    book_a = _read_book(env["db_file"], env["id_a"])
+    assert book_a["status"] == "pending"
+    assert book_a["file_hash"] == env["hash"]
+    assert book_a["duplicate_of"] is None
+
+
+def test_two_phase_duplicate_detected_before_extraction(dedup_env):
+    """Two-phase: Book B is flagged duplicate during Phase 1; extract_book_sync skips it."""
+    import backend.db as db_module
+    db_module._local.conn = None
+
+    from backend.process import hash_book_sync
+
+    env = dedup_env
+    # Phase 1 for A then B
+    hash_book_sync(env["id_a"], env["file_a"], env["db_file"])
+    hash_book_sync(env["id_b"], env["file_b"], env["db_file"])
+
+    book_b_after_hash = _read_book(env["db_file"], env["id_b"])
+    assert book_b_after_hash["status"] == "duplicate"
+
+    # Phase 2 for B — should be skipped entirely
+    with patch("backend.process.call_ollama_sync", return_value={}), \
+         patch("backend.process.enrich_book", return_value=None), \
+         patch("backend.process.extract_cover", return_value=None):
+        from backend.process import extract_book_sync
+        extract_book_sync(env["id_b"], env["file_b"], env["db_file"])
+
+    book_b = _read_book(env["db_file"], env["id_b"])
+    assert book_b["status"] == "duplicate"
+    assert book_b["title"] is None
+
+
+def test_two_phase_non_duplicate_extracted(dedup_env):
+    """Two-phase: unique book A goes through full pipeline after hash phase."""
+    env = dedup_env
+    _run_two_phase(env["id_a"], env["file_a"], env["db_file"])
+
+    book_a = _read_book(env["db_file"], env["id_a"])
+    # Status should be done/partial/error (not pending/processing)
+    assert book_a["status"] in ("done", "partial", "error")
+    assert book_a["file_hash"] == env["hash"]

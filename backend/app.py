@@ -431,10 +431,11 @@ async def scan_library(body: dict, _=Depends(require_auth)):
     if not root.exists() or not root.is_dir():
         raise HTTPException(400, detail=f"Path does not exist or is not a directory: {scan_path}")
 
-    from backend.process import process_book_sync
+    import concurrent.futures
+    from backend.process import extract_book_sync, hash_book_sync
 
     conn = get_conn(DB_PATH)
-    queued = 0
+    book_entries: list[tuple[int, str]] = []
     for filepath in root.rglob("*"):
         if filepath.suffix.lower() not in (".pdf", ".epub"):
             continue
@@ -455,10 +456,29 @@ async def scan_library(body: dict, _=Depends(require_auth)):
             conn.commit()
             book_id = cursor.lastrowid
 
-        _executor.submit(process_book_sync, book_id, abs_path, DB_PATH)
-        queued += 1
+        book_entries.append((book_id, abs_path))
 
-    return {"queued": queued}
+    # Phase 1: hash all files and detect duplicates (wait for all to finish)
+    hash_futures = [
+        _executor.submit(hash_book_sync, bid, fp, DB_PATH)
+        for bid, fp in book_entries
+    ]
+    concurrent.futures.wait(hash_futures)
+
+    # Count outcomes after Phase 1
+    ids = [bid for bid, _ in book_entries]
+    placeholders = ",".join("?" * len(ids))
+    rows = conn.execute(
+        f"SELECT status FROM books WHERE id IN ({placeholders})", ids
+    ).fetchall() if ids else []
+    duplicates = sum(1 for r in rows if r["status"] == "duplicate")
+    pending = sum(1 for r in rows if r["status"] == "pending")
+
+    # Phase 2: queue extraction only for non-duplicate books
+    for bid, fp in book_entries:
+        _executor.submit(extract_book_sync, bid, fp, DB_PATH)
+
+    return {"hashed": len(book_entries), "duplicates": duplicates, "queued": pending}
 
 
 # ---------------------------------------------------------------------------
@@ -657,6 +677,9 @@ async def stats(_=Depends(require_auth)):
     processing = conn.execute(
         "SELECT COUNT(*) FROM books WHERE status='processing'"
     ).fetchone()[0]
+    pending = conn.execute(
+        "SELECT COUNT(*) FROM books WHERE status='pending'"
+    ).fetchone()[0]
     shelves_count = conn.execute("SELECT COUNT(*) FROM shelves").fetchone()[0]
     return {
         "total_books": total,
@@ -664,6 +687,7 @@ async def stats(_=Depends(require_auth)):
         "partial": partial,
         "error": error,
         "processing": processing,
+        "pending": pending,
         "total_shelves": shelves_count,
     }
 
