@@ -518,6 +518,62 @@
   padding: 0.25rem;
 }
 
+.dp-debug__panel {
+  padding: 0.5rem;
+  background: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dp-debug__text-length {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  padding: 0.25rem 0;
+}
+
+.dp-debug__raw-btn {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+.dp-debug__raw {
+  font-size: 0.75rem;
+  font-family: monospace;
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.625rem;
+  overflow-x: auto;
+  color: var(--text-primary);
+  white-space: pre;
+  margin: 0;
+}
+
+.dp-debug__summary-badge {
+  margin-left: 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.dp-debug__accordion--merged > summary {
+  background: var(--bg-sidebar);
+  border-top: 1px solid var(--border);
+}
+
+.dp-debug__conf-row {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  padding: 0.25rem 0 0.375rem;
+}
+
+.dp-debug__conf-row strong {
+  color: var(--text-primary);
+}
+
 /* ── Toasts ─────────────────────────────────────────────────────────────────── */
 
 .dp-toasts {

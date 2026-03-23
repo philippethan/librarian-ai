@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import {
   patchBook, fixBook, enrichBook, renameBook, openBook, refreshCover, getCover,
-  patchReadingStatus, getBook, debugBook,
+  patchReadingStatus, getBook,
 } from '../../api/books';
 import { listShelves, addBookToShelf, removeBookFromShelf } from '../../api/shelves';
 import CategoryComboBox from '../shared/CategoryComboBox';
 import LanguagePicker from '../shared/LanguagePicker';
 import SegmentedControl from '../shared/SegmentedControl';
 import YearPicker from '../shared/YearPicker';
+import DebugTab from './DebugTab';
 import './DetailPanel.css';
 
 // ── helpers ───────────────────────────────────────────────────────────────────
@@ -47,52 +48,6 @@ function ToastList({ toasts }) {
     <div className="dp-toasts">
       {toasts.map(t => (
         <div key={t.id} className={`dp-toast dp-toast--${t.kind}`}>{t.msg}</div>
-      ))}
-    </div>
-  );
-}
-
-// ── DebugTab ──────────────────────────────────────────────────────────────────
-
-function DebugTab({ book }) {
-  const [debug, setDebug] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(true);
-    debugBook(book.id)
-      .then(r => setDebug(r.data))
-      .catch(() => setDebug(null))
-      .finally(() => setLoading(false));
-  }, [book.id]);
-
-  if (loading) return <div className="dp-debug__loading">Loading debug info…</div>;
-  if (!debug) return <div className="dp-debug__empty">No debug data available.</div>;
-
-  const passes = debug.passes ?? {};
-
-  return (
-    <div className="dp-debug">
-      {Object.entries(passes).map(([passName, data]) => (
-        <details key={passName} className="dp-debug__accordion">
-          <summary className="dp-debug__summary">{passName}</summary>
-          <div className="dp-debug__grid">
-            {data && typeof data === 'object' && Object.entries(data).length > 0
-              ? Object.entries(data).map(([field, val]) => {
-                  const filled = val !== null && val !== '' && val !== undefined;
-                  return (
-                    <div key={field} className={`dp-debug__cell dp-debug__cell--${filled ? 'green' : 'red'}`}>
-                      <span className="dp-debug__field">{field}</span>
-                      <span className="dp-debug__val">
-                        {val == null ? '—' : Array.isArray(val) ? val.join(', ') : String(val)}
-                      </span>
-                    </div>
-                  );
-                })
-              : <div className="dp-debug__empty-pass">No data for this pass.</div>
-            }
-          </div>
-        </details>
       ))}
     </div>
   );

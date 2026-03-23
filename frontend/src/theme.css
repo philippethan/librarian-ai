@@ -37,6 +37,15 @@
   --btn-secondary-text: #374151;
   --btn-secondary-border: #d1d5db;
   --overlay-bg: rgba(0, 0, 0, 0.4);
+
+  --chart-1: #4a6cf7;
+  --chart-2: #22c55e;
+  --chart-3: #f97316;
+  --chart-4: #a855f7;
+  --chart-5: #ec4899;
+  --chart-6: #14b8a6;
+  --chart-7: #f59e0b;
+  --chart-8: #ef4444;
 }
 
 [data-theme="dark"] {
@@ -78,4 +87,13 @@
   --btn-secondary-text: #d1d5db;
   --btn-secondary-border: #4b5563;
   --overlay-bg: rgba(0, 0, 0, 0.65);
+
+  --chart-1: #6b8afb;
+  --chart-2: #4ade80;
+  --chart-3: #fb923c;
+  --chart-4: #c084fc;
+  --chart-5: #f472b6;
+  --chart-6: #2dd4bf;
+  --chart-7: #fbbf24;
+  --chart-8: #f87171;
 }
