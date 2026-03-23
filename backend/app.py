@@ -125,7 +125,8 @@ def _book_filter_sql(
 
 @app.get("/api/health")
 async def health():
-    return {"status": "ok"}
+    from backend.llm import OLLAMA_MODEL, OLLAMA_URL
+    return {"status": "ok", "ollama_model": OLLAMA_MODEL, "ollama_url": OLLAMA_URL}
 
 
 @app.get("/api/auth/verify")
