@@ -1,0 +1,11 @@
+{
+  "book_id": 5,
+  "filename": "100 FLE - Communication essentielle du français A1 (Dider) (Z-Library).pdf",
+  "text_length": 763,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:21:41.033652"
+}

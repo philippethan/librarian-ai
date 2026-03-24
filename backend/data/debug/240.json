@@ -1,0 +1,11 @@
+{
+  "book_id": 240,
+  "filename": "Foundations_of_One_Electron_Theory_pf_Solids_L_I_Yatrebov,_A_A_Katsnelson.pdf",
+  "text_length": 104,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:43.335356"
+}

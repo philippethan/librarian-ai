@@ -1,0 +1,11 @@
+{
+  "book_id": 287,
+  "filename": "HBR's 10 Must Reads on Communication - Harvard Business Review Press.pdf",
+  "text_length": 973,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:53.449169"
+}

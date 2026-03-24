@@ -1,0 +1,11 @@
+{
+  "book_id": 253,
+  "filename": "Game_Theory_Explained_A_Mathematical_Introduction_with_Optimization.pdf",
+  "text_length": 208,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:45.848754"
+}

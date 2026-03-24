@@ -1,0 +1,28 @@
+1
+MO103 
+Introduction à 
+l’ingénierie système 
+Thibault Toralba
+ 
+MO103 – Introduction à l’ingénierie système 
+ 
+Une école en 
+mouvement 
+2
+➢L’ingénierie dans les projets étudiants
+Conception de robots pour la Coupe de France de Robotique
+➢Formation à l’Ingénierie Système
+Introduction : à propos des systèmes
+Emergence et expression des besoins
+Passage du besoin à l’exigence
+Rédaction d’une Spécification Technique du Besoin
+Conception de l’architecture
+Tests, vérifications et validations
+➢Semaine projet
+Projet robot sumo
+MO103 – Introduction à l’ingénierie système 
+Agenda
+3
+MO103 – Introduction à l’ingénierie système 
+Conception de robots
+pour la Coupe de France de Robotique

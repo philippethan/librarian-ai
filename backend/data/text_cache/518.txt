@@ -1,0 +1,15 @@
+Systèmes d'exploitation
+Les processus
+Thomas Ropars
+Email: 
+Website: 
+thomas.ropars@univ-grenoble-alpes.fr
+tropars.github.io
+1 .  1
+Dans ce cours
+fork()
+wait()
+exec()
+2
+Le concept de processus
+3

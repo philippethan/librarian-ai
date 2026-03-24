@@ -1,0 +1,61 @@
+A Practical Guide
+for Engineers and Scientists
+C N CA W
+NG
+A Practical Guide
+for Engineers and Scientists
+TECHNICAL
+WRITING
+Phillip A. Laplante
+CRC Press is an imprint of the
+Taylor & Francis Group, an informa business
+Boca Raton   London   New York
+WHAT EVERY ENGINEER SHOULD KNOW
+A Series
+Series Editor*
+Phillip A. Laplante
+Pennsylvania State University
+ 1. What Every Engineer Should Know About Patents, William G. Konold, 
+Bruce Tittel, Donald F. Frei, and David S. Stallard
+ 2. What Every Engineer Should Know About Product Liability, James F. Thorpe 
+and William H. Middendorf
+ 3. What Every Engineer Should Know About Microcomputers: Hardware/Software 
+Design, A Step-by-Step Example, William S. Bennett and Carl F. Evert, Jr.
+ 4. What Every Engineer Should Know About Economic Decision Analysis,  
+Dean S. Shupe
+ 5. What Every Engineer Should Know About Human Resources Management, 
+Desmond D. Martin and Richard L. Shell
+ 6. What Every Engineer Should Know About Manufacturing Cost Estimating,  
+Eric M. Malstrom
+ 
+7. What Every Engineer Should Know About Inventing, William H. Middendorf
+ 8. What Every Engineer Should Know About Technology Transfer and Innovation, 
+Louis N. Mogavero and Robert S. Shane
+ 9. What Every Engineer Should Know About Project Management,  
+Arnold M. Ruskin and W. Eugene Estes
+ 10. What Every Engineer Should Know About Computer-Aided Design and 
+Computer-Aided Manufacturing: The CAD/CAM Revolution, John K. Krouse
+ 11. What Every Engineer Should Know About Robots, Maurice I. Zeldman
+ 12. What Every Engineer Should Know About Microcomputer Systems Design and 
+Debugging, Bill Wray and Bill Crawford
+ 13. What Every Engineer Should Know About Engineering Information Resources, 
+Margaret T. Schenk and James K. Webster
+ 14. What Every Engineer Should Know About Microcomputer Program Design,  
+Keith R. Wehmeyer
+ 15. What Every Engineer Should Know About Computer Modeling and Simulation, 
+Don M. Ingels
+ 16. What Every Engineer Should Know About Engineering Workstations,  
+Justin E. Harlow III
+ 17. What Every Engineer Should Know About Practical CAD/CAM Applications,  
+John Stark
+ 18. What Every Engineer Should Know About Threaded Fasteners: Materials and 
+Design, Alexander Blake
+ 19. What Every Engineer Should Know About Data Communications,  
+Carl Stephen Clifton
+ 20. What Every Engineer Should Know About Material and Component Failure, 
+Failure Analysis, and Litigation, Lawrence E. Murr
+ 21. What Every Engineer Should Know About Corrosion, Philip Schweitzer
+ 22. What Every Engineer Should Know About Lasers, D. C. Winburn
+ 23. What Every Engineer Should Know About Finite Element Analysis,  
+John R. Brauer
+*Founding Series Editor: William H. Middendorf

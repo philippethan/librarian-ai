@@ -1,0 +1,11 @@
+{
+  "book_id": 356,
+  "filename": "Leroux - Lectures CLE en Français Facile de l’opéra G Aston Leroux.pdf",
+  "text_length": 509,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:09.983003"
+}

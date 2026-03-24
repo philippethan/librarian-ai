@@ -1,0 +1,23 @@
+Requirements Engineering for
+Safety-Critical Systems
+RIVER PUBLISHERS SERIES IN SOFTWARE
+ENGINEERING
+The “River Publishers Series in Software Engineering” is a series of
+comprehensive academic and professional books which focus on the theory
+and applications of Computer Science in general, and more speciﬁcally
+Programming Languages, Software Development and Software Engineering.
+Books published in the series include research monographs, edited
+volumes, handbooks and textbooks. The books provide professionals,
+researchers, educators, and advanced students in the ﬁeld with an invaluable
+insight into the latest research and developments.
+Topics covered in the series include, but are by no means restricted to the
+following:
+• Software Engineering
+• Software Development
+• Programming Languages
+• Computer Science
+• Automation Engineering
+• Research Informatics
+• Information Modelling
+• Software Maintenance
+For a list of other books in this series, visit www.riverpublishers.com

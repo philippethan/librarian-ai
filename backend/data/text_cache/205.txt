@@ -1,0 +1,30 @@
+Electric Power Distribution 
+Engineering
+Are you fascinated by the complex web of electrical power that illuminates our modern world? Do you want to un-
+derstand the intricate systems responsible for delivering electricity to our homes, businesses, and industries? Look 
+no further than Electric Power Distribution Engineering, Fourth Edition by renowned author Turan Gönen, revised 
+and updated by Chee-Wooi Ten and Ali Mehrizi-Sani. This captivating book takes you on a journey through the 
+fascinating realm of electric power distribution, offering a comprehensive yet accessible exploration of the engineer-
+ing principles, technologies, and practices that underpin this vital aspect of our daily lives. Whether you’re a curious 
+non-specialist, an avid reader with a thirst for knowledge, or a librarian or bookseller seeking an invaluable resource, 
+Dr. Gönen’s masterwork will both enlighten and captivate you.
+An early leader in the academic market, this book provides an overview of classical planning for electric power 
+distribution systems, which has been used for many years in designing and analyzing electric power distribution 
+systems. The authors have taken a bold initiative to update the content, incorporating relevant aspects reflecting 
+the advancements of today’s evolving smart grid. Within its pages, readers will discover detailed discussions on 
+the principles of power distribution, including the fundamentals of power generation, transmission, and distribu-
+tion. The authors provide detailed explanations of the various components and equipment used in distribution 
+systems, such as transformers, circuit breakers, switches, and protective devices. As part of the book, planning 
+for the distribution network involves sizing and considering candidate geographical locations/regions in rela-
+tion to the capacity of existing infrastructure, allowing for new additions to be built. For example, this includes 
+locations either extending another feeder from distribution substations or building new distribution substations, 
+depending on what makes more sense. Many assumptions have been made for non-existing distribution feeders 
+to calculate ballpark figures for determining voltage profile and power losses if they were to be constructed. Read-
+ers will gain insights into how these considerations translate into net positive, net negative, or net-zero loads. All 
+of these aspects can be gradually integrated with renewable energy sources, innovative grid technologies, and 
+distribution automation over time.
+The authors involved in this book have made significant contributions to the state-of-the-art development by 
+incorporating recent updates from the literature, thereby addressing the latest advancements. One remarkable 
+feature of Turan Gönen’s Electric Power Distribution Engineering is its strong focus on practical applications and 
+real-world scenarios. In addition to providing theoretical knowledge, the book also offers numerous examples 
+that effe

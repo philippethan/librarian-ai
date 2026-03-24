@@ -1,0 +1,11 @@
+{
+  "book_id": 653,
+  "filename": "User_Guides,_Manuals,_and_Technical_Writing_A_Guide_to_Professional.pdf",
+  "text_length": 231,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:24:04.478605"
+}

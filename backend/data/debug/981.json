@@ -1,0 +1,11 @@
+{
+  "book_id": 981,
+  "filename": "The_Art_of_Spending_Money_Simple_Choices_for_a_Richer_Life_Morgan.epub",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:25:07.427822"
+}

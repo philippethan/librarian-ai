@@ -1,0 +1,29 @@
+Werner Linde
+Probability Theory
+Also of Interest
+Brownian Motion. A Guide to Random Processes and Stochastic Calculus
+René L. Schilling, 2021
+ISBN 978-3-11-074125-4, e-ISBN (PDF) 978-3-11-074127-8,
+e-ISBN (EPUB) 978-3-11-074149-0
+Probability Theory and Statistics with Real World Applications. Univariate and
+Multivariate Models Applications
+Peter Zörnig, 2024
+ISBN 978-3-11-133220-8, e-ISBN (PDF) 978-3-11-133227-7,
+e-ISBN (EPUB) 978-3-11-133232-1
+Bitcoin: A Game-Theoretic Analysis
+Micah Warren, 2023
+ISBN 978-3-11-077283-8, e-ISBN (PDF) 978-3-11-077284-5,
+e-ISBN (EPUB) 978-3-11-077305-7
+Loss Data Analysis. The Maximum Entropy Approach
+Henryk Gzyl, Silvia Mayoral, Erika Gomes-Gonçalves, 2023
+ISBN 978-3-11-104738-6, e-ISBN (PDF) 978-3-11-104818-5,
+e-ISBN (EPUB) 978-3-11-104970-0
+Fractional Deterministic and Stochastic Calculus
+Giacomo Ascione, Yuliya Mishura, Enrica Pirozzi, 2023
+ISBN 978-3-11-077981-3, e-ISBN (PDF) 978-3-11-078001-7,
+e-ISBN (EPUB) 978-3-11-078022-2
+Werner Linde
+Probability Theory
+౩
+A First Course in Probability Theory and Statistics
+2nd edition

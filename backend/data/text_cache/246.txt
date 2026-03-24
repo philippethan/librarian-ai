@@ -1,0 +1,31 @@
+Functional Programming with
+C#
+Create More Supportable, Robust, and Testable Code
+With Early Release ebooks, you get books in their earliest form—the
+author’s raw and unedited content as they write—so you can take
+advantage of these technologies long before the official release of these
+titles.
+Simon J. Painter
+Functional Programming with C#
+by Simon J. Painter
+Copyright Simon Painter © 2024. All rights reserved.
+Printed in the United States of America.
+Published by O’Reilly Media, Inc., 1005 Gravenstein Highway North,
+Sebastopol, CA 95472.
+O’Reilly books may be purchased for educational, business, or sales
+promotional use. Online editions are also available for most titles
+(http://oreilly.com). For more information, contact our corporate/institutional
+sales department: 800-998-9938 or corporate@oreilly.com.
+Acquisitions Editor: Suzanne McQuade
+Development Editor: Jill Leonard
+Production Editor: Gregory Hyman
+Interior Designer: David Futato
+Cover Designer: Karen Montgomery
+Illustrator: Kate Dullea
+November 2023: First Edition
+Revision History for the Early Release
+2022-04-20: First Release
+2022-06-07: Second Release
+2022-08-22: Third Release
+2022-10-07: Fourth Release
+2022-11-08: Fifth Release

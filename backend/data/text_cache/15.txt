@@ -1,0 +1,54 @@
+1
+Drone Carrier: An Integrated Unmanned Surface
+Vehicle for Autonomous Inspection and Intervention
+in GNSS-Denied Maritime Environment
+Yihao Dong, Muhayyu Ud Din, Francesco Lagala, Hailiang Kuang, Jianjun Sun, Siyuan Yang, Irfan Hussain and
+Shaoming He∗
+Abstract—This paper introduces an innovative drone carrier
+concept that is applied in maritime port security or offshore
+rescue. This system works with a heterogeneous system consisting
+of multiple Unmanned Aerial Vehicles (UAVs) and Unmanned
+Surface Vehicles (USVs) to perform inspection and intervention
+tasks in GNSS-denied or interrupted environments. The carrier,
+an electric catamaran measuring 4m by 7m, features a 4m by
+6m deck supporting automated takeoff and landing for four DJI
+M300 drones, along with a 10kg-payload manipulator operable
+in up to level 3 sea conditions. Utilizing an offshore gimbal
+camera for navigation, the carrier can autonomously navigate,
+approach and dock with non-cooperative vessels, guided by an
+onboard camera, LiDAR, and Doppler Velocity Log (DVL) over
+a 3 km2 area. UAVs equipped with onboard Ultra-Wideband
+(UWB) technology execute mapping, detection, and manipulation
+tasks using a versatile gripper designed for wet, saline conditions.
+Additionally, two UAVs can coordinate to transport large objects
+to the manipulator or interact directly with them. These proce-
+dures are fully automated and were successfully demonstrated
+at the Mohammed Bin Zayed International Robotic Competition
+(MBZIRC2024), where the drone carrier equipped with four
+UAVS and one manipulator, automatically accomplished the
+intervention tasks in sea-level-3 (wave height 1.25m) based on
+the rough target information.
+Index Terms—Maritime heterogeneous system, Inspection and
+intervention, GNSS-denied environments, Autonomous naviga-
+tion
+I. INTRODUCTION
+M
+ARINE robotics has garnered significant attention in
+recent years due to its various applications in maritime
+security [1], environmental monitoring [2], and disaster re-
+sponse [3], rescue operations [4]. Compared to crewed ves-
+sels, marine robots offer significant advantages for executing
+repetitive tasks over extended durations and across large spatial
+scales, as well as for undertaking hazardous missions in poorly
+characterized or unknown environments. The deployment of
+This work is supported by the National Key Research and Development Pro-
+gram under Grant No. 2022YFE0204400, the Beijing Science and Technology
+Project under Grant No. Z221100002722008, and the Khalifa University under
+Award No. RC1-2018-KUCARS-8474000136, CIRA-2021-085, MBZIRC-
+8434000194, KU-BIT-Joint-Lab-8434000534.
+Yihao Dong, Muhayy Ud Din and Irfan Hussain are with Khalifa University
+Center of Autonomous Robotic System (KUCARS), 127788 Abu Dhabi, UAE.
+Francesco Lagala is with the Institute for Marine Engineering, National
+Research Council, 139-00128 Rome, Italy.
+Hailiang Kuang, Jianjun Sun, Siyuan Yang and Shaoming He are with the
+School of Aerospace Engineering, Beijing I

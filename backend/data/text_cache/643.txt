@@ -1,0 +1,66 @@
+ 
+System Energy Optimisation Strategies for 
+DC Railway Traction Power Networks  
+by 
+Zhongbei Tian 
+A thesis submitted to  
+the University of Birmingham  
+for the degree of 
+DOCTOR OF PHILOSOPHY 
+ 
+ 
+Department of Electronic, Electrical and Systems Engineering 
+College of Engineering and Physical Sciences 
+University of Birmingham, UK 
+June 2017 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+University of Birmingham Research Archive 
+ 
+e-theses repository 
+ 
+ 
+This unpublished thesis/dissertation is copyright of the author and/or third 
+parties. The intellectual property rights of the author or third parties in respect 
+of this work are as defined by The Copyright Designs and Patents Act 1988 or 
+as modified by any successor legislation.   
+ 
+Any use made of information contained in this thesis/dissertation must be in 
+accordance with that legislation and must be properly acknowledged.  Further 
+distribution or reproduction in any format is prohibited without the permission 
+of the copyright holder.  
+ 
+ 
+ 
+Abstract 
+i 
+ 
+ 
+Abstract 
+As a result of rapid global urbanisation, energy and environmental sustainability are 
+becoming increasingly significant. According to the Rail Transport and Environment 
+Report published by International Union of Railways in 2015, energy used in the 
+transportation sector accounts for approximately 32% of final energy consumption in the 
+EU. Railway, representing over 8.5% of the total traffic in volume, shares less than 2% of 
+the transport energy consumption. Railway plays an important role in reducing energy 
+usage and CO2 emissions, compared with other transport modes such as road transport. 
+However, despite the inherent efficiency, the energy used by the rail industry is still high, 
+making the study of railway energy efficiency of global importance. Previous studies have 
+investigated train driving strategies for traction energy saving. However, few of them 
+consider the overall system energy optimisation, which depends on various factors 
+including driving styles and timetables. This thesis aims to find a system energy 
+optimisation solution for urban railways. 
+This thesis begins with a review of the main arrangement of the railway systems and 
+literature on energy optimisation studies in railways. The development of the energy 
+evaluation simulation software for DC-fed railway systems is demonstrated. The train 
+movement model and railway power network model are integrated into the simulator. This 
+energy simulator is able to calculate the energy flow of the whole system according to 
+multiple-train driving controls and timetables.  

@@ -1,0 +1,11 @@
+{
+  "book_id": 245,
+  "filename": "Frientimacy_10_Ways_to_Improve_Your_Friendships_and_Deepen_Your.pdf",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:44.201150"
+}

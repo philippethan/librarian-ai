@@ -1,0 +1,11 @@
+{
+  "book_id": 228,
+  "filename": "Essential Calculus-based Physics Study Guide Workbook Electricity and Magnetism (Chris McMullen) (Z-Library).pdf",
+  "text_length": 517,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:39.694041"
+}

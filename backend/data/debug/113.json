@@ -1,0 +1,11 @@
+{
+  "book_id": 113,
+  "filename": "Bellier - Manuel Sciences physiques Tle Spécialité SI, édition 2020.pdf",
+  "text_length": 2606,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:11.537602"
+}

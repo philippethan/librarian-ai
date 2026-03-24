@@ -1,0 +1,59 @@
+Cahier d'entraînement
+en
+ 
+physique-chimie
+Conçu par un collectif de 44 professeurs en classes préparatoires
+Sous la direction de Colas Bardavid et Catherine Lavainne
+Classes prépas PSI/PSI*
+Auto-entraînement
+© Dunod, 2025
+11 rue Paul Bert, 92240 Malakoff 
+www.dunod.com
+Couverture : création Hokus Pokus, adaptation Studio Dunod
+ISBN  978-2-10-088487-2
+Sommaire
+Mode d’emploi du cahier d’entraînement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . v
+Généralités
+□
+Fiche 1.
+Opérateurs vectoriels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Électromagnétisme en régime permanent
+□
+Fiche 2.
+Électrostatique . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+□
+Fiche 3.
+Magnétostatique. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .24
+Électromagnétisme en régime variable
+□
+Fiche 4.
+Équations de Maxwell . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
+□
+Fiche 5.
+Induction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .47
+□
+Fiche 6.
+Ferromagnétisme . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+□
+Fiche 7.
+Ondes électromagnétiques I . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65
+□
+Fiche 8.
+Ondes électromagnétiques II . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+Thermodynamique
+□
+Fiche 9.
+Outils mathématiques pour la diﬀusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+□
+Fiche 10. Diﬀusion particulaire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+□
+Fiche 11. Diﬀusion thermique. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .96
+□
+Fiche 12. Transferts thermiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+□
+Fiche 13. Tables et diagrammes thermodynamiques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+□
+Fiche 14. Thermodynamique industrielle. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .124
+Électronique
+□
+Fiche 15. Signaux . . . . . . . . . . . . . . . . . . .

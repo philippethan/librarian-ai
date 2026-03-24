@@ -1,0 +1,21 @@
+Classical Mechanics
+The third edition of Classical Mechanics presents a complete account of the classical mechanics of 
+particles and systems for physics students at the advanced undergraduate level. The textbook evolved 
+from a set of lecture notes for a course on the subject taught for many years by the author at California 
+State University, Stanislaus. It assumes the reader has been exposed to a course in calculus and a 
+calculus-based general physics course. However, no prior knowledge of differential equations is required. 
+Differential equations and new mathematical methods are developed in the text as the occasion demands.
+The book begins with fundamental concepts, such as velocity and acceleration. Vectors are used from the 
+start. Unlike conventional textbooks, this textbook introduces Lagrangian and Hamiltonian formulations 
+of mechanics early on, enabling students to develop confidence in these essential methods. Special note is 
+given to concepts instrumental in the development of modern physics, including the relationship between 
+symmetries and the laws of conservation. Applications to other branches of physics are also included 
+wherever possible. Generalized coordinates are covered to enable discussion of Lagrangian dynamics and 
+Hamiltonian dynamics, which have important applications in quantum mechanics, statistical mechanics, 
+celestial mechanics, and electrodynamics.
+Key features:
+•	 Lengthier sections in early chapters have been rewritten as short and easy-to-understand sections.
+•	 Each chapter contains homework problems of varying degrees of difficulty to enhance understanding 
+of the material in the text.
+•	 Detailed but not overlong mathematical manipulations are provided.
+•	 The essential topics can be covered in a one-semester, four-hour course.

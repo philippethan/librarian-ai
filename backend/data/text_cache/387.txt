@@ -1,0 +1,21 @@
+Embedded Systems
+Peter Marwedel
+Embedded 
+System 
+Design
+Embedded Systems Foundations 
+of Cyber-Physical Systems, and 
+the Internet of Things
+Fourth Edition
+Embedded Systems
+Series editors
+Nikil D. Dutt, Irvine, CA, USA
+Grant Martin, Santa Clara, CA, USA
+Peter Marwedel, Dortmund, Germany
+This Series addresses current and future challenges pertaining to embedded hard-
+ware, software, speciﬁcations and techniques. Titles in the Series cover a focused
+set of embedded topics relating to traditional computing devices as well as high-
+tech appliances used in newer, personal devices, and related topics. The material
+will vary by topic but in general most volumes will include fundamental material
+(when appropriate), methods, designs, and techniques.
+More information about this series at http://www.springer.com/series/8563

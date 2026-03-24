@@ -1,0 +1,86 @@
+Lecture Notes for Machine Learning and Data
+Science Courses
+Information School, University of Washington
+Ott Toomet
+May 27, 2025
+ii
+Preface
+This is a collection of notes made for INFO370, INFO371, IMT573 and IMT574
+courses, taught at the Information School, University of Washington. It began as a
+collection of topics where I could not find another suitable material. Later I have
+also added some material where other good source exist, mainly to force me to think
+through how I present these topics, and to simplify the reading materials. The pdf is
+available at my UW faculty page.
+I have chosen to collect related topics under the same sections, even if I do not
+teach them at the same time. For instance, conditional probability is in Section 1.4,
+even if I teach it either for Naive Bayes (Section 8.5) or Fairness (Section 13.3.3). I
+believe that this approach makes this textbook more flexible and allows to pick topics
+in a different order.
+Check also out the python companion (preliminary) and R companion (even more
+preliminary).
+The source of these notes is available at it’s bitbucket repo, feel free to leave
+feedback in it’s issue tracker.
+The text is licensed as CC BY 4.0, the images have different copyrights, see the
+captions and the readme files in the corresponding folders in the Bitbucket repo.
+I am grateful to Yuemin Cao and Chesie Yu for help with illustrations.
+Contents
+Preface
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ii
+0.1
+Notation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+vi
+1
+Introduction to Statistics
+1
+1.1
+Different Kind of Values . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.2
+Data about data
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+1.3
+Descriptive statistics . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+16
+1.4
+Basics of Probability Theory
+. . . . . . . . . . . . . . . . . . . . . . .
+35
+1.5
+Probability distributions . . . . . . . . . . . . . . . . . . . . . . . . . .
+68
+1.6
+Statistical Inference
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+88
+1.7
+Lies, Damned Lies, and Statistics . . . . . . . . . . . . . . . . . . . . . 114
+2
+Regression Models
+123
+2.1
+Linear Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+2.2
+Logistic Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174
+2.3
+Linear probability model . . . . . . . . . . . . . . . . . . . . . . . . . . 186
+3
+Causality
+187
+3.1
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+3.2
+What is cause? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 189
+3.3
+Causality with data: three explanations
+. . . . . . . . . . . . . . . . . 190
+3.4
+Strategies for Causal Inference
+. . . . . . . . . . . . . . . . . . . . . . 195
+3.5
+Causal inference in linear regression framework . . . . . . . . . . . . . 202
+3.6
+A Few Popular Estimators . . . . . . . . . . . . . . . . . . . . . . . . . 209
+3.7
+Cogniti

@@ -1,0 +1,11 @@
+{
+  "book_id": 470,
+  "filename": "PHYSIQUE-CHIMIE MÉTHODES  EXERCICES MPMP - MPIMPI - 3e édition (Olivier Fiat) (Z-Library).pdf",
+  "text_length": 675,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:31.159971"
+}

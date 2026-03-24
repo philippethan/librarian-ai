@@ -1,0 +1,37 @@
+The Essentials of Technical
+Communication
+Fifth Edition
+Elizabeth Tebeaux
+TEXAS A&M UNIVERSITY
+Sam Dragga
+TEXAS TECH UNIVERSITY
+New York Oxford
+Oxford University Press
+Oxford University Press is a department of the University of Oxford. It furthers the University’s objective of excellence in
+research, scholarship, and education by publishing worldwide. Oxford is a registered trade mark of Oxford University Press in the
+UK and certain other countries.
+Published in the United States of America by Oxford University Press
+198 Madison Avenue, New York, NY 10016, United States of America.
+© Copyright © 2021, 2018, 2015, 2012, 2010 by Oxford University Press
+For titles covered by Section 112 of the US Higher Education Opportunity Act, please visit 
+www.oup.com/us/he for the latest
+information about pricing and alternate formats.
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form or by
+any means, without the prior permission in writing of Oxford University Press, or as expressly permitted by law, by license, or
+under terms agreed with the appropriate reproduction rights organization. Inquiries concerning reproduction outside the scope of
+the above should be sent to the Rights Department, Oxford University Press, at the address above.
+You must not circulate this work in any other form and you must impose this same condition on any acquirer.
+Library of Congress Cataloging-in-Publication Data
+Names: Tebeaux, Elizabeth, author. | Dragga, Sam, author.
+Title: The essentials of technical communication / Elizabeth Tebeaux and Sam Dragga.
+Description: Fifth edition. | New York, NY : Oxford University Press, [2021] | Includes index. | Summary: "This is an English
+textbook for students taking courses in technical communication"—Provided by publisher.
+Identifiers: LCCN 2020027361 | ISBN 9780197539200 (paperback) | ISBN 9780197539224 (epub)
+Subjects: LCSH: Technical writing. | Communication of technical information.
+Classification: LCC T11 .T295 2021 | DDC 808.06/66—dc23
+LC record available at 
+https://lccn.loc.gov/2020027361
+Printing number:9 8 7 6 5 4 3 2 1
+Printed by Quad Graphics, Inc., Mexico
+United States of America
+Created on: 26 October 2020 at 8:17 p.m.

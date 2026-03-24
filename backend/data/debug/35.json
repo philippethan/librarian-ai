@@ -1,0 +1,11 @@
+{
+  "book_id": 35,
+  "filename": "50 idées reçues sur létat du monde (Pascal Boniface) (Z-Library).pdf",
+  "text_length": 219,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:21:49.470511"
+}

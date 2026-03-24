@@ -1,0 +1,11 @@
+{
+  "book_id": 469,
+  "filename": "Physique tout-en-un MPSI (Bernard Salamito, Stéphane Cardini etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+  "text_length": 2184,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:31.003687"
+}

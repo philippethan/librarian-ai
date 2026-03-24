@@ -1,0 +1,11 @@
+{
+  "book_id": 905,
+  "filename": "Nonviolent_Communication_A_Language_of_Life_Marshall_B_Rosenberg.epub",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:24:53.786382"
+}

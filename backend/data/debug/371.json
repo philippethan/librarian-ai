@@ -1,0 +1,11 @@
+{
+  "book_id": 371,
+  "filename": "Linear Programming and Algorithms for Communication Networks - A Practical Guide to Network Design, Control, and Management.pdf",
+  "text_length": 323,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:12.420638"
+}

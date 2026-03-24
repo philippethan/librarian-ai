@@ -1,0 +1,53 @@
+M A N N I N G
+Dominik Tornow
+State of
+C1
+State of
+C3
+State of
+C5
+C1
+C3
+C5
+C2
+C4
+C6
+State of
+C2
+State of
+C4
+State of
+C6
+Network
+A distributed system is a collection of collaborating concurrent components that communicate  
+by sending and receiving messages over a network. Each component has exclusive access to its own 
+local state, which other components cannot access. The network has exclusive access to  
+its own local state, including messages that are in flight.
+State
+State'
+State''
+...
+Step
+Step
+Step
+The behavior of the system is represented as a sequence of states, with each step transitioning 
+the system from one state to the next. Each step is taken by either a component  
+or the network. These steps can be categorized as follows:
+¡ External steps—Actions such as receiving or sending a message
+¡ Internal steps—Actions such as performing local computations or accessing the local state
+To summarize, we will think about the system as one in which at any moment, exactly 
+one component or the network will complete exactly one step.
+State of
+C1
+C1
+C2
+State of
+C2
+Network
+C2
+State of
+C2
+Network
+There is only me...
+...and the rest of the system.
+Think Distributed Systems

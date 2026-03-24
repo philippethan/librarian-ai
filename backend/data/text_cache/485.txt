@@ -1,0 +1,17 @@
+Principles of Engineering Physics 1
+This is a textbook for an introductory course in engineering physics. It provides a coherent treatment 
+of the basic principles and theories of engineering physics and offers a balance between theoretical 
+concepts and their applications. Beginning with a comprehensive discussion on oscillations and 
+waves with applications in the field of mechanical and electrical engineering, it goes on to explain 
+basic concepts such as Huygen’s principle, Fresnel’s biprism, Fraunhofer diffraction and polarization.
+All chapters are interspersed with rich pedagogical features such as solved problems, unsolved 
+exercises and multiple choice questions with answers. It will help undergraduate students of 
+engineering acquire skills for solving difficult problems in quantum mechanics, electromagnetism, 
+nanoscience, energy systems and other engineering disciplines. 
+Md. N. Khan is Associate Professor at the Department of Physics, Indira Gandhi Institute of 
+Technology (IGIT), Odisha. He has more than 22 years of teaching experience and has taught 
+courses on engineering physics, physics of semiconductor devices and materials science. His areas 
+of interest include X-ray scattering and materials science.
+S. Panigrahi is Senior Professor at the Department of Physics and Astronomy, National Institute of 
+Technology (NIT), Rourkela. He has more than two decades of teaching and research experience in 
+the field of solid state physics, materials science and ferroelectrics. 

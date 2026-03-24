@@ -1,0 +1,24 @@
+Data Engineering Design Patterns
+Recipes for Solving the Most Common
+Data Engineering Problems
+With Early Release ebooks, you get books in their earliest form—the
+author’s raw and unedited content as they write—so you can take advantage
+of these technologies long before the official release of these titles.
+Bartosz Konieczny
+Data Engineering Design Patterns
+by Bartosz Konieczny
+Copyright © 2025 Bartosz Konieczny. All rights reserved.
+Printed in the United States of America.
+Published by O’Reilly Media, Inc., 1005 Gravenstein Highway North,
+Sebastopol, CA 95472.
+O’Reilly books may be purchased for educational, business, or sales promo-
+tional use. Online editions are also available for most titles (http://oreilly.-
+com). For more information, contact our corporate/institutional sales de-
+partment: 800-998-9938 or corporate@oreilly.com.
+Acquisitions Editor: Aaron Black
+Development Editor: Michele Cronin
+Production Editor: Jonathon Owen
+Interior Designer: David Futato
+Cover Designer: Karen Montgomery
+Illustrator: Kate Dullea
+May 2025: First Edition

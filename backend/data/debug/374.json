@@ -1,0 +1,11 @@
+{
+  "book_id": 374,
+  "filename": "Louis - How to Be the bad boy Women Love.pdf",
+  "text_length": 2495,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:12.700162"
+}

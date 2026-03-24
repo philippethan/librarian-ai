@@ -1,0 +1,101 @@
+ 
+   
+ 
+   
+ 
+ 
+Sous la direction de BERNARD SALAMITO
+STÉPHANE CARDINI | DAMIEN JURINE | MARIE-NOËLLE SANZ
+MPSI
+PHYSIQUE
+TOUT-EN-UN
+Avec la collaboration de :
+ANNE-EMMANuELLE BADEL
+FRANÇOIS CLAUSSET
+11 rue Paul Bert, 92240 Malakoff
+www.dunod.com
+© Dunod, 2019
+Conception et création de couverture : Hokus Pokus Créations
+Les photos du chapitre 5 ont été réalisées par Pierre Canaguier
+ISBN 978‐2‐10‐079803‐2
+I
+Signaux physiques
+22
+1
+Oscillateur harmonique
+23
+1
+Un oscillateur harmonique mécanique . . . . . . . . . . . . . . . . . . . . .
+23
+1.1
+Système étudié . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+23
+1.2
+Obtention d’une équation différentielle
+. . . . . . . . . . . . . . . .
+24
+1.3
+Déﬁnition d’un oscillateur harmonique
+. . . . . . . . . . . . . . . .
+24
+1.4
+Résolution de l’équation différentielle . . . . . . . . . . . . . . . . .
+25
+1.5
+Conservation de l’énergie mécanique
+. . . . . . . . . . . . . . . . .
+27
+1.6
+Amplitude et période du mouvement . . . . . . . . . . . . . . . . . .
+29
+2
+Signal sinusoïdal
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+30
+2.1
+Déﬁnition du signal sinusoïdal . . . . . . . . . . . . . . . . . . . . .
+30
+2.2
+Phase instantanée, phase initiale . . . . . . . . . . . . . . . . . . . .
+30
+2.3
+Période, fréquence . . . . . . . . . . . . . . . . . . . . . . . . . . .
+31
+2.4
+Une interprétation géométrique
+. . . . . . . . . . . . . . . . . . . .
+32
+2.5
+Représentation de Fresnel
+. . . . . . . . . . . . . . . . . . . . . . .
+33
+2.6
+Déphasage
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+34
+2
+Propagation d’un signal
+47
+1
+Signaux physiques, spectre . . . . . . . . . . . . . . . . . . . . . . . . . . .
+47
+1.1
+Ondes et signaux physiques
+. . . . . . . . . . . . . . . . . . . . . .
+47
+1.2
+Notion de spectre . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+48
+1.3
+Cas d’un signal périodique de forme quelconque . . . . . . . . . . .
+50
+1.4
+Analyse harmonique expérimentale . . . . . . . . . . . . . . . . . .
+53
+1.5
+Exemple : analyse de signaux sonores . . . . . . . . . . . . . . . . .
+54
+2
+Phénomène de propagation . . . . . . . . . . . . . . . . . . . . . . . . . . .
+56
+Table des matières

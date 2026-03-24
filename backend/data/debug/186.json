@@ -1,0 +1,11 @@
+{
+  "book_id": 186,
+  "filename": "Develop and Operate Your LoRaWAN IoT Nodes  Ready-to-use devices and self-built Arduino nodes in the The Things Network (Claus Kühnel) (Z-Library).pdf",
+  "text_length": 354,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:28.255067"
+}

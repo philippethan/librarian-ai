@@ -1,0 +1,58 @@
+DIDIER JANSSOONE 
+TECHNOLOGIE  
+FONCTIONNELLE  
+DU TRANSPORT 
+FERROVIAIRE ET 
+URBAIN
+TRAIN – MÉTRO – TRAMWAY – RER
+© Dunod, 2021
+11, rue Paul Bert, 92240 Malakoff
+www.dunod.com
+ISBN 978-2-10-083240-8
+Direction artistique : Nicolas Wiel
+Graphisme de couverture : Pierre-André Gualino
+Illustration de couverture : Studio Laure/adobestock.com
+III
+Table des matières
+Remerciements et avertissement de l’auteur
+1
+Avant-propos
+3
+1.	 Pourquoi parle-t-on de technologie du transport  
+ferroviaire et urbain ?
+3
+2.	 Quelle est la place occupée par la technologie dans  
+le ferroviaire ?
+4
+3.	 Une technologie adaptée à chaque fonction et à chaque 
+système de transport
+5
+4.	 Des systèmes d’exploitation performants combinant de 
+multiples technologies 
+6
+5.	 Quelle sera la méthodologie de l’ouvrage ?
+7
+Introduction
+9
+1.	 Les cinq grands sous-ensembles en matière  
+de technologie ferroviaire
+9
+2.	 Bref historique des technologies du transport  
+ferroviaire et urbain
+12
+ 1	
+Principes fondamentaux en matière de  
+technologie ferroviaire
+21
+1.	 Les bases du système ferroviaire
+21
+2.	 Les différentes composantes de l’infrastructure  
+de roulement
+24
+3.	 Technologie du matériel roulant
+29
+4.	 Propulsion ferroviaire
+31
+5.	 La circulation d’un convoi sur une voie ferrée : risques 
+ferroviaires et réponse technologique
+33

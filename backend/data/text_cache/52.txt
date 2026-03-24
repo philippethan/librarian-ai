@@ -1,0 +1,77 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7 Key CBTC Functions  
+Transit Operators  
+Must Understand 
+ 
+Achieve Operational Efficiency,  
+Recover Faster from Service Disruptions & 
+Increase Ridership Satisfaction 
+ 
+ 
+ 
+Author: Naeem Ali PEng 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+www.CBTCSolutions.ca 
+ 
+ 
+7 Key CBTC Functions Transit Operators Must Understand 
+2 
+www.CBTCSolutions.ca 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimer. 
+This document is made available for informational purposes only. This document is provided 
+without any guarantee, representation, condition or warranty of any kind, either express, 
+implied, or statutory. The author assumes no liability with respect to any reliance you place on 
+this document. If you rely on this document in any way, you assume the entire risk as to the 
+truth, accuracy, currency, or completeness of the information contained in this document. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Copyright © 2017 CBTC Solutions Inc. All Rights Reserved 
+ 
+ 
+ 
+ 
+ 
+7 Key CBTC Functions Transit Operators Must Understand 
+3 
+www.CBTCSolutions.ca 
+Contents. 
+Disclaimer. ..................................................................................................................................... 2 
+Contents. ......................................................................................................................................... 3 
+Figures. ............................................................................................................................................ 5 
+1. Acknowledgements ..................................................................................................................... 7 
+2. Introduction ................................................................................................................................ 8 
+2.1 Scope & Purpose ................................................................................................................. 11 
+2.2 Acronyms ............................................................................................................................. 11 
+2.3 Definitions ........................................................................................................................... 12 
+2.4 What Is CBTC? ..................................................................................................................... 13 
+3. Key Function #1 – Train Recovery ............................................................................................. 15 
+3.1 TPR – Train Protection Reservation .................................................................................... 17 
+3.2 Train Coupling ..................................................................................................................... 17 
+3.3 Fallback Mode ..................................................................................................................... 20 
+3.4 Conclusion ........................................................................................................................... 22 
+4

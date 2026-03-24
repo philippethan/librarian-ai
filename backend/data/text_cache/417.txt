@@ -1,0 +1,28 @@
+Network Optimization:
+Continuous and Discrete Models
+Dimitri P. Bertsekas
+Massachusetts Institute of Technology
+WWW site for book information and orders
+http://www.athenasc.com
+Athena Scientiﬁc, Belmont, Massachusetts
+Athena Scientiﬁc
+Post Oﬃce Box 391
+Belmont, Mass. 02178-9998
+U.S.A.
+Email: info@athenasc.com
+WWW: http://www.athenasc.com
+Cover Design: Ann Gallager
+c⃝1998 Dimitri P. Bertsekas
+All rights reserved. No part of this book may be reproduced in any form
+by any electronic or mechanical means (including photocopying, recording,
+or information storage and retrieval) without permission in writing from
+the publisher.
+Publisher’s Cataloging-in-Publication Data
+Bertsekas, Dimitri P.
+Network Optimization: Continuous and Discrete Models
+Includes bibliographical references and index
+1. Network analysis (Planning). 2. Mathematical Optimization. I. Title.
+T57.85.B44 1998
+658.4’032-dc20
+98-70298
+ISBN 1-886529-02-7

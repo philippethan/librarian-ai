@@ -1,0 +1,56 @@
+Table of Contents
+Cover
+Preface to the Second Edition
+PART I: Lessons from Top Tech Companies
+CHAPTER 1: Behind Every Great Product
+CHAPTER 2: Technology‐Powered Products and Services
+CHAPTER 3: Startups: Getting to Product/Market Fit
+CHAPTER 4: Growth‐Stage Companies: Scaling to Success
+CHAPTER 5: Enterprise Companies: Consistent Product Innovation
+CHAPTER 6: The Root Causes of Failed Product Efforts
+CHAPTER 7: Beyond Lean and Agile
+CHAPTER 8: Key Concepts
+Holistic Product
+Continuous Discovery and Delivery
+Product Discovery
+Prototypes
+Product Delivery
+Products and Product/Market Fit
+Product Vision
+PART II: The Right People
+CHAPTER 9: Principles of Strong Product Teams
+Team of Missionaries
+Team Composition
+Team Empowerment and Accountability
+Team Size
+Team Reporting Structure
+Team Collaboration
+Team Location
+Team Scope
+Team Duration
+Team Autonomy
+Why It Works
+CHAPTER 10: The Product Manager
+Key Responsibilities
+Deep Knowledge of the Customer
+Deep Knowledge of the Data
+Deep Knowledge of Your Business
+Deep Knowledge of Your Market and Industry
+Smart, Creative, and Persistent
+Product Manager Profiles
+CHAPTER 11: The Product Designer
+Product Discovery
+Holistic User Experience Design
+Prototyping
+User Testing
+Interaction and Visual Design
+The Absence of Product Design
+CHAPTER 12: The Engineers
+CHAPTER 13: Product Marketing Managers
+CHAPTER 14: The Supporting Roles
+User Researchers
+Data Analysts
+Test Automation Engineers
+CHAPTER 15: Profile: Jane Manning of Google
+CHAPTER 16: The Role of Leadership
+Leaders of Product Management

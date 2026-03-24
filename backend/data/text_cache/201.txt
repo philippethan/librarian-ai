@@ -1,0 +1,39 @@
+BSI Standards Publication
+Earned value management in project 
+and programme management
+BS ISO 21508:2018
+National foreword
+This British Standard is the UK implementation of ISO 21508:2018. 
+The UK participation in its preparation was entrusted to Technical 
+Committee MS/2, Project, programme and portfolio management.
+A list of organizations represented on this committee can be obtained on 
+request to its secretary.
+This publication does not purport to include all the necessary provisions 
+of a contract. Users are responsible for its correct application.
+© The British Standards Institution 2018
+Published by BSI Standards Limited 2018
+ISBN 978 0 580 92679 2
+ICS 03.100.40
+Compliance with a British Standard cannot confer immunity from 
+legal obligations.
+This British Standard was published under the authority of the 
+Standards Policy and Strategy Committee on 30 April 2018.
+Amendments/corrigenda issued since publication
+Date
+Text affected
+BRITISH STANDARD
+BS ISO 21508:2018
+© ISO 2018
+Earned value management in project 
+and programme management
+Management de la valeur acquise en management de projet et 
+de programme
+INTERNATIONAL 
+STANDARD
+ISO
+21508
+First edition
+2018-04-30
+Reference number
+ISO 21508:2018(E)
+BS ISO 21508:2018

@@ -1,0 +1,11 @@
+{
+  "book_id": 616,
+  "filename": "The Psychology Of Money - A Simple Guide To Financial Intelligence Learn Reverse Psychology To Develop Ways Of Frugal Living,... (Addison Bell) (Z-Library).pdf",
+  "text_length": 1646,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:59.689858"
+}

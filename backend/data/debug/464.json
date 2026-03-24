@@ -1,0 +1,11 @@
+{
+  "book_id": 464,
+  "filename": "Physique expérimentale Optique, magnétisme, électrotechnique, mécanique, thermodynamique et physique non linéaire (Jolidon) (Z-Library).pdf",
+  "text_length": 2089,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:29.287323"
+}

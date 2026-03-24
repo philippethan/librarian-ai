@@ -1,0 +1,237 @@
+5e ÉDITION
+PHYSIQUE  2
+HARRIS BENSON
+Mathieu Lachance
+Marc Séguin
+BenoÎt Villeneuve
+Bernard Marcheterre
+ÉLECTRICITÉ ET
+MAGNÉTISME
+Données d’usage fréquent
+Terre
+ Rayon moyen
+ Masse
+ Distance moyenne au Soleil
+6,37 × 106 m
+5,98 × 1024 kg
+1,50 × 1011 m
+Lune
+ Rayon moyen
+ Masse
+ Distance moyenne à la Terre
+1,74 × 106 m
+7,36 × 1022 kg
+3,84 × 108 m
+Soleil
+ Rayon moyen
+ Masse
+6,96 × 108 m
+1,99 × 1030 kg
+Accélération de chute libre (g), valeur recommandée
+9,806 65 m/s2 
+Pression atmosphérique normale
+1,013 × 105 Pa
+Masse volumique de l’air (à 0 °C et à 1 atm)
+1,293 kg/m3 
+Masse volumique de l’eau (entre 0 °C et 20 °C)
+1000 kg/m3 
+Chaleur spécifique de l’eau
+4186 J/(kg·K) 
+Vitesse du son dans l’air 
+(à 0 °C)
+à la pression atmosphérique normale 
+(à 20 °C)
+331,5 m/s 
+343,4 m/s 
+Préfixes des puissances de dix
+Puissance
+Préfixe
+Abréviation
+Puissance
+Préfixe
+Abréviation
+10−18 
+atto
+a
+101 
+déca
+da
+10−15 
+femto
+f
+102 
+hecto
+h
+10−12 
+pico
+p
+103 
+kilo
+k
+10−9 
+nano
+n
+106 
+méga
+M
+10−6 
+micro
+μ
+109 
+giga
+G
+10−3 
+milli
+m
+1012 
+téra
+T
+10−2 
+centi
+c
+1015 
+péta
+P
+10−1 
+déci
+d
+1018 
+exa
+E
+Symboles mathématiques
+∝
+est proportionnel à
+> (<)
+est plus grand (plus petit) que
+≥ (≤)
+est plus grand (plus petit) ou égal à
+ ()
+est beaucoup plus grand (plus petit) que
+≈
+est approximativement égal à
+≡
+est défini comme égal à
+Dx
+la variation de x
+xi
+i
+N
+=∑
+1
+x1 + x2 + x3 + … + xN
+x
+le module ou la valeur absolue de x
+Dx → 0
+Dx tend vers zéro
+n!
+factorielle n : n(n − 1)(n − 2) … 2 × 1
+Constantes physiques
+Nom
+Symbole
+Valeur approchée
+Valeur précise*
+Charge élémentaire
+e
+1,602 × 10−19 C
+1,602 176 565(35) × 10−19 C
+Constante de Boltzmann
+k = R/NA
+1,381 × 10−23 J/K 
+1,380 648 8(13) × 10−23 J/K 
+Constante de gravitation
+G 
+6,674 × 10−11 N·m2/kg2 
+6,673 84(80) × 10−11 N·m2/kg2
+Constante de la loi de Coulomb
+k (= 1/4πε0)
+9,00 × 109 N·m2/C2 
+8,987 551 8 × 109 N·m2/C2
+Constante de Planck
+h
+6,626 × 10−34 J·s
+6,626 069 57(29) × 10−34 J·s 
+Constante des gaz parfaits
+R
+8,314 J/(K·mol)
+8,314 4621(75) J/(K·mol)
+Masse de l’électron
+me 
+9,109 × 10−31 kg
+9,109 382 91(40) × 10−31 kg
+Masse du proton
+mp 
+1,673 × 10−27 kg
+1,672 621 777(74) × 10−27 kg
+Nombre d’Avogadro
+NA 
+6,022 × 1023 mol−1 
+6,022 141 29(27) × 1023 mol−1
+Perméabilité du vide
+μ0
+–
+4p × 10−7 N/A2 (exacte)
+Permittivité du vide
+ε0 = 1/(μ0c2)
+8,854 × 10−12 C2/(N·m2)
+8,854 187 817 × 10−12 C2/(N·m2)
+Unité de masse atomique
+u
+1,661 × 10−27 kg
+1,660 538 921(73) × 10−27 kg
+Vitesse de la lumière dans le vide
+c
+3,00 × 108 m/s 
+2,997 924 58 × 108 m/s (exacte)
+* 2010 CODATA (Committee on Data for Science and Technology), juin 2011. National Institute of Standards and Technology,  
+http://physics.nist.gov/cuu/Constants/index.html.
+Abréviations des unités courantes
+Ampère
+A
+Kelvin
+K
+Année
+a
+Kilocalorie
+kcal (Cal)
+Ångström
+Å
+Kilogramme
+kg
+Atmosphère
+atm
+Livre
+lb
+British thermal unit
+Btu
+Mètre
+m
+Candela
+cd
+Minute
+min
+Coulomb
+C
+Mole
+mol
+Degré Celsius
+°C
+Newton
+N
+Degré Fahrenheit
+°F
+Ohm
+Ω
+Électronvolt
+eV
+Pascal
+Pa
+Farad
+F
+Pied
+pi
+Gauss
+G
+Pouce
+po
+Gramme
+g

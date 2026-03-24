@@ -1,0 +1,11 @@
+{
+  "book_id": 574,
+  "filename": "Strategic Analytics The Insights You Need from Harvard Business Review (Harvard Business Review) (Z-Library).pdf",
+  "text_length": 1051,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:52.467234"
+}

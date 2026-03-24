@@ -1,0 +1,52 @@
+E N S E I G N E M E N T  S U P  P H Y S I Q U E
+Licence
+MÉCANIQUE CLASSIQUE
+COURS ET EXERCICES CORRIGÉS
+Tome 1 
+Lois de Newton, énergie, statique, gravitation
+Alain Colin De Verdière 
+Souren Pogossian
+Alain Colin De Verdière, Souren Pogossian
+www.edpsciences.org
+ISBN : 978-2-7598-2665-0
+9
+782759
+826650
+29 e
+Licence
+E N S E I G N E M E N T  S U P  P H Y S I Q U E
+En orbite à 400 km au-dessus de la Terre, 
+la Station spatiale internationale illustre les progrès 
+technologiques étonnants permis par la découverte 
+des lois de la mécanique par Newton, 
+il y a quelque trois siècles et demi.
+La collection « Enseignement Sup Physique » se présente 
+comme une introduction sur des sujets incontournables 
+en physique. Adaptée aux besoins des étudiants et 
+des chercheurs, le traitement rigoureux, mais accessible, 
+de chaque sujet est idéal pour ceux qui veulent une amorce 
+dans un sujet donné pour les préparer à une étude ou 
+à une recherche plus avancée.
+Ce premier tome est une introduction aux lois de la mécanique 
+omniprésentes pour comprendre les mouvements – planètes – fusée – 
+avion – auto – bateau – vélo – sport et les équilibres (architecture). Les 
+lois de conservation sont les concepts fondamentaux. 
+Les thèmes étudiés sont : Calculus, Cinématique, Lois de Newton, Travail et énergie, Statique et élasticité, 
+Dynamique d’un ensemble de particules, Gravitation, Satellites et planètes.
+La progression naturelle des idées, l’usage de mathématiques élémentaires, des exemples tirés de 
+situations réelles et un style clair permettent une bonne compréhension du sujet. Ce livre autonome ne 
+demande aucun prérequis mathématique ou physique. Des questions de réflexion et plus de 250 exercices 
+sont inclus, la solution desquels est détaillée pour les trois quarts d’entre eux. Une annexe numérique et 
+informatique en ligne permet l’apprentissage de la programmation pour trouver les solutions de problèmes 
+complexes (langages Octave ou Matlab).
+Ce tome 1 est destiné aux étudiants en première année de licence, IUT ou classes préparatoires.
+Alain Colin de Verdière a obtenu un doctorat du Massachusetts Institute of Technology (MIT) et de Woods Hole 
+Oceanographic Institution (WHOI). Ses recherches portent sur la circulation océanique mondiale et les modèles simplifiés 
+océan-atmosphère pour le climat.
+Souren Pogossian a obtenu un doctorat de l’université de Brest en réalisant la majeure partie de sa thèse au CNRS de 
+Meudon. Ses recherches concernent la propagation guidée des ondes lumineuses et neutroniques, l’optoélectronique du 
+silicium-germanium, le couplage d’échange en magnétisme et aujourd’hui l’astrodynamique.
+Mécanique classique
+Cours et exercices corrigés
+Tome 1
+Lois de Newton, énergie, statique, gravitation

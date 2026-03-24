@@ -1,0 +1,45 @@
+Chapter 1
+Tailoring the System Life Cycle
+Thomas Kusel
+Abstract
+Every system is unique and requires a tailored life cycle to ensure that its develop-
+ment can be managed efficiently. The process of tailoring the system life cycle is 
+generally not well understood and is often poorly executed, which can result in inef-
+ficiencies and elevated risks for the project. This chapter defines a tailoring methodol-
+ogy that can assist Systems Engineers and Project Managers to better understand and 
+apply the tailoring process. The tailoring methodology first considers the customiza-
+tion of a life cycle for individual subsystems, followed by a harmonization through 
+the system life cycle. The technological and organizational factors that impact on 
+the customization are identified and their impact on the life cycle is described. The 
+chapter also defines how the life cycle can be optimized. Throughout the chapter, 
+examples are given to illustrate how the methodology can be applied to complex and 
+multi-disciplinary systems.
+Keywords: systems engineering, system life cycle management, system life cycle 
+tailoring, systems engineering management, project management
+1. Introduction
+The perception of how much value Systems Engineering (SE) brings to a project
+versus its cost and its effort varies widely amongst originations and industries [1]. 
+There are many factors that shape these perceptions, some of which are purely 
+subjective, while others highlight real problems with the application of the SE 
+methodology.
+The incorrect application of SE can incur a large amount of unnecessary effort on 
+a project, slowing it down and making it heavy, costly and inefficient. On the other 
+hand, a well-applied, minimum effort SE process that enhances the most important 
+aspects of the project can be invigorating and add massive amounts of value. When 
+starting a project, the question then becomes: “What is the ‘minimum effort’ that 
+should be applied to this project and what are the ‘most important aspects’ that the SE 
+process should be focused on?” This is a question about tailoring.
+The nature of engineering projects varies widely across industries, organiza­
+tions, technology domains and application domains. The method of effectively 
+engineering these broad-ranging products varies to such a degree that, on the 
+surface, their similarities are almost unrecognizable. For example, the engineer­
+ing approach to develop consumer software on a mobile platform seems to be far 
+removed from the engineering approach to building a large new bridge. Yet, these 
+engineering processes all have similar underlying engineering principles and can 
+2
+Systems Engineering – Design, Analysis, Programming, and Maintenance of Complex Systems
+2
+all benefit from the SE approach, if applied appropriately. Thus, the SE process can 
+look radically different between projects, depending on how it is tailored for the 
+specific project.
+A further complication for the application of the SE proc

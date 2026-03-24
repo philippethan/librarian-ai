@@ -1,0 +1,11 @@
+{
+  "book_id": 672,
+  "filename": "[2014] Morin - DAVID MORIN Problems and Solutions in INTRODUCTORY MECHANICS.pdf",
+  "text_length": 375,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:24:07.841797"
+}

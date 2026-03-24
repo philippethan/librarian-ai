@@ -1,0 +1,11 @@
+{
+  "book_id": 558,
+  "filename": "Shaw - Illustrated Dictionary of Biology.pdf",
+  "text_length": 197,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:49.204484"
+}

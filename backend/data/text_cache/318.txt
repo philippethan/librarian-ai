@@ -1,0 +1,41 @@
+© Dunod, 2023
+11 rue Paul Bert, 92240 Malakoff
+www.dunod.com
+ISBN 978-2-10-085373-1
+Couverture : création Hokus Pokus, adaptation Studio Dunod 
+MPSI·PCSI·PTSI 
+MP·PC·PSI·PT·TSI·TPC
+INFORMATIQUE
+AVEC PYTHON
+Jean-Noël Beury
+EXERCICES 
+INCONTOURNABLES
+2e édition
+III
+Table des matières
+Avant-propos
+VI
+Partie 1
+Prise en main de Python
+1. Prise en main de Python
+3
+2. Graphiques
+25
+Partie 2
+Terminaison, correction, complexité
+3. Terminaison, correction, complexité
+31
+Partie 3
+Algorithmes de recherche
+4. Algorithmes
+45
+5. Algorithmes de dichotomie
+51
+Partie 4
+Récursivité
+6. Récursivité
+57
+Partie 5
+Algorithmes gloutons
+7. Algorithmes gloutons (sauf TSI et TPC)
+85

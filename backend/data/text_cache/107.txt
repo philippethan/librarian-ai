@@ -1,0 +1,107 @@
+ 
+ 
+Apprentissage Fédéré pour la détection des intrusions 
+ 
+ 
+ 
+par 
+Mohamed Ali AYED 
+ 
+ 
+MÉMOIRE PRÉSENTÉ À L’ÉCOLE DE TECHNOLOGIE SUPÉRIEURE 
+COMME EXIGENCE PARTIELLE À L’OBTENTION DE LA MAÎTRISE 
+AVEC MÉMOIRE EN GÉNIE LOGICIEL 
+M. Sc. A. 
+ 
+ 
+ 
+ 
+MONTRÉAL, LE 5 FÉVRIER 2022 
+ 
+ 
+ 
+ 
+ÉCOLE DE TECHNOLOGIE SUPÉRIEURE 
+UNIVERSITÉ DU QUÉBEC 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Mohamed Ali AYED, 2022 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Cette licence Creative Commons signifie qu’il est permis de diffuser, d’imprimer ou de sauvegarder sur un autre 
+support une partie ou la totalité de cette oeuvre à condition de mentionner l’auteur, que ces utilisations soient 
+faites à des fins non commerciales et que le contenu de l’oeuvre n’ait pas été modifié. 
+ 
+ 
+PRÉSENTATION DU JURY 
+CE MÉMOIRE A ÉTÉ ÉVALUÉ 
+PAR UN JURY COMPOSÉ DE: 
+ 
+ 
+ 
+ 
+M. Chamseddine Talhi, directeur de mémoire 
+Département de génie logiciel et des TI à l’École de technologie supérieure 
+ 
+M. Ali Ouni, président du jury 
+Département de génie logiciel et des TI à l’École de technologie supérieure 
+ 
+M. Kaiwen Zhang, examinateur externe 
+Département de génie logiciel et des TI à l’École de technologie supérieure 
+ 
+ 
+ 
+ 
+IL A FAIT L’OBJET D’UNE SOUTENANCE DEVANT JURY ET PUBLIC 
+LE “DATE DE SOUTENANCE” 
+À L’ÉCOLE DE TECHNOLOGIE SUPÉRIEURE 

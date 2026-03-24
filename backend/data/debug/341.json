@@ -1,0 +1,11 @@
+{
+  "book_id": 341,
+  "filename": "L'Effet cumulé  Décuplez votre réussite ! (French Edition) - Darren Hardy.pdf",
+  "text_length": 1085,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:06.506227"
+}

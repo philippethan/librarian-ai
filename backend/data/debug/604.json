@@ -1,0 +1,11 @@
+{
+  "book_id": 604,
+  "filename": "The Course of Love. A novel (Alain de Botton) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+  "text_length": 262,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:57.744844"
+}

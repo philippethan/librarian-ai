@@ -1,0 +1,11 @@
+{
+  "book_id": 412,
+  "filename": "Nanosatellites, CubeSats of the NewSpace Era for Space Observation 1 Evolution of the Space Era and Mechanics of Things for… (Pierre Richard Dahoo, Mustapha Meftah etc.) (Z-Library).pdf",
+  "text_length": 82,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:20.021451"
+}

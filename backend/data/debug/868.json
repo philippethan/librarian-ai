@@ -1,0 +1,11 @@
+{
+  "book_id": 868,
+  "filename": "Le choix du courage (Ryan Holiday) (Z-Library).epub",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:24:47.850515"
+}

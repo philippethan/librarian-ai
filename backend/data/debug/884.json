@@ -1,0 +1,11 @@
+{
+  "book_id": 884,
+  "filename": "Les_50_Règles_dor_du_management_Guedj,_Jean_Paul_Guedj,_Jean_Paul.epub",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:24:49.898229"
+}

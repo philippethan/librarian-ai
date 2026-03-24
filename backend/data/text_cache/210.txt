@@ -1,0 +1,127 @@
+ELEMENTARY PHYSICS
+Classical and Mcxiem
+Weidner and Sells
+^
+Fundamental Constants
+Name of quantity
+Common
+symbol
+Value
+Acceleration due to
+gravity (standard value)
+g
+Universal gravitational
+constant
+Earth's mass
+Earth's mean radius
+Earth-moon mean distance
+Earth-sun mean distance
+( 1 astronomical unit)
+Sun's mass
+Density of water
+(at3.98°C)
+Standard atmospheric
+pressure
+Universal gas constant
+Volume of 1 gram mole
+ideal gas at STP
+Absolute zero of
+temperature
+Triple point of water
+Avogadro's number
+A^^
+Boltzmann's constant
+/?
+9.80665 m/s2 = 32.174 ft/s2
+G
+6.673 X 10-" N-m2/kg2
+m,.
+5.9763 X
+10^-» kg
+^A-
+6.370949 X 10« m = 3959 mi
+^EM
+3.84400 X 10« m
+=== 60 earth radii
+1 AU
+1.4957 X 10" m = 92.94 x 10« mi
+m^
+1.991 X
+lO''*' kg
+1.00000 gm/ml
+1 atm
+1.01325 X
+lO'^ N/m-^ = 76 cmHg =
+760 torr
+R
+8.3143 J/gmol-K =
+0.0821 liter-atm/g mol-K =
+1.986 gcal/gmol-K
+2.2414 X 10-^ m"'
+-273.15°C
+273.16 K
+6.02217 X
+lO--' g-mol'
+1.38062 X
+10-2'' J/K
+See also Appendix I
+Name of quantity
+Common
+symbol
+Value
+"Mechanical equivalent of
+heat"
+J
+Stefan-Boltzmann constant
+a
+Coulomb force constant
+k - 1/47
+Permittivitv of
+free space
+^0
+Permeability of
+free space
+Mo
+Speed of light
+(m vacuum)
+c
+Electron charge
+e
+Electron volt
+1 eV
+Mass-energy conversion
+factor (atomic mass
+1 u =
+unit = ui
+(-rV)'2C
+Electron mass
+m^
+Proton mass
+Neutron mass
+Planck's constant
+m.
+m.
+h = hrlir
+4.18400 J/cal
+5.6696 X 10-« J/m^-s-K^
+8.987554 x 10» N-m-^/C^
+8.854185 X 10-'2 C=^/N-m^
+477 X 10-^ Wb/A-m
+2.99792456 x 10« m/s
+1.602192 X lO-'^C
+1.602192 X 10-'« J
+931.481 MeV/c2
+1.6604 X 10-^^ kg
+9.10956-x 10-" kg
+0.000548593 u
+0.511004 MeV/c^
+1.67261 X 10-^' kg
+1.00727661 u
+938.259 MeV/c^= 1836.11 m,
+1.67492 X
+lO--'- kg
+1.0086652 u
+939.553 MeV/c^
+6.626196 X 10-'*M-s
+1.054591 X
+10-3-« J-s

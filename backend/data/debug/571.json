@@ -1,0 +1,11 @@
+{
+  "book_id": 571,
+  "filename": "SPD works EPC turnkey 2 stage (world bank) (Z-Library).pdf",
+  "text_length": 771,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:52.053831"
+}

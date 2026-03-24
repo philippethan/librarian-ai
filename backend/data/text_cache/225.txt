@@ -1,0 +1,160 @@
+EUROPEAN RAILWAY AGENCY 
+ 
+ 
+File : ERA_ERTMS_040026_V1.5.Docx 
+ 
+PAGE 1 OF 28 
+ 
+ERTMS UNIT  
+INTRODUCTION TO ETCS BRAKING CURVES 
+Reference:  
+ERA_ERTMS_040026 
+Document type: 
+Technical 
+Version :  
+1.5 
+ 
+ 
+Date :  
+12/08/20 
+ 
+  
+  
+ 
+ERA ERTMS UNIT 
+INTRODUCTION TO ETCS BRAKING CURVES 
+ 
+ERA_ERTMS_040026 
+ 
+Version 1.5 
+PAGE 2 OF 28 
+ 
+ 
+AMENDMENT RECORD 
+Version 
+Date 
+Section number 
+Modification/description 
+Author(s) 
+0.1 
+07/03/11 
+ 
+Document creation 
+AH 
+0.2 
+23/03/11 
+ 
+1st internal review 
+AH 
+0.3 
+31/03/11 
+ 
+2nd internal review 
+AH 
+1.0 
+06/04/11 
+ 
+First Release 
+AH 
+1.1 
+21/06/11 
+ 
+Editorial fixes 
+AH 
+1.2 
+19/06/12 
+3.3.3 
+Upgrade of validity domain of the 
+Conversion model 
+Editorial fixes 
+AH 
+1.3 
+21/01/16 
+ 
+Update according to baseline 3 2nd release 
+version as recommended to EC 
+AH 
+1.4 
+14/06/16 
+ 
+Update according to Baseline 3 2nd release 
+AH 
+1.5 
+12/08/20 
+2.2.2 
+5 
+Editorial update 
+Correction for the time between I and P 
+supervision limits 
+AH 
+ERA ERTMS UNIT 
+INTRODUCTION TO ETCS BRAKING CURVES 
+ 
+ERA_ERTMS_040026 
+ 
+Version 1.5 
+PAGE 3 OF 28 
+ 
+ 
+TABLE OF CONTENTS 
+AMENDMENT RECORD 
+2 
+Table of contents 
+3 
+Table of figures 
+4 
+Table of tables 
+4 
+1. REFERENCES, TERMS AND ABBREVIATIONS 
+5 
+1.1. Reference documents 
+5 
+2. GENERAL OVERVIEW 
+6 
+2.1. Braking curve: what? 
+6 
+2.2. Harmonised Braking curves for ETCS: why? 
+6 
+2.2.1. Background 
+6 
+2.2.2. Current situation 
+6 
+3. ETCS BRAKING CURVES DESCRIPTION 
+8 
+3.1. Achieving the ETCS Core functionality 
+8 
+3.1.1. Providing the parachute 
+8 
+3.1.2. Advising the driver 
+8 
+3.2. Input parameters 
+10 
+3.3. How to get the EBD CURVE– guaranteed emergency brake deceleration 
+12 
+3.3.1. EBD definition 
+12 
+3.3.2. Guaranteed emergency brake deceleration 
+13 
+3.3.3. Capture of the braking input parameters - Gamma trains vs Lambda trains 
+15 
+4. ETCS BRAKING CURVES KEY IMPACTS ON THE RAILWAY SYSTEM 
+18 
+4.1. ETCS cab signalling vs conventional lineside signalling 
+18 
+4.2. Braking curves in relation to signalling headway 
+19 
+4.3. Engineering ETCS level 1 lines fitted with eurobalises only 
+20 
+5. NUMERICAL EXAMPLES 
+21 
+5.1. Introduction 
+21 
+5.2. High speed passenger train 
+21 
+5.3. Conventional passenger train 
+23 
+5.4. Freight train braked in P mode 
+26 
+5.5. Freight train braked in G mode 
+27 
+ 

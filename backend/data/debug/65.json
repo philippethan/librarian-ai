@@ -1,0 +1,11 @@
+{
+  "book_id": 65,
+  "filename": "8a07dcc8fe516c2efbe92400fd8c6646.pdf",
+  "text_length": 1962,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:21:58.942120"
+}

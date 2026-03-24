@@ -1,0 +1,71 @@
+ 
+i
+What Every Engineer Should 
+Know about Software Engineering
+This book offers a practical approach to understanding, designing, and building sound 
+software based on solid principles. Using a unique Q&A format, this book addresses 
+the issues that engineers need to understand in order to successfully work with soft­
+ware engineers, develop specifications for quality software, and learn the basics of 
+the most common programming languages, development approaches, and paradigms. 
+The new edition is thoroughly updated to improve the pedagogical flow and empha­
+size new software engineering processes, practices, and tools that have emerged in 
+every software engineering area.
+Features:
+	•
+Defines concepts and processes of software and software development, such as 
+agile processes, requirements engineering, and software architecture, design, 
+and construction.
+	•
+Uncovers and answers various misconceptions about the software develop­
+ment process and presents an up-​to-​date reflection on the state of practice in 
+the industry.
+	•
+Details how non-​software engineers can better communicate their needs to soft­
+ware engineers and more effectively participate in design and testing to ultim­
+ately lower software development and maintenance costs.
+	•
+Helps answer the question: How can I better leverage embedded software in 
+my design?
+	•
+Adds new chapters and sections on software architecture, software engineering 
+and systems, and software engineering and disruptive technologies, as well as 
+information on cybersecurity.
+	•
+Features new appendices that describe a sample automation system, covering 
+software requirements, architecture, and design.
+This book is aimed at a wide range of engineers across many disciplines who work 
+with software.
+ 
+ 
+ii
+What Every Engineer Should Know
+Series Editor
+Phillip A. Laplante
+Pennsylvania State University
+What Every Engineer Should Know about Developing Real-​Time Embedded Products
+Kim R. Fowler
+What Every Engineer Should Know about Business Communication
+John X. Wang
+What Every Engineer Should Know about Career Management
+Mike Ficco
+What Every Engineer Should Know about Starting a High-​Tech Business Venture
+Eric Koester
+What Every Engineer Should Know about MATLAB® and Simulink®
+Adrian B. Biran
+Green Entrepreneur Handbook: The Guide to Building and Growing a Green and 
+Clean Business
+Eric Koester
+What Every Engineer Should Know about Cyber Security and Digital Forensics
+Joanna F. DeFranco
+What Every Engineer Should Know about Modeling and Simulation
+Raymond J. Madachy and Daniel Houston
+What Every Engineer Should Know about Excel, Second Edition
+J.P. Holman and Blake K. Holman
+Technical Writing: A Practical Guide for Engineers, Scientists, and Nontechnical 
+Professionals, Second Edition
+Phillip A. Laplante
+What Every Engineer Should Know about the Internet of Things
+Joanna F. DeFranco and Mohamad Kassab
+What Every Engineer Should Know about Software Engineering
+Phillip A. Laplante and Mohamad Kassab
+What Every E

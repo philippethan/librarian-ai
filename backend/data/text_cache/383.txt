@@ -1,0 +1,66 @@
+MANUEL  
+D’EXPLOITATION 
+FERROVIAIRE
+Didier Janssoone
+CERTIFICATIONS PROFESSIONNELLES
+FORMATION CONTINUE ET PROMOTIONNELLE 
+IUT, CNAM, ÉCOLES D’INGÉNIEURS
+2e ÉDITION
+© Dunod 2018, 2021
+11, rue Paul Bert, 92240 Malakoff
+www.dunod.com
+ISBN 978-2-10-082690-2
+Direction artistique : Élisabeth Hébert
+Conception graphique de la couverture : Pierre-André Gualino
+Illustrations de couverture : Sergey Novikov/adobestock.com
+V
+Table des matières
+Présentation de la seconde édition	
+1
+Remerciements et avertissement de l’auteur	
+3
+Préface	
+5
+Avant-propos	
+7
+1.	 Qu’est-ce que l’exploitation ferroviaire ?	
+7
+2.	 Les principes fondamentaux de l’exploitation  
+technique du chemin de fer	
+8
+3.	 Les aspects « sécurité » du trafic	
+9
+4.	 L’exploitation ferroviaire : une « matière » difficile ?	
+10
+5.	 Quels sont les points « clés » à assimiler ?	
+11
+6.	 Quelle sera notre méthodologie ?	
+17
+Introduction	
+19
+1.	 Une infrastructure originale	
+19
+2.	 Un moyen de transport guidé à faible coefficient  
+d’adhérence	
+20
+3.	 L’analogie entre la route et le ferroviaire	
+21
+4.	 L’approche système du transport ferroviaire	
+23
+Partie 1
+Les équipements de base du  
+système ferroviaire	
+25
+ 1	
+Le train comme mobile de transport	
+27
+1.	 Les rames tractées par une locomotive	
+28
+2.	 Les rames automotrices	
+32
+3.	 Les autorails	
+34
+4.	 Les engins spécialisés	
+35
+5.	 Les trains de travaux	
+35

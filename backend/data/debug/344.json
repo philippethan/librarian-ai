@@ -1,0 +1,11 @@
+{
+  "book_id": 344,
+  "filename": "La grammaire en cartes mentales (Patricia WUILLIET) (Z-Library).pdf",
+  "text_length": 403,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:06.899498"
+}

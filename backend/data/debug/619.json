@@ -1,0 +1,11 @@
+{
+  "book_id": 619,
+  "filename": "The Uncomfortable Truth About Money - Paul Podolsky.pdf",
+  "text_length": 117,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:24:00.050188"
+}

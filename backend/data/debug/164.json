@@ -1,0 +1,11 @@
+{
+  "book_id": 164,
+  "filename": "CompTIA Cloud+ Guide to Cloud Computing (West, Jill) (Z-Library).pdf",
+  "text_length": 1916,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:22.883081"
+}

@@ -1,0 +1,68 @@
+Systems Engineering for Critical 
+Infrastructure in a Cyber World 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+RIVER PUBLISHERS SERIES IN DIGITAL SECURITY AND 
+FORENSICS 
+Series Editors 
+ANAND R. PRASAD 
+R. CHANDRAMOULI 
+Deloitte Tohmatsu Cyber LLC, 
+Stevens Institute of Technology, 
+Japan 
+USA 
+ABDERRAHIM BENSLIMANE 
+PETER LANGENDÖRFER 
+University of Avignon, 
+IHP, 
+France 
+Germany 
+The “River Publishers Series in Security and Digital Forensics” is a series of comprehensive academic 
+and professional books which focus on the theory and applications of Cyber Security, including Data 
+Security, Mobile and Network Security, Cryptography and Digital Forensics. Topics in Prevention and 
+Threat Management are also included in the scope of the book series, as are general business Standards 
+in this domain. 
+Books published in the series include research monographs, edited volumes, handbooks and text­
+books. The books provide professionals, researchers, educators, and advanced students in the field 
+with an invaluable insight into the latest research and developments. 
+Topics covered in the series include:­
+• Blockchain for secure transactions 
+• Cryptography 
+• Cyber Security 
+• Data and App Security 
+• Digital Forensics 
+• Hardware Security 
+• IoT Security 
+• Mobile Security 
+• Network Security 
+• Privacy 
+• Software Security 
+• Standardization 
+• Threat Management 
+For a list of other books in this series, visit www.riverpublishers.com 

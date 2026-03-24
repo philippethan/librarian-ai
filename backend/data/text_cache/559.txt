@@ -1,0 +1,31 @@
+SpringerBriefs in Computer Science
+Zhiguo Shi · Chaojie Gu · Shibo He · Kang Hu
+LoRa Localization
+System Design and 
+Performance Analysis
+SpringerBriefs in Computer Science
+SpringerBriefs present concise summaries of cutting-edge research and practical 
+applications across a wide spectrum of ﬁelds. Featuring compact volumes of 50 to 
+125 pages, the series covers a range of content from professional to academic. 
+Typical topics might include: 
+• 
+A timely report of state-of-the art analytical techniques 
+• 
+A bridge between new research results, as published in journal articles, and a 
+contextual literature review 
+• 
+A snapshot of a hot or emerging topic 
+• 
+An in-depth case study or clinical example 
+• 
+A presentation of core concepts that students must understand in order to make 
+independent contributions 
+Briefs allow authors to present their ideas and readers to absorb them with 
+minimal time investment. Briefs will be published as part of Springer’s eBook 
+collection, with millions of users worldwide. In addition, Briefs will be available 
+for individual print and electronic purchase. Briefs are characterized by fast, global 
+electronic dissemination, standard publishing contracts, easy-to-use manuscript 
+preparation and formatting guidelines, and expedited production schedules. We 
+aim for publication 8–12 weeks after acceptance. Both solicited and unsolicited 
+manuscripts are considered for publication in this series. 
+**Indexing: This series is indexed in Scopus, Ei-Compendex, and zbMATH **

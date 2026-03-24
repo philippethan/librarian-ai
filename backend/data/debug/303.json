@@ -1,0 +1,11 @@
+{
+  "book_id": 303,
+  "filename": "httpsdlz1.fcdn.skbooks-files_collectionuserbooks1d95211b32e319857b69bd24a9ec9950b78d9693c0f7fae393e72fba86aa75d8redirect.pdf",
+  "text_length": 1475,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:55.590520"
+}

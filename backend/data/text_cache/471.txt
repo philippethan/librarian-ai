@@ -1,0 +1,76 @@
+VISA 
+POUR LA PRÉPA
+PHYSIQUE-CHIMIE
+Nicolas Simon | Séverine Bagard
+MPSI  PCSI  MP2I 
+PTSI  TSI  BCPST  TPC
+© Dunod, 2025
+11 rue Paul Bert, 92240 Malakoff
+www.dunod.com
+ISBN 978-2-10-088478-0
+Table des matières
+ Outils
+1
+Outil 1	 Calcul mental et approximations ­numériques
+1
+Outil 2	 Dérivation, intégration : bases, ­utilisation et interprétation
+5
+Outil 3	 Logarithmes et exponentielles
+16
+Outil 4	 Manipulation d’équations
+23
+Outil 5	 Équations différentielles
+26
+Outil 6	 Trigonométrie
+29
+Outil 7	 Analyse vectorielle
+34
+ 1.	
+Structure de la matière
+39
+1.1	 Les atomes
+39
+1.2	 La liaison de covalence
+47
+1.3	 Les associations d’atomes
+48
+1.4	 Les molécules de la chimie organique
+54
+1.5	 Spectres d’émission et d’absorption des atomes
+64
+1.6	 Analyse spectrale en chimie
+67
+Exercices et solutions
+70
+ 2.	 Méthodes physiques de détermination  
+d’une quantité de matière
+76
+2.1	 Mesure de l’abondance d’un échantillon de matière
+76
+2.2	 Les méthodes physiques d’analyse d’une solution
+79
+Exercices et solutions
+91
+ 3.	 Transformations chimiques en solutions aqueuses
+98
+3.1	 Modélisation d’une transformation chimique
+98
+3.2	 Interprétation des équilibres chimiques et détermination  
+de la composition d’un système à l’équilibre
+105
+3.3	 Équilibres acido-basiques
+111
+3.4	 Équilibres d’oxyodoréduction
+121
+Exercices et solutions
+132
+ 4.	 Méthodes chimiques de détermination  
+d’une quantité de matière
+140
+4.1	 Principe d’un titrage
+140
+4.2	 Méthodes de suivi d’un titrage
+145
+Exercices et solutions
+156
+III

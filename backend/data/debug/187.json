@@ -1,0 +1,11 @@
+{
+  "book_id": 187,
+  "filename": "Development of Safety-Critical Systems Architecture and Software (Gopinath Karmakar, Amol Wakankar etc.) (Z-Library).pdf",
+  "text_length": 307,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:28.434846"
+}

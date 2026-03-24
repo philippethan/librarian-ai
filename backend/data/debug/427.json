@@ -1,0 +1,11 @@
+{
+  "book_id": 427,
+  "filename": "On Self-Hatred (Alain De Botton, The School Of Life) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+  "text_length": 259,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:22.419053"
+}

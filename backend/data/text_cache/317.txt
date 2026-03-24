@@ -1,0 +1,41 @@
+BSI Standards Publication
+Information technology - Governance 
+of IT - Framework and model
+PD ISO/IEC TR 38502:2017
+National foreword
+This Published Document is the UK implementation of 
+ISO/IEC TR 38502:2017. It supersedes PD ISO/IEC TR 38502:2014, which 
+is withdrawn.
+The UK participation in its preparation was entrusted to Technical 
+Committee IST/60, IT Service Management and IT Governance.
+A list of organizations represented on this committee can be obtained on 
+request to its secretary.
+This publication does not purport to include all the necessary provisions 
+of a contract. Users are responsible for its correct application.
+© The British Standards Institution 2018 
+Published by BSI Standards Limited 2018
+ISBN 978 0 580 51414 2
+ICS 35.020
+Compliance with a British Standard cannot confer immunity from 
+legal obligations.
+This Published Document was published under the authority of the 
+Standards Policy and Strategy Committee on 31 January 2018.
+Amendments/corrigenda issued since publication
+Date 
+Text affected
+PUBLISHED DOCUMENT
+PD ISO/IEC TR 38502:2017
+Information technology — Governance 
+of IT — Framework and model
+Technologies de l'information — Gouvernance des TI — Cadre 
+général et modèle
+TECHNICAL 
+REPORT
+ISO/IEC TR
+38502
+Second edition
+2017-12-15
+Reference number
+ISO/IEC TR 38502:2017(E)
+© ISO/IEC 2017
+PD ISO/IEC TR 38502:2017

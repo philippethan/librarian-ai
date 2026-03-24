@@ -1,0 +1,23 @@
+A  G U I D E  T O  S Q L
+Mark Shellman
+Gaston College
+Hassan Afyouni, Ed.D. 
+e-conn Chief Information Officer
+Philip J. Pratt
+Grand Valley State University
+Mary Z. Last
+Australia • Brazil • Mexico • Singapore • United Kingdom • United States
+Tenth Edition
+Copyright 2021 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+This is an electronic version of the print textbook. Due to electronic rights restrictions,
+some third party content may be suppressed. Editorial review has deemed that any suppressed 
+content does not materially affect the overall learning experience. The publisher reserves the right 
+to remove content from this title at any time if subsequent rights restrictions require it. For
+valuable information on pricing, previous editions, changes to current editions, and alternate 
+formats, please visit www.cengage.com/highered to search by ISBN#, author, title, or keyword for 
+materials in your areas of interest.
+Important Notice: Media content referenced within the product description or the product 
+text may not be available in the eBook version.
+Copyright 2021 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.

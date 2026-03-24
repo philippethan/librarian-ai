@@ -1,0 +1,11 @@
+{
+  "book_id": 289,
+  "filename": "HBR's 10 Must Reads on Technology and Strategy Collection (7 Books) - Harvard Business Review & Michael E. Porter & Clayton M. Christensen & Rita Gunther McGrath & Thomas H. Davenport.pdf",
+  "text_length": 191,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:53.891231"
+}

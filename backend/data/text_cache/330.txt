@@ -1,0 +1,23 @@
+Introduction à l’ingénierie système
+N. Mesnier
+Lycée Jean Perrin, Lyon
+2024–2025
+Plan du cours
+1 Introduction
+2 Démarche d’ingénierie système
+3 Analyse fonctionnelle
+4 Analyse structurelle
+SII – MPSI
+|
+Ingénierie système
+2
+1
+2
+3
+4
+1
+Introduction
+SII – MPSI
+|
+Ingénierie système
+3

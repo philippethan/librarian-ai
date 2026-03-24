@@ -1,0 +1,92 @@
+1
+CHAPITRE
+Dimensions, unités, ordres de grandeur
+ou comment bien réagir devant une formule en physique.
+Plan du cours
+1
+Les dimensions en sciences physiques
+2
+1.1
+On ne mélange pas les choux et les carottes
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.2
+Deux grandeurs comparables ont la même dimension . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.3
+Les 7 dimensions fondamentales . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.4
+Vérification de l’homogénéité d’une formule . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+1.5
+Équation aux dimensions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+2
+Les unités
+4
+2.1
+Une grandeur de référence pour comparer toutes les autres : la grandeur étalon . . . . . . . . . . . . .
+4
+2.2
+Définition d’une unité à partir d’une grandeur étalon . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+2.3
+Les unités du système international . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+2.4
+Conversion d’unités
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+3
+Les chiffres significatifs
+6
+3.1
+Des mesures à la précision limitée . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+3.2
+Définition des chiffres significatifs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+3.3
+Règles pour déterminer le nombre de chiffres significatifs . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+4
+Les ordres de grandeurs
+7
+4.1
+De la nécessité des ordres de grandeurs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+4.2
+L’ordre de grandeur ou la puissance de 10 la plus proche . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7
+5
+Que faire devant une formule en sciences physiques ?
+8
+En cours
+• être attentif ;
+• poser des questions, répondre à celles du prof, participer ;
+• ne pas prendre en note ce qu’on ne comprend pas ;
+• chercher les applications directes ;
+• ne pas avoir trois tableaux de retard.
+Chez soi
+• Relire le cours ne suffit pas ! il faut être actif, avoir un stylo à la main et un brouillon à côté.
+• Apprendre par coeur les définitions, lois, théorèmes (, ♥)... Il faut pouvoir les réécrire sur son brouillon,
+cours fermé.
+• Refaire les démonstrations utiles ou formatrices (r). Savoir refaire, cahier fermé, celles qui sont au
+programme (♥).
+• Apprendre et utiliser les méthodes (r).
+• Refaire ou chercher les applications de cours.
+• Chercher les exercices correspondants.
+r Méthode : apprendre son cours
+MPSI
+Chapitre 1- Analyse dimensionnelle
+2025-2026
+1
+Les dimensions en sciences physiques
+1.1
+On ne mélange pas les choux et les carottes
+1.2
+Deux grandeurs comparables ont la même dimension
+Si deux grandeurs sont comparables, alors elles ont la même dimension.
+ Définition
+Application 1 Grandeurs comparables

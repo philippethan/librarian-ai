@@ -1,0 +1,117 @@
+1 350 cm3
+1 350 cm3
+Thierry Alhalel•Philippe Schwemling 
+h = 3,31 cm
+l = 17 cm
+V = h x l x L
+    1 350 cm3
+L = 24 cm
+   
+Conception de la couverture : Clément Pinçon (WIP)
+Illustrations : Rachid Maraï
+© Dunod, 2020
+11 rue Paul Bert, 92240 Malakoﬀ
+www.dunod.com
+ 
+ISBN 978-2-10-081639-2
+Table des matières
+Chapitre
+1
+Thermodynamique
+1
+1. Rappels de cours
+1
+1.1.
+Grandeurs thermodynamiques
+1
+1.2.
+Le premier principe de la thermodynamique
+3
+1.3.
+Le second principe de la thermodynamique
+4
+1.4.
+Les coefﬁcients thermodynamiques et thermoélastiques
+5
+1.5.
+Le gaz parfait et les gaz réels
+5
+1.6.
+Corps pur et changement de phases
+7
+1.7.
+Chaleur latente de changement d’état
+9
+1.8.
+Les machines thermiques
+10
+1.9.
+Notion d’humidité de l’air
+15
+1.10. Dérivées partielles en thermodynamique
+16
+2. Exercices
+18
+2.1.
+Exercices généraux et calorimétrie
+18
+2.2.
+Autour du premier principe de la thermodynamique
+26
+2.3.
+Autour du deuxième principe de la thermodynamique
+29
+2.4.
+Coefﬁcients thermoélastiques, gaz parfait et gaz réels
+34
+2.5.
+Phases et changement de phase
+43
+2.6.
+Les machines thermiques
+49
+Chapitre
+2
+Optique géométrique
+67
+1. Rappels de cours
+67
+1.1.
+Indice de réfraction
+67
+1.2.
+Lois de la réﬂexion et de la réfraction
+67
+1.3.
+Les lentilles minces
+69
+1.4.
+Les miroirs
+72
+1.5.
+Les aberrations
+73
+2. Exercices
+75
+2.1.
+Réﬂexion et réfraction
+75
+2.2.
+Instruments et systèmes optiques
+82
+Chapitre
+3
+Mécanique des ﬂuides
+101
+1. Rappels de cours
+101
+1.1.
+Grandeurs importantes
+101
+1.2.
+Statique des ﬂuides
+102
+1.3.
+Dynamique des ﬂuides parfaits
+102
+V

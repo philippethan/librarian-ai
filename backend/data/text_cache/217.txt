@@ -1,0 +1,75 @@
+Energy performance of buildings - 
+Method for calculation of system energy 
+requirements and system efficiencies
+Part 3: Space distribution systems (DHW, heating 
+and cooling), Module M3-6, M4-6, M8-6
+BS EN 15316-3:2017
+BSI Standards Publication
+National foreword
+This British Standard is the UK implementation of EN 15316-3:2017. It 
+supersedes BS EN 15316-2-3:2007 and BS EN 15316-3-2:2007, which 
+are withdrawn.
+The UK participation in its preparation was entrusted to Technical 
+Committee RHE/24, Heating systems and water based cooling systems 
+in buildings.
+A list of organizations represented on this committee can be obtained on 
+request to its secretary.
+This publication does not purport to include all the necessary provisions 
+of a contract. Users are responsible for its correct application.
+© The British Standards Institution 2017
+Published by BSI Standards Limited 2017
+ISBN 978 0 580 87455 0
+ICS 91.140.30; 91.140.65; 91.140.10
+Compliance with a British Standard cannot confer immunity from 
+legal obligations. 
+This British Standard was published under the authority of the 
+Standards Policy and Strategy Committee on 30 June 2017.
+Amendments/corrigenda issued since publication
+Date
+Text affected
+BRITISH STANDARD
+ 
+ 
+ 
+EUROPEAN STANDARD 
+NORME EUROPÉENNE 
+EUROPÄISCHE NORM 
+ 
+ EN 15316-3 
+ 
+ 
+ 
+ 
+April 2017 
+ICS 91.140.10; 91.140.30; 91.140.65 
+Supersedes EN 15316-2-3:2007, EN 15316-3-2:2007
+English Version 
+ 
+Energy performance of buildings - Method for calculation 
+of system energy requirements and system efficiencies - 
+Part 3: Space distribution systems (DHW, heating and 
+cooling), Module M3-6, M4-6, M8-6 
+Performance énergétique des bâtiments - Méthode de 
+calcul des besoins énergétiques et des rendements des 
+systèmes - Partie 3 : Systèmes de distribution des 
+locaux (eau chaude sanitaire, chauffage et 
+refroidissement), Module M3-6, M4-6, M8-6 
+ 
+Energetische Bewertung von Gebäuden - Verfahren zur 
+Berechnung der Energieanforderungen und 
+Nutzungsgrade der Anlagen - Teil 3: 
+Wärmeverteilungssysteme (Trinkwassererwärmung, 
+Heizung und Kühlung), Module M3-6, M4-6, M8-6 
+This European Standard was approved by CEN on 27 February 2017.  
+ 
+CEN members are bound to comply with the CEN/CENELEC Internal Regulations which stipulate the conditions for giving this 
+European Standard the status of a national standard without any alteration. Up-to-date lists and bibliographical references 
+concerning such national standards may be obtained on application to the CEN-CENELEC Management Centre or to any CEN 
+member. 
+ 
+This European Standard exists in three official versions (English, French, German). A version in any other language made by 
+translation under the responsibility of a CEN member into its own language and notified to the CEN-CENELEC Management 
+Centre has the same status as the official versions. 
+ 
+CEN members are the national standards bodies of Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, 
+Finland, Former 

@@ -1,0 +1,11 @@
+{
+  "book_id": 999,
+  "filename": "Vie Intentionnelle  7 Principes pour Ne Plus Subir mais Choisir Votre Vie (Jean-Charles Kurdali) (Z-Library).epub",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:25:17.747360"
+}

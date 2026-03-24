@@ -1,0 +1,11 @@
+{
+  "book_id": 47,
+  "filename": "687e4be4eb02a5260595c360_exam-experiment-Q1-english_2025-07-18_2055-UTC.pdf",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:21:54.824553"
+}

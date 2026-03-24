@@ -1,0 +1,11 @@
+{
+  "book_id": 600,
+  "filename": "The Atomic Habits Workbook Simple Exercises for Building the Life You Want (James Clear) (Z-Library).pdf",
+  "text_length": 1151,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:56.697856"
+}

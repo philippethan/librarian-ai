@@ -1,0 +1,11 @@
+{
+  "book_id": 278,
+  "filename": "Harvard_Business_Review_USA_NovemberDecember_2025_@english_books.pdf",
+  "text_length": 102,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:52.253006"
+}

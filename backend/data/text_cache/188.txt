@@ -1,0 +1,54 @@
+Lecture Notes in Electrical Engineering 1209
+Limin Jia
+Said Easa
+Yong Qin   Editors
+Developments and 
+Applications in 
+SmartRail, Traffic, 
+and Transportation 
+Engineering
+Proceedings of ICSTTE 2023
+Lecture Notes in Electrical Engineering
+1209
+Series Editors
+Leopoldo Angrisani, Department of Electrical and Information Technologies Engineering, University of
+Napoli Federico II, Napoli, Italy
+Marco Arteaga, Departament de Control y Robótica, Universidad Nacional Autónoma de México,
+Coyoacán, Mexico
+Samarjit Chakraborty, Fakultät für Elektrotechnik und Informationstechnik, TU München, München,
+Germany
+Shanben Chen, School of Materials Science and Engineering, Shanghai Jiao Tong University, Shanghai,
+China
+Tan Kay Chen, Department of Electrical and Computer Engineering, National University of Singapore,
+Singapore, Hong Kong
+Rüdiger Dillmann, University of Karlsruhe (TH) IAIM, Karlsruhe, Germany
+Haibin Duan, Beijing University of Aeronautics and Astronautics, Beijing, China
+Gianluigi Ferrari, Dipartimento di Ingegneria dell’Informazione, Sede Scientiﬁca Università degli Studi di
+Parma, Parma, Italy
+Manuel Ferre, Centre for Automation and Robotics CAR (UPM-CSIC), Universidad Politécnica de Madrid,
+Madrid, Spain
+Sandra Hirche, Department of Electrical Engineering and Information Science, Technische Universität
+München, München, Germany
+Faryar Jabbari, Department of Mechanical and Aerospace Engineering, University of California, Irvine, USA
+Limin Jia, State Key Laboratory of Rail Trafﬁc Control and Safety, Beijing Jiaotong University, Beijing,
+China
+Janusz Kacprzyk, Intelligent Systems Laboratory, Systems Research Institute, Polish Academy of Sciences,
+Warsaw, Poland
+Alaa Khamis, Department of Mechatronics Engineering, German University in Egypt El Tagamoa El
+Khames, New Cairo City, Egypt
+Torsten Kroeger, Intrinsic Innovation, Mountain View, USA
+Yong Li, College of Electrical and Information Engineering, Hunan University, Changsha, China
+Qilian Liang, Department of Electrical Engineering, University of Texas at Arlington, Arlington, USA
+Ferran Martín, Departament d’Enginyeria Electrònica, Universitat Autònoma de Barcelona, Bellaterra,
+Spain
+Tan Cher Ming, College of Engineering, Nanyang Technological University, Singapore, Singapore
+Wolfgang Minker, Institute of Information Technology, University of Ulm, Ulm, Germany
+Pradeep Misra, Department of Electrical Engineering, Wright State University, Dayton, USA
+Subhas Mukhopadhyay, School of Engineering, Macquarie University, Sydney, New Zealand
+Cun-Zheng Ning, Department of Electrical Engineering, Arizona State University, Tempe, China
+Toyoaki Nishida, Department of Intelligence Science and Technology, Kyoto University, Kyoto, Japan
+Luca Oneto, Department of Informatics, Bioengineering, Robotics and Systems Engineering, University of
+Genova, Genova, Italy
+Bijaya Ketan Panigrahi, Department of Electrical Engineering, Indian Institute of Technology Delhi,
+New Delhi, India
+Federica Pascucci, Department di Ingegn

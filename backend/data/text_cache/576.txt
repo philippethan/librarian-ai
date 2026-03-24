@@ -1,0 +1,21 @@
+Uncertainty and Operations Research
+Xiang Li
+Xin Yang
+Subway 
+Energy-Efficient 
+Management
+Uncertainty and Operations Research
+Editor-in-Chief
+Xiang Li, Beijing University of Chemical Technology, Beijing, China
+Series Editor
+Xiaofeng Xu, Economics and Management School, China University of Petroleum,
+Qingdao, Shandong, China
+Decision analysis based on uncertain data is natural in many real-world
+applications, and sometimes such an analysis is inevitable. In the past years,
+researchers have proposed many efﬁcient operations research models and methods,
+which have been widely applied to real-life problems, such as ﬁnance, manage-
+ment, manufacturing, supply chain, transportation, among others. This book series
+aims to provide a global forum for advancing the analysis, understanding,
+development, and practice of uncertainty theory and operations research for solving
+economic, engineering, management, and social problems.
+More information about this series at http://www.springer.com/series/11709

@@ -1,0 +1,45 @@
+Estimating the dynamic and aerodynamic paramters of
+passively controlled high power rockets for ﬂight simulaton
+Simon Box, Christopher M. Bishop, Hugh Hunt
+February, 2009
+Abstract
+High power rockets are essentially large unguided model rockets that can ﬂy to altitudes
+as high as 13 km and recover to earth by parachute. A rocket ﬂight simulator can be used
+to predict the ﬂight path of the rocket during the ascent. To do this the simulator requires
+certain input parameters.
+This paper summarizes some simple methods for estimating
+these parameters from very basic information such as the geometry of the rocket and the
+thrust curve. Methods for estimating the mass, centre of mass, moments of inertia, thrust
+damping, centre of pressure, drag force and normal force are given in this paper. The
+methodology described in this paper has been used in conjunction with a rocket ﬂight
+simulator to predict the ﬂight path of a high power rocket. Some results are given in the
+summary of the paper.
+1
+Introduction
+Rocket ﬂight simulators require certain input parameters that describe the properties of the
+rocket for the simulator.
+These include dynamic parameters such as the thrust, mass and
+moments of inertia of the rocket and also aerodynamic parameters such as the coeﬃcients of
+the aerodynamic forces and the location of the centre of pressure.
+The parameters can be obtained in a number of diﬀerent ways, for instance in the case
+of the aerodynamic parameters these could be obtained through wind tunnel experiments on
+the rocket or on a scale model. Alternatively they can be found by using computational ﬂuid
+dynamics to numerically integrate the viscous and pressure forces over the surface of the rocket.
+While experimental and computational methods can provide accurate estimates of the pa-
+rameters it is also useful to be able to estimate the parameters using simple equations derived
+from theoretical relationships using some simplifying assumptions. This approach provides a
+quick method for estimating parameters in applications where the most accurate estimates are
+not required.
+This document collates and summarizes relevant equations for estimating the dynamic and
+aerodynamic input parameters from rocketry and engineering literature. In some cases equa-
+tions are semi-empirical, that is they use relationships that have been ﬁtted to data from
+experiments using rockets of a standard shape. In general, these equations are only applicable
+1
+to rockets with a conventional shape. That is an axisymmetric rocket with a single cylindrical
+body, a conical, parabolic or ogive shaped nose cone and ﬁn sets consisting of three or four
+trapezoidal ﬁns. Changes is body diameter via conical transitions are allowed.
+There are also a number of simplifying assumptions that are used in the estimation of
+the parameters and in the rocket simulators that use these parameters.
+These include the
+assumption that the rocket is an axisymmetric rigid body and that the angle of attack during
+th

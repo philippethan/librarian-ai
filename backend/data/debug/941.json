@@ -1,0 +1,11 @@
+{
+  "book_id": 941,
+  "filename": "Six Conversations We're Scared to Have 'An Essential Guide for Fostering Nuanced and Intricate Conversations in Today’s Polarized Society’ - Deborah Frances-White.epub",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:24:59.129587"
+}

@@ -1,0 +1,11 @@
+{
+  "book_id": 627,
+  "filename": "The Year in Tech, 2025 (Harvard Business Review) (Z-Library).pdf",
+  "text_length": 1243,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:24:00.917175"
+}

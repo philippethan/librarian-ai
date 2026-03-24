@@ -1,0 +1,29 @@
+Michael Kofler
+Scripting
+Automation with Bash, PowerShell, and Python
+Imprint
+This e-book is a publication many contributed to, specifically:
+Editor   Megan Fuerst
+Acquisitions Editor   Hareem Shafi
+German Edition Editor   Christoph Meister
+Copyeditor   Yvette Chin
+Translation   Winema Language Services, Inc.
+Cover Design   Graham Geary
+Photo Credit   
+Shutterstock: 2197648801/© Dima Zel, iStockphoto:
+165687831/© enjoynz
+Production E-Book   Graham Geary
+Typesetting E-Book   III-satz, Germany
+We hope that you liked this e-book. Please share your feedback with
+us and read the
+Service Pages to find out how to contact us.
+
+The Library of Congress Cataloging-in-Publication Control
+Number for the printed edition
+is as follows:
+ISBN 978-1-4932-2556-9 (print)
+ISBN 978-1-4932-2557-6 (e-book)
+ISBN 978-1-4932-2558-3 (print and e-book)
+
+© 2024 by Rheinwerk Publishing Inc., Boston (MA)
+1st edition 2024

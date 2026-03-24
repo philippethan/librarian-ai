@@ -1,0 +1,31 @@
+Third Edition
+WRITING IN THE TECHNICAL FIELDS
+A Practical Guide
+Thorsten Ewald
+Oxford University Press is a department of the University of Oxford. It furthers the University’s objective of excellence in research, scholarship,
+and education by publishing worldwide. Oxford is a registered trade mark of Oxford University Press in the UK and in certain other countries.
+Published in Canada by
+Oxford University Press
+8 Sampson Mews, Suite 204,
+Don Mills, Ontario M3C 0H5 Canada
+www.oupcanada.com
+Copyright © Oxford University Press Canada 2020
+The moral rights of the author have been asserted
+Database right Oxford University Press (maker)
+First Edition published in 2014
+Second Edition published in 2017
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form or by any means,
+without the prior permission in writing of Oxford University Press, or as expressly permitted by law, by licence, or under terms agreed with the
+appropriate reprographics rights organization. Enquiries concerning reproduction outside the scope of the above should be sent to the
+Permissions Department at the address above or through the following url: www.oupcanada.com/permission/permission_request.php
+Every effort has been made to determine and contact copyright holders. In the case of any omissions, the publisher will be pleased to make
+suitable acknowledgement in future editions.
+Library and Archives Canada Cataloguing in Publication
+Title: Writing in the technical fields : a practical guide / Thorsten Ewald.
+Names: Ewald, Thorsten, author.
+Description: Third edition. | Includes bibliographical references and index.
+Identifiers: Canadiana (print) 20190204451 | Canadiana (ebook) 2019020446X | ISBN 9780199036851
+(softcover) | ISBN 9780199036905 (EPUB)
+Subjects: LCSH: Technical writing. | LCGFT: Handbooks and manuals.
+Classification: LCC T11 .E83 2020 | DDC 808.06/6—dc23
+Cover image: © Bloomicon/Shutterstock

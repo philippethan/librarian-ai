@@ -1,0 +1,11 @@
+{
+  "book_id": 957,
+  "filename": "The Art Of Thinking In Systems Improve Your Logic, Think More Critically, And Use Proven Systems To Solve Your Problems (Steven Schuster) (Z-Library).epub",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:25:04.117613"
+}

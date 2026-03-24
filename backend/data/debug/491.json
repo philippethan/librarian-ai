@@ -1,0 +1,11 @@
+{
+  "book_id": 491,
+  "filename": "Probability Theory A First Course in Probability Theory and Statistics (De Gruyter Textbook), 2nd Edition (Werner Linde) (Z-Library).pdf",
+  "text_length": 1074,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:34.391763"
+}

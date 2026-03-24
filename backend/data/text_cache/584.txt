@@ -1,0 +1,80 @@
+National Aeronautics and
+ Space Administration
+NASA
+SYSTEMS ENGINEERING
+HANDBOOK
+design
+test
+integrate
+fly
+www.nasa.gov
+NASA SP-2016-6105 Rev2 supersedes SP-2007-6105 Rev 1 dated December, 2007.
+Cover photos: Top left: In this photo, engineers led by researcher Greg Gatlin have sprayed fluorescent oil on a 5.8 percent scale 
+model of a futuristic hybrid wing body during tests in the 14- by 22-Foot Subsonic Wind Tunnel at NASA’s Langley Research Center 
+in Hampton, VA. The oil helps researchers “see” the flow patterns when air passes over and around the model. (NASA Langley/
+Preston Martin) Top right: Water impact test of a test version of the Orion spacecraft took place on August 24, 2016, at NASA 
+Langley Research Center (NASA) Bottom left: two test mirror segments are placed onto the support structure that will hold them. 
+(NASA/Chris Gunn) Bottom right: This self-portrait of NASA’s Curiosity Mars rover shows the vehicle at the “Mojave” site, where its 
+drill collected the mission’s second taste of Mount Sharp. (NASA/JPL-Caltech/MSSS)
+Comments, questions, and suggestions regarding this document can be sent to:
+Steven R. Hirshorn
+Chief Engineer, Aeronautics Research Mission Directorate (ARMD)
+Office of the Chief Engineer
+NASA Headquarters, Room 6D37
+300 E St SW
+Washington, DC 20546-0001
+202-358-0775
+steven.r.hirshorn@nasa.gov
+iii
+NASA SYSTEMS ENGINEERING HANDBOOK
+Table of Contents
+Preface.  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . viii
+Acknowledgments.  .   .   .   .   .   .   .   .   .   .   .   .   .   . ix
+1.0	 Introduction	
+1
+1.1	
+Purpose.  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  1
+1.2	
+Scope and Depth .  .   .   .   .   .   .   .   .   .   .   .  1
+2.0	Fundamentals of Systems Engineering	 3
+2.1	
+The Common Technical Processes 
+and the SE Engine .  .   .   .   .   .   .   .   .   .   .   . 5
+2.2	
+An Overview of the SE Engine by 
+Project Phase .  .   .   .   .   .   .   .   .   .   .   .   .   .  8
+2.3	
+Example of Using the SE Engine.  .   .   .   10
+2.4	
+Distinctions between Product 
+Verification and Product Validation.  .   .   11
+2.5	
+Cost Effectiveness Considerations.  .   .   11
+2.6	
+Human Systems Integration (HSI) 
+in the SE Process .  .   .   .   .   .   .   .   .   .   .   . 12
+2.7	
+Competency Model for 
+Systems Engineers.  .   .   .   .   .   .   .   .   .   .   13
+3.0	NASA Program/Project Life Cycle	
+17
+3.1	
+Program Formulation.  .   .   .   .   .   .   .   .   .  20
+3.2	
+Program Implementation.  .   .   .   .   .   .   .  20
+3.3	
+Project Pre-Phase A: Concept Studies.  21
+3.4	
+Project Phase A: Concept and 
+Technology Development.  .   .   .   .   .   .   .  23
+3.5	
+Project Phase B: Preliminary Design 
+and Technology Completion .  .   .   .   .   .   25
+3.6	
+Project Phase C: Final Design and 
+Fabrication.  .   .   .   .   .   .   .   .   .   .   .   .   .   .   27
+3.7	
+Project Phase D: System Assembly, 
+Integration and Test, Launch.  .   .   .   .   .  29
+3.8	
+Project Phase E: O

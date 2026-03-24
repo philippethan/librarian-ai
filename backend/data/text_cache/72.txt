@@ -1,0 +1,56 @@
+A First Course in Probability
+Tenth Edition
+1 of 848
+Tenth Edition
+Sheldon Ross
+University of Southern California
+Director, Portfolio Management: Deirdre Lynch
+Courseware Portfolio Manager: Suzanna Bainbridge
+Courseware Portfolio Management Assistant: Morgan Danna
+Content Producer: Tara Corpuz
+Managing Producer: Scott Disanno
+Producer: Jon Wooding
+Product Marketing Manager: Yvonne Vannatta
+Product Marketing Assistant: Jon Bryant
+Field Marketing Manager: Evan St. Cyr
+Senior Author Support/Technology Specialist: Joe Vetere
+Manager, Rights and Permissions: Gina Cheselka
+Cover Design: Studio Montage
+Production Coordination, Composition, and Illustrations: Integra Software Services 
+Pvt. Ltd.
+Manufacturing Buyer: Carol Melville, LSC Communications
+Cover Image: Adrienne Bresnahan/Moment/Getty Images
+Copyright © 2019, 2014, 2010 by Pearson Education, Inc. All Rights Reserved. 
+Printed in the United States of America. This publication is protected by copyright, 
+and permission should be obtained from the publisher prior to any prohibited 
+reproduction, storage in a retrieval system, or transmission in any form or by any 
+means, electronic, mechanical, photocopying, recording, or otherwise. For 
+information regarding permissions, request forms and the appropriate contacts within 
+2 of 848
+the Pearson Education Global Rights & Permissions department, please visit 
+www.pearsoned.com/permissions/.
+Credits and acknowledgments borrowed from other sources and reproduced, with 
+permission, in this textbook appear on page 506 within text.
+PEARSON, ALWAYS LEARNING, and MYLAB are exclusive trademarks owned by 
+Pearson Education, Inc. or its affiliates in the U.S. and/or other countries.
+Unless otherwise indicated herein, any third-party trademarks that may appear in this 
+work are the property of their respective owners and any references to third-party 
+trademarks, logos or other trade dress are for demonstrative or descriptive purposes 
+only. Such references are not intended to imply any sponsorship, endorsement, 
+authorization, or promotion of Pearson’s products by the owners of such marks, or 
+any relationship between the owner and Pearson Education, Inc. or its affiliates, 
+authors, licensees or distributors.
+Library of Congress Cataloging-in-Publication Data
+Names: Ross, Sheldon M., author.
+Title: A first course in probability / Sheldon Ross (University of Southern California).
+Other titles: Probability
+Description: Tenth edition. | Boston: Pearson, 2018. | Includes index.
+Identifiers: LCCN 2018006823 | ISBN 9780134753119 | ISBN 0134753119
+Subjects: LCSH: Probabilities—Textbooks.
+Classification: LCC QA273 .R83 2018 | DDC 519.2—dc23
+LC record available at https://lccn.loc.gov/2018006823 
+1 18
+ISBN-10: 0-13-475311-9
+ISBN-13: 978-0-13-475311-9
+Pearson
+3 of 848

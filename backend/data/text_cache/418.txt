@@ -1,0 +1,82 @@
+Matt Oswalt, 
+Christian Adell, 
+Scott S. Lowe &
+ Jason Edelman
+Network 
+Programmability 
+& Automation
+Skills for the Next-Generation 
+Network Engineer
+Second 
+Edition
+SECURITY
+“This book helps 
+networking professionals 
+and developers write 
+clear, easily extensible 
+network automation 
+playbooks. It covers 
+almost everything 
+that you need to be at 
+the helm of network 
+automation.”
+—Akhil Behl
+Partner Manager, Red Hat
+Network Programmability & Automation
+Twitter: @oreillymedia
+linkedin.com/company/oreilly-media
+youtube.com/oreillymedia 
+Network engineers are finding it harder than ever to rely 
+solely on manual processes to get their jobs done. New 
+protocols, technologies, delivery models, and the need 
+for businesses to become more agile and flexible have 
+made network automation essential. The updated second 
+edition of this practical guide shows network engineers 
+how to use a range of technologies and tools, covering the 
+following topics:
+•	 New Linux-based networking technologies and cloud 
+native environments, and how to use them to bootstrap 
+development environments for your network projects
+•	 Programming skills with Python and Go
+•	 How templating can help you build consistent network 
+device configurations
+•	 Data formats, encodings, and models: JSON, XML, 
+YAML, Protobuf, and YANG
+•	 The role of application programming interfaces (APIs) 
+in network automation, including HTTP APIs, NETCONF, 
+RESTCONF, and gNMI
+•	 How to use version control systems like Git and 
+development practices like continuous integration 
+in your network automation projects
+•	 How to automate network devices and services using 
+Ansible, Nornir, and Terraform
+•	 A holistic approach to architecting network 
+automation solutions
+Matt Oswalt is a senior systems 
+engineer at Cloudflare, where he works 
+on distributed systems and internet 
+and web protocols. 
+Christian Adell is a principal architect 
+at Network to Code, with experience 
+building and delivering network 
+automation solutions for on-premises 
+and cloud environments.
+Scott Lowe works on the developer 
+relations team at Pulumi, where he 
+focuses on infrastructure as code 
+and automating cloud infrastructure 
+and services.
+Jason Edelman is the founder and CTO 
+at Network to Code, a leading network 
+automation solutions provider. Jason 
+founded Network to Code in 2014.
+US $59.99	  CAN $74.99
+ISBN: 978-1-098-11083-3
+Praise for Network Programmability and Automation
+I highly recommend this new edition of the book to anyone looking to improve their
+network automation skills. The authors do an outstanding job of explaining complex
+topics in a clear and concise way. They also provide a comprehensive overview of current
+technology trends in the field, as well as architectural design options and methodologies
+that you can use to achieve positive results for your organization. I found the book to be
+very helpful and informative, and I am confident that you will too.
+—Nicolas Leiva (Staff Solutions Architect at Re

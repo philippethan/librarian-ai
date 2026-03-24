@@ -1,0 +1,11 @@
+{
+  "book_id": 613,
+  "filename": "The Little Book of Stoicism Timeless Wisdom to Gain Resilience, Confidence, and Calmness (Jonas Salzgeber) (Z-Library).pdf",
+  "text_length": 342,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:59.062581"
+}

@@ -1,0 +1,25 @@
+M A N N I N G
+James Cutajar
+z
+z z
+z z
+z
+z z
+z
+zz
+z
+1 client opens connection
+to main goroutine
+2 connection sent over
+channel to worker pool
+4 HTTP request
+5 HTTP response
+main goroutine
+3 idle worker wakes up and
+handles client's request
+worker pool
+browser
+channel acting as
+the work queue
+Using a Worker Pool in an HTTP Server
+Learn Concurrent Programming with Go

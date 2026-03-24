@@ -1,0 +1,11 @@
+{
+  "book_id": 706,
+  "filename": "4000 Essential English Words - Book 2 (Paul Nation) (Z-Library).epub",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:24:15.540921"
+}

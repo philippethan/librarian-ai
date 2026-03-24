@@ -1,0 +1,23 @@
+par la pratique
+avec Python et 
+OpenSSL
+Cours et applications concrètes
+Cryptographie
+Rémi Boulle
+Enseignant à l’IUT de Blagnac
+Préface de Stéphane Bortzmeyer
+11 rue Paul Bert, 92240 Malako 
+www.dunod.com
+J'adresse mes sincères remerciements à Stéphane Bortzmeyer qui m'a fait l'honneur de 
+préfacer cet ouvrage.
+Je remercie aussi vivement Gilles Peskine. Sa relecture rigoureuse et constructive a contribué 
+signiﬁcativement à la qualité de ce livre.
+Gilles Peskine est développeur de systèmes informatiques sécurisés. Normalien et docteur 
+en informatique, il cherche à répondre à la question : comment peut-on être sûr qu’un ordi-
+nateur fait bien ce qu’il est censé faire ? Il est mainteneur de la bibliothèque de cryptographie 
+Mbed TLS, utilisée principalement dans les systèmes embarqués, et dont il a notamment 
+redéﬁni l’interface d’appel des primitives cryptographiques.
+Direction et conception graphique de la couverture
+Nicolas Wiel – Pierre André Gualino (graphiste)
+© Dunod, 2024
+ISBN  978-2-10-087909-0

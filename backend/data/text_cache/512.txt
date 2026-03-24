@@ -1,0 +1,20 @@
+Cyber-Physical Systems
+T
+he SEI Series in Software Engineering is a collaborative undertaking of the 
+Carnegie Mellon Software Engineering Institute (SEI) and Addison-Wesley to develop 
+and publish books on software engineering and related topics. The common goal of the 
+SEI and Addison-Wesley is to provide the most current information on these topics in a 
+form that is easily usable by practitioners and students.
+Titles in the series describe frameworks, tools, methods, and technologies designed to 
+help organizations, teams, and individuals improve their technical or management capa-
+bilities. Some books describe processes and practices for developing higher-quality soft-
+ware, acquiring programs for complex systems, or delivering services more effectively. 
+Other books focus on software and system architecture and product-line development. 
+Still others, from the SEI’s CERT Program, describe technologies and practices needed  
+to manage software and network security risk. These and all titles in the series address  
+critical problems in software engineering for which practical solutions are available. 
+Visit informit.com/sei for a complete list of available publications.
+The SEI Series in Software Engineering
+ Software Engineering Institute of Carnegie Mellon University and Addison-Wesley
+Make sure to connect with us! 
+informit.com/socialconnect

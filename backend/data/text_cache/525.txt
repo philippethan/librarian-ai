@@ -1,0 +1,84 @@
+Relevé d'Identité Bancaire / IBAN
+RIB    :
+BIC    :
+IBAN    :
+(3)
+(2)
+(1)
+International Bank Account Number
+Bank Identifier Code
+Relevé d'Identité Bancaire
+(1)
+(2)
+(3)
+Code banque
+Code agence
+Numéro de compte
+Clé RIB
+Agence de domiciliation
+MME JASMINE JOSHI CHEZ M SALIKRAM SAPKOTA 
+ 70 CHEMIN DE LA MADELEINE 
+93000 BOBIGNY
+30004
+03541
+00001722437
+71
+BNPPARB AG AEL ETUDIANTS (03541)
+BNPAFRPPXXX
+FR76 3000 4035 4100 0017 2243 771
+Relevé d'Identité Bancaire / IBAN
+RIB    :
+BIC    :
+IBAN    :
+(3)
+(2)
+(1)
+International Bank Account Number
+Bank Identifier Code
+Relevé d'Identité Bancaire
+(1)
+(2)
+(3)
+Code banque
+Code agence
+Numéro de compte
+Clé RIB
+Agence de domiciliation
+MME JASMINE JOSHI CHEZ M SALIKRAM SAPKOTA 
+ 70 CHEMIN DE LA MADELEINE 
+93000 BOBIGNY
+30004
+03541
+00001722437
+71
+BNPPARB AG AEL ETUDIANTS (03541)
+BNPAFRPPXXX
+FR76 3000 4035 4100 0017 2243 771
+Relevé d'Identité Bancaire / IBAN
+RIB    :
+BIC    :
+IBAN    :
+(3)
+(2)
+(1)
+International Bank Account Number
+Bank Identifier Code
+Relevé d'Identité Bancaire
+(1)
+(2)
+(3)
+Code banque
+Code agence
+Numéro de compte
+Clé RIB
+Agence de domiciliation
+MME JASMINE JOSHI CHEZ M SALIKRAM SAPKOTA 
+ 70 CHEMIN DE LA MADELEINE 
+93000 BOBIGNY
+30004
+03541
+00001722437
+71
+BNPPARB AG AEL ETUDIANTS (03541)
+BNPAFRPPXXX
+FR76 3000 4035 4100 0017 2243 771

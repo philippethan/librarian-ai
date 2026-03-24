@@ -1,0 +1,55 @@
+e édition
+Olivier Fiat 
+PHYSIQUE-CHIMIE 
+MÉTHODES & EXERCICES
+MP/MP* MPI/MPI*
+3
+© Dunod, 2025
+11 rue Paul Bert, 92240 Malakoff 
+www.dunod.com
+ISBN  978-2-10-088480-3
+Table des matières
+Avant-propos
+IX
+I
+Mécanique
+1
+CHAPITRE 1
+RÉFÉRENTIELS NON GALILÉENS
+3
+Les méthodes à retenir
+4
+Énoncés des exercices
+12
+Du mal à démarrer ?
+21
+Corrigés des exercices
+22
+CHAPITRE 2
+MÉCANIQUE DU SOLIDE
+33
+Les méthodes à retenir
+34
+Capacités numériques
+41
+Énoncés des exercices
+46
+Du mal à démarrer ?
+53
+Corrigés des exercices
+54
+II
+Traitement du signal
+67
+CHAPITRE 3
+SIGNAL PÉRIODIQUE
+69
+Les méthodes à retenir
+70
+Énoncés des exercices
+78
+Du mal à démarrer ?
+85
+Corrigés des exercices
+86
+III

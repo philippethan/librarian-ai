@@ -1,0 +1,22 @@
+Contents
+Introduction
+Before starting
+Workout 1. Personal finance dashboard
+Workout 2. Superstore basic sales dashboard
+Workout 3. Airbnb’s in New York
+Workout 4. Billboard Hot 100 Analytics
+Workout 5. World population dashboard
+Workout 6. USA Colleges dashboard
+Workout 7. FIFA 19 player rank dashboard
+Workout 8. Olympics dashboard
+Workout 9. YouTube trending dashboard
+End
+Introduction
+Thank you for buying this e-book!
+You have taken a step on the right path into becoming a Tableau expert.
+Whether if you have a low grasp on what Tableau is, or if you have already
+used the tool for a month or two, you will learn a lot of useful things here. I
+hope you have a great time going through each of the workouts as I had
+building them. Even I got to learn a few new features in Tableau on the way,
+so there really is something new to learn here for everyone, no matter your
+skill level.

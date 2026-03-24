@@ -1,0 +1,11 @@
+{
+  "book_id": 583,
+  "filename": "Systems Engineering for Critical Infrastructure in a Cyber World (Aleksandra Scalco, Steven Simske) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+  "text_length": 1470,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:53.938505"
+}

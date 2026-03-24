@@ -1,0 +1,86 @@
+M A N N I N G
+Stefan Papp
+Survey of the Tools and Techniques Covered in This Book
+Nonﬁnancial data
+Equity
+Crypto
+AI Agent
+Asset monitor
+Inference
+Charts
+Shares
+Private
+Debt
+Bonds
+Derivatives
+RAG DB
+Forex
+Crypto
+Currency
+Application
+Funds (ETF, Mutual, Hedge, Venture)
+As a collection of assets
+Financial data
+Fundamentals
+Technical
+Sentiments
+ESG ratings
+Algorithmic trading
+Strategy / investment
+thesis
+Model context
+protocol
+(MCP)
+Income portfolio
+Value portfolio
+Growth portfolio
+Buy
+Sell
+Hold
+Net worth
+Proﬁt/loss
+Moving averages
+Bollinger Bands
+Ichimoku
+loud
+C
+Chapter 2
+Chapter 3
+Chapters 4+5
+Chapter 11
+Chapter 6
+Chapter 8
+Chapter 9
+Chapter 10
+Chapters 1+12
+Risk management
+Hedging
+Stress tests
+Human factor
+Nonﬁnancial risk
+Portfolio optimization
+Chapter 7
+Big data
+(earnings call reports,
+transcripts, web data,...)
+Financial platforms
+(Yahoo Finance,
+Finviz,...)
+Nonﬁnancial data
+platforms
+ML model
+LLM
+Securities
+Data
+Platforms
+Machine Learning
+API
+API
+API
+Decision-Making
+GenAI
+Investing
+for Programmers
+STEFAN PAPP
+M A N N I N G
+SHELTER ISLAND

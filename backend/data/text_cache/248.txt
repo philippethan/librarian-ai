@@ -1,0 +1,10 @@
+Fundamentals of 
+Programming
+C++
+DRAFT
+Richard L. Halterman
+School of Computing
+Southern Adventist University
+July 11, 2019
+In the name of Almighty Allah
+Copyright © 2008–2019 Richard L. Halterman. All rights reserved.

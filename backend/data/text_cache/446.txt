@@ -1,0 +1,46 @@
+PHYSICS
+FIFTH EDITION
+Alan Giambattista
+Physics
+Alan Giambattista
+Cornell University
+FIFTH EDITION
+PHYSICS: FIFTH EDITION
+Published by McGraw-Hill Education, 2 Penn Plaza, New York, NY 10121. Copyright © 2020 by  
+McGraw-Hill Education. All rights reserved. Printed in the United States of America. Previous editions  
+© 2016, 2010, and 2008. No part of this publication may be reproduced or distributed in any form or by 
+any means, or stored in a database or retrieval system, without the prior written consent of McGraw-Hill 
+Education, including, but not limited to, in any network or other electronic storage or transmission, or 
+broadcast for distance learning.
+Some ancillaries, including electronic and print components, may not be available to customers outside the 
+United States.
+This book is printed on acid-free paper.
+1 2 3 4 5 6 7 8 9 LWI 22 21 20 19
+ISBN 978-1-260-48691-9
+MHID 1-260-48691-5
+Portfolio Manager: Thomas Scaife, Ph.D
+Product Developer: Marisa Dobbeleare
+Marketing Manager: Shannon O’Donnell
+Content Project Managers: Laura Bies, Tammy Juran & Sandra Schnee
+Buyer: Laura Fuller
+Design: David W. Hash
+Content Licensing Specialist: Melissa Homer
+Cover Image: ©ostill/Shutterstock
+Compositor: Aptara®, Inc.
+All credits appearing on page or at the end of the book are considered to be an extension of the copyright 
+page.
+Library of Congress Cataloging-in-Publication Data
+Names: Giambattista, Alan, author. | Richardson, Betty McCarthy, author. |
+   Richardson, Robert C. (Robert Coleman), 1937-2013, author.
+Title: Physics / Alan Giambattista, Betty McCarthy Richardson, Robert C.
+   Richardson.
+Description: Fifth edition. | New York, NY : McGraw-Hill Education, [2020] |
+   Includes index.
+Identifiers: LCCN 2018055989 | ISBN 9781260486919 (alk. paper)
+Subjects:  LCSH: Physics—Textbooks.
+Classification: LCC QC21.3 .G537 2020 | DDC 530—dc23 LC record available at  
+https://lccn.loc.gov/2018055989
+The Internet addresses listed in the text were accurate at the time of publication. The inclusion of a website 
+does not indicate an endorsement by the authors or McGraw-Hill Education, and McGraw-Hill Education 
+does not guarantee the accuracy of the information presented at these sites.
+mheducation.com/highered

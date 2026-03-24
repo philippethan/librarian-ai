@@ -1,0 +1,52 @@
+M A N N I N G
+Michael Kaufmann
+Rob Bos
+Marcel de Vries
+Foreword by Scott Hanselman
+Continuous integration and delivery for DevOps
+Collaborative
+coding
+Issues
+Projects
+I
+Projects
+Jira
+Boards
+Actions
+Actions
+Planning and tracking
+Workflows
+Productivity
+Security
+Advanced
+Security
+Codespaces
+Copilot
+Advanced
+Security
+Codespaces
+Copilot
+Mobile
+Search
+Packages
+Mobile
+CLI
+Desktop
+Teams
+Slack
+Jenkins
+Circle CI
+Client applications
+Azure
+Google Cloud
+snyk
+Discussions
+Pages
+Code
+Visual Studio
+	
+i
+﻿
+	
+i
+GitHub Actions in Action

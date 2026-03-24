@@ -1,0 +1,43 @@
+PUJOLLE
+LES RÉSEAUX
+Wi-Fi 7 / 8, 5G / 6G, SD-WAN, réseaux quantiques, 
+constellations de satellites...
++de 100 000
+exemplaires
+VENDUS
+10e ÉDITION
+ÉDITION 2024-2026
+LA RÉFÉRENCE DES ÉTUDIANTS ET DES PROFESSIONNELS EN RÉSEAUX ET TÉLÉCOMS
+Avec plus de 100 000 exemplaires vendus, Les Réseaux de Guy Pujolle s’est imposé comme la référence en 
+langue française auprès des étudiants comme des professionnels en réseaux et télécoms.
+Très largement refondue et mise à jour, cette dixième édition témoigne des évolutions extrêmement rapides 
+des technologies et des usages. Parmi tous les bouleversements introduits dans Les Réseaux, on peut citer :
+•  l’arrivée des infrastructures numériques avec un service réseau et télécom, 
+reposant sur les centres de données allant de l’inﬁniment petit à l’inﬁniment grand ;
+•  la montée en puissance des réseaux sans ﬁl et mobiles grâce aux nouveaux services offerts 
+par la 5G et bientôt la 6G, ainsi que la convergence de ces réseaux avec le Wi-Fi dont les capacités 
+dépassent largement la dizaine de gigabits par seconde ;
+•  la prise de pouvoir des techniques SDN (Software-Deﬁned Networking) caractérisées 
+par un contrôle centralisé et un produit phare, le SD-WAN ;
+•  l’augmentation des algorithmes de sécurisation pour tenter de contrer la montée 
+phénoménale des cyberattaques.
+Au sommaire
+Les nouvelles orientations. Les infrastructures numériques - Le Cloud et l’Edge networking - Les services réseaux - Les composants 
+des réseaux - Les réseaux virtuels - L’intelligence dans les réseaux. Les protocoles réseau. Niveau physique - Niveau trame 
+- Niveaux paquet et message. Les solutions réseau. Réseaux optiques - Ethernet - Réseaux IP - MPLS et GMPLS - Réseaux SDN 
+et SD-WAN - Cloud et Fog networking - Réseaux open source - Réseaux mesh - Réseaux d’accès terrestres et hertziens. Réseaux 
+de mobiles et sans fil. Réseaux 1G à 6G - Réseaux personnels - Réseaux Wi-Fi : du Wi-Fi 1 au Wi-Fi 8 - Internet des objets. Contrôle, 
+gestion, sécurité et énergie. VLAN et VPN - Gestion et contrôle - Sécurité et identité - Réseaux Green. Générations futures.
+Réseaux participatifs, Virtualisation matérielle - Réseaux morphware - Pilotage automatique - Blockchain.
+En complément sur www.editions-eyrolles.com
+Plus de 450 pages d’annexes à télécharger : bases de traitement du signal, modèles théoriques, technologies 
+en perte de vitesse (X.25, relais de trame, ATM, WiMAX, gestion par politiques…), compléments techniques 
+(IEEE 802.11e, VPN IP, protocoles EAP…), bibliographie mise à jour.
+L’AUTEUR
+Guy Pujolle est professeur émérite de Sorbonne Université et res-
+ponsable de nombreux grands projets de recherche et de dévelop-
+pement, en particulier sur la 6G. Il a été professeur invité à NCSU, Stanford, 
+Rutgers, UQAM, Postech et UFRJ. Il est membre de l’Académie royale de 
+Lund, en Suède, et a été membre de l’Institut Universitaire de France. 
+Il a obtenu un Grand Prix de l’Académie des Sciences en 2013.
+Il est cofondateur de la société QoSMOS spéc

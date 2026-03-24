@@ -1,0 +1,11 @@
+{
+  "book_id": 365,
+  "filename": "Les_7_secrets_de_Warren_Buffett_pour_devenir_riche_Mary_Buffett.pdf",
+  "text_length": 698,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:11.662007"
+}

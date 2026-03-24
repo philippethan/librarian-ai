@@ -1,0 +1,11 @@
+{
+  "book_id": 358,
+  "filename": "Les 7 Habitudes De Ceux Qui Réalisent Tout Ce Quils Entreprennent (Stephen R. Covey) (Z-Library).pdf",
+  "text_length": 281,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:10.265884"
+}

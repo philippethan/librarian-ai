@@ -1,0 +1,45 @@
+Experiment
+Q1-1
+English (Official)
+Earth's magnetic field measurement (10 points)
+Introduction
+This problem aims to measure the horizontal component of the Earth's magnetic field. A magnet will
+first be characterized using a so called Gouy balance, before being used to measure this magnetic field.
+In the entire problem, uncertainties are expected to be determined only from the fits and not from the
+individual experimental points.
+Equipment list
+Fig. 1. Photographs of all equipment.
+The list of equipment is given below and illustrated in Fig. 1. The number of items is indicated between
+[] when it is greater than one. Students should ask for help if something appears not to be working.
+• (a) Magnets [3]. One magnet is attached to the force sensor (b) and should not be removed. An-
+other magnet is inserted into the pod (f) and should not be removed until specified. The last one
+will be used in A.5. All magnets are supposed identical.
+• (b) Force sensor. Connected to the Arduino (c), this sensor measures the force along its axis, noted
+𝑚f, in grams-force ("g"), which is the force experienced by a 1-gram mass on the earth's surface in
+the gravity field (𝑔0 = 9.81m⋅s−2) . One of the magnets (a) is attached to it. Each time it is switched
+back on, the sensor display is reset to 0, regardless of the situation. This sensor must not be subjected
+to forces in excess of 200 grams. It needs to be unpacked carefully.
+• (c) Arduino with digital display. This element is used to power the coils (e) and to perform force
+and magnetic field measurements, displayed directly in gram-force ("g") and mT. The battery (j)
+powering the Arduino must be connected to slot (i), and the battery (j) powering the coils (e) to slot
+(ii) (pay attention to connection polarity). The force sensor (b) and magnetic field sensor (d) should
+be connected to slots (iv) and (iii) respectively, and the coil power cables to slots (v). A switch (vi)
+closes the coil supply circuit (indicated by an LED), whose electric current can be controlled in (vii).
+Experiment
+Q1-2
+English (Official)
+• (d) Magnetic field sensor with ruler. Connected to the Arduino (c), this probe measures the field 𝐵𝑧
+along the direction −→
+𝑒𝑧of the ruler, in mT.
+• (e) Coils in anti-Helmholtz configuration (wound in opposite directions). These coils must be con-
+nected in series with the ammeter (g) and to the Arduino (c) to create a magnetic field.
+• (f) Metallic stand on a wooden base, with suspended pod where a magnet (a) is initially inserted,
+and with angle markers. The detailed assembly of this device is explained below.
+• (g) Multimeter. Only used as an ammeter at the 10A range. If left inactive, the multimeter switches
+off, and must be switched back on by returning it to the “OFF” position. Do not use the two cables
+supplied in the multimeter case.
+• (h) Electric wires [3].
+• (i) 40cm ruler.
+• (j) 9V batteries [3]. Their capacity is of the order of 300mA⋅h.
+• (k) Chronometer.
+• (l) Adhesive paste. Can be used for the

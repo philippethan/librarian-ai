@@ -1,0 +1,11 @@
+{
+  "book_id": 301,
+  "filename": "How_to_Talk_to_Anyone_92_Little_Tricks_for_Big_Success_in_Relationships (2).pdf",
+  "text_length": 112,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:55.298334"
+}

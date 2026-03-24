@@ -1,0 +1,11 @@
+{
+  "book_id": 205,
+  "filename": "Electric Power Distribution Engineering Fourth Edition (Turan Gönen  Chee-Wooi Ten  Ali Mehrizi-Sani) (Z-Library).pdf",
+  "text_length": 3000,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:22:32.499680"
+}

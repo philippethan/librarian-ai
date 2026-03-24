@@ -1,0 +1,11 @@
+{
+  "book_id": 362,
+  "filename": "Les pouvoirs de lintelligence émotionnelle (Rossi Régis, Lauzol Claire, Noyé Didier) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+  "text_length": 2164,
+  "text_extracted": true,
+  "method": "fitz+ollama",
+  "metadata": {},
+  "confidence": 0.3,
+  "status": "partial",
+  "timestamp": "2026-03-24T21:23:10.639720"
+}
