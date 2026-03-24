@@ -1,42 +1,38 @@
-```markdown
-# LibrarianAI v3 — Claude Code Instructions
+# LibrarianAI — Backend Development
 
 ## Platform
-- OS: Windows 11 native (no WSL2)
-- Python: .venv\Scripts\python.exe
-- Activate venv: .\.venv\Scripts\Activate.ps1
-- Shell: PowerShell 7 (pwsh)
-- BOOKS_PATH: C:/Users/posen/Books
-- Ollama: http://localhost:11434
-- Open file: subprocess.Popen(["cmd","/c","start","",str(resolved)], shell=False)
+- Windows 11 native, PowerShell 7
+- Python .venv — activate: .\.venv\Scripts\Activate.ps1
+- Run backend: uvicorn backend.app:app --host 127.0.0.1 --port 8000 --reload
+- Test: curl.exe http://localhost:8000/api/health
+- Ollama model: mistral:7b-instruct (verify: curl.exe http://localhost:11434/api/tags)
+- Books path: C:/Users/posen/Documents/Books
 
-## Architecture — ONE FILE
-The entire backend is backend/app.py. There are no separate modules.
-Do NOT create process.py, extractors.py, llm.py, enrichment.py, covers.py,
-export.py, or file_utils.py. Everything lives in app.py.
+## Architecture — one file only
+Everything lives in backend/app.py.
+No separate modules. No imports from other backend files.
 
-## Non-negotiable rules
-1. confidence_score: (filled/9)*0.7 + text_flag*0.3 — denominator exactly 9
-2. PATCHABLE_FIELDS = {title, author, year, language, category, subcategory,
-   difficulty, description, tags} — PATCH /api/books/{id} accepts NOTHING else
-3. SQLite: contextmanager get_db() — open fresh, yield, close. No thread-local.
-4. Processor: async background_processor() polling every 4s — NO ThreadPoolExecutor
-5. Text extraction: fitz (PyMuPDF) for PDF, ebooklib for EPUB — NO OCR, NO Tesseract
-6. React form fields: value={field ?? ""}  — NEVER value={field || ""}
-7. CSS colours: var(--css-variable) only  — NEVER hardcoded hex in components
-8. open_book_file: ["cmd","/c","start","",str(resolved)] + is_relative_to(BOOKS_ROOT)
-9. Chat: truncate to LLM_MAX_CHARS — never multiply
-10. repair_json: 4-step _parse_llm_json() inline in app.py
+## Rules that never change
+1. Async background_processor() polling every 4s — no ThreadPoolExecutor
+2. get_db() contextmanager — open, yield, close — no thread-local
+3. OLLAMA_MODEL read inside call_ollama() at call time — not at module load
+4. ensure_ascii=True in all json.dumps() calls sent to Ollama
+5. No em dashes in prompt strings — use plain hyphens only
+6. PATCHABLE_FIELDS whitelist on PATCH /api/books/{id}
+7. os.startfile() for open_book on native Windows
 
-## Commands (PowerShell from project root)
-Activate venv:  .\.venv\Scripts\Activate.ps1
-Run tests:      python -m pytest backend\tests\ -v
-Start backend:  uvicorn backend.app:app --host 127.0.0.1 --port 8000 --reload
-Start frontend: cd frontend; npm run dev
+## Build order — do not skip steps
+Step 1: health endpoint + DB init + scan
+Step 2: text extraction (fitz/ebooklib) — test independently
+Step 3: Ollama call — test with one book, verify JSON returned
+Step 4: full process_book pipeline
+Step 5: all remaining API endpoints
+Step 6: single HTML frontend
 
-## After every code change
-python -m pytest backend\tests\ -v
-Fix all failures before continuing.
+## After every step
+Test with curl.exe before moving to the next step.
+Show me the curl.exe output. If anything returns an error, fix it before continuing.
+```
 
-## Full technical reference
-type SRS.md
+---
+
