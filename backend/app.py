@@ -21,7 +21,7 @@ from backend.db import get_conn
 logger = logging.getLogger(__name__)
 
 DB_PATH = os.getenv("DB_PATH", "./data/librarian.db")
-BOOKS_ROOT = Path(os.getenv("BOOKS_PATH", r"C:\Users\Than\Books")).resolve()
+BOOKS_ROOT = Path(os.getenv("BOOKS_PATH", r"C:\Users\posen\Documents\Books")).resolve()
 
 PATCHABLE_FIELDS = {
     "title", "author", "year", "language",

@@ -128,7 +128,7 @@ def compute_confidence(meta: dict, text_extracted: bool) -> float:
 ## §1.3 — Ollama Integration  [REPLACE EXISTING §1.3]
 
 ```
-OLLAMA_MODEL=mistral:7b
+OLLAMA_MODEL=mistral:7b-instruct
 OLLAMA_URL=http://localhost:11434
 LLM_MAX_CHARS=3000
 ```

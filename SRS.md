@@ -8,21 +8,23 @@
 ## §0 — Platform Baseline
 
 **OS:** Windows 11 (native — no WSL2, no Docker, no virtualisation layer)
-**Python:** 3.11+ installed via python.org Windows installer. Available as `python` in PATH.
+**Python:** 3.11+ installed via python.org Windows installer.
 **Node:** 18+ LTS installed via nodejs.org Windows installer.
 **Ollama:** Installed on Windows, runs as a background service at `http://localhost:11434`.
-**Tesseract:** Installed via the Windows installer from UB-Mannheim.
-**Poppler:** Extracted to `C:\poppler\` (the poppler-windows release from oschwartz10612).
-**Shell for scripts:** PowerShell 7+ (pwsh) or Windows PowerShell 5.1.
-**All paths:** Windows paths throughout. Use `pathlib.Path` — it handles both `/` and `\`.
-**Project root:** `C:\Users\posen\librarian-ai\` (adjust to actual username).
+**Shell:** PowerShell 7+ (pwsh) or Windows PowerShell 5.1.
+**All paths:** Windows paths throughout. Use `pathlib.Path` — handles both `/` and `\`.
+**Project root:** `C:\Users\posen\librarian-ai\`
+
+NO Tesseract. NO Poppler. NO OCR pipeline. Text extraction uses PyMuPDF (fitz) only.
+For a personal library of technical PDFs, the text layer is always present.
+OCR added complexity and two external Windows binaries that were silent failure points.
 
 ---
 
 ## §1 — System Context
 
 LibrarianAI v3 is a locally hosted web application. All components run natively on
-Windows 11. There is no WSL2, no Docker, no Linux subsystem.
+Windows 11.
 
 ```
 Browser (Windows)  →  Vite dev server :5173  →  FastAPI backend :8000
@@ -31,20 +33,21 @@ Browser (Windows)  →  Vite dev server :5173  →  FastAPI backend :8000
                                                (./data/librarian.db)
                                                       ↓
                                           Ollama (localhost:11434)
-                                          Tesseract (local binary)
-                                          Poppler   (local binary)
+                                          PyMuPDF — fitz (built-in, no binary)
                                           Open Library API (internet, optional)
 ```
 
-**open_book_file:** Use `subprocess.Popen(["cmd", "/c", "start", "", str(resolved)],
-shell=False)`. The empty string after `start` sets the window title, which prevents
-issues when the filepath contains spaces or special characters. This launches the file
-in the user's default Windows application (Acrobat, SumatraPDF, Calibre, etc.).
+**Architecture — single file:** The entire backend lives in `backend/app.py`.
+There are no separate modules (`process.py`, `extractors.py`, `llm.py`, etc.).
+This matches the proven v1/v2 pattern and eliminates cross-module wiring bugs.
 
-**BOOKS_PATH containment:** Use `Path.resolve()` on both the stored path and BOOKS_PATH,
-then `resolved.is_relative_to(BOOKS_ROOT)` (Python 3.9+). This is case-aware on Windows
-— use `.lower()` on both sides if case-insensitive comparison is needed.
+**Processor pattern:** An `asyncio` background task polls for `pending` books every
+4 seconds and processes them one at a time. This avoids all `ThreadPoolExecutor` +
+SQLite deadlock issues on Windows. It is the pattern from the working v1 app.
 
+**open_book_file:** `subprocess.Popen(["cmd", "/c", "start", "", str(resolved)], shell=False)`
+
+**BOOKS_PATH containment:** `resolved.is_relative_to(BOOKS_ROOT)` (Python 3.9+).
 ---
 
 ## §1.1 — Core Metadata Fields (books table)
@@ -74,46 +77,31 @@ accepts forward slashes on Windows and resolves them correctly.
 
 ## §1.2 — Extraction Pipeline — Best-of-Three with Merge
 
-Run all applicable passes, then merge field-by-field.
+Two passes only. No OCR. No Tesseract. No Poppler.
 
-**Pass 1 — pdfplumber:** Extract first 3 pages. If >= 100 chars → send to Ollama.
-**Pass 2 — OCR (Tesseract + pdf2image):** ONLY when pdfplumber < 100 chars. First 2
-pages via pdf2image (using POPPLER_PATH) → pytesseract (using TESSERACT_PATH) → Ollama.
-**Pass 3 — Filename heuristic:** ALWAYS run. Send filename + file size to Ollama.
-**Pass 4 — ebooklib (EPUB only):** dc:title, dc:creator, dc:language as a fourth source.
-Skip OCR for EPUBs.
+**Pass 1 — fitz (PDF only):** Open with `fitz.open(filepath)`. Extract text from
+first 3 pages via `page.get_text()`. If result >= 50 chars, send to Ollama.
+This is `extraction_method = "fitz+ollama"`.
 
-### merge_metadata(results: list[dict]) → dict — field-level rules
+**Pass 2 — Filename heuristic (always):** When fitz yields < 50 chars (scanned
+image PDF or encrypted file), send only the filename stem and file size to Ollama.
+This is `extraction_method = "filename_heuristic"`.
+
+**EPUB:** Use `ebooklib` + `BeautifulSoup`. Extract text from document items.
+This is `extraction_method = "ebooklib+ollama"`.
+
+**No merge step needed:** There is only one real pass per file. The result goes
+directly to `compute_confidence()` and then to the DB.
+
+### field-level rules (simplified from multi-pass merge)
 
 ```python
-# title, author, year:
-#   Take from the result with the most filled fields.
-#   Tie-break: pdfplumber > ocr > filename_heuristic > ebooklib
-
-# language:
-#   Prefer valid ISO 639-1 two-letter code.
-#   Validate against known list; fallback to langdetect on extracted text.
-
-# tags:
-#   Union all lists, deduplicate, lowercase.
-
-# description:
-#   Longest non-empty value wins.
-
-# category, subcategory, difficulty:
-#   Priority: pdfplumber → ocr → filename_heuristic → ebooklib
-
-# extraction_method:
-#   "merged"  if more than one source contributed a field
-#   otherwise the single source name that contributed
-
-# confidence_score:
-#   See §1.2.1 — computed AFTER merge, not during.
-
-# status:
-#   "done"    if confidence_score >= 0.4
-#   "partial" if confidence_score <  0.4
-#   "error"   if all passes returned {} or raised exceptions
+# All fields come from the single Ollama response.
+# Empty string → None before saving (null-guard in _save_to_db).
+# Tags: always a list, lowercase, deduplicated.
+# year: validate int in [1800, current+1] — None if invalid.
+# language: validate 2-letter ISO code — None if invalid.
+# difficulty: one of "Beginner", "Intermediate", "Advanced" — None otherwise.
 ```
 
 ---
@@ -147,24 +135,23 @@ def compute_confidence(merged: dict, text_extracted: bool) -> float:
 
 ## §1.3 — Ollama Integration and repair_json
 
-**LLM config (from .env):**
+
 ```
-OLLAMA_MODEL=mistral:7b-instruct          (default)
+OLLAMA_MODEL=mistral:7b-instruct
 OLLAMA_URL=http://localhost:11434
-LLM_CONCURRENCY=2                (max concurrent Ollama requests, use asyncio.Semaphore)
-LLM_MAX_CHARS=3000               (truncation: first 2000 + last 1000 chars of text)
+LLM_MAX_CHARS=3000
 ```
 
-**HTTP client:** `httpx.AsyncClient`, timeout 45s. Retry ONCE on HTTP 500 or timeout.
-After two failures return `{}` and continue pipeline.
+**HTTP:** `urllib.request` (stdlib only — no httpx dependency).
+Timeout: 120s. No retry logic needed — single synchronous call run in executor.
 
-**repair_json — full implementation, inline in llm.py:**
+**repair_json — 4-step, inline in app.py:**
 
 ```python
 import re, json
 
-def repair_json(raw: str) -> dict:
-    # Step 1: strip markdown code fences
+def _parse_llm_json(raw: str) -> dict:
+    # Step 1: strip markdown fences
     text = re.sub(r"```(?:json)?", "", raw).strip()
     # Step 2: direct parse
     try:
@@ -190,39 +177,19 @@ def repair_json(raw: str) -> dict:
     return {}
 ```
 
-**Field validation after parsing:**
-```python
-import datetime
-CURRENT_YEAR = datetime.datetime.now().year
+**Two Ollama functions:**
 
-def validate_fields(raw: dict) -> dict:
-    out = dict(raw)
-    # year: must be int in [1800, current+1]
-    try:
-        y = int(out.get("year", 0))
-        out["year"] = y if 1800 <= y <= CURRENT_YEAR + 1 else None
-    except (TypeError, ValueError):
-        out["year"] = None
-    # language: must be exactly 2 lowercase letters
-    lang = out.get("language", "")
-    out["language"] = (
-        lang.lower()
-        if (isinstance(lang, str) and len(lang) == 2 and lang.isalpha())
-        else None
-    )
-    # difficulty: whitelist
-    out["difficulty"] = (
-        out.get("difficulty")
-        if out.get("difficulty") in ("Beginner", "Intermediate", "Advanced")
-        else None
-    )
-    # tags: must be a list of strings, lowercase
-    tags = out.get("tags", [])
-    out["tags"] = (
-        [str(t).lower().strip() for t in tags if t]
-        if isinstance(tags, list) else []
-    )
-    return out
+```python
+def call_ollama_text(text: str, filename_stem: str) -> dict:
+    # Full metadata extraction from extracted text
+    # Prompt includes: title, author, year, language, category, subcategory,
+    #   difficulty, description, tags
+    # Returns validated dict
+
+def call_ollama_filename(filepath: str) -> dict:
+    # Filename-only heuristic when no text extractable
+    # Sends: filename stem + file size
+    # Returns partial dict (title/category/tags most likely)
 ```
 
 ---
@@ -569,126 +536,100 @@ Both support same filter params as GET /api/books.
 
 ## §1.17 — process_book_sync() — Pipeline Order (AUTHORITATIVE)
 
-```python
-import hashlib, json, os, datetime
-from pathlib import Path
 
-def process_book_sync(book_id: int, filepath: str, db_path: str):
-    conn = get_conn(db_path)   # thread-local connection with WAL mode
+```python
+async def process_book(book_id: int, filepath: str, file_type: str):
+    """Runs in the async event loop via background_processor()."""
+    loop = asyncio.get_event_loop()
 
     # Step 1: Hash + duplicate check
     file_bytes = Path(filepath).read_bytes()
     file_hash  = hashlib.sha256(file_bytes).hexdigest()
-    existing   = conn.execute(
-        "SELECT id FROM books WHERE file_hash=? AND id!=? AND dedup_dismissed=0",
-        (file_hash, book_id)
-    ).fetchone()
-    if existing:
-        conn.execute(
-            "UPDATE books SET duplicate_of=?, status='duplicate', file_hash=? WHERE id=?",
-            (existing["id"], file_hash, book_id)
-        )
-        conn.commit()
-        return   # STOP — do not run extraction
+    # Check for existing hash with dedup_dismissed=0 → mark duplicate and return
 
-    conn.execute("UPDATE books SET file_hash=? WHERE id=?", (file_hash, book_id))
-    conn.commit()
+    # Step 2: Extract text
+    text = await loop.run_in_executor(None, extract_text, filepath, file_type)
+    text_extracted = bool(text and len(text.strip()) >= 50)
 
-    # Step 2: Text extraction
-    pdf_text, ocr_text, epub_meta = "", None, {}
-    fp_lower = filepath.lower()
-    if fp_lower.endswith(".pdf"):
-        pdf_text = extract_pdfplumber(filepath)       # first 3 pages
-        if len(pdf_text) < 100 and os.getenv("ENABLE_OCR", "true").lower() == "true":
-            ocr_text = extract_ocr(filepath)          # OCR first 2 pages
-    elif fp_lower.endswith(".epub"):
-        epub_meta = extract_ebooklib(filepath)        # dc:title, dc:creator, dc:language
+    # Step 3: Write text cache (CACHE_DIR/{book_id}.txt)
+    # Required by chat endpoint. Write empty file if no text.
 
-    # Step 3: Run Ollama passes
-    pdfplumber_result = call_ollama_sync(pdf_text, filepath, "pdfplumber") \
-                        if len(pdf_text) >= 100 else {}
-    ocr_result        = call_ollama_sync(ocr_text, filepath, "ocr") \
-                        if ocr_text else None
-    fn_result         = call_ollama_sync("", filepath, "filename_heuristic")  # always
+    # Step 4: Call Ollama
+    # If text_extracted → call_ollama_text(text, stem)
+    # Otherwise        → call_ollama_filename(filepath)
 
-    # Step 4: Merge
-    results = [r for r in [pdfplumber_result, ocr_result, fn_result, epub_meta] if r]
-    merged  = merge_metadata(results)
+    # Step 5: Compute confidence score
+    confidence = compute_confidence(metadata, text_extracted)
+    status = "done" if confidence >= 0.4 else "partial" if confidence > 0.0 else "error"
 
-    # Step 5: Confidence score
-    text_extracted = len(pdf_text) >= 100 or bool(ocr_text)
-    merged["confidence_score"] = compute_confidence(merged, text_extracted)
-    merged["status"] = (
-        "done"    if merged["confidence_score"] >= 0.4 else
-        "partial" if merged["confidence_score"] >  0.0 else
-        "error"
+    # Step 6: Open Library enrichment (if OPENLIBRARY_ENRICH=true and title not null)
+    metadata = await loop.run_in_executor(None, enrich_open_library, metadata)
+
+    # Step 7: Cover extraction (fitz for PDF, ebooklib for EPUB)
+    cover_path = await loop.run_in_executor(
+        None, extract_cover, filepath, book_id, file_type
     )
 
-    # Step 6: Write text cache  <- REQUIRED — chat endpoint depends on this file
-    text_cache_dir = Path(os.getenv("TEXT_CACHE_PATH", "./data/text_cache"))
-    text_cache_dir.mkdir(parents=True, exist_ok=True)
-    cache_content = pdf_text or ocr_text or ""
-    (text_cache_dir / f"{book_id}.txt").write_text(cache_content, encoding="utf-8")
-
-    # Step 7: Open Library enrichment (fills null/out-of-range fields, silent on fail)
-    enrich_book(book_id, db_path)
-
-    # Step 8: Cover extraction (local first, OL fallback)
-    extract_cover(book_id, filepath, db_path)
-
-    # Step 9: Debug JSON
-    debug_dir = Path(os.getenv("DEBUG_PATH", "./data/debug"))
-    debug_dir.mkdir(parents=True, exist_ok=True)
-    debug_payload = {
-        "book_id":  book_id,
-        "filename": Path(filepath).name,
-        "passes": {
-            "pdfplumber":         pdfplumber_result,
-            "ocr":                ocr_result,
-            "filename_heuristic": fn_result,
-        },
-        "pdfplumber_text_length": len(pdf_text),
-        "ocr_text_length":        len(ocr_text) if ocr_text else 0,
-        "merged":    merged,
-        "timestamp": datetime.datetime.utcnow().isoformat(),
-    }
-    (debug_dir / f"{book_id}.json").write_text(
-        json.dumps(debug_payload, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
-
-    # Step 10: Save to DB
-    n_sources = sum(1 for r in [pdfplumber_result, ocr_result, fn_result] if r)
-    merged["extraction_method"] = (
-        "merged"             if n_sources > 1 else
-        "pdfplumber"         if pdfplumber_result else
-        "ocr"                if ocr_result        else
-        "filename_heuristic"
-    )
-    _save_merged(conn, book_id, merged)
+    # Step 8: Save to DB + write debug JSON
+    # UPDATE books SET title=?, author=?, ... WHERE id=?
+    # Write DEBUG_DIR/{book_id}.json
 ```
+
+**Background processor (the working pattern from v1):**
+
+```python
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db()
+    task = asyncio.create_task(background_processor())
+    yield
+    task.cancel()
+
+async def background_processor():
+    while True:
+        try:
+            with get_db() as conn:
+                row = conn.execute(
+                    "SELECT id, filepath, file_type FROM books "
+                    "WHERE status='pending' LIMIT 1"
+                ).fetchone()
+            if row:
+                await process_book(row["id"], row["filepath"], row["file_type"])
+            else:
+                await asyncio.sleep(4)
+        except asyncio.CancelledError:
+            break
+        except Exception as e:
+            print(f"[processor] Error: {e}")
+            await asyncio.sleep(5)
+```
+
+This processes books one at a time. No ThreadPoolExecutor.
+No SQLite deadlocks. No books stuck on "processing".
 
 ---
 
 ## §2 — SQLite Connection Factory (db.py)
 
 ```python
-import sqlite3, threading
+from contextlib import contextmanager
 
-_local = threading.local()
-
-def get_conn(db_path: str) -> sqlite3.Connection:
-    """Return a per-thread SQLite connection in WAL mode.
-    Each ThreadPoolExecutor worker gets its own connection.
-    Never share a connection object across threads.
-    """
-    if not hasattr(_local, "conn") or _local.conn is None:
-        _local.conn = sqlite3.connect(db_path, check_same_thread=False)
-        _local.conn.row_factory = sqlite3.Row
-        _local.conn.execute("PRAGMA journal_mode=WAL;")
-        _local.conn.execute("PRAGMA synchronous=NORMAL;")
-        _local.conn.execute("PRAGMA foreign_keys=ON;")
-    return _local.conn
+@contextmanager
+def get_db():
+    """Open fresh, yield, close. Simple and deadlock-free."""
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA journal_mode=WAL;")
+    conn.execute("PRAGMA foreign_keys=ON;")
+    try:
+        yield conn
+    finally:
+        conn.close()
 ```
+
+No thread-local pattern needed. Each `with get_db()` call opens and closes its own
+connection. The async processor awaits between books so there is never concurrent
+write contention.
 
 ---
 
@@ -833,24 +774,34 @@ app.add_middleware(
 ---
 
 ## §6 — requirements.txt
-
 ```
+# Web framework
 fastapi>=0.111.0
 uvicorn[standard]>=0.29.0
-httpx>=0.27.0
-pdfplumber>=0.11.0
-pdf2image>=1.17.0
-pytesseract>=0.3.10
+
+# PDF extraction — PyMuPDF (fitz). No Poppler, no Tesseract, no OCR.
+pymupdf>=1.24.0
+
+# EPUB extraction
 ebooklib>=0.18
 beautifulsoup4>=4.12.0
-langdetect>=1.0.9
+lxml>=5.0.0
+
+# Image processing (cover thumbnails via fitz pixmap)
 Pillow>=10.3.0
-psutil>=5.9.0
+
+# JSON repair (LLM response fallback parser)
 json-repair>=0.28.0
+
+# Environment variables
 python-dotenv>=1.0.0
+
+# Tests
 pytest>=8.0.0
 pytest-asyncio>=0.23.0
 ```
+
+Removed: `pdfplumber`, `pdf2image`, `pytesseract`, `httpx`, `psutil`, `langdetect`
 
 ---
 
@@ -863,7 +814,7 @@ DB_PATH=./data/librarian.db
 COVERS_PATH=./data/covers
 TEXT_CACHE_PATH=./data/text_cache
 DEBUG_PATH=./data/debug
-BOOKS_PATH=C:/Users/posen/Documents/Books
+BOOKS_PATH=C:/Users/posen/Books
 
 OPENLIBRARY_ENRICH=true
 
@@ -871,16 +822,13 @@ PORT=8000
 FRONTEND_PORT=5173
 
 OLLAMA_URL=http://localhost:11434
-OLLAMA_MODEL=mistral:7b-instruct
-LLM_CONCURRENCY=2
+OLLAMA_MODEL=mistral:7b
 LLM_MAX_CHARS=3000
-
-ENABLE_OCR=true
-POPPLER_PATH=C:/poppler/Library/bin
-TESSERACT_PATH=C:/Program Files/Tesseract-OCR/tesseract.exe
 
 LOG_LEVEL=INFO
 ```
+
+Removed: `ENABLE_OCR`, `POPPLER_PATH`, `TESSERACT_PATH`, `LLM_CONCURRENCY`
 
 Frontend `frontend/.env`:
 ```ini
@@ -892,62 +840,82 @@ VITE_API_KEY=change_me_to_a_strong_random_string
 
 ## §7.1 — Tesseract and Poppler Wiring (Windows)
 
+
 ```python
-import pytesseract, os
-from pdf2image import convert_from_path
-from pathlib import Path
+import fitz   # PyMuPDF — import name is always "fitz" on all platforms
 
-TESSERACT_PATH = os.getenv(
-    "TESSERACT_PATH",
-    r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-)
-POPPLER_PATH = os.getenv("POPPLER_PATH", r"C:\poppler\Library\bin")
-
-# Set tesseract binary path before any pytesseract call
-pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
-
-def extract_ocr(filepath: str) -> str:
+def extract_text(filepath: str, file_type: str) -> str:
+    """No external binaries needed. fitz is pure Python + bundled C library."""
     try:
-        pages = convert_from_path(
-            filepath,
-            first_page=1, last_page=2,
-            dpi=200,
-            poppler_path=POPPLER_PATH,
-        )
-        return " ".join(
-            pytesseract.image_to_string(page, lang="eng+fra")
-            for page in pages
-        ).strip()
-    except Exception as e:
-        logger.warning("OCR failed for %s: %s", filepath, e)
-        return ""
+        if file_type == "pdf":
+            doc  = fitz.open(filepath)
+            text = ""
+            for page in doc[:3]:        # first 3 pages
+                text += page.get_text()
+            doc.close()
+            return text[:LLM_MAX_CHARS]
 
-def extract_cover_pdf(filepath: str, book_id: int) -> str | None:
-    try:
-        pages = convert_from_path(
-            filepath,
-            first_page=1, last_page=1,
-            dpi=72,           # hard limit — prevents memory spikes
-            size=(600, None), # cap width
-            poppler_path=POPPLER_PATH,
-        )
-        if not pages:
-            return None
-        img = pages[0]
-        w, h = img.size
-        img = img.crop((0, 0, w, h // 2))
-        # Blank detection
-        from PIL import ImageStat
-        stat = ImageStat.Stat(img.convert("RGB"))
-        if all(m > 250 for m in stat.mean):
-            return None  # blank/white page — caller tries OL fallback
-        out_path = Path(os.getenv("COVERS_PATH", "./data/covers")) / f"{book_id}.jpg"
-        out_path.parent.mkdir(parents=True, exist_ok=True)
-        img.convert("RGB").save(str(out_path), "JPEG", quality=85)
-        return str(out_path)
+        elif file_type == "epub":
+            import ebooklib
+            from ebooklib import epub
+            from bs4 import BeautifulSoup
+            book = epub.read_epub(filepath, options={"ignore_ncx": True})
+            text = ""
+            for item in book.get_items():
+                if item.get_type() == ebooklib.ITEM_DOCUMENT:
+                    soup = BeautifulSoup(item.get_content(), "lxml")
+                    text += soup.get_text(" ", strip=True)
+                    if len(text) > LLM_MAX_CHARS:
+                        break
+            return text[:LLM_MAX_CHARS]
     except Exception as e:
-        logger.warning("Cover extraction failed for %s: %s", filepath, e)
-        return None
+        print(f"[extract_text] {Path(filepath).name}: {e}")
+    return ""
+
+
+def extract_cover(filepath: str, book_id: int, file_type: str) -> str | None:
+    """Cover via fitz pixmap (PDF) or ebooklib item (EPUB). No Poppler needed."""
+    out_path = COVERS_DIR / f"{book_id}.jpg"
+    try:
+        if file_type == "pdf":
+            import fitz
+            from PIL import Image, ImageStat
+
+            doc  = fitz.open(filepath)
+            if doc.page_count == 0:
+                return None
+            page = doc[0]
+            clip = fitz.Rect(0, 0, page.rect.width, page.rect.height / 2)
+            pix  = page.get_pixmap(matrix=fitz.Matrix(1.0, 1.0), clip=clip)
+            doc.close()
+
+            img  = Image.open(io.BytesIO(pix.tobytes("jpeg")))
+            stat = ImageStat.Stat(img.convert("RGB"))
+            if all(m > 245 for m in stat.mean):
+                return None     # blank page — skip
+
+            img.thumbnail((300, 400))
+            img.convert("RGB").save(str(out_path), "JPEG", quality=85)
+            return str(out_path)
+
+        elif file_type == "epub":
+            import ebooklib
+            from ebooklib import epub
+            from PIL import Image
+
+            book = epub.read_epub(filepath, options={"ignore_ncx": True})
+            for item in book.get_items():
+                name = item.get_name().lower()
+                if "cover" in name and any(
+                    name.endswith(e) for e in (".jpg", ".jpeg", ".png")
+                ):
+                    img = Image.open(io.BytesIO(item.get_content()))
+                    img.thumbnail((300, 400))
+                    img.convert("RGB").save(str(out_path), "JPEG", quality=85)
+                    return str(out_path)
+    except Exception as e:
+        print(f"[cover] {Path(filepath).name}: {e}")
+    return None
 ```
 
 ---
@@ -1041,31 +1009,34 @@ desktop.ini
 - OS: Windows 11 native (no WSL2)
 - Python: .venv\Scripts\python.exe
 - Activate venv: .\.venv\Scripts\Activate.ps1
-- Shell: PowerShell (pwsh or powershell)
-- BOOKS_PATH: C:/Users/Than/Books (forward slashes — pathlib handles on Windows)
+- Shell: PowerShell 7 (pwsh)
+- BOOKS_PATH: C:/Users/posen/Books
 - Ollama: http://localhost:11434
-- Tesseract: C:/Program Files/Tesseract-OCR/tesseract.exe (set via TESSERACT_PATH env)
-- Poppler: C:/poppler/Library/bin (pass as poppler_path= arg, not in system PATH)
 - Open file: subprocess.Popen(["cmd","/c","start","",str(resolved)], shell=False)
+
+## Architecture — ONE FILE
+The entire backend is backend/app.py. There are no separate modules.
+Do NOT create process.py, extractors.py, llm.py, enrichment.py, covers.py,
+export.py, or file_utils.py. Everything lives in app.py.
 
 ## Non-negotiable rules
 1. confidence_score: (filled/9)*0.7 + text_flag*0.3 — denominator exactly 9
 2. PATCHABLE_FIELDS = {title, author, year, language, category, subcategory,
    difficulty, description, tags} — PATCH /api/books/{id} accepts NOTHING else
-3. SQLite: WAL mode + per-thread connections via get_conn() in db.py
-4. React form fields: value={field ?? ""}  — NEVER value={field || ""}
-5. CSS colours: var(--css-variable) only  — NEVER hardcoded hex in components
-6. open_book_file: ["cmd","/c","start","",str(resolved)] + is_relative_to(BOOKS_ROOT)
-7. Chat: truncate to LLM_MAX_CHARS only — never multiply
-8. repair_json: 4-step strategy from SRS.md §1.3
-9. Migrations: _add_column() helper always — never bare ALTER TABLE
+3. SQLite: contextmanager get_db() — open fresh, yield, close. No thread-local.
+4. Processor: async background_processor() polling every 4s — NO ThreadPoolExecutor
+5. Text extraction: fitz (PyMuPDF) for PDF, ebooklib for EPUB — NO OCR, NO Tesseract
+6. React form fields: value={field ?? ""}  — NEVER value={field || ""}
+7. CSS colours: var(--css-variable) only  — NEVER hardcoded hex in components
+8. open_book_file: ["cmd","/c","start","",str(resolved)] + is_relative_to(BOOKS_ROOT)
+9. Chat: truncate to LLM_MAX_CHARS — never multiply
+10. repair_json: 4-step _parse_llm_json() inline in app.py
 
 ## Commands (PowerShell from project root)
 Activate venv:  .\.venv\Scripts\Activate.ps1
 Run tests:      python -m pytest backend\tests\ -v
 Start backend:  uvicorn backend.app:app --host 127.0.0.1 --port 8000 --reload
 Start frontend: cd frontend; npm run dev
-Migrate DB:     python scripts\migrate_db.py
 
 ## After every code change
 python -m pytest backend\tests\ -v
@@ -1073,7 +1044,7 @@ Fix all failures before continuing.
 
 ## Full technical reference
 type SRS.md
-```
+
 
 ---
 
@@ -1159,23 +1130,27 @@ GET    /api/auth/verify
 
 ## §13 — Test File Checklist
 
+
 ```
 backend\tests\
   test_auth.py          401 no key; 200 correct key; /api/health always 200
   test_confidence.py    9 fields; 0.6889 vector; empty string = unfilled
-  test_covers.py        blank detection (mean>250); OL 1px placeholder skip
+  test_covers.py        fitz pixmap blank detection (mean>245); path returned on success
   test_debug.py         JSON written after processing; endpoint returns it
-  test_dedup.py         same hash -> duplicate_of set; dismissed -> not re-flagged
+  test_dedup.py         same hash → duplicate_of set; dismissed → not re-flagged
   test_enrichment.py    null filled; non-null not overwritten; out-of-range overwritten
   test_export.py        CSV has UTF-8 BOM; correct headers; JSON valid array
-  test_open_file.py     path inside BOOKS_PATH -> 200;
-                        path outside BOOKS_PATH -> 403;
-                        file missing from disk -> 404
-  test_patch_fields.py  filepath in body -> ignored; title in body -> applied
-  test_rename.py        collision -> _01 suffix; _99 exhaustion -> skipped
-  test_serialise.py     all BOOK_DEFAULTS present; "" -> None; tags always list
+  test_open_file.py     path inside BOOKS_PATH → 200;
+                        path outside BOOKS_PATH → 403;
+                        file missing → 404
+  test_patch_fields.py  filepath in body → ignored; title in body → applied
+  test_rename.py        collision → _01 suffix; _99 exhaustion → skipped
+  test_serialise.py     all BOOK_DEFAULTS present; "" → None; tags always list
   test_shelves.py       CRUD; multi-shelf membership; cascade delete
+
+NOTE: No test_ocr.py — OCR is removed entirely from the project.
 ```
+
 
 ---
 
@@ -1184,48 +1159,44 @@ backend\tests\
 ```
 1. PowerShell execution policy (first-time only):
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-   Required to run .ps1 scripts and activate the venv.
 
 2. Running pytest correctly:
    python -m pytest backend\tests\ -v
-   Backslashes in paths work in PowerShell. Do not use forward slashes for
-   PowerShell file paths — use them only in Python code and .env values.
 
 3. pathlib.Path forward slashes:
-   Path("C:/Users/Than/Books") and Path(r"C:\Users\Than\Books") both work.
-   .resolve() normalises both to the Windows canonical form.
-   Store paths in .env and DB using forward slashes for consistency.
+   Path("C:/Users/posen/Books") works perfectly on Windows.
+   .resolve() normalises to the Windows canonical form.
 
 4. SQLite file locking on Windows:
-   WAL mode creates .db-wal and .db-shm sidecar files.
    Do not open librarian.db in DB Browser for SQLite while uvicorn is running.
    Close all external DB tools before running pytest.
 
 5. subprocess.Popen for open_book_file:
    ["cmd", "/c", "start", "", str(resolved)]
-   The empty string is the window title — mandatory when filepath has spaces.
+   The empty string is the window title — required when filepath has spaces.
    shell=False is correct and intentional.
 
-6. Poppler — do NOT add to system PATH:
-   Pass poppler_path=POPPLER_PATH directly to convert_from_path().
-   Adding to PATH causes conflicts if other poppler versions are present.
+6. PyMuPDF install name vs import name:
+   pip install pymupdf        ← install name
+   import fitz                ← import name (always "fitz", not "pymupdf")
+   This is a known quirk of the package. Both refer to the same library.
 
-7. Tesseract — set binary path in code:
-   pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
-   This line must run before any pytesseract call, typically at module import time.
+7. Uvicorn --reload on Windows:
+   Works correctly with watchfiles (bundled with uvicorn[standard]).
+   Source must be on a local drive (C:\), not a network share.
 
-8. Long path support (if books have deep directory nesting):
-   Enable via: reg add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem
-               /v LongPathsEnabled /t REG_DWORD /d 1 /f
-   Or via Group Policy -> Computer Config -> Admin Templates -> System -> Filesystem.
+8. Port conflicts — check and kill:
+   netstat -ano | findstr ":8000"
+   taskkill /PID <pid> /F
 
-9. Uvicorn --reload on Windows:
-   Uses watchfiles (bundled with uvicorn[standard]) which works on Windows NTFS.
-   Source code must be on a local drive, not a network share or USB drive.
+9. Books stuck on "processing" (if it ever recurs):
+   This means the async background processor crashed silently.
+   Check uvicorn terminal for [processor] Error lines.
+   Restart uvicorn — the processor restarts with it.
+   The polling loop picks up all pending books automatically on restart.
 
-10. Port conflicts — check and kill:
-    netstat -ano | findstr ":8000"
-    taskkill /PID <pid> /F
-    netstat -ano | findstr ":5173"
-    taskkill /PID <pid> /F
+10. Ollama not responding:
+    Check Windows system tray — Ollama icon should be present.
+    If missing: start Ollama from Start menu or run: ollama serve
+    Verify: curl http://localhost:11434/api/tags
 ```
