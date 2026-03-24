@@ -76,12 +76,12 @@ DB_PATH=./data/librarian.db
 COVERS_PATH=./data/covers
 TEXT_CACHE_PATH=./data/text_cache
 DEBUG_PATH=./data/debug
-BOOKS_PATH=C:/Users/posen/Books
+BOOKS_PATH=C:/Users/posen/Documents/Books
 OPENLIBRARY_ENRICH=true
 PORT=8000
 FRONTEND_PORT=5173
 OLLAMA_URL=http://localhost:11434
-OLLAMA_MODEL=mistral:7b
+OLLAMA_MODEL=mistral:7b-instruct
 LLM_MAX_CHARS=3000
 LOG_LEVEL=INFO
 ```
