@@ -11,7 +11,7 @@ from datetime import datetime
 from contextlib import asynccontextmanager, contextmanager
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException, Query, Body, Header
+from fastapi import FastAPI, HTTPException, Query, Body, Header, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 import urllib.request, urllib.parse, urllib.error
@@ -124,19 +124,37 @@ def init_db():
         conn.commit()
 
 
+_BOOK_DEFAULTS = {
+    "title": None, "author": None, "year": None, "language": None,
+    "category": None, "subcategory": None, "difficulty": None,
+    "description": None, "tags": [], "error_msg": None,
+    "manual_fixed": 0, "extraction_method": None, "confidence_score": None,
+    "cover_path": None, "cover_source": None, "file_hash": None,
+    "duplicate_of": None, "reading_status": None, "ol_enriched": 0,
+    "dedup_dismissed": 0,
+}
+
 def serialize_book(row) -> dict:
     """Convert a DB row to a clean dict the frontend expects."""
     b = dict(row)
     # Tags: always return as list
-    try:
-        b["tags"] = json.loads(b.get("tags") or "[]")
-    except Exception:
-        b["tags"] = []
+    tags = b.get("tags")
+    if isinstance(tags, list):
+        b["tags"] = tags
+    else:
+        try:
+            b["tags"] = json.loads(tags or "[]")
+        except Exception:
+            b["tags"] = []
     # Coerce nullish strings to None
     for f in ("title", "author", "language", "category", "subcategory",
               "difficulty", "description", "extraction_method", "error_msg"):
         if b.get(f) in ("", "null", "None"):
             b[f] = None
+    # Fill defaults for any missing keys
+    for k, v in _BOOK_DEFAULTS.items():
+        if k not in b:
+            b[k] = v
     return b
 
 # ── Lifespan ───────────────────────────────────────────────────────────────────
@@ -647,6 +665,7 @@ def list_books(
     order: str          = Query("desc"),
     limit: int          = Query(50),
     offset: int         = Query(0),
+    _: None             = Depends(check_auth),
 ):
     limit = min(max(limit, 1), 500)
     order = "DESC" if order.lower() == "desc" else "ASC"
@@ -927,9 +946,13 @@ async def chat_book(book_id: int, data: dict = Body(...)):
 
 @app.get("/api/books/{book_id}/debug")
 def get_debug(book_id: int):
+    with get_db() as conn:
+        row = conn.execute("SELECT id FROM books WHERE id=?", (book_id,)).fetchone()
+    if not row:
+        raise HTTPException(404, "Book not found")
     f = DEBUG_DIR / f"{book_id}.json"
     if not f.exists():
-        return {"available": False}
+        raise HTTPException(404, "Debug file not found")
     return json.loads(f.read_text(encoding="utf-8"))
 
 # ── Rename ─────────────────────────────────────────────────────────────────────
@@ -951,11 +974,10 @@ def rename_book(book_id: int, dry_run: bool = Query(False)):
     def _sanitise(s: str) -> str:
         return re.sub(r"[^A-Za-z0-9._-]", "_", str(s).replace(" ", "_"))
 
-    stem = "_".join([
-        _sanitise(author)[:40],
-        _sanitise(title)[:60],
-        _sanitise(year or "unknown")[:4],
-    ])[:120]
+    parts = [_sanitise(author)[:40], _sanitise(title)[:60]]
+    if year:
+        parts.append(_sanitise(str(year))[:4])
+    stem = "_".join(parts)[:120]
     ext     = Path(row["filepath"]).suffix
     parent  = Path(row["filepath"]).parent
     target  = parent / (stem + ext)
@@ -1033,7 +1055,7 @@ def list_shelves():
     return [dict(r) for r in rows]
 
 
-@app.post("/api/shelves")
+@app.post("/api/shelves", status_code=201)
 def create_shelf(data: dict = Body(...)):
     name = str(data.get("name", "")).strip()
     if not name:
@@ -1050,6 +1072,9 @@ def create_shelf(data: dict = Body(...)):
 @app.delete("/api/shelves/{shelf_id}")
 def delete_shelf(shelf_id: int):
     with get_db() as conn:
+        row = conn.execute("SELECT id FROM shelves WHERE id=?", (shelf_id,)).fetchone()
+        if not row:
+            raise HTTPException(404, "Shelf not found")
         conn.execute("DELETE FROM shelves WHERE id=?", (shelf_id,))
         conn.commit()
     return {"ok": True}
@@ -1067,7 +1092,7 @@ def shelf_books(shelf_id: int):
     return [serialize_book(r) for r in rows]
 
 
-@app.post("/api/shelves/{shelf_id}/books")
+@app.post("/api/shelves/{shelf_id}/books", status_code=201)
 def add_to_shelf(shelf_id: int, data: dict = Body(...)):
     book_id = data.get("book_id")
     if not book_id:
@@ -1078,7 +1103,7 @@ def add_to_shelf(shelf_id: int, data: dict = Body(...)):
             (book_id, shelf_id),
         )
         conn.commit()
-    return {"ok": True}
+    return {"ok": True, "book_id": book_id}
 
 
 @app.delete("/api/shelves/{shelf_id}/books/{book_id}")

@@ -48,6 +48,15 @@ def run_migrations(db_path: str):
         ("reading_status",    "TEXT"),
         ("ol_enriched",       "INTEGER NOT NULL DEFAULT 0"),
         ("dedup_dismissed",   "INTEGER NOT NULL DEFAULT 0"),
+        ("added_at",          "TEXT DEFAULT (datetime('now'))"),
+        ("processed_at",      "TEXT"),
+        ("file_type",         "TEXT"),
+        ("file_size",         "INTEGER"),
+        ("publisher",         "TEXT"),
+        ("isbn",              "TEXT"),
+        ("notes",             "TEXT"),
+        ("rating",            "INTEGER DEFAULT 0"),
+        ("cover_source",      "TEXT"),
     ]
     for col, defn in cols:
         _add_column(conn, "books", col, defn)

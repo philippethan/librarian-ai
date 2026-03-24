@@ -1,5 +1,5 @@
 import pytest
-from backend.extractors import compute_confidence, SCORED_FIELDS
+from backend.app import compute_confidence, SCORED_FIELDS
 
 
 def _all_none():

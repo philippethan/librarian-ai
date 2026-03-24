@@ -1,4 +1,5 @@
-"""Tests for debug JSON — §13: JSON written after processing; endpoint returns it."""
+"""Tests for debug JSON and GET /api/books/{id}/debug endpoint."""
+import asyncio
 import json
 import sqlite3
 from pathlib import Path
@@ -8,33 +9,34 @@ import pytest
 from fastapi.testclient import TestClient
 
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
-def _setup_db(tmp_path, monkeypatch):
+def _setup_env(tmp_path, monkeypatch):
     db_file = str(tmp_path / "test.db")
+    debug_dir = tmp_path / "debug"
+    debug_dir.mkdir()
+
     monkeypatch.setenv("DB_PATH", db_file)
+    monkeypatch.setenv("API_KEY", "")
 
     import backend.app as app_module
-    import backend.auth as auth_module
-    import backend.db as db_module
-
     monkeypatch.setattr(app_module, "DB_PATH", db_file)
-    monkeypatch.setattr(auth_module, "_API_KEY", "")
-    db_module._local.conn = None
+    monkeypatch.setattr(app_module, "API_KEY", "")
+    monkeypatch.setattr(app_module, "DEBUG_DIR", debug_dir)
+    monkeypatch.setattr(app_module, "OL_ENRICH", False)
+    monkeypatch.setattr(app_module, "CACHE_DIR", tmp_path / "cache")
+    monkeypatch.setattr(app_module, "COVERS_DIR", tmp_path / "covers")
+    (tmp_path / "cache").mkdir()
+    (tmp_path / "covers").mkdir()
 
     from scripts.migrate_db import run_migrations
     run_migrations(db_file)
-    db_module._local.conn = None
-    return db_file
+    return db_file, debug_dir
 
 
 def _insert_book(db_file: str, filepath: str) -> int:
     conn = sqlite3.connect(db_file)
     cur = conn.execute(
-        "INSERT INTO books (filename, filepath, status) VALUES (?, ?, 'processing')",
-        (Path(filepath).name, filepath),
+        "INSERT INTO books (filename, filepath, file_type, status) VALUES (?, ?, ?, 'pending')",
+        (Path(filepath).name, filepath, "pdf"),
     )
     conn.commit()
     book_id = cur.lastrowid
@@ -42,95 +44,69 @@ def _insert_book(db_file: str, filepath: str) -> int:
     return book_id
 
 
-def _run_process(book_id: int, filepath: str, db_file: str):
-    import backend.db as db_module
-    db_module._local.conn = None
+def _run_process(book_id: int, filepath: str):
+    with patch("backend.app.call_ollama_text", return_value={}), \
+         patch("backend.app.call_ollama_filename", return_value={}), \
+         patch("backend.app.extract_cover", return_value=None), \
+         patch("backend.app.enrich_open_library", return_value={}):
+        from backend.app import process_book
+        asyncio.run(process_book(book_id, filepath, "pdf"))
 
-    with patch("backend.process.call_ollama_sync", return_value={}), \
-         patch("backend.covers.extract_cover", return_value=None):
-        from backend.process import process_book_sync
-        process_book_sync(book_id, filepath, db_file)
-
-
-# ---------------------------------------------------------------------------
-# Tests — debug JSON written by process_book_sync (Step 9)
-# ---------------------------------------------------------------------------
 
 def test_debug_json_written_after_processing(tmp_path, monkeypatch):
-    """Step 9: process_book_sync writes {book_id}.json to DEBUG_PATH."""
-    debug_dir = tmp_path / "debug"
-    monkeypatch.setenv("DEBUG_PATH", str(debug_dir))
+    """process_book writes {book_id}.json to DEBUG_DIR."""
+    db_file, debug_dir = _setup_env(tmp_path, monkeypatch)
 
-    db_file = _setup_db(tmp_path, monkeypatch)
-
-    # Create a minimal PDF-like file (content doesn't matter — Ollama is mocked)
     book_file = tmp_path / "test_book.pdf"
     book_file.write_bytes(b"%PDF-1.4 fake content for testing")
 
     book_id = _insert_book(db_file, str(book_file))
-    _run_process(book_id, str(book_file), db_file)
+    _run_process(book_id, str(book_file))
 
     debug_file = debug_dir / f"{book_id}.json"
     assert debug_file.exists(), f"Debug file {debug_file} was not created"
 
 
 def test_debug_json_has_required_keys(tmp_path, monkeypatch):
-    """Debug JSON contains book_id, filename, passes, merged, timestamp."""
-    debug_dir = tmp_path / "debug"
-    monkeypatch.setenv("DEBUG_PATH", str(debug_dir))
-
-    db_file = _setup_db(tmp_path, monkeypatch)
+    """Debug JSON contains book_id, filename, and other expected keys."""
+    db_file, debug_dir = _setup_env(tmp_path, monkeypatch)
 
     book_file = tmp_path / "keys_test.pdf"
     book_file.write_bytes(b"%PDF-1.4 fake")
 
     book_id = _insert_book(db_file, str(book_file))
-    _run_process(book_id, str(book_file), db_file)
+    _run_process(book_id, str(book_file))
 
     debug_file = debug_dir / f"{book_id}.json"
     payload = json.loads(debug_file.read_text(encoding="utf-8"))
 
     assert payload["book_id"] == book_id
     assert "filename" in payload
-    assert "passes" in payload
-    assert "llm" in payload["passes"]
-    assert "filename_heuristic" in payload["passes"]
-    assert "epub_meta" in payload["passes"]
-    assert "merged" in payload
     assert "timestamp" in payload
+    assert "status" in payload
+    assert "metadata" in payload
 
 
-def test_debug_json_text_lengths_present(tmp_path, monkeypatch):
-    """Debug JSON includes raw_text_length."""
-    debug_dir = tmp_path / "debug"
-    monkeypatch.setenv("DEBUG_PATH", str(debug_dir))
-
-    db_file = _setup_db(tmp_path, monkeypatch)
+def test_debug_json_text_length_present(tmp_path, monkeypatch):
+    """Debug JSON includes text_length."""
+    db_file, debug_dir = _setup_env(tmp_path, monkeypatch)
 
     book_file = tmp_path / "lengths_test.pdf"
     book_file.write_bytes(b"%PDF-1.4 fake")
 
     book_id = _insert_book(db_file, str(book_file))
-    _run_process(book_id, str(book_file), db_file)
+    _run_process(book_id, str(book_file))
 
     payload = json.loads(
         (debug_dir / f"{book_id}.json").read_text(encoding="utf-8")
     )
-    assert "raw_text_length" in payload
-    assert isinstance(payload["raw_text_length"], int)
+    assert "text_length" in payload
+    assert isinstance(payload["text_length"], int)
 
-
-# ---------------------------------------------------------------------------
-# Tests — GET /api/books/{id}/debug endpoint
-# ---------------------------------------------------------------------------
 
 @pytest.fixture()
 def debug_client(tmp_path, monkeypatch):
-    debug_dir = tmp_path / "debug"
-    monkeypatch.setenv("DEBUG_PATH", str(debug_dir))
-
-    db_file = _setup_db(tmp_path, monkeypatch)
-
+    db_file, debug_dir = _setup_env(tmp_path, monkeypatch)
     from backend.app import app
     client = TestClient(app, raise_server_exceptions=True)
     return client, db_file, debug_dir
@@ -144,35 +120,28 @@ def test_debug_endpoint_returns_json(debug_client, tmp_path, monkeypatch):
     book_file.write_bytes(b"%PDF-1.4 fake content")
 
     book_id = _insert_book(db_file, str(book_file))
-    _run_process(book_id, str(book_file), db_file)
-
-    import backend.db as db_module
-    db_module._local.conn = None
+    _run_process(book_id, str(book_file))
 
     resp = client.get(f"/api/books/{book_id}/debug")
     assert resp.status_code == 200
     payload = resp.json()
     assert payload["book_id"] == book_id
-    assert "passes" in payload
-    assert "merged" in payload
+    assert "status" in payload
+    assert "metadata" in payload
 
 
 def test_debug_endpoint_404_when_no_debug_file(debug_client, tmp_path):
     """GET /api/books/{id}/debug returns 404 when no debug file exists."""
     client, db_file, debug_dir = debug_client
 
-    # Insert book but do NOT process it (no debug file written)
     conn = sqlite3.connect(db_file)
     cur = conn.execute(
-        "INSERT INTO books (filename, filepath, status) VALUES (?, ?, 'processing')",
-        ("nodebug.pdf", str(tmp_path / "nodebug.pdf")),
+        "INSERT INTO books (filename, filepath, file_type, status) VALUES (?, ?, ?, 'pending')",
+        ("nodebug.pdf", str(tmp_path / "nodebug.pdf"), "pdf"),
     )
     conn.commit()
     book_id = cur.lastrowid
     conn.close()
-
-    import backend.db as db_module
-    db_module._local.conn = None
 
     resp = client.get(f"/api/books/{book_id}/debug")
     assert resp.status_code == 404

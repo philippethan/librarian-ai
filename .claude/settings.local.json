@@ -8,7 +8,9 @@
       "Bash(mkdir -p data/covers data/text_cache data/debug)",
       "Bash(.venv/Scripts/python scripts/migrate_db.py)",
       "Bash(npm create:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(.venv/Scripts/python -c \"import fitz; print\\(fitz.__version__\\)\")",
+      "Bash(.venv/Scripts/python -m pytest backend/tests/ -v)"
     ]
   }
 }

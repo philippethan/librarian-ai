@@ -5,8 +5,8 @@ import pytest
 
 
 def _serialize(book: dict) -> dict:
-    from backend.app import _serialize_book
-    return _serialize_book(book)
+    from backend.app import serialize_book
+    return serialize_book(book)
 
 
 EXPECTED_DEFAULTS = {
