@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LibrarianAI</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f7; color: #222; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+/* Top bar */
+#topbar {
+  background: #1a1a2e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  height: 52px;
+  flex-shrink: 0;
+  z-index: 100;
+}
+#topbar h1 { font-size: 1.1rem; font-weight: 700; letter-spacing: 0.5px; white-space: nowrap; }
+#topbar h1 span { color: #7c83fd; }
+#search-input {
+  flex: 1;
+  max-width: 340px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.85rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  outline: none;
+}
+#search-input::placeholder { color: rgba(255,255,255,0.45); }
+#search-input:focus { background: rgba(255,255,255,0.18); }
+#btn-scan {
+  background: #7c83fd;
+  color: #fff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+#btn-scan:hover { background: #5c65f5; }
+#stats-bar {
+  display: flex;
+  gap: 16px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+}
+#stats-bar .stat { display: flex; gap: 5px; align-items: center; }
+#stats-bar .stat strong { color: #fff; }
+
+/* Filter bar */
+#filterbar {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e8;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 20px;
+  flex-shrink: 0;
+}
+#filterbar select {
+  padding: 5px 10px;
+  border: 1px solid #d0d0da;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+}
+#filterbar label { font-size: 0.8rem; color: #666; }
+#filter-count { margin-left: auto; font-size: 0.78rem; color: #888; }
+
+/* Main layout */
+#main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Book table */
+#book-list {
+  flex: 1;
+  overflow-y: auto;
+  background: #fff;
+}
+#book-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+#book-table thead th {
+  background: #f0f0f6;
+  padding: 9px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 2px solid #e0e0e8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+#book-table thead th:hover { background: #e8e8f0; }
+#book-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+#book-table tbody tr:hover { background: #f8f8fc; }
+#book-table tbody tr.selected { background: #eeeeff; }
+#book-table td { padding: 7px 10px; vertical-align: middle; }
+#book-table .cover-cell { width: 44px; padding: 4px 8px; }
+#book-table .cover-cell img { width: 32px; height: 44px; object-fit: cover; border-radius: 2px; background: #ddd; display: block; }
+#book-table .cover-cell .no-cover { width: 32px; height: 44px; background: #e0e0ec; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #999; }
+.cell-title { max-width: 220px; }
+.cell-title .title { font-weight: 600; color: #1a1a2e; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+.cell-title .filename { font-size: 0.72rem; color: #999; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+.cell-author { max-width: 140px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #555; }
+.cell-year { color: #666; white-space: nowrap; }
+.cell-cat { max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #555; }
+
+/* Status badges */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.badge-done { background: #d4f5e4; color: #1a7a4a; }
+.badge-pending { background: #fff3cc; color: #8a6200; }
+.badge-processing { background: #cce5ff; color: #004a8a; }
+.badge-partial { background: #ffe5cc; color: #8a3a00; }
+.badge-error { background: #fde0e0; color: #8a0000; }
+.badge-duplicate { background: #e8e0f8; color: #4a1a8a; }
+
+/* Reading status badge */
+.rs-badge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+.rs-to-read { background: #f0f0f8; color: #555; }
+.rs-reading { background: #cce5ff; color: #004080; }
+.rs-read { background: #d4f5e4; color: #1a5a30; }
+.rs-abandoned { background: #f0e0e0; color: #6a2020; }
+
+/* Confidence bar */
+.conf-bar { width: 70px; }
+.conf-bar-track { height: 5px; background: #e0e0e8; border-radius: 3px; overflow: hidden; }
+.conf-bar-fill { height: 100%; border-radius: 3px; }
+.conf-high { background: #2ecc71; }
+.conf-med { background: #f39c12; }
+.conf-low { background: #e74c3c; }
+.conf-val { font-size: 0.7rem; color: #888; margin-top: 2px; }
+
+/* Action buttons */
+.action-btn {
+  background: none;
+  border: 1px solid #d0d0da;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 0.72rem;
+  cursor: pointer;
+  color: #444;
+  margin-right: 4px;
+  white-space: nowrap;
+}
+.action-btn:hover { background: #f0f0f8; border-color: #7c83fd; color: #5c65f5; }
+
+/* Detail panel */
+#detail-panel {
+  width: 380px;
+  background: #fff;
+  border-left: 1px solid #e0e0e8;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+#detail-panel.open { transform: translateX(0); }
+#detail-header {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+#detail-header h2 { font-size: 0.9rem; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#btn-close-detail {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 2px 6px;
+}
+#btn-close-detail:hover { color: #fff; }
+#detail-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+.detail-cover { text-align: center; margin-bottom: 14px; }
+.detail-cover img { max-width: 100px; max-height: 140px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.field-group { margin-bottom: 10px; }
+.field-group label { display: block; font-size: 0.75rem; font-weight: 600; color: #666; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.3px; }
+.field-group input, .field-group select, .field-group textarea {
+  width: 100%;
+  padding: 6px 9px;
+  border: 1px solid #d8d8e4;
+  border-radius: 5px;
+  font-size: 0.83rem;
+  color: #222;
+  background: #fafafa;
+  outline: none;
+  font-family: inherit;
+}
+.field-group textarea { resize: vertical; min-height: 70px; }
+.field-group input:focus, .field-group select:focus, .field-group textarea:focus {
+  border-color: #7c83fd;
+  background: #fff;
+}
+.detail-conf { margin-bottom: 14px; }
+.detail-conf .conf-label { font-size: 0.75rem; font-weight: 600; color: #666; text-transform: uppercase; margin-bottom: 5px; }
+.detail-conf-track { height: 8px; background: #e0e0e8; border-radius: 4px; overflow: hidden; }
+.detail-conf-fill { height: 100%; border-radius: 4px; }
+.detail-conf-val { font-size: 0.78rem; color: #666; margin-top: 3px; }
+#detail-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #e0e0e8;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.btn-primary {
+  flex: 1;
+  background: #7c83fd;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.83rem;
+  font-weight: 600;
+}
+.btn-primary:hover { background: #5c65f5; }
+.btn-secondary {
+  background: #fff;
+  color: #444;
+  border: 1px solid #d0d0da;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.83rem;
+}
+.btn-secondary:hover { background: #f0f0f8; border-color: #7c83fd; }
+.btn-danger {
+  background: #fff;
+  color: #c0392b;
+  border: 1px solid #e0b0b0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.83rem;
+}
+.btn-danger:hover { background: #fff0f0; }
+
+/* Scan modal */
+#modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 500;
+  align-items: center;
+  justify-content: center;
+}
+#modal-overlay.open { display: flex; }
+#scan-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px 32px;
+  width: 440px;
+  max-width: 95vw;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+#scan-modal h2 { font-size: 1rem; color: #1a1a2e; margin-bottom: 16px; }
+#scan-modal input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d0d0da;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  outline: none;
+  font-family: inherit;
+}
+#scan-modal input:focus { border-color: #7c83fd; }
+#scan-modal .modal-hint { font-size: 0.78rem; color: #888; margin-bottom: 18px; }
+#scan-modal .modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+#scan-result { font-size: 0.83rem; color: #2ecc71; margin-top: 10px; min-height: 20px; }
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #1a1a2e;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.83rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+  z-index: 1000;
+}
+#toast.show { opacity: 1; transform: translateY(0); }
+#toast.error { background: #c0392b; }
+
+/* Empty state */
+.empty-state { text-align: center; padding: 60px 20px; color: #aaa; }
+.empty-state p { font-size: 0.9rem; margin-top: 8px; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f0f0f0; }
+::-webkit-scrollbar-thumb { background: #c0c0d0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a0a0c0; }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div id="topbar">
+  <h1>Librarian<span>AI</span></h1>
+  <input id="search-input" type="search" placeholder="Search title, author, category...">
+  <div id="stats-bar">
+    <div class="stat">Total: <strong id="stat-total">-</strong></div>
+    <div class="stat">Done: <strong id="stat-done">-</strong></div>
+    <div class="stat">Pending: <strong id="stat-pending">-</strong></div>
+    <div class="stat">Processing: <strong id="stat-processing">-</strong></div>
+  </div>
+  <button id="btn-scan" onclick="openScanModal()">+ Scan Folder</button>
+</div>
+
+<!-- Filter bar -->
+<div id="filterbar">
+  <label>Status:</label>
+  <select id="filter-status" onchange="applyFilters()">
+    <option value="">All</option>
+    <option value="done">Done</option>
+    <option value="pending">Pending</option>
+    <option value="partial">Partial</option>
+    <option value="error">Error</option>
+    <option value="duplicate">Duplicate</option>
+  </select>
+  <label>Category:</label>
+  <select id="filter-category" onchange="applyFilters()">
+    <option value="">All</option>
+  </select>
+  <label>Reading:</label>
+  <select id="filter-reading" onchange="applyFilters()">
+    <option value="">All</option>
+    <option value="to-read">To Read</option>
+    <option value="reading">Reading</option>
+    <option value="read">Read</option>
+    <option value="abandoned">Abandoned</option>
+  </select>
+  <span id="filter-count"></span>
+</div>
+
+<!-- Main -->
+<div id="main">
+  <div id="book-list">
+    <table id="book-table">
+      <thead>
+        <tr>
+          <th style="width:44px"></th>
+          <th onclick="sortBy('title')">Title</th>
+          <th onclick="sortBy('author')">Author</th>
+          <th onclick="sortBy('year')" style="width:60px">Year</th>
+          <th onclick="sortBy('category')">Category</th>
+          <th onclick="sortBy('status')" style="width:90px">Status</th>
+          <th style="width:90px">Confidence</th>
+          <th onclick="sortBy('reading_status')" style="width:90px">Reading</th>
+          <th style="width:130px">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="book-tbody"></tbody>
+    </table>
+    <div id="empty-state" class="empty-state" style="display:none">
+      <strong>No books found</strong>
+      <p>Try scanning a folder or adjusting filters.</p>
+    </div>
+  </div>
+
+  <!-- Detail panel -->
+  <div id="detail-panel">
+    <div id="detail-header">
+      <h2 id="detail-title">Book Details</h2>
+      <button id="btn-close-detail" onclick="closeDetail()" title="Close">&#x2715;</button>
+    </div>
+    <div id="detail-body">
+      <div class="detail-cover"><img id="detail-cover-img" src="" alt="" style="display:none"></div>
+      <div class="detail-conf">
+        <div class="conf-label">Confidence Score</div>
+        <div class="detail-conf-track"><div id="detail-conf-fill" class="detail-conf-fill"></div></div>
+        <div id="detail-conf-val" class="detail-conf-val"></div>
+      </div>
+      <div class="field-group"><label>Title</label><input id="d-title" type="text"></div>
+      <div class="field-group"><label>Author</label><input id="d-author" type="text"></div>
+      <div class="field-group"><label>Year</label><input id="d-year" type="text"></div>
+      <div class="field-group"><label>Language</label><input id="d-language" type="text"></div>
+      <div class="field-group"><label>Category</label><input id="d-category" type="text"></div>
+      <div class="field-group"><label>Subcategory</label><input id="d-subcategory" type="text"></div>
+      <div class="field-group"><label>Difficulty</label>
+        <select id="d-difficulty">
+          <option value="">Unknown</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+      <div class="field-group"><label>Reading Status</label>
+        <select id="d-reading-status" onchange="saveReadingStatus()">
+          <option value="to-read">To Read</option>
+          <option value="reading">Reading</option>
+          <option value="read">Read</option>
+          <option value="abandoned">Abandoned</option>
+        </select>
+      </div>
+      <div class="field-group"><label>Tags (comma-separated)</label><input id="d-tags" type="text"></div>
+      <div class="field-group"><label>Description</label><textarea id="d-description"></textarea></div>
+      <div style="font-size:0.72rem;color:#aaa;margin-top:8px">
+        <div id="d-filepath" style="word-break:break-all;margin-bottom:4px"></div>
+        <div id="d-meta"></div>
+      </div>
+    </div>
+    <div id="detail-footer">
+      <button class="btn-primary" onclick="saveBook()">Save</button>
+      <button class="btn-secondary" onclick="openBook()">Open File</button>
+      <button class="btn-secondary" onclick="reprocessBook()">Reprocess</button>
+    </div>
+  </div>
+</div>
+
+<!-- Scan modal -->
+<div id="modal-overlay" onclick="e => { if(e.target===this) closeScanModal(); }">
+  <div id="scan-modal" onclick="event.stopPropagation()">
+    <h2>Scan Folder for Books</h2>
+    <input id="scan-path-input" type="text" placeholder="C:/Users/you/Documents/Books" value="C:/Users/posen/Documents/Books">
+    <div class="modal-hint">Scans recursively for .pdf and .epub files. Already-indexed books are skipped.</div>
+    <div id="scan-result"></div>
+    <div class="modal-actions">
+      <button class="btn-secondary" onclick="closeScanModal()">Cancel</button>
+      <button class="btn-primary" onclick="submitScan()">Scan</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const API = 'http://localhost:8000';
+
+let allBooks = [];
+let filteredBooks = [];
+let selectedBookId = null;
+let sortCol = 'added_at';
+let sortDir = -1;
+
+// ---- Init ----
+async function init() {
+  await Promise.all([loadBooks(), loadStats(), loadCategories()]);
+  setInterval(loadStats, 5000);
+  document.getElementById('search-input').addEventListener('input', applyFilters);
+}
+
+// ---- API helpers ----
+async function apiFetch(url, opts = {}) {
+  const res = await fetch(API + url, opts);
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: res.statusText }));
+    throw new Error(err.detail || res.statusText);
+  }
+  return res.json();
+}
+
+// ---- Load books ----
+async function loadBooks() {
+  try {
+    allBooks = await apiFetch('/api/books');
+    applyFilters();
+  } catch(e) {
+    showToast('Failed to load books: ' + e.message, true);
+  }
+}
+
+// ---- Load stats ----
+async function loadStats() {
+  try {
+    const s = await apiFetch('/api/stats');
+    document.getElementById('stat-total').textContent = s.total;
+    document.getElementById('stat-done').textContent = s.by_status.done || 0;
+    document.getElementById('stat-pending').textContent = s.by_status.pending || 0;
+    document.getElementById('stat-processing').textContent = s.by_status.processing || 0;
+  } catch(e) { /* ignore */ }
+}
+
+// ---- Load categories ----
+async function loadCategories() {
+  try {
+    const cats = await apiFetch('/api/categories');
+    const sel = document.getElementById('filter-category');
+    cats.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c; opt.textContent = c;
+      sel.appendChild(opt);
+    });
+  } catch(e) { /* ignore */ }
+}
+
+// ---- Filter + sort ----
+function applyFilters() {
+  const q = document.getElementById('search-input').value.toLowerCase().trim();
+  const status = document.getElementById('filter-status').value;
+  const category = document.getElementById('filter-category').value;
+  const reading = document.getElementById('filter-reading').value;
+
+  filteredBooks = allBooks.filter(b => {
+    if (status && b.status !== status) return false;
+    if (category && b.category !== category) return false;
+    if (reading && b.reading_status !== reading) return false;
+    if (q) {
+      const haystack = [b.title, b.author, b.category, b.filename].join(' ').toLowerCase();
+      if (!haystack.includes(q)) return false;
+    }
+    return true;
+  });
+
+  filteredBooks.sort((a, b) => {
+    let av = a[sortCol] || '', bv = b[sortCol] || '';
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    return av < bv ? -sortDir : av > bv ? sortDir : 0;
+  });
+
+  document.getElementById('filter-count').textContent = filteredBooks.length + ' book' + (filteredBooks.length !== 1 ? 's' : '');
+  renderTable();
+}
+
+function sortBy(col) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = 1; }
+  applyFilters();
+}
+
+// ---- Render table ----
+function renderTable() {
+  const tbody = document.getElementById('book-tbody');
+  const empty = document.getElementById('empty-state');
+
+  if (!filteredBooks.length) {
+    tbody.innerHTML = '';
+    empty.style.display = '';
+    return;
+  }
+  empty.style.display = 'none';
+
+  tbody.innerHTML = filteredBooks.map(b => `
+    <tr class="${b.id === selectedBookId ? 'selected' : ''}" onclick="selectBook(${b.id})">
+      <td class="cover-cell">
+        ${b.cover_path
+          ? `<img src="${API}/api/books/${b.id}/cover" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+          : ''}
+        <div class="no-cover" style="${b.cover_path ? 'display:none' : ''}">PDF</div>
+      </td>
+      <td class="cell-title">
+        <div class="title" title="${esc(b.title || b.filename)}">${esc(b.title || b.filename || '-')}</div>
+        <div class="filename" title="${esc(b.filename)}">${esc(b.filename || '')}</div>
+      </td>
+      <td class="cell-author" title="${esc(b.author)}">${esc(b.author || '-')}</td>
+      <td class="cell-year">${esc(b.year || '-')}</td>
+      <td class="cell-cat" title="${esc(b.category)}">${esc(b.category || '-')}</td>
+      <td><span class="badge badge-${b.status}">${b.status}</span></td>
+      <td class="conf-bar">
+        ${confBar(b.confidence_score)}
+      </td>
+      <td><span class="rs-badge rs-${b.reading_status || 'to-read'}">${b.reading_status || 'to-read'}</span></td>
+      <td onclick="event.stopPropagation()">
+        <button class="action-btn" onclick="openBookById(${b.id})">Open</button>
+        <button class="action-btn" onclick="reprocessBookById(${b.id})">Reprocess</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function confBar(score) {
+  if (score == null) return '<div class="conf-val">-</div>';
+  const pct = Math.round(score * 100);
+  const cls = pct >= 70 ? 'conf-high' : pct >= 40 ? 'conf-med' : 'conf-low';
+  return `<div class="conf-bar-track"><div class="conf-bar-fill ${cls}" style="width:${pct}%"></div></div>
+          <div class="conf-val">${pct}%</div>`;
+}
+
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ---- Detail panel ----
+function selectBook(id) {
+  selectedBookId = id;
+  const book = allBooks.find(b => b.id === id);
+  if (!book) return;
+  openDetail(book);
+  renderTable();
+}
+
+function openDetail(book) {
+  document.getElementById('detail-title').textContent = book.title || book.filename || 'Book Details';
+  document.getElementById('d-title').value = book.title || '';
+  document.getElementById('d-author').value = book.author || '';
+  document.getElementById('d-year').value = book.year || '';
+  document.getElementById('d-language').value = book.language || '';
+  document.getElementById('d-category').value = book.category || '';
+  document.getElementById('d-subcategory').value = book.subcategory || '';
+  document.getElementById('d-difficulty').value = book.difficulty || '';
+  document.getElementById('d-reading-status').value = book.reading_status || 'to-read';
+  document.getElementById('d-tags').value = Array.isArray(book.tags) ? book.tags.join(', ') : '';
+  document.getElementById('d-description').value = book.description || '';
+  document.getElementById('d-filepath').textContent = book.filepath || '';
+  document.getElementById('d-meta').textContent = `Status: ${book.status} | Type: ${book.file_type || '-'} | Added: ${(book.added_at || '').slice(0,10)}`;
+
+  // Confidence bar
+  const score = book.confidence_score;
+  const pct = score != null ? Math.round(score * 100) : 0;
+  const cls = pct >= 70 ? 'conf-high' : pct >= 40 ? 'conf-med' : 'conf-low';
+  const fill = document.getElementById('detail-conf-fill');
+  fill.style.width = pct + '%';
+  fill.className = 'detail-conf-fill ' + cls;
+  document.getElementById('detail-conf-val').textContent = score != null ? pct + '%' : 'Not processed';
+
+  // Cover
+  const img = document.getElementById('detail-cover-img');
+  if (book.cover_path) {
+    img.src = `${API}/api/books/${book.id}/cover`;
+    img.style.display = '';
+    img.onerror = () => { img.style.display = 'none'; };
+  } else {
+    img.style.display = 'none';
+  }
+
+  document.getElementById('detail-panel').classList.add('open');
+}
+
+function closeDetail() {
+  document.getElementById('detail-panel').classList.remove('open');
+  selectedBookId = null;
+  renderTable();
+}
+
+// ---- Save book ----
+async function saveBook() {
+  if (!selectedBookId) return;
+  const tagsRaw = document.getElementById('d-tags').value;
+  const tags = tagsRaw ? tagsRaw.split(',').map(t => t.trim()).filter(Boolean) : [];
+  const payload = {
+    title: document.getElementById('d-title').value || null,
+    author: document.getElementById('d-author').value || null,
+    year: document.getElementById('d-year').value || null,
+    language: document.getElementById('d-language').value || null,
+    category: document.getElementById('d-category').value || null,
+    subcategory: document.getElementById('d-subcategory').value || null,
+    difficulty: document.getElementById('d-difficulty').value || null,
+    description: document.getElementById('d-description').value || null,
+    tags,
+  };
+  // Remove null fields
+  Object.keys(payload).forEach(k => { if (payload[k] === null) delete payload[k]; });
+  try {
+    const updated = await apiFetch(`/api/books/${selectedBookId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    // Update local
+    const idx = allBooks.findIndex(b => b.id === selectedBookId);
+    if (idx !== -1) allBooks[idx] = updated;
+    document.getElementById('detail-title').textContent = updated.title || updated.filename;
+    applyFilters();
+    showToast('Saved successfully');
+  } catch(e) {
+    showToast('Save failed: ' + e.message, true);
+  }
+}
+
+// ---- Reading status (inline from detail) ----
+async function saveReadingStatus() {
+  if (!selectedBookId) return;
+  const status = document.getElementById('d-reading-status').value;
+  try {
+    await apiFetch(`/api/books/${selectedBookId}/reading-status`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status }),
+    });
+    const idx = allBooks.findIndex(b => b.id === selectedBookId);
+    if (idx !== -1) allBooks[idx].reading_status = status;
+    applyFilters();
+  } catch(e) {
+    showToast('Failed to update reading status: ' + e.message, true);
+  }
+}
+
+// ---- Open book ----
+async function openBook() {
+  if (selectedBookId) await openBookById(selectedBookId);
+}
+async function openBookById(id) {
+  try {
+    await apiFetch(`/api/books/${id}/open`, { method: 'POST' });
+    showToast('Opening file...');
+  } catch(e) {
+    showToast('Could not open: ' + e.message, true);
+  }
+}
+
+// ---- Reprocess ----
+async function reprocessBook() {
+  if (selectedBookId) await reprocessBookById(selectedBookId);
+}
+async function reprocessBookById(id) {
+  try {
+    await apiFetch(`/api/books/${id}/reprocess`, { method: 'POST' });
+    const idx = allBooks.findIndex(b => b.id === id);
+    if (idx !== -1) { allBooks[idx].status = 'pending'; }
+    applyFilters();
+    showToast('Queued for reprocessing');
+  } catch(e) {
+    showToast('Reprocess failed: ' + e.message, true);
+  }
+}
+
+// ---- Scan modal ----
+function openScanModal() {
+  document.getElementById('scan-result').textContent = '';
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('scan-path-input').focus();
+}
+function closeScanModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+async function submitScan() {
+  const path = document.getElementById('scan-path-input').value.trim();
+  if (!path) return;
+  const resultEl = document.getElementById('scan-result');
+  resultEl.textContent = 'Scanning...';
+  resultEl.style.color = '#888';
+  try {
+    const res = await apiFetch('/api/scan', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path }),
+    });
+    resultEl.textContent = `Added ${res.added} book(s), skipped ${res.skipped}.`;
+    resultEl.style.color = '#2ecc71';
+    await loadBooks();
+    await loadStats();
+  } catch(e) {
+    resultEl.textContent = 'Error: ' + e.message;
+    resultEl.style.color = '#e74c3c';
+  }
+}
+
+// Close modal on overlay click
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeScanModal();
+});
+// Scan on Enter
+document.getElementById('scan-path-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') submitScan();
+});
+
+// ---- Toast ----
+let toastTimer;
+function showToast(msg, isError = false) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'show' + (isError ? ' error' : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { el.className = ''; }, 3000);
+}
+
+init();
+</script>
+</body>
+</html>

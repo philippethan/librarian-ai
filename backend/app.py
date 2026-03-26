@@ -20,6 +20,7 @@ from PIL import Image
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 DB_PATH = os.environ.get("DB_PATH", "backend/data/librarian.db")
@@ -1015,3 +1016,16 @@ def get_analytics():
         "manual_fixed": manual_fixed,
         "duplicates": duplicates,
     }
+
+
+@app.get("/api/categories")
+def get_categories():
+    with get_db() as conn:
+        rows = conn.execute(
+            "SELECT DISTINCT category FROM books WHERE category IS NOT NULL AND category != '' ORDER BY category"
+        ).fetchall()
+    return [row["category"] for row in rows]
+
+
+os.makedirs("backend/static", exist_ok=True)
+app.mount("/", StaticFiles(directory="backend/static", html=True), name="static")
