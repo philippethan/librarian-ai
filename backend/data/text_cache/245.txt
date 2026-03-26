@@ -1,42 +1,122 @@
-Advance praise for Frientimacy
-“Every woman can relate to the feeling of having plenty of Facebook ‘friends’ or contacts to scroll
-through in her phone but still longing for the intimate connections she had with childhood friends,
-back when her BFF was her everything. I know I can. As I read through Nelson’s description of why
-women experience loneliness—because we lack close connections, not because we don’t know
-enough people—I found myself wondering how she got in my head. Anyone who has admired
-intimate friendships in pop culture and wondered Why don’t I have that? will want to pick up this
-book.”
-—Rachel Bertsche, bestselling author of
-MWF Seeking BFF: My Yearlong Search for a New Best Friend
-“Shasta Nelson has put her finger on the pulse of our cultural malaise: We need good friends to have
-a happy life, but we are disconnected from one another. Repair takes, insight, courage, and strength,
-and Shasta provides outstanding encouragement for us to get up, snap ourselves out of our self-
-defeating patterns, and create the friendships that our souls are longing for. Frientimacy has already
-changed my life, and it will change yours.”
-—Marilyn Paul, bestselling author of
-It’s Hard to Make a Difference When You Can’t Find Your Keys
-“If you desire friends you can count on and grow with, who will support and see you, who make your
-life more full and fun, then you’ve got to read Frientimacy. Shasta Nelson has taken a bold stand to
-end loneliness and replace it with the deep and nourishing bonds of sisterhood we all need and
-crave.”
-—Christine Arylo, bestselling author of
-Madly in Love with ME and Reform Your Inner Mean Girl
-“I used to get a terrible sinking feeling in my stomach when I read articles about how women with a
-close circle of friends live longer. I had such a hard time developing satisfying friendships after a
-certain age. I was lonely! But not anymore, and I attribute part of that ability to connect to Shasta
-Nelson wisdom. If you want—and need!—deeper friendships, then please read this wise and useful
-book.”
-—Jennifer Louden, bestselling author of
-The Woman’s Comfort Book and The Life Organizer
-“Compassionate and encouraging, Shasta Nelson teaches how to not only make friends but create
-deep connections and avoid ‘expectation hangovers’ in our friendships. I am so grateful for this book,
-and all the loving, connected, and lasting friendships it will create.”
-—Christine Hassler, bestselling author of
-20 Something, 20 Everything
-“The best friendships never have been simple. . . . Lo and behold, Shasta Nelson’s gentle urgings
-toward self-improvement result in vastly more satisfying friendships.”
-—Theresa Donovan Brown, co-author of
-The Social Sex: A History of Female Friendship
-“Even women with large numbers of friends yearn for close, intimate friendships: Relationships that
-are easy and forgiving, and that allow friends to communicate in shorthand yet feel understood. In
-Frientimacy, Shasta Nelson offers practical advice to help women ho
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table of Contents
+Cover
+Table of Contents
+Title Page
+Copyright Page
+Dedication Page
+Dedication Page 1
+Preface
+Acronyms
+Introduction
+Reference
+Part 1: The Emergence of Critical Systems Thinking
+1 The Scientific Method
+1.1 Introduction
+1.2 Early Systems Thinking
+1.3 The Ascendancy of the Scientific Method
+1.4 Romanticism and Disquiet
+1.5 The Challenge of Complexity
+1.6 Science and the Scientific Method in the Spotlight
+1.7 Conclusion
+References
+2 Systems Thinking
+2.1 Introduction
+2.2 The Challenge Confronting Systems Thinking
+2.3 Complexity and Wicked Problems
+2.4 The Search for General Systems Laws
+2.5 The ‘Problem’ of Emergence
+2.6 A Pluralistic Approach to the Use of Systems Thinking
+2.7 The Development of Systems Methodologies
+2.8 Conclusion
+References
+3 Critical Systems Thinking
+3.1 Introduction
+3.2 The Origins and Early Development of Critical Systems Thinking
+3.3 Systemic Critique
+3.4 Systemic Pluralism
+3.5 Systemic Improvement
+3.6 The Argument for Systemic Pragmatism
+3.7 Conclusion
+References
+Part 2: Critical Systems Practice
+4 Critical Systems Practice: An Overview
+4.1 Introduction
+4.2 The Origins of Critical Systems Practice
+4.3 Contemporary Critical Systems Practice
+4.4 Considerations on the Nature of Critical Systems Practice
+4.5 Related Approaches
+4.6 Conclusion
+References
+5 Critical Systems Practice 1 – Explore the Situation of Interest
+5.1 Introduction
+5.2 Explore – Preliminaries
+5.3 Explore – Process
+5.4 Explore – Example: The Early Days of the COVID‐19 Pandemic in the United Kingdom
+5.5 Explore – Issues
+5.6 Conclusion
+References
+6 Critical Systems Practice 2 – Produce an Intervention Strategy
+6.1 Introduction
+6.2 Produce – Preliminaries
+6.3 Produce – Process
+6.4 Produce – Examples
+6.5 Produce – Issues
+6.6 Conclusion
+References
+7 Critical Systems Practice 3 – Intervene Flexibly
+7.1 Introduction
+7.2 Intervene – Preliminaries
+7.3 Intervene – Process
+7.4 Intervene – Examples
+7.5 Intervene – Issues
+7.6 Conclusion
+References
+8 Critical Systems Practice 4 – Check on Progress
+8.1 Introduction
+8.2 Check – Preliminaries
+8.3 Check – Process
+8.4 Check – Examples
+8.5 Check – Issues
+8.6 Conclusion
+References
+Part 3: Towards a Systems Thinking World
+9 Critical Systems Leadership:
+9.1 Introduction
+9.2 The Growing Interest in Systems Thinking
+9.3 Overcoming the Barriers to Implementation
+9.4 Critical Systems Leadership
+9.5 Conclusion
+References
+Conclusion
+References
+Index
+End User License AgreementList of Tables
+Chapter 2
+Table 2.1 A summary of Boulding’s (1956) hierarchy of complexity.List of Illustrations
+Chapter 4
+Figure 4.1 The four EPIC stages of Critical Systems Practice.
+Chapter 5
+Figure 5.1 The four EPIC stages of Critical Systems Practice.
+Chapter 6
+Figure 6.1 The four EPIC stages of Critical Systems Practice.
+Figure 6.2 Example of a CLD. Regulation of traditional medicines creates cos...
+Figure 6.3 Example of a Stock and Flow diagram. Employment planning did not ...
+Figure 6.4 Beer’s VSM highlighting the managerial and o

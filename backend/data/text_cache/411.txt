@@ -1,33 +1,31 @@
-Multiagent Systems
-Intelligent Robotics and Autonomous Agents
-Edited by Ronald C. Arkin
-Dorigo, Marco, and Marco Colombetti, Robot Shaping: An Experiment in Behavior En-
-gineering
-Arkin, Ronald C.,Behavior-Based Robotics
-Stone, Peter, Layered Learning in Multiagent Systems: A Winning Approach to Robotic
-Soccer
-Wooldridge, Michael, Reasoning About Rational Agents
-Murphy, Robin R., An Introduction to AI Robotics
-Mason, Matthew T., Mechanics of Robotic Manipulation
-Kraus, Sarit, Strategic Negotiation in Multiagent Environments
-Nolﬁ, Stefano, and Dario Floreano, Evolutionary Robotics: The Biology, Intelligence, and
-Technology of Self-Organizing Machines
-Siegwart, Roland, and Illah R. Nourbakhsh, Introduction to Autonomous Mobile Robots
-Breazeal, Cynthia L., Designing Sociable Robots
-Bekey, George A., Autonomous Robots: From Biological Inspiration to Implementation
-and Control
-Choset, Howie, Kevin M. Lynch, Seth Hutchinson, George Kantor, Wolfram Burgard,
-Lydia E. Kavraki, and Sebastian Thrun, Principles of Robot Motion: Theory, Algorithms,
-and Implementations
-Thrun, Sebastian, Wolfram Burgard, and Dieter Fox, Probabilistic Robotics
-Mataric, Maja J., The Robotics Primer
-Wellman, Michael P., Amy Greenwald, and Peter Stone, Autonomous Bidding Agents:
-Strategies and Lessons from the Trading Agent Competition
-Floreano, Dario and Claudio Mattiussi, Bio-Inspired Artiﬁcial Intelligence: Theories,
-Methods, and Technologies
-Sterling, Leon S. and Kuldar Taveter, The Art of Agent-Oriented Modeling
-Stoy, Kasper, David Brandt, and David J. Christensen, An Introduction to Self-
-Reconﬁgurable Robots
-Lin, Patrick, Keith Abney, and George A. Bekey, editors, Robot Ethics: The Ethical and
-Social Implications of Robotics
-Weiss, Gerhard, editor, Multiagent Systems, second edition
+HBR’s 10 Must Reads
+HBR’s 10 Must Reads are definitive collections of classic ideas,
+practical advice, and essential thinking from the pages of
+Harvard Business Review. Exploring topics like disruptive
+innovation, emotional intelligence, and new technology in our
+ever-evolving world, these books empower any leader to make
+bold decisions and inspire others.
+TITLES INCLUDE:
+HBR’s 10 Must Reads for New Managers
+HBR’s 10 Must Reads on AI
+HBR’s 10 Must Reads on Building a Great Culture
+HBR’s 10 Must Reads on Change Management
+HBR’s 10 Must Reads on Communication
+HBR’s 10 Must Reads on Data Strategy
+HBR’s 10 Must Reads on Decision-Making
+HBR’s 10 Must Reads on Design Thinking
+HBR’s 10 Must Reads on Digital Transformation
+HBR’s 10 Must Reads on Emotional Intelligence
+HBR’s 10 Must Reads on High Performance
+HBR’s 10 Must Reads on Innovation
+HBR’s 10 Must Reads on Leadership
+HBR’s 10 Must Reads on Leading Winning Teams
+HBR’s 10 Must Reads on Managing People
+HBR’s 10 Must Reads on Managing Yourself
+HBR’s 10 Must Reads on Marketing
+HBR’s 10 Must Reads on Mental Toughness
+HBR’s 10 Must Reads on Strategy
+HBR’s 10 Must Reads on Women and Leadership
+HBR’s 10 Must Reads Boxed Set (6 Books)
+HBR’s 10 Must Reads Ultimate Boxed Set (14 Books)
+For a full list, visit hbr.org/mustreads.

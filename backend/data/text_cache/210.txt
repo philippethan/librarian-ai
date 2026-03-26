@@ -1,127 +1,70 @@
-ELEMENTARY PHYSICS
-Classical and Mcxiem
-Weidner and Sells
-^
-Fundamental Constants
-Name of quantity
-Common
-symbol
-Value
-Acceleration due to
-gravity (standard value)
-g
-Universal gravitational
-constant
-Earth's mass
-Earth's mean radius
-Earth-moon mean distance
-Earth-sun mean distance
-( 1 astronomical unit)
-Sun's mass
-Density of water
-(at3.98°C)
-Standard atmospheric
-pressure
-Universal gas constant
-Volume of 1 gram mole
-ideal gas at STP
-Absolute zero of
-temperature
-Triple point of water
-Avogadro's number
-A^^
-Boltzmann's constant
-/?
-9.80665 m/s2 = 32.174 ft/s2
-G
-6.673 X 10-" N-m2/kg2
-m,.
-5.9763 X
-10^-» kg
-^A-
-6.370949 X 10« m = 3959 mi
-^EM
-3.84400 X 10« m
-=== 60 earth radii
-1 AU
-1.4957 X 10" m = 92.94 x 10« mi
-m^
-1.991 X
-lO''*' kg
-1.00000 gm/ml
-1 atm
-1.01325 X
-lO'^ N/m-^ = 76 cmHg =
-760 torr
-R
-8.3143 J/gmol-K =
-0.0821 liter-atm/g mol-K =
-1.986 gcal/gmol-K
-2.2414 X 10-^ m"'
--273.15°C
-273.16 K
-6.02217 X
-lO--' g-mol'
-1.38062 X
-10-2'' J/K
-See also Appendix I
-Name of quantity
-Common
-symbol
-Value
-"Mechanical equivalent of
-heat"
-J
-Stefan-Boltzmann constant
-a
-Coulomb force constant
-k - 1/47
-Permittivitv of
-free space
-^0
-Permeability of
-free space
-Mo
-Speed of light
-(m vacuum)
-c
-Electron charge
-e
-Electron volt
-1 eV
-Mass-energy conversion
-factor (atomic mass
-1 u =
-unit = ui
-(-rV)'2C
-Electron mass
-m^
-Proton mass
-Neutron mass
-Planck's constant
-m.
-m.
-h = hrlir
-4.18400 J/cal
-5.6696 X 10-« J/m^-s-K^
-8.987554 x 10» N-m-^/C^
-8.854185 X 10-'2 C=^/N-m^
-477 X 10-^ Wb/A-m
-2.99792456 x 10« m/s
-1.602192 X lO-'^C
-1.602192 X 10-'« J
-931.481 MeV/c2
-1.6604 X 10-^^ kg
-9.10956-x 10-" kg
-0.000548593 u
-0.511004 MeV/c^
-1.67261 X 10-^' kg
-1.00727661 u
-938.259 MeV/c^= 1836.11 m,
-1.67492 X
-lO--'- kg
-1.0086652 u
-939.553 MeV/c^
-6.626196 X 10-'*M-s
-1.054591 X
-10-3-« J-s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+MEAP Edition
+Manning Early Access Program
+Classic Computer Science Problems in Python
+Version 4
+
+
+
+
+
+
+
+
+Copyright 2018 Manning Publications
+
+
+©Manning Publications Co. We welcome reader comments about anything in the manuscript - other than typos and other simple mistakes.
+These will be cleaned up during production of the book by copyeditors and proofreaders. 
+https://forums.manning.com/forums/classic-computer-science-problems-in-python
+
+
+
+
+
+
+
+
+
+
+For more information on this and other Manning titles go to
+
+
+www.manning.com
+
+
+
+
+
+
+
+
+
+
+
+welcome
+
+Dear Reader,
+Thank you for purchasing early access to Classic Computer Science Problems in Python. Python is a popular, elegant, and easy-to-learn language that attracts developers from a variety of backgrounds. I believe the problems in this intermediate book will help seasoned programmers learn the language, and new programmers accelerate their CS education. This book covers such a diversity of problem solving techniques, that there is truly something for everyone. However, basic knowledge of the Python language is assumed. This is a great second book on Python, but not a book for complete beginners.
+Chapter 1, Small Problems, introduces problem solving techniques that will likely look familiar to most readers. Things like recursion, memoization, and simulation are essential building blocks of other techniques that are explored in later chapters. We follow this gentle introduction with Chapter 2, Search Problems. Search is such a large topic that you could arguably place most problems in the entire book under its banner. Our goal in chapter 2 is to introduce the most essential search algorithms including binary search, depth-first search, breadth-first search, and A*. These algorithms are reused throughout the rest of the book.
+In Chapter 3, Constraint Satisfaction Problems, we build a framework for solving a broad range of problems that can be abstractly defined by variables of limited domains that have constraints between them. This includes such classic problems as The Eight Queens Problem, The Australian Map Coloring Problem, and the crypto-arithmetic SEND+MORE=MONEY.
+Chapter 4, Graph Problems, explores the world of graph algorithms, which to the uninitiated are surprisingly broad in their applicability. In the chapter, we build a graph data structure and then use it to solve several classic problems. Chapter 5, Genetic Algorithms, explores a technique that is less deterministic than most covered in the book, but sometimes can solve a problem traditional algorithms cannot in a reasonable amount of time.
+Chapter 6, K-Means Clustering, is perhaps the most algorithmically specific chapter in the book. This clustering technique is simple to implement, easy to understand, and broadly applicable. Chapter 7, Fairly Simple Neural Networks, aims to explain what a neural network is, and give the reader a taste of what a very simple neural network looks like. It does not aim to provide compre

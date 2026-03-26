@@ -1,4 +1,32 @@
-Engineering Mechanics
-Volume 1
-Statics
-Ninth Edition
+ 
+i
+Physics
+Physics: An Introduction to Physical Dynamics provides an accessible introduction 
+to the fundamentals of physics for science and engineering undergraduates who are 
+studying elementary physics.
+This textbook contains 12 chapters with accompanying problem sets and explains 
+the dynamical properties of a variety of physical systems. The first six chapters intro­
+duce Newton’s laws of motion, followed by the concepts of mechanical work and 
+mechanical energy, with illustrative applications to the translational and/​or rotational 
+motion of inflexible objects such as particles and 3D objects of fixed shape. The next 
+four chapters generalize the application of Newton’s laws and mechanical energy to 
+flexible systems, including flowing fluids, waves on strings, and oscillating springs. 
+The last two chapters elucidate the laws of thermodynamics, especially heat energy 
+transfer between systems at different temperatures.
+Some familiarity with topics in elementary mathematics, including calculus, is 
+assumed. A wide variety of situations are explored, by means of which a student 
+should acquire an enhanced understanding of the properties of physical systems from 
+the astronomic scale to the microscopic.
+Key Features
+	•
+Covers the classical mechanics of both single particles and assemblies of 
+particles subject to forces.
+	•
+Contains wide-​ranging sets of examples and worked problems.
+	•
+Covers much of the material that a student might expect to encounter during the 
+first year of a university physics course.
+ 
+ 
+ii
+ 

@@ -1,0 +1,159 @@
+
+
+
+
+
+Contents
+
+C Programming for System, Network, and Cloud Engineers
+Introduction
+Acknowledgments
+Table of Contents
+About the Author
+About the Technical Reviewer
+1. Basic Computer System Architecture and Essential Operating System Concepts
+
+Basic Computer System Architecture
+
+CPU Architecture
+Memory Hierarchy
+CPU and IO Device Interactions
+Inspect System Configurations on a Linux OS
+
+
+Operating System Responsibilities
+
+Users Program Access to OS Services
+OS Process Management Activities and Services
+
+OS Role in Processes Management
+OS Offering Services for User Programs
+OS Role in Memory Management
+OS IO Devices, File Management, and Protection Services
+
+
+
+Importance of Compiler, Linker, and Loader
+
+Compiler
+
+Compiler Options for Application Performance Tuning
+Compiler Options to Protect Application Code
+
+
+Compiler Options to Handle Runtime Errors
+
+Linking and Loading Options
+Developers Must Know Linking Options to Handle Runtime Errors
+
+
+
+Runtime Environment of a Process
+
+Process Memory Layout
+Process Execution Environment
+
+Process and Memory Access-Related Issues
+Process and IO Devices Access-Related Issues
+
+
+Process Reliability and Security Issues
+
+Process Memory Layout-Related Access Checkpoints
+Careful About Shared Libraries Access
+Interprocess Communication-Related Access Checkpoints
+
+
+
+C Programmer Powers and Responsibilities
+
+C Programming Powers
+C Programmer Responsibilities
+
+
+Summary
+
+
+2. Quick Revision of Powerful C Constructs
+
+Procedure-Oriented Programming
+
+Understand C Functions’ Memory Layout and Execution Procedure
+Recursive Functions
+Nested Functions in GNU C
+
+
+Arrays
+
+Powerful Ways for Organizing Array’s Data Elements and Accessing
+
+Arrays: Indexing Ways for Accessing Data Structures
+
+
+Hands-On Activities for Organizing Array’s Data Elements and Accessing Them Efficiently
+
+
+Strings and Buffers
+
+Strings Processing Hands-On Activities
+
+
+C Structures
+
+Passing Structure Variables Between Functions
+Structure and Its Data Members’ Memory Layout
+Hands-On Activity-1
+Power of C Structures for Modeling
+
+Data Structures Modeling
+Protocols and Protocol Stack Modeling
+
+
+Hands-On Activity-2
+
+
+C Unions
+
+An Important Use Case of Unions
+Hands-On Activity
+
+
+Summary
+Practice Tasks
+
+
+3. Practice C Programming with Important Tools
+
+Compilation and Linking Techniques for Enhancing Programming Skills
+
+gcc Compilation Options for Performance Tuning
+gcc Compilation Options for Linking
+gcc Compilation Options for Secured Code
+
+
+Memory Access Errors Handling Techniques and Tools
+
+Memory and Other Important Errors Handling gcc Options for Reliable Code
+Memory Error Handling Using Valgrind
+
+
+Code Coverage Analysis for Avoiding Performance Issues
+
+Code Coverage Tools (gcc and gcov) Usage Steps
+Hands-On Activity
+
+
+GDB: The GNU Project Debugger
+
+Go Through a Code Execution and Inspect the Code and Data
+Inspect the Code and Data Using gdb Commands
+Handle Application Runtime Errors
+
+
+Summary
+Practice Tasks
+
+
+4. Power of C: Pointers
+
+Importance of Pointer Progra

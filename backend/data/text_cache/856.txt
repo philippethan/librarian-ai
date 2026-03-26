@@ -1,23 +1,188 @@
-La collection Choses vues est dirigée par Nicolas Diat Couverture : Nuit de Chine Photographie de bande : © Alain Jocard / AFP
-                    Photo ISBN : 978-2-213-72832-2 Dépôt légal : janvier 2024 © Librairie Arthème Fayard, 2024La globalisation piteuse Récit en six volumes d’un demi-siècle de désillusions. Pour comprendre, pour réagir, pour reconstruire. t. i – Au commencement était la guerre , Fayard, 2023 t. ii – Tu ne tueras point , Fayard, 2024 t. iii – La conquête de l’Ouest. Enjeux démographiques, surpopulation, dépopulation, migrations (à venir) t. iv – L’anthropocène consommateur : ressources et matières premières (à venir) t. v – Illusions métaverses (à venir) t. vi – Souverainetés égarées (à venir)« Et voici, un homme s’approcha, et dit à Jésus : Maître, que dois-je faire
-                        de bon pour avoir la vie éternelle ? Il lui répondit : Pourquoi
-                        m’interroges-tu sur ce qui est bon ? Un seul est le Bon. Si tu veux entrer
-                        dans la vie, observe les commandements. Lesquels ? lui dit-il. Et Jésus
-                        répondit : Tu ne tueras point ; tu ne commettras point d’adultère ; tu ne
-                        déroberas point ; tu ne diras point de faux témoignage ; honore ton père et
-                        ta mère ; et tu aimeras ton prochain comme toi-même. » Mathieu 19, 16-19 « Qui libère sa vie de toute avidité, de toute haine et de toute ignorance
-                        trouve la véritable paix éternelle. » Siddhârta Gautama, dit le Bouddha « Venez, je vais réciter ce que votre Seigneur vous a interdit :
-                        ne Lui associez rien ; et soyez bienfaisants envers vos parents. Ne tuez pas
-                        vos enfants pour cause de pauvreté. Nous vous pourvoyons tout comme eux.
-                        N’approchez pas des ignominies explicitement ou implicitement. Ne tuez pas,
-                        injustement, la vie que Dieu a faite sacrée. Voilà ce que Dieu vous a
-                        enjoint ; peut-être comprendrez-vous. » Coran, 6, 151 « Les représentants du Peuple français, constitués en Assemblée nationale,
-                        considérant que l’ignorance, l’oubli ou le mépris des droits de l’homme sont
-                        les seules causes des malheurs publics et de la corruption des
-                        gouvernements, ont résolu d’exposer dans une Déclaration solennelle les
-                        droits naturels, inaliénables et sacrés de l’homme ; afin que cette
-                        Déclaration, constamment présente à tous les membres du corps social, leur
-                        rappelle sans cesse leurs droits et leurs devoirs ; afin que les actes du
-                        pouvoir législatif et ceux du pouvoir exécutif, pouvant être à chaque
-                        instant comparés avec le but de chaque institution politique, en soient plus
-                        respectés ; afin que les réclamations des citoy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dedication
+For Sabine
+
+
+
+
+
+
+
+
+
+
+Contents
+
+Cover
+
+
+Title
+
+
+Copyright
+
+
+Dedication
+
+
+Introduction
+
+
+1: Why You Should Visit Cemeteries: Survivorship Bias
+
+
+2: Does Harvard Make You Smarter?: Swimmer’s Body Illusion
+
+
+3: Why You See Shapes in the Clouds: Clustering Illusion
+
+
+4: If Fifty Million People Say Something Foolish, It Is Still Foolish: Social Proof
+
+
+5: Why You Should Forget the Past: Sunk Cost Fallacy
+
+
+6: Don’t Accept Free Drinks: Reciprocity
+
+
+7: Beware the “Special Case”: Confirmation Bias (Part 1)
+
+
+8: Murder Your Darlings: Confirmation Bias (Part 2)
+
+
+9: Don’t Bow to Authority: Authority Bias
+
+
+10: Leave Your Supermodel Friends at Home: Contrast Effect
+
+
+11: Why We Prefer a Wrong Map to None at All: Availability Bias
+
+
+12: Why “No Pain, No Gain” Should Set Alarm Bells Ringing: The It’ll-Get-Worse-Before-It-Gets-Better Fallacy
+
+
+13: Even True Stories Are Fairy Tales: Story Bias
+
+
+14: Why You Should Keep a Diary: Hindsight Bias
+
+
+15: Why You Systematically Overestimate Your Knowledge and Abilities: Overconfidence Effect
+
+
+16: Don’t Take News Anchors Seriously: Chauffeur Knowledge
+
+
+17: You Control Less Than You Think: Illusion of Control
+
+
+18: Never Pay Your Lawyer by the Hour: Incentive Super-Response Tendency
+
+
+19: The Dubious Efficacy of Doctors, Consultants, and Psychotherapists: Regression to Mean
+
+
+20: Never Judge a Decision by Its Outcome: Outcome Bias
+
+
+21: Less Is More: Paradox of Choice
+
+
+22: You Like Me, You Really, Really Like Me: Liking Bias
+
+
+23: Don’t Cling to Things: Endowment Effect
+
+
+24: The Inevitability of Unlikely Events: Coincidence
+
+
+25: The Calamity of Conformity: Groupthink
+
+
+26: Why You’ll Soon Be Playing Mega Trillions: Neglect of Probability
+
+
+27: Why the Last Cookie in the Jar Makes Your Mouth Water: Scarcity Error
+
+
+28: When You Hear Hoofbeats, Don’t Expect a Zebra: Base-Rate Neglect
+
+
+29: Why the “Balancing Force of the Universe” Is Baloney: Gambler’s Fallacy
+
+
+30: Why the Wheel of Fortune Makes Our Heads Spin: The Anchor
+
+
+31: How to Relieve People of Their Millions: Induction
+
+
+32: Why Evil Is More Striking Than Good: Loss Aversion
+
+
+33: Why Teams Are Lazy: Social Loafing
+
+
+34: Stumped by a Sheet of Paper: Exponential Growth
+
+
+35: Curb Your Enthusiasm: Winner’s Curse
+
+
+36: Never Ask a Writer If the Novel Is Autobiographical: Fundamental Attribution Error
+
+
+37: Why You Shouldn’t Believe in the Stork: False Causality
+
+
+38: Why Attractive People Climb the Career Ladder More Quickly: Halo Effect
+
+
+39: Congratulations! You’ve Won Russian Roulette: Alternative Paths
+
+
+40: False Prophets: Forecast Illusion
+
+
+41: The Deception of Specific Cases: Conjunction Fallacy
+
+
+42: It’s Not What You Say, but How You Say It: Framing
+
+
+43: Why Watching and Waiting Is Torture: Action Bias
+
+
+44: Why You Are Either the Solution—or the Problem: Omission Bias
+
+
+45: Don’t Blame Me: Self-Serving Bias
+
+
+46: Be Careful What You Wish For: Hedonic Treadmill
+
+
+47: Do Not Marvel at Your Existence: Self-Selection Bias

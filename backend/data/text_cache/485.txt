@@ -1,17 +1,53 @@
-Principles of Engineering Physics 1
-This is a textbook for an introductory course in engineering physics. It provides a coherent treatment 
-of the basic principles and theories of engineering physics and offers a balance between theoretical 
-concepts and their applications. Beginning with a comprehensive discussion on oscillations and 
-waves with applications in the field of mechanical and electrical engineering, it goes on to explain 
-basic concepts such as Huygen’s principle, Fresnel’s biprism, Fraunhofer diffraction and polarization.
-All chapters are interspersed with rich pedagogical features such as solved problems, unsolved 
-exercises and multiple choice questions with answers. It will help undergraduate students of 
-engineering acquire skills for solving difficult problems in quantum mechanics, electromagnetism, 
-nanoscience, energy systems and other engineering disciplines. 
-Md. N. Khan is Associate Professor at the Department of Physics, Indira Gandhi Institute of 
-Technology (IGIT), Odisha. He has more than 22 years of teaching experience and has taught 
-courses on engineering physics, physics of semiconductor devices and materials science. His areas 
-of interest include X-ray scattering and materials science.
-S. Panigrahi is Senior Professor at the Department of Physics and Astronomy, National Institute of 
-Technology (NIT), Rourkela. He has more than two decades of teaching and research experience in 
-the field of solid state physics, materials science and ferroelectrics. 
+Daniel Kleppner 
+Associate Professor of Physics 
+Massachusetts Institute 
+of Technology 
+Robert J. Kolenkow 
+Formerly Associate Professor 
+of Physics, Massachusett s 
+Institute of Technology 
+AN 
+INTRODUCTION 
+TO 
+MECHANICS 
+Boston, Massachusetts 
+Burr Ridge, Illinois 
+Dubuque, Iowa 
+Madison, Wisconsin 
+New York, New York 
+San Francisco, California 
+St. Louis, Missouri 
+AN 
+INTRODUCTION 
+TO 
+MECHANICS 
+McGraw-Hill 
+A Division ofTheMcGraw·HiUCompanies 
+Copyright © 1973 by McGraw-Hili, Inc. 
+All rights reserved. PrInted in the United States of America. Except as permitted 
+under the Copyright Act of 1976, no part of this publication may be reproduced or 
+distributed in any form or by any means, or stored in a data base or retrieval 
+system, without the prior written permission of the publisher. 
+Printed and bound by Book-mart Press, Inc. 
+30 31 32 33 34 35 36 37 38 39 
+BKM BKM 
+0 9 8 
+This book was set in News Gothic by The Maple Press Company.' 
+The editors were Jack L. Farnsworth and J. W. Maisel; 
+the designer was Edward A. Butler; 
+and the production supervisor was Sally Ellyson. 
+The drawings were done by Felix Cooper. 
+Library of Congress Cataloging in Publication Data 
+Kleppner. Daniel. 
+An introduction to mechanics. 
+1. 
+Mechanics. 
+QA805.K62 
+I. 
+Kolenkow. Robert. joint author. 
+531 
+72·11770 
+ISBN·13: 978·0'()7·035048-9 
+ISBN·IO: 0·07·035048·5 
+II 
+Title. 

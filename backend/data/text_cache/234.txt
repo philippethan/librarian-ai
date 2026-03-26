@@ -1,29 +1,36 @@
-FAA-H-8083-25C 
-Left rudder 
-Pilot’s Handbook of 
-Aeronautical Knowledge
-U.S. Department of Transportation
-FEDERAL AVIATION ADMINISTRATION
-Flight Standards Service
-2023
-iii
-Preface
-This handbook provides the basic knowledge that is essential for pilots. It introduces pilots to the broad spectrum of 
-knowledge that will be needed as they progress in their pilot training. Except for the Code of Federal Regulations 
-pertinent to civil aviation, most of the knowledge areas applicable to pilot certification are presented. This handbook is 
-useful to beginning pilots, as well as those pursuing more advanced pilot certificates. 
-Occasionally the word “must” or similar language is used where the desired action is deemed critical. The use of such 
-language is not intended to add to, interpret, or relieve a duty imposed by Title 14 of the Code of Federal Regulations (14 
-CFR).
-It is essential for persons using this handbook to become familiar with and apply the pertinent parts of 14 CFR and the 
-Aeronautical Information Manual (AIM). The AIM is available online at www.faa.gov. The current Flight Standards 
-Service airman training and testing material and learning statements for all airman certificates and ratings can be obtained 
-from www.faa.gov.
-This handbook supersedes FAA-H-8083-25B, Pilot’s Handbook of Aeronautical Knowledge, dated 2016; the Pilot’s 
-Handbook of Aeronautical Knowledge Addendum A, dated February 2021; the Pilot’s Handbook of Aeronautical 
-Knowledge Addendum B, dated January 2022; and the Pilot’s Handbook of Aeronautical Knowledge Addendum C, 
-dated March 2023.
-This handbook is available for download, in PDF format, from www.faa.gov.
-This handbook is published by the United States Department of Transportation, Federal Aviation Administration, Airman 
-Testing Standards Branch, AFS-630, P.O. Box 25082, Oklahoma City, OK 73125.
-Comments regarding this publication should be emailed to AFS630comments@faa.gov.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Computer Systems and Networking for Beginners
+Comprehensive Guide to the Fundamentals
+of Technology and Connectivity
+James Ferry
+Table of Contents
+Introduction…………………………………………………………………………………………………………………..4
+Why understanding computer systems and networking is crucial in today's digital age….4 
+Chapter 1: The Basics of Computer System………………………………………………………………..6
+Definition and Types of Computers: Introduction to different forms of computers such as PCs, laptops, tablets, and servers…………………………………………………………………..6 Core Components: Exploring the CPU, RAM, hard drives, SSDs, graphics cards, and peripherals…………………………………………………………………………………………………………….11 Software vs. Hardware: Definitions and examples of each, explaining how they interact…………………………………………………………………………………………………………………17 
+Chapter 2: Software Essentials………………………………………………………………………………….19
+Operating Systems: What they do and popular examples (Windows, macOS, Linux).19 Application Software: Differentiating between system software and application software with examples………………………………………………………………………………………….20 Software Installation: Basic steps for installing and uninstalling software…………….22 
+Chapter 3: Introduction to Networking……………………………………………………………………24
+What is a Network?: Definition and importance of networks………………………………..24 Types of Networks: Exploring LAN, WAN, VPN, and others………………………………….25 Basic Networking Hardware: Routers, switches, modems, and their roles in a network………………………………………………………………………………………………………………..32 
+Chapter 4: Network Configurations………………………………………………………………………….38
+Understanding IP Addresses and Protocols: Basics of TCP/IP and why IP addresses are important………………………………………………………………………………………..38 Setting Up a Home Network: Step-by-step guide on setting up a router and configuring basic network settings………………………………………………………………………….39 Network Security Basics: Introduction to firewalls, network encryption, and secure passwords…………………………………………………………………………………………………………....41 
+Chapter 5: The Internet and Beyond…………………………………………………………………………45
+How the Internet Works: Simplified explanation of ISPs, packets, routing, and DNS……………………………………………………………………………………………………………………..45 Cloud Computing: What the cloud is and how cloud services can be utilized…………..50 Internet of Things (IoT): Overview of IoT and its impact on everyday life……………..51 
+Chapter 6: Network Troubleshooting and Maintenance………………………………………..53
+Common Network Issues: Identifying and resolving issues like connectivity problems, slow speeds, and intermittent disconnections…………………………………………..53 Preventative Maintenance: Regular practices to keep a network running smoothly.57 Upgrading Network Components: When and why to consider upgrading network hardware………………………………………………………………………………………………………………64 
+Chapter 7: Safety and Security………………………………………………………………………………….72
+Cybersecurity Basics: Understanding malware, viruses, and phishing…………………..72 Protecting Your Network: More on firewalls, anti-virus software, and safe browsing pract

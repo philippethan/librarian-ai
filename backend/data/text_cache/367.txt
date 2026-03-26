@@ -1,126 +1,63 @@
-   MARDI 29  OCTOBRE 2024
-80E ANNÉE – NO 24828
-3,60 € – FRANCE MÉTROPOLITAINE
-WWW.LEMONDE.FR –
-FONDATEUR : HUBERT BEUVE-MÉRY
-DIRECTEUR : JÉRÔME FENOGLIO
-Algérie 220 DA, Allemagne 4,70 €, Andorre 4,20 €, Autriche 4,40 €, Belgique 3,90 €, Espagne 4,10 €, Grèce 4,10 €, Guadeloupe-Martinique 3,90 €,
- Italie 4,10 €, Luxembourg 4 €, Maroc 30 DH, Pays-Bas 4,50 €, Portugal cont. 4,10 €, La Réunion 3,90 €, Sénégal 2 500 F CFA, Suisse 4,80 CHF, Tunisie 6,50 DT
-VU PAR RAMSÉS (CUBA)
- 
- CARTOONING FOR PEACE
-Budget, « Sécu » : les limites de la méthode Barnier
-▶ Après une semaine 
-de débats tendus 
-et confus, l’examen 
-du budget n’a pas pu 
-être achevé par les 
-députés, et la crise 
-parlementaire couve
-▶ Les trois blocs de 
-l’Assemblée nationale 
-se sont opposés, ou 
-parfois ligués, pour 
-détricoter le texte de 
-Michel Barnier
-▶ Délai de carence, 
-rémunération : en 
-quête d’économies, 
-l’exécutif s’attaque 
-aux arrêts maladie 
-des fonctionnaires
-▶ Lundi, le projet de 
-loi de financement 
-de la Sécurité sociale 
- arrive à l’Assemblée, 
-après que le texte du 
-gouvernement a été 
-rejeté en commission
-P. 12 À 14 ET CHRONIQUE P. 34
-Biodiversité
-A Cali, une COP 
-populaire, mais 
-des négociations 
-qui stagnent
-PAGE 10
-Enquête
-La mafia chinoise 
-des cyberarnaques 
-exploite en Asie des 
-captifs africains
-PAGE 25
-Musique
-Bronski Beat 
-et « The Age of 
-Consent », quarante 
-ans de fierté queer
-PAGE 26
-En visite à Rabat avec plu-
-sieurs ministres et chefs 
-d’entreprise, M. Macron 
-va solenniser la réconcilia-
-tion, après trois ans de 
-brouille, au prix d’une 
-nouvelle crise avec Alger
-PAGES 7 ET 24
-Diplomatie
-Macron au Maroc, 
-des retrouvailles 
-dans l’ombre 
-de l’Algérie
-En 2022, la ville du nord-
-est de l’Ukraine a vécu 
-pendant des mois sous 
-l’occupation des Russes, 
-qui a coûté la vie à plus 
-de un millier d’habitants
-PAGE 8
-Ukraine
-La ville martyre 
-d’Izioum cherche 
-comment renaître
-Si l’enveloppe globale de 
-la loi de programmation 
-militaire est préservée, 
-des surcoûts vont nécessi-
-ter des « ajustements », et 
-les armées anticipent déjà 
-certains renoncements
-PAGE 13
-Défense : tensions 
-sur les opérations 
-extérieures et 
-l’aide à l’Ukraine
-Le gouvernement espère 
-collecter 1 milliard d’euros 
-dès 2025. La répercussion 
-de cette hausse sur le prix 
-des billets pourrait entraî-
-ner une baisse du trafic
-PAGE 19
-Transport aérien : 
-le triplement 
-de la taxe affole 
-les compagnies
-L’EUROPE
-DANS LE PIÈGE
-GÉORGIEN
-PAGE 34 ET 
-NOS INFORMATIONS PAGE 6
+Git
+Notes for Professionals
+Git
+®
+Notes for Professionals
+GoalKicker.com
+Free Programming Books
+Disclaimer
+This is an unocial free book created for educational purposes and is
+not aliated with ocial Git® group(s) or company(s).
+All trademarks and registered trademarks are
+the property of their respective owners
+100+ pages
+of professional hints and tricks
+Contents
+About 
 1
-É D I T O R I A L
-Reportage A l’hôpital Bichat, 
-la psychiatrie au chevet des mères
-vouloir mourir d’avoir donné 
-la vie : alors que les troubles post-
-partum sont la première cause de 
-mortalité maternelle, Le Monde a 
-passé plusieurs semaines au sein 
-de l’unité d’hospitalisation pa-
-rents-bébé de l’hôpital Bichat-
-Claude-Bernard, à Paris. C’est l’un 
-des rares services à accueillir des 
-mères et leur nouveau-né, ainsi 
-que les pères qui le nécessitent, 
-pour une « psychiatrie de pointe ». 
-« Ce n’est pas facile de l’a
+ ................................................................................................................................................................................... 
+Chapter 1: Getting started with Git 
+2
+ ...................................................................................................................... 
+Section 1.1: Create your ﬁrst repository, then add and commit ﬁles 
+2
+ ........................................................................ 
+Section 1.2: Clone a repository 
+4
+ ..................................................................................................................................... 
+Section 1.3: Sharing code 
+4
+ .............................................................................................................................................. 
+Section 1.4: Setting your user name and email 
+5
+ .......................................................................................................... 
+Section 1.5: Setting up the upstream remote 
+6
+ .............................................................................................................. 
+Section 1.6: Learning about a command 
+6
+ .................................................................................................................... 
+Section 1.7: Set up SSH for Git 
+6
+ ...................................................................................................................................... 
+Section 1.8: Git Installation 
+7
+ ............................................................................................................................................ 
+Chapter 2: Browsing the history 
+10
+ ......................................................................................................................... 
+Section 2.1: "Regular" Git Log 
+10
+ ..................................................................................................................................... 
+Section 2.2: Prettier log 
+11
+ ............................................................................................................................................... 
+Section 2.3: Colorize Logs 
+11
+ ........................................................................................................................................... 
+Section 2.4: Oneline log 
+11
+ .............................................................................................................................................. 
+Section 2.5: Log search 
+12
+ .................................................................................

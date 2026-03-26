@@ -1,112 +1,89 @@
-FLUORESCIENCES
-DUNOD
-Albane Douillet
-Catherine Even-Beaudoin
-Nathalie Lebrun
-Nathalie Lidgi-Guigui
-Nicolas Vernier
-Physique
-Phy
-© Dunod, 2017, 2024
-11, rue Paul Bert, 92240 Malako
-www.dunod.com
-ISBN 978-2-10-086757-8
-Conception graphique de la couverture : Hokus Pokus Créations
-Création graphique de la maquee intérieure : Marse
-Les + en ligne
-Retrouvez sur la page dédiée à l’ouvrage sur le site dunod.com :
-Pourlesenseignants:unesélectiondeguresdel’ouvragepour
-projection en cours.
-Pour les étudiants :
-✓Des compléments de cours pour aller plus loin.
-✓Des liens commentés vers des vidéos et sites internet.
-www
-Table des matières
-
-VI
-Avant-propos
-1
-1
-CHAPITRE
-INTRODUCTION À LA MESURE PHYSIQUE
-2
-1
-La mesure
-4
-2
-La dimension
-7
-3
-Erreur et incertitude
-9
-1
-PARTIE
-2
-CHAPITRE
-ÉQUILIBRE STATIQUE 
-20
-Les notions fondamentales
-22
-Les forces les plus usuelles
-26
-Équilibre statique d’un corps matériel 
-31
-3
-CHAPITRE
-CINÉMATIQUE 
-56
-Référentiel, trajectoire
-58
-Variations algébriques
-59
-Grandeurs vectorielles
-71
-Changement de référentiel
-80
-4
-CHAPITRE
-DYNAMIQUE 
-90
-Les lois du mouvement
-92
-Le frottement dynamique
-102
-Les forces d’inertie
-108
-Cinétique de la rotation
-122
-5
-CHAPITRE
-ÉNERGIE ET COLLISION 
-132
-L’énergie
-134
-Les collisions
-148
-6
-CHAPITRE
-LES OSCILLATIONS HARMONIQUES
-162
-L’oscillation libre
-164
-Les oscillations amorties 
-171
-Les oscillations forcées 
-179
-1
-2
-3
-1
-2
-3
-4
-1
-2
-3
-4
-1
-2
-1
-2
-3
-III
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VIKING
+An imprint of Penguin Random House LLC
+1745 Broadway, New York, NY 10019
+penguinrandomhouse.com
+Copyright © 2026 by Chris Bailey
+Penguin Random House values and supports copyright. Copyright fuels creativity, encourages diverse voices, promotes free speech, and creates a vibrant culture. Thank you for buying an authorized edition of this book and for complying with copyright laws by not reproducing, scanning, or distributing any part of it in any form without permission. You are supporting writers and allowing Penguin Random House to continue to publish books for every reader. Please note that no part of this book may be used or reproduced in any manner for the purpose of training artificial intelligence technologies or systems.
+A Penguin Life Book
+VIKING is a registered trademark of Penguin Random House LLC.
+Line art by Anna Nativ.
+Cover design: Stuart Wilson, Pan Macmillan Art Department
+Designed by Nerylsa Dijol, adapted for ebook by Estelle Malmed
+LIBRARY OF CONGRESS CONTROL NUMBER: 2025021924
+Hardcover ISBN 9780593833056
+Ebook ISBN 9780593833063
+The authorized representative in the EU for product safety and compliance is Penguin Random House Ireland, Morrison Chambers, 32 Nassau Street, Dublin D02 YH68, Ireland, https://eu-contact.penguin.ie.
+prhid_prh_7.4_154569790_c0_r0
+
+
+
+
+
+
+
+
+To my teachers—the scientists, educators, monks, and mentors—who nurtured in me a sense of self-direction. This book is for you.
+
+
+
+
+
+
+
+
+Contents
+Dedication
+A Quick AI Statement
+Chapter 0 Elusive Goals
+Chapter 1 The Intention Stack
+Chapter 2 Values
+Chapter 3 Goal Editing
+Chapter 4 Ugly Goals: Lowering Aversion
+Chapter 5 Attractive Goals: Increasing Desire
+Chapter 6 Deeper Goals
+Chapter 7 Intention Rituals
+Chapter 8 Putting It All Together: A System for Achieving Your Goals
+Conclusion Enjoying Your Defaults
+Acknowledgments
+Notes
+Index
+About the Author
+
+_154569790_
+
+
+
+
+
+
+
+A Quick AI Statement
+The other day, I was chatting with a friendly new acquaintance when he said something that took me aback: that he doesn’t read books anymore. He used to love them but feels as though he now can’t trust them in this age of artificial intelligence. After all, how can he be sure that a book was written by a human and not by some algorithm?
+As an author of three books (and now four—welcome!), what he said surprised me. But on some level, I also agreed with him. As a reader, I want to know that an author didn’t “phone it in”—that they wrote a book themselves. Hence, this short statement before we jump into the book.
+The fundamental premise of this book is that the key to goal attainment is doubling down on how intentional we are. In this way, human intentionality is not only beautiful but also profoundly powerful. By turning our intentions into actions, we can go our own way to accomplish the things we truly want to get out of life. There is nothing wrong with automatic behavior—habits are extraordinarily powerful too, for example. But to attain many o

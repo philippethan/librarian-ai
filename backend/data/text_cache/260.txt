@@ -1,52 +1,22 @@
-M A N N I N G
-Michael Kaufmann
-Rob Bos
-Marcel de Vries
-Foreword by Scott Hanselman
-Continuous integration and delivery for DevOps
-Collaborative
-coding
-Issues
-Projects
-I
-Projects
-Jira
-Boards
-Actions
-Actions
-Planning and tracking
-Workflows
-Productivity
-Security
-Advanced
-Security
-Codespaces
-Copilot
-Advanced
-Security
-Codespaces
-Copilot
-Mobile
-Search
-Packages
-Mobile
-CLI
-Desktop
-Teams
-Slack
-Jenkins
-Circle CI
-Client applications
-Azure
-Google Cloud
-snyk
-Discussions
-Pages
-Code
-Visual Studio
-	
-i
-﻿
-	
-i
-GitHub Actions in Action
+Completely revised including six new chapters, this new edition presents a more 
+comprehensive knowledge of issues facing developers of complex products and pro­
+cess management. It includes more tools for implementing a Systems Engineering 
+approach to minimize the risks of delays and cost overruns and helps create the right 
+product for its customers.
+Designing Complex Products with Systems Engineering Processes and Techniques, 
+Second Edition highlights how to increase customer satisfaction, quality, safety, and 
+usability to meet program timings and budgets using a Systems Engineering 
+approach. It provides decision-making considerations and models for creating sus­
+tainable product design and describes many techniques and tools used in product 
+development and the product life-cycle orientation. The book also offers techniques 
+used in Design for Manufacturing, Design for Assembly, and product evaluation 
+methods for verification and validation testing. Many new examples, case studies, six 
+new chapters, and updated program and data charts held on our website are offered.
+The book targets practicing engineers, engineering management personnel, prod­
+uct designers, product planners, product and program managers in all industrialized 
+and developing countries. In addition, the book is also useful to undergraduate, grad­
+uate students, and faculty in engineering, product design, and product project and 
+program management.
+Designing Complex Products with 
+Systems Engineering 
+Processes and Techniques

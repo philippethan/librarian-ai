@@ -1,23 +1,51 @@
-Modern  
-Communications
-A Systematic 
-Introduction
-Daniel W. Bliss
-Modern Communications
-Designed for a single-semester course, this concise and approachable text covers
-all of the essential concepts needed to understand modern communications systems.
-Balancing theory with practical implementation, it presents key ideas as a chain of
-functions for a transmitter and receiver, covering topics such as ampliﬁcation, up-
-and down-conversion, modulation, dispersive channel compensation, error correct-
-ing codes, acquisition, multiple-antenna and multiple-input multiple-output antenna
-techniques, and higher-level communications functions. Analog modulations are also
-presented, and all of the basic and advanced mathematics, statistics, and Fourier the-
-ory needed to understand the concepts covered are included. Supported online with
-PowerPoint slides, a solutions manual, and additional MATLAB®-based simulation
-problems, it is ideal for a ﬁrst course in communications for senior undergraduate
-and graduate students.
-Daniel W. Bliss is a professor in the School of Electrical, Computer, and Energy Engi-
-neering at Arizona State University (ASU), and is the Director of ASU’s Center for
-Wireless Information Systems and Computational Architectures. He is a co-author
-of Adaptive Wireless Communications: MIMO Channels and Networks (Cambridge
-University Press, 2013).
+HBR’s 10 Must Reads series is the deﬁnitive collection of ideas
+and best practices for aspiring and experienced leaders alike.
+These books oﬀer essential reading selected from the pages of
+Harvard Business Review on topics critical to the success of
+every manager.
+Titles include:
+HBR’s 10 Must Reads 2015
+HBR’s 10 Must Reads 2016
+HBR’s 10 Must Reads 2017
+HBR’s 10 Must Reads 2018
+HBR’s 10 Must Reads 2019
+HBR’s 10 Must Reads 2020
+HBR’s 10 Must Reads 2021
+HBR’s 10 Must Reads for CEOs
+HBR’s 10 Must Reads for New Managers
+HBR’s 10 Must Reads on AI, Analytics, and the New Machine Age
+HBR’s 10 Must Reads on Boards
+HBR’s 10 Must Reads on Building a Great Culture
+HBR’s 10 Must Reads on Business Model Innovation
+HBR’s 10 Must Reads on Career Resilience
+HBR’s 10 Must Reads on Change Management (Volumes 1 and 2)
+HBR’s 10 Must Reads on Collaboration
+HBR’s 10 Must Reads on Communication (Volumes 1 and 2)
+HBR’s 10 Must Reads on Creativity
+HBR’s 10 Must Reads on Design Thinking
+HBR’s 10 Must Reads on Diversity
+HBR’s 10 Must Reads on Emotional Intelligence
+HBR’s 10 Must Reads on Entrepreneurship and Startups
+HBR’s 10 Must Reads on Innovation
+HBR’s 10 Must Reads on Leadership (Volumes 1 and 2)
+HBR’s 10 Must Reads on Leadership for Healthcare
+HBR’s 10 Must Reads on Leadership Lessons from Sports
+HBR’s 10 Must Reads on Lifelong Learning
+HBR’s 10 Must Reads on Making Smart Decisions
+HBR’s 10 Must Reads on Managing Across Cultures
+HBR’s 10 Must Reads on Managing in a Downturn, Expanded
+Edition
+HBR’s 10 Must Reads on Managing People (Volumes 1 and 2)
+HBR’s 10 Must Reads on Managing Risk
+HBR’s 10 Must Reads on Managing Yourself (Volumes 1 and 2)
+HBR’s 10 Must Reads on Mental Toughness
+HBR’s 10 Must Reads on Negotiation
+HBR’s 10 Must Reads on Nonproﬁts and the Social Sectors
+HBR’s 10 Must Reads on Organizational Resilience
+HBR’s 10 Must Reads on Platforms and Ecosystems
+HBR’s 10 Must Reads on Public Speaking and Presenting
+HBR’s 10 Must Reads on Reinventing HR
+HBR’s 10 Must Reads on Sales
+HBR’s 10 Must Reads on Strategic Marketing
+HBR’s 10 Must Reads on Strategy (Volumes 1 and 2)
+HBR’s 10 Must Reads on Strategy for Healthcare

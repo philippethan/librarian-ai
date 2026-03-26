@@ -1,9 +1,32 @@
-Practical Systems 
-Thinking
-Kamran Eftekhari Shahroudi
-Steven Conrad · Jill Speece
-Kirk Reinholtz · Martin “Trae” Span
-Sarwat Chappell · Quentin Saulter
-Golam M Bokhtier  Editors
-Finding leverage on complex problems
-Practical Systems Thinking
+Springer Undergraduate Texts 
+in Mathematics and Technology
+Makoto Tsukada · Yuji Kobayashi · 
+Hiroshi Kaneko · Sin-Ei Takahasi · 
+Kiyoshi Shirayanagi · Masato Noguchi
+Linear 
+Algebra 
+with Python
+Theory and Applications
+Springer Undergraduate Texts  
+in Mathematics and Technology
+Series Editors
+Helge Holden, Department of Mathematical Sciences, Norwegian 
+University of Science and Technology, Trondheim, Norway
+Keri A. Kornelson, Department of Mathematics, University of Oklahoma, 
+Norman, OK, USA
+Editorial Board
+Lisa Goldberg, Department of Statistics, University of California, Berkeley, 
+Berkeley, CA, USA
+Armin Iske, Department of Mathematics, University of Hamburg, Hamburg, 
+Germany
+Palle E. T. Jorgensen, Department of Mathematics, University of Iowa,  
+Iowa City, IA, USA
+﻿
+Springer Undergraduate Texts in Mathematics and Technology (SUMAT) 
+publishes textbooks aimed primarily at the undergraduate. Each text is 
+designed principally for students who are considering careers either in the 
+mathematical sciences or in technology-based areas such as engineering, 
+finance, information technology and computer science, bioscience and medi-
+cine, optimization or industry. Texts aim to be accessible introductions to a 
+wide range of core mathematical disciplines and their practical, real-world 
+applications; and are fashioned both for course use and for independent study.

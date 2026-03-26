@@ -1,24 +1,18 @@
-Nathan Kozyra
-Matt Butcher
-Matt Farina
-M A N N I N G
-SECOND EDITION
-Praise for the first edition
-The thinking engineers guide to Go, replete with examples, pitfalls, and scalable approaches worthy of
-apprentices and architects alike.
-—Zachary Manning, senior DevOps engineer at Zillow
-An invaluable reference resource for Go developers seeking to refresh their knowledge of core concepts
-or enhance their understanding of testing, logging, and microservices.
-—Jonathan Reeves, software engineer at EQL Games
-An essential read for Go enthusiasts, offering practical tips and deep insights to harness Golang’s
-true potential in modern programming.
-—Sergio Britos Arevalo, senior software engineer at Schwarz Global Services
-The book to improve your Go, practically!
-—Leonardo Taccari, cloud architect at faire.ai
-Go in Practice,
-Second Edition
-NATHAN KOZYRA
-MATT BUTCHER
-MATT FARINA
-M A N N I N G
-SHELTER ISLAND
+books
+Develop and Operate Your
+LoRaWAN IoT Nodes
+Claus Kühnel
+Ready-to-use devices and self-built
+Arduino nodes in the "The Things Network"
+End-Device
+Gateway
+Connection LoRa
+Connection IP
+Application
+Server
+twork
+Develop and Operate Your
+LoRaWAN IoT Nodes
+Ready-to-use devices and self-built Arduino nodes in the "The Things Network"
+●
+Dr. Claus Kühnel

@@ -1,105 +1,84 @@
-BS EN 50341-2-2:2019 
-Overhead electrical lines exceeding AC 1 kV 
-Part 2-2: National Normative Aspects (NNA) for 
-BELGIUM (based on EN 50341-1:2012) 
-bsi. 
-BS EN 50341-2-2:2019 
-BRITISH STANDARD 
-National foreword 
-This British Standard is the UK implementation of EN 50341-2-2:2019. 
-This standard, together with the following list of National 
-Normative Aspect standards, supersedes BS EN 50423-3:2005 and 
-BS EN 50341-3:2001. 
-Country 
-Origin 
-Ref 
-Code 
-AT 
-Austrian National Committee 
-BS EN 50341-2-1 
-BE 
-Belgian National Committee 
-BS EN 50341-2-2:2019 
-CH 
-Swiss National Committee 
-BS EN 50341-2-3 
-DE 
-German National Committee 
-BS EN 50341-2-4:2019 
-DK 
-Danish National Committee 
-BS EN 50341-2-5:2017 
-ES 
-Spanish National Committee 
-BS EN 50341-2-6:2017 
-Fl 
-Finnish National Committee 
-BS EN 50341-2-7:2015 
-FR 
-French National Committee 
-BS EN 50341-2-8:2017 
-GB 
-British National Committee 
-BS EN 50341-2· 
-9:2017-1 Al:2018 
-GR 
-Greek National Committee 
-BS EN 50341-2-10 
-IE 
-Irish National Committee 
-BS EN 50341-2-11 
-IS 
-Iceland National Committee 
-BS EN 50341-2-12:2018 
-IT 
-Italian National Committee 
-BS EN 50341-2· 
-13:2017+A1:2017 
-LU 
-Luxemburg National Committee 
-No NNA available 
-NL 
-Nederland's National Committee 
-BS EN 50341-2-15:2019 
-NO 
-Norwegian National Committee 
-BS EN 50341-2-16:2016 
-PT 
-Portuguese National Committee 
-BS EN 50341-2-17 
-SE 
-Swedish National Committee 
-BS EN 50341-2-18:2016 
-CZ 
-Czech National Committee 
-BS EN 50341-2-19:2015 
-EE 
-Estonian National Committee 
-BS EN 50341-2-20:2018 
-PL 
-Polish National Committee 
-BS EN 50341-2-22:2016 
-SK 
-Slovak National Committee 
-BS EN 50341-2-23:2016 
-BS EN 50423-3:2005 and BS EN 50341-3:2001 will be withdrawn upon 
-publication of the rest of the series. 
-The UK participation in its preparation was entrusted to Technical 
-Committee PEL/11, Overhead Lines. 
-BRITISH STANDARD 
-A list of organizations represented on this committee can be obtained on 
-request to its secretary. 
-This publication does not purport to include all the necessary provisions 
-of a contract. Users are responsible for its correct application. 
-© The British Standards Institution 2019 
-Published by BSI Standards Limited 2019 
-ISBN 978 0 539 05178 0 
-ICS 29.240.20 
-Compliance with a British Standard cannot confer immunity from 
-legal obligations. 
-This British Standard was published under the authority of the 
-Standards Policy and Strategy Committee on 30 June 2019. 
-Amendments/corrigenda issued since publication 
-Date 
-Text affected 
-BS EN 50341-2-2:2019 
+ 
+AnyFrench.com 
+ 
+AnyFrench.com - Tous droits réservés 
+Beaucoup trop de gâteaux 
+ 
+Didier est devant la boulangerie. C’est un grand gourmand et il veut 
+acheter tous les gâteaux. Il appelle son fils Paul au téléphone. 
+ 
+Paul : Oui ?  
+Didier : Salut, Paul, c’est ton père ! 
+Paul : Je sais, ton nom s’est affiché sur l’écran avant que tu m’appelles. 
+Didier : Ah oui, c'est vrai, j'oublie à chaque fois ! Dis-moi, je suis devant la 
+boulangerie, ils ont de très beaux gâteaux, tu en veux un ?  
+Paul : Papa, c’est gentil, mais je t’ai déjà dit que je ne voulais pas de gâteau. 
+Je suis au régime et j’essaie d’arrêter le sucre ! 
+Didier : Tu es sûr ? Ils sont vraiment très jolis et pas chers ! 
+Paul : Je… bon, allez. Mais après, ne m’achète plus de gâteau ! Je veux bien 
+n’importe quoi, un gâteau au chocolat s’il te plaît. Mais un seul gâteau, un 
+seul ! 
+Didier : OK. Et ta mère, elle veut quelque chose ?  
+Paul : Maman, papa est à la boulangerie, tu veux quelque chose ? … Elle dit 
+qu’elle ne veut pas de gâteau. Bon, s’il te plaît, n’achète pas de croissants et 
+n’achète pas de pains au chocolat ! Sinon, je ne vais pas pouvoir 
+m’empêcher de les manger. Juste un gâteau et c’est le dernier ! 
+Didier : Très bien, à tout à l’heure mon chéri. 
+Didier entre dans la boulangerie.  
+Le boulanger : Bonjour ! 
+Didier : Bonjour, je voudrais une baguette pas trop cuite et une tradition s’il 
+vous plaît. Et je vais vous prendre aussi une religieuse au chocolat et un 
+baba au rhum.  
+Le boulanger : Très bien. Alors, une baguette, une tradition, une religieuse 
+au chocolat, un baba au rhum… 
+Didier : Oh, attendez, vos autres gâteaux m’ont l’air aussi délicieux. Je 
+voudrais aussi une religieuse au café, un Paris Brest et une tarte aux 
+pommes. Vous faites toujours l’offre pour les viennoiseries : trois achetées, 
+une offerte ?  
+Le boulanger : Oui, bien sûr.  
+Didier : Alors, je voudrais trois croissants et trois pains au chocolat 
+Le boulanger : Très bien, ça vous fera seize euros quarante-cinq s’il vous 
+plaît ! 
+Didier : C’est vraiment pas cher ! C’est tellement mieux de vivre en 
+Normandie. En région parisienne, ça m’aurait coûté plus du double pour 
+ 
+AnyFrench.com 
+ 
+AnyFrench.com - Tous droits réservés 
+des gâteaux deux fois plus petits ! 
+Le boulanger : Ha ha ! C’est pour ça que la vie est meilleure à la campagne ! 
+Didier : Je suis bien d’accord avec vous ! Alors seize euros quarante-cinq… 
+Je vais voir si j’ai l’appoint. J’aimerais me débarrasser de ma petite 
+monnaie. Ah, je vais pouvoir faire l’appoint. Voilà, seize euros quarante-cinq, 
+Monsieur.  
+Le boulanger : C'est parfait merci ! Bonne journée, au revoir Monsieur ! 
+Didier : Au revoir !  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+AnyFrench.com 
+ 
+AnyFrench.com - Tous droits réservés 
+Quiz de compréhension 
+ 
+1) Pourquoi Paul ne voulait pas de gâteau ?  
+A) Il n’aime pas les gâteaux  
+B) Il n’y a pas de gâteaux au chocolat   
+C) Il préfère les croissants 
+D) Il fait régime 
+2) Finalement, quel gâteau veu

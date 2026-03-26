@@ -1,48 +1,91 @@
-Advanced Engineering 
-Mathematics with 
-MATLAB®
-In the five previous editions of Advanced Engineering Mathematics with MATLAB®, the author presented a text 
-firmly grounded in mathematics that engineers and scientists must understand and know how to use. Tapping 
-into decades of teaching at the US Navy Academy and the US Military Academy and serving for twenty-five 
-years at (NASA) Goddard Space Flight, he combines teaching and practical experience that is rare among au-
-thors of advanced engineering mathematics books.
-This edition continues to refine a smaller, easier to read, and useful version of this classic textbook. While 
-competing textbooks continue to grow, the book presents a slimmer, more practical option to align with the 
-expectations of today’s students. 
-The new edition of the author’s classic textbook continues on a path to creating the best possible learning re-
-source for instructors and students alike. Through extensive class testing over five previous editions, including 
-the author’s current course at the US Naval Academy, the book has been steadily improved. 
-The primary mission of this edition is to dramatically increase the quality and quantity of examples and prob-
-lems, especially in the chapters on differential equations and Laplace transforms. The chapters on differential 
-equations, linear algebra, Fourier series, and Laplace transforms have seen the greatest changes. Of course, this 
-edition continues to offer a wealth of examples and applications from scientific and engineering literature, a 
-highlight of previous editions.
-MATLAB® remains central to the presentation and is employed to reinforce the concepts that are taught. 
-Worked solutions are given in the back of the book. An Instructor’s Solutions Manual is also available. 
-Dean G. Duffy has taught at the US Naval Academy and US Military Academy. He spent 25 years working on 
-numerical weather prediction, oceanic wave modeling, and dynamical meteorology at NASA’s Goddard Space 
-Flight Center. Prior to this, he was a numerical weather prediction officer in the US Air Force. He earned his 
-Ph.D. in meteorology from MIT. Dr. Duffy has written several books on transform methods, engineering math-
-ematics, and mixed boundary value problems including Green’s Functions with Applications, Second Edition, 
-published by CRC Press.
-Advances in Applied Mathematics
-Series Editor: Daniel Zwillinger 
-Quantum Computation
-Helmut Bez and Tony Croft
-Computational Mathematics
-An Introduction to Numerical Analysis and Scientific Computing with Python
-Dimitrios Mitsotakis
-Delay Ordinary and Partial Differential Equations
-Andrei D. Polyanin
-Vsevolod G. Sorkin
-Alexi I. Zhurov
-Clean Numerical Simulation
-Shijun Liao
-Multiplicative Partial Differential Equations
-Svetlin Georgiev and Khaled Zennir
-Engineering Statistics
-A Matrix-Vector Approach with MATLAB®
-Lester W. Schmerr Jr. 
-General Quantum Numerical Analysis 
-Svetlin Georgiev and Khaled Zennir
-An Introduction to Partial Differential
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Du même auteur
+Ce que je cherche, Fayard, 2024.
+
+
+
+
+
+
+
+À la France qui travaille. Humble et silencieuse.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+La plus haute forme d’espérance, c’est le désespoir surmonté.
+
+
+
+
+
+
+
+
+GEORGES BERNANOS, La Liberté, pour quoi faire ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Prologue
+QU’EST-CE DONC QU’UN PAYS SI ce n’est les visages, les voix et les destins de ceux qui l’habitent ?
+En politique, pourtant, la vraie vie a disparu. L’agenda médiatique et la cadence infernale des publications sur les réseaux sociaux ont eu raison du temps long. Chaque semaine apporte son nouveau scandale, chaque jour ses nouvelles urgences. Telle une machine qui broie, la pauvre « démocratie 2.0 » écrase tout sur son passage : les réflexions de fond, la nuance, l’esprit critique, la capacité à voir loin, la vérité parfois, sans oublier la politesse.
+Ainsi, on gouverne dans l’instant, plutôt que de gouverner pour l’histoire.
+Alors oui, la vie politique et ceux qui la portent avec courage ont gagné en visibilité. Les débats, souvent enflammés, de plus en plus manichéens, résonnent plus fort, et plus vite. Mais qu’en retient-on vraiment ?
+Pendant ce temps, à l’extérieur de l’arène, dans une indifférence de plus en plus marquée, un silence que plus personne ne remarque, il y a les Français, humbles, lucides, courageux. Il y a ceux pour qui la vie ne se pense pas en « séquences de communication », mais plutôt en termes de fins de mois à boucler, de factures à payer, d’enfants à élever, de projets de vie à bâtir, de « paperasse » à remplir, de patrimoine à transmettre – aussi modeste soit-il.
+Les Français le ressentent : ce temps politique n’est plus le leur, et un gouffre abyssal les en sépare. Leurs inquiétudes, leurs difficultés, leurs angoisses, mais également leurs attentes et leurs espoirs ont disparu de l’agenda des dirigeants politiques.
+Il y a aussi ce sentiment plus dur encore : tout ce qui se décide l’est, à chaque fois, en dépit du bon sens le plus élémentaire.
+Les Français désirent des services de santé solides, mais on ferme des lits d’hôpitaux. Ils exigent l’ordre et la sécurité, mais la justice relâche bien trop vite les délinquants et les criminels. Les Français sont invités à faire des économies, mais on gaspille leur argent dans d’innombrables gabegies. Ils veulent travailler, mais on les écrase de taxes et de normes. En somme, ils paient toujours plus d’impôts, pour moins recevoir en retour.
+Après bientôt deux quinquennats d’une politique qui aura résolument ignoré les Français et affaibli la France, notre pays est à la croisée des chemins.
+Dès lors, humblement, j’ai voulu rendre du temps au temps. Pendant près d’un an, je suis allé frapper à la porte des Français. Je m’y suis rendu seul, sans caméra de télévision, sans appareil photo, sans reporter d’images, avec mon seul cahier de notes en main.
+Depuis mes premiers pas en politique il y a plus de dix ans dans cette cité HLM de Saint-Denis qui m’a tant appris jusqu’à aujourd’hui, je sillonne notr

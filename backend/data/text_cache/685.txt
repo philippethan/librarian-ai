@@ -1,37 +1,101 @@
-An overview of machine and deep learning-based
-intrusion detection systems in the Internet of Things
-Oumeima Boubertakh1, Ramdane Maamri1 and Ali Sahnoun1
-1LIRE Laboratory, University of Constantine 2 Abdelhamid Mehri
-Abstract
-The Internet of Things (IoT) is one of the hottest topics in the industrial and academic fields in recent
-years, and it is regarded as the next revolution of the internet. IoT security and privacy issues have proven
-to be critical targets.Since IoT devices have less memory, processing power, and power consumption,
-traditional security mechanisms are ineffective.Thus, A security mechanism called an Intrusion Detection
-System (IDS) has an important role in securing IoT nodes and networks.Machine learning and deep
-learning techniques have been proposed for automatic intrusion detection and abnormal behavior
-identification of networks.Hence, in this filed, the types of IDS, the recent research, and contributions to
-IDS in IoT networks are discussed in this paper.
-Keywords
-Internet of Things, Intrusion Detection Systems, Machine Learning, Deep Learning
-1. Introduction
-The Internet of Things (IoT) is one of the most rapidly evolving technological trends in recent
-years.According to [1] the number of IoT devices will reach 75 billion by 2025.Moreover,IoT
-is a new technology that collects data from the physical world and then transmits it over the
-internet to be exchanged, processed, and stored. By using actuators and smart appliances, the
-collected data is used to extract information and act on the physical world[2] Moreover,IoT has
-noticeably increased human day activities such as the delivery of efficient healthcare services
-and the development of smart cities,homes and intelligent transportation systems[3].Because of
-the resource limitations of the IoT, and the explosion in the number of unsecured IoT devices
-connected to the global network, IoT devices are more vulnerable and can be easily exploited by
-an attacker. Hence, the demands of IoT security is paramount.According to the literature, many
-works provide security in the IoT by utilizing cryptography based security mechanisms such
-as symmetric key cryptosystems and public key cryptosystems. Furthermore, cryptographic
-security mechanisms are primarily used to detect external attacks such as eavesdropping and
-message alteration.When the encryption methods hold the valid key and are compromised by
-the attack,they are unable to detect the vulnerable nodes. Attackers can easily obtain security
-details from compromised nodes and launch a series of internal intrusions[4]. As a result, the
-IDS serves as a tool to provide an additional level of security to the IoT.
-RIF’23: The 12th Seminary of Computer Science Research at Feminine, March 09, 2023, Constantine, Algeria
-$ oumeima.boubertakh@univ-constantine2.dz (O. Boubertakh); ramdane.maamri@univ-constantine2.dz
-(R. Maamri); ali.sahnoun.@univ-constantine2.dz (A. Sahnoun)
-© 2023 Copyright for this paper by its authors. Use permitted 
+ 
+   
+ 
+   
+ 
+ 
+Sous la direction de BERNARD SALAMITO
+STÉPHANE CARDINI | DAMIEN JURINE | MARIE-NOËLLE SANZ
+MPSI
+PHYSIQUE
+TOUT-EN-UN
+Avec la collaboration de :
+ANNE-EMMANuELLE BADEL
+FRANÇOIS CLAUSSET
+11 rue Paul Bert, 92240 Malakoff
+www.dunod.com
+© Dunod, 2019
+Conception et création de couverture : Hokus Pokus Créations
+Les photos du chapitre 5 ont été réalisées par Pierre Canaguier
+ISBN 978‐2‐10‐079803‐2
+I
+Signaux physiques
+22
+1
+Oscillateur harmonique
+23
+1
+Un oscillateur harmonique mécanique . . . . . . . . . . . . . . . . . . . . .
+23
+1.1
+Système étudié . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+23
+1.2
+Obtention d’une équation différentielle
+. . . . . . . . . . . . . . . .
+24
+1.3
+Déﬁnition d’un oscillateur harmonique
+. . . . . . . . . . . . . . . .
+24
+1.4
+Résolution de l’équation différentielle . . . . . . . . . . . . . . . . .
+25
+1.5
+Conservation de l’énergie mécanique
+. . . . . . . . . . . . . . . . .
+27
+1.6
+Amplitude et période du mouvement . . . . . . . . . . . . . . . . . .
+29
+2
+Signal sinusoïdal
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+30
+2.1
+Déﬁnition du signal sinusoïdal . . . . . . . . . . . . . . . . . . . . .
+30
+2.2
+Phase instantanée, phase initiale . . . . . . . . . . . . . . . . . . . .
+30
+2.3
+Période, fréquence . . . . . . . . . . . . . . . . . . . . . . . . . . .
+31
+2.4
+Une interprétation géométrique
+. . . . . . . . . . . . . . . . . . . .
+32
+2.5
+Représentation de Fresnel
+. . . . . . . . . . . . . . . . . . . . . . .
+33
+2.6
+Déphasage
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+34
+2
+Propagation d’un signal
+47
+1
+Signaux physiques, spectre . . . . . . . . . . . . . . . . . . . . . . . . . . .
+47
+1.1
+Ondes et signaux physiques
+. . . . . . . . . . . . . . . . . . . . . .
+47
+1.2
+Notion de spectre . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+48
+1.3
+Cas d’un signal périodique de forme quelconque . . . . . . . . . . .
+50
+1.4
+Analyse harmonique expérimentale . . . . . . . . . . . . . . . . . .
+53
+1.5
+Exemple : analyse de signaux sonores . . . . . . . . . . . . . . . . .
+54
+2
+Phénomène de propagation . . . . . . . . . . . . . . . . . . . . . . . . . . .
+56
+Table des matières

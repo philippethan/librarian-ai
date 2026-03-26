@@ -1,120 +1,16 @@
-MR THAN Poseng
-6 RUE DE LA BUTTE VERTE
-SOLIDARITE ACTIONS
-93160 NOISY LE GRAND
-Reims, le 04/12/2025
-VOTRE ATTESTATION DE TIERS-PAYANT 2026
-Monsieur THAN,
-Nous avons le plaisir de vous adresser votre nouvelle attestation de Tiers-Payant, valable à compter du 1er
-janvier 2026. Nous vous invitons à la présenter aux professionnels de santé afin d’éviter d’avancer les frais.
-Important : si vous n’utilisez pas cette attestation, vous devez demander à votre professionnel de santé un
-reçu de paiement et nous le faire parvenir.
-Gagnez du temps avec l’espace en ligne Hélium ! Créez votre compte en quelques clics et accédez à vos
-services 24h/24 : attestation de tiers payant, dépôt de factures, devis et demandes de prises en charge,
-suivi des remboursements, mise à jour des informations personnelles.
-Rendez-vous sur  https://helium.gestion-sante.com ou via l’application mobile.
-Apple Store
-Google Store
-Pour vous connecter, renseignez votre identifiant personnel : 2486852
-ATTESTATION DE TIERS PAYANT
-HELIUM
-4, Rue Léon Patoux – CS 60007
-51686 REIMS Cedex 2
-N° AMC : 00401125
-Typ Conv : voir colonnes, CSR :
-N° adhérent :
-2486852
-R
-Assuré principal AMC : THAN Poseng
-N° contrat : 9246731
-Période de validité :
-01/01/2026 au 31/12/2026
-DROITS EN LIGNE OUVERTS - IDB
-Bénéficiaires du tiers payant
-Dépenses de santé concernées par le tiers payant (*)
-Nom – Prénom
-PHAR*
-MED*
-SVIL*
-TRAN*
-CSTE*
-DESO
-EXTE*
-OPTI
-DEPR
-AUDI
-HOSP
-Date de naissance - Rang
-N°INSEE
-Typ Conv
-SP
-SP
-SP
-SP
-SP
-SP
-IS
-VM/IT
-IT
-IT
-IS
-THAN Poseng
-04/11/1994
-1
-1 94 11 99 234 040 46
-XXXXXXXXXXXXXXX
-100%
-100%
-100%
-100%
-100%
-100%
-100%
-PEC
-PEC
-PEC
-PEC
-(2)(3)
-(3)
-(3)
-(1)
-* Règle de calcul 02A : Mt RC = %TR-MRO
-(1) Prise en charge iSanté : www.tp-isante.fr ou par fax au 01 49 09 79 22
-(2) Demande de prise en charge Opticiens partenaires Viamedis sur www.viamedis.net.
-(2)(3) Demande de prise en charge : Partenaires Itelis, rendez-vous sur www.itelis.fr.
-(3) Autres professionnels de santé, voir adresse précisée au dos.
-Important :
-Seules les dépenses avec la
-mention SP sont prises en
-charge par SP santé.
-4 rue Léon Patoux – CS 60007 – 51686 Reims Cedex 2 – Tél. 03 26 61 24 61 – Fax 03 26 61 24 62 – www.helium.fr – SAS au capital de 503 895 € - RCS Reims
-513 263 111 – APE 6622 Z – TVA intra-communautaire N° FR 93 513 263 111 – N° ORIAS 09 050 797 consultable à l’adresse www.orias.fr – Courtier d’assurance ou
-de réassurance (COA) – Sous le contrôle de l’ACPR – Autorité de Contrôle Prudentiel et de Résolution – 4 place de Budapest – CS 92459 – 75436 Paris Cedex
-09 – Service Réclamation : reclamation@helium.fr
-Accessible sur ordinateur ou smartphone, votre espace en ligne vous offre de multiples
-fonctionnalités :
-Visualisez 
-l'état 
-de 
-vos
-remboursements, en temps réel.
-Consultez 
-votre 
-contrat 
-et 
-ses
-garanties.
-Transmettez vos devis ou vos factures
-photographiés avec l’appareil photo
-de votre smartphone.
-Géolocalisez les professionnels de
-santé 
-pratiquant 
-le 
-Tiers-Payant,
-en 
-fonction 
-de 
-votre 
-position
-géog
+
+
+
+
+
+
+
+Préface à l’édition française de Dennis Meadows
+En 1970, Donella Meadows a renoncé aux prémices d’une brillante carrière en biophysique pour se former à une méthodologie d’analyse systémique.
+Après avoir obtenu son doctorat avec mention à Harvard, elle avait bénéficié d’une prestigieuse bourse pour étudier à la microseconde près la complexité de la dynamique enzymatique à l’aide d’appareils à balayage électronique extrêmement coûteux et sophistiqués. Mais ce domaine de recherche ne l’intéressait plus.
+Nous rentrions tout juste d’un voyage sac au dos depuis le Royaume-Uni jusqu’au Sri Lanka. En douze mois, nous avions parcouru 100 000 kilomètres, arpenté treize nations, côtoyé d’innombrables cultures, langues et religions et traversé environ cinq siècles (mon estimation de la différence culturelle entre l’Afghanistan rural et l’Angleterre urbaine d’il y a cinquante ans). Nous avions été témoin de nombreux dysfonctionnements sociaux, politiques, environnementaux, économiques et psychologiques, dont beaucoup perduraient depuis des siècles, voire des millénaires. Donella a voulu comprendre les causes des problématiques sociales qu’elle avait constatées, et en étudier les conséquences et les solutions. Or la biophysique n’offrait aucun outil pour cela.
+En revanche, les méthodologies de la pensée systémique semblaient prometteuses. Aussi m’a-t-elle rejoint au sein de l’équipe de dynamique des systèmes au Massachusetts Institute of Technology (MIT), où elle s’est formée à nos techniques durant trois mois intensifs. Puis elle a joué un rôle central dans l’étude que nous avons réalisée pour le Club de Rome sur la dynamique mondiale à long terme. Et elle a été la principale autrice du rapport qui en a résulté, The Limits to Growth.
+
+Grâce au cheminement inhabituel par lequel elle s’était introduite dans ce champ de la connaissance, elle détenait un avantage unique sur la plupart des auteurs abordant la pensée systémique. Après s’être procuré des outils systémiques, ces derniers partaient en quête d’applications pertinentes. Cette approche a généré de nombreux ouvrages utiles. Toutefois, leur intérêt pour les problèmes étudiés découlait de leurs méthodologies. Tandis que les méthodologies de Donella découlaient de son intérêt pour les problèmes examinés.
+Après avoir terminé notre projet au MIT, Donella et moi sommes entrés à Dartmouth College où nous avons dirigé un programme d’enseignement consacré aux méthodologies de la dynamique des systèmes. Durant ce cursus de plusieurs années spécialement conçu, nos étudiants acquéraient la capacité de représenter mathématiquement des problèmes complexes et de développer des modélisations informatiques débouchant sur des recommandations quant aux politiques à mettre en œuvre.
+C’était tout à fait passionnant et stimulant. Mais Donella a rapidement compris que le temps et le coût nécessaires pour devenir un modélisateur professionnel réduiraient l’impact du projet. Comme si l’on formait des pilotes de chasse pou

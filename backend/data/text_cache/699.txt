@@ -1,0 +1,67 @@
+Power systems management 
+and associated information
+exchange — Data and 
+communications security
+Part 11: Security for XML documents
+BS EN 62351-11:2017
+BSI Standards Publication
+National foreword
+This British Standard is the UK implementation of EN 62351-11:2017. It is
+identical to IEC 62351-11:2016. 
+The UK participation in its preparation was entrusted to Technical
+Committee PEL/57, Power systems management and associated 
+information exchange.
+A list of organizations represented on this committee can be obtained on
+request to its secretary.
+This publication does not purport to include all the necessary provisions of
+a contract. Users are responsible for its correct application.
+© The British Standards Institution 2017.
+Published by BSI Standards Limited 2017
+ISBN 978 0 580 87991 3
+ICS 33.200
+Compliance with a British Standard cannot confer immunity from
+legal obligations.
+This British Standard was published under the authority of the 
+Standards Policy and Strategy Committee on 28 February 2017.
+Amendments/corrigenda issued since publication
+Date                     Text affected
+BRITISH STANDARD
+BS EN 62351-11:2017
+ 
+ 
+ 
+EUROPEAN STANDARD 
+NORME EUROPÉENNE 
+EUROPÄISCHE NORM 
+EN 62351-11 
+ 
+February 2017 
+ICS 33.200 
+English Version 
+ 
+Power systems management and associated information 
+exchange - Data and communications security - Part 11: 
+Security for XML documents 
+(IEC 62351-11:2016) 
+ 
+Gestion des systèmes de puissance et échanges 
+d'informations associés - Sécurité des communications et 
+des données - Partie 11: Sécurité des documents XML 
+(IEC 62351-11:2016) 
+ 
+Energiemanagementsysteme und zugehöriger 
+Datenaustausch - IT-Sicherheit für Daten und 
+Kommunikation - Teil 11: Sicherheit für XML-Dateien 
+(IEC 62351-11:2016) 
+This European Standard was approved by CENELEC on 2016-11-02. CENELEC members are bound to comply with the CEN/CENELEC 
+Internal Regulations which stipulate the conditions for giving this European Standard the status of a national standard without any alteration. 
+Up-to-date lists and bibliographical references concerning such national standards may be obtained on application to the CEN-CENELEC 
+Management Centre or to any CENELEC member.  
+This European Standard exists in three official versions (English, French, German). A version in any other language made by translation 
+under the responsibility of a CENELEC member into its own language and notified to the CEN-CENELEC Management Centre has the 
+same status as the official versions. 
+CENELEC members are the national electrotechnical committees of Austria, Belgium, Bulgaria, Croatia, Cyprus, the Czech Republic, 
+Denmark, Estonia, Finland, Former Yugoslav Republic of Macedonia, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, 
+Lithuania, Luxembourg, Malta, the Netherlands, Norway, Poland, Portugal, Romania, Serbia, Slovakia, Slovenia, Spain, Sweden, 
+Switzerland, Turkey and the United Kingdom. 
+European Committee for Electrotechnical Standardization

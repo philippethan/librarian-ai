@@ -1,1 +1,517 @@
-Sommaire 1 Les pièges du bonheur : comment nous nous sabotons au travail Annie McKee 2 Prenez le temps d'être heureux ! Ashley Whillans 3 Développez votre style de leadership Suzanne J. Peterson, Robin Abramson et R.K. Stutman 4 Soyez un meilleur leader, menez une vie plus riche Stewart D. Friedman 5 Bâtir une carrière éthique Maryam Kouchaki et Isaac H. Smith 6 Votre carrière fait du surplace ? Faites preuve de patience stratégique Dorie Clark 7 Affronter la crise de milieu de carrière Kieran Setiya 8 Surmonter sa peur de l'inconnu Nathan Furr et Susannah Harmon Furr 9 Être bienveillant envers soi-même, ou le pouvoir de l'autocompassion Serena Chen 10 Négociez votre prochain emploi Hannah Riley Bowles et Bobbi Thomason 11 Réussir rapidement dans de nouvelles fonctions Rob Cross, Greg Pryor et David Sylvester 12 Comment fonctionnent les couples qui mènent leurs carrières tambour battant ? Jennifer Petriglieri 13 Travail et parentalité : comment être moins débordé au quotidien Daisy Dowling 14 Pour dire adieu à la surcharge de travail, posez des limites Elizabeth Grace SaundersQuand les femmes claquent la porte C’est un phénomène assez récent. Le nombre de burn-out chez les femmes, en particulier chez celles qui endossent des responsabilités professionnelles, n’a jamais été aussi élevé. Salaires inférieurs à ceux des hommes, manque de promotions, charge mentale et tâches domestiques… Épuisées au travail, sous pression à la maison, de plus en plus de femmes managers démissionnent. Pour une promue, deux autres s’en vont, souligne le rapport « Women in the Workplace » , publié par McKinsey et Lean In, la fondation de Sheryl Sandberg (ex-numéro 2 de Meta). La vie est trop courte pour être malheureux au travail. Pourtant, beaucoup de salariés se disent démotivés, insatisfaits et peu performants. En réalité, nous nous sabotons au travail, explique Annie McKee, chercheuse à l’université de Pennsylvanie, en tombant dans ce qu’elle appelle les « pièges du bonheur ». Parmi les plus communs : l’excès d’ambition, qui renforce les comportements individualistes au détriment de l’esprit d’équipe ; faire ce qui est attendu plutôt que ce que nous voulons ; et, enfin, le surmenage. Le surmenage est séduisant parce qu’il est encore glorifié dans beaucoup d’organisations. Erin Reid, de l’université de Boston, a ainsi découvert que certains salariés (les hommes, en particulier) mentent sur le nombre d’heures qu’ils effectuent, en prétendant accomplir plus de 80 heures par semaine (probablement parce qu’ils pensent qu’un excès d’heures impressionnera leurs supérieurs). Le problème est que le surmenage aspire quiconque dans une spirale négative : plus de travail génère plus de stress ; un stress accru provoque un ralentissement du cerveau et met à mal notre intelligence émotionnelle ; moins de créativité et des compétences humaines médiocres nuisent à notre capacité à achever ce que nous entreprenons… Et ainsi de suite. Une question se pose de façon sous-jacente : qu’es
+
+
+
+
+
+Contents
+
+Cover
+Halftitle Page
+Title Page
+Copyright Page
+Contents
+The Four Virtues
+Introduction
+
+Justice as a Way of Life
+
+Part I: The Me (Personal)
+
+To Stand Before Kings . . .
+Keep Your Word
+Tell the Truth
+Take Responsibility
+Be Your Own Referee
+Good, Not Great
+Be an Open Book
+Be Decent
+Do Your Job
+Keep Your Hands Clean
+Integrity Is Everything
+Realize Your Potential
+Be Loyal
+Choose a North Star
+Right Thing, Right Now
+
+Part II: The We (Sociopolitical)
+
+To You From Failing Hands We Throw the Torch . . .
+You Just Have to Be Kind
+See How the Other Half Lives
+You Have to Help
+Start Small
+Create Alliances
+Become Powerful
+Practice Pragmatism
+Develop Competence
+Give, Give, Give
+Grow a Coaching Tree
+Look Out for the Little Guy
+Make Good Trouble
+Just Keep Going Back
+Something Bigger Than Us . . .
+
+Part III: The All (Is One)
+
+To So Love the World . . .
+Climb Your Second Mountain
+Stop Asking for the Third Thing
+Give Them Hope
+Be an Angel
+Forgive
+Make Amends
+The Great Oneness
+Expand the Circle
+Find the Good in Everyone
+Give the Full Measure of Devotion
+Love Wins
+Pay It Forward
+
+Afterword
+What To Read Next?
+
+Can I Get Even More Book Recommendations?
+
+Acknowledgments
+
+
+
+Landmarks
+
+Cover
+Halftitle Page
+Title Page
+Copyright Page
+Epigraph
+Contents
+Start of Content
+Afterword
+Acknowledgements
+
+
+
+Page List
+
+i
+ii
+iii
+iv
+v
+vi
+vii
+viii
+ix
+x
+xi
+xii
+xiii
+xiv
+xv
+xvi
+xvii
+xviii
+xix
+xx
+xxi
+xxii
+xxiii
+xxiv
+xxv
+xxvi
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+
+
+
+
+
+
+
+
+
+
+Description
+The cover prominently features an illustration of two men standing on either side of a weighing balance, carefully loading goods onto it.
+
+
+
+
+
+
+
+
+
+Right Thing, Right Now
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RIGHT THING, RIGHT NOW
+Good Values. Good Character. Good Deeds.
+
+RYAN HOLIDAY
+
+
+
+
+
+
+
+
+
+First published in Great B

@@ -1,25 +1,105 @@
-Cooperative Intelligent Transport Systems 
- 
- 
- 
- 
- 
-SCIENCES 
-Networks and Communications, Field Director – Guy Pujolle 
-Network Management and Control, Subject Head – Francine Krief 
-Cooperative Intelligent 
-Transport Systems 
-Control and Management 
-Coordinated by 
-Léo Mendiboure 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+BS EN 50341-2-2:2019 
+Overhead electrical lines exceeding AC 1 kV 
+Part 2-2: National Normative Aspects (NNA) for 
+BELGIUM (based on EN 50341-1:2012) 
+bsi. 
+BS EN 50341-2-2:2019 
+BRITISH STANDARD 
+National foreword 
+This British Standard is the UK implementation of EN 50341-2-2:2019. 
+This standard, together with the following list of National 
+Normative Aspect standards, supersedes BS EN 50423-3:2005 and 
+BS EN 50341-3:2001. 
+Country 
+Origin 
+Ref 
+Code 
+AT 
+Austrian National Committee 
+BS EN 50341-2-1 
+BE 
+Belgian National Committee 
+BS EN 50341-2-2:2019 
+CH 
+Swiss National Committee 
+BS EN 50341-2-3 
+DE 
+German National Committee 
+BS EN 50341-2-4:2019 
+DK 
+Danish National Committee 
+BS EN 50341-2-5:2017 
+ES 
+Spanish National Committee 
+BS EN 50341-2-6:2017 
+Fl 
+Finnish National Committee 
+BS EN 50341-2-7:2015 
+FR 
+French National Committee 
+BS EN 50341-2-8:2017 
+GB 
+British National Committee 
+BS EN 50341-2· 
+9:2017-1 Al:2018 
+GR 
+Greek National Committee 
+BS EN 50341-2-10 
+IE 
+Irish National Committee 
+BS EN 50341-2-11 
+IS 
+Iceland National Committee 
+BS EN 50341-2-12:2018 
+IT 
+Italian National Committee 
+BS EN 50341-2· 
+13:2017+A1:2017 
+LU 
+Luxemburg National Committee 
+No NNA available 
+NL 
+Nederland's National Committee 
+BS EN 50341-2-15:2019 
+NO 
+Norwegian National Committee 
+BS EN 50341-2-16:2016 
+PT 
+Portuguese National Committee 
+BS EN 50341-2-17 
+SE 
+Swedish National Committee 
+BS EN 50341-2-18:2016 
+CZ 
+Czech National Committee 
+BS EN 50341-2-19:2015 
+EE 
+Estonian National Committee 
+BS EN 50341-2-20:2018 
+PL 
+Polish National Committee 
+BS EN 50341-2-22:2016 
+SK 
+Slovak National Committee 
+BS EN 50341-2-23:2016 
+BS EN 50423-3:2005 and BS EN 50341-3:2001 will be withdrawn upon 
+publication of the rest of the series. 
+The UK participation in its preparation was entrusted to Technical 
+Committee PEL/11, Overhead Lines. 
+BRITISH STANDARD 
+A list of organizations represented on this committee can be obtained on 
+request to its secretary. 
+This publication does not purport to include all the necessary provisions 
+of a contract. Users are responsible for its correct application. 
+© The British Standards Institution 2019 
+Published by BSI Standards Limited 2019 
+ISBN 978 0 539 05178 0 
+ICS 29.240.20 
+Compliance with a British Standard cannot confer immunity from 
+legal obligations. 
+This British Standard was published under the authority of the 
+Standards Policy and Strategy Committee on 30 June 2019. 
+Amendments/corrigenda issued since publication 
+Date 
+Text affected 
+BS EN 50341-2-2:2019 

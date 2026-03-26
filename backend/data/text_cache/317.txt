@@ -1,41 +1,64 @@
-BSI Standards Publication
-Information technology - Governance 
-of IT - Framework and model
-PD ISO/IEC TR 38502:2017
-National foreword
-This Published Document is the UK implementation of 
-ISO/IEC TR 38502:2017. It supersedes PD ISO/IEC TR 38502:2014, which 
-is withdrawn.
-The UK participation in its preparation was entrusted to Technical 
-Committee IST/60, IT Service Management and IT Governance.
-A list of organizations represented on this committee can be obtained on 
-request to its secretary.
-This publication does not purport to include all the necessary provisions 
-of a contract. Users are responsible for its correct application.
-© The British Standards Institution 2018 
-Published by BSI Standards Limited 2018
-ISBN 978 0 580 51414 2
-ICS 35.020
-Compliance with a British Standard cannot confer immunity from 
-legal obligations.
-This Published Document was published under the authority of the 
-Standards Policy and Strategy Committee on 31 January 2018.
-Amendments/corrigenda issued since publication
-Date 
-Text affected
-PUBLISHED DOCUMENT
-PD ISO/IEC TR 38502:2017
-Information technology — Governance 
-of IT — Framework and model
-Technologies de l'information — Gouvernance des TI — Cadre 
-général et modèle
-TECHNICAL 
-REPORT
-ISO/IEC TR
-38502
-Second edition
-2017-12-15
-Reference number
-ISO/IEC TR 38502:2017(E)
-© ISO/IEC 2017
-PD ISO/IEC TR 38502:2017
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Épargnant 3.0
+
+
+
+
+
+
+
+À Maxime
+
+
+
+
+
+
+
+À PROPOS DE L’AUTEURÉdouard Petit est spécialiste de finances personnelles. Investisseur chevronné, mais non professionnel de la finance, il prodigue des conseils en toute indépendance.Dans ses ouvrages, il décrit, dans un langage accessible, une méthode fondée sur des principes de gestion issus de la meilleure recherche académique. Elle permet d’accéder à une performance excellente tout en maîtrisant le risque et en n’y passant que quelques minutes par mois. Cette méthode, appelée la « gestion passive », a déjà été largement adoptée dans le monde anglo-saxon.Épargnant 3.0, est le premier ouvrage sur la gestion passive dans un contexte français. Il se lit en moins de deux heures et s’est déjà vendu à plusieurs milliers d’exemplaires.Son deuxième livre, Créer et piloter un portefeuille d'ETF, permet d’aller plus loin. Il donne l'ensemble des clés pour gérer son allocation d'actifs grâce aux ETF, mais aussi en y incluant d'autres supports tels que des fonds en euros ou des SCPI.Il édite un blog de référence sur la gestion passive et les ETF : https://www.epargnant30.fr/
+
+
+
+
+
+
+
+Édition du 1er octobre 2018Copyright © Édouard PetitInterdit à la reproduction sans autorisation de l’auteur. 
+
+
+
+
+
+
+
+CONTENTSPOURQUOI ? LES 8 CONCEPTS DE BASE 8,5% PAR AN C’EST POSSIBLE… ET MOINS RISQUÉ QUE PRÉVU ! SUR QUOI INVESTIR ? LES ENVELOPPES LES GRANDES ERREURS ÉLOGE DE LA PASSIVITÉ QUELLE RÉPARTITION ? VOTRE PLAN D’ACTION VOTRE MEILLEUR ENNEMI LES 10 COMMANDEMENTS COMBIEN ALLEZ-VOUS GAGNER ? POURQUOI (BIS) ? POUR ALLER PLUS LOIN LE MESSAGE DE L’AUTEUR FORMATIONS EPARGNANT 3.0 LANCEZ-VOUS ! AVERTISSEMENTS
+
+
+
+
+
+
+
+« Mon conseil ne peut pas être plus simple : mettre 10% de son portefeuille en obligations d’État et 90% sur des actions au travers d’un fonds suivant un indice pour un très faible coût. Je pense que les résultats à long terme seront meilleurs que pour les investisseurs s’appuyant sur des fonds à frais élevés. » Warren BuffettInvestisseur de légende et 3e homme le plus riche du monde 
+
+
+
+
+
+
+
+POURQUOI ? Pourquoi écrire ce livre alors que je ne suis pas banquier ?Justement parce que je n’en suis pas un. Les banquiers sont naturellement les gens vers qui nous nous tournons pour prendre des décisions liées à notre épargne. Pourtant, ils ne sont pas nécessairement les plus objectifs.D’ailleurs, les Français ne s’y trompent pas. Selon un sondage publié en 2016, moins de 40% d’entre eux font confiance à leur banque ! Les conseillers sont toujours suspectés de proposer les produits à plus forte marge…Pourtant, les enjeux sont énormes pour un foyer. Épargner et développer son patrimoine peut servir à de nombreux projets : se marier, acheter un appartement, financer les études des enfants, faire le tour du monde, aider un aïeul en difficulté, faire face à des coups durs, choisir de travailler moins ou différemment…Mais aussi, et peut-être surtout, préparer sa retraite ! Le taux de remplacement, c’est-à-dire le montant

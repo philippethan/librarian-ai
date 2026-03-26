@@ -1,1 +1,116 @@
-Table of contents Introduction Introduction to SAFe® The SAFe Framework There Can Be No True Agility Without Product Thinking The Scaled Agile Framework® (SAFe®) The Four Levels in SAFe Additional Roles Introduced by SAFe SAFe Has Multiple Product Ownership/Management Layers What Makes the RTE Job Interesting for You? What Makes It Challenging? Additional SAFe Events The Agile Team in SAFe The Agile Team Product Owner Scrum Master / Team Coach Team Members How a Team Improved Its Approach Using DevOps An Effective Scrum Fuels an Effective SAFe Team Backlog and Refinement Sprint Planning Daily Stand Up / Daily Scrum Sprint Review Sprint Retrospective PI Planning The PI Planning Event Creating a Plan for the PI with the Team Board Updating the ART Planning Board Manage the Business Effectively with SAFe What Helps Teams Be More Productive or Effective? The Role of the Product Owner at PI Planning How Can the POs Support or Prepare the Teams for an Effective PI Planning? The Role of the Scrum Master at PI Planning The Scrum Master at PI Planning The Role of the Team Members at PI Planning The Role of the ART Leadership Circle at PI Planning How Did You Fix a PI Planning Event that Went Bad? Conversely, Any Example of a PI Planning Event that Went Great, and What Helped It? Questions and Answers about PI Planning Empower Product Thinking in SAFe Outputs vs. Outcomes Why Is Value Important and What Is Value Based On? Adopting a Product Thinking Mindset Empowered Product Teams The Problem with Feature Factories From Feature Factory to Empowered Teams Managing Epics and MVPs Epics and Refinement of Epics Managing a Portfolio of Epics Use an MVP to Validate the Epic Any Tips on Managing an MVP for an Epic? Support MVPs and Build Epics Incrementally Define the Key Hypothesis Understand the Flow of Value to the Customer How Does a Profit Stream™ Help Deliver Value? What Is the Profit Stream Canvas? Identify MVPs With the Product Journey Map Managing the ART Backlog The ART Backlog Prioritizing the ART Backlog Tips to Manage the ART Backlog Align to a Roadmap Can You Share a Few Tips to Manage a Roadmap? Managing PI Objectives and Risks PI Objectives Identifying and Tracking Risks Tracking Work Velocity Is Not a Measure of Performance Tracking Progress with a PI Burn-up Chart Tracking Progress on the PI Objectives Business Value for PI Objectives The Team’s Achievement Score Improving Flow Through Your System Succeeding with SAFe Adopting and Adapting SAFe Any Tips to Implement SAFe Effectively? What Are the Key Benefits You Have Observed from Adopting SAFe? Scaling Agile versus Scaled Agile Two Limitations of SAFe De-scaling SAFe Challenges and Complaints about SAFe The Verdict on SAFe About the Author Valerio Zanini, SPC, CST, CPIT Expert Contributors Luke Hohmann, SPC, SAFe Fellow Ajiri Ideh, RTE, SPC, MBA Anil Jaising, CST, Certified DevOps Trainer Vikas Kapila, SPCT, AKT, JMT Bernie Maloney, CST John Mulligan, SPC Ramesh Nori, SPCT Thomas Nowaczyk, VP 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+
+Cover
+About this Book
+Copyright
+Die Edinburgh Festspiele
+Picasso und Dalí: Zwei große Künstler Spaniens
+Beziehungen in Japan
+Gastronomische Erlebnisse in Marokko
+Willst du mit mir gehen?
+Solidarität in den marokkanischen Bergen
+Eine Geschichte über Flamenco
+Liebe kennt kein Alter
+Die Trupps (Clique) und die Weltmeisterschaft 2014
+The Edinburgh Arts Festival
+Picasso and Dalí: Two great Spanish artists
+Relationships in Japan
+A Story about Flamenco
+Gastronomic experiences in Morocco
+Shall we date?
+Solidarity in the Moroccan Mountains
+Love knows no age
+The posse and the 2014 World Cup
+Le festival d’art d’Edimbourg
+The Edinburgh Arts Festival
+Picasso et Dalí: Deux grands artistes espagnols
+Picasso and Dalí: Two great Spanish artists
+Relations au Japon
+Relationships in Japan
+Expériences gastronomiques au Maroc
+Gastronomic experiences in Morocco
+Veux-tu sortir avec moi ?
+Shall we date?
+Solidarité dans les montagnes marocaines
+Solidarity in the Moroccan Mountains
+Une histoire sur le Flamenco
+A Story about Flamenco
+L’amour n’a pas d’âge
+Love knows no age
+Le groupe et la Coupe du monde 2014
+The posse and the 2014 World Cup
+Die Edinburgh Festspiele
+Picasso und Dalí: Zwei große Künstler Spaniens
+Beziehungen in Japan
+Gastronomische Erlebnisse in Marokko
+Willst du mit mir gehen?
+Eine Geschichte über Flamenco
+Solidarität in den marokkanischen Bergen
+Liebe kennt kein Alter
+Die Trupps und die Weltmeisterschaft 2014
+
+
+
+
+
+
+
+
+Trilingual Short Stories
+French - German - English
+Parallel Text
+
+
+Copyright © 2014
+Polyglot Planet Publishing
+
+Smashwords Edition
+ISBN: 9781310554513
+
+
+book@paralleltext.eu
+
+
+
+
+
+
+
+
+
+
+About this Book
+
+You will get bored with Trilingual Parallel Text learning! French, German and English are read sentence by sentence. Compare translations, sentence structure and word familiarities all in one go. Learning with Parallel Text is the most rewarding and effective method to learn a language. Existing vocabulary is refreshed, while new vocabulary is instantly put into practice. The grammar easily sinks in through our cleverly written and well formatted stories. Designed for the eReader - each sentence has been translated line by line making it easy to follow. No dictionary is needed!
+
+Recommended for beginners and intermediate level learners of French and German and serves very well as a refreshers course. It is so easy and enjoyable even absolute beginners with no prior knowledge can start learning. Our easy short stories contain European culture and characters. The stories have been written to keep the readers attention and are fun to read for you to learn through your motivation.
+
+
+
+
+
+
+
+
+Trilinguale Kurzgeschichten
+Französisch - Englisch - Deutsch
+Paralleltext
+
+Copyright © 2014. All Rights Reserved.
+
+Warning: The unauthorized reproduction or distribution of this copyrighted work is
+illegal. No part of this book may be scanned, uploaded or distributed via internet or
+other means, electronic or print without the author's permissi

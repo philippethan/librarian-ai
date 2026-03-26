@@ -1,8 +1,57 @@
-Les mots pour convaincre
-Stéphane Wattier
-Les mots pour convaincre
-© Stéphane Wattier, septembre 2019
-Couverture et composition de Stéphane Wattier
-pour Commun français
-Contacter l'auteur :
-contact@communfrancais.com
+E N S E I G N E M E N T  S U P  P H Y S I Q U E
+Agrégation 
+Master 
+Licence
+PHYSIQUE EXPÉRIMENTALE
+Optique, magnétisme, électrotechnique, 
+mécanique, thermodynamique  
+et physique non linéaire
+Jolidon
+Agrégation – Master – Licence
+Collectif Jolidon
+La collection « Enseignement Sup Physique » se présente 
+comme une introduction sur des sujets incontournables 
+en physique. Adaptée aux besoins des étudiants et 
+des chercheurs, le traitement rigoureux, mais accessible, 
+de chaque sujet est idéal pour ceux qui veulent 
+une amorce dans un sujet donné pour les préparer 
+à une étude ou à une recherche plus avancée.
+Ce livre regroupe 25 expériences de physique. Pour chacune, les aspects 
+théoriques nécessaires à la compréhension du phénomène physique  
+et l’élaboration du protocole sont détaillés. Des mesures, obtenues  
+en laboratoire d’enseignement, sont présentées et systématiquement 
+comparées aux prédictions théoriques. Un traitement rigoureux des 
+incertitudes permet des discussions riches, allant au-delà des modèles 
+proposés. Des schémas détaillés des dispositifs expérimentaux  
+et des traitements numériques dans le langage libre Python facilitent  
+la reproduction des expériences.
+Pensé pour les candidats aux concours du CAPES et de l’agrégation,  
+cet ouvrage s’adresse également aux étudiants de CPGE, de licence  
+et de master, ainsi qu’aux enseignants du secondaire et du supérieur.
+Le collectif Jolidon est composé de Éric Brillaux, Benjamin Crinquand, 
+Louisiane Devaud, David Dumont, Camille Eloy, Antoine Essig, Benjamin 
+Guiselin, Christopher Madec, Alexandre Michel, Jérémy Sautel, Théo 
+Sépulcre et Louis Villa
+ 
+.
+www.edpsciences.org 
+ISBN : 978-2-7598-2364-2
+9 782759 823642
+E N S E I G N E M E N T  S U P  P H Y S I Q U E
+Illustration de couverture : Niels Bohr et Wolfgang 
+Pauli jouant avec une toupie tippe-top lors de 
+l’inauguration du nouvel institut de physique à 
+Lund, en Suède (Erik Gustafson, 1954). 
+JOLIDON 
+Physique expérimentale 
+ 
+Optique, magnétisme, électrotechnique, 
+mécanique, thermodynamique 
+et physique non linéaire 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

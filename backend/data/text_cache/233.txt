@@ -1,76 +1,30 @@
-MPSI2, Louis le Grand
-Cinématique en mécanique newtonienne
-Semaine du 27 février au 05 mars
-Exercices d’application : Calcul, ascenseur, clefs, distance de sécurité, espace des
-phases, mouvement circulaire, carrousel, spirale logarithmique, coordonnées
-sphériques
-Culture en sciences physiques : Clefs, accident, basket, conjonction, mouvement cir-
-culaire, carrousel, solide en rotation, coordonnées sphériques, dilatation du temps
-Corrigés en TD : clefs, accident, basket, carrousel, perceuse
-Coordonnées cartésiennes
-Exercice 1 : Calcul
-On considère un mouvement décrit par les équation horaires :
-x = a0t2 + x0
-y(t) = v0t
-z(t) = z0,
-avec a0, v0 et z0 des constantes positives.
-1. Déterminer les composantes des vecteurs vitesse et accélération dans la base cartésienne. Déterminer
-également les expressions de leurs normes.
-2. Tracer la trajectoire de la courbe et y représenter le vecteur vitesse #»v en t = 0.
-3. Déterminer le ou les instants t tels que x = 2x0 et y représenter également le vecteur vitesse.
-Exercice 2 : Utilisation de courbes
-On donne ci-contre la courbe représentant l’accéléra-
-tion en fonction du temps au cours d’un mouvement
-rectiligne. À la date t1 = 1 s, sa vitesse est v1 =
-3 m · s−1. Déterminer sa vitesse aux dates t2 = 4 s et
-t3 = 15 s.
-0
-2
-5
-9
-12
-0
-6
-t(s)
-a(m · s−2)
-Exercice 3 : Ascenseur
-Un ascenseur est animé d’un mouvement rectiligne vertical ascendant :
-• uniformément accéléré d’accélération aa = 2,0 m · s−2 pendant une durée ta = 3,0 s;
-• uniforme pendant une durée tu = 7 s;
-• uniformément décéléré d’accélération de norme ad = 1,0 m · s−2 pendant une durée td jusqu’à l’arrêt.
-1. Tracer la courbe représentant la vitesse en fonction du temps et en déduire la durée td. Y lire graphi-
-quement la distance totale parcourue.
-2. Tracer la courbe représentant l’accélération en fonction du temps. Comment peut-on y vérifier que
-l’ascenseur s’est bien arrêté?
-3. Tracer l’allure de la courbe représentant la position en fonction du temps.
-Exercice 4 : Quand on a oublié ses clefs
-1. Un conducteur démarre avec accélération constante a en ligne droite puis se rend compte au bout d’un
-temps t1 qu’il a oublié ses clefs... Il décélère alors avec une accélération de même norme.
-(a) Quelle durée met-il à s’arrêter? Tracer la courbe représentative de la vitesse.
-(b) En déduire l’expression de la position en fonction du temps. Tracer également la courbe représen-
-tative.
-(c) Déterminer la distance totale parcourue avant l’arrêt. Proposer une lecture graphique de cette
-distance.
-2.
-L’évolution de la vitesse du même conducteur est main-
-tenant donnée par l’ellipse ci-contre de forme générale :
- v
-v0
-2
-+
- t −t0
-t0
-2
-= 1
-(a) Vérifier l’expression donnée en des points bien choi-
-sis de la courbe. Déterminer l’expression de v, en
-fonction du temps.
-(b) Déterminer de même la distance totale parcourue
-avant l’arrêt.
-t0
-v0
-0
-t
-v
-Exercice 5 : Distance de sécurité
-En arrivant sur une zone d’accident, chaque voiture diminue instantanément sa vitesse de v1 
+About Pearson
+Pearson is the world’s learning company, with a presence
+across 70 countries worldwide. Our unique insights and
+world-class expertise come from a long history of working
+closely with renowned teachers, authors, and thought
+leaders, as a result of which we have emerged as the
+preferred choice for millions of teachers and learners across
+the world.
+We believe learning opens up opportunities that create
+fulfilling careers and better lives. Therefore, we collaborate
+with the best of minds to deliver you class-leading products,
+spread across the Higher Education and K-12 spectrums.
+Superior learning experience and improved outcomes are at
+the heart of everything we do. This product is the result of
+one such effort.
+Your feedback plays a critical role in the evolution of our
+products, and you can contact us at reachus@pearson.com.
+We look forward to it.
+COMPUTER NETWORKS
+ 
+SIXTH EDITION
+ 
+ 
+ 
+ANDREW S. TANENBAUM
+Vrije Universiteit Amsterdam, The Netherlands
+NICK FEAMSTER
+University of Chicago Chicago, IL
+DAVID WETHERALL
+Google

@@ -1,1 +1,66 @@
-CONTENTS Cover Title Page Contents I The Lovers II Husband and Wife III The Sisters IV Mother and Child About the Author Copyright Guide Cover Title page Contents Chapter OneIf you could go back, who would you want to meet?I The Lovers ‘Oh gosh, is that the time? Sorry, I have to go,’ the man mumbled evasively, as he stood up and reached for his bag. ‘Eh?’ the woman said. She glared with uncertainty. She hadn’t heard him say it was over. But he had called her – his girlfriend of three years – to come out for a serious conversation . . . and now he had suddenly announced he was going to work in America. He was to leave immediately – in a few hours. Even without hearing those words, she knew now that the serious conversation was about breaking up. She knew now it was a mistake to have thought – to have hoped – that the serious conversation might have included ‘ Will you marry me? ’ for example. ‘What?’ the man responded dryly. He didn’t make eye contact with her. ‘Don’t I deserve an explanation?’ she asked. The woman spoke using an interrogative tone the man particularly disliked. They were in a windowless basement cafe. The lighting was provided by just six shaded lamps hanging from the ceiling and a single wall lamp near the entrance. A permanent sepia hue stained the cafe interior. Without a clock, there was no way to tell night and day. There were three large antique wall clocks in the cafe. The arms of each, however, showed different times. Was this intentional? Or were they just broken? Customers on their first visit never understood why they were like this. Their only option was to check their watches. The man did likewise. While looking at the time on his watch, he started rubbing his fingers above his right eyebrow while his lower lip began to protrude slightly. The woman found that expression particularly exasperating. ‘And why are you looking like that? Like I’m the one being a pain?’ she blurted out. ‘I’m not thinking that,’ he replied sheepishly. ‘Yes you are!’ she insisted. With bottom lip again protruding, he evaded her stare and offered no reply. The man’s passive behaviour was infuriating the woman more and more. She scowled. ‘You want it to be me who says it?’ She reached for her coffee, from which all heat had now gone. With the sweetest part of the experience lost, it sent her mood plummeting further. The man looked at his watch again and counted back from the boarding time. He had to leave the cafe very soon. Unable to compose himself any better, his fingers had found their way back to his eyebrow. The sight of him so obviously hung up about the time annoyed her. She recklessly plunked the cup down on the table. It came down hard on the saucer. Clang! The loud noise startled him. His fingers, which had been busy caressing his right eyebrow, began to pull at his hair. But then, after taking a short deep breath, he sat back down and looked her in the face. All of a sudden, his face was calm. In fact, the man’s face had so clearly
+BSI Standards Publication
+Railway applications — Urban
+guided transport management
+and command/control systems
+Part 2: Functional requirements specification
+BS EN 62290-2:2014
+National foreword
+This British Standard is the UK implementation of EN 62290-2:2014. It 
+is identical to IEC 62290-2:2014. It supersedes BS EN 62290-2:2011 
+which is withdrawn.
+The UK participation in its preparation was entrusted to Technical
+Committee GEL/9, Railway Electrotechnical Applications.
+A list of organizations represented on this committee can be obtained on
+request to its secretary.
+This publication does not purport to include all the necessary provisions of
+a contract. Users are responsible for its correct application.
+© The British Standards Institution 2014.
+Published by BSI Standards Limited 2014
+ISBN 978 0 580 80180 8
+ICS 45.060.01
+Compliance with a British Standard cannot confer immunity from
+legal obligations.
+This British Standard was published under the authority of the
+Standards Policy and Strategy Committee on 30 September 2014. 
+Amendments/corrigenda issued since publication
+Date                     Text affected
+BRITISH STANDARD
+BS EN 62290-2:2014
+ 
+ 
+EUROPEAN STANDARD 
+NORME EUROPÉENNE 
+EUROPÄISCHE NORM 
+EN 62290-2 
+ 
+September 2014 
+ICS 45.060 
+ Supersedes  EN 62290-2:2011
+English Version 
+ 
+Railway applications - Urban guided transport management and 
+command/control systems - Part 2: Functional requirements 
+specification 
+(IEC 62290-2:2014) 
+ 
+Applications ferroviaires - Systèmes de contrôle/commande 
+et de gestion des transports guidés urbains -  
+Partie 2: Spécification des exigences fonctionnelles 
+(CEI 62290-2:2014) 
+ 
+Bahnanwendungen - Betriebsleit- und 
+Zugsicherungssysteme für den städtischen 
+schienengebundenen Personennahverkehr -  
+Teil 2: Funktionale Anforderungsspezifikation 
+(IEC 62290-2:2014) 
+This European Standard was approved by CENELEC on 2014-08-14. CENELEC members are bound to comply with the CEN/CENELEC 
+Internal Regulations which stipulate the conditions for giving this European Standard the status of a national standard without any alteration. 
+Up-to-date lists and bibliographical references concerning such national standards may be obtained on application to the CEN-CENELEC 
+Management Centre or to any CENELEC member.  
+This European Standard exists in three official versions (English, French, German). A version in any other language made by translation 
+under the responsibility of a CENELEC member into its own language and notified to the CEN-CENELEC Management Centre has the 
+same status as the official versions. 
+CENELEC members are the national electrotechnical committees of Austria, Belgium, Bulgaria, Croatia, Cyprus, the Czech Republic, 
+Denmark, Estonia, Finland, Former Yugoslav Republic of Macedonia, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, 
+Lithuania, Luxembourg, Malta, the Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, 
+Turkey and the U

@@ -1,81 +1,12 @@
-Discrete 
- Mathematics
-C.V. Sastry
-Rakesh Nayak
- 
-P(A) = 3
-1
-6
-2
-=
-B∩A = {1, 3}
-P (B∩A) = 2
-1
-6
-3
-=
-P (B|A) = 
-(
-)
-2
-1
-2
-(
-)
-6
-2
-3
-P B
-A
-P A
-∩
-=
-÷
-=
-…
-…
-{6}
-{2}
-{8}
-{1}
-{3}
-1
-2
-6
-5
-4
-3
-1
-2
-3
-4
-5
-6
-7
-{5}
-{7}
-{4}
-A
-A
-B
-B
-6
-3
-2
-4
-1
-–1
-–2
-g2
-a
-b
-c
-1
-2
-3
- 
-Distributed by:
-TM
-A Textbook on
-A Textbook on
-Discrete Mathematics
+ILLUSTRATED DICTIONARY OF
+INFORMATION 
+TECHNOLOGY
+DESIGNED FOR SENIOR HIGH TO
+UNDERGRADUATE STUDENTS
+• TERMS • DEFINITIONS • EXAMPLES
+3RD EDITION
+Edited by:
+Attila Kardos
+BIBLIOTEX
+Digital Library
+www.bibliotex.com

@@ -1,94 +1,118 @@
- 
- 
-IATA Guidance Document for Passengers Travelling with Lithium Batteries  – 2025 
- 
- 
- 
-OSS/Cargo 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-Page 1 
- 
- 
- 
- 
- 
- 
- 
-01/01/2025 
- 
-Passengers Travelling with Lithium 
-Batteries Guidance Document 
-Revised for the 2025 Regulations 
-Introduction 
-   This document is based on the provisions set out in the 2025-2026 Edition of the ICAO Technical 
-Instructions for the Safe Transport of Dangerous Goods by Air  (Technical Instructions) and the 66th 
-Edition (2025) of the IATA Dangerous Goods Regulations (DGR). 
-There are different limitations and requirements when the lithium batteries are transported by air as 
-cargo or carried by passengers. However limitations primarily depend on: 
-a) The type of the lithium battery: 
-▪ 
-the Watt-hour (Wh) rating for lithium ion (rechargeable) batteries, or 
-▪ 
-the lithium metal content in grams (g) for lithium metal (non-rechargeable) batteries. 
-Note:  
-Watt-hour rating, expressed in Wh, shows the power of the lithium cell or battery, which is calculated by 
-multiplying the rated capacity in ampere-hours by the nominal voltage.  
-All lithium-ion batteries are required to have the Watt-hour rating marked on the outside of the battery case.  
-If passenger handling staff are unable to verify the Watt-hour rating by checking either the battery, or the user 
-documentation, the operator may reject the acceptance of the lithium battery, or the lithium battery powered 
-device. 
-b) How the battery is to be transported: 
-▪ 
-the battery itself (removed and/or spare (additional)) 
-▪ 
-installed in a device (removable and non-removable) 
-The purpose of this document is to provide guidance to comply with the provisions applicable to the 
-air transport of spare or removable & non-removable lithium batteries in devices when carried by 
-passengers as set out in the DGR.  
- The information in this document is intended for guidance purposes only. It should not be relied upon 
-as a source of regulatory compliance. 
-Please note that there has been significant restructuring of the material in this document. When 
-compared to the 2024 edition of this document, certain text changes can be identified by:  
-Addition of an item   
-Change to an item   
-Deletion of an item   
- 
- 
- 
- 
-IATA Guidance Document for Passengers Travelling with Lithium Batteries  – 2025 
- 
- 
- 
-OSS/Cargo 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-Page 2 
- 
- 
- 
- 
- 
- 
- 
-01/01/2025 
-Table of Contents 
-Introduction ............................................................................................................................................................................ 1 
-Table of Contents ................................................................................................................................................................. 2 
-Definitions ............................................................................................................................................................................... 3 
-How to Carr
+
+
+
+
+
+Contents
+
+Cover
+Title Page
+Dedication
+Introduction: What Is Good Sex and Why You’re Worthy of It
+
+Good Sex Recipes and Ingredients
+Sharing Sex Science
+The Unseasoned Sexual Menu
+How to Read ‘Good Sex’
+Chapter 1: Good Sex is Intimate
+
+Closeness and Consensual Vulnerability
+Types of Intimacy
+Science of Intimacy and Attachment
+Strategies for Intimate Good Sex
+Chapter 2: Good Sex is Fun
+
+Foolishness or Fun
+Toxic Seriousness and Forgoing Fun
+Thrill Fun and Chill Fun
+Strategies for Freeing Your Sexual Fun
+Chapter 3: Good Sex is Pleasurable
+
+Penalizing Sexual Pleasure
+Defining Pleasure and Differentiating Orgasm
+Strategies for Solo and Partnered Pleasure
+Chapter 4: Good Sex is Satisfying
+
+Coitally Content
+You’re Probably Not a Nympho: Sexual Satisfaction and Addiction
+Quality over Quantity: Sexual Satisfaction Science
+Strategies for Studying Your Satisfaction
+Chapter 5: Good Sex is Orgasmic
+
+Cliteracy and Orgasms
+The Acme of Venereal Excitement
+Faking the Funk: Making and Faking Orgasms
+Orgasmic Equity
+Strategies for Orgasmic Options
+Chapter 6: Good Sex is Connected
+
+Disconnection Cultural Recipes
+Body and Sexual Awareness
+Strategies for Body Mind Soul Connection
+Mindful Masturbation
+Chapter 7: Good Sex is Passionate
+
+Suffering Sweetly
+Types of Passion
+Passion, Intimate Justice, and Erotic Equity
+Strategies for Re/Igniting Your Passion
+Chapter 8: Good Sex is Reciprocal
+
+Sharing Sexual Power and Pleasures Consensually
+Giving Graciously and Receiving Respectfully
+Strategies for Reciprocity: Meeting in the Middle
+Chapter 9: Good Sex is Nasty
+
+Kama Sutra and Kinky Community
+Marginalizing Kink
+Normalizing Nasty—The Commonality of Kinky
+Strategies for Nasty Sex
+Chapter 10: Good Sex is Exciting
+
+Valuing Variety and Thrill over Chill
+Sexual Response and Excitement
+Strategies for Sexual Excitement: Turning Yourself On and Off
+Chapter 11: Good Sex is Loving
+
+To Cherish and Delight In
+Love and Intimate Justice
+Loving Sex as a Corrective
+Types of Love
+Strategies for Affirmation, Care, and Honesty as Loving Sex
+Chapter 12: Good Sex is Spiritual
+
+More Than Religiosity
+Sex-Negative Religious Recipes
+Spiritual Science
+Strategies for Sacred, Sanctified Sex
+Chapter 13: Good Sex is Sensual
+
+Voluptuous Pleasures: Sensible v. Sensual
+The Science of Senses
+Strategies for Sensual Sex: Slow the F*ck Down
+Chapter 14: Good Sex is Communicative
+
+Expressive and Receptive Communication
+Strategies for Sexual Communication: Communicating the Good and Bad
+Meaningful Metacommunication
+Writing and Role-Play
+Chapter 15: Good Sex is Wet
+
+Wet, Wetter, Wettest
+Lube Literacy
+Strategies for Wet Sex: Lube Is for Everyone
+Chapter 16: Good Sex is Safe
+
+Discomfort v. Danger
+Talking It Out and Taking Action
+Intimate Injustice and Safe Sex
+Protection from STIs and Unwanted Pregnancy
+Types of Contraception
+Sexual Violence
+Strategies for Safe Sex
+Chapter 17: Good Sex is Relaxing
+
+Why We Need to Relax
+Relaxation as a Sexual Health Benefit
+Which Sex Is Most Relaxing
+Strategies for Relaxation: Sex 

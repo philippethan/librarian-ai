@@ -1,101 +1,115 @@
-JEDYNY MAGAZYN POę:,×&21<BUSINESS ENGLISH
 
-/.+2*($2ü6* 
 
-#.# 3$*
 
-Á6("9$-( 
 
-- &1 -( ,/
-)@JNĖÂFV@Q@MSTIDVXC@VMHBSVN Colorful
-business-english.com.pl
-colorfulmedia.pl
-TWÓJ
-DODATEK
-48
-12
-26
-The Business 
-of War
-Are Meal Delivery 
-Services Worth It? 
-Is Iceland’s Four-Day Workweek 
-a Blueprint for the Future?
-ISSN 1897-0796
-dwumiesięcznik nr 111
-styczeń-luty 2026
-cena: 34,90 zł (w tym 8% VAT)
-BUSINESS 
-BRAINWAVE: 
-TAKE 
-A TUK-TUK
-A TICKET TO 
-ADVANCEMENT?
-Colorful
-494/$ü-()26.)¿.2/(.&-×
-68# þ2/$") +-8"'
-ǤǩǝǭǤǠǡ
-    4
-Hokkaido Valley
-    6
-The Cost of the Internet
-ǨǪǨǠǩǯǮǤǩǣǤǮǯǪǭǴ
-    8
-The Stream Dream
-ǤǩǯǠǭǩǜǯǤǪǩǜǧ
-12
-The Business of War
-18
-Crash-Landing: The Turbulence 
-Hitting Small Airlines
-22
-Business Brainwave: Take 
-a Tuk-tuk
-26
-Are Meal Delivery Services 
-Worth It? 
-ǡǰǯǰǭǠǡǪǞǰǮ
-32
-Digital Governance
-ǞǪǱǠǭǮǯǪǭǴ
-38
-MBA – A Ticket to 
-Advancement?
-ǤǩǡǧǰǠǩǯǤǜǧǲǪǨǜǩ
-44
-Blaise Metreweli: Britain’s New 
-Female Spymaster
-ǝǰǮǤǩǠǮǮǫǭǪǡǤǧǠ
-48
-Is Iceland’s Four-Day Workweek 
-a Blueprint for the Future?
-ǱǤǟǠǪ
-ǯǭǜǱǠǧ
-54
-Ghana: West Africa’s Dynamic 
-Gateway Nation
-60
-Business in Ghana
-ǯǠǞǣǩǪǧǪǢǴ
-64
-Incredible New Translation 
-Tools Have Arrived – but Will 
-They Get Lost in Translation?
-ǨǜǩǜǢǤǩǢǫǠǪǫǧǠ
-70
-The Brilliant Jonathan Brill
-ǝǰǮǤǩǠǮǮǧǜǩǢǰǜǢǠ
-75
-Business Dialogues: 
-When the Numbers Don’t Add 
-Up
-ǜǯǯǣǠǠǩǟ
-b
-,QܿXHQWLDO 3HRSOH
-b
-Book & Film Reviews
-ǟǪǟǜǯǠǦǟǪǫǪǝǭǜǩǤǜ
-83
-3HUVRQDO )LQDQFH
-business-english.com.pl
-.2''267Ú38 v4827
+
+
+
+
+
+
+
+
+
+
+Forewords
+Foreword for Second Edition
+Foreword for First Edition
+Preface
+Who Should Read This Book
+Why I Wrote This Book
+A Word on Scale Today
+What’s New in the Second Edition
+Using the Cloud
+Services Versus Microservices
+Modern Digital Customer Experiences
+Navigating This Book
+Tenet 1. Availability: Maintaining Availability in Modern Applications
+Tenet 2. Modern Application Architecture: Using Services
+Tenet 3. Organization: Scaling Your Organization for Modern Applications
+Tenet 4. Risk: Risk Management for Modern Applications
+Tenet 5. Cloud: Utilizing the Cloud
+
+Online Resources
+Conventions Used in This Book
+O’Reilly Online Learning
+How to Contact Us
+Acknowledgments
+I. Tenet 1. Availability: Maintaining Availability in Modern Applications1. Understanding, Measuring, and Improving Your Availability
+Availability Versus Reliability
+What Causes Poor Availability?
+Measuring Availability
+The Nines
+Planned Outages Are Still Outages
+Availability by the Numbers
+
+Improving Your Availability When It Slips
+Measure and Track Your Current Availability
+Automate Your Manual Processes
+Improve Your Systems
+Keep on Top of Availability in Your Changing and Growing Application
+
+Five Focuses to Improve Application Availability
+Focus #1: Build with Failure in Mind
+Focus #2: Always Think About Scaling
+Focus #3: Mitigate Risk
+Focus #4: Monitor Availability
+Focus #5: Respond to Availability Issues in a Predictable and Defined Way
+
+Being Prepared
+2. Two Mistakes High—Having Room to Recover from Mistakes
+Two Mistakes High
+Scenario #1: Losing a Node
+Scenario #2: Problems During Upgrades
+Scenario #3: Data Center Resiliency
+Scenario #4: Hidden Shared Failure Types
+Scenario #5: Failure Loops
+
+Managing Your Applications
+The Space Shuttle
+II. Tenet 2. Modern Application Architecture: Using Services3. Using Services
+The Monolith Application Versus the Service-Based Application
+The Ownership Benefit
+The Scaling Benefit
+
+Splitting into Services
+What Should Be a Service?
+
+Dividing into Services
+Guideline #1: Specific Business Requirements
+Guideline #2: Distinct and Separable Team Ownership
+Guideline #3: Naturally Separable Data
+Guideline #4: Shared Capabilities/Data
+Mixed Reasons
+
+Going Too Far
+Finding the Right Balance
+4. Services and Data
+Stateless Services—Services Without Data
+Stateful Services—Services with Data
+Data Partitioning
+Timely Handling of Growing Pains
+5. Dealing with Service Failures
+Cascading Service Failures
+Responding to a Service Failure
+Predictable Response
+Understandable Response
+Reasonable Response
+
+Determining Failures
+Appropriate Action
+Graceful Degradation
+Graceful Backoff
+Fail as Early as Possible
+Customer-Caused Problems
+
+Summary
+III. Tenet 3. Organization: Scaling Your Organization for Modern Applications6. Service Ownership—STOSA
+Single Team Owned Service Architecture
+Advantages of a STOSA Application and Organization
+What Does It Mean to “Own” a Service?
+Using Core Teams and Services
+Summary
+7. Service Tiers
+Application Complexity
+What 

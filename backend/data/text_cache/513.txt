@@ -1,81 +1,49 @@
-CAPSTONE PROJECT REPORT 
-MINT PROGRAM 
-Study of Rail Transit System Communication 
-Network (BCN/TCN) and Related Sub-
-Systems 
-STUDENT NAME: SALMAN RATHOR 
- 
- 
- 
- 
- 
- 
- 
- 
-ii 
- 
-Rail transit system communication network (BCN/TCN) 
-                        Acknowledgement 
-I would like to thank my mentors Mr. Shahnawaz Mir, Dr. Mike MacGregor for 
-supporting and encouraging me during my Master’s Degree. The completion 
-of my Degree could not have been possible without the continuous support 
-and guidance from them. My sincere thanks to Mr. Juned Noonari who helped 
-me to get all the resources and essential details during the project research.  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-iii 
- 
-Rail transit system communication network (BCN/TCN) 
-Table of Content 
-1.0 
-Introduction ......................................................................................................... 1 
-1.1 
-Background ........................................................................................................ 1 
-1.2 
-Evolution of Train Control/ train Signaling Systems ........................................... 2 
-1.3 
-Communication Network .................................................................................... 5 
-2.0 
-Train Control Systems Around the World ......................................................... 7 
-2.1 
-Positive Train Control systems ........................................................................... 7 
-2.1.1 
-PTC System ................................................................................................ 8 
-2.1.1.1 
-PTC System Operation ......................................................................... 9 
-2.1.1.2 
-PTC high-level architecture ................................................................. 10 
-2.1.1.3 
-IEEE 802.15 Positive Train Control Group .......................................... 12 
-2.2 
-Enhanced Train Control (ETC) ......................................................................... 13 
-2.3 
-European Train Control System (ETCS) .......................................................... 15 
-2.3.1 
-ETCS Trackside Equipment ...................................................................... 15 
-2.3.2 
-ETCS Onboard Equipment ........................................................................ 17 
-2.4 
-Chinese Train Control System (CTCS) ............................................................ 18 
-3.0 
-Communications Based Train Control (CBTC) ............................................... 21 
-3.1 
-Fixed block vs. moving block............................................................................ 21 
-3.2 
-Characteristics of CBTC System ...................................................................... 22 
-3.3 
-CBTC System Architecture .............................................................................. 25 
-3.4 
-CBTC subsystems ........................................................................................... 26 
-3.4.1 
-Components and Networks ......
+In Praise of Computer Networks: A Systems
+Approach
+Peterson and Davie have written an outstanding book for the computer network-
+ing world. It is a well-organized book that features a very helpful “big picture”
+systems approach. This book is a must have!
+Yonshik Choi
+Illinois Institute of Technology
+What you hold in your hands is the most comprehensive textbook on Computer
+Networks available. Whether you are introducing undergraduates to Networks
+for the ﬁrst time or expanding the knowledge of graduate students, the mate-
+rial those students need to know lies in these pages. The text builds one concept
+on another, starting with encoding of bits and proceeding logically to the global
+Internet and the applications that run on it. I trusted the 5th edition for years and
+am excited to entrust my students and the networked future they create to this
+new 6th edition.
+Christopher (Kit) Cischke
+Michigan Technological University
+I have used Computer Networks: A Systems Approach for over ﬁve years in an
+introductory course on communications networks aimed at upper-level under-
+graduates and ﬁrst-year Masters students. I have gone through several editions
+and over the years the book has kept what from the beginning had been its
+main strength, namely, that it not only describes the ‘how,’ but also the ‘why’
+and equally important, the ‘why not’ of things. It is a book that builds engineering
+intuition, and in this day and age of fast-paced technology changes, this is critical
+to develop a student’s ability to make informed decisions on how to design or
+select the next generation systems.
+Roch Guerin
+University of Pennsylvania
+This book is an outstanding introduction to computer networks that is clear, com-
+prehensive, and chock-full of examples. Peterson and Davie have a gift for boiling
+networking down to simple and manageable concepts without compromising
+technical rigor. Computer Networks: A Systems Approach strikes an excellent
+balance between the principles underlying network architecture design and the
+applications built on top. It should prove invaluable to students and teachers of
+advanced undergraduate and graduate networking courses.
+Arvind Krishnamurthy
+University of Washington
+Computer Networks: A Systems Approach has always been one of the best
+resources available to gain an in-depth understanding of computer networks. The
+latest edition covers recent developments in the ﬁeld. Starting with an overview
+in Chapter 1, the authors systematically explain the basic building blocks of
+networks. Both hardware and software concepts are presented. The material
+is capped with a ﬁnal chapter on applications, which brings all the concepts
+together. Optional advanced topics are placed in a separate chapter. The text-
+book also contains a set of exercises of varying difﬁculty at the end of each chapter
+which ensure that the students have mastered the material presented.
+Karkal Prabhu
+Drexel University
+Peterson and Davie provide a detailed yet clear description

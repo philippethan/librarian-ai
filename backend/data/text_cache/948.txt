@@ -1,1 +1,105 @@
-CONTENTS Introduction: Understanding Adult ADHD PART I. GETTING STARTED: ACHIEVING YOUR GOALS AND OBJECTIVES Chapter 1. Fostering a Helpful Perspective Chapter 2. Ready, Set, Plan! Chapter 3. Increasing Motivation and Accountability Chapter 4. Evaluating What Works and Managing Frustration With What Doesn’t PART II. SPECIFIC STRATEGIES Chapter 5. Overcoming Procrastination and Improving Time Management Chapter 6. Enhancing Social Relationships Chapter 7. Organizing Your Space Chapter 8. Practicing Effective Learning and Study Skills Chapter 9. Finding Job Satisfaction PART III. GETTING ADDITIONAL HELP Chapter 10. Understanding and Treating Conditions That Can Coexist With ADHD Chapter 11. Medication Pros and Cons Chapter 12. Finding the Right Counselor, Coach, or Other Treatment Solution Summary Appendix: Example Tools for Your ADHD Toolbox Further Reading References About the Author Cover Title Page Table of Contents Start of Content 0 a b i iii iv v vii viii 1 3 4 5 6 7 8 9 10 11 12 13 15 17 18 19 20 21 22 23 24 25 26 27 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 77 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 211 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 281 282 283 285 286 287 289 290 291 292 293 305It was difficult to imagine how the original Succeeding With Adult ADHD could be improved upon, but Levrini pulled it off with flying colors. This magnificent updated edition is a treasure trove of helpful skills and strategies designed for adults with ADHD and, more important, methods for personalizing the skills and strategies to put them to use in your daily life to achieve positive results. It will continue to be one of the go-to recommended readings in our program. —J. RUSSELL RAMSAY, PhD, ABPP, CLINICAL DIRECTOR, UNIVERSITY OF PENNSYLVANIA ADULT ADHD TREATMENT AND RESEARCH PROGRAM, PHILADELPHIA, AND AUTHOR OF THE ADULT ADHD TOOL KIT: USING CBT TO FACILITATE COPING INSIDE AND OUT AND RETHINKING ADULT ADHD: HELPING CLIENTS TURN INTENTIONS INTO ACTIONS There is so much wisdom under the surface of Succeeding With Adult ADHD . Dr. Levrini won’t bore you with the details, but her advice and strategies have what it takes to actually work. She knows her stuff, and you will be better off for it! —A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table of Contents
+
+Couverture
+Identité
+
+Copyright
+Présentation
+Du même auteur
+
+
+Une sacrée envie de foutre le bordel
+
+Avant-propos
+Chapitre 1 - « Comment on remet en route ce putain d’ascenseur social ? »
+Chapitre 2 - « Je comprends pas comment on peut perdre de l’argent dans le Minitel »
+Chapitre 3 - « Ben vas-y, prends ton fer à souder ! »
+Chapitre 4 - « Un avant et un après »
+Chapitre 5 - « Un pays d’entrepreneurs »
+Chapitre 6 - « Vous êtes des pigeons »
+Chapitre 7 - « Si lire Le Monde vous fait souffrir, ne le lisez plus »
+Chapitre 8 - « Je mange pas du caviar au petit-déj’ »
+Chapitre 9 - « Je pensais qu’Internet, ce serait la liberté dans le monde entier. Je me suis bien planté »
+Chapitre 10 - « Et à la fin, les machines se débarrassent de nous ? »
+Épilogue - Pirate, paria, parrain
+
+
+Table
+
+
+
+
+
+
+
+Table of Contents
+
+Couverture
+Identité
+
+Copyright
+Présentation
+Du même auteur
+
+
+Une sacrée envie de foutre le bordel
+
+Avant-propos
+Chapitre 1 - « Comment on remet en route ce putain d’ascenseur social ? »
+Chapitre 2 - « Je comprends pas comment on peut perdre de l’argent dans le Minitel »
+Chapitre 3 - « Ben vas-y, prends ton fer à souder ! »
+Chapitre 4 - « Un avant et un après »
+Chapitre 5 - « Un pays d’entrepreneurs »
+Chapitre 6 - « Vous êtes des pigeons »
+Chapitre 7 - « Si lire Le Monde vous fait souffrir, ne le lisez plus »
+Chapitre 8 - « Je mange pas du caviar au petit-déj’ »
+Chapitre 9 - « Je pensais qu’Internet, ce serait la liberté dans le monde entier. Je me suis bien planté »
+Chapitre 10 - « Et à la fin, les machines se débarrassent de nous ? »
+Épilogue - Pirate, paria, parrain
+
+
+Table
+
+
+
+
+
+
+
+
+
+
+Xavier Niel
+Une sacrée envie de foutre le bordel
+Entretiens avec Jean-Louis Missika
+Flammarion
+© Flammarion, 2024
+ISBN Numérique : 9782080452689
+ISBN Web : 9782080452702
+Le livre a été imprimé sous les références :
+ISBN : 9782080452146
+Ouvrage composé et converti par Pixel ence (59100 Roubaix)
+Présentation de l'éditeur
+Des entrepreneurs qui ont fait fortune en partant de zéro, il n’y en a pas  beaucoup  en  France.  Un  enfant  de  Créteil  qui  n’a  pas  fait d’études, qui a fait de la prison et qui est devenu mil iardaire, vous pouvez chercher, il n’y en a pas d’autre. 
+Ceci  n’est  ni  une  autobiographie,  ni  une  interview.  C’est  une conversation  entre  amis  qui  raconte  un  homme,  ses  choix,  ses regrets,  ses  espoirs.  C’est  l’histoire  d’une  réussite  et  du  parcours invraisemblable qui y mène. 
+Du même auteur
+Jean-Louis Missika
+Avec Henri Verdier, Le Business de la haine : Internet, la démocratie et les réseaux sociaux, Calmann-Lévy, 2022. 
+Avec Pierre Musseau, Des robots dans la ville : comment les voitures autonomes vont changer nos vies, Tallandier, 2018. 
+Avec Jean Michel Salaün, La TV dévorée par le Web : d’une industrie de la mémoire à l’autre, INA, 2013. 
+Avec  Denis  Bertrand  et  Alexandre  Dézé,  Parler  pour  gagner  : sémiotique  des  discours  de  la  campagne  présidentielle  de  2007, Presses de Sci

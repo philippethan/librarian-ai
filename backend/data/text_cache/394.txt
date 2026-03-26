@@ -1,162 +1,207 @@
-BS 70000:2017
-Medical physics, clinical
-engineering and associated
-scientific services in
-healthcare – Requirements
-for quality, safety and
-competence
-BSI Standards Publication
-Publishing and copyright information
-The BSI copyright notice displayed in this document indicates when the document
-was last issued.
-© The British Standards Institution 2017
-Published by BSI Standards Limited 2017
-ISBN 978 0 580 90138 6
-ICS 11.020
-The following BSI references relate to the work on this document:
-Committee reference CH/100
-Draft for comment 15/30323396 DC
-Publication history
-First published January 2017
-Amendments issued since publication
-Date
-Text affected
-BS 70000:2017
-BRITISH STANDARD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Has Anyone Seen My Sex Life?
+An absolutely hilarious, laugh-out-loud page-turner
+
+
+
+
+
+
+
+
+
+
+
+Kristen Bailey
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Books by Kristen Bailey
+
+
+
+
+
+
+
+Can I Give My Husband Back?
+Has Anyone Seen My Sex Life?
+
+
+
+
+
+
+
+
+
+
+
+
+Available in audio
+
+
+Has Anyone Seen My Sex Life? (available in the UK and the US)
+
+
+
+
+
+
+
+
+
+
+
 Contents
-Foreword
-ii
-0 Introduction
-1
-1
-Scope
-1
-2
-Normative references
-2
-3
-Terms and definitions
-3
-4
-Management requirements
-6
-4.1
-Organization
-6
-4.2
-Quality management system
-8
-4.3
-Governance and risk management
-9
-4.4
-Planning to achieve management objectives
-10
-4.5
-Service delivery
-10
-4.6
-Management of change
-11
-4.7
-Outsourcing
-11
-4.8
-Management of suppliers
-12
-4.9
-Document control
-12
-4.10
-Control of nonconforming work
-14
-4.11
-Control of unexpected findings
-15
-4.12
-Service improvement
-15
-4.13
-Quality indicators
-16
-4.14
-Staff engagement
-16
-4.15
-Corrective action
-16
-4.16
-Preventive action
-17
-4.17
-Control of information assets
-17
-4.18
-Internal audits
-19
-4.19
-Management reviews
-20
-4.20
-Assuring quality in research and development activities
-21
-4.21
-Assuring quality in education and training activities
-22
-5
-Technical requirements
-24
-5.1
-General
-24
-5.2
-Personnel
-24
-5.3
-Facilities and environmental conditions
-25
-5.4
-Operation methods/procedures and validation
-26
-5.5
-Equipment
-32
-5.6
-Measurement traceability
-34
-5.7
-Sampling
-36
-5.8
-Handling of production, investigation, therapy, repair, test and
-metrological confirmation items
-37
-5.9
-Controlling the quality of healthcare scientific service outputs
-38
-5.10
-Service processes
-39
-5.11
-Service output management
-42
-5.12
-Surveillance
-43
-5.13
-Reporting the results
-43
-Annexes
-Annex A (informative) Medical physics, clinical engineering and associated
-science services in healthcare
-47
-Bibliography
-50
-Summary of pages
-This document comprises a front cover, an inside front cover, pages i to ii,
-pages 1 to 52, an inside back cover and a back cover.
-BRITISH STANDARD
-BS 70000:2017
-© The British Standards Institution 2017
-•
-i
+
+
+
+Prologue
+
+
+Chapter 1
+
+
+Chapter 2
+
+
+Chapter 3
+
+
+Chapter 4
+
+
+Chapter 5
+
+
+Chapter 6
+
+
+Chapter 7
+
+
+Chapter 8
+
+
+Chapter 9
+
+
+Chapter 10
+
+
+Chapter 11
+
+
+Chapter 12
+
+
+Chapter 13
+
+
+Chapter 14
+
+
+Chapter 15
+
+
+Chapter 16
+
+
+Chapter 17
+
+
+Chapter 18
+
+
+Chapter 19
+
+
+Epilogue
+
+
+
+
+Hear More from Kristen
+
+
+Books by Kristen Bailey
+
+
+A Letter from Kristen
+
+
+Acknowledgements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Prologue
+
+
+
+
+
+Back then I wouldn’t have said I was a bitch exactly, but I was all the things that came from being a young professional Londoner: I was broadly cynical, deep into a free overdraft, my bloodstream was a mix of takeaways and watered-down cocktails, and I was prone to meltdowns over stolen teabags and my flatmates interrupting my sleep. I was a city girl working in magazine publishing, so naturally I was also a superficial douche. This was why when I first met Danny Morton, I was obsessed by his spectacularly ugly shoes. Footwear that hideous will brand itself into a girl’s memory; that and the moment I barged past, half-cut, spilling my overpriced White Russian all over him.
+‘Oh bollocks…! Wow…’ I said the wow as I glanced down at his shoes being showered in my cocktail. Maybe the drink would make them less ugly? I giggled to myself. We were in a Soho pub, full of London’s finest cosmopolitan wankery, loafers and neon trainers and this gentleman had on clumpy walking boots, like he was setting off up a mountain or had come to fix my sink. ‘Those look sturdy.’
+He wasn’t impressed or bothered. ‘Where I come from, a lass would apologise.’
+‘Oooooh, “Where I come from”?’ I mimicked his broad Northern accent. I couldn’t pinpoint it. North for me was anywhere past Brent Cross. ‘Manchester?’ That’s North.
+He eyeballed me. Was he handsome? Frankly who knew, I was so boozed up. He held out a hand.
+‘Danny Morton, how do you do…’
+I really was drunk. I curtseyed.
+‘Meg Callaghan, very well, thank you.’ I said with a strange affected posh voice.
+He smiled. ‘I haven’t had an apology yet.’
+‘Sorry?’
+‘You don’t sound sure about that?’
+‘You’re a bit bolshy.’
+‘You’re a bit rude.’ He turned his back to me. ‘Fookin’ Southerners.’
+I’m not sure why but this struck a chord that I couldn’t ignore. I was never precious about where I was from or who I was. I quite liked being a Londoner; it meant that I was trendy, metropolitan and globally aware by association. But he was surly and quite frankly, a bit of a tit. Have I mentioned I was also very drunk?
+‘Oh piss off, fucking Liam Gallagher.’
+I’m not sure why I compared him to Liam Gallagher; it may have been the ape like persona and the fact I’d committed to him hailing from Manchester, but Britpop was al

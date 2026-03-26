@@ -1,66 +1,66 @@
-BSI Standards Publication
-Railway applications — Urban
-guided transport management
-and command/control systems
-Part 2: Functional requirements specification
-BS EN 62290-2:2014
-National foreword
-This British Standard is the UK implementation of EN 62290-2:2014. It 
-is identical to IEC 62290-2:2014. It supersedes BS EN 62290-2:2011 
-which is withdrawn.
-The UK participation in its preparation was entrusted to Technical
-Committee GEL/9, Railway Electrotechnical Applications.
-A list of organizations represented on this committee can be obtained on
-request to its secretary.
-This publication does not purport to include all the necessary provisions of
-a contract. Users are responsible for its correct application.
-© The British Standards Institution 2014.
-Published by BSI Standards Limited 2014
-ISBN 978 0 580 80180 8
-ICS 45.060.01
-Compliance with a British Standard cannot confer immunity from
-legal obligations.
-This British Standard was published under the authority of the
-Standards Policy and Strategy Committee on 30 September 2014. 
-Amendments/corrigenda issued since publication
-Date                     Text affected
-BRITISH STANDARD
-BS EN 62290-2:2014
- 
- 
-EUROPEAN STANDARD 
-NORME EUROPÉENNE 
-EUROPÄISCHE NORM 
-EN 62290-2 
- 
-September 2014 
-ICS 45.060 
- Supersedes  EN 62290-2:2011
-English Version 
- 
-Railway applications - Urban guided transport management and 
-command/control systems - Part 2: Functional requirements 
-specification 
-(IEC 62290-2:2014) 
- 
-Applications ferroviaires - Systèmes de contrôle/commande 
-et de gestion des transports guidés urbains -  
-Partie 2: Spécification des exigences fonctionnelles 
-(CEI 62290-2:2014) 
- 
-Bahnanwendungen - Betriebsleit- und 
-Zugsicherungssysteme für den städtischen 
-schienengebundenen Personennahverkehr -  
-Teil 2: Funktionale Anforderungsspezifikation 
-(IEC 62290-2:2014) 
-This European Standard was approved by CENELEC on 2014-08-14. CENELEC members are bound to comply with the CEN/CENELEC 
-Internal Regulations which stipulate the conditions for giving this European Standard the status of a national standard without any alteration. 
-Up-to-date lists and bibliographical references concerning such national standards may be obtained on application to the CEN-CENELEC 
-Management Centre or to any CENELEC member.  
-This European Standard exists in three official versions (English, French, German). A version in any other language made by translation 
-under the responsibility of a CENELEC member into its own language and notified to the CEN-CENELEC Management Centre has the 
-same status as the official versions. 
-CENELEC members are the national electrotechnical committees of Austria, Belgium, Bulgaria, Croatia, Cyprus, the Czech Republic, 
-Denmark, Estonia, Finland, Former Yugoslav Republic of Macedonia, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, 
-Lithuania, Luxembourg, Malta, the Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, 
-Turkey and the U
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+De la même auteure
+
+
+La Sexualité féminine dans tous ses ébats, Fayard, 2021
+
+
+Les Enfants hyperactifs, Alpen Éditions, 2013
+
+
+
+
+
+
+
+
+
+
+
+
+À mon frèreÀ mes filles
+À tous les hommes qui m’ont fait confianceen me livrant leur intimité
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Avant-propos
+
+
+Nous assistons ces dernières années à une véritable libération de la parole des femmes sur leur sexualité, leur plaisir, leurs revendications à l’orgasme, mais aussi au consentement et au respect de leur désir. Ce phénomène n’est pas sans conséquence sur les hommes et sur leur sexualité. Cela entraîne nécessairement un repositionnement de l’homme face aux désirs de sa partenaire sur bien des aspects.
+De plus en plus de femmes réclament une sexualité moins pénétrative, davantage centrée sur leur plaisir clitoridien. De nombreux hommes peuvent se sentir perdus face à ces changements. Mais surtout, cette nouvelle donne est vécue comme une pression supplémentaire – l’obligation de donner du plaisir à sa partenaire sans forcément bien savoir comment s’y prendre. Longtemps, la sexualité masculine a été simplifiée à outrance, vue comme un phénomène purement mécanique, fondé essentiellement sur la physiologie de l’érection et de l’éjaculation. La pénétration vaginale était alors le Graal à atteindre, le seul but du rapport hétérosexuel. La révolution sexuelle que nous sommes en train de vivre change les choses à la fois dans l’intimité et dans la libération de la parole masculine. En témoignent les publications récentes de livres sur le sujet comme Au-delà de la pénétration de Martin Page ou de podcasts tels qu’On The Verge d’Anne-Laure Parmantier, dans lequel des hommes de tous horizons parlent sans tabous de leur sexualité.
+Cette simplification, qui a exclu longtemps les dimensions psychologiques de la sexualité masculine, n’aide pas les hommes aujourd’hui à trouver les ressources nécessaires pour développer et enrichir leur répertoire sexuel et (re)conquérir une satisfaction sexuelle dans leur couple. Cela ne les aide pas non plus à assumer leurs vulnérabilités à la fois sexuelles et émotionnelles. Or la sexualité masculine est tout aussi dépendante du psychisme que celle des femmes. Influence qui se manifeste autant sur le désir que sur l’érection, l’orgasme ou la plupart des troubles sexuels dont ils peuvent souffrir.
+Le modèle sexuel prédominant chez les hommes est malheureusement aujourd’hui encore hérité de la pornographie. Les conséquences négatives sont de plus en plus visibles. Regarder trop de pornographie est responsable de nombreux troubles sexuels, allant d’un déficit d’excitation sexuelle dans les rapports hétérosexuels jusqu’à une absence totale de libido. Mais ce modèle exclut également toute la dimension érotique et sensuelle du rapport sexuel pour se focaliser sur la pénétration et la performance, ce qui aujourd’hui semble ne plus satisfaire la plupart des femmes. L’utilisation que les hommes font de leur sexualité, qu’elle soit masturbatoire ou dans la re

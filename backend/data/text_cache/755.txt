@@ -1,1 +1,79 @@
-Schéma p. 62 : D’après R EY R., J OSSO N. et R ACINE C., « Sexual Differentiation », dans F EINGOLD K. R. et al ., Endotext, South Dartmouth, MDText.com , 2000. Schéma p. 86 : © Thomas Haessig Schéma p. 174 : D’après M ASTERS W. et J OHNSON V., Human sexual response , Boston, Little, Brown, 1966. Schéma p. 186 : © Thomas Haessig Schéma p. 190 : P ENFIELD W. et R ASMUSSEN T., The cerebral cortex of man: a clinical study of localization of function , New York, Macmillan, 1950. Schéma p. 201 : © Thomas Haessig Schéma p. 208 : D’après S CHULTZ W., D AYAN P. et M ONTAGUE P. R., « A neural substrate of prediction and reward », Science , vol. 275, n o 5306, 1997, p. 1593-1599. Le Code de la propriété intellectuelle n’autorisant, aux termes des paragraphes 2 et 3 de l’article L122-5, d’une part, que les « copies ou reproductions strictement réservées à l’usage privé du copiste et non destinées à une utilisation collective » et, d’autre part, sous réserve du nom de l’auteur et de la source, que « les analyses et les courtes citations justifiées par le caractère critique, polémique, pédagogique, scientifique ou d’information », toute représentation ou reproduction intégrale ou partielle, faite sans le consentement de l’auteur ou de ses ayants droit, est illicite (art. L122-4). Toute représentation ou reproduction, par quelque procédé que ce soit, notamment par téléchargement ou sortie imprimante, constituera donc une contrefaçon sanctionnée par les articles L335-2 et suivants du Code de la propriété intellectuelle. ISBN : 979-1-0403-0084-7 Dépôt légal : septembre 2024 © Éditions humenSciences / Humensis, 2024 170 bis, boulevard du Montparnasse, 75014 Paris Tél. : 01 55 42 84 00 www.humensciences.comSOMMAIRE INTRODUCTION 1 L’AMOUR ET LE DÉSIR, DE NOTRE PHYLOGÉNIE PHILOSOPHIQUE L’Antiquité, les racines d’un dualisme ancestral L’avènement des trois religions et de l’Église chrétienne, ou le rejet de la chair La philosophie des passions et les prémices de la science en Occident La science moderne, un pas vers la réunification du corps et de l’esprit 2 LE SEXE, UN VRAI MYSTÈRE EN BIOLOGIE Qu’entendons-nous par « sexe » en biologie ? La sélection sexuelle comme moteur de diversité et de dimorphisme La diversité des comportements sexuels, une norme biologique Quid de la sélection sexuelle chez les primates et Homo sapiens 3 HOMMES, FEMMES : SI LOIN, SI PROCHES ! Développement et embryogenèse du système nerveux Dimorphisme sexuel de nos cerveaux et de nos comportements Comment les études de genre ont fait avancer la biologie Deux exemples d’erreurs scientifiques autour du genre 4 DES HISTOIRES D’HORMONES ET DE PHÉROMONES Les hormones de la sexualité Des hormones du lien Les phéromones, du fantasme à la réalité Un bilan de décennies de recherches sur les phéromones 5 APPRENDRE À AIMER Les facteurs génétiques et prénataux Le cerveau d’une mère, le cerveau d’un père Le comportement des parents et les styles d’attachement L’impact du style d’attachement à l’âge adulte
+Dr. M.N. AVADHANULU
+M.Sc., Ph.D.
+Principal, Om College of Engineering
+Wardha
+Formerly Professor & Head Department of Physics
+Kavikulguru Institute of Technology and Science
+Ramtek - 441106, Dist. : Nagpur (M.S.)
+S.R. CHOUBEY
+M.Sc., B.Ed., DCA,
+Lecturer
+Department of Applied Physics
+Smt. Rajshree Mulak College of Engineering
+(KDK Group of Colleges), Nagpur
+S. Chand’s
+PROBLEMS IN
+ENGINEERING PHYSICS
+For the First Year Students of B.E. / B.Tech. / B. Arch. and
+also useful for Competitive Examinations
+S Chand And Company Limited
+(ISO 9001 Certified Company)
+S Chand And Company Limited
+(ISO 9001 Certified Company)
+Head Office:  Block B-1, House No. D-1, Ground Floor, Mohan Co-operative Industrial Estate, 
+New Delhi – 110 044 | Phone: 011-66672000
+Registered Office:  A-27,  2nd Floor, Mohan Co-operative Industrial Estate, New Delhi  – 110  044
+Phone: 011-49731800
+www.schandpublishing.com; e-mail: info@schandpublishing.com
+Branches
+Ahmedabad 
+: 	 Ph: 27542369, 27541965; ahmedabad@schandpublishing.com
+Bengaluru 
+:	 Ph: 22354008, 22268048; bangalore@schandpublishing.com
+Bhopal 
+: 	 Ph: 4274723, 4209587; bhopal@schandpublishing.com
+Bhubaneshwar	 :	 Ph: 2951580; bhubaneshwar@schandpublishing.com
+Chennai 	
+: 	 Ph: 23632120; chennai@schandpublishing.com
+Guwahati  	
+:	 Ph: 2738811, 2735640; guwahati@schandpublishing.com
+Hyderabad 
+:	 Ph: 40186018; hyderabad@schandpublishing.com
+Jaipur 	
+:	 Ph: 2291317, 2291318; jaipur@schandpublishing.com
+Jalandhar 	
+:	 Ph: 4645630; jalandhar@schandpublishing.com
+Kochi 	
+: 	 Ph: 2576207, 2576208; cochin@schandpublishing.com
+Kolkata 	
+: 	 Ph: 23357458, 23353914; kolkata@schandpublishing.com
+Lucknow 	
+:	 Ph: 4003633; lucknow@schandpublishing.com
+Mumbai 	
+:	 Ph: 25000297; mumbai@schandpublishing.com
+Nagpur 	
+: 	 Ph: 2250230; nagpur@schandpublishing.com
+Patna 	
+:	 Ph: 2260011; patna@schandpublishing.com
+Ranchi 	
+:	 Ph: 2361178; ranchi@schandpublishing.com 
+Sahibabad	
+:	 Ph: 2771238; info@schandpublishing.com
+©  S Chand And Company Limited, 2012
+All rights reserved. No part of this publication may be reproduced or copied in any material form (including 
+photocopying or storing it in any medium in form of graphics, electronic or mechanical means and whether or not 
+transient or incidental to some other use of this publication) without written permission of the copyright owner. Any 
+breach of this will entail legal action and prosecution without further notice.
+Jurisdiction:  All disputes with respect to this publication shall be subject to the jurisdiction of the Courts, Tribunals 
+and Forums of New Delhi, India only.
+First Edition 2012
+ISBN: 978-81-219-3899-0		
+PRINTED IN INDIA
+By Vikas Publishing House Private Limited, Plot 20/4, Site-IV, Industrial Area Sahibabad, Ghaziabad – 201 010 
+and Published by S Chand And Company Limited, A-27, 2nd Floor, Mohan Co-operative Industrial Estate, 
+New Delhi – 110 044
+Books are not paper and words
+but interaction with thinkers on a
+one-to-one basis, not of one
+generation but separated by
+hundr

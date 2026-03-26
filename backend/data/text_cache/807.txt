@@ -1,1 +1,86 @@
-Dans la même collection : Persévérance Pouvoirs & influence Mieux se connaître Concentration Gérer les personnalités difficiles Motivation, sens & implication Influence & persuasion Intuition Leadership authentique Confiance en soi Résilience Empathie Pleine conscience HappinessSommaire 1 Suis-je anxieux ou simplement stressé ? La différence entre les deux termes Par Charlotte Lieberman 2 Comment gérer son anxiété Identifiez-la, comprenez-la et traitez-la avec indulgence Par Charlotte Lieberman 3 Les effets de l'anxiété au travail Pensez autrement pour ne pas vous brider Par Alice Boyes 4 Cesser de craindre le pire Confrontez vos peurs Par Amantha Imber 5 Comment arrêter de ruminer La rumination est une tactique d’évitement du cerveau Par Alice Boyes 6 Briser le cycle anxieux Se ronger les sangs est contreproductif Un entretien avec Judson Brewer Propos recueillis par Morra Aarons-Mele 7 Surmonter sa peur de l'inconnu Acceptez le potentiel transformateur de l’incertitude Par Nathan Furr et Susannah Harmon Furr 8 Comment les performeurs exceptionnels surmontent leur anxiété Stratégies pour éviter les « pensées-pièges » les plus courantes Par Morra Aarons-Mele 9 Neutraliser le stress et l'incertitude par la gratitude Concentrez-vous sur ce qui vous réjouit Par Christopher Littlefield 10 Comment gérer un accès de panique au travail ? Soyez présent à ce qui se passe Un entretien avec Sridevi Kalidindi Propos recueillis par Vasundhara Sawhney 11 L'avenir vous angoisse ? Voici comment y faire face Les transitions nous donnent l’occasion de réfléchir, de mûrir et de changer Par Rasmus Hougaard et Jacqueline Carter 12 L'autocompassion : de quoi parle-t-on ? Soyez indulgent envers vous-même Par Stephanie Harrison1 Suis-je anxieux ou simplement stressé ? Par Charlotte LiebermanI l est 15 heures. Vous êtes déjà charrette lorsque votre patron vous appelle. Il vous demande si vous auriez le temps de donner un coup de main sur un projet qui doit être bouclé à 17 heures. Non, vous n’avez pas le temps, d’ailleurs vous n’avez même pas déjeuné. « Ça urge un peu », dit-il en s’excusant de s’y prendre à la dernière minute. Aussitôt, vous avez la boule au ventre et vos pensées se bousculent. « Bien sûr, répondez-vous, je le ferai volontiers. » Dire « non » n’aurait pas été moins stressant. Une petite voix vous rappelle à quel point vous travaillez mal sous pression. Tu te souviens de ta crise de panique, l’autre fois ? Tu ne peux déjà pas monter une prez’ en deux jours, alors en deux heures ! Regarde les collègues, comme c’est facile pour eux. Pourquoi tu ne peux pas en faire autant ? Faut te faire une raison, tu vas végéter dans ce boulot toute ta vie. Et soudain il est 15 h 52 et tout ce que vous avez fait, c’est vous flageller. Si tu ne passais pas autant de temps à te ronger les sangs, tu aurais déjà commencé , dit en écho la petite voix. Cela vous rappelle quelque chose ? À moi aussi. Je vis dans l’anxiété depuis toujours. « Anxiété ? Je me croyais tout juste st
+
+
+
+
+Sommaire
+Couverture
+Page de Copyright
+Sommaire
+Avant-propos
+Chapitre 1 • Introduction à SketchUp
+1 Installation de SketchUp
+2 Le modèle SketchUp
+3 L'interface utilisateur
+4 Configurer votre modèle
+5 Créer un nouveau modèle, enregistrer et ouvrir un modèle existant
+6 Configurer SketchUp
+7 Visualiser votre modèle
+Chapitre 2 • Les bases de SketchUp
+1 Que voulez-vous modéliser ?
+2 Présentation rapide des outils de dessin
+3 Dessiner précisément avec les inférences
+4 Les outils principaux
+5 Les outils de construction
+6 Les outils d'édition
+7 Copier avec SketchUp
+8 La boîte de dialogue Infos sur l'entité
+Chapitre 3 • Modéliser l'enveloppe extérieure de la maison
+1 Modéliser le bâtiment principal
+2 Ajouter une annexe au bâtiment principal
+Chapitre 4 • Appliquer des matières sur votre modèle
+1 L'outil Colorier et la boîte de dialogue Matières
+2 Les matières SketchUp
+3 Modifier une matière existante
+4 Créer une nouvelle matière
+5 Gérer vos collections de matières
+6 Remplacer une matière par une autre
+7 Positionner et orienter une texture
+8 Matières SketchUp et réalisme
+Chapitre 5 • Organiser votre modèle : composants et groupes
+1 Les différences entre groupes et composants
+2 Les avantages des composants
+3 Quand utiliser un groupe plutôt qu'un composant
+4 Créer un groupe
+5 Éditer un groupe ou un composant
+6 Éclater un groupe ou un composant
+7 Créer un composant
+8 Créer un composant à partir d'un groupe
+9 Créer des groupes et des composants solides
+10 Insérer un composant à partir du modèle ou d'une collection locale
+11 Rendre un composant unique 
+12 La 3D Warehouse, une gigantesque collection de composants sur le web
+13 Optimiser vos composants
+14 Enregistrer un composant dans une collection
+15 Gérer vos modèles complexes avec la boîte de dialogue Structure
+16 Une bonne purge pour alléger vos modèles
+17 SketchUp et le BIM
+Chapitre 6 • Mesurer et quantifier
+1 Mesurer des longueurs et des longueurs cumulées
+2 Mesurer des surfaces et des surfaces cumulées
+3 Mesurer un volume
+4 Quantifier le nombre de copies d'un composant
+5 L'outil Générer un rapport (Pro)
+Chapitre 7 • Détailler l'extérieur de la maison
+1 Modéliser une baie de fenêtre
+2 Insérer la baie de fenêtre sur une autre façade
+3 Copier plusieurs fois la baie de fenêtre
+4 Créer et insérer des variantes de la baie de fenêtre
+5 Détailler les planches de rive de la toiture
+6 Modéliser une gouttière et un tuyau de descente d'eau
+7 Modéliser une cheminée tubulaire
+Chapitre 8 • Géoposition et ombres correctes
+1 Géopositionner votre modèle
+2 Orienter votre modèle par rapport au nord
+3 Configurer les ombres
+Chapitre 9 • Modéliser étage par étage
+1 Les balises dans SketchUp
+2 Produire des sections 2D du modèle actuel
+3 Créer les parois extérieures
+4 Rassembler les éléments étage par étage
+5 Percer les baies de fenêtres et de porte
+6 Agencer les cloisons intérieures
+7 Ajouter les portes
+8 Modéliser un escalier à l'aide de composants
+9 Créer une trémie dans la dalle du premier étage
+10 Modéliser les pignons
+11 

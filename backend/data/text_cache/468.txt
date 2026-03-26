@@ -1,0 +1,72 @@
+S e c o n d
+E d i t i o n
+S e c o n d
+E d i t i o n
+Mahendra K Verma
+Mahendra K Verma
+Verma
+Universities Press
+Universities Press
+Introduction to
+Introduction to
+Introduction to
+Mechanics
+Mechanics
+Mechanics
+Verma:
+(Second Edition)
+Introduction to Mechanics
+www.universitiespress.com
+Introduction to Mechanics, Second Edition offers a modern introduction to Newtonian
+dynamics and the basics of special relativity. The present edition covers almost all the
+topics specified in the mechanics syllabus of most Indian universities. It preserves the
+emphasis laid on the fundamental principles of mechanics and introduction of modern
+topics(asintheearlieredition),suchassymmetries,nonlineardynamicsandpresentation
+of Newton's laws as a differential equation.The programming language Python is used to
+solvealargenumberofdifferentialequationsnumericallyandtoplotthem.
+Discussions on several topics have been expanded and many new topics have been
+introduced—surface tension and capillary action, Buckingham Pi theorem, impulse,
+magnetorotational instability (MRI), fluid flows and bending moment. The dynamics of
+the gyroscope have been developed very systematically and this is a unique feature of the
+book.Eachchaptercontainsnewillustrations,morediscussions,examplesandexercises.
+obtained his doctoral degree from the University of Maryland,
+College Park. He joined the Department of Physics, IIT Kanpur in 1994. He is a non-linear
+dynamist whose chief interest lies in theoretical and computational studies of turbulence
+and nonlinear physics. Currently he is working on magnetohydrodynamic turbulence,
+dynamo and convective turbulence. Dr Verma is also interested in atmospheric and
+computationalphysics.
+Mahendra K. Verma
+Forworkedoutproblems,figuresandexplanation,pleasevisittheauthor’swebpage.
+Linktoauthor’swebpage:http://home.iitk.ac.in/~mkv/Mechanics-book/Welcome.html
+Cover design: OSDATA, Hyderabad
+9 788173 719813
+ISBN  978 81 7371 981 3
+SECOND
+EDITION
+Introduction to
+mechanics
+Second Edition
+Mahendra Verma
+Professor, Department of Physics  
+Indian Institute of Technology Kanpur
+A01_ITM_Prelims.indd   1
+10/23/2015   10:12:25 AM
+UNIVERSITIES PRESS (INDIA) PRIVATE LIMITED
+Registered Office
+3-6-747/1/A & 3-6-754/1, Himayatnagar, Hyderabad 500 029, Telangana, India
+info@universitiespress.com: www.universitiespress.com
+Distributed by
+Orient Blackswan Private Limited
+Registered Office
+3-6-752 Himayatnagar, Hyderabad 500 029, Telangana, India
+Other Offices
+Bengaluru/ Bhopal/ Bhubaneshwar/ Chennai/ Ernakulam/ Guwahati  
+Hyderabad/ Jaipur/ Kolkata/ Lucknow/ Mumbai/ New Delhi/ Noida/ Patna
+© Universities press (India) Private Limited 2016
+First published 2008
+Reprinted 2010, 2012
+Second edition 2016
+ISBN: 978-81-7371-981-3
+All rights reserved. No part of this book may be reproduced or utilised in any form, or by any means, electronic 
+or mechanical, including photocopying, recording, or by any information storage and retrieval system, without 
+permission in writing from the copyrig

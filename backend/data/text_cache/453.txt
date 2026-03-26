@@ -1,36 +1,44 @@
-ជំពូកទី១េមេរៀនទី២៖ម៉ូម៉ង់ៃនកមា្លំង
-មុខវិជា្ជរូបវិទយថា្នក់ទី៩
-អ្នក្រគȪ ឡុចសុជាតា
-កញ្ចប់សិកǜ ឌី˪្លូមនិេទ្ទសល្អ២០២៦
-ឡុចសុជាតា
-រូបវិទយថា្នក់ទី៩ជំពូកទី១េមេរៀនទី២
-១តុលា២០២៥
-1 / 30
-េគាលបំណង
-បនា្ទប់ពីសិកǜេមេរៀនេនះចប់˪្អូនៗអាច៖
-បងា្ហញពីសញញណម៉ូម៉ង់ៃនកមា្លំង
-គណនាម៉ូម៉ង់ៃនកមា្លំងតាមរូបមន្ត𝑀= 𝐹× 𝑑
-បញ្ជក់ពីលក្ខណ្ឌលំនឹងៃនអង្គធាតុមួយែដលវិលជុំវិញតាមអ័ក្សរង្វិល
-អនុវត្តម៉ូម៉ង់ៃនកមា្លំងក្នុងជីវភាពរស់េន
-យល់ពីភាពខុសគា្នរវាងម៉ូម៉ង់និងកម្មន្ត
-ឡុចសុជាតា
-រូបវិទយថា្នក់ទី៩ជំពូកទី១េមេរៀនទី២
-១តុលា២០២៥
-2 / 30
-មាតិកា
-1
-ម៉ូម៉ង់ៃនកមា្លំង
-2
-លក្ខណ្ឌលំនឹងឬេគាលការណ៍រកǜម៉ូម៉ង់
-3
-អនុវត្តន៍ម៉ូម៉ង់កមា្លំង
-4
-រំលឹកកម្មន្តៃនកមា្លំង
-5
-េមេរៀនសេង្ខប
-6
-សំណួរនិងលំហាត់
-ឡុចសុជាតា
-រូបវិទយថា្នក់ទី៩ជំពូកទី១េមេរៀនទី២
-១តុលា២០២៥
-3 / 30
+Information technology — Data centre 
+facilities and infrastructures
+Part 1: General concepts
+PD ISO/IEC TS 22237‑1:2018
+BSI Standards Publication
+National foreword
+This Published Document is the UK implementation of 
+ISO/IEC TS 22237‑1:2018.
+The UK participation in its preparation was entrusted to Technical 
+Committee IST/46, Sustainability for, and by IT.
+A list of organizations represented on this committee can be obtained on 
+request to its secretary.
+This publication does not purport to include all the necessary provisions 
+of a contract. Users are responsible for its correct application.
+© The British Standards Institution 2018
+Published by BSI Standards Limited 2018
+ISBN 978 0 580 99297 1
+ICS 35.020
+ Compliance with a British Standard cannot confer immunity from 
+legal obligations. 
+This Published Document was published under the authority of the 
+Standards Policy and Strategy Committee on 31 May 2018.
+Amendments/corrigenda issued since publication
+Date
+Text affected
+PUBLISHED DOCUMENT
+PD ISO/IEC TS 22237‑1:2018
+Information technology — Data centre 
+facilities and infrastructures —
+Part 1:
+General concepts
+Technologie de l’information — Installation et infrastructures de 
+centres de traitement de données —
+Partie 1: Concepts généraux
+ISO/IEC TS
+22237-1
+First edition
+2018-05-01
+Reference number
+ISO/IEC TS 22237-1:2018(E)
+TECHNICAL 
+SPECIFICATION
+© ISO/IEC 2018
+PD ISO/IEC TS 22237‑1:2018

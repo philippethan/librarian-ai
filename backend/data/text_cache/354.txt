@@ -1,21 +1,10 @@
-Leitfaden Safety 
-of the Intended 
-Functionality
-Verfeinerung der Sicherheit 
-der Sollfunktion auf dem Weg 
-zum autonomen Fahren
-Lars Schnieder · René S. Hosse
-essentials
-essentials liefern aktuelles Wissen in konzentrierter Form. Die Essenz dessen, 
-worauf es als „State-of-the-Art“ in der gegenwärtigen Fachdiskussion oder in der 
-Praxis ankommt. essentials informieren schnell, unkompliziert und verständlich
-•	 als Einführung in ein aktuelles Thema aus Ihrem Fachgebiet
-•	 als Einstieg in ein für Sie noch unbekanntes Themenfeld
-•	 als Einblick, um zum Thema mitreden zu können
-Die Bücher in elektronischer und gedruckter Form bringen das Expertenwissen 
-von Springer-Fachautoren kompakt zur Darstellung. Sie sind besonders für die 
-Nutzung als eBook auf Tablet-PCs, eBook-Readern und Smartphones geeignet. 
-essentials: Wissensbausteine aus den Wirtschafts-, Sozial- und Geisteswissenschaf-
-ten, aus Technik und Naturwissenschaften sowie aus Medizin, Psychologie und 
-Gesundheitsberufen. Von renommierten Autoren aller Springer-Verlagsmarken.
-Weitere Bände in der Reihe http://www.springer.com/series/13088
+Fundamentals of 
+Programming
+C++
+DRAFT
+Richard L. Halterman
+School of Computing
+Southern Adventist University
+July 11, 2019
+In the name of Almighty Allah
+Copyright © 2008–2019 Richard L. Halterman. All rights reserved.

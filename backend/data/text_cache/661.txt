@@ -1,71 +1,46 @@
- 
-i
-What Every Engineer Should 
-Know about Software Engineering
-This book offers a practical approach to understanding, designing, and building sound 
-software based on solid principles. Using a unique Q&A format, this book addresses 
-the issues that engineers need to understand in order to successfully work with soft­
-ware engineers, develop specifications for quality software, and learn the basics of 
-the most common programming languages, development approaches, and paradigms. 
-The new edition is thoroughly updated to improve the pedagogical flow and empha­
-size new software engineering processes, practices, and tools that have emerged in 
-every software engineering area.
-Features:
-	•
-Defines concepts and processes of software and software development, such as 
-agile processes, requirements engineering, and software architecture, design, 
-and construction.
-	•
-Uncovers and answers various misconceptions about the software develop­
-ment process and presents an up-​to-​date reflection on the state of practice in 
-the industry.
-	•
-Details how non-​software engineers can better communicate their needs to soft­
-ware engineers and more effectively participate in design and testing to ultim­
-ately lower software development and maintenance costs.
-	•
-Helps answer the question: How can I better leverage embedded software in 
-my design?
-	•
-Adds new chapters and sections on software architecture, software engineering 
-and systems, and software engineering and disruptive technologies, as well as 
-information on cybersecurity.
-	•
-Features new appendices that describe a sample automation system, covering 
-software requirements, architecture, and design.
-This book is aimed at a wide range of engineers across many disciplines who work 
-with software.
- 
- 
-ii
-What Every Engineer Should Know
-Series Editor
-Phillip A. Laplante
-Pennsylvania State University
-What Every Engineer Should Know about Developing Real-​Time Embedded Products
-Kim R. Fowler
-What Every Engineer Should Know about Business Communication
-John X. Wang
-What Every Engineer Should Know about Career Management
-Mike Ficco
-What Every Engineer Should Know about Starting a High-​Tech Business Venture
-Eric Koester
-What Every Engineer Should Know about MATLAB® and Simulink®
-Adrian B. Biran
-Green Entrepreneur Handbook: The Guide to Building and Growing a Green and 
-Clean Business
-Eric Koester
-What Every Engineer Should Know about Cyber Security and Digital Forensics
-Joanna F. DeFranco
-What Every Engineer Should Know about Modeling and Simulation
-Raymond J. Madachy and Daniel Houston
-What Every Engineer Should Know about Excel, Second Edition
-J.P. Holman and Blake K. Holman
-Technical Writing: A Practical Guide for Engineers, Scientists, and Nontechnical 
-Professionals, Second Edition
-Phillip A. Laplante
-What Every Engineer Should Know about the Internet of Things
-Joanna F. DeFranco and Mohamad Kassab
-What Every Engineer Should Know about Software Engineering
-Phillip A. Laplante and Mohamad Kassab
-What Every E
+PHYSICS
+FIFTH EDITION
+Alan Giambattista
+Physics
+Alan Giambattista
+Cornell University
+FIFTH EDITION
+PHYSICS: FIFTH EDITION
+Published by McGraw-Hill Education, 2 Penn Plaza, New York, NY 10121. Copyright © 2020 by  
+McGraw-Hill Education. All rights reserved. Printed in the United States of America. Previous editions  
+© 2016, 2010, and 2008. No part of this publication may be reproduced or distributed in any form or by 
+any means, or stored in a database or retrieval system, without the prior written consent of McGraw-Hill 
+Education, including, but not limited to, in any network or other electronic storage or transmission, or 
+broadcast for distance learning.
+Some ancillaries, including electronic and print components, may not be available to customers outside the 
+United States.
+This book is printed on acid-free paper.
+1 2 3 4 5 6 7 8 9 LWI 22 21 20 19
+ISBN 978-1-260-48691-9
+MHID 1-260-48691-5
+Portfolio Manager: Thomas Scaife, Ph.D
+Product Developer: Marisa Dobbeleare
+Marketing Manager: Shannon O’Donnell
+Content Project Managers: Laura Bies, Tammy Juran & Sandra Schnee
+Buyer: Laura Fuller
+Design: David W. Hash
+Content Licensing Specialist: Melissa Homer
+Cover Image: ©ostill/Shutterstock
+Compositor: Aptara®, Inc.
+All credits appearing on page or at the end of the book are considered to be an extension of the copyright 
+page.
+Library of Congress Cataloging-in-Publication Data
+Names: Giambattista, Alan, author. | Richardson, Betty McCarthy, author. |
+   Richardson, Robert C. (Robert Coleman), 1937-2013, author.
+Title: Physics / Alan Giambattista, Betty McCarthy Richardson, Robert C.
+   Richardson.
+Description: Fifth edition. | New York, NY : McGraw-Hill Education, [2020] |
+   Includes index.
+Identifiers: LCCN 2018055989 | ISBN 9781260486919 (alk. paper)
+Subjects:  LCSH: Physics—Textbooks.
+Classification: LCC QC21.3 .G537 2020 | DDC 530—dc23 LC record available at  
+https://lccn.loc.gov/2018055989
+The Internet addresses listed in the text were accurate at the time of publication. The inclusion of a website 
+does not indicate an endorsement by the authors or McGraw-Hill Education, and McGraw-Hill Education 
+does not guarantee the accuracy of the information presented at these sites.
+mheducation.com/highered

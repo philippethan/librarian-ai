@@ -1,1 +1,97 @@
-The Product is Docs Writing technical documentation in a product development group Christopher Gales and the Splunk Documentation TeamCopyright © 2020 Christopher Gales All rights reserved. Splunk® is a registered trademark of Splunk Inc. in the United States and other countries. All other brand names, product names, or trademarks belong to their respective owners. Any use of a trademarked name without a trademark symbol is for readability purposes only.Contents Title Page Copyright Preface to the Second Edition 1.   Introduction 2.   Agile 3.   Audience 4.   Collaborative Authoring 5.   Customer Feedback and Community 6.   Documentation Decisions 7.   Documenting Third-party Products 8.   Hiring, Training, and Managing Documentation Teams 9.   Learning Objectives 10.    Maintaining Existing Content 11.    Measuring Success 12.    Organizing Documentation Tiger Teams 13.    Research for Technical Writers 14.    Scenario-driven Information Development 15.    Technical Editing 16.    Technical Verification 17.    Tools and Content Delivery 18.    Working with Customer Support 19.    Working with Engineers 20.    Working with the Field 21.    Working with Marketing 22.    Working with Product Management 23.    Working with Remote Teams 24.    Working with User Experience and Design 25.    Writing SaaS Documentation 26.    Afterword and AcknowledgmentsPreface to the Second Edition In the two years since we first published The Product is Docs , the book has found an enthusiastic audience of documentarians, designers, product managers, developers, customer success managers, sales engineers, teachers of technical writing, and more. The royalties from the book have enabled us to donate thousands of dollars to a dozen different charities. And most important, the book has had the effect we hoped it would: to spark productive discussions in teams and companies around the world—and in the technical writing profession itself—about how to write technical documentation in a product development group. As just one example, two months before the publication of this second edition, a collection of Write the Docs community members gathered in a Slack channel to read a chapter every day and discuss it. We avidly followed that conversation and took a lot of notes, many of which are incorporated into this volume. The other changes and additions are the result of the past two years of experience within our team and our products group, and also because we thought of a few things we just plain missed the first time. Here are the new chapters: Chapter 6, “Documentation Decisions” Chapter 12, “Organizing Documentation Tiger Teams” Chapter 20, “Working with the Field” Chapter 25, “Writing SaaS Documentation” In addition, we made substantial revisions to the following chapters: Chapter 5, “Customer Feedback and Community”. We added a new section about working with the community and retitled the chapter accordingly. Chapter 7, “Documenting Third-party Products”. We reorganized
+EXAMINATION COPY 
+This text was provided free to an instructor for adoption consideration and use. 
+for the 
+Technical 
+rofessions 
+F O U R T H 
+E D I T I O N 
+K r i s t i n 
+R . 
+W o o l e v e r 
+DIRECTORY OF SAMPLE DOCUMENTS 
+Sample of Effective Organization Techniques 
+73 
+Good-News Letter: Direct Approach 
+215 
+Bad-News Letter: Indirect Approach 
+216 
+Bad-News Letter 
+217 
+Appreciation Letter 
+218 
+Inquiry Letter 
+219 
+Request for Action Memo 
+220 
+E-Mails 
+221 
+User Guide Instructions, Step by Step 
+243 
+Sample Brief Instructions 
+244 
+Sample Policy 
+245 
+Policy and Procedure on Same Page 
+246 
+Object/Product Description 
+261 
+Technical Object and Process Description 
+262 
+Technical Object Description 
+264 
+Portions of a Contemporary Executive Summary 
+280 
+Traditional Executive Summary 
+282 
+Informative Abstract 
+283 
+Informative Abstract for Funding Proposal 
+284 
+Descriptive Abstract 
+284 
+Letter of Transmittal 
+314 
+Sample Brief Report 
+315 
+Sample Progress Report 
+317 
+Sample Medical Report 
+319 
+Sample Final Summary Report 
+321 
+Letter of Transmittal 
+327 
+Sample Report 
+328 
+Request for Proposal (RFP) Sample 
+368 
+Sample Student Proposal 
+371 
+Sample Short Proposal 
+372 
+Sample Grant Proposal 
+376 
+Presentation Outline 
+443 
+Job Application Letter 
+471 
+Table of Contents for Technical Writing Portfolio 
+472 
+Thank You Letter 
+473 
+Chronological Resume 
+474 
+Targeted Resume 
+475 
+Function-Oriented Resume 
+476 
+Lu^lwfc'i riiinrIT" 
+MyTechCommKit is an electronic supplement that offers book-specific chapter 
+overviews, review quizzes, interactive writing exercises, downloadable checklists, and 
+links to current online articles to aid student learning and comprehension. Also included 
+in MyTechCommKit area wealth of sample documents—many interactive, as well as Re-
+search Navigator and Web Links, both of which provide assistance with and access to 
+powerful and reliable research material. 
+If your instructor ordered this text packaged with MyTechCommKit, use the access 
+code provided to begin using this robust resource. If your text did not come packaged 
+with an access code, you can purchase access by visiting www.MyTechCommKit.com. 

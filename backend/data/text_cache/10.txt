@@ -1,71 +1,190 @@
  
  
  
-9/3166/FDIS 
-FINAL DRAFT INTERNATIONAL STANDARD (FDIS) 
- 
-PROJECT NUMBER: 
-IEC 62290-1 ED3 
- 
-DATE OF CIRCULATION: 
-CLOSING DATE FOR VOTING: 
-2024-12-13 
-2025-01-24 
- 
-SUPERSEDES DOCUMENTS: 
-9/2946/CDV, 9/2997A/RVC 
- 
-IEC TC 9 : ELECTRICAL EQUIPMENT AND SYSTEMS FOR RAILWAYS 
-SECRETARIAT: 
-SECRETARY: 
-France 
-Mr Denis MIGLIANICO 
-OF INTEREST TO THE FOLLOWING COMMITTEES: 
-HORIZONTAL FUNCTION(S): 
  
  
-ASPECTS CONCERNED: 
- 
- SUBMITTED FOR CENELEC PARALLEL VOTING 
-Attention IEC-CENELEC parallel voting  
-The attention of IEC National Committees, members of 
-CENELEC, is drawn to the fact that this Final Draft 
-International Standard (FDIS) is submitted for parallel voting.  
-The CENELEC members are invited to vote through the 
-CENELEC online voting system. 
- NOT SUBMITTED FOR CENELEC PARALLEL VOTING 
- 
-This document is a draft distributed for approval. It may not be referred to as an International Standard until published as 
-such. 
-In addition to their evaluation as being acceptable for industrial, technological, commercial and user purposes, Final Draft 
-International Standards may on occasion have to be considered in the light of their potential to become standards to which 
-reference may be made in national regulations. 
-Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they 
-are aware and to provide supporting documentation. 
-Recipients of this document are invited to consider for future work to include relevant “In Some Countries” clauses. Recipien ts 
-are reminded that the CDV stage is the final stage for submitting ISC clauses. (SEE AC/22/2007 OR NEW GUIDANCE DOC). 
- 
-TITLE: 
-Railway applications - Urban guided transport management and command/control systems - Part 1: 
-System principles and fundamental concepts 
-PROPOSED STABILITY DATE: 2029 
-NOTE FROM TC/SC OFFICERS: 
+MODURBAN 
+FP6 Project: IP 516380 
+EC Contract n°: TIP4-CT-2005-516380 
  
  
-Copyright © 2024 International Electrotechnical Commission, IEC. All rights reserved. It is permitted to download this 
-electronic file, to make a copy and to print out the content for the sole purpose of preparing National Committee positions. 
-You may not copy or "mirror" the file or printed version of the document, or any part of it, for any other purpose without 
-permission in writing from IEC. 
  
-– 2 – 
-IEC FDIS 62290-1 © IEC 2024 
-CONTENTS 
-FOREWORD ........................................................................................................................... 4 
-INTRODUCTION ..................................................................................................................... 6 
-1 
-Scope .............................................................................................................................. 9 
-2 
-Normative references ...................................................................................................... 9 
-3 
-Terms, definitions and abbreviated terms ...................................................................... 10 
-3.1 
+ 
+ 
+ 
+ 
+WP26 - MANAGEMENT 
+ 
+ 
+– DELIVERABLE REPORT – 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Deliverable ID: 
+D108 Publishable-Final-Activity-
+Report 
+Deliverable Title: 
+Publishable Final Activity Report – M1-M51 
+Responsible part-
+ner: 
+ALMA / UNIFE 
+Contributors: 
+All MODURBAN Partners 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MODURBAN Contract: TIP4-CT-2005-516380 
+Deliverable Report – Management – D108 
+Doc Name: Deliverable Report – D108 
+ 
+Date: 14/05/2009 
+ID: REP_MODURBAN-Publishable-Final-Activity-Report_ALMA_090514_V3 
+Security: Public 
+Revision: V3 
+ 
+Page 2 of 38 
+Document Information 
+Document Name:   
+REP_MODURBAN-Publishable-Final-Activity-Report_ALMA_090514_V3 
+Document ID:  
+ 
+D108 
+Revision:  
+ 
+V3 
+Revision Date:  
+ 
+14/05/2009 
+Author: 
+ 
+C. GOUTORBE, ALMA / B. VON WULLERSTORFF, UNIFE 
+Security: 
+ 
+Public 
+ 
+Approvals 
+ 
+ 
+Name 
+Company 
+Date 
+Visa 
+ 
+ 
+ 
+ 
+ 
+Technical  
+Management 
+Committee 
+B. VON WULLERSTORFF 
+G. POITRASSON-RIVIERE 
+D. DIMMER 
+G. LEGOFF 
+L. LINDQVIST 
+U. HENNING / A. PRICE 
+M. NOCK 
+JP RICHARD / D. COINEAU 
+Y. AMSLER 
+C. GOUTORBE 
+UNIFE 
+ALSTOM 
+THALES 
+ANSALDO STS 
+BOMBARDIER 
+SIEMENS 
+KNORR BREMSE 
+RATP 
+UITP 
+ALMA 
+14/05/09 
+OK 
+Coordinator 
+B. VON WULLERSTORFF 
+UNIFE 
+14/05/09 
+OK 
+Quality Manager 
+B. VON WULLERSTORFF 
+C. GOUTORBE 
+UNIFE 
+ALMA 
+14/05/09 
+OK 
+ 
+Document history 
+ 
+Revision 
+Date 
+Modification 
+Author 
+V0 
+18/03/2009 
+Template provided to Subprojects leaders for completion 
+ALMA 
+V1 
+29/04/2009 
+First version including inputs from SP leaders 
+SP Leaders 
+V2 
+13/05/2009 
+Second version consolidating all input 
+ALMA 
+V3 
+14/05/2009 
+Final version including coordinator’s revisions and input 
+UNIFE / ALMA 
+ 
+ 
+ 
+MODURBAN Contract: TIP4-CT-2005-516380 
+Deliverable Report – Management – D108 
+Doc Name: Deliverable Report – D108 
+ 
+Date: 14/05/2009 
+ID: REP_MODURBAN-Publishable-Final-Activity-Report_ALMA_090514_V3 
+Security: Public 
+Revision: V3 
+ 
+Page 3 of 38 
+ 
+ 
+TABLE OF CONTENT 
+ 
+1. 
+Project objectives and main achievements ____________________________________ 4 
+1.1. 
+Origin and objectives of the project ________________________________________ 4 
+1.2. 
+Consortium and structure ________________________________________________ 4 
+1.3. 
+Ambitions and outcomes ________________________________________________ 5 
+2. 
+Detailed subproject outcomes_______________________________________________ 8 
+2.1. 
+MODONBOARD _______________________________________________________ 8 
+2.2. 
+MODWAYSIDE_______________________________________________________ 13 
+2.3. 
+MODCOMM _________________________________________________________ 17 
+2.4. 
+MODACCESS________________________________________________________ 23 
+2.5. 
+MODENERGY _______________________________________________________ 27 
+2.6. 
+MODSYSTEM________________________________________________________ 33 
+3. 
+Dissemination and use ____________________________________________________ 37 

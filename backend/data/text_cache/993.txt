@@ -1,1 +1,37 @@
-DU MÊME AUTEUR L’homme qui voulait être heureux , Éditions Anne Carrière, 2008, et Pocket, 2010. Les dieux voyagent toujours incognito , Éditions Anne Carrière, 2010, et Pocket, 2012. Le philosophe qui n’était pas sage , coédition Kero/Plon, 2012, et Pocket, 2014. Nouvelle édition, Calmann-Lévy, 2022. Le jour où j’ai appris à vivre , Éditions Kero, 2014, et Pocket, 2016. Et tu trouveras le trésor qui dort en toi , Éditions Calmann-Lévy, 2016, et Le Livre de Poche, 2018. Je te promets la liberté , Éditions Calmann-Lévy, 2018, et Le Livre de Poche, 2020. L’art vous le rend bien (avec Camille Told), coédition Calmann-Lévy/Réunion des musées nationaux – Grand Palais, 2019. Intuitio , Éditions Calmann-Lévy, 2021, et Le Livre de Poche, 2023. Le Réveil , Éditions Calmann-Lévy, 2022, et Le Livre de Poche, 2023.Pour Annuène.Il faut que le Mal existe et vienne menacer le Bien pour que le Bien s’érige comme tel, et se manifeste dans toute sa beauté. Charles Pépin1 Le soleil, hésitant, n’arrive pas à se décider. Encouragées par le vent, les colonies de grands nuages blancs semblent prêtes à l’emporter mais, par intermittence, de puissants rayons d’or illuminent la Terre comme pour sonder ses profondeurs. David ferme les yeux. Il ferme les yeux mais cela ne change rien. Aucun moyen d’endormir sa conscience, d’oublier ce que dorénavant il sait. Aucun moyen d’adoucir l’épreuve qu’il doit affronter. Aucun moyen d’échapper à cette grande décision à prendre. Lui qui a toujours soigneusement évité de décider dans sa vie… Il aurait sans doute préféré ne pas savoir, ne pas se poser de questions, ne se douter de rien, et continuer de se complaire dans le charme de l’insouciance, la douceur de l’illusion, la paresse de la tranquillité de l’esprit. Mais la vie est malicieuse et têtue, elle se charge d’éclairer vos ombres en semant inlassablement sur votre chemin les événements qui vous obligeront à apprivoiser vos démons.  Impossible de priver votre âme de ce qu’elle a besoin d’expérimenter ici-bas. Impossible de couler une existence heureuse en contournant ce que vous devez apprendre. David ouvre les yeux. Décider. Il est forcé de décider. Forcé de trancher, de faire un choix qui impactera sa vie entière. Une véritable torture. Une torture pour éprouver son humanité…2 Dix jours plus tôt 21 h 04. Assise à son bureau de chef de l’État, la Présidente se fige. Sourcils froncés, elle lève les yeux vers le directeur des services de renseignement, debout face à elle, le visage impassible encadré de cheveux gris pâle, lèvres fines et lunettes épaisses. Cet homme-là pourrait lui annoncer l’arrivée imminente d’une apocalypse nucléaire qu’il garderait son expression indéchiffrable, masque de glace et voix monocorde. – C’est pour quand ? demande-t-elle. – Très prochainement. Deux ou trois mois si nous avons de la chance. Mais plus probablement d’ici quelques semaines. Elle le fixe en silence, mais, dans sa tête, ses pensées vont à toute allure. – Je vous remercie. L’autre se retir
+An overview of machine and deep learning-based
+intrusion detection systems in the Internet of Things
+Oumeima Boubertakh1, Ramdane Maamri1 and Ali Sahnoun1
+1LIRE Laboratory, University of Constantine 2 Abdelhamid Mehri
+Abstract
+The Internet of Things (IoT) is one of the hottest topics in the industrial and academic fields in recent
+years, and it is regarded as the next revolution of the internet. IoT security and privacy issues have proven
+to be critical targets.Since IoT devices have less memory, processing power, and power consumption,
+traditional security mechanisms are ineffective.Thus, A security mechanism called an Intrusion Detection
+System (IDS) has an important role in securing IoT nodes and networks.Machine learning and deep
+learning techniques have been proposed for automatic intrusion detection and abnormal behavior
+identification of networks.Hence, in this filed, the types of IDS, the recent research, and contributions to
+IDS in IoT networks are discussed in this paper.
+Keywords
+Internet of Things, Intrusion Detection Systems, Machine Learning, Deep Learning
+1. Introduction
+The Internet of Things (IoT) is one of the most rapidly evolving technological trends in recent
+years.According to [1] the number of IoT devices will reach 75 billion by 2025.Moreover,IoT
+is a new technology that collects data from the physical world and then transmits it over the
+internet to be exchanged, processed, and stored. By using actuators and smart appliances, the
+collected data is used to extract information and act on the physical world[2] Moreover,IoT has
+noticeably increased human day activities such as the delivery of efficient healthcare services
+and the development of smart cities,homes and intelligent transportation systems[3].Because of
+the resource limitations of the IoT, and the explosion in the number of unsecured IoT devices
+connected to the global network, IoT devices are more vulnerable and can be easily exploited by
+an attacker. Hence, the demands of IoT security is paramount.According to the literature, many
+works provide security in the IoT by utilizing cryptography based security mechanisms such
+as symmetric key cryptosystems and public key cryptosystems. Furthermore, cryptographic
+security mechanisms are primarily used to detect external attacks such as eavesdropping and
+message alteration.When the encryption methods hold the valid key and are compromised by
+the attack,they are unable to detect the vulnerable nodes. Attackers can easily obtain security
+details from compromised nodes and launch a series of internal intrusions[4]. As a result, the
+IDS serves as a tool to provide an additional level of security to the IoT.
+RIF’23: The 12th Seminary of Computer Science Research at Feminine, March 09, 2023, Constantine, Algeria
+$ oumeima.boubertakh@univ-constantine2.dz (O. Boubertakh); ramdane.maamri@univ-constantine2.dz
+(R. Maamri); ali.sahnoun.@univ-constantine2.dz (A. Sahnoun)
+© 2023 Copyright for this paper by its authors. Use permitted 

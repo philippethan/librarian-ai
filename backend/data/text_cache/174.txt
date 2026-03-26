@@ -1,23 +1,101 @@
-par la pratique
-avec Python et 
-OpenSSL
-Cours et applications concrètes
-Cryptographie
-Rémi Boulle
-Enseignant à l’IUT de Blagnac
-Préface de Stéphane Bortzmeyer
-11 rue Paul Bert, 92240 Malako 
-www.dunod.com
-J'adresse mes sincères remerciements à Stéphane Bortzmeyer qui m'a fait l'honneur de 
-préfacer cet ouvrage.
-Je remercie aussi vivement Gilles Peskine. Sa relecture rigoureuse et constructive a contribué 
-signiﬁcativement à la qualité de ce livre.
-Gilles Peskine est développeur de systèmes informatiques sécurisés. Normalien et docteur 
-en informatique, il cherche à répondre à la question : comment peut-on être sûr qu’un ordi-
-nateur fait bien ce qu’il est censé faire ? Il est mainteneur de la bibliothèque de cryptographie 
-Mbed TLS, utilisée principalement dans les systèmes embarqués, et dont il a notamment 
-redéﬁni l’interface d’appel des primitives cryptographiques.
-Direction et conception graphique de la couverture
-Nicolas Wiel – Pierre André Gualino (graphiste)
-© Dunod, 2024
-ISBN  978-2-10-087909-0
+JEDYNY MAGAZYN POę:,×&21<BUSINESS ENGLISH
+
+/.+2*($2ü6* 
+
+#.# 3$*
+
+Á6("9$-( 
+
+- &1 -( ,/
+)@JNĖÂFV@Q@MSTIDVXC@VMHBSVN Colorful
+business-english.com.pl
+colorfulmedia.pl
+TWÓJ
+DODATEK
+48
+12
+26
+The Business 
+of War
+Are Meal Delivery 
+Services Worth It? 
+Is Iceland’s Four-Day Workweek 
+a Blueprint for the Future?
+ISSN 1897-0796
+dwumiesięcznik nr 111
+styczeń-luty 2026
+cena: 34,90 zł (w tym 8% VAT)
+BUSINESS 
+BRAINWAVE: 
+TAKE 
+A TUK-TUK
+A TICKET TO 
+ADVANCEMENT?
+Colorful
+494/$ü-()26.)¿.2/(.&-×
+68# þ2/$") +-8"'
+ǤǩǝǭǤǠǡ
+    4
+Hokkaido Valley
+    6
+The Cost of the Internet
+ǨǪǨǠǩǯǮǤǩǣǤǮǯǪǭǴ
+    8
+The Stream Dream
+ǤǩǯǠǭǩǜǯǤǪǩǜǧ
+12
+The Business of War
+18
+Crash-Landing: The Turbulence 
+Hitting Small Airlines
+22
+Business Brainwave: Take 
+a Tuk-tuk
+26
+Are Meal Delivery Services 
+Worth It? 
+ǡǰǯǰǭǠǡǪǞǰǮ
+32
+Digital Governance
+ǞǪǱǠǭǮǯǪǭǴ
+38
+MBA – A Ticket to 
+Advancement?
+ǤǩǡǧǰǠǩǯǤǜǧǲǪǨǜǩ
+44
+Blaise Metreweli: Britain’s New 
+Female Spymaster
+ǝǰǮǤǩǠǮǮǫǭǪǡǤǧǠ
+48
+Is Iceland’s Four-Day Workweek 
+a Blueprint for the Future?
+ǱǤǟǠǪ
+ǯǭǜǱǠǧ
+54
+Ghana: West Africa’s Dynamic 
+Gateway Nation
+60
+Business in Ghana
+ǯǠǞǣǩǪǧǪǢǴ
+64
+Incredible New Translation 
+Tools Have Arrived – but Will 
+They Get Lost in Translation?
+ǨǜǩǜǢǤǩǢǫǠǪǫǧǠ
+70
+The Brilliant Jonathan Brill
+ǝǰǮǤǩǠǮǮǧǜǩǢǰǜǢǠ
+75
+Business Dialogues: 
+When the Numbers Don’t Add 
+Up
+ǜǯǯǣǠǠǩǟ
+b
+,QܿXHQWLDO 3HRSOH
+b
+Book & Film Reviews
+ǟǪǟǜǯǠǦǟǪǫǪǝǭǜǩǤǜ
+83
+3HUVRQDO )LQDQFH
+business-english.com.pl
+.2''267Ú38 v4827

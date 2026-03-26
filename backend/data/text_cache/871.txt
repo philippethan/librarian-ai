@@ -1,1 +1,59 @@
-Préambule Que contient ce livre et quel est son objectif ? L’ouvrage est organisé en cinq parties, selon une progression qui part de la manière dont sont formés les mots et d’où ils viennent ( parties I et II : origine et formation des mots), vers ce qui touche aux relations entre les mots et à leur sens ( parties III et IV : les relations lexicales et le sens des mots), pour terminer sur les figures de style et jeux de mots ( partie V ). Chaque partie s’ouvre sur des objectifs précis et des questions de réflexion visant à permettre au lecteur de s’interroger sur ses propres connaissances avant d’entrer dans la lecture du chapitre. Le lecteur y trouvera l’exposé de notions théoriques suivi de nombreux exercices permettant de tester ses connaissances en vocabulaire. L’objectif de cette structuration est double : comprendre le fonctionnement du lexique français et enrichir son vocabulaire de façon structurée . Les exercices proposés dans cet ouvrage sont nombreux et diversifiés : phrases à trous, définitions à compléter, exercices d’appariement, questions à choix multiple, etc. et présentent des degrés de difficultés variables (précisés par un symbole spécifique). Les extraits proposés dans les exercices proviennent essentiellement de sources littéraires, parfois de la presse et de la publicité. Les mots proposés dans cet ouvrage concernent un lexique courant le plus souvent, mais aussi un lexique savant (technique ou littéraire). Les définitions proposées dans les exercices sont courtes, voire tronquées et le plus souvent adaptées du CNRTL. Nous recommandons au lecteur d’être actif dans sa démarche d’apprentissage, c’est-à-dire de compléter certains exercices (notamment pour les mots nouveaux) par une recherche dans le dictionnaire, afin de vérifier les autres acceptions non illustrées et éventuellement le contexte d’emploi dudit terme. À la fin de chaque partie, le lecteur trouvera une liste d’ ouvrages de références , classés par thématiques, lui permettant d’approfondir ses connaissances. Ces listes comprennent des dictionnaires de langue, comme Le Robert, le CNRTL , mais aussi des dictionnaires spécialisés (comme des dictionnaires de synonymes et contraires, d’étymologie, d’expressions et locutions, etc.) qu’il est utile d’avoir à sa portée lorsqu’on cherche à améliorer son expression. En fin de l’ouvrage, se trouve un corrigé sommaire des exercices. Le lecteur pourra compléter le travail, pour certains termes, par une recherche dans les dictionnaires mis en référence. Enfin, l’ouvrage se termine par une annexe comportant les principaux morphèmes savants (ou racines grecques et latines) utilisés en français. Chaque morphème y est présenté avec son sens étymologique et son origine grecque ou latine, accompagné de nombreux exemples. Il revient au lecteur de vérifier dans le dictionnaire le sens des termes qui lui sont inconnus. À qui est destiné cet ouvrage ? Cet ouvrage s’adresse tout particulièrement aux étudiants de premier cycle universitair
+Physics
+The Higgs Boson 
+and Beyond 
+Subtopic
+Professor Sean Carroll
+California Institute of Technology
+Science  
+& Mathematics
+Topic
+Course Guidebook
+PUBLISHED BY:
+THE GREAT COURSES
+Corporate Headquarters
+4840 Westfields Boulevard, Suite 500
+Chantilly, Virginia 20151-2299
+Phone: 1-800-832-2412
+Fax: 703-378-3819
+www.thegreatcourses.com
+Copyright © The Teaching Company, 2015
+Printed in the United States of America
+This book is in copyright. All rights reserved. 
+Without limiting the rights under copyright reserved above,
+no part of this publication may be reproduced, stored in 
+or introduced into a retrieval system, or transmitted, 
+in any form, or by any means 
+(electronic, mechanical, photocopying, recording, or otherwise), 
+without the prior written permission of
+The Teaching Company.
+i
+Sean Carroll, Ph.D.
+Research Professor of Physics 
+California Institute of Technology
+P
+rofessor Sean Carroll is a Research 
+Professor of Physics at the California 
+Institute of Technology. He did his 
+undergraduate work at Villanova University and 
+received his Ph.D. in Astrophysics from Harvard 
+in 1993. His research involves theoretical physics 
+DQG DVWURSK\VLFV ZLWK D IRFXV RQ LVVXHV LQ FRVPRORJ\ ¿HOG WKHRU\ 
+and gravitation.
+Prior to arriving at Caltech, Professor Carroll taught and did research at the 
+Massachusetts Institute of Technology; the Kavli Institute for Theoretical 
+Physics at the University of California, Santa Barbara; and the University 
+of Chicago. His major contributions have included models of interactions 
+among dark matter, dark energy, and ordinary matter; alternative theories 
+of gravity; and violations of fundamental symmetries. His current research 
+LQYROYHVWKHIRXQGDWLRQVRITXDQWXPPHFKDQLFVWKHSK\VLFVRILQÀDWLRQDU\
+cosmology, and the origin of time asymmetry.
+While at MIT, Professor Carroll won the Graduate Student Council Teaching 
+Award for his course on general relativity, the lecture notes of which were 
+expanded into the textbook Spacetime and Geometry: An Introduction to 
+General Relativity, published in 2003. In 2006, he received the College of 
+Liberal Arts and Sciences Alumni Medallion from Villanova University, and 
+in 2010, he was elected a Fellow of the American Physical Society.
+Professor Carroll is the author of From Eternity to Here: The Quest for the 
+Ultimate Theory of Time, a popular book on cosmology and time. His latest 
+book is The Particle at the End of the Universe, about the Higgs boson and 
+the Large Hadron Collider. 

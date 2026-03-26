@@ -1,24 +1,38 @@
-MÉCANIQUE1
-René Lafrance
-Avec la collaboration de
-Jean Parent
-Ph sique
-MÉCANIQUE1
-René Lafrance
-Avec la collaboration de
-Jean Parent
-Révision scienti?que des épreuves
-Maxime Verreault, Cégep de Sainte-Foy
-Rédaction des capsules « Un peu d’histoire »
-Jean-Louis Trudel, CIRST et Université d’Ottawa
-Rédaction des dé?s animés en ligne
-Jean Parent, Collège de Bois-de-Boulogne
-Rédaction des problèmes synthèse en ligne
-Alexandre April, Cégep Garneau
-Olivier Tardif-Paradis, Cégep Garneau
-Rédaction des solutionnaires en ligne
-Michel Bisson-Viens, Cégep de Sainte-Foy
-René Lafrance, Collège de Bois-de-Boulogne
-Maxime Verreault, Cégep de Sainte-Foy
-François Vervaet, Collège Lionel-Groulx
-Ph sique
+BSI Standards Publication
+Interpreting services — General 
+requirements and recommendations
+BS ISO 18841:2018
+National foreword
+This British Standard is the UK implementation of ISO 18841:2018.
+The UK participation in its preparation was entrusted to Technical 
+Committee TS/1, Terminology.
+A list of organizations represented on this committee can be obtained on 
+request to its secretary.
+This publication does not purport to include all the necessary provisions 
+of a contract. Users are responsible for its correct application.
+© The British Standards Institution 2018
+Published by BSI Standards Limited 2018
+ISBN 978 0 580 83271 0
+ICS 01.020; 03.080.99
+Compliance with a British Standard cannot confer immunity from 
+legal obligations. 
+This British Standard was published under the authority of the 
+Standards Policy and Strategy Committee on 31 January 2018.
+Amendments/corrigenda issued since publication
+Date
+Text affected
+BRITISH STANDARD
+BS ISO 18841:2018
+© ISO 2018
+Interpreting services — General 
+requirements and recommendations
+Services d'interprétation — Exigences et recommandations générales
+INTERNATIONAL 
+STANDARD
+ISO
+18841
+First edition
+2018-01-15
+Reference number
+ISO 18841:2018(E)
+BS ISO 18841:2018

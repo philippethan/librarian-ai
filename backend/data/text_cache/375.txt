@@ -1,17 +1,53 @@
-n° 3886-3887 semaines du 24 décembre 2025 au 7 janvier 2026
-Livres   
-Les tops et les flops de 2025 : 
-Nicolas Sarkozy, Dan Brown, 
-Salomé Saqué, Anne Hidalgo...  
-NUMÉRO DOUBLE  
-DOSSIER SPÉCIAL  
-DE 24 PAGES
-PARIS, 
-CAPITALE  
-DES ESPIONS
-CIA, KGB, Mossad, DGSE…  
-Cent ans d’opérations secrètes
-’:HIKLRC=WU\^U]:?d@s@i@q@g"
-M 01722 - 3886S - F: 7,90 E - RD
-:HIKLRC=WU\^U]:?d@s@i@q@g
-DOM : 7,90 € • ALLEMAGNE 8,50 € • BELGIQUE, ESPAGNE, GRÈCE, ITALIE, PAYS-BAS, PORTUGAL CONT. : 7,90 € • LUXEMBOURG : 8,30 € • AFRIQUE CFA : 4 800 CFA • POLYN. : 1 200 XPF • N.-CAL. : 1 300 XPF • CANADA : 12,95 CAD • MAROC : 65 MAD • TUNISIE : 10 TND • SUISSE : 9,90 CHF
+Prompt  
+Engineering
+Author: Lee Boonstra
+Prompt Engineering
+February 2025
+2
+Acknowledgements
+Content contributors
+Michael Sherman
+Yuan Cao
+Erick Armbrust
+Anant Nawalgaria
+Antonio Gulli
+Simone Cammel
+Curators and Editors
+Antonio Gulli
+Anant Nawalgaria
+Grace Mollison 
+Technical Writer
+Joey Haymaker
+Designer
+Michael Lanning 
+Introduction
+6
+Prompt engineering
+7
+LLM output configuration
+8
+Output length
+8
+Sampling controls
+9
+Temperature	
+9
+Top-K and top-P	
+10
+Putting it all together	
+11
+Prompting techniques
+13
+General prompting / zero shot
+13
+One-shot & few-shot
+15
+System, contextual and role prompting
+18
+System prompting	
+19
+Role prompting	
+21
+Contextual prompting	
+23
+Table of contents

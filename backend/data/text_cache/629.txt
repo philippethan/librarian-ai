@@ -1,30 +1,217 @@
-Railway Signalling 
-and Interlocking
-International Compendium
-Gregor Theeg | Sergej Vlasenko (Eds.)
-3rd Edition
-eBOOK
-INSIDE
-siemens.com/mobility
-&UHDWLQJLQWHOOLJHQW
-LQIUDVWUXFWXUH
-Siemens Mobility Management is digitally 
-connecting infrastructure – in a safe and 
-secure way. Such that the data gathered 
-offers new oppurtunities for analytics, 
-process automation and even business 
-models – turning mobility into a digitally 
-connected universe.
-Persönliches Exemplar für oe9iez2i@yopmail.com
-© GRT Global Rail Academy and Media GmbH / Trackomedia. Weitergabe an Dritte urheberrechtlich untersagt
-E-Book inside
-Please register on:
-https://www.pmcmedia.com/e-book-download
-and use this publication as an e-book for free.
-The download code for this book is: BZ8Z8N
-Downloading this publication as an e-book is subject to applicable 
-legal provisions.
-© 2020 PMC Media House GmbH. All rights reserved.
-Any dissemination or duplication without permission is prohibited.
-Persönliches Exemplar für oe9iez2i@yopmail.com
-© GRT Global Rail Academy and Media GmbH / Trackomedia. Weitergabe an Dritte urheberrechtlich untersagt
+
+
+
+
+
+Not Moving Out
+
+
+Cover
+
+
+Title Page
+
+
+Dedication
+
+
+Chapter One
+
+
+Chapter Two
+
+
+Chapter Three
+
+
+Chapter Four
+
+
+Chapter Five
+
+
+Chapter Six
+
+
+Chapter Seven
+
+
+Chapter Eight
+
+
+Chapter Nine
+
+
+Chapter Ten
+
+
+Chapter Eleven
+
+
+Chapter Twelve
+
+
+Chapter Thirteen
+
+
+Chapter Fourteen
+
+
+Chapter Fifteen
+
+
+Chapter Sixteen
+
+
+Chapter Seventeen
+
+
+Chapter Eighteen
+
+
+Chapter Nineteen
+
+
+Chapter Twenty
+
+
+Chapter Twenty-One
+
+
+Chapter Twenty-Two
+
+
+Chapter Twenty-Three
+
+
+Chapter Twenty-Four
+
+
+Chapter Twenty-Five
+
+
+Chapter Twenty-Six
+
+
+Chapter Twenty-Seven
+
+
+Chapter Twenty-Eight
+
+
+Chapter Twenty-Nine
+
+
+Chapter Thirty
+
+
+Chapter Thirty-One
+
+
+Chapter Thirty-Two
+
+
+Chapter Thirty-Three
+
+
+Chapter Thirty-Four
+
+
+Chapter Thirty-Five
+
+
+Chapter Thirty-Six
+
+
+Chapter Thirty-Seven
+
+
+Chapter Thirty-Eight
+
+
+Chapter Thirty-Nine
+
+
+Chapter Forty
+
+
+Chapter Forty-One
+
+
+A Letter from Jon
+
+
+Acknowledgements
+
+
+About the Author
+
+
+Also by Jon Rance
+
+
+Copyright
+
+
+
+
+
+
+Title Page
+
+
+Cover
+
+
+Table of Contents
+
+
+Start of Content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dedication
+To Charlotte and Jack
+
+
+
+
+
+
+
+
+Chapter One
+
+Joe
+Freya and I agreed to meet at Pelicano Coffee Co in The Lanes, which we had been to before during happier times and it was one of our favourites. We could have held the meeting in the comfortable surroundings of home, but we thought a neutral venue like the Paris Peace Conference after the First World War was probably better. Paris seemed a little far, and so we decided on one of the best coffee spots in Brighton instead. We were meeting to discuss the terms of our separation, write a manifesto of a way forward, while sipping coffees and nibbling on pastries on a damp morning in late March. It was a thoroughly depressing occasion, but at least the coffee would be on point.
+‘I see a table back there,’ said Freya tentatively, looking towards the rear of the coffee shop.
+‘Right, I’ll get the coffees. The usual?’
+‘The usual,’ said Freya, with a nostalgic glance towards me that sated both of our needs for something meaningful in a morning that had, until that point, felt unwaveringly practical and devoid of the emotion it deserved. It was like watching one of the royal family lay a wreath on Remembrance Day. You knew there were emotions beneath the surface, but they were so focused on doing a good job, and not falling over in front of the nation, it always came across as a bit robotic. I ordered Freya her usual oat milk latte, and my flat white, plus a couple of pastries, and waited for those before I walked across and sat opposite my wife. It felt like a strange term considering she hadn’t felt like my wife or done anything a bit ‘wifey’ for quite a while, but until all of this played out, she was still my other half. Better half? Probably.
+Freya Jane Wallace was forty-five, and still beautiful in the same way she had always been beautiful to me. Strawberry-blonde hair, cornflower-blue eyes and pale skin she usually applied make-up to, to render her darker than she actually was, and to cover up

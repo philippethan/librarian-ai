@@ -1,47 +1,22 @@
-Richard Wolfson
-VOLUME TWO
-FOURTH EDITION
-GLOBAL EDITION
-Middlebury College
-Chapters 20–39
-Essential  
-University Physics
-Pearson Education Limited
-KAO Two
-KAO Park
-Hockham Way
-Harlow
-CM17 9SR
-United Kingdom
-and Associated Companies throughout the world
-Visit us on the World Wide Web at: www.pearsonglobaleditions.com
-© Pearson Education Limited 2021
-The rights of Richard Wolfson to be identified as the authors of this work have been asserted by him in accordance 
-with the Copyright, Designs and Patents Act 1988. 
-Authorized adaptation from the United States edition, entitled Essential University Physics: Volume 2, 4th Edition, 
-ISBN 978-0-134-98856-6 by Richard Wolfson, published by Pearson Education © 2020. 
-All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any 
-form or by any means, electronic, mechanical, photocopying, recording or otherwise, without either the prior written 
-permission of the publisher or a license permitting restricted copying in the United Kingdom issued by the Copyright 
-Licensing Agency Ltd, Saffron House, 6–10 Kirby Street, London EC1N 8TS. For information regarding permissions, 
-request forms and the appropriate contacts within the Pearson Education Global Rights & Permissions department, 
-please visit www.pearsoned.com/permissions/.
-All trademarks used herein are the property of their respective owners. The use of any trademark in this text does not 
-vest in the author or publisher any trademark ownership rights in such trademarks, nor does the use of such trade-
-marks imply any affiliation with or endorsement of this book by such owners. 
-Attributions of third party content appear on page C-1, which constitutes an extension of this copyright page.
-PEARSON, ALWAYS LEARNING, MasteringTM Physics are exclusive trademarks in the U.S. and/or other countries 
-owned by Pearson Education, Inc. or its affiliates.
-Unless otherwise indicated herein, any third-party trademarks that may appear in this work are the property of their 
-respective owners and any references to third-party trademarks, logos or other trade dress are for demonstrative or 
-descriptive purposes only. Such references are not intended to imply any sponsorship, endorsement, authorization, or 
-promotion of Pearson’s products by the owners of such marks, or any relationship between the owner and Pearson 
-Education, Inc. or its affiliates, authors, licensees or distributors.
-ISBN 10:   1-292-35118-7
-ISBN 13: 978-1-292-35118-6
-eBook ISBN 13: 978-1-292-35116-2
-British Library Cataloguing-in-Publication Data
-A catalogue record for this book is available from the British Library
-1 20
-Typeset by Integra Publishing Services
-eBook formatted by Integra Software Services
+Second Edition
+Networking
+Jill West
+CompTIA 
+Cloud+
+Guide to Cloud 
+Computing
+Australia • Brazil • Canada • Mexico • Singapore • United Kingdom • United States
+Australia • Brazil • Canada • Mexico • Singapore • United Kingdom • United States
+Copyright 2023 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+Copyright 2023 Cengage Learning. All Rights Reserved. May not be copied, scanned, or duplicated, in whole or in part. Due to electronic rights, some third party content may be suppressed from the eBook and/or eChapter(s).
+Editorial review has deemed that any suppressed content does not materially affect the overall learning experience. Cengage Learning reserves the right to remove additional content at any time if subsequent rights restrictions require it.
+This is an electronic version of the print textbook. Due to electronic rights restrictions,
+some third party content may be suppressed. Editorial review has deemed that any suppressed 
+content does not materially affect the overall learning experience. The publisher reserves the right 
+to remove content from this title at any time if subsequent rights restrictions require it. For
+valuable information on pricing, previous editions, changes to current editions, and alternate 
+formats, please visit www.cengage.com/highered to search by ISBN#, author, title, or keyword for 
+materials in your areas of interest.
+Important Notice: Media content referenced within the product description or the product 
+text may not be available in the eBook version.

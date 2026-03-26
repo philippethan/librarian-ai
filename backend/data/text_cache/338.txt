@@ -1,53 +1,61 @@
-Daniel Kleppner 
-Associate Professor of Physics 
-Massachusetts Institute 
-of Technology 
-Robert J. Kolenkow 
-Formerly Associate Professor 
-of Physics, Massachusett s 
-Institute of Technology 
-AN 
-INTRODUCTION 
-TO 
-MECHANICS 
-Boston, Massachusetts 
-Burr Ridge, Illinois 
-Dubuque, Iowa 
-Madison, Wisconsin 
-New York, New York 
-San Francisco, California 
-St. Louis, Missouri 
-AN 
-INTRODUCTION 
-TO 
-MECHANICS 
-McGraw-Hill 
-A Division ofTheMcGraw·HiUCompanies 
-Copyright © 1973 by McGraw-Hili, Inc. 
-All rights reserved. PrInted in the United States of America. Except as permitted 
-under the Copyright Act of 1976, no part of this publication may be reproduced or 
-distributed in any form or by any means, or stored in a data base or retrieval 
-system, without the prior written permission of the publisher. 
-Printed and bound by Book-mart Press, Inc. 
-30 31 32 33 34 35 36 37 38 39 
-BKM BKM 
-0 9 8 
-This book was set in News Gothic by The Maple Press Company.' 
-The editors were Jack L. Farnsworth and J. W. Maisel; 
-the designer was Edward A. Butler; 
-and the production supervisor was Sally Ellyson. 
-The drawings were done by Felix Cooper. 
-Library of Congress Cataloging in Publication Data 
-Kleppner. Daniel. 
-An introduction to mechanics. 
-1. 
-Mechanics. 
-QA805.K62 
-I. 
-Kolenkow. Robert. joint author. 
-531 
-72·11770 
-ISBN·13: 978·0'()7·035048-9 
-ISBN·IO: 0·07·035048·5 
-II 
-Title. 
+SECOND EDITION 2017
+Plant &
+Design Build
+Conditions of 
+Contract for
+GENERAL CONDITIONS
+GUIDANCE FOR THE PREPARATION
+OF PARTICULAR CONDITIONS AND ANNEXES:
+FORMS OF SECURITIES
+FORMS OF LETTER OF TENDER, LETTER OF
+ACCEPTANCE, CONTRACT AGREEMENT AND DISPUTE
+ADJUDICATION/AVOIDANCE AGREEMENT
+ISBN 978-2-88432-082-5
+This document is restricted for distribution within the Lexis Nexis platform - NOT FOR CONTRACT USE AND NOT PRINTABLE - ORIGINAL FOR SALE AT www.fidic.org
+FIDIC® Conditions of Contract for
+PLANT and DESIGN-BUILD
+FOR ELECTRICAL & MECHANICAL PLANT, 
+AND FOR BUILDING AND ENGINEERING 
+WORKS, DESIGNED BY THE CONTRACTOR
+Second Edition 2017
+ISBN 978-2-88432-082-5
+FEDERATION INTERNATIONALE DES INGENIEURS-CONSEILS
+INTERNATIONAL FEDERATION OF CONSULTING ENGINEERS
+INTERNATIONALE VEREINIGUNG BERATENDER INGENIEURE
+FEDERACION INTERNACIONAL DE INGENIEROS CONSULTORES
+GENERAL CONDITIONS
+GUIDANCE FOR THE 
+PREPARATION OF 
+PARTICULAR CONDITIONS 
+AND ANNEXES: FORMS 
+OF SECURITIES
+FORMS OF LETTER OF 
+TENDER, LETTER OF 
+ACCEPTANCE, CONTRACT 
+AGREEMENT AND 
+DISPUTE ADJUDICATION/
+AVOIDANCE AGREEMENT
+This document is restricted for distribution within the Lexis Nexis platform - NOT FOR CONTRACT USE AND NOT PRINTABLE - ORIGINAL FOR SALE AT www.fidic.org
+© FIDIC 2017
+COPYRIGHT
+Copyright © 2017 FIDIC, World Trade Center II, 29 route de Prés-Bois, Geneva Airport, CH-1215 
+Geneva, Switzerland. All rights reserved.
+FIDIC is the only Copyright owner of FIDIC publications, which are protected by the Berne 
+Convention for the Protection of Literary and Artistic Works, international conventions such 
+as TRIPS and the WIPO copyright treaty and national intellectual property laws. No part of 
+a FIDIC publication can be reproduced, translated, adapted, stored in a retrieval system or 
+communicated, in any form or by any means, mechanical, electronic, magnetic, photocopying, 
+recording or otherwise, without prior permission in writing from FIDIC. The version in English is 
+considered by FIDIC as the official and authentic text for the purposes of translation.
+TERMS AND CONDITIONS
+The widespread dissemination, acceptance and use of FIDIC publications and their translations 
+are important means for accomplishing FIDIC’s mission and are therefore actively promoted by 
+FIDIC. The sale of FIDIC publications and their translations is an important source of revenue for 
+FIDIC and its Member Associations. It creates resources for providing a wide range of services 
+meeting the business needs of member firms. All steps, starting with the initial drafting of 
+publications, often require considerable effort and expense.
+FIDIC regularly updates and reissues publications so that users can profit from the state-of-the-art. 
+By supplying publications, FIDIC does not grant any intellectual property rights. The purchase or 
+supply of a FIDIC publication, including forms for completion by a purchaser or authorised user, 
+does not confer author’s rights under any circumstances. 
+Users rely on the co

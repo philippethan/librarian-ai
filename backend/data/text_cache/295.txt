@@ -1,31 +1,120 @@
-HBR’s 10 Must Reads series is the definitive collection of ideas
-and best practices for aspiring and experienced leaders alike.
-These books offer essential reading selected from the pages of
-Harvard Business Review on topics critical to the success of
-every manager.
-Titles include:
-HBR’s 10 Must Reads 2015
-HBR’s 10 Must Reads 2016
-HBR’s 10 Must Reads 2017
-HBR’s 10 Must Reads 2018
-HBR’s 10 Must Reads 2019
-HBR’s 10 Must Reads 2020
-HBR’s 10 Must Reads 2021
-HBR’s 10 Must Reads 2022
-HBR’s 10 Must Reads 2023
-HBR’s 10 Must Reads 2024
-HBR’s 10 Must Reads for CEOs
-HBR’s 10 Must Reads for Executive Teams
-HBR’s 10 Must Reads for Mid-Level Managers
-HBR’s 10 Must Reads for New Managers
-HBR’s 10 Must Reads on AI
-HBR’s 10 Must Reads on AI, Analytics, and the New Machine Age
-HBR’s 10 Must Reads on Boards
-HBR’s 10 Must Reads on Building a Great Culture
-HBR’s 10 Must Reads on Business Model Innovation
-HBR’s 10 Must Reads on Career Resilience
-HBR’s 10 Must Reads on Change Management (Volumes 1 and 2)
-HBR’s 10 Must Reads on Collaboration
-HBR’s 10 Must Reads on Communication (Volumes 1 and 2)
-HBR’s 10 Must Reads on Creativity
-HBR’s 10 Must Reads on Design Thinking
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table of Contents
+Foreword
+Foreword
+Introduction
+PART 1 General Concepts
+Chapter 1 Elements for the Design of Embedded Computer Systems
+1.1. Introduction
+1.2. System modeling
+1.3. A brief presentation of UML
+1.4. Model-driven development approaches
+1.5. System analysis
+1.6. Methodological aspects of the development of embedded computer systems
+1.7. Conclusion
+1.8. Bibliography
+Chapter 2 Case Study: Pacemaker
+2.1. Introduction
+2.2. The heart and the pacemaker
+2.3. Case study specification
+2.4. Conclusion
+2.5. Bibliography
+PART 2 SysML
+Chapter 3 Presentation of SysML Concepts
+3.1. Introduction
+3.2. The origins of SysML
+3.3. General overview: the nine types of diagrams
+3.4. Modeling the requirements
+3.5. Structural modeling
+3.6. Dynamic modeling
+3.7. Transverse modeling
+3.8. Environment and tools
+3.9. Conclusion
+3.10. Bibliography
+Chapter 4 Modeling of the Case Study Using SysML
+4.1. Introduction
+4.2. System specification
+4.3. System design
+4.4. Traceability and allocations
+4.5. Test model
+4.6. Conclusion
+4.7. Bibliography
+Chapter 5 Requirements Analysis
+5.1. Introduction
+5.2. The AVATAR language and the TTool tool
+5.3. An AVATAR expression of the SysML model of the enhanced pacemaker
+5.4. Architecture
+5.5. Behavior
+5.6. Formal verification of the VVI mode
+5.7. Related work
+5.8. Conclusion
+5.9. Appendix: TTool
+5.10. Bibliography
+PART 3 MARTE
+Chapter 6 An Introduction to MARTE Concepts
+6.1. Introduction
+6.2. General remarks
+6.3. Several MARTE details
+6.4. Conclusion
+6.5. Bibliography
+Chapter 7 Case Study Modeling Using MARTE
+7.1. Introduction
+7.2. Software analysis
+7.3. Preliminary software design – the architectural component
+7.4. Software preliminary design – behavioral component
+7.5. Conclusion
+7.6. Bibliography
+Chapter 8 Model-Based Analysis
+8.1. Introduction
+8.2. Model and requirements to be verified
+8.3. Model-checking of the requirements
+8.4. Context exploitation
+8.5. Assessment
+8.6. Conclusion
+8.7. Bibliography
+Chapter 9 Model-Based Deployment and Code Generation
+9.1. Introduction
+9.2. Input models
+9.3. Generation of the implementation model
+9.4. Code generation
+9.5. Support tools
+9.6. Conclusion
+9.7. Bibliography
+PART 4 AADL
+Chapter 10 Presentation of the AADL Concepts
+10.1. Introduction
+10.2. General ADL concepts
+10.3. AADLv2, an ADL for design and analysis
+10.4. Taxonomy of the AADL entities
+10.5. AADL annexes
+10.6. Analysis of AADL models
+10.7. Conclusion
+10.8. Bibliography
+Chapter 11 Case Study Modeling Using AADL
+11.1. Introduction
+11.2. Review of the structure of a pacemaker
+11.3. AADL modeling of the structure of the pacemaker
+11.4. Overview of the functioning of the pacemaker
+11.5. AADL modeling of the software architecture of the pulse generator
+11.6. Modeling of the deployment of the pacemaker
+11.7. Conclusion
+11.8. Bibliography
+Chapter 12 Model-Based Analysis
+12.1. Introduction
+12.2. Behavioral validation, per mode and global
+12.3. Conclusion
+12.4. Bibliography
+Chapter 13 Model-Based Code Generation
+13.1. Introduction

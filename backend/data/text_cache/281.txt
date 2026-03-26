@@ -1,28 +1,48 @@
-HBR Guide to
-Generative AI
-for Managers
-Harvard Business Review Guides
-Arm yourself with the advice you need to succeed on the job, from the most
-trusted brand in business. Packed with how-to essentials from leading
-experts, the HBR Guides provide smart answers to your most pressing work
-challenges.
-The titles include:
-HBR Guide for Women at Work
-HBR Guide to AI Basics for Managers
-HBR Guide to Being a Great Boss
-HBR Guide to Being More Productive
-HBR Guide to Better Business Writing
-HBR Guide to Better Mental Health at Work
-HBR Guide to Building Your Business Case
-HBR Guide to Buying a Small Business
-HBR Guide to Changing Your Career
-HBR Guide to Coaching Employees
-HBR Guide to Collaborative Teams
-HBR Guide to Critical Thinking
-HBR Guide to Data Analytics Basics for Managers
-HBR Guide to Dealing with Conflict
-HBR Guide to Delivering Effective Feedback
-HBR Guide to Designing Your Retirement
-HBR Guide to Emotional Intelligence
-HBR Guide to Executing Your Strategy
-HBR Guide to Finance Basics for Managers
+Advanced Engineering 
+Mathematics with 
+MATLAB®
+In the five previous editions of Advanced Engineering Mathematics with MATLAB®, the author presented a text 
+firmly grounded in mathematics that engineers and scientists must understand and know how to use. Tapping 
+into decades of teaching at the US Navy Academy and the US Military Academy and serving for twenty-five 
+years at (NASA) Goddard Space Flight, he combines teaching and practical experience that is rare among au-
+thors of advanced engineering mathematics books.
+This edition continues to refine a smaller, easier to read, and useful version of this classic textbook. While 
+competing textbooks continue to grow, the book presents a slimmer, more practical option to align with the 
+expectations of today’s students. 
+The new edition of the author’s classic textbook continues on a path to creating the best possible learning re-
+source for instructors and students alike. Through extensive class testing over five previous editions, including 
+the author’s current course at the US Naval Academy, the book has been steadily improved. 
+The primary mission of this edition is to dramatically increase the quality and quantity of examples and prob-
+lems, especially in the chapters on differential equations and Laplace transforms. The chapters on differential 
+equations, linear algebra, Fourier series, and Laplace transforms have seen the greatest changes. Of course, this 
+edition continues to offer a wealth of examples and applications from scientific and engineering literature, a 
+highlight of previous editions.
+MATLAB® remains central to the presentation and is employed to reinforce the concepts that are taught. 
+Worked solutions are given in the back of the book. An Instructor’s Solutions Manual is also available. 
+Dean G. Duffy has taught at the US Naval Academy and US Military Academy. He spent 25 years working on 
+numerical weather prediction, oceanic wave modeling, and dynamical meteorology at NASA’s Goddard Space 
+Flight Center. Prior to this, he was a numerical weather prediction officer in the US Air Force. He earned his 
+Ph.D. in meteorology from MIT. Dr. Duffy has written several books on transform methods, engineering math-
+ematics, and mixed boundary value problems including Green’s Functions with Applications, Second Edition, 
+published by CRC Press.
+Advances in Applied Mathematics
+Series Editor: Daniel Zwillinger 
+Quantum Computation
+Helmut Bez and Tony Croft
+Computational Mathematics
+An Introduction to Numerical Analysis and Scientific Computing with Python
+Dimitrios Mitsotakis
+Delay Ordinary and Partial Differential Equations
+Andrei D. Polyanin
+Vsevolod G. Sorkin
+Alexi I. Zhurov
+Clean Numerical Simulation
+Shijun Liao
+Multiplicative Partial Differential Equations
+Svetlin Georgiev and Khaled Zennir
+Engineering Statistics
+A Matrix-Vector Approach with MATLAB®
+Lester W. Schmerr Jr. 
+General Quantum Numerical Analysis 
+Svetlin Georgiev and Khaled Zennir
+An Introduction to Partial Differential

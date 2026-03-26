@@ -1,64 +1,31 @@
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-Needs, Requirements, Verification, Validation  
-Lifecycle Manual 
-January 2022 
-Needs, Requirements, Verification, Validation Lifecycle Manual 
-i 
-INCOSE-TP-2021-002-01 | VERS/REV: 1  |  January 2022 
-COPYRIGHT INFORMATION 
-This INCOSE Technical Product was prepared by the International Council on Systems 
-Engineering (INCOSE).  It is approved by the INCOSE Technical Operations Leadership (or 
-CAB or BOD) for release as an INCOSE Technical Product. 
-Copyright (c) 2022 by INCOSE, subject to the following restrictions: 
-Author Use.  Authors have full rights to use their contributions in a totally unfettered way with 
-credit to the INCOSE Technical source.  Abstraction is permitted with credit to the source.  
-INCOSE Use.  Permission to reproduce and use this document or parts thereof by members of 
-INCOSE and to prepare derivative works from this document for INCOSE use is granted, 
-with attribution to INCOSE and the original author(s) where practical, provided this 
-copyright notice is included with all reproductions and derivative works. 
-External Use.  This document may not be shared or distributed to any non-INCOSE third 
-party.  Requests for permission to reproduce this document in whole or part, or to prepare 
-derivative works of this document for external and commercial use should be addressed to 
-the INCOSE Central Office, 7670 Opportunity Rd., Suite 220, San Diego, CA 92111-2222. 
-Electronic Version Use.  Any electronic version of this document is to be used for personal, 
-professional use only and is not to be placed on a non-INCOSE sponsored server for general 
-use.  
-Any additional use of these materials must have written approval from INCOSE Central. 
-Needs, Requirements, Verification, Validation Lifecycle Manual 
-ii 
-INCOSE-TP-2021-002-01 | VERS/REV: 1  |  January 2022 
-NEEDS, REQUIREMENTS, VERIFICATION, VALIDATION LIFECYCLE 
-MANUAL  
-Document No.: INCOSE-TP-2021.002-01 
-Version/Revision: Draft 0.8 
-Date: January 2022  
-Prepared by: 
-Requirements Working Group 
-International Council on Systems Engineering  
- 
-This Manual has been prepared and produced by a volunteer group of contributors within the 
-Requirements Working Group (RWG) of the International Council on Systems Engineering 
-(INCOSE).  Using inputs from the INCOSE authors and contributors, Lou Wheatcraft produced 
-this draft for review within the RWG. 
-Authors 
-The principal authors of this document are: 
-Lou Wheatcraft, Wheatland Consulting, LLC, USA 
-Tami Katz, Ball Aerospace and Technologies Corporation, USA 
-Michael Ryan, Capability Associates Pty Ltd, AU 
-Raymond B. Wolfgang, Sandia National Labs, USA 
-Major Contributors 
-Those who made a significant contribution to the generation of this document are: 
-Mark Abernathy, Space Telescope Science Institute, USAS 
-James R. Armstrong, Stevens Institute of Technology, USA 
-Brian Berenbach, Georgia Institute of Technology, USA 
-Simone Bergamo, Thales, FR 
-Ronald S. Carson, PhD, Seattle Pacific University, USA
+HBR’s 10 Must Reads
+HBR’s 10 Must Reads are definitive collections of classic ideas,
+practical advice, and essential thinking from the pages of
+Harvard Business Review. Exploring topics like disruptive
+innovation, emotional intelligence, and new technology in our
+ever-evolving world, these books empower any leader to make
+bold decisions and inspire others.
+TITLES INCLUDE:
+HBR’s 10 Must Reads for New Managers
+HBR’s 10 Must Reads on AI
+HBR’s 10 Must Reads on Building a Great Culture
+HBR’s 10 Must Reads on Change Management
+HBR’s 10 Must Reads on Communication
+HBR’s 10 Must Reads on Data Strategy
+HBR’s 10 Must Reads on Decision-Making
+HBR’s 10 Must Reads on Design Thinking
+HBR’s 10 Must Reads on Digital Transformation
+HBR’s 10 Must Reads on Emotional Intelligence
+HBR’s 10 Must Reads on High Performance
+HBR’s 10 Must Reads on Innovation
+HBR’s 10 Must Reads on Leadership
+HBR’s 10 Must Reads on Leading Winning Teams
+HBR’s 10 Must Reads on Managing People
+HBR’s 10 Must Reads on Managing Yourself
+HBR’s 10 Must Reads on Marketing
+HBR’s 10 Must Reads on Mental Toughness
+HBR’s 10 Must Reads on Strategy
+HBR’s 10 Must Reads on Women and Leadership
+HBR’s 10 Must Reads Boxed Set (6 Books)
+HBR’s 10 Must Reads Ultimate Boxed Set (14 Books)
+For a full list, visit hbr.org/mustreads.

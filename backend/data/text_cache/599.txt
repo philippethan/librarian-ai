@@ -1,28 +1,15 @@
-The Art of Systems  Architecting
-The Art of Systems Architecting, Fourth Edition, provides structured heuristics 
-to improve the least structured, most art‑like elements of systems design. It offers 
-unique techniques to bridge the difference between scientific engineering and quali‑
-tative design along with comprehensive methods for combining architectural design 
-with digital engineering. This book illustrates how to go from model‑based systems 
-architecture to model‑based systems engineering and includes case studies of good 
-and bad architectural decision‑making in major systems.
-Changes to this edition include materials on architecture processes, architecture 
-description frameworks, and integration with model‑based systems engineering 
-(MBSE) and digital engineering. The publication of the ANSI/IEEE 1471 and ISO/
-IEC 42010 standards on architecture description has provided common vocabulary 
-and organizing methods for documenting architectures. This edition provides a prac‑
-tical application of these standards in architecting and integrating their concepts with 
-a simple process framework. The rise of MBSE and digital engineering tools is in the 
-process of revolutionizing the development of complex systems. The emphasis has 
-been on detailed design descriptions and powerful analysis methods (for example, 
-digital twins). Architects can make effective use of these methods and tools as well, 
-and this new edition provides an integrated set of heuristics and modeling methods 
-to do so. There are many other improvements and additions included to bring this 
-textbook up to date.
-This book can be used as a reference book for engineers and managers involved 
-in creating new systems, people responsible for developing mandated architecture 
-descriptions, software architects, system architects, and systems engineers, or as a 
-textbook in graduate engineering courses.
-Exercises are interspersed throughout the text, with some designed for self‑testing 
-and understanding and others intended to provide opportunities for long‑term study 
-and further exploration of the subject.
+Dynamique VOLUME 2
+POUR INGÉNIEURS
+3e édition
+Adaptation : Éric David
+Ferdinand P. Beer E. Russell Johnston, Jr. Phillip J. Cornwell
+Brian P. Self
+Dynamique VOLUME 2
+POUR INGÉNIEURS
+3e édition
+Adaptation : Éric David, ÉTS – École de technologie supérieure
+Révision scientique : Maxime Verreault, Cégep de Sainte-Foy
+Ferdinand P. Beer, Late of Lehigh University
+E. Russell Johnston, Jr., Late of University of Connecticut
+Phillip J. Cornwell, Rose-Hulman Institute of Technology
+Brian P. Self, California Polytechnic State University – San Luis Obispo

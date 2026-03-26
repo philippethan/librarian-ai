@@ -1,77 +1,40 @@
-UNIVERSITY PHYSICS - I
-J.C. Upadhyaya
-M.Sc., Ph.D., F.Inst. P. (London)
-Formerly, Director /Professor Incharge, Dau Dayal Institute of Vocational Education,
-Dr. B.R. Ambedkar University, Agra
-Senior Reader in Physics, Agra College, Dr. B. R. Ambedkar University, Agra (INDIA)
-Professor of Physics, Moi University, Eldoret (1990-92)
-Assistant Professor of Physics (V.R.) University of Watertoo, Watertoo (CANADA) (1978-79)
-ISO 9001: 2015 CERTIFIED
-Part - I: MECHANICS, OSCILLATIONS AND PROPERTIES OF MATTER
-Part - II: ELECTRICITY, MAGNETISM AND ELECTROMAGNETIC
-© 
-Author
-No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any
-means, electronic, mechanical, photocopying, recording and/or otherwise without the prior written permission of the
-publisher.
-First Edition
-:
-2007
-Edition
-:
-2011
-Edition
-:
-2015
-Edition
-:
-2018
-Edition
-:
-2024
-Published by
-:
-Mrs. Meena Pandey for Himalaya Publishing House Pvt. Ltd.,
-“Ramdoot”, Dr. Bhalerao Marg, Girgaon, Mumbai - 400 004.
-Phone: 022-23860170, 23863863; Fax: 022-23877178
-E-mail: himpub@bharatmail.co.in; Website: www.himpub.com
-Branch Offices
-:
-New Delhi
-:
-“Pooja Apartments”, 4-B, Murari Lal Street, Ansari Road, Darya Ganj, New Delhi - 110 002.
-Phone: 011-23270392, 23278631; Fax: 011-23256286
-Nagpur
-:
-Kundanlal Chandak Industrial Estate, Ghat Road, Nagpur - 440 018.
-Phone: 0712-2721215, 2721216
-Bengaluru
-:
-Plot No. 91-33, 2nd Main Road, Seshadripuram, Behind Nataraja Theatre,
-Bengaluru - 560 020. Phone: 080-41138821; Mobile: 09379847017, 09379847005
-Hyderabad
-:
-No. 3-4-184, Lingampally, Besides Raghavendra Swamy Matham, Kachiguda,
-Hyderabad - 500 027. Phone: 040-27560041, 27550139
-Chennai
-:
-No. 34/44, Motilal Street, T. Nagar, Chennai - 600 017. Mobile: 09380460419
-Pune
-:
-“Laksha” Apartment, First Floor, No. 527, Mehunpura,
-Shaniwarpeth (Near Prabhat Theatre), Pune - 411 030.
-Phone: 020-24496323, 24496333; Mobile: 09370579333
-Cuttack
-:
-Plot No. 5F-755/4, Sector-9, CDA Market Nagar, Cuttack - 753 014,
-Odisha. Mobile: 09338746007
-Kolkata
-:
-3, S.M. Bose Road, Near Gate No. 5, Agarpara Railway Station,
-North 24 Parganas, West Bengal - 700109. Mobile: 09674536325
-DTP by
-:
-Agra
-Printed at
-: 
-Shree Balaji Art Press, Delhi., On behalf of HPH
+ជំពូកទី១េមេរៀនទី១៖បង្គុំនិងបំែបកកមា្លំង
+មុខវិជា្ជរូបវិទយថា្នក់ទី៩
+អ្នក្រគȪ ឡុចសុជាតា
+កញ្ចប់សិកǜ ឌី˪្លូមនិេទ្ទសល្អ២០២៦
+ឡុចសុជាតា
+រូបវិទយថា្នក់ទី៩ជំពូកទី១េមេរៀនទី១
+០៨កញញ២០២៥
+1 / 40
+េគាលបំណង
+បនា្ទប់ពីសិកǜេមេរៀនេនះចប់˪្អូនៗអាច៖
+ផ្គុំកមា្លំងពីរជាកមា្លំងផ្គួបមួយ
+បំែបកកមា្លំងមួយជាកមា្លំងផ្គុំពីរ
+អនុវត្តចបប់្របេលឡូ្រកាមក្នុងការបំែបកកមា្លំង
+ឡុចសុជាតា
+រូបវិទយថា្នក់ទី៩ជំពូកទី១េមេរៀនទី១
+០៨កញញ២០២៥
+2 / 40
+មាតិកា
+1
+បង្គុំកមា្លំងពីរ្រសបគា្នជាកមា្លំងផ្គួបមួយ
+2
+បង្គុំកមា្លំងផ្គុំពីរជាកមា្លំងផ្គួបមួយ
+ករណី®𝐹1 មានទិសេដដូច®𝐹2 (®𝐹1 ⇈®𝐹2)
+ករណី®𝐹1 មានទិសេដផ្ទុយ®𝐹2 (®𝐹1 ↑↓®𝐹2)
+ករណី®𝐹1 មានទិសេដែកងនឹង®𝐹2 (®𝐹1 ⊥®𝐹2)
+ករណី®𝐹1 និង®𝐹2 បេង្កីតបានមុំ𝜃((®𝐹1, ®𝐹2) = 𝜃)
+3
+បំែបកកមា្លំងមួយជាកមា្លំងផ្គុំពីរ្រសបគា្ន
+4
+បំែបកកមា្លំងមួយជាកមា្លំងផ្គុំជួបពីរ
+5
+្រតីេកាណមា្រត
+6
+េមេរៀនសេង្ខប
+7
+សំណួរនិងលំហាត់
+ឡុចសុជាតា
+រូបវិទយថា្នក់ទី៩ជំពូកទី១េមេរៀនទី១
+០៨កញញ២០២៥
+3 / 40

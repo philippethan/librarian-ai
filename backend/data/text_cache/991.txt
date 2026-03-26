@@ -1,1 +1,37 @@
-Simon Sinek est un optimiste qui croit en un avenir plus radieux pour l’humanité. Sa conférence TED est l’une des plus consultées de tous les temps. Pour en savoir plus sur son travail et découvrir comment inspirer votre entourage, rendez-vous sur le site StartWithWhy.com. David Mead a d’abord été formateur en entreprise. En 2009, il a rejoint Start With Why pour développer le contenu qui permet à Simon de faire connaître ses idées prodigieuses. Désormais, il donne des conférences et anime des séminaires visant à changer la perception du leadership et de la culture d’entreprise. Peter Docker a longtemps été pilote, puis officier de la Royal Air Force. Depuis qu’il a rejoint l’équipe Start With Why en 2011, il intervient auprès d’organisations du monde entier pour les aider à exprimer leur raison d’être, former leurs dirigeants et créer une culture d’entreprise permettant à chaque individu de s’épanouir. Autres ouvrages de Simon Sinek • Commencer par le Pourquoi – Comment les grands leaders nous inspirent à passer à l’action , traduit par Josée Amesse, Performance Édition, Longueuil (Québec), 2013. • Pourquoi les vrais leaders se servent en dernier , traduit par Michel Le Séac’h, Pearson, France, 2016. • Together is Better – A Little Book of Inspiration , illustré par Ethan M. Aldridge, Portfolio, New York, 2016. L’édition originale de cet ouvrage a été publiée aux États-Unis par Portfolio, une firme de Penguin Publishing Group, une division de Penguin Random House LLC, 375 Hudson Street, New York, New York 10014, États-Unis, sous le titre Find your Why – A Practical Guide for Discovering Purpose for You and Your Team. Copyright © 2017 by Sinek Partners, LLC. All rights reserved including the right of reproduction in whole or in part in any form. This edition published by arrangement with Portfolio, an imprint of Penguin Publishing Group, a division of Penguin Random House LLC. Mise en pages : APS-ie, Tours Epub : APS-ie, Tours © 2018, Pearson France, Paris, pour l’édition française © EpubsFR, 2021. Aucune représentation ou reproduction, même partielle, autre que celles prévues à l’article L. 122-5 2° et 3° a) du Code de la propriété intellectuelle ne peut être faite sans l’autorisation expresse de Pearson France ou, le cas échéant, sans le respect des modalités prévues à l’article L. 122-10 dudit code. ISBN édition imprimée : 978-2-7440-6692-4 ISBN édition numérique : 978-2-3260-5487-5Avant-propos par Simon Sinek L’épanouissement est un droit et non un privilège. Chacun de nous peut prétendre à se lever le matin en ayant envie d’aller travailler, à être comblé par son métier, à l’exercer en toute sérénité et à rentrer chez lui avec le sentiment d’avoir contribué à quelque chose d’important. L’épanouissement n’est pas une loterie. Il n’est pas réservé à une poignée de veinards qui seraient autorisés à dire : « J’adore ce que je fais. » Si vous dirigez une équipe ou une entreprise, il vous incombe de créer l’environnement où vos collaborateurs auro
+The Essentials of Technical
+Communication
+Fifth Edition
+Elizabeth Tebeaux
+TEXAS A&M UNIVERSITY
+Sam Dragga
+TEXAS TECH UNIVERSITY
+New York Oxford
+Oxford University Press
+Oxford University Press is a department of the University of Oxford. It furthers the University’s objective of excellence in
+research, scholarship, and education by publishing worldwide. Oxford is a registered trade mark of Oxford University Press in the
+UK and certain other countries.
+Published in the United States of America by Oxford University Press
+198 Madison Avenue, New York, NY 10016, United States of America.
+© Copyright © 2021, 2018, 2015, 2012, 2010 by Oxford University Press
+For titles covered by Section 112 of the US Higher Education Opportunity Act, please visit 
+www.oup.com/us/he for the latest
+information about pricing and alternate formats.
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form or by
+any means, without the prior permission in writing of Oxford University Press, or as expressly permitted by law, by license, or
+under terms agreed with the appropriate reproduction rights organization. Inquiries concerning reproduction outside the scope of
+the above should be sent to the Rights Department, Oxford University Press, at the address above.
+You must not circulate this work in any other form and you must impose this same condition on any acquirer.
+Library of Congress Cataloging-in-Publication Data
+Names: Tebeaux, Elizabeth, author. | Dragga, Sam, author.
+Title: The essentials of technical communication / Elizabeth Tebeaux and Sam Dragga.
+Description: Fifth edition. | New York, NY : Oxford University Press, [2021] | Includes index. | Summary: "This is an English
+textbook for students taking courses in technical communication"—Provided by publisher.
+Identifiers: LCCN 2020027361 | ISBN 9780197539200 (paperback) | ISBN 9780197539224 (epub)
+Subjects: LCSH: Technical writing. | Communication of technical information.
+Classification: LCC T11 .T295 2021 | DDC 808.06/66—dc23
+LC record available at 
+https://lccn.loc.gov/2020027361
+Printing number:9 8 7 6 5 4 3 2 1
+Printed by Quad Graphics, Inc., Mexico
+United States of America
+Created on: 26 October 2020 at 8:17 p.m.

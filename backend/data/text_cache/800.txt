@@ -1,1 +1,31 @@
-Fiches de culture générale ISBN : 978-2-4917141-4-7 © Le Monde Politique, 2024.citoyenneté communication et médias culture démocratie éducation environnement Etat famille genre et féminisme guerre Histoire idéologies individu intellectuels minorités et exclusion modernité mondialisation nation nature numérique politique pouvoir religion santé sciences et techniques travail ville violencecitoyenneté La citoyenneté est un statut juridique permettant à l’individu de participer à la vie civique et politique. Avec l’émergence de nouvelles citoyennetés (locales, européennes, mondiale), la notion est en constante évolution, son lien avec la nation étant remis en question. COMPRENDRE Le citoyen La notion de citoyen a été employée dès l’époque antique (avec l’ instauration de la démocratie par Clisthène en 508 av. J-C), le citoyen étant alors celui qui participait à la vie de la Cité. La démocratie antique était une démocratie directe, qui permettait aux citoyens de participer directement à la « chose publique ». Aujourd’hui, le nombre de citoyens est jugé trop important pour que ce système de démocratie s’applique aux régimes politiques actuels. A cette époque, la citoyenneté n’était réservée qu’à une partie de la population ; on distinguait en effet les esclaves, les femmes et les étrangers des citoyens. Cette notion réapparaît seulement au 16 e siècle et se développe au cours du 17 e siècle (Machiavel, Bodin, etc.). Mais ce n’est qu’avec la Déclaration des droits de l’homme et du citoyen de 1789 que la notion de citoyen a réellement acquis son sens actuel. Le statut de citoyen prend alors une dimension républicaine (considérations éthiques, sociales et morales); il n’est plus fondé sur des considérations conventionnelles (tradition, religion), mais rationnelles. Les droits acquis par le citoyen sont issus d’un véritable contrat : la déclaration offre des droits sous condition de respect de certaines obligations (contribution matérielle, etc.). Aujourd’hui, la notion de citoyen est très large ; on parle de « citoyen du monde » (notion déjà utilisée par Socrate) ou encore de citoyen européen, etc. Les premiers éléments d’une citoyenneté européenne ont été instaurés avec le traité de Maastricht et complétés par le traité de Lisbonne. Cette citoyenneté, qui se superpose à la citoyenneté nationale, avait été refusée par les Français lors du référendum de 2005. Les attributs de la citoyenneté La citoyenneté, notion abstraite et construction juridique, fait de l’homme un sujet de droit qui peut agir dans la sphère publique . Le citoyen fait de l’homme un être égal aux autres (quelles que soient les particularités religieuses, raciales ou  sociales). Cette égalité peut néanmoins conduire à une indifférenciation des individus (une différenciation des individus étant perçue comme discriminatoire). L’individu est citoyen dans la sphère publique, homme dans la société civile. Dans un Etat laïc comme la France, cette différenciation permet de séparer le religieux (
+SpringerBriefs in Computer Science
+Zhiguo Shi · Chaojie Gu · Shibo He · Kang Hu
+LoRa Localization
+System Design and 
+Performance Analysis
+SpringerBriefs in Computer Science
+SpringerBriefs present concise summaries of cutting-edge research and practical 
+applications across a wide spectrum of ﬁelds. Featuring compact volumes of 50 to 
+125 pages, the series covers a range of content from professional to academic. 
+Typical topics might include: 
+• 
+A timely report of state-of-the art analytical techniques 
+• 
+A bridge between new research results, as published in journal articles, and a 
+contextual literature review 
+• 
+A snapshot of a hot or emerging topic 
+• 
+An in-depth case study or clinical example 
+• 
+A presentation of core concepts that students must understand in order to make 
+independent contributions 
+Briefs allow authors to present their ideas and readers to absorb them with 
+minimal time investment. Briefs will be published as part of Springer’s eBook 
+collection, with millions of users worldwide. In addition, Briefs will be available 
+for individual print and electronic purchase. Briefs are characterized by fast, global 
+electronic dissemination, standard publishing contracts, easy-to-use manuscript 
+preparation and formatting guidelines, and expedited production schedules. We 
+aim for publication 8–12 weeks after acceptance. Both solicited and unsolicited 
+manuscripts are considered for publication in this series. 
+**Indexing: This series is indexed in Scopus, Ei-Compendex, and zbMATH **

@@ -1,36 +1,153 @@
-Copyright © 2003 by Leil Lowndes. All rights reserved. Manufactured in the United States of America.
-Except as permitted under the United States Copyright Act of 1976, no part of this publication may be
-reproduced or distributed in any form or by any means, or stored in a database or retrieval system, with-
-out the prior written permission of the publisher. 
-0-07-143334-1
-The material in this eBook also appears in the print version of this title: 0-07-141858-X 
-All trademarks are trademarks of their respective owners. Rather than put a trademark symbol after
-every occurrence of a trademarked name, we use names in an editorial fashion only, and to the benefit
-of the trademark owner, with no intention of infringement of the trademark. Where such designations
-appear in this book, they have been printed with initial caps. 
-McGraw-Hill eBooks are available at special quantity discounts to use as premiums and sales pro-
-motions, or for use in corporate training programs. For more information, please contact George
-Hoare, Special Sales, at george_hoare@mcgraw-hill.com or (212) 904-4069. 
-TERMS OF USE
-This is a copyrighted work and The McGraw-Hill Companies, Inc. (“McGraw-Hill”) and its licensors
-reserve all rights in and to the work. Use of this work is subject to these terms. Except as permitted
-under the Copyright Act of 1976 and the right to store and retrieve one copy of the work, you may not
-decompile, disassemble, reverse engineer, reproduce, modify, create derivative works based upon,
-transmit, distribute, disseminate, sell, publish or sublicense the work or any part of it without
-McGraw-Hill’s prior consent. You may use the work for your own noncommercial and personal use;
-any other use of the work is strictly prohibited. Your right to use the work may be terminated if you
-fail to comply with these terms. 
-THE WORK IS PROVIDED “AS IS”. McGRAW-HILLAND ITS LICENSORS MAKE NO GUAR-
-ANTEES OR WARRANTIES AS TO THE ACCURACY, ADEQUACY OR COMPLETENESS OF
-OR RESULTS TO BE OBTAINED FROM USING THE WORK, INCLUDING ANY INFORMA-
-TION THAT CAN BE ACCESSED THROUGH THE WORK VIA HYPERLINK OR OTHERWISE,
-AND EXPRESSLY DISCLAIM ANY WARRANTY, EXPRESS OR IMPLIED, INCLUDING BUT
-NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
-PARTICULAR PURPOSE. McGraw-Hill and its licensors do not warrant or guarantee that the func-
-tions contained in the work will meet your requirements or that its operation will be uninterrupted or
-error free. Neither McGraw-Hill nor its licensors shall be liable to you or anyone else for any inac-
-curacy, error or omission, regardless of cause, in the work or for any damages resulting therefrom.
-McGraw-Hill has no responsibility for the content of any information accessed through the work.
-Under no circumstances shall McGraw-Hill and/or its licensors be liable for any indirect, incidental,
-special, punitive, consequential or similar damages that result from the use of or inability to use the
-work, even if any of them has been ad
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRÉSENTATION
+
+« Toujours, l’amour aura le dessus sur l’oubli. »
+ 
+« On m’a fait aimer en ce bas monde trois choses : les parfums, les femmes et la prière, qui reste la plus importante à mes yeux », affirmait le prophète. C’est dire que l’on peut être un musulman fidèle, sans être ennemi de la jouissance charnelle. D’Abdeker, ou l’art de conserver la beauté aux maîtres d’élégance, les Zourafas, Malek Chebel a parcouru l’univers amoureux des pays musulmans, du Maghreb au Proche-Orient, de la Turquie à la Perse. Il nous offre ici un guide complet de la langue amoureuse, des mœurs, des techniques érotiques, de la médecine, de la jurisprudence, de l’esthétique, de la psychologie et de la mystique de cette civilisation qui n’a cessé d’être le support d’un imaginaire amoureux riche et complexe.
+ 
+Malek Chebel, anthropologue et psychanalyste, est l’auteur de nombreux ouvrages, dont Le Livre des séductions et Psychanalyse des Mille et Une Nuits.
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ÉDITIONS PAYOT & RIVAGESpayot-rivages.fr
+
+
+Note de l’éditeur. Cet ouvrage a paru précédemment en deux volumes dans la même collection.
+
+
+Conception graphique de la couverture : Sara DeuxIllustration : Miniature persane, XVIIe siècle© Roland et Sabrina Michaud / akg-images
+
+
+© Éditions Payot & Rivages, Paris, 1995, 2003 et 2020 pour la présente édition
+
+
+ISBN : 978-2-228-92622-5
+
+
+« Cette œuvre est protégée par le droit d’auteur et strictement réservée à l’usage privé du client. Toute reproduction ou diffusion au profit de tiers, à titre gratuit ou onéreux, de tout ou partie de cette œuvre, est strictement interdite et constitue une contrefaçon prévue par les articles L 335-2 et suivants du Code de la Propriété Intellectuelle. L’éditeur se réserve le droit de poursuivre toute atteinte à ses droits de propriété intellectuelle devant les juridictions civiles ou pénales. »
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+À Samia et à Mikaïl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AVERTISSEMENT
+
+
+
+1. Les initiales G., M., K. désignent respectivement Antoine Galland, Joseph-Charles Mardrus et René R. Khawam, traducteurs des Mille et Une Nuits. Mais l’édition qui est principalement utilisée est celle de Joseph-Charles Mardrus, en 16 volumes, parue dans La Revue blanche en 1900 et par la suite, dès le volume VI, aux éditions Eugène Fasquelle (1903-1906).
+2. Les mots en italique connotés par un astérisque sont des termes de théologie islamique ou du langage courant. Le lecteur trouvera un index explicatif en fin d’ouvrage.
+3. Sauf exception – toujours signalée –, les citations coraniques sont extraites de la traduction de Denise Masson publiée dans la collection « la Pléiade » (Gallimard) en 1967.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+La langue arabe dispose de plus d’une centaine de mots pour dire l’amour
+
+
+Les cinquante et un termes ci-dessus sont les plus importants
+
+
+(d’après Omar Ridha Kahhala).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Amour et érotisme dans la culture islamique
+
+
+
+De l’amour nous sommes issus.
+Selon l’amour nous sommes faits.
+C’est vers l’amour que nous tend

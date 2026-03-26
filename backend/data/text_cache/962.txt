@@ -1,1 +1,48 @@
-The Internet of Things The MIT Press Essential Knowledge Series Understanding Beliefs, Nils J. Nilsson Computing: A Concise History, Paul Ceruzzi The Conscious Mind, Zoltan L. Torey Crowdsourcing, Daren C. Brabham Free Will, Mark Balaguer Information and the Modern Corporation, James Cortada Intellectual Property Strategy, John Palfrey The Internet of Things, Samuel Greengard Memes in Digital Culture, Limor Shifman MOOCs, Jonathan Haber Open Access, Peter Suber Paradox, Margaret Cuonzo Waves, Fred Raichlen The Internet of Things Samuel Greengard The MIT Press Cambridge, Massachusetts London, England © 2015 Massachusetts Institute of Technology All rights reserved. No part of this book may be reproduced in any form by any electronic or mechanical means (including photocopying, recording, or information storage and retrieval) without permission in writing from the publisher. Library of Congress Cataloging-in-Publication Data Greengard, Samuel. The internet of things / Samuel Greengard. p.  cm.—(MIT press essential knowledge series) Includes bibliographical references and index. ISBN 978-0-262-52773-6 (hardcover : alk. paper) ISBN 978-0-262-32894-4 (retail e-book) 1. Embedded computer systems—Popular works. 2. Internet of things—Popular works. I. Title. TK7895.E43G74 2015 384.3—dc23 2014042259 10 9 8 7 6 5 4 3 2 1 Contents Series Foreword Acknowledgments Introduction 1    The Internet Changes Everything 2    Mobility, Clouds, and Digital Tools Usher in a Connected World 3    The Industrial Internet Emerges 4    Computer Devices Get Smart 5    Putting the Internet of Things to Work 6    The Reality and Repercussions of a Connected World 7    A Networked Future Emerges Glossary Notes Further Readings Index Series Foreword The MIT Press Essential Knowledge series offers accessible, concise, beautifully produced pocket-size books on topics of current interest. Written by leading thinkers, the books in this series deliver expert overviews of subjects that range from the cultural and the historical to the scientific and the technical. In today’s era of instant information gratification, we have ready access to opinions, rationalizations, and superficial descriptions. Much harder to come by is the foundational knowledge that informs a principled understanding of the world. Essential Knowledge books fill that need. Synthesizing specialized subject matter for nonspecialists and engaging critical topics through fundamentals, each of these compact volumes offers readers a point of access to complex ideas. Bruce Tidor Professor of Biological Engineering and Computer Science Massachusetts Institute of Technology Acknowledgments Writing a book is a huge investment in time and energy. This one was no exception. I’d like to thank Eileen Feretic at Baseline magazine for assigning a magazine story that served as the seed for many of the concepts and ideas that appear in this book. I'm also grateful for the insights and direction provided by Andrea Linne, editor of RF
+Chapter 1
+Oscillations
+David Morin, morin@physics.harvard.edu
+A wave is a correlated collection of oscillations. For example, in a transverse wave traveling
+along a string, each point in the string oscillates back and forth in the transverse direc-
+tion (not along the direction of the string). In sound waves, each air molecule oscillates
+back and forth in the longitudinal direction (the direction in which the sound is traveling).
+The molecules don’t have any net motion in the direction of the sound propagation. In
+water waves, each water molecule also undergoes oscillatory motion, and again, there is no
+overall net motion.1 So needless to say, an understanding of oscillations is required for an
+understanding of waves.
+The outline of this chapter is as follows.
+In Section 1.1 we discuss simple harmonic
+motion, that is, motioned governed by a Hooke’s law force, where the restoring force is
+proportional to the (negative of the) displacement. We discuss various ways to solve for the
+position x(t), and we give a number of examples of such motion. In Section 1.2 we discuss
+damped harmonic motion, where the damping force is proportional to the velocity, which
+is a realistic damping force for a body moving through a ﬂuid. We will ﬁnd that there are
+three basic types of damped harmonic motion. In Section 1.3 we discuss damped and driven
+harmonic motion, where the driving force takes a sinusoidal form. (When we get to Fourier
+analysis, we will see why this is actually a very general type of force to consider.) We present
+three diﬀerent methods of solving for the position x(t). In the special case where the driving
+frequency equals the natural frequency of the spring, the amplitude becomes large. This is
+called resonance, and we will discuss various examples.
+1.1
+Simple harmonic motion
+1.1.1
+Hooke’s law and small oscillations
+Consider a Hooke’s-law force, F(x) = −kx. Or equivalently, consider the potential energy,
+V (x) = (1/2)kx2. An ideal spring satisﬁes this force law, although any spring will deviate
+signiﬁcantly from this law if it is stretched enough. We study this F(x) = −kx force because:
+1The ironic thing about water waves is that although they might be the ﬁrst kind of wave that comes to
+mind, they’re much more complicated than most other kinds. In particular, the oscillations of the molecules
+are two dimensional instead of the normal one dimensional linear oscillations. Also, when waves “break”
+near a shore, everything goes haywire (the approximations that we repeatedly use throughout this book
+break down) and there ends up being some net forward motion. We’ll talk about water waves in Chapter
+12.
+1
+2
+CHAPTER 1. OSCILLATIONS
+• We can study it.
+That it, we can solve for the motion exactly.
+There are many
+problems in physics that are extremely diﬃcult or impossible to solve, so we might as
+well take advantage of a problem we can actually get a handle on.
+• It is ubiquitous in nature (at least approximately).
+It holds in an exact sense for
+an ideali

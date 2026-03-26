@@ -1,7 +1,90 @@
-Contents Cover Title Page Dedication Contents Introduction: The Death of a Relationship Truth 1: It Begins with You Truth 2: The Mind Is a Battlefield Truth 3: Lust Is Not the Same Thing as Love Truth 4: You Have to Love Yourself Truth 5: You Must Speak Up and Tell the Truth Truth 6: You Need to Be Your Best Self (Even After the Honeymoon) Truth 7: You Cannot Convince Someone to Love You Truth 8: No One Is Coming to Save You Truth 9: You Must Make Peace with Your Parents Conclusion: It’s Never Too Late to Choose Yourself Acknowledgments About the Author Copyright About the Publisher ii iii v 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 iv Guide Cover Contents Introduction: The Death of a RelationshipDedication To my mom: Thank you for understanding me. I love you.Introduction The Death of a Relationship On June 2, 2014, my life fell apart. My mother had recently been diagnosed with terminal cancer and given three months to
-            live. And that morning, I suffered my third miscarriage, and my husband left me. He broke up with me over the phone. First, he texted me. I was outside our building, sitting on a bench with my dog. I already knew something was very wrong.
-            I hadn’t heard from him all day, even though that morning I had woken up to what my gynecologist confirmed was a miscarriage.
-            I had an uneasy gut feeling that I was going to be abandoned. When my husband finally texted me at about 5 p.m., all he wrote
-            was, “I’m staying at my parents for a few days.” Panicked, I called him. Thankfully, he picked up. The twenty minutes that followed were some of the worst moments of my life.
-            “We’re just on two different paths, Jillian,” I remember him saying. “ What!? What the fuck are you saying? You’re just not going to come home? I’m bleeding uncontrollably because I am no longer pregnant , and you’re just going to leave?” At this point I was pacing up and down the street and felt—and probably looked—like a complete
-            madwoman. I knew my ex and I were struggling—really struggling. I’d spent the past two years working my ass off trying to convince him I was lovab
+TikZ
+TikZ
+&&
+PGF
+PGF
+Manual for Version 3.1.9a
+Manual for Version 3.1.9a
+\begin{tikzpicture}
+\coordinate (front) at (0,0);
+\coordinate (horizon) at (0,.31\paperheight);
+\coordinate (bottom) at (0,-.6\paperheight);
+\coordinate (sky) at (0,.57\paperheight);
+\coordinate (left) at (-.51\paperwidth,0);
+\coordinate (right) at (.51\paperwidth,0);
+\shade [bottom color=white,
+top color=blue!30!black!50]
+([yshift=-5mm]horizon -|
+left)
+rectangle (sky -| right);
+\shade [bottom color=black!70!green!25,
+top color=black!70!green!10]
+(front -| left) -- (horizon -| left)
+decorate [decoration=random steps] {
+-- (horizon -| right)
+}
+-- (front -| right) -- cycle;
+\shade [top color=black!70!green!25,
+bottom color=black!25]
+([yshift=-5mm-1pt]front -| left)
+rectangle ([yshift=1pt]front -| right);
+\fill [black!25]
+(bottom -| left)
+rectangle ([yshift=-5mm]front -| right);
+\def\nodeshadowed[#1]#2;{
+\node[scale=2,above,#1]{
+\global\setbox\mybox=\hbox{#2}
+\copy\mybox};
+\node[scale=2,above,#1,yscale=-1,
+scope fading=south,opacity=0.4]{\box\mybox};
+}
+\nodeshadowed [at={(-5,8
+)},yslant=0.05]
+{\Huge Ti\textcolor{orange}{\emph{k}}Z};
+\nodeshadowed [at={( 0,8.3)}]
+{\huge \textcolor{green!50!black!50}{\&}};
+\nodeshadowed [at={( 5,8
+)},yslant=-0.05]
+{\Huge \textsc{PGF}};
+\nodeshadowed [at={( 0,5
+)}]
+{Manual for Version \pgftypesetversion};
+\foreach \where in {-9cm,9cm} {
+\nodeshadowed [at={(\where,5cm)}] { \tikz
+\draw [green!20!black, rotate=90,
+l-system={rule set={F -> FF-[-F+F]+[+F-F]},
+axiom=F, order=4,step=2pt,
+randomize step percent=50, angle=30,
+randomize angle percent=5}] l-system; }}
+\foreach \i in {0.5,0.6,...,2}
+\fill
+[white,opacity=\i/2,
+decoration=Koch snowflake,
+shift=(horizon),shift={(rand*11,rnd*7)},
+scale=\i,double copy shadow={
+opacity=0.2,shadow xshift=0pt,
+shadow yshift=3*\i pt,fill=white,draw=none}]
+decorate {
+decorate {
+decorate {
+(0,0)- ++(60:1) -- ++(-60:1) -- cycle
+} } };
+\node (left text) ...
+\node (right text) ...
+\fill [decorate,decoration={footprints,foot of=gnome},
+opacity=.5,brown]
+(rand*8,-rnd*10)
+to [out=rand*180,in=rand*180] (rand*8,-rnd*10);
+\end{tikzpicture}
+Für meinen Vater, damit er noch viele schöne TEX-Graphiken erschaffen kann.
+Till
+Copyright 2007 to 2013 by Till Tantau
+Permission is granted to copy, distribute and/or modify the documentation under the terms of the gnu Free
+Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with
+no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in
+the section entitled gnu Free Documentation License.
+Permission is granted to copy, distribute and/or modify the code of the package under the terms of the gnu
+Public License, Version 2 or any later version published by the Free Software Foundation. A copy of the
+license is included in the section entitled gnu Public License.
+Permission is also granted to distribute and/or modify both the documentation and the code under the
+conditions of the LaTeX Project Public Li

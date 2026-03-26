@@ -1,16 +1,94 @@
-Contents
-About the Author
-Introduction
-How to Read Effectively
-The Six-Step Reading Process
-La Ratatouille folle
-La Créature
-Le Chevalier
-La Montre
-Le Coffre
-Terres inconnues
-Laure, la femme invisible
-La Capsule
-Solutions
-French-English Glossary
-Acknowledgements
+ 
+ 
+IATA Guidance Document for Passengers Travelling with Lithium Batteries  – 2025 
+ 
+ 
+ 
+OSS/Cargo 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+01/01/2025 
+ 
+Passengers Travelling with Lithium 
+Batteries Guidance Document 
+Revised for the 2025 Regulations 
+Introduction 
+   This document is based on the provisions set out in the 2025-2026 Edition of the ICAO Technical 
+Instructions for the Safe Transport of Dangerous Goods by Air  (Technical Instructions) and the 66th 
+Edition (2025) of the IATA Dangerous Goods Regulations (DGR). 
+There are different limitations and requirements when the lithium batteries are transported by air as 
+cargo or carried by passengers. However limitations primarily depend on: 
+a) The type of the lithium battery: 
+▪ 
+the Watt-hour (Wh) rating for lithium ion (rechargeable) batteries, or 
+▪ 
+the lithium metal content in grams (g) for lithium metal (non-rechargeable) batteries. 
+Note:  
+Watt-hour rating, expressed in Wh, shows the power of the lithium cell or battery, which is calculated by 
+multiplying the rated capacity in ampere-hours by the nominal voltage.  
+All lithium-ion batteries are required to have the Watt-hour rating marked on the outside of the battery case.  
+If passenger handling staff are unable to verify the Watt-hour rating by checking either the battery, or the user 
+documentation, the operator may reject the acceptance of the lithium battery, or the lithium battery powered 
+device. 
+b) How the battery is to be transported: 
+▪ 
+the battery itself (removed and/or spare (additional)) 
+▪ 
+installed in a device (removable and non-removable) 
+The purpose of this document is to provide guidance to comply with the provisions applicable to the 
+air transport of spare or removable & non-removable lithium batteries in devices when carried by 
+passengers as set out in the DGR.  
+ The information in this document is intended for guidance purposes only. It should not be relied upon 
+as a source of regulatory compliance. 
+Please note that there has been significant restructuring of the material in this document. When 
+compared to the 2024 edition of this document, certain text changes can be identified by:  
+Addition of an item   
+Change to an item   
+Deletion of an item   
+ 
+ 
+ 
+ 
+IATA Guidance Document for Passengers Travelling with Lithium Batteries  – 2025 
+ 
+ 
+ 
+OSS/Cargo 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+01/01/2025 
+Table of Contents 
+Introduction ............................................................................................................................................................................ 1 
+Table of Contents ................................................................................................................................................................. 2 
+Definitions ............................................................................................................................................................................... 3 
+How to Carr

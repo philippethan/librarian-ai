@@ -1,37 +1,95 @@
-The Essentials of Technical
-Communication
-Fifth Edition
-Elizabeth Tebeaux
-TEXAS A&M UNIVERSITY
-Sam Dragga
-TEXAS TECH UNIVERSITY
-New York Oxford
-Oxford University Press
-Oxford University Press is a department of the University of Oxford. It furthers the University’s objective of excellence in
-research, scholarship, and education by publishing worldwide. Oxford is a registered trade mark of Oxford University Press in the
-UK and certain other countries.
-Published in the United States of America by Oxford University Press
-198 Madison Avenue, New York, NY 10016, United States of America.
-© Copyright © 2021, 2018, 2015, 2012, 2010 by Oxford University Press
-For titles covered by Section 112 of the US Higher Education Opportunity Act, please visit 
-www.oup.com/us/he for the latest
-information about pricing and alternate formats.
-All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form or by
-any means, without the prior permission in writing of Oxford University Press, or as expressly permitted by law, by license, or
-under terms agreed with the appropriate reproduction rights organization. Inquiries concerning reproduction outside the scope of
-the above should be sent to the Rights Department, Oxford University Press, at the address above.
-You must not circulate this work in any other form and you must impose this same condition on any acquirer.
-Library of Congress Cataloging-in-Publication Data
-Names: Tebeaux, Elizabeth, author. | Dragga, Sam, author.
-Title: The essentials of technical communication / Elizabeth Tebeaux and Sam Dragga.
-Description: Fifth edition. | New York, NY : Oxford University Press, [2021] | Includes index. | Summary: "This is an English
-textbook for students taking courses in technical communication"—Provided by publisher.
-Identifiers: LCCN 2020027361 | ISBN 9780197539200 (paperback) | ISBN 9780197539224 (epub)
-Subjects: LCSH: Technical writing. | Communication of technical information.
-Classification: LCC T11 .T295 2021 | DDC 808.06/66—dc23
-LC record available at 
-https://lccn.loc.gov/2020027361
-Printing number:9 8 7 6 5 4 3 2 1
-Printed by Quad Graphics, Inc., Mexico
-United States of America
-Created on: 26 October 2020 at 8:17 p.m.
+Bernard Piraux, Yves Gossuin, Laurent Houssiau, Maryse Hoebeke,
+Philippe Gailly, Nicolas Tajeddine, Pascale Wauters, Jim Plumat
+Physique pour
+les sciences
+médicales
+Les bases physiques
+de la physiologie
+© Dunod, 2025
+11, rue Paul Bert, 92240 Malakoﬀ
+www.dunod.com
+ISBN 978-2-10-088651-7
+Table des matières
+Avant-propos .......................................................................................................
+IX
+CHAPITRE
+1
+MÉTHODES ET OUTILS MATHÉMATIQUES DE LA PHYSIQUE . . . . . . . . . . .
+1
+1 Les outils mathématiques ..................................................................................
+2
+1.1
+Le calcul différentiel et intégral
+1.2
+Les vecteurs
+2 Méthodes de la physique ...................................................................................
+33
+2.1
+Mesure d’une grandeur physique
+2.2
+Analyse dimensionnelle et loi d’échelle
+3 Applications ....................................................................................................
+45
+3.1
+La clairance
+3.2
+L’homéostasie thermique
+3.3
+Les lois d’échelle de Rubner et Kleiber
+CHAPITRE
+2
+LA CINÉMATIQUE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+66
+1 Translation et rotation ......................................................................................
+67
+1.1
+La translation et le modèle du point matériel
+1.2
+La rotation et le modèle du corps solide rigide
+2 Le mouvement du point matériel : position, vitesse et accélération ...........................
+68
+2.1
+La position
+2.2
+Le vecteur déplacement
+2.3
+La vitesse
+2.4
+L’accélération
+3 Étude de mouvements élémentaires ....................................................................
+75
+3.1
+De l’accélération à la vitesse puis à l’espace
+3.2
+Le mouvement rectiligne uniforme
+3.3
+Le mouvement rectiligne uniformément accéléré (MRUA)
+3.4
+Applications et problèmes
+4 Introduction aux mouvements de rotation ............................................................
+81
+4.1
+Variables angulaires
+4.2
+Le mouvement circulaire uniforme (MCU)
+4.3
+Les différents types d’accélérations
+5 La secousse .....................................................................................................
+86
+CHAPITRE
+3
+LA DYNAMIQUE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+89
+1 La notion de force.............................................................................................
+90
+1.1
+Déﬁnition
+1.2
+Le vecteur force
+1.3
+Force résultante
+1.4
+Forces de contact et forces à distance
+1.5
+Mesure et unité d’une force
+III

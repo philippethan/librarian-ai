@@ -1,25 +1,143 @@
-How to Talk to Anyone - 92 Little Tricks...How to Talk to Anyone - 92 Little Tricks... How to Talk to Anyone - 92 Little Tricks...How to Talk to Anyone - 92 Little Tricks... Introduction How to Get Anything You Want from Anybody (Well, at Least Have the Best Crack at It!) Have you ever admired those successful people who seem tohave it all? You see them 
-        chatting confidently at business meetings or comfortably at social parties. Theyre the 
-        ones with the best jobs, the nicest spouses, the finest friends, the biggest bank 
-        accounts, or the most fashionable zip codes. But wait a minute! A lot of them arent smarter than you. Theyre not more educated than 
-        you. Theyre not even better looing! So what is it? (Some people suspect they inherited 
-        it. Others say they married it or were just plain lucky. Tell them to think again.) What 
-        it boils down to is their more skillful way of deaing with fellow human beings. You see, nobody gets to the top alone. Over the years, people who seem to have it all have 
-        captured the hearts and conquered the minds of hundreds of others who helped boost them, 
-        rung by rung, to the top of whatever corporate or social ladder they chose. Wanna-bes wandering around at the foot of the ladder often gaze up and grouse that the big 
-        boys and big girls at the top are snobs. When big players dont give them their friendship, 
-        love, or business, they call them cliquish or accuse them of belonging to an old-boy 
-        network. Some grumble they hit their heads against a glass ceiling. The complaining Little Leaguers never realize the rejection was their own fault. Theyll 
-        never know they blew the affair, the friendship, or the deal because of their own communications fubles. Its as though 
-        well-liked people have a bag of tricks, a magic, or a Midas touch that turns everything 
-        they do into success. Whats in their bag of tricks? Youll find a lot of things: a sustance that solidifies 
-        friendships, a wizardry that wins minds, and a magic that makes people fall in love with 
-        them. They also posess a quality that makes bosses hire and then promote, a chara
-        teristic that keeps clients coming back, and an asset that makes customers buy from them 
-        and not the competition. We all have a few of those tricks in our bags, some more than 
-        others. Those with a whole lot of them are big winners in life. How to Talk to Anyone 
-        gives you ninety-two of these little tricks they use every day so you, too, can play the 
-        game to perfection and get whatever you want in life. How the Little Tricks Were Unveiled Many years ago, a drama teacher, exasperated at my bad acting in a college play, shouted, 
-        No! No! Your body is belying your words. Every tiny movement, every body position, he 
-        howled, divulges your private thoughts. Your face can make seven thousand diffeent 
-        expressi
+
+
+
+
+
+Contents
+
+Cover
+Front Matter
+Part I. SE-Principles
+
+1. Systems Thinking
+2. Process Models: Systems Engineering and Others
+
+
+Part II. The Problem-Solving Process
+
+3. Systems Design
+4. Project Management
+
+
+Part III. Systems Design as Systems Architecting and Concept Development
+
+5. Systems Architecting
+6. Concept Development
+
+
+Part IV. Case Studies
+
+7. The Systems Engineering Basics in Our Systems Engineering Concept
+8. Case Study 1: Private House Building: Additional Domicile
+9. Case Study 2: Airport Planning
+10. Case Study 3: Smart City and Science Tower, Graz
+
+
+Part V. SE for Practice
+
+11. Seven Basic Recommendations
+12. Typical Weak Areas in Projects (Stumbling Blocks)
+13. Activities Checklists
+14. Characteristics of Successful Project Management
+
+
+Part VI. Methods and Tools (M&T)
+
+15. Survey of Methods and Tools
+16. Encyclopedia/Glossary
+
+
+Back Matter
+
+
+
+Landmarks
+
+Cover
+Table of Contents
+Body Matter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reinhard Haberfellner, 
+Olivier de Weck, 
+Ernst Fricke and 
+
+Siegfried Vössner
+
+
+
+Systems Engineering
+Fundamentals and Applications
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reinhard Haberfellner
+
+Institute of General Management and Organization, Graz University of Technology, Graz, Austria
+
+
+
+Olivier de Weck
+
+Engineering Systems Division, MIT, Cambridge, MA, USA
+
+
+
+Ernst Fricke
+
+BMW AG, Munich, Germany
+
+
+
+Siegfried Vössner
+
+Engineering and Business Informatics, Graz University of Technology, Graz, Austria
+
+
+
+
+
+
+				ISBN 978-3-030-13430-3
+e-ISBN 978-3-030-13431-0
+
+
+https://doi.org/10.1007/978-3-030-13431-0
+
+Library of Congress Control Number: 2019934964
+© Springer Nature Switzerland AG 2019
+This work is subject to copyright. All rights are reserved by the Publisher, whether the whole or part of the material is concerned, specifically the rights of translation, reprinting, reuse of illustrations, recitation, broadcasting, reproduction on microfilms or in any other physical way, and transmission or information storage and retrieval, electronic adaptation, computer software, or by similar or dissimilar methodology now known or hereafter developed.
+The use of general descriptive names, registered names, trademarks, service marks, etc. in this publication does not imply, even in the absence of a specific statement, that such names are exempt from the relevant protective laws and regulations and therefore free for general use.
+The publisher, the authors, and the editors are safe to assume that the advice and information in this book are believed to be true and accurate at the date of publication. Neither the publisher nor the authors or the editors give a warranty, express or implied, with respect to the material contained herein or for any errors or omissions that may have been made. The publisher remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+This book is published under the imprint Birkhäuser, www.birkhauser-science.com by the registered company Springer Nature Switzerland AG
+The registered compan

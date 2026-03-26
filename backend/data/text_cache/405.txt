@@ -1,101 +1,144 @@
-MATHEMATICS FOR 
-MACHINE LEARNING
-Marc Peter Deisenroth
-A. Aldo Faisal
-Cheng Soon Ong
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+HBR Women at Work Series Collection (3 Books)
 Contents
-Foreword
-1
-Part I
-Mathematical Foundations
-9
-1
-Introduction and Motivation
-11
-1.1
-Finding Words for Intuitions
-12
-1.2
-Two Ways to Read This Book
-13
-1.3
-Exercises and Feedback
-16
-2
-Linear Algebra
-17
-2.1
-Systems of Linear Equations
-19
-2.2
-Matrices
-22
-2.3
-Solving Systems of Linear Equations
-27
-2.4
-Vector Spaces
-35
-2.5
-Linear Independence
-40
-2.6
-Basis and Rank
-44
-2.7
-Linear Mappings
-48
-2.8
-Affine Spaces
-61
-2.9
-Further Reading
-63
-Exercises
-64
-3
-Analytic Geometry
-70
-3.1
-Norms
-71
-3.2
-Inner Products
-72
-3.3
-Lengths and Distances
-75
-3.4
-Angles and Orthogonality
-76
-3.5
-Orthonormal Basis
-78
-3.6
-Orthogonal Complement
-79
-3.7
-Inner Product of Functions
-80
-3.8
-Orthogonal Projections
-81
-3.9
-Rotations
-91
-3.10
-Further Reading
-94
-Exercises
-96
-4
-Matrix Decompositions
-98
-4.1
-Determinant and Trace
-99
-i
-This material is published by Cambridge University Press as Mathematics for Machine Learning by
-Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong (2020). This version is free to view
-and download for personal use only. Not for re-distribution, re-sale, or use in derivative works.
-©by M. P. Deisenroth, A. A. Faisal, and C. S. Ong, 2024. https://mml-book.com.
+Making Real Connections
+Speak Up, Speak Out
+You, the Leader
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Harvard Business Review PressBoston, Massachusetts
+ 
+eISBN: 978-1-64782-442-6
+
+
+
+
+
+
+
+
+
+
+Women at WorkInspiring conversations, advancing together
+The HBR WOMEN AT WORK SERIES spotlights the real challenges and opportunities women experience throughout their careers. With interviews from the popular podcast of the same name and related articles, stories, and research, these books provide inspiration and advice for taking on issues at work such as inequity, advancement, and building community. Featuring detailed discussion guides, this series will help you spark important conversations about where we’re at and how to move forward.
+Books in the series include:
+Making Real Connections
+Speak Up, Speak Out
+You, the Leader
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright
+
+HBR Press Quantity Sales Discounts
+Harvard Business Review Press titles are available at significant quantity discounts when purchased in bulk for client gifts, sales promotions, and premiums. Special editions, including books with corporate logos, customized covers, and letters from the company or CEO printed in the front matter, as well as excerpts of existing books, can also be created in large quantities for special needs.
+For details and discount information for both print and ebook formats, contact booksales@harvardbusiness.org, tel. 800-988-0886, or www.hbr.org/bulksales.
+
+Copyright 2022 Harvard Business School Publishing Corporation
+All rights reserved
+No part of this publication may be reproduced, stored in or introduced into a retrieval system, or transmitted, in any form, or by any means (electronic, mechanical, photocopying, recording, or otherwise), without the prior permission of the publisher. Requests for permission should be directed to permissions@harvardbusiness.org, or mailed to Permissions, Harvard Business School Publishing, 60 Harvard Way, Boston, Massachusetts 02163.
+First eBook Edition: Jan 2022
+ISBN: 978-1-64782-219-4
+eISBN: 978-1-64782-220-0
+
+
+
+
+
+
+
+
+
+
+ 
+HBR Women at Work Series Collection (3 Books)
+Contents
+Making Real Connections
+Speak Up, Speak Out
+You, the Leader
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Harvard Business Review PressBoston, Massachusetts
+ 
+eISBN: 978-1-64782-442-6
+
+
+
+
+
+
+
+
+
+
+INTRODUCTION
+Move Beyond Small Talk and Make a Real Connection
+by Emily Caulfield and Amy Gallo, cohosts of Women at Work
+This book, dedicated to helping you create meaningful professional relationships, is the perfect home for a coauthored introduction. We, Emily Caulfield and Amy Gallo, had worked together at Harvard Business Review for nearly a year before our work paths crossed as cohosts of the Women at Work podcast. When Emily joined the show in September of 2020, we were all in full-fledged pandemic lockdown, working from home and recording the show from our closets and bedrooms. Our first in-real-life conversation, beyond casual “h

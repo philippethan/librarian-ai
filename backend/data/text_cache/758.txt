@@ -1,1 +1,76 @@
-About This eBook ePUB is an open, industry-standard format for eBooks. However, support of ePUB and its many features varies across reading devices and applications. Use your device or app settings to customize the presentation to your liking. Settings that you can customize often include font, font size, single or double column, landscape or portrait mode, and figures that you can click or tap to enlarge. For additional information about the settings and features on your reading device or app, visit the device manufacturer’s Web site. Many titles include programming code or configuration examples. To optimize the presentation of these elements, view the eBook in single-column, landscape mode and adjust the font size to the smallest setting. In addition to presenting code and configurations in the reflowable text format, we have included images of the code that mimic the presentation found in the print book; therefore, where the reflowable format may compromise the presentation of the code listing, you will see a “Click here to view code image” link. Click the link to view the print-fidelity code image. To return to the previous page viewed, click the Back button on your device or app.The symbols are traffic monitor, network intrusion monitor, activity log monitor, authentication log monitor, VPN monitor, data loss protection monitor, machine learning system, AI system, biometric scanner, multi-factor authentication (MFA) system, identify and access management (IAM) system, digital virus scanning and decryption system, malicious code analysis system, data loss prevention (DLP) system, intrusion detection system (IDS), penetration testing tool, user behavior analytics (UBA) system, third-party update utility, trusted platform module (TPM), data backup and recovery system, cybersecurity solution, malware, malicious packet, virus, virtual desktops, live VM migration, multitenant application, hard disk, hard disk with enclosure, storage device (internal), storage controller, databases, message queue, repository or storage device, shared storage, state data in memory, service with state data (stateful service), repository with state data, grid service, service or proxy, service composition, service layer, service contract (chorded circle notation), decoupled service contract, and service inventory. The symbols are LUNs, LUN migration, storage replication, live storage migration, security element or locked resource, message, encrypted message, resource pool, resource clusters, physical server cluster, virtual server cluster, malicious component or program, trusted attacker, attacker, malicious service agent, private key, public key, heartbeat message, conflict symbol, web browser, web user interface, folder, workstation, mobile computer, mobile devices, business process or workflow logic, file system, runtime, transition arrow, symbols used in conceptual relationship diagrams, organization, zone or region, internet, virtual private network, cloud, host
+Safety requirements for cableway installations 
+designed to carry persons - Operation
+BS EN 12397:2017
+BSI Standards Publication
+National foreword
+This British Standard is the UK implementation of BS EN 12397:2017. It 
+supersedes BS EN 12397:2004, which is withdrawn.
+The UK participation in its preparation was entrusted to Technical 
+Committee MCE/20, Aerial ropeways.
+A list of organizations represented on this committee can be obtained on 
+request to its secretary.
+This publication does not purport to include all the necessary provisions 
+of a contract. Users are responsible for its correct application.
+ISBN 978 0 580 78523 8
+ICS 45.100
+ Compliance with a British Standard cannot confer immunity from 
+legal obligations. 
+This British Standard was published under the authority of the 
+Standards Policy and Strategy Committee on 30 April 2017.
+Amendments/corrigenda issued since publication
+ Date 
+ Text affected 
+BRITISH STANDARD
+ 
+ 
+ 
+EUROPEAN STANDARD 
+NORME EUROPÉENNE 
+EUROPÄISCHE NORM 
+ 
+ EN 12397 
+ 
+ 
+ 
+ 
+March 2017 
+ICS 45.100 
+Supersedes EN 12397:2004
+English Version 
+ 
+Safety requirements for cableway installations designed to 
+carry persons - Operation 
+Prescriptions de sécurité pour les installations à câbles 
+transportant des personnes - Exploitation 
+ 
+Sicherheitsanforderungen an Seilbahnen für den 
+Personenverkehr - Betriebe 
+This European Standard was approved by CEN on 24 November 2014.  
+ 
+CEN members are bound to comply with the CEN/CENELEC Internal Regulations which stipulate the conditions for giving this 
+European Standard the status of a national standard without any alteration. Up-to-date lists and bibliographical references 
+concerning such national standards may be obtained on application to the CEN-CENELEC Management Centre or to any CEN 
+member. 
+ 
+This European Standard exists in three official versions (English, French, German). A version in any other language made by 
+translation under the responsibility of a CEN member into its own language and notified to the CEN-CENELEC Management 
+Centre has the same status as the official versions. 
+ 
+CEN members are the national standards bodies of Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, 
+Finland, Former Yugoslav Republic of Macedonia, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Lithuania, 
+Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, 
+Turkey and United Kingdom. 
+ 
+ 
+ 
+ 
+EUROPEAN COMMITTEE FOR STANDARDIZATION 
+COMITÉ EUROPÉEN DE NORMALISATION 
+EUROPÄISCHES KOMITEE FÜR NORMUNG  
+ 
+ 
+CEN-CENELEC Management Centre:  Avenue Marnix 17,  B-1000 Brussels 
+© 2017 CEN 
+All rights of exploitation in any form and by any means reserved 
+worldwide for CEN national Members. 
+Ref. No. EN 12397:2017 E

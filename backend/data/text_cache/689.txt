@@ -1,30 +1,38 @@
-S T U D E N T  PA P E R
-D E C E M B E R  2 0 2 4
-D E F E N S E ,  E M E R G I N G  T E C H N O L O G Y,  A N D  S T R AT E G Y  P R O G R A M
-Drone Warfare in 
-Today’s World
-15 Policy Recommendations 
-to Improve the European 
-Union’s Defense Capabilities
-Gonzalo Arana
-Javier Romero
-Defense, Emerging Technology, and Strategy Program 
-Belfer Center for Science and International Affairs
-Harvard Kennedy School
-79 JFK Street
-Cambridge, MA 02138
-www.belfercenter.org/DETS
-Statements and views expressed in this report are solely those of the authors and do 
-not imply endorsement by Harvard University, Harvard Kennedy School, the Belfer 
-Center for Science and International Affairs, or the U.S. Government.
-Copyright 2023, President and Fellows of Harvard College
-D E F E N S E ,  E M E R G I N G  T E C H N O L O G Y,  A N D  S T R AT E G Y  P R O G R A M
-Drone Warfare in 
-Today’s World
-15 Policy Recommendations 
-to Improve the European 
-Union’s Defense Capabilities
-Gonzalo Arana 
-Javier Romero
-S T U D E N T  PA P E R
-D E C E M B E R  2 0 2 4
+PLC SCADA
+for Beginners
+MAKER
+INNOVATIONS
+SERIES
+Understanding and Implementing 
+Industrial Automation Systems
+ —
+Ashraf Said AlMadhoun
+Maker Innovations Series
+Jump start your path to discovery with the Apress Maker Innovations 
+series! From the basics of electricity and components through to the most 
+advanced options in robotics and Machine Learning, you’ll forge a path to 
+building ingenious hardware and controlling it with cutting-edge software. 
+All while gaining new skills and experience with common toolsets you can 
+take to new projects or even into a whole new career.
+The Apress Maker Innovations series offers projects-based learning, 
+while keeping theory and best processes front and center. So you get 
+hands-on experience while also learning the terms of the trade and how 
+entrepreneurs, inventors, and engineers think through creating and 
+executing hardware projects. You can learn to design circuits, program AI, 
+create IoT systems for your home or even city, and so much more!
+Whether you’re a beginning hobbyist or a seasoned entrepreneur 
+working out of your basement or garage, you’ll scale up your skillset to 
+become a hardware design and engineering pro. And often using low-cost  
+and open-source software such as the Raspberry Pi, Arduino, PIC 
+microcontroller, and Robot Operating System (ROS). Programmers and 
+software engineers have great opportunities to learn, too, as many projects 
+and control environments are based in popular languages and operating 
+systems, such as Python and Linux.
+If you want to build a robot, set up a smart home, tackle assembling a 
+weather-ready meteorology system, or create a brand-new circuit using 
+breadboards and circuit design software, this series has all that and more! 
+Written by creative and seasoned Makers, every book in the series tackles 
+both tested and leading-edge approaches and technologies for bringing 
+your visions and projects to life.
+More information about this series at https://link.springer.com/
+bookseries/17311.

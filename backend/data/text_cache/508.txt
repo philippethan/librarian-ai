@@ -1,66 +1,46 @@
-Railway applications —
-Rolling stock — Power 
-supply with onboard 
-energy storage system
-Part 1: Series hybrid system
-BS EN 62864-1:2016
-BSI Standards Publication
-National foreword
-This British Standard is the UK implementation of EN 62864-1:2016. It is
-identical to IEC 62864-1:2016.
-The UK participation in its preparation was entrusted to Technical
-Committee GEL/9, Railway Electrotechnical Applications.
-A list of organizations represented on this committee can be obtained on
-request to its secretary.
-This publication does not purport to include all the necessary provisions of
-a contract. Users are responsible for its correct application.
-© The British Standards Institution 2016.
-Published by BSI Standards Limited 2016
-ISBN 978 0 580 83951 1
-ICS 45.060.01
-Compliance with a British Standard cannot confer immunity from
-legal obligations.
-This British Standard was published under the authority of the
-Standards Policy and Strategy Committee on 30 November 2016.
-Amendments/corrigenda issued since publication
-Date                     Text affected
-BRITISH STANDARD
-BS EN 62864-1:2016
+
+
+
+
+
+
+
+
+
+
+
+
  
- 
-EUROPEAN STANDARD 
-NORME EUROPÉENNE 
-EUROPÄISCHE NORM 
-EN 62864-1 
- 
-November 2016 
-ICS 45.060 
-English Version 
- 
-Railway applications - Rolling stock - Power supply with onboard 
-energy storage system - Part 1: Series hybrid system 
-(IEC 62864-1:2016) 
- 
-Applications ferroviaires - Matériel roulant - Alimentation 
-équipée d'un système embarqué de stockage de l'énergie - 
-Partie 1: Système hybride série 
-(IEC 62864-1:2016) 
- 
-Bahnanwendungen - Schienenfahrzeuge - 
-Stromversorgung durch Energiespeichersysteme auf 
-Schienenfahrzeugen - Teil 1: Serienhybridsystem 
-(IEC 62864-1:2016) 
-This European Standard was approved by CENELEC on 2016-07-20. CENELEC members are bound to comply with the CEN/CENELEC 
-Internal Regulations which stipulate the conditions for giving this European Standard the status of a national standard without any alteration. 
-Up-to-date lists and bibliographical references concerning such national standards may be obtained on application to the CEN-CENELEC 
-Management Centre or to any CENELEC member.  
-This European Standard exists in three official versions (English, French, German). A version in any other language made by translation 
-under the responsibility of a CENELEC member into its own language and notified to the CEN-CENELEC Management Centre has the 
-same status as the official versions. 
-CENELEC members are the national electrotechnical committees of Austria, Belgium, Bulgaria, Croatia, Cyprus, the Czech Republic, 
-Denmark, Estonia, Finland, Former Yugoslav Republic of Macedonia, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, 
-Lithuania, Luxembourg, Malta, the Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, 
-Turkey and the United Kingdom. 
-European Committee for Electrotechnical Standardization  
-Comité Européen de Normalisation Electrotechnique 
-Europäisches Komitee für Elekt
+
+
+
+
+
+
+
+
+
+À mes fillesÀ mes sœursÀ mes patientesEt à toutes les femmes
+
+
+
+
+
+
+
+
+
+
+
+
+Avant-propos
+
+
+Pendant des siècles, la sexualité féminine a été considérée comme un sujet tabou, abordée du seul point de vue de la reproduction. Néanmoins, au cours des dernières décennies, l’accès à la contraception, la mise en place des lois sur l’IVG (interruption volontaire de grossesse), la montée en puissance des mouvements féministes ont favorisé une libération sexuelle chez la femme et enfin la prise en compte de son plaisir.
+Il faut pourtant savoir que la découverte de l’anatomie précise du clitoris ne date que de 1998, et il a fallu attendre 2005 avant d’avoir les premières images du sexe féminin en IRM (imagerie par résonance magnétique).
+Malgré des avancées certaines, les recherches sur le plaisir féminin n’en sont encore qu’à leurs balbutiements. Elles sont souvent difficiles à mener, manquent de financement et n’ont qu’un écho très limité auprès du grand public. Quant à l’éducation sexuelle des jeunes, elle ne traite que des moyens contraceptifs et des infections sexuellement transmissibles. La physiologie du plaisir sexuel n’est jamais évoquée. Et les femmes – premières concernées – manquent cruellement d’information… C’est par exemple seulement en 2017 qu’un éditeur de livres de sciences de la vie et de la Terre pour collégiens a accepté, sous la pression d’associations féministes, de représenter le clitoris dans son intégralité sur un schéma de sexe féminin (Éditions Magnard).
+Il n’est alors pas très étonnant qu’au cours de mes consultations de sexologie j’aie constaté qu’un très grand nombre de femmes ne connaissaient pas ou très mal leur anatomie et leur fonctionnement sexuels. Elles sont pourtant très demandeuses de renseignements et curieuses des mécanismes de leur plaisir en vue notamment d’améliorer leurs ressentis et leurs orgasmes.
+Il me semble donc indispensable de fournir aux femmes et aux hommes un manuel pratique sur la sexualité féminine, d’autant plus que j’ai constaté qu’il n’existait aucun livre exhaustif sur le sujet. Les seuls ouvrages complets actuellement disponibles sont destinés aux professionnels de santé. Mon but est de réaliser un ouvrage pour le public le plus large possible, pour toutes les femmes, de la jeune femme qui découvre sa sexualité à la femme trentenaire qui souhaite enrichir son répertoire sexuel jusqu’à la femme plus âgée qui désire conserver une sexualité épanouie.
+Partant des recherches scientifiques les plus récentes, le livre aborde dans un langage clair, simple et décomplexé les aspects anatomiques, physiologiques, psychologiques et pathologiques des différentes composantes de la sexualité féminine.
+Nous parlerons bien sûr du clitoris, mais aussi de la vulve, du vagin, des seins, du fameux point G, des femmes fontaines et de l’éjaculation féminine.
+Nous aborderons le sujet de la masturbation et de l’orgasme, de la pornographie et de la littérature érotique, des sex-toys, des préliminaires, d

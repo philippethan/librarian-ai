@@ -1,20 +1,33 @@
-LECTURES CLE EN FRANÇAIS FACILE 
-de l’opéra 
-G ASTON L EROUX 
-Adapté en français facile 
-par Brigitte Faucard-Martinez 
-Le Fantôme 
-Crédits photographiques 
-p. 3 : © Costa/Leemage 
-p. 5 : © Beboy/Fotolia 
-p. 6 : © Bruno Passigatti/Fotolia 
-Direction éditoriale : Béatrice Rego 
-Marketing : Thierry Lucas 
-Édition : Laurie Millet 
-Couverture : Fernando San Martin 
-Mise en pages : Isabelle Vacher 
-Illustrations : Conrado Giusti 
-Enregistrements : Bund 
-© CLE international, 2016 
-ISBN : 9782090376371 
-– 2 – 
+Praise for Fundamentals of DevOps and Software
+Delivery
+I’m not aware of any other book that provides such
+practical advice on operations and systems
+administration in the context of delivering and running
+software. Jim’s book stays refreshingly focused on the
+real-world aspects of DevOps—what most people actually
+mean when they use the term—rather than the theory.
+—Kief Morris, distinguished infrastructure
+engineer at Thoughtworks and author of
+Infrastructure as Code
+An excellent step-by-step guide to getting practical things
+done—the kind of thing I wish I’d had when I was starting
+off.
+—Niall Murphy, Co-founder & CEO of Stanza
+and co-author of Site Reliability Engineering:
+How Google Runs Production Systems
+Meticulously organized, chock full of examples, buoyed
+by research and practical experience, Fundamentals of
+DevOps and Software Delivery is another outstanding
+project from the prolific Yevgeniy “Jim” Brikman. The
+breadth of technology in this space can feel
+overwhelming, but Jim manages to isolate the signal from
+the noise, emphasizing the prevailing industry best
+practices while smartly identifying pitfalls along the way.
+—Ben Whaley, staff software engineer at
+Chime and co-author of UNIX and Linux
+System Administration Handbook
+If you want to learn DevOps principles quickly, and learn
+them in a way that’s directly applicable to your problems,
+buy this book.
+—Yousif Akbar, principal software engineer,
+Gruntwork

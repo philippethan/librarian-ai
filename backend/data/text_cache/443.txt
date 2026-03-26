@@ -1,64 +1,51 @@
-BSI Standards Publication
-Petroleum and natural gas industries - 
-Offshore production installations - Heating, 
-ventilation and air-conditioning
-BS EN ISO 15138:2018
-National foreword
-This British Standard is the UK implementation of EN ISO 15138:2018. 
-It is identical to ISO 15138:2018. It supersedes BS EN ISO 15138:2007, 
-which is withdrawn.
-The UK participation in its preparation was entrusted to Technical 
-Committee PSE/17/-/6, Processing equipment and systems for petroleum 
-and natural gas industries.
-A list of organizations represented on this committee can be obtained on 
-request to its secretary.
-This publication does not purport to include all the necessary provisions 
-of a contract. Users are responsible for its correct application.
-© The British Standards Institution 2018
-Published by BSI Standards Limited 2018
-ISBN 978 0 580 97611 7
-ICS 75.180.10
-Compliance with a British Standard cannot confer immunity from 
-legal obligations.
-This British Standard was published under the authority of the 
-Standards Policy and Strategy Committee on 31 July 2018.
-Amendments/corrigenda issued since publication
-Date
-Text affected
-BRITISH STANDARD
-BS EN ISO 15138:2018
-EUROPEAN STANDARD
-NORME EUROPÉENNE
-EUROPÄISCHE NORM
-EN ISO 15138
-July 2018
-ICS 75.180.10
-Supersedes EN ISO 15138:2007
-EUROPEAN COMMITTEE FOR STANDARDIZATION
-COMITÉ EUROPÉEN DE NORMALISATION
-EUROPÄISCHES KOMITEE FÜR NORMUNG
-CEN-CENELEC Management Centre: Avenue Marnix 17, B-1000 Brussels
-© 2018 CEN
-Ref. No. EN ISO 15138:2018: E
-All rights of exploitation in any form and by any means reserved 
-worldwide for CEN national Members
-Petroleum and natural gas industries - Offshore 
-production installations - Heating, ventilation and air-
-conditioning (ISO 15138:2018)
-Industries du pétrole et du gaz naturel - Plates-
-formes de production en mer - Chauffage, 
-ventilation et climatisation (ISO 15138:2018)
-Erdöl- und Erdgasindustrie - Offshore-
-Produktionsanlagen - Heizung, Lüftung 
-und Klimatisierung (ISO 15138:2018)
-This European Standard was approved by CEN on 23 May 2018.
-CEN members are bound to comply with the CEN/CENELEC Internal Regulations which stipulate the conditions for giving 
-this European Standard the status of a national standard without any alteration. Up-to-date lists and bibliographical 
-references concerning such national standards may be obtained on application to the CEN-CENELEC Management Centre 
-or to any CEN member.
-This European Standard exists in three official versions (English, French, German). A version in any other language 
-made by translation under the responsibility of a CEN member into its own language and notified to the CEN-CENELEC 
-Management Centre has the same status as the official versions.
-CEN members are the national standards bodies of Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, 
-Estonia, Finland, Former Yugoslav Republic of Macedonia, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, 
-Latvia, Lithuania, Luxembourg, Malta,
+JUNE
+2025
+Design, Destroy, Dominate
+The Mass Drone Warfare as 
+a Potential Military Revolution
+Vincent TOURRET
+Security Studies 
+Center
+IFRI
+PAPERS
+ 
+The French Institute of International Relations (Ifri) is a research center 
+and a forum for debate on major international political and economic 
+issues. Headed by Thierry de Montbrial since its founding in 1979, Ifri is a 
+non-governmental, non-profit foundation according to the decree of 
+November 16, 2022. As an independent think tank, Ifri sets its own 
+research agenda, publishing its findings regularly for a global audience. 
+Taking an interdisciplinary approach, Ifri brings together political and 
+economic decision-makers, researchers and internationally renowned 
+experts to animate its debate and research activities. 
+ 
+ 
+ 
+The opinions expressed in this text are the responsibility of the author alone. 
+ 
+ 
+ISBN: 979-10-373-1067-5 
+© All rights reserved, Ifri, 2025 
+Cover: © Parilov/Shutterstock.com 
+ 
+ 
+How to quote this publication:  
+Vincent Tourret, “Design, Destroy, Dominate: The Mass Drone Warfare as a 
+Potential Military Revolution”, Ifri Papers, Ifri, June 2025. 
+ 
+ 
+ 
+Ifri 
+27 rue de la Procession 75740 Paris Cedex 15 – FRANCE 
+Tel. : +33 (0)1 40 61 60 00 – Fax : +33 (0)1 40 61 60 60  
+Email: accueil@ifri.org 
+ 
+Website: Ifri.org 
+ 
+Author 
+Vincent Tourret is a PhD student at the Université du Québec à Montréal 
+(UQAM). His thesis focuses on Russian strategic culture, its evolution since 
+the Soviet era and its implications for conventional operations in Ukraine. 
+He thus continues his research initiated at the Fondation pour la Recherche 
+Stratégique (FRS) from 2018 to 2022, of which he remains an associate 
+researcher. 

@@ -1,1 +1,45 @@
-The Vulnerable Man was first published in Swedish as Sårbar man – Vägen till inre styrka in 2019. Copyright © 2019, 2021 Thomas Anderson All rights reserved. No part of this book may be used or reproduced in any manner whatsoever without written permission from the publisher, except in the case of brief quotations embodied in critical articles and reviews. For permission requests, check author’s website for contact information. All identifying details, including names, have been changed except for those that pertain to the author’s family members and close friends. This book is not intended as a substitute for advice from a trained professional. First English edition published by Trignite in 2021. isbn : 978-91-519-0938-7 Editor and translator: Carl Ahlstrand Cover design: Gabriella Brantdahl Typeset: Emma Bonath Visit the author’s website at www.thomasanderson.se Tr i g niteContent Introduction What You Need to Know About Me Before You Read My Diary The Road to Burnout Is Paved with Good Intentions Breaking Patterns The Eye Opener New Habits The Importance of Breaking Down Three Major Life Changes New Life Perspectives—El Camino The Road Back Honest Towards Myself and Others Letting Go Standing Up for Yourself Reclaiming My Life Conclusion Acknowledgements Self-Reflection Workbook My Book Menuchapter 1 Introduction “ I might as well kill myself, that’s what I’ve been thinking. ” This is what I wrote in my diary in July 2015. The idea of suicide came and went, as it had done for years. When I was in my darkest place, these thoughts came at night and I made plans to make it look like an accident. It had to be that way because I am a person who is always trying to help others, and suicide wouldn’t allow my family to benefit from my life insurance. So, how to do it? Fall off a bridge and drown? Perhaps a car accident? I never spoke to anyone about these thoughts—I mean, what would they think of me, that I was mentally ill. I think that there are a lot of us out there harboring thoughts and feelings that we don’t talk about. We construct a wall to hide behind because we are afraid to show who we really are. This wall can stop us from learning how to handle and understand our emotions and feelings. We get stuck in an “emotional prison,” either paralyzed, depressed, seeking different avenues of escape, or acting out, triggered by different situations. We live in a society where we are supposed to be strong; we mustn’t let our feelings show or be vulnerable and perceived as weak—and this might be especially so for men. The last few years of my life have been transformative; I have broken old patterns and I have discovered and understood more about myself. I have seen how my fear of sharing my feelings and being myself has held me back, and I have come to realize that through the years I started playing roles, and not being truly myself. Nowadays I understand and handle the emotions and feelings that arise in different situations, they don’t stop me from
+Estimating the dynamic and aerodynamic paramters of
+passively controlled high power rockets for ﬂight simulaton
+Simon Box, Christopher M. Bishop, Hugh Hunt
+February, 2009
+Abstract
+High power rockets are essentially large unguided model rockets that can ﬂy to altitudes
+as high as 13 km and recover to earth by parachute. A rocket ﬂight simulator can be used
+to predict the ﬂight path of the rocket during the ascent. To do this the simulator requires
+certain input parameters.
+This paper summarizes some simple methods for estimating
+these parameters from very basic information such as the geometry of the rocket and the
+thrust curve. Methods for estimating the mass, centre of mass, moments of inertia, thrust
+damping, centre of pressure, drag force and normal force are given in this paper. The
+methodology described in this paper has been used in conjunction with a rocket ﬂight
+simulator to predict the ﬂight path of a high power rocket. Some results are given in the
+summary of the paper.
+1
+Introduction
+Rocket ﬂight simulators require certain input parameters that describe the properties of the
+rocket for the simulator.
+These include dynamic parameters such as the thrust, mass and
+moments of inertia of the rocket and also aerodynamic parameters such as the coeﬃcients of
+the aerodynamic forces and the location of the centre of pressure.
+The parameters can be obtained in a number of diﬀerent ways, for instance in the case
+of the aerodynamic parameters these could be obtained through wind tunnel experiments on
+the rocket or on a scale model. Alternatively they can be found by using computational ﬂuid
+dynamics to numerically integrate the viscous and pressure forces over the surface of the rocket.
+While experimental and computational methods can provide accurate estimates of the pa-
+rameters it is also useful to be able to estimate the parameters using simple equations derived
+from theoretical relationships using some simplifying assumptions. This approach provides a
+quick method for estimating parameters in applications where the most accurate estimates are
+not required.
+This document collates and summarizes relevant equations for estimating the dynamic and
+aerodynamic input parameters from rocketry and engineering literature. In some cases equa-
+tions are semi-empirical, that is they use relationships that have been ﬁtted to data from
+experiments using rockets of a standard shape. In general, these equations are only applicable
+1
+to rockets with a conventional shape. That is an axisymmetric rocket with a single cylindrical
+body, a conical, parabolic or ogive shaped nose cone and ﬁn sets consisting of three or four
+trapezoidal ﬁns. Changes is body diameter via conical transitions are allowed.
+There are also a number of simplifying assumptions that are used in the estimation of
+the parameters and in the rocket simulators that use these parameters.
+These include the
+assumption that the rocket is an axisymmetric rigid body and that the angle of attack during
+th

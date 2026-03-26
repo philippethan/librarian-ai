@@ -1,66 +1,52 @@
- 
-System Energy Optimisation Strategies for 
-DC Railway Traction Power Networks  
-by 
-Zhongbei Tian 
-A thesis submitted to  
-the University of Birmingham  
-for the degree of 
-DOCTOR OF PHILOSOPHY 
- 
- 
-Department of Electronic, Electrical and Systems Engineering 
-College of Engineering and Physical Sciences 
-University of Birmingham, UK 
-June 2017 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-University of Birmingham Research Archive 
- 
-e-theses repository 
- 
- 
-This unpublished thesis/dissertation is copyright of the author and/or third 
-parties. The intellectual property rights of the author or third parties in respect 
-of this work are as defined by The Copyright Designs and Patents Act 1988 or 
-as modified by any successor legislation.   
- 
-Any use made of information contained in this thesis/dissertation must be in 
-accordance with that legislation and must be properly acknowledged.  Further 
-distribution or reproduction in any format is prohibited without the permission 
-of the copyright holder.  
- 
- 
- 
-Abstract 
-i 
- 
- 
-Abstract 
-As a result of rapid global urbanisation, energy and environmental sustainability are 
-becoming increasingly significant. According to the Rail Transport and Environment 
-Report published by International Union of Railways in 2015, energy used in the 
-transportation sector accounts for approximately 32% of final energy consumption in the 
-EU. Railway, representing over 8.5% of the total traffic in volume, shares less than 2% of 
-the transport energy consumption. Railway plays an important role in reducing energy 
-usage and CO2 emissions, compared with other transport modes such as road transport. 
-However, despite the inherent efficiency, the energy used by the rail industry is still high, 
-making the study of railway energy efficiency of global importance. Previous studies have 
-investigated train driving strategies for traction energy saving. However, few of them 
-consider the overall system energy optimisation, which depends on various factors 
-including driving styles and timetables. This thesis aims to find a system energy 
-optimisation solution for urban railways. 
-This thesis begins with a review of the main arrangement of the railway systems and 
-literature on energy optimisation studies in railways. The development of the energy 
-evaluation simulation software for DC-fed railway systems is demonstrated. The train 
-movement model and railway power network model are integrated into the simulator. This 
-energy simulator is able to calculate the energy flow of the whole system according to 
-multiple-train driving controls and timetables.  
+EUROPEAN STANDARD 
+NORME EUROPEENNE 
+EUROPAISCHE NORM 
+EN 50341-2-8 
+October 2017 
+ICS 29.240.20 
+English Version 
+Overhead electrical lines exceeding AC 1 kV - Part 2-8: National 
+Normative Aspects (NNA) for France (based on EN 50341-
+1 :2012) 
+This European Standard was approved by CENELEC on 2017-08-09. 
+CENELEC members are the national electrotechnical committees of Austria, Belgium, Bulgaria, Croatia, Cyprus, the Czech Republic, 
+Denmark, Estonia, Finland, Former Yugoslav Republic of Macedonia, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, 
+Lithuania, Luxembourg, Malta, the Netherlands, Norway, Poland, Portugal, Romania, Serbia, Slovakia, Slovenia, Spain, Sweden, 
+Switzerland, Turkey and the United Kingdom. 
+European Commiuce for Elcctrotcchnical Standardization 
+Comite Europeen de Normalisation Electrotechnique 
+Europaisches K omitce fiir Elcktrotechnische ormung 
+CEN-CENELEC Management Centre: Avenue Mamix 17, B-1000 Brussels 
+© 2017 CENELEC All rights of exploitation in any form and by any means reserved worldwide for CENELEC Members. 
+Ref. No. EN 50341-2-8:2017 E 
+EN 50341-2-8:2017 
+- 2/65 -
+France 
+Contents 
+European foreword .................................................................................................................................. 6 
+0 
+Introduction ..................................................................................................................................... 7 
+1 
+Scope .............................................................................................................................................. 8 
+1.1 
+General ................................................................................................................................ 8 
+1.2 
+Field of application ............................................................................................................... 8 
+2 
+Normative references, definitions and symbols .............................................................................. 9 
+2.1 
+Normative references ........................................................................................................... 9 
+2.2 
+Definitions .......................................................................................................................... 10 
+2.3 
+Symbols ............................................................................................................................. 10 
+3 
+Basis of design .............................................................................................................................. 11 
+3.2 
+Requirements of overhead lines ........................................................................................ 11 
+3.2.2 
+Reliability requirements .................................................................................... 11 
+3.2.5 
+Strength coordination ....................................................................................... 11 
+3.2.6 
+Additional con

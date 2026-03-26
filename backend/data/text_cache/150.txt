@@ -1,11 +1,98 @@
-ILLUSTRATED DICTIONARY OF
-ARCHITECTURE
-DESIGNED FOR SENIOR HIGH TO
-UNDERGRADUATE STUDENTS
-• TERMS • DEFINITIONS • EXAMPLES
-2ND EDITION
-Edited by:
-Carla Cingolani
-BIBLIOTEX
-Digital Library
-www.bibliotex.com
+PROGRAMME 2020 • Collection Bellier • Lescure
+Sciences
+physiques
+Spécialité SI
+Sous la direction de
+Jean-Philippe Bellier
+Lycée Michel-Montaigne à Bordeaux
+Nicolas Lescure
+Lycée Michel-Montaigne à Bordeaux
+Thierry Baudoin
+Lycée Victor-Louis à Talence
+Sylvie Bertin
+Lycée de Borda à Dax
+Stéphanie Bigorre
+Lycée Alfred-Kastler à Talence
+Marc Bigorre
+Lycée des Graves à Gradignan
+Patrice Boudey
+Lycée de la mer à Gujan-Mestras
+Thierry Dulaurans
+Lycée Fernand-Daguin à Mérignac
+Cyrille Lémonie
+Lycée Saint-Exupéry à Terrasson-Lavilledieu
+Bruno Poudens
+Lycée des Graves à Gradignan
+S
+P
+É
+C
+I
+A
+L
+I
+T
+É
+le
+GUIDE PÉDAGOGIQUE
+Maquette intérieure : Soft Office
+Composition : Soft Office
+Schémas : Soft Office
+Édition : Nathalie Legros
+www.hachette-education.com
+© Hachette Livre 2020
+58, rue Jean Bleuzen – 92178 Vanves Cedex
+AVERTISSEMENT
+Vous venez de télécharger gratuitement le fichier pédagogique du Manuel 
+Sciences physiques Tle Spécialité SI, édition 2020.
+Nous vous rappelons qu’il est destiné à un usage strictement personnel. 
+Il ne peut ni être reproduit, ni être mutualisé sur aucun site (site d’établisse-
+ment, site enseignant, blog ou site de peer to peer), même à titre gracieux.
+Deux raisons principales :
+– Éviter de rendre le fichier accessible aux élèves dans les moteurs 
+de recherche.
+– Respecter pleinement le droit d’auteurs : en effet, l’ensemble des 
+guides pédagogiques et livres du professeur mis à votre disposition sont des 
+œuvres de l’esprit protégées par le droit de la propriété littéraire et artis-
+tique.
+Nous vous rappelons que selon les articles L 331-1 et L 335-4 du Code de la proprié-
+té intellectuelle, toute exploitation non autorisée de ces œuvres constitue un délit de 
+contrefaçon passible de sanctions de natures pénale et civile, soit trois ans d’empri-
+sonnement et 300 000 euros d’amende.
+3
+e
+Mouvement  
+et interactions
+Mouvement et deuxième loi  
+de Newton������������������������������������������������������������������������� 5
+Mouvement dans un champ uniforme����� 15
+Mouvement dans un champ  
+de gravitation���������������������������������������������������������������� 29
+L’énergie :  
+conversions  
+et transferts
+Premier principe de la thermodynamique 
+et bilan énergétique������������������������������������������������� 37
+Transferts thermiques������������������������������������������� 45
+Ondes  
+et signaux
+Sons et effet Doppler���������������������������������������������� 55
+Diffraction et interférences ����������������������������� 65
+La lumière : un flux de photons���������������������� 73
+1
+ 
+2
+ 
+3
+ 
+4
+ 
+5
+ 
+6
+ 
+7
+ 
+8
+ 
+Sommaire

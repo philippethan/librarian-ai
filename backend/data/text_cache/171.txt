@@ -1,0 +1,46 @@
+Build systems with Go
+Everything a Gopher must know
+Juan M. Tirado
+Build systems with Go 
+by Juan M. Tirado 
+Copyright ©2021
+Independently published
+Cover by Juan M.Tirado 
+Gopher Gotham image by Egon Elbre (@egonelbre)
+All rights reserved. No part of this work may be reproduced or
+transmitted in any form or by any means, electronic or mechanical, including
+photocopying, recording or by any information storage or retrieval system,
+without the prior written permission of the copyright owner.
+This book has been entirely written using LATEX.
+EPub 3.0 conversion was done using tex4ebook: 
+https://github.com/michal-h21/tex4ebook
+Revision History:
+v0.1.0: 2021-03-29 First version
+PREFACE
+Welcome and thank you for reading these lines.
+Since I started programming in Go, I have always enjoyed its
+extraordinary commitment to simplicity. It is difficult to find another
+language that can make complex things so easily. That is the beauty of this
+language. Years have passed by and Go is no longer the new kid on the
+block, it has already become a mature language surrounded by a rich
+ecosystem of libraries, projects, and tools. Talking about Go is no longer
+talking about that fancy language that makes your life easier. Go is the
+gravity centre of a continuously growing ecosystem of amazing solutions
+maintained by a devoted community of developers.
+Go was originally designed to simplify the building of complex systems.
+However, when a developer decides to learn Go most of the learning
+resources simply explain the language. This book goes one step further by
+exploring tools, libraries, and projects from the Go ecosystem you can use to
+build ready-for-production systems. Everything a gopher must know in a
+single book.
+I hope you find this book useful.
+WHO SHOULD READ THIS BOOK?
+This book is oriented to new Go adopters and developers with programming
+experience in other languages. The first part of this book covers the Go
+language from its basics to more advanced concepts. The second part
+assumes these concepts to be known by the reader and explores how to use
+them with other tools to build systems. If you are new to Go you can start
+from the beginning. However, if you have some experience you can start with
+the second part and revisit any basic concept if needed. Or you can simply go
+and check the chapters at your convenience.
+STRUCTURE OF THIS BOOK

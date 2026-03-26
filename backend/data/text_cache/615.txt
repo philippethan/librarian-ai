@@ -1,35 +1,122 @@
-This ebook was issued to Adam L, order #138188850. Unlawful distribution of this ebook is prohibited.
-Adam L 138188850
-SdkBytes(bytes=0x0102020078ef9049f9e948fb216308852a217865b1cbfa6127cd87f4b056f194f7dd3ea12a01f889f820a2f8e1356a85f89ee46e8e780000006e306c06092a864886f70d010706a05f30
-5d020100305806092a864886f70d010701301e060960864801650304012e3011040ce1adf832133d34a668a165d0020110802b60fcae016af4ee88e4b9a298262e741855c55f1c580adbd463788e7ec3
-9683967287184b09553eaa51b1d9)
-The Official Guide to the TOEFL iBT® Test
-Using the Digital Resources
-Authentic TOEFL iBT test questions are used in this book. However, the screens and delivery formats are not 
-identical to the actual test. When you take the actual TOEFL iBT test, you may notice some variations in how the 
-questions are presented to you on screen.
-Installation
-First, go to www.mhprofessional.com/toefl7e. Once on the site, you’ll be prompted to enter your access code—
-if you are using a paperback, you will find your code inside the back cover. If you are using an eBook, your code 
-will be in your ETS account. Please note that this code is redeemable only by you and a maximum of four times.
-Once you enter your access code, a download will automatically begin. This download will contain the audio 
-files you need as well as files that contain the practice tests in both PC and Mac® format. 
-Main Menu for Practice Tests
-When you launch the program, the following screen will appear:
-Taking TOEFL iBT® Practice Tests on Your Computer
-From the Main Menu, choose Practice Test 1, 2, 3, or 4. Then select the test section you wish to take: Reading, 
-Listening, Speaking, or Writing. Note that you can take each section more than once.
-When you open a test section, you will first be provided with instructions for that section. A timer on the 
-screen shows how many minutes and seconds you have left for that section. You can hide the timer if you find it 
-distracting.
-If you must take a break during the test, select Main Menu at the top of the screen. This will take you back to 
-the main menu. When you are ready to resume, open the test section again, and select the Continue button. 
-Your work will not be lost, and you will begin exactly where you left off. The timer clock will stop while you are on 
-your break and will restart immediately when you resume the test. Try not to take breaks too often, because on 
-the actual test the clock keeps running even if you leave the room on a break.
-Answering Questions
-To answer the questions in the Reading and Listening sections, select the best answer or follow the instructions 
-given. For some questions, you will need to select more than one answer. Select the Next button to move 
-forward to the next question. In the Listening section, the Next button is enabled only after you select an answer 
-choice or choices. In the Reading section, you can select the Next button at any time to move forward to the next 
-question, and you can select the Back button to move back to the 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Library of Congress Cataloging-in-Publication Data is available through the Library of Congress
+© 2018 Sasha Brown-Worsham
+ISBN-13: 978-07573-2060-6 (Paperback)
+ISBN-10: 07573-2060-0 (Paperback)
+ISBN-13: 978-07573-2061-3 (ePub)
+ISBN-10: 07573-2061-9 (ePub)
+All rights reserved. Printed in the United States of America. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the written permission of the publisher.
+HCI, its logos, and marks are trademarks of Health Communications, Inc.
+Publisher: Health Communications, Inc. 3201 S.W. 15th StreetDeerfield Beach, FL 33442–8190
+Cover and interior design and formatting by Lawna Patterson Oldfield
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+
+Introduction
+1. Centering
+Fastest Girl in the ’Hood
+Mom Can’t Braid
+Strange Breath
+Teaching Friends to Meditate
+What’s in a Name?
+First Crow
+2. Breathing
+How My Parents Met
+We Caught It Early
+Samskaras
+3. Connecting
+Me as a Teen Versus Mom as a Teen
+First Bra
+Experiments in Cooking Seaweed
+Guilt Trips over Yoga
+A Week at Kripalu
+4. Saluting
+Guinea Pig Death No. 1
+Ouija Board Fight
+Tarot Card Reading
+Auras in Death and Dying
+The Aura Book and Show-and-Tell
+Guilt Trips from My Own Daughter
+5. Flowing
+First Meeting with Gurudev
+Coming Back to Yoga
+Yoga as a Young Mom
+6. Balancing
+My Mother’s Journals
+A New Name
+More Secrets and Balcony Jumping
+Becoming a Woman, Part One
+7. Strengthening
+Easter Tornado and the Last Photo of My Mom
+Icelandic Cape
+First Pregnancy and Yoga
+8. Surrendering
+Spider in a Jar — First Time
+Scattering the Ashes, Eventually
+Happy Baby (The Pose You Hate)
+Another Tarot Card Reading
+Reiki Attunement and Seeing Energy
+Mayan Sound Healing
+First Mammogram: A Legacy of Cancer
+Going Vegan
+9. Integrating
+Be Here Now: My First Teaching Job
+Guinea Pig Death No. 2
+Becoming a Woman, Part Two
+Spider in a Jar — Second Time
+10. Rebirthing
+Kripalu Now
+Reiki, Level One
+Men Who Hate Yoga
+Practicing with Samara
+Acknowledgments
+About the Author
+
+
+
+
+
+
+Introduction
+
+This is my story of yoga, death, pain and discomfort, growth and presence, and being reborn even in grief.
+A yoga class consists of various steps. We arrive and start to center, often on our backs. We let outside concerns float away and notice the little pains and discomforts we have brought with us. Then we start to notice the breath, the rise and fall of hands on our chest and belly, the gentle pull and push that keeps us alive but that we rarely focus on in the way it deserves.
+This breath is life.
+Next we move, connecting that breath to the body. We undulate the spine in cat and cow postures, or we twist, lying supine on our backs. Each inhalation provides a chance to strengthen and embolden. Each exhalation is an opportunity to surrender and melt a little deeper.
+Eventually we find the top of the mat — Urdhva Hastasana (upward salute). We reach for the sky, then dive

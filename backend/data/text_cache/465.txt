@@ -1,0 +1,165 @@
+VECTOR DERIVATIVES
+Cartesian
+dl = dx ˆx + dy ˆy + dzˆz,
+dτ = dx dy dz
+Gradient:
+∇t = ∂t
+∂xˆx + ∂t
+∂yˆy + ∂t
+∂zˆz
+Divergence:
+∇· v = ∂vx
+∂x + ∂vy
+∂y + ∂vz
+∂z
+Curl:
+∇× v =
+ ∂vz
+∂y −∂vy
+∂z
+
+ˆx +
+ ∂vx
+∂z −∂vz
+∂x
+
+ˆy +
+ ∂vy
+∂x −∂vx
+∂y
+
+ˆz
+Laplacian:
+∇2t = ∂2t
+∂x2 + ∂2t
+∂y2 + ∂2t
+∂z2
+Spherical
+dl = drˆr + r dθ ˆθ + r sin θ dφ ˆφ,
+dτ = r2 sin θ dr dθ dφ
+Gradient:
+∇t = ∂t
+∂rˆr + 1
+r
+∂t
+∂θ
+ˆθ +
+1
+r sin θ
+∂t
+∂φ
+ˆφ
+Divergence:
+∇· v = 1
+r2
+∂
+∂r (r2vr) +
+1
+r sin θ
+∂
+∂θ (sin θ vθ) +
+1
+r sin θ
+∂vφ
+∂φ
+Curl:
+∇× v =
+1
+r sin θ
+ ∂
+∂θ (sin θ vφ) −∂vθ
+∂φ
+
+ˆr
++ 1
+r
+
+1
+sin θ
+∂vr
+∂φ −∂
+∂r (rvφ)
+ ˆθ+ 1
+r
+ ∂
+∂r (rvθ) −∂vr
+∂θ
+ ˆφ
+Laplacian:
+∇2t = 1
+r2
+∂
+∂r
+
+r2 ∂t
+∂r
+
++
+1
+r2 sin θ
+∂
+∂θ
+
+sin θ ∂t
+∂θ
+
++
+1
+r2 sin2 θ
+∂2t
+∂φ2
+Cylindrical
+dl = dsˆs + s dφ ˆφ + dzˆz,
+dτ = s ds dφ dz
+Gradient:
+∇t = ∂t
+∂sˆs + 1
+s
+∂t
+∂φ
+ˆφ + ∂t
+∂zˆz
+Divergence:
+∇· v = 1
+s
+∂
+∂s (svs) + 1
+s
+∂vφ
+∂φ + ∂vz
+∂z
+Curl:
+∇× v =
+1
+s
+∂vz
+∂φ −
+∂vφ
+∂z
+
+ˆs +
+ ∂vs
+∂z −∂vz
+∂s
+ ˆφ
++ 1
+s
+ ∂
+∂s (svφ) −∂vs
+∂φ
+
+ˆz
+Laplacian:
+∇2t = 1
+s
+∂
+∂s
+
+s ∂t
+∂s
+
++ 1
+s2
+∂2t
+∂φ2 + ∂2t
+∂z2

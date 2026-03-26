@@ -1,28 +1,3 @@
-Permisecole.com Le Code
-de la routeLe Code de la route pour les Nuls,
-édition 2023 « Pour les Nuls » est une marque déposée de Wiley Publishing, Inc. « For Dummies » est une marque déposée de Wiley Publishing, Inc. © Éditions First, un département d’Édi8, Paris, 2023. Publié en accord avec Wiley Publishing, Inc. Éditions First, un département d’Édi8 92, avenue de France 75013 Paris Tél. : 01 44 16 09 00 Fax : 01 44 16 09 Courriel : Internet : www.pourlesnuls.fr ISBN : 9782412086254 Dépôt légal : janvier 2023 Mise en page et illustrations : Fabrice Del Rio Ruiz ( www.fabdelrio.com ) Index : Nord compo Photographies : iStock, Fotolia, Adobe Stock, DFC Production Tous droits réservés. Toute reproduction, même partielle, du contenu, de
-la couverture ou des icônes, par quelque procédé que ce soit (électronique,
-photocopie, bande magnétique ou autre) est interdite sans autorisation par
-écrit d’Édi8. Limites de responsabilité et de garantie. L’auteur et l’éditeur de
-cet ouvrage ont consacré tous leurs efforts à préparer ce livre. Édi8
-et les auteurs déclinent toute responsabilité concernant la fiabilité
-ou l’exhaustivité du contenu de cet ouvrage. Ils n’assument pas de
-responsabilité pour ses qualités d’adaptation à quelque objectif que ce soit,
-et ne pourront être en aucun cas tenus responsables pour quelque perte,
-profit ou autre dommage commercial que ce soit, notamment mais pas
-exclusivement particulier, accessoire, conséquent, ou autre. Marques déposées. Toutes les informations connues ont été communiquées
-sur les marques déposées pour les produits, services et sociétés mentionnés
-dans cet ouvrage. Édi8 décline toute responsabilité quant à l’exhaustivité
-et à l’interprétation des informations. Tous les autres noms de marques
-et de produits utilisés dans cet ouvrage sont des marques déposées ou des
-appellations commerciales de leur propriétaire respectif. Édi8 n’est lié à
-aucun produit ou vendeur mentionné dans ce livre. Ce livre numérique a été converti initialement au format EPUB par Isako www.isako.com à partir de l'édition papier du même ouvrage.À propos des auteurs Leader de l’apprentissage du code de la route en ligne et fort de son expérience sur le marché professionnel des auto-écoles, Permisecole a conçu
-un livre de code pour tous. Complet et facile d’accès, il se lit non plus
-comme un manuel technique mais comme un ouvrage pédagogique. Exclusif : il est organisé selon les grands thèmes du code de la route, ce qui
-facilite les recherches et correspond à la méthode d’apprentissage mise en
-œuvre dans les écoles de conduite. Totalement à jour et conforme : la rédaction de ce livre a été confiée à des
-moniteurs et des formateurs diplômés du brevet d’aptitude à la formation
-des moniteurs. Permisecole édite aussi des supports d’apprentissage pour la conduite
-moto, l’attestation scolaire de sécurité routière, et pour le recyclage
-des conducteurs. Permisecole a été sélectionné par des grands noms
-de l’édition pour la diffusion en ligne de contenus 
+The Essentials of 
+Technical 
+Communication

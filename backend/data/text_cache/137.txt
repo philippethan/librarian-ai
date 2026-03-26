@@ -1,192 +1,270 @@
-CAVTnRIDGE
-If,
-Tf,
-I
-n
-If,
-T
-n
-Describing 
-technical
-functions and
-applications
-Explaining how technology
-works
-Emphasising 
-technical
-advantages
-Simplifying 
-and illustrating
-technical explanations
-Describing specific
-materials
-Categorising 
-materials
-SpeciÍying 
-and describing
-properties
-Discussing 
-quality issues
-Describing component
-shapes and features
-Explaining and assessing
-manufacturing
-techniques
-Explaining 
-jointing and
-fixing techniques
-Describing positions of
-assembled components
-Working with drawings
-Discussing 
-dimensions 
-and
-precision
-Describing design phases
-and procedures
-Resolving design problems
-Describing types of
-technical problem
-Assessing and interpreting
-faults
-Describing the causes of
-faults
-Discussing 
-repairs and
-maintenance
-Words stemming from use
-allow, enable, permit, ensure,
-prevent
-Verbs to describe movement
-Verbs and adjectives 
-to describe
-advantages
-Adverbs for adding emphasis
-Phrases for simplifying 
-and
-rephrasing
-Common materials
-Categories of materials
-consist of, comprise, made of, made
-from, mode out of
-Properties of materials
-Phrases for describing requirements
-Compounds oÍ resistant
-Adverbs of degree
-Shapes and 3D features
-Words to describe machining
-Phrases for describing suitability
-Verbs and nouns to describe joints
-and fixings
-Prepositions 
-of position
-Views on technical drawings
-Phrases related to scole
-Phrases related to tolerance
-length, width, thickness, etc.
-Drawing types and versions
-Verbs for describing stages of a
-design process
-Verbs and nouns for describing
-design problems
-Verbs and adjectives 
-for describing
-technical problems
-Words for describing faults and
-their severity
-Phrases for describing certainty/
-uncertainty
-Adjectives with prefixes for
-describing 
-technical problems
-Verbs for describing repairs and
-maintenance
-Listening
-GPS applications
-Space elevators
-Advantages 
-of a new pump
-A guided tour
-Reading
-Space elevators
-Otis lift technology
-Pile foundations
-Listening
-An environmental 
-audit
-Specialised 
-tools
-H igh-performance 
-watches
-Reading
-Materials recycling
-Regenerative 
-brakes
-Kevlar
-Listening
-A project briefing
-Electrical plugs and sockets
-Metal fabrication
-UHP waterjet cutting
-Options for fixing
-Cluster ballooning
-Reading
-Cutting operations
-Flow waterjet technology
-Joints and fixings
-The flying garden chair
-Listening
-A drawing query
-Scale
-A floor design
-Design procedures
-Revising a detail
-Reading
-Superflat floors
-Oueries and instructions
-Listening
-A racing car test session
-Test session problems
-Technical 
-help{ine
-Tyre pressure problems
-A maintenance 
-check
-Reading
-Air Transat Flight 236
-I
+
+
+
+
+
 Contents
-t
-nry
-nffi
-Tf,
-ITEf,
-ET
-n
-Discussing 
-technical
-requirements
-Suggesting 
-ideas and
-solutions
-Assessing feasibility
-Describing improvements
-and redesigns
-Describing health and
-safety precautions
-Emphasising 
-the
-importance 
-of
-precautions
-Discussing 
-regulations 
-and
-standards
-Working with written
-instructions 
-and notices
-Describing automated
-systems
-Referring to measurable
-param
+
+HBR Work Smart Series
+Title Page
+Copyright
+Contents
+Introduction: Authenticity and the Power of You
+Section 1. Understanding the Authentic You
+
+1. Getting Comfortable Being Yourself at Work
+2. How to Find, Define, and Use Your Values
+Section 2. Communicating Authentically, Without Oversharing
+
+3. Using Authentic Conversation to Connect with Others
+4. My Pronouns Are They/Them. What Are Yours?
+5. Self-Disclosure at Work
+6. Should You Disclose an Invisible Marginalized Identity at Work?
+7. Coming Out as Trans at Work
+Section 3. Dealing with Real Emotions
+
+8. Managing the Hidden Stress of Emotional Labor
+9. Do You Ever Second-Guess Yourself?
+10. Your Job and Your Identity Are Two Different Things
+11. So, You Cried at Work
+Section 4. When Identity and Work Collide
+
+12. When You Don’t Feel Comfortable Being Yourself at Work
+13. Why the Model Minority Myth Is So Harmful
+14. My Colleagues Can’t Get My Name Right
+15. How to Have Difficult Conversations Without Burning Bridges
+16. Are You Living a Double Life on Social Media?
+Notes
+Index
+About the Contributors
+
+
+
+Guide
+
+Cover
+Title Page
+Copyright
+Contents
+Introduction: Authenticity and the Power of You
+Section 1. Understanding the Authentic You
+1. Getting Comfortable Being Yourself at Work
+Notes
+Index
+About the Contributors
+
+
+
+Pagebreaks of the print version
+
+Cover Page
+iii
+v
+vi
+vii
+viii
+ix
+xi
+xii
+xiii
+xiv
+xv
+1
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+23
+25
+26
+27
+28
+29
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+73
+75
+76
+77
+78
+79
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+103
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+133
+134
+135
+136
+137
+138
+139
+140
+141
+143
+144
+145
+146
+147
+148
+149
+151
+152
+153
+155
+156
+157
+158
+159
+161
+162
+163
+164
+165
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HBR Work Smart Series
+Rise faster with quick reads, real stories, and expert advice.
+It’s not easy to navigate the world of work when you’re exploring who you are and what you want in life. How do you translate your interests, skills, and education into building a career you love?
+The HBR Work Smart Series features the topics that matter to you most in your early career, including being yourself at work, collaborating with (sometimes difficult) colleagues and bosses, managing your mental health, and weighing major job decisions. Each title includes chapter recaps and links to video, audio, and more. The HBR Work Smart books are your practical guides to stepping into your professional life and moving forward with confidence.
+Books in the series include:
+Authenticity, Identity, and Being Yourself at Work
+Bosses, Coworkers, and Building Great Work Relationships
+Boundaries, Priorities, and Finding Work-Life Balance
+Experience, Opportunity, and Developing Your Career
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HBR Press Quantity Sales Discounts
+Harvard Business Review Press titles are available at signifi

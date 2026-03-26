@@ -1,1 +1,66 @@
-PRAISE FOR BEFORE THE COFFEE GETS COLD “This is a sweet, fable-like tale about a magical seat in a cafe where you can, if you wish, go back in time... An odd read, but also a charming one.” — The Sydney Morning Herald “A story about human relationships, missed opportunities and the enduring power of love.” — The Gryphon “A thought-provoking and at times tear-jerking realization about what we would say if we could go back in time.” — Palatinate “It is full of soul, presented through clever world building and unfolding of its characters and relationships.” — Books and BaoTOSHIKAZU KAWAGUCHI was born in Osaka, Japan, in 1971. He has produced, directed and written for the theatrical group Sonic Snail. As a playwright, his works include COUPLE , Sunset Song and family time . His play Before the Coffee Gets Cold won the grand prize at the Suginami Drama Festival. This is his debut as an author. Before the Coffee Gets Cold has become an international bestseller and has been adapted for the screen in Japan.Before the Coffee Gets Cold a novel Toshikazu Kawaguchi Translated from Japanese by Geoffrey TrousselotContents Quote i The Lovers ii Husband and Wife iii The Sisters iv Mother and Child Excerpt from Tales from the Cafe by Toshikazu KawaguchiIf you could go back, who would you want to meet?i The Lovers “ Oh gosh, is that the time? Sorry, I have to go,” the man mumbled evasively, as he stood up and reached for his bag. “What?” the woman said. She looked at him with uncertainty. She hadn’t heard him say it was over. But he had called her—his girlfriend of two years—to come out for a serious conversation ... and now he had suddenly announced he was going to work in America. He was to leave immediately—in a few hours. Even without hearing the words, she knew now that the serious conversation was about breaking up. She knew now it was a mistake to have thought—to have hoped—that the serious conversation might have included “Will you marry me?” for example. “What?” the man responded dryly. He didn’t make eye contact with her. “Don’t I deserve an explanation?” she asked. The woman spoke using a questioning tone the man particularly disliked. They were in a windowless basement café. The lighting was provided by just six shaded lamps hanging from the ceiling and a single wall lamp near the entrance. A permanent sepia hue stained the café interior. Without a clock, there was no way to tell whether it was night or day. There were three large antique wall clocks in the café. The arms of each, however, showed different times. Was this intentional? Or were they just broken? Customers on their first visit never understood why the clocks were like this. Their only option was to check their watches. The man did so now. While looking at the time on his watch, he started rubbing his fingers above his right eyebrow while his lower lip began to protrude slightly. The woman found that expression particularly exasperating. “And why are you looking like that? Like I’m the one
+Railway applications —
+Rolling stock — Power 
+supply with onboard 
+energy storage system
+Part 1: Series hybrid system
+BS EN 62864-1:2016
+BSI Standards Publication
+National foreword
+This British Standard is the UK implementation of EN 62864-1:2016. It is
+identical to IEC 62864-1:2016.
+The UK participation in its preparation was entrusted to Technical
+Committee GEL/9, Railway Electrotechnical Applications.
+A list of organizations represented on this committee can be obtained on
+request to its secretary.
+This publication does not purport to include all the necessary provisions of
+a contract. Users are responsible for its correct application.
+© The British Standards Institution 2016.
+Published by BSI Standards Limited 2016
+ISBN 978 0 580 83951 1
+ICS 45.060.01
+Compliance with a British Standard cannot confer immunity from
+legal obligations.
+This British Standard was published under the authority of the
+Standards Policy and Strategy Committee on 30 November 2016.
+Amendments/corrigenda issued since publication
+Date                     Text affected
+BRITISH STANDARD
+BS EN 62864-1:2016
+ 
+ 
+EUROPEAN STANDARD 
+NORME EUROPÉENNE 
+EUROPÄISCHE NORM 
+EN 62864-1 
+ 
+November 2016 
+ICS 45.060 
+English Version 
+ 
+Railway applications - Rolling stock - Power supply with onboard 
+energy storage system - Part 1: Series hybrid system 
+(IEC 62864-1:2016) 
+ 
+Applications ferroviaires - Matériel roulant - Alimentation 
+équipée d'un système embarqué de stockage de l'énergie - 
+Partie 1: Système hybride série 
+(IEC 62864-1:2016) 
+ 
+Bahnanwendungen - Schienenfahrzeuge - 
+Stromversorgung durch Energiespeichersysteme auf 
+Schienenfahrzeugen - Teil 1: Serienhybridsystem 
+(IEC 62864-1:2016) 
+This European Standard was approved by CENELEC on 2016-07-20. CENELEC members are bound to comply with the CEN/CENELEC 
+Internal Regulations which stipulate the conditions for giving this European Standard the status of a national standard without any alteration. 
+Up-to-date lists and bibliographical references concerning such national standards may be obtained on application to the CEN-CENELEC 
+Management Centre or to any CENELEC member.  
+This European Standard exists in three official versions (English, French, German). A version in any other language made by translation 
+under the responsibility of a CENELEC member into its own language and notified to the CEN-CENELEC Management Centre has the 
+same status as the official versions. 
+CENELEC members are the national electrotechnical committees of Austria, Belgium, Bulgaria, Croatia, Cyprus, the Czech Republic, 
+Denmark, Estonia, Finland, Former Yugoslav Republic of Macedonia, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, 
+Lithuania, Luxembourg, Malta, the Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, 
+Turkey and the United Kingdom. 
+European Committee for Electrotechnical Standardization  
+Comité Européen de Normalisation Electrotechnique 
+Europäisches Komitee für Elekt

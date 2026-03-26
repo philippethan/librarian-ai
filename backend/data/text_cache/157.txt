@@ -1,0 +1,118 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table of Contents
+
+Cover
+Table of Contents
+Title Page
+Copyright
+Dedication
+Introduction
+Notes
+
+
+Section 1: A High‐Level Overview Of RCA and Systems Thinking
+Chapter 1: Critical Points Concerning Root Cause Analysis (RCA)
+Immediate, Contributing and Root Causes
+RCA Fundamentals: Facts, Timelines and Causality
+The Bowtie Diagram: Thinking through What Can Happen and What to Do about It
+Prevention, Detection and Recovery Measures
+High‐Reliability Organisations and RCA
+The 5 Whys (Five Whys) and More
+Rare, If Ever, to Have Just One Root Cause: Beyond the Five Whys
+Summary
+Notes
+
+
+Chapter 2: The Fishbone Diagram and Eight Ways of Understanding Why
+Can Root Cause Analysis Be Applied to Minor Defects? Insights from Lean Ways of Working
+The Fishbone Diagram and Different Categories of Causes
+The Modified Fishbone Diagram: Eight Ways of Understanding Why
+Summary
+Notes
+
+
+Chapter 3: Systems Thinking and Eight Ways to Understand Why, with Connections
+Systems Thinking – The Value of Stepping Back and Seeing the Bigger Picture
+Illustrating the Power of Thinking in Systems – Causal Loop Analysis
+The Value of Stepping Back to See Patterns, Tipping Points and Vicious Circles
+Every System Is Perfectly Capable of Giving the Results it Currently Gives
+A Systems Perspective on the Financial Crisis of 2007–2008
+When to Stop and Boundary Diagrams
+Eight Ways to Understand Why, with Connections
+Summary
+Notes
+
+
+
+
+Section 2: Eight Ways to Understand Why, with Connections
+Chapter 4: Setting Appropriate Strategies, Goals, and Understanding Risks
+The Successes and Failures of the Wright Brothers at Kittyhawk
+Realism and Learning in Pharmaceuticals
+Business Case Transparency – Balancing Optimism and Realism with an Eye on Downside Risks
+Summary
+Practical Suggestions
+Notes
+
+
+Chapter 5: Having Timely, Accurate Data, Information and Communications
+Lessons Learned in Cockpit Design
+Accounting and Business Performance Measurement
+Summary
+Practical Suggestions
+Notes
+
+
+Chapter 6: Setting Appropriate Roles, Responsibilities, Accountabilities and Authorities
+In Many Contexts, Clear Roles and Checks and Balances Are Essential
+Summary
+Practical Suggestions
+Notes
+
+
+Chapter 7: Ensuring a Suitable Design
+Ahead of Its Time and Still Standing Today: The Eiffel Tower
+Good Design Applies to More Than Just Buildings and Structures
+Summary
+Practical Suggestions
+Notes
+
+
+Chapter 8: Understanding and Accommodating External Factors
+External Factors Are Not the Root Cause of Problems
+Know Your Customer
+Summary
+Practical Suggestions
+Notes
+
+
+Chapter 9: Effective Building, Maintenance and Change
+One Side of the Coin: Building, Change Management and Project Management
+The Other Side of the Coin: Keeping Things the Same
+Summary
+Practical Suggestions
+Notes
+
+
+Chapter 10: Understanding and Adapting to ‘Human Factors’
+Human Error and the Evolution of Human Factors Thinking
+Human Variability and ‘the Miracle on the Hudson’
+Human Factors
+Just Culture – Balancing Holding People to Account Agains

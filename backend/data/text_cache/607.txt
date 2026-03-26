@@ -1,51 +1,124 @@
-What Readers Are Saying
-“After having what I think was a mild anxiety attack, I picked up your
-book to distract myself. Not only did it get me out of my panic state,
-it truly gave me a sense of direction. I read it over three days at a very
-slow pace, writing down all the things that I knew I needed to work
-on or had never even considered before. The latter half of 2019 ended
-up being one of the most productive, driven, and happiest times of
-my life.”
-—Bhavishya G., Hyderabad, India
-“This book absolutely nails what it’s like to be a frightened, confused,
-despairing twentysomething fed useless platitudes about how the
-world works from movies, newspapers, friends, and even parents.”
-—Michael S., Calgary, Alberta, Canada
-“Reading your book was like having someone read a transcript of the
-thoughts, feelings, attitudes, etc., bouncing through the chamber
-inside my head.”
-—Laura S., Los Angeles, California
-“I’m sure you’ve heard it so many times, but I feel that this book was
-written about me.”
-—Oded W., Tel Aviv, Israel
-“I am thirty-one and am trying to catch up. I have been looking for
-your book without realizing it for some time.”
-—Moya R., Oakland, California
-“I expected The Defining Decade to be cliché and full of ‘carpe diem’
-sentiments. I’m so glad I was wrong. To say it was life-changing
-would not suffice. My copy is saturated in highlighter and ink.
-Everything was relevant. Everything was helpful. Everything in the
-book spoke to me in a way that no book, parent, friend, or advisor
-ever has. Though I’d been trying to get my life together, I started
-trying harder. I gained a new perspective. I made myself a timeline. I
-recommended your book to all my twentysomething friends and even
-lent out my copy, scribbles and highlights included. I finished the
-book feeling relieved almost. You are speaking directly to a
-generation that is often spoken down to or dismissed.”
-—Tessa V., Istanbul, Turkey
-“Your book was life-changing, and I feel liberated. I have a sense of
-direction now, a purpose, and I’m telling everyone about it.”
-—Eva G., Chicago, Illinois
-“I keep writing rough drafts to try to convey how important this
-book is to me at this moment in time in my life. I cannot express my
-thankfulness that someone gets it. I am twenty-four and always had
-the sense I was throwing my life away, but everyone tells me ‘Don’t
-worry, it will all work out. You are only twenty-four.’ Thank you for
-the cold water to the face. Every single page directly applied to me. I
-want to buy this book for all of my twentysomething friends. I
-literally felt like you were talking to me directly, which in itself was an
-awesome experience.”
-—Ryan L-K., Sacramento, California
-“Thank you for this book. It is everything people in my age bracket
-(including myself) are talking about but not getting to the heart of.”
-—Amanda S., Long Island, New York
+
+
+
+
+
+Contents
+
+Series Page
+Title Page
+Copyright
+Dedication
+Table of Contents
+List of Figures
+Foreword
+1. Introduction to the Second Edition
+2. Introduction to the First Edition
+
+2.1. The Need for Formal Methods
+2.2. Hardware and Software Verification
+2.3. The Process of Model Checking
+2.4. Temporal Logic and Model Checking
+2.5. Symbolic Algorithms
+2.6. Partial Order Reduction
+2.7. Other Approaches to the State Explosion Problem
+
+
+3. Modeling Systems
+
+3.1. Transition Systems and Kripke Structures
+3.2. Nondeterminism and Inputs
+3.3. First-Order Logic and Symbolic Representations
+3.4. Boolean Encoding
+3.5. Modeling Digital Circuits
+3.6. Modeling Programs
+3.7. Fairness
+
+
+4. Temporal Logic
+
+4.1. The Computation Tree Logic CTL*
+4.2. Syntax and Semantics of CTL*
+4.3. Temporal Logics Based on CTL*
+4.4. Temporal Logic with Set Atomic Propositions and Set Semantics
+4.5. Fairness
+4.6. Counterexamples
+4.7. Safety and Liveness Properties
+
+
+5. CTL Model Checking
+
+5.1. Explicit-State CTL Model Checking
+5.2. Model-Checking CTL with Fairness Constraints
+5.3. CTL Model Checking via Fixpoint Computation
+
+
+6. LTL and CTL* Model Checking
+
+6.1. The Tableau Construction
+6.2. LTL Model Checking with Tableau
+6.3. Correctness Proof of the Tableau Construction
+6.4. CTL* Model Checking
+
+
+7. Automata on Infinite Words and LTL Model Checking
+
+7.1. Finite Automata on Finite Words
+7.2. Automata on Infinite Words
+7.3. Deterministic versus Nondeterministic Büchi Automata
+7.4. Intersection of Büchi Automata
+7.5. Checking Emptiness
+7.6. Generalized Büchi Automata
+7.7. Automata and Kripke Structures
+7.8. Model Checking using Automata
+7.9. From LTL to Büchi Automata
+7.10. Efficient Translation of LTL into Automata
+7.11. On-the-Fly Model Checking
+
+
+8. Binary Decision Diagrams and Symbolic Model Checking
+
+8.1. Representing Boolean Formulas
+8.2. Representing Kripke Structures with OBDDs
+8.3. Symbolic Model Checking for CTL
+8.4. Fairness in Symbolic Model Checking
+8.5. Counterexamples and Witnesses
+8.6. Relational Product Computations
+
+
+9. Propositional Satisfiability
+
+9.1. Conjunctive Normal Form
+9.2. Encoding Propositional Logic into CNF
+9.3. Propositional Satisfiability using Binary Search
+9.4. Boolean Constraint Propagation (BCP)
+9.5. Conflict-Driven Clause Learning
+9.6. Decision Heuristics
+
+
+10. SAT-Based Model Checking
+
+10.1. Bounded Model Checking
+10.2. Verifying Reachability Properties with k-Induction
+10.3. Model Checking with Inductive Invariants
+10.4. Model Checking with Craig Interpolants
+10.5. Property-Directed Reachability
+
+
+11. Equivalences and Preorders between Structures
+
+11.1. Bisimulation Equivalence
+11.2. Fair Bisimulation
+11.3. Preorders between Structures
+11.4. Games for Bisimulation and Simulation
+11.5. Equivalence and Preorder Algorithms
+
+
+12. Partial Order Reduction
+
+12.1. Concurrency in Asynchronous Systems
+12.2. Independence and Invisibility
+12.3. Partial Order Reduction for LTL−X
+12.4. An Example
+12.5. Calculating Ample Sets
+12.6. Correctness of the Algorithm

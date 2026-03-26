@@ -1,44 +1,28 @@
-Alain Gibaud
-Professeur à l’université du Maine (Le Mans)
-2e édition
-Michel Henry
-Agrégé de physique
-Maître de conférences à l’IUFM des Pays de Loire (Le Mans)
-COURS DE PHYSIQUE 
-Mécanique
-du point
-Illustration de couverture : Virtua73 © fotolia.com
-© Dunod, Paris, 1999, 2007, 2019 pour la nouvelle présentation 
-ISBN  978-2-10-080017-9
-AVANT-PROPOS
-Le cours présenté dans ce livre est le fruit de plusieurs années d’enseignement dispensé
-aux étudiants de première année à l’université du Maine. Il s’agit d’un cours d’introduc-
-tion à la mécanique du point et des systèmes de points matériels. Notre souci au cours
-de la rédaction de cet ouvrage a été de nous référer aux connaissances acquises par les
-étudiants dans les classes du secondaire aﬁn d’assurer une transition la plus continue pos-
-sible.
-La principale difﬁculté que nous avons rencontrée lors de ce cours a été certainement
-d’ordre mathématique. La mécanique est une science qui exige de la rigueur et les
-concepts acquis lors de l’apprentissage dans le secondaire sont ici repris de façon plus
-formelle et rigoureuse. Nous présentons donc, en annexe 1, les outils mathématiques qui
-nous semblent nécessaires à la bonne compréhension du cours de physique.
-Le premier et le second chapitres sont consacrés à la cinématique du point ainsi qu’aux
-changements de référentiels. Nous insistons plus particulièrement sur la déﬁnition du
-référentiel ; cette déﬁnition conditionne bien souvent la façon de traiter un problème et
-reste, bien des fois, mal comprise.
-Nous présentons ensuite les lois fondamentales de la mécanique en décrivant les forces les
-plus classiques susceptibles d’intervenir dans les problèmes de mécanique. Nous introdui-
-sons alors les concepts d’énergie et de puissance avant de présenter les oscillateurs libres
-et forcés.
-La partie suivante montre que pour traiter un problème de mécanique dans un référentiel
-non galiléen il est nécessaire d’introduire des pseudos forces appelées forces d’inertie.
-L’étude du poids d’un corps sur Terre met en évidence le fait que le référentiel terrestre
-n’est pas galiléen. L’étude du phénomène des marées conduit à la même conclusion pour
-le référentiel géocentrique.
-Les deux derniers chapitres sont consacrés au problème à deux corps. L’accent est mis
-sur la notion de référentiel barycentrique. L’étude de la trajectoire d’un système à deux
-corps permet de retrouver les lois de Kepler auxquelles obéissent les planètes du système
-solaire. Une présentation de la mécanique céleste se trouve à la ﬁn du livre en annexe 2.
-Cet ouvrage s’adresse bien sûr aux étudiants du premier cycle universitaire mais aussi à
-ceux des classes préparatoires, du CAPES et de l’agrégation. Nous espérons qu’il leur sera
-une aide précieuse dans leur effort de compréhension de cette branche de la physique.
+HBR Guide to
+Generative AI
+for Managers
+Harvard Business Review Guides
+Arm yourself with the advice you need to succeed on the job, from the most
+trusted brand in business. Packed with how-to essentials from leading
+experts, the HBR Guides provide smart answers to your most pressing work
+challenges.
+The titles include:
+HBR Guide for Women at Work
+HBR Guide to AI Basics for Managers
+HBR Guide to Being a Great Boss
+HBR Guide to Being More Productive
+HBR Guide to Better Business Writing
+HBR Guide to Better Mental Health at Work
+HBR Guide to Building Your Business Case
+HBR Guide to Buying a Small Business
+HBR Guide to Changing Your Career
+HBR Guide to Coaching Employees
+HBR Guide to Collaborative Teams
+HBR Guide to Critical Thinking
+HBR Guide to Data Analytics Basics for Managers
+HBR Guide to Dealing with Conflict
+HBR Guide to Delivering Effective Feedback
+HBR Guide to Designing Your Retirement
+HBR Guide to Emotional Intelligence
+HBR Guide to Executing Your Strategy
+HBR Guide to Finance Basics for Managers

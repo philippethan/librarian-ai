@@ -1,1 +1,62 @@
-Thierry Meyer, Genserik Reniers Engineering Risk ManagementDe Gruyter TextbookThierry Meyer, Genserik Reniers Engineering Risk ManagementISBN 9783110665314 e-ISBN (PDF) 9783110665338 e-ISBN (EPUB) 9783110665420 Bibliographic information published by the Deutsche Nationalbibliothek The Deutsche Nationalbibliothek lists this publication in the Deutsche Nationalbibliografie; detailed bibliographic data are available on the Internet at http://dnb.dnb.de . © 2022 Walter de Gruyter GmbH, Berlin/BostonÜbersicht Table of Contents Contents About the authors 1 Risk management is not only a matter of financial risk 2 Introduction to engineering and managing risks 2.1 Managing risks and uncertainties: an introduction 2.2 The complexity of risks and uncertainties 2.3 Hazards and risks 2.4 Simplified interpretation of (negative) risk 2.5 Hazard and risk mapping 2.6 Risk perception and risk attitude 2.7 ERM: main steps 2.8 Objectives and importance of ERM 2.9 The black swan (type III events) 2.10 Risk management and education 2.11 Tips for managing risks 2.12 Conclusions 3 Risk management principles 3.1 Introduction to risk management 3.2 Integrated risk management 3.3 Risk management models 3.3.1 Model of the accident pyramid 3.3.2 The P2T model 3.3.3 The Swiss cheese model and the domino theory 3.4 The anatomy of an accident: SIFs and SILs 3.5 Individual risk, societal risk, physical description of risk 3.5.1 Location-based (individual) risk 3.5.2 Societal risk or so-called Group Risk 3.5.3 Physical description of risk 3.6 Safety culture and safety climate 3.6.1 Organizational culture and climate 3.6.2 Safety culture models 3.6.3 The P2T model revisited and applied to safety and security culture 3.6.4 The Egg Aggregated Model of safety culture 3.7 Strategic management concerning risks and continuous improvement 3.8 The IDEAL S&S model 3.8.1 Performance indicators 3.9 Continuous improvement of organizational culture 3.10 High reliability organizations and systemic risks 3.10.1 Systems thinking 3.10.2 Normal accident theory and high reliability theory 3.10.3 High reliability organization principles 3.10.4 Risk and reliability 3.11 Accident reporting 3.12 Conclusions 4 Risk diagnostic and analysis 4.1 Introduction to risk assessment techniques 4.1.1 Inductive and deductive approaches 4.1.2 General methods for risk analysis 4.1.3 General procedure 4.1.4 General process for all analysis techniques 4.2 SWOT 4.3 Preliminary hazard analysis 4.4 Checklist 4.4.1 Methodology 4.4.2 Example 4.4.3 Conclusion 4.5 HAZOP 4.5.1 HAZOP inputs and outputs 4.5.2 HAZOP process 4.5.3 Example 4.5.4 Conclusions 4.6 FMECA 4.6.1 FMECA inputs and outputs 4.6.2 FMECA process 4.6.3 Example 4.6.4 Conclusions 4.7 Fault tree analysis and event tree analysis 4.7.1 Fault tree analysis 4.7.2 Event tree analysis 4.7.3 Cause–consequence analysis (CCA) and bowtie, a combination of FTA and ETA 4.8 The risk matrix 4.9 Quantitative risk assessment (QRA) 4.10 Layer of protection analysis (LOPA) 4.11 Ba
+មណ្ឌល្របឡង
+វិញញសាេ្រតៀម្របឡងឆមាសទី១
+េលខបន្ទប់
+េលខតុ
+េឈា្មះេបក្ខជន
+ហត្ថេលខាេបក្ខជន
+វិញញសា
+: រូបវិទយ
+រយៈេពល: ៤៥នាទី
+ពិន្ទុ
+: ៣៥
+វិញញសាទី៣(២កុម្ភៈ២០២៦)
+I . (៤ពិន្ទុ) ចូរគូសសញញ() ក្នុង្របអប់ខាងមុខចេម្លីយ្រតឹម្រតȪវ៖
+១. ផលេមកានិចៃនរ៉កនឹងមួយ
+Ë ក. េស្មីនឹង1
+Ë ខ. េស្មីនឹង2
+Ë គ. េស្មីនឹង3
+Ë ឃ. េស្មីនឹង4
+២. ស្ពឺគឺជាកង់មយ៉ងែដលមាន
+Ë ក. ចង្អូរ
+Ë ខ. េធ្មញ
+Ë គ. ែខ្សពាន
+Ë ឃ. ស្ពឺទប់
+II . (៦ពិន្ទុ) ចូរបំេពញល្បះខាងេ្រកាមឲ្យបាន្រតឹម្រតȪវ៖
+១. ទិន្នផលមា៉សុីនងាយគឺជាទំហំមួយកំណត់េដាយផលេធៀបរវាង...................................................។
+២. ម៉ូម៉ង់ែដលេធ្វីឲ្យអង្គធាតុវិលតាមទិសេដៃនរង្វិល្រទនិចនាឡិកាេហថា.......................................។
+៣. ទី្របជុំទម្ងន់ៃន្របេទសកម្ពុជាស្ថិតេនក្នុងេខត្ត....................................។
+III . (១០ពិន្ទុ) ចូរផ្គូរផ្គងែផ្នក(A) និង(B) ឲ្យបាន្រតឹម្រតȪវ៖
+A
+B
+ចេម្លីយ
+១. រូបមន្តផលេមកានិចៃនឃា្នស់
+ក. MA = RR
+RE
+១. −→
+២. រូបមន្តផលេមកានិចៃនប្លង់េទរ
+ខ. MA = NR
+NE
+២. −→
+៣. រូបមន្តផលេមកានិចៃនកង់េយាង
+គ. MA = dE
+dR
+៣. −→
+៤. រូបមន្តផលេមកានិចៃនស្ពឺ
+ឃ. MA = R
+r
+៤. −→
+៥. រូបមន្តផលេមកានិចៃន្រតឺយ
+ង. MA = L
+h
+៥. −→
+ច. MA = FE
+FR
+IV . (១៥ពិន្ទុ) លំហាត់
+១. ប្លង់េទរមួយមាន្របែវងL = 4.00m េហីយបេង្កីតបានមុំ60.0° ជាមួយទិសេដក។
+ក. គណនាផលេមកានិចៃនប្លង់េទរេនាះ។
+ខ. គណនាកមា្លំងចលករែដល្រតȪវេ្របីេដីម្បីេលីកបន្ទុកទម្ងន់1000N េឡីងេលីប្លង់េទរេនាះ។
+២. េគទាញធុងមួយមានទម្ងន់1200N េដាយកមា្លំង350N តាមប្លង់េទរែដលមាន្របែវង8m និងមានកម្ពស់2m ។
+ក. គណនាកម្មន្ដៃនទម្ងន់របស់ធុងេនាះ។
+ខ. គណនាកម្មន្តសរុបៃនកមា្លំងទាញ។
+គ. គណនាទិន្នផលៃនប្លង់េទរ។
+បេ្រងៀនេដាយអ្នក្រគȪ ឡុចសុជាតា

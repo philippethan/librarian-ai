@@ -1,17 +1,35 @@
-Alain Bauer • Christophe Soullez L’EspionnageL’Espionnage pour les Nuls « Pour les Nuls » est une marque déposée de John Wiley & Sons, Inc. « For Dummies » est une marque déposée de John Wiley & Sons, Inc. © Éditions First, un département d’Édi8, Paris, 2022. Publié en accord avec John Wiley & Sons, Inc. Éditions First, un département d’Édi8 92, avenue de France 75013 Paris - France Tél. : 01 44 16 09 00 Fax : 01 44 16 09 01 Courriel : firstinfo@efirst.com Site Internet : www.pourlesnuls.fr ISBN : 9782412082775 Dépôt légal : mai 2022 Mise en pages : Stéphane Angot Correction et index : Céline Dutt Illustrations : Stéphane Martinez Tous droits réservés. Toute reproduction, même partielle, du contenu, de la couverture ou des icônes, par quelque
-procédé que ce soit (électronique, photocopie, bande magnétique ou autre) est interdite sans autorisation par écrit
-d’Édi8. Limites de responsabilité et de garantie. L’auteur et l’éditeur de cet ouvrage ont consacré tous leurs efforts à
-préparer ce livre. Édi8 et les auteurs déclinent toute responsabilité concernant la fiabilité ou l’exhaustivité du
-contenu de cet ouvrage. Ils n’assument pas de responsabilité pour ses qualités d’adaptation à quelque objectif
-que ce soit, et ne pourront être en aucun cas tenus responsables pour quelque perte, profit ou autre dommage
-commercial que ce soit, notamment mais pas exclusivement particulier, accessoire, conséquent, ou autre. Marques déposées. Toutes les informations connues ont été communiquées sur les marques déposées pour les
-produits, services et sociétés mentionnés dans cet ouvrage. Édi8 décline toute responsabilité quant à l’exhaustivité et à l’interprétation des informations. Tous les autres noms de marques et de produits utilisés dans cet
-ouvrage sont des marques déposées ou des appellations commerciales de leur propriétaire respectif. Édi8 n’est lié
-à aucun produit ou vendeur mentionné dans ce livre. Ce livre numérique a été converti initialement au format EPUB par Isako www.isako.com à partir de l'édition papier du même ouvrage.À propos des auteurs Alain Bauer est professeur de criminologie au Conservatoire national des arts et
-métiers (CNAM), au John Jay College of Criminal Justice à New York et à l’Université Fudan de Shanghaï. Il dirige les formations du Pôle sécurité défense renseignement criminologie
-cybermenaces et crises (PSDR3C) du CNAM. Il conseille ou a conseillé le New York Police Department (NYPD), la sûreté du
-Québec (SQ) (Canada) et le Los Angeles Sheriff Department (LASD). Il a été président du Conseil national des activités privées de sécurité (CNAPS)
-et a fondé puis présidé le Conseil supérieur de la formation et de la recherche
-stratégiques (CSFRS), le Conseil d’orientation de l’Observatoire national de
-la délinquance et des réponses pénales (ONDRP), le groupe de contrôle sur les
-fichiers de police et de gendarmerie, le groupe de travail sur la sécurité au quotidien (2007) et le livre blanc sur la sécurité publique (2012). Il a notamment p
+This ebook was issued to Adam L, order #138188850. Unlawful distribution of this ebook is prohibited.
+Adam L 138188850
+SdkBytes(bytes=0x0102020078ef9049f9e948fb216308852a217865b1cbfa6127cd87f4b056f194f7dd3ea12a01f889f820a2f8e1356a85f89ee46e8e780000006e306c06092a864886f70d010706a05f30
+5d020100305806092a864886f70d010701301e060960864801650304012e3011040ce1adf832133d34a668a165d0020110802b60fcae016af4ee88e4b9a298262e741855c55f1c580adbd463788e7ec3
+9683967287184b09553eaa51b1d9)
+The Official Guide to the TOEFL iBT® Test
+Using the Digital Resources
+Authentic TOEFL iBT test questions are used in this book. However, the screens and delivery formats are not 
+identical to the actual test. When you take the actual TOEFL iBT test, you may notice some variations in how the 
+questions are presented to you on screen.
+Installation
+First, go to www.mhprofessional.com/toefl7e. Once on the site, you’ll be prompted to enter your access code—
+if you are using a paperback, you will find your code inside the back cover. If you are using an eBook, your code 
+will be in your ETS account. Please note that this code is redeemable only by you and a maximum of four times.
+Once you enter your access code, a download will automatically begin. This download will contain the audio 
+files you need as well as files that contain the practice tests in both PC and Mac® format. 
+Main Menu for Practice Tests
+When you launch the program, the following screen will appear:
+Taking TOEFL iBT® Practice Tests on Your Computer
+From the Main Menu, choose Practice Test 1, 2, 3, or 4. Then select the test section you wish to take: Reading, 
+Listening, Speaking, or Writing. Note that you can take each section more than once.
+When you open a test section, you will first be provided with instructions for that section. A timer on the 
+screen shows how many minutes and seconds you have left for that section. You can hide the timer if you find it 
+distracting.
+If you must take a break during the test, select Main Menu at the top of the screen. This will take you back to 
+the main menu. When you are ready to resume, open the test section again, and select the Continue button. 
+Your work will not be lost, and you will begin exactly where you left off. The timer clock will stop while you are on 
+your break and will restart immediately when you resume the test. Try not to take breaks too often, because on 
+the actual test the clock keeps running even if you leave the room on a break.
+Answering Questions
+To answer the questions in the Reading and Listening sections, select the best answer or follow the instructions 
+given. For some questions, you will need to select more than one answer. Select the Next button to move 
+forward to the next question. In the Listening section, the Next button is enabled only after you select an answer 
+choice or choices. In the Reading section, you can select the Next button at any time to move forward to the next 
+question, and you can select the Back button to move back to the 

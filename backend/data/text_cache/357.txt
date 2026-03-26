@@ -1,13 +1,117 @@
-Stephen R. Covey
-LES 7 HABITUDES
- DE CEUX QUI
- RÉALISENT TOUT
- CE QU’ILS
- ENTREPRENNENT
-Traduction de Magali Guenette
-Du même auteur, aux Editions First :
-Priorité aux priorités
-L’Etoffe des leaders
-Les 7 Habitudes des familles épanouies
-Les 7 Habitudes en action
-La 8ème Habitude
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fundamentals of Enterprise Architecture
+Proven Frameworks for Effective Architecture Decisions
+Tanusree McCabe
+
+
+
+
+
+
+
+
+
+
+Fundamentals of Enterprise Architecture
+by Tanusree  McCabe
+Copyright © 2024 Tanusree McCabe. All rights reserved.
+Printed in the United States of America.
+Published by O’Reilly Media, Inc., 1005 Gravenstein Highway North, Sebastopol, CA 95472.
+O’Reilly books may be purchased for educational, business, or sales promotional use. Online editions are also available for most titles (https://oreilly.com). For more information, contact our corporate/institutional sales department: 800-998-9938 or corporate@oreilly.com.
+
+Acquisitions Editor: Louise Corrigan
+Development Editor: Corbin Collins
+    
+Production Editor: Gregory Hyman
+
+Copyeditor:
+       nSight, Inc.
+    
+
+Proofreader:
+       Helena Stirling
+    
+
+Indexer:
+       Ellen Troutman-Zaig
+    
+Interior Designer: David Futato
+Cover Designer: Karen Montgomery
+Illustrator: Kate Dullea
+
+
+September 2024: First Edition
+
+
+
+Revision History for the First Edition
+
+2024-09-05: First Release
+
+
+See http://oreilly.com/catalog/errata.csp?isbn=9781098159375 for release details.
+
+The O’Reilly logo is a registered trademark of O’Reilly Media, Inc. Fundamentals of Enterprise Architecture, the cover image, and related trade dress are trademarks of O’Reilly Media, Inc.
+The views expressed in this work are those of the author and do not represent the publisher’s views. While the publisher and the author have used good faith efforts to ensure that the information and instructions contained in this work are accurate, the publisher and the author disclaim all responsibility for errors or omissions, including without limitation responsibility for damages resulting from the use of or reliance on this work. Use of the information and instructions contained in this work is at your own risk. If any code samples or other technology this work contains or describes is subject to open source licenses or the intellectual property rights of others, it is your responsibility to ensure that your use thereof complies with such licenses and/or rights.
+
+
+978-1-098-15937-5
+[LSI]
+
+
+
+
+
+
+
+
+
+Preface
+Who Should Read This Book? 
+Conventions Used in This Book
+O’Reilly Online Learning
+How to Contact Us
+Acknowledgments
+1. Key Enterprise Architecture Concepts
+Why Enterprise Architecture?
+Avoiding Silos
+Avoiding Chaos
+Avoiding Technical Debt
+Summarizing the Benefits
+
+What Is the Practice of Enterprise Architecture?
+The Vision
+The Mission
+What Are the Functions of Enterprise Architecture?
+Enterprise Architecture Strategy
+Enterprise Architecture Enablement
+Enterprise Architecture Oversight
+
+What Are Typical Architecture Roles?
+Enterprise Architect Role
+Solution Architect Role
+Application Architect Role
+Comparing Typical Architect Roles
+Specialized Functions
+
+Organizational Model
+Centralized Architecture
+Federated Architecture
+Hybrid Architecture
+
+What Are Typical Architecture Deliverables?
+Architecture Decision Delive

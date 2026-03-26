@@ -1,7 +1,76 @@
-eae 
-Ne 
-. 
-€- 
-S. Chand's 
-Revised Edition 
-PANKAJ BHATT 
+Springer Textbook 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Prof. Dr.-Ing. Dietmar Gross 
+received his Engineering Diploma in Applied Mechanics 
+and his Doctor of Engineering degree at the University of 
+Rostock. He was Research Associate at the University of 
+Stuttgart and since 1976 he is Professor of Mechanics at the 
+University of Darmstadt. His research interests are mainly 
+focused on modern solid mechanics on the macro and 
+micro scale, including advanced materials 
+ 
+Prof. Dr. Werner Hauger 
+studied Applied Mathematics and Mechanics at the 
+University of Karlsruhe and  received his Ph.D. in Theoretical 
+and Applied Mechanics from Northwestern University in 
+Evanston. He worked in industry for several years, was a 
+Professor at the Helmut-Schmidt-University in Hamburg and 
+went to the University of Darmstadt in 1978. His research 
+interests are, among others, theory of stability, dynamic 
+plasticity and biomechanics. 
+ 
+Prof. Dr.-Ing. Jörg Schröder 
+studied Civil Engineering, received his doctoral degree at 
+the University of Hannover and habilitated at the University 
+of Stuttgart. He was Professor of Mechanics at the 
+University of Darmstadt and went to the University of 
+Duisburg-Essen in 2001. His fields of research are 
+theoretical and computer-oriented continuum mechanics, 
+modeling of functional materials as well as the further 
+development of the finite element method. 
+ 
+Prof. Dr.-Ing. Wolfgang A. Wall 
+studied Civil Engineering at Innsbruck University and 
+received his doctoral degree from the University of Stuttgart. 
+Since 2003 he is Professor of Mechanics at the TU München 
+and Head of the Institute for Computational Mechanics. His 
+research interests cover broad fields in computational 
+mechanics, including both solid and fluid mechanics. His 
+recent focus is on multiphysics and multiscale problems as 
+well as computational biomechanics. 
+ 
+Prof. Nimal Rajapakse 
+studied Civil Engineering at the University of Sri Lanka and 
+received Doctor of Engineering from the Asian Institute of 
+Technology in 1983. He was Professor of Mechanics and 
+Department Head at the University of Manitoba and at the 
+University of British Columbia. He is currently Dean of 
+Applied Sciences at Simon Fraser University in Vancouver. 
+His research interests include mechanics of advanced 
+materials and geomechanics. 
+ 

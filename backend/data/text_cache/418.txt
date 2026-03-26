@@ -1,82 +1,181 @@
-Matt Oswalt, 
-Christian Adell, 
-Scott S. Lowe &
- Jason Edelman
-Network 
-Programmability 
-& Automation
-Skills for the Next-Generation 
-Network Engineer
-Second 
-Edition
-SECURITY
-“This book helps 
-networking professionals 
-and developers write 
-clear, easily extensible 
-network automation 
-playbooks. It covers 
-almost everything 
-that you need to be at 
-the helm of network 
-automation.”
-—Akhil Behl
-Partner Manager, Red Hat
-Network Programmability & Automation
-Twitter: @oreillymedia
-linkedin.com/company/oreilly-media
-youtube.com/oreillymedia 
-Network engineers are finding it harder than ever to rely 
-solely on manual processes to get their jobs done. New 
-protocols, technologies, delivery models, and the need 
-for businesses to become more agile and flexible have 
-made network automation essential. The updated second 
-edition of this practical guide shows network engineers 
-how to use a range of technologies and tools, covering the 
-following topics:
-•	 New Linux-based networking technologies and cloud 
-native environments, and how to use them to bootstrap 
-development environments for your network projects
-•	 Programming skills with Python and Go
-•	 How templating can help you build consistent network 
-device configurations
-•	 Data formats, encodings, and models: JSON, XML, 
-YAML, Protobuf, and YANG
-•	 The role of application programming interfaces (APIs) 
-in network automation, including HTTP APIs, NETCONF, 
-RESTCONF, and gNMI
-•	 How to use version control systems like Git and 
-development practices like continuous integration 
-in your network automation projects
-•	 How to automate network devices and services using 
-Ansible, Nornir, and Terraform
-•	 A holistic approach to architecting network 
-automation solutions
-Matt Oswalt is a senior systems 
-engineer at Cloudflare, where he works 
-on distributed systems and internet 
-and web protocols. 
-Christian Adell is a principal architect 
-at Network to Code, with experience 
-building and delivering network 
-automation solutions for on-premises 
-and cloud environments.
-Scott Lowe works on the developer 
-relations team at Pulumi, where he 
-focuses on infrastructure as code 
-and automating cloud infrastructure 
-and services.
-Jason Edelman is the founder and CTO 
-at Network to Code, a leading network 
-automation solutions provider. Jason 
-founded Network to Code in 2014.
-US $59.99	  CAN $74.99
-ISBN: 978-1-098-11083-3
-Praise for Network Programmability and Automation
-I highly recommend this new edition of the book to anyone looking to improve their
-network automation skills. The authors do an outstanding job of explaining complex
-topics in a clear and concise way. They also provide a comprehensive overview of current
-technology trends in the field, as well as architectural design options and methodologies
-that you can use to achieve positive results for your organization. I found the book to be
-very helpful and informative, and I am confident that you will too.
-—Nicolas Leiva (Staff Solutions Architect at Re
+
+
+
+
+
+
+Sommaire
+
+
+Couverture
+
+
+Héros et héroïnes (pas si) ordinaires - 120 histoires de courage et de solidarité
+
+
+Introduction
+
+
+Arnaud Beltrame. Le sacrifice ultime
+
+
+Partie 1. Sauver héroïnes et héros d’un jour
+
+
+Irena Sendler. Trois mille enfants cachés dans des bocaux de verre
+
+
+Mary Kingsley. Une anglaise chez les anthropophages
+
+
+Lycéens d’Antibes. Comment sauver son prof
+
+
+Sophie Rollet. Une Erin Brockovich à la française
+
+
+Sebastian Arias. Presque trente millions d’amis
+
+
+Mohamed. Victime de son héroïsme
+
+
+Stéphane Frantz DI Rippel. Le sacrifice du directeur d’hôtel
+
+
+Nellie Bly. Plus forte que Phileas Fogg
+
+
+Lassana Bathily. Le sauveur de l’Hyper cacher
+
+
+Échelle humaine de Nantes. La témérité des copains
+
+
+Richard Fierro. Un us marine à la rescousse de la discothèque LGBTQ
+
+
+Marin. L’indigné exemplaire
+
+
+Steven Callahan. L’architecte naval qui se sauva la vie
+
+
+Maxime Ellero et Gaëlle Jarrige. Et ils empêchèrent un féminicide
+
+
+Français par le sang versé. Legio Patria Nostra
+
+
+Arnaud Attineti. Le « marmot » qui sauva un marmot
+
+
+Caryn Gale et Sergio Gerlanik. Les ambulanciers du 7 octobre
+
+
+Mamoudou Gassama. L’incroyable escaladeur
+
+
+Lycée d’Arras. Le courage des profs : Benjamin, Christian Berroyer, David, Florence, Frédéric, Jacques Davioli, Stéphanie
+
+
+Hakaroa. Le coureur de fond diabétique
+
+
+Didar Hossain. L’étoffe des héros
+
+
+Les élus agressés. De l’Haÿ-les-Roses, Charleville-Mézières, Pontoise, Châteauneuf-sur-Cher, Saint-Brévin, signes…
+
+
+Robert Moh et Rod Lindley. Les cheminots intrépides
+
+
+Henri d’Anselme. Un sac à dos pour seule arme
+
+
+Les « liquidateurs » de Tchernobyl. Les sacrifiés de l’atome
+
+
+James Persyn. Un protecteur de quatorze ans
+
+
+Armando Soccaras Ramirez. L’impossible fuite
+
+
+Enseignants assassinés. Parce qu’ils étaient profs…
+
+
+Franck terrier. L’intrépide héros à scooter
+
+
+
+
+Partie 2. Résister et combattre héroïnes et héros de guerre
+
+
+Moussa Abadi et ses 527 enfants
+
+
+Witold Pilecki. Le résistant d’Auschwitz
+
+
+Gertrude Bell. La véritable reine du désert
+
+
+Les Merlinettes. Les opératrices de la libération
+
+
+Awad Darawshe. L’arabe qui sauva les victimes du 7 octobre
+
+
+Madame Bouquey. La protectrice des girondins
+
+
+Oskar Schindler. L’industriel nazi sauveur de juifs
+
+
+Geneviève de Galard. L’ange de Diên Biên Phu
+
+
+Pierre Chaillet. Le jésuite résistant
+
+
+Bipin Joshi. L’otage népalais
+
+
+Raoul Nordling. Le consul qui empêcha Paris de brûler
+
+
+Les démineurs. Les détecteurs de pièges mortels
+
+
+Fania Fénelon. La chanteuse d’Auschwitz
+
+
+Rose Valland. L’historienne qui sauva les chefs-d’œuvre
+
+
+Le soldat inconnu. Pour tous les héros des guerres passées, présentes et futures
+
+
+Louis Adrian. Le polytechnicien qui protégeait les têtes
+
+
+Marie-Madeleine Fourcade. La cheffe du réseau Alliance
+
+
+Jumpin’Jo Beyrle, Bernard Dargols…. Le destin incroyable de GI du D day
+
+
+Chérif Mécheri. Le préfet courage
+
+
+Michel Hollard. L’ingénieur espion
+
+
+August Landmesser. L’homme qui ne saluait pas Hitler
+
+
+Phyllis Latour. Au service du SOE
+

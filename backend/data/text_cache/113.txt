@@ -1,98 +1,61 @@
-PROGRAMME 2020 • Collection Bellier • Lescure
-Sciences
-physiques
-Spécialité SI
-Sous la direction de
-Jean-Philippe Bellier
-Lycée Michel-Montaigne à Bordeaux
-Nicolas Lescure
-Lycée Michel-Montaigne à Bordeaux
-Thierry Baudoin
-Lycée Victor-Louis à Talence
-Sylvie Bertin
-Lycée de Borda à Dax
-Stéphanie Bigorre
-Lycée Alfred-Kastler à Talence
-Marc Bigorre
-Lycée des Graves à Gradignan
-Patrice Boudey
-Lycée de la mer à Gujan-Mestras
-Thierry Dulaurans
-Lycée Fernand-Daguin à Mérignac
-Cyrille Lémonie
-Lycée Saint-Exupéry à Terrasson-Lavilledieu
-Bruno Poudens
-Lycée des Graves à Gradignan
-S
-P
-É
-C
-I
-A
-L
-I
-T
-É
-le
-GUIDE PÉDAGOGIQUE
-Maquette intérieure : Soft Office
-Composition : Soft Office
-Schémas : Soft Office
-Édition : Nathalie Legros
-www.hachette-education.com
-© Hachette Livre 2020
-58, rue Jean Bleuzen – 92178 Vanves Cedex
-AVERTISSEMENT
-Vous venez de télécharger gratuitement le fichier pédagogique du Manuel 
-Sciences physiques Tle Spécialité SI, édition 2020.
-Nous vous rappelons qu’il est destiné à un usage strictement personnel. 
-Il ne peut ni être reproduit, ni être mutualisé sur aucun site (site d’établisse-
-ment, site enseignant, blog ou site de peer to peer), même à titre gracieux.
-Deux raisons principales :
-– Éviter de rendre le fichier accessible aux élèves dans les moteurs 
-de recherche.
-– Respecter pleinement le droit d’auteurs : en effet, l’ensemble des 
-guides pédagogiques et livres du professeur mis à votre disposition sont des 
-œuvres de l’esprit protégées par le droit de la propriété littéraire et artis-
-tique.
-Nous vous rappelons que selon les articles L 331-1 et L 335-4 du Code de la proprié-
-té intellectuelle, toute exploitation non autorisée de ces œuvres constitue un délit de 
-contrefaçon passible de sanctions de natures pénale et civile, soit trois ans d’empri-
-sonnement et 300 000 euros d’amende.
-3
-e
-Mouvement  
-et interactions
-Mouvement et deuxième loi  
-de Newton������������������������������������������������������������������������� 5
-Mouvement dans un champ uniforme����� 15
-Mouvement dans un champ  
-de gravitation���������������������������������������������������������������� 29
-L’énergie :  
-conversions  
-et transferts
-Premier principe de la thermodynamique 
-et bilan énergétique������������������������������������������������� 37
-Transferts thermiques������������������������������������������� 45
-Ondes  
-et signaux
-Sons et effet Doppler���������������������������������������������� 55
-Diffraction et interférences ����������������������������� 65
-La lumière : un flux de photons���������������������� 73
-1
- 
-2
- 
-3
- 
-4
- 
-5
- 
-6
- 
-7
- 
-8
- 
-Sommaire
+
+
+
+
+AFFAIRS
+
+
+
+
+
+
+AFFAIRS
+
+
+
+
+
+
+ 
+ 
+Published in 2019 by The School of Life
+70 Marchmont Street, London WC1N 1AB
+Copyright © The School of Life 2019
+Printed in Belgium by Graphius
+All rights reserved. This book is sold subject to the condition that it shall not be resold, lent, hired out or otherwise circulated without express prior consent of the publisher.
+A proportion of this book has appeared online at www.theschooloflife.com/thebookoflife/
+Every effort has been made to contact the copyright holders of the material reproduced in this book. If any have been inadvertently overlooked, the publisher will be pleased to make restitution at the earliest opportunity.
+The School of Life is a resource for helping us understand ourselves, for improving our relationships, our careers and our social lives – as well as for helping us find calm and get more out of our leisure hours.
+We do this through creating films, workshops, books and gifts. www.theschooloflife.com
+ISBN 978-1-912891-34-4
+
+
+
+
+
+
+CONTENTS
+A Brief History of Affairs
+When Does an Affair Begin?
+How to Spot a Couple That Might Be Headed for an Affair
+The Role of Sex in Affairs
+The Essence of What We Feel Upset About
+The Pleasures of Affairs
+The Pains of Affairs
+How to Reduce the Risk of Affairs
+How Can an Affair Help a Marriage?
+What Ideally Happens When an Affair Is Discovered?
+How to Handle the Desire for Affairs?
+What Does It Take to Be Good at Affairs?
+Affairs and High Horses
+
+
+
+
+
+
+A BRIEF HISTORY OF AFFAIRS
+An affair is a romantic or sexual story between two people, one of whom (at least) is ostensibly committed to someone else. Most importantly, in our times, an affair is a catastrophe, pretty much the greatest betrayal that can befall us, a harbinger of untrammelled suffering, frequently the end of the marriage it has violated and almost always an occasion for fierce moralising and the division of participants into ‘goodies’ (those who have been betrayed) and ‘monsters’ (those who have betrayed).
+However, in trying to understand affairs and make sense of their pains, as well as their less frequently confessed attractions, we should grasp that the way in which we interpret affairs today is very particular to our own times; we are remarkably contorted about the whole business, as judged against the long span of human experience. People have always had affairs, but what an affair means has been subject to huge changes across societies and eras. In order to gain a deeper picture of what we are doing when we look beyond our primary relationships, we need to glance backwards into the history – as well as briefly forwards into the future – of affairs:
+Quito, modern-day Ecuador, 1532
+The Inca sun-king Atahualpa owns private harems scattered across his empire; he is said to have had affairs with 3,000 women. Few subjects appear to think any less of him for this. All nobles have hundreds of concubines. There are official regulations concerning the number of mistresses that anyone in government is 

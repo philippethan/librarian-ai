@@ -1,1 +1,71 @@
-Praise for The Love Hypothesis “Contemporary romance’s unicorn: the elusive marriage of deeply brainy and delightfully escapist. . . . The Love Hypothesis has wild commercial appeal, but the quieter secret is that there is a specific audience, made up of all of the Olives in the world, who have deeply, ardently waited for this exact book.” — New York Times bestselling author Christina Lauren “Funny, sexy, and smart. Ali Hazelwood did a terrific job with The Love Hypothesis .” — New York Times bestselling author Mariana Zapata “This tackles one of my favorite tropes—Grumpy meets Sunshine—in a fun and utterly endearing way. . . . I loved the nods toward fandom and romance novels, and I couldn’t put it down. Highly recommended!” — New York Times bestselling author Jessica Clare “A beautifully written romantic comedy with a heroine you will instantly fall in love with, The Love Hypothesis is destined to earn a place on your keeper shelf.” —Elizabeth Everett, author of A Lady’s Formula for LoveA JOVE BOOK Published by Berkley An imprint of Penguin Random House LLC penguinrandomhouse.com Copyright © 2021 by Ali Hazelwood Excerpt from Love on the Brain copyright © 2021 by Ali Hazelwood Penguin Random House supports copyright. Copyright fuels creativity, encourages diverse voices, promotes free speech, and creates a vibrant culture. Thank you for buying an authorized edition of this book and for complying with copyright laws by not reproducing, scanning, or distributing any part of it in any form without permission. You are supporting writers and allowing Penguin Random House to continue to publish books for every reader. A JOVE BOOK, BERKLEY, and the BERKLEY & B colophon are registered trademarks of Penguin Random House LLC. Library of Congress Cataloging-in-Publication Data Names: Hazelwood, Ali, author. Title: The love hypothesis / Ali Hazelwood. Description: First edition. | New York: Jove, 2021. Identifiers: LCCN 2020057346 (print) | LCCN 2020057347 (ebook) | ISBN 9780593336823 (trade paperback) | ISBN 9780593336830 (ebook) Subjects: GSAFD: Love stories. Classification: LCC PS3608.A98845 L68 2021 (print) | LCC PS3608.A98845 (ebook) | DDC 813/.6—dc23 LC record available at https://lccn.loc.gov/2020057346 LC ebook record available at https://lccn.loc.gov/2020057347 First Edition: September 2021 Cover illustration by lilithsaur Book design by Tiffany Estreicher, adapted for ebook by Estelle Malmed This is a work of fiction. Names, characters, places, and incidents either are the product of the author’s imagination or are used fictitiously, and any resemblance to actual persons, living or dead, business establishments, events, or locales is entirely coincidental. pid_prh_5.8.0_c0_r0To my women in STEM: Kate, Caitie, Hatun, and Mar. Per aspera ad aspera.Contents Cover Praise for The Love Hypothesis Title Page Copyright Dedication Epigraph Prologue Chapter One Chapter Two Chapter Three Chapter Four Chapter Five Chapter Six Chapter Seven Chapter Eight Chap
+ 
+i
+What Every Engineer Should 
+Know about Software Engineering
+This book offers a practical approach to understanding, designing, and building sound 
+software based on solid principles. Using a unique Q&A format, this book addresses 
+the issues that engineers need to understand in order to successfully work with soft­
+ware engineers, develop specifications for quality software, and learn the basics of 
+the most common programming languages, development approaches, and paradigms. 
+The new edition is thoroughly updated to improve the pedagogical flow and empha­
+size new software engineering processes, practices, and tools that have emerged in 
+every software engineering area.
+Features:
+	•
+Defines concepts and processes of software and software development, such as 
+agile processes, requirements engineering, and software architecture, design, 
+and construction.
+	•
+Uncovers and answers various misconceptions about the software develop­
+ment process and presents an up-​to-​date reflection on the state of practice in 
+the industry.
+	•
+Details how non-​software engineers can better communicate their needs to soft­
+ware engineers and more effectively participate in design and testing to ultim­
+ately lower software development and maintenance costs.
+	•
+Helps answer the question: How can I better leverage embedded software in 
+my design?
+	•
+Adds new chapters and sections on software architecture, software engineering 
+and systems, and software engineering and disruptive technologies, as well as 
+information on cybersecurity.
+	•
+Features new appendices that describe a sample automation system, covering 
+software requirements, architecture, and design.
+This book is aimed at a wide range of engineers across many disciplines who work 
+with software.
+ 
+ 
+ii
+What Every Engineer Should Know
+Series Editor
+Phillip A. Laplante
+Pennsylvania State University
+What Every Engineer Should Know about Developing Real-​Time Embedded Products
+Kim R. Fowler
+What Every Engineer Should Know about Business Communication
+John X. Wang
+What Every Engineer Should Know about Career Management
+Mike Ficco
+What Every Engineer Should Know about Starting a High-​Tech Business Venture
+Eric Koester
+What Every Engineer Should Know about MATLAB® and Simulink®
+Adrian B. Biran
+Green Entrepreneur Handbook: The Guide to Building and Growing a Green and 
+Clean Business
+Eric Koester
+What Every Engineer Should Know about Cyber Security and Digital Forensics
+Joanna F. DeFranco
+What Every Engineer Should Know about Modeling and Simulation
+Raymond J. Madachy and Daniel Houston
+What Every Engineer Should Know about Excel, Second Edition
+J.P. Holman and Blake K. Holman
+Technical Writing: A Practical Guide for Engineers, Scientists, and Nontechnical 
+Professionals, Second Edition
+Phillip A. Laplante
+What Every Engineer Should Know about the Internet of Things
+Joanna F. DeFranco and Mohamad Kassab
+What Every Engineer Should Know about Software Engineering
+Phillip A. Laplante and Mohamad Kassab
+What Every E

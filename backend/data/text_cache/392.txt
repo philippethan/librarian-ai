@@ -1,53 +1,8 @@
-E N S E I G N E M E N T  S U P  P H Y S I Q U E
-Licence
-MÉCANIQUE CLASSIQUE 
-COURS ET EXERCICES CORRIGÉS
-Tome 2 
-Repères non inertiels, fluides, thermodynamique,  
-capillarité, introduction à la théorie du chaos
-Alain Colin De Verdière 
-Souren Pogossian
-Licence
-Alain Colin De Verdière, Souren Pogossian
-www.edpsciences.org 
-ISBN : 978-2-7598-2671-1
-9
-782759
-826711
-29 e
-E N S E I G N E M E N T  S U P  P H Y S I Q U E
-Prise de la Station spatiale internationale, cette vue 
-du glacier Upsala en Patagonie montre toute la 
-richesse des mouvements de l’eau dans ses trois 
-phases, solide, liquide et gazeuse, qui coexistent ici.
-La collection « Enseignement Sup Physique » se présente 
-comme une introduction sur des sujets incontournables  
-en physique. Adaptée aux besoins des étudiants et  
-des chercheurs, le traitement rigoureux, mais accessible,  
-de chaque sujet est idéal pour ceux qui veulent une amorce 
-dans un sujet donné pour les préparer à une étude ou  
-à une recherche plus avancée.
-Le climat et la transition énergétique, la physique des milieux naturels, 
-de la micro-échelle capillaire à celle de la planète, demandent d’ajouter 
-aux lois de Newton celles de la Thermodynamique de Carnot.
-Les thèmes étudiés dans ce tome 2 sont : Rotation de la Terre et forces de Coriolis, Fluides :  
-turbulence, vagues, marées et musique, Thermodynamique : énergie et entropie, moteurs thermiques, 
-climat et transition énergétique, Tension de surface et capillarité, Introduction à la théorie du chaos  
-et attracteurs étranges.
-La bonne compréhension du sujet est assurée par la progression naturelle des idées, l’usage  
-de mathématiques élémentaires, des exemples tirés de situations d’actualité et un style clair. Cet ouvrage 
-est autonome avec des questions de réflexion et plus de 200 exercices, la solution desquels est détaillée 
-pour les trois quarts d’entre eux. Une annexe numérique et informatique en ligne permet de trouver  
-les solutions de problèmes complexes (langages Octave ou Matlab).
-Ce tome 2 est destiné aux étudiants en deuxième année de licence, IUT ou classes préparatoires.
-Alain Colin de Verdière a obtenu un doctorat du Massachusetts Institute of Technology (MIT) et de Woods Hole 
-Oceanographic Institution (WHOI). Ses recherches portent sur la circulation océanique mondiale et les modèles simplifiés 
-océan-atmosphère pour le climat.
-Souren Pogossian a obtenu un doctorat de l’université de Brest en réalisant la majeure partie de sa thèse au CNRS  
-de Meudon. Ses recherches concernent la propagation guidée des ondes lumineuses et neutroniques, l’optoélectronique  
-du silicium-germanium, le couplage d’échange en magnétisme et aujourd’hui l’astrodynamique.
-Mécanique classique
-Cours et exercices corrigés
-Tome 2
-Repères non inertiels, fluides, thermodynamique, 
-capillarité, introduction à la théorie du chaos
+Rethinking Nonstop 
+Transformation
+Real progress comes from steady
+adaptation, not endless upheaval.
+PAGE 46
+January–February 
+2026
+!

@@ -1,29 +1,39 @@
-Michael Kofler
-Scripting
-Automation with Bash, PowerShell, and Python
-Imprint
-This e-book is a publication many contributed to, specifically:
-Editor   Megan Fuerst
-Acquisitions Editor   Hareem Shafi
-German Edition Editor   Christoph Meister
-Copyeditor   Yvette Chin
-Translation   Winema Language Services, Inc.
-Cover Design   Graham Geary
-Photo Credit   
-Shutterstock: 2197648801/© Dima Zel, iStockphoto:
-165687831/© enjoynz
-Production E-Book   Graham Geary
-Typesetting E-Book   III-satz, Germany
-We hope that you liked this e-book. Please share your feedback with
-us and read the
-Service Pages to find out how to contact us.
-
-The Library of Congress Cataloging-in-Publication Control
-Number for the printed edition
-is as follows:
-ISBN 978-1-4932-2556-9 (print)
-ISBN 978-1-4932-2557-6 (e-book)
-ISBN 978-1-4932-2558-3 (print and e-book)
-
-© 2024 by Rheinwerk Publishing Inc., Boston (MA)
-1st edition 2024
+Réussir ensemble avec
+l’intelligence émotionnelle
+Les émotions ont longtemps été considérées comme des signes de faiblesse n’ayant pas
+leur place dans le milieu professionnel. Or, les recherches récentes en neurosciences ont
+permis de montrer leur contribution dans un système très fin qui nous permet d’évaluer
+chaque situation et d’agir. Selon le Forum économique mondial de Davos, l’intelligence
+émotionnelle 
+fait 
+désormais 
+partie 
+des 
+dix 
+compétences 
+clés 
+pour 
+réussir
+professionnellement.
+Mobiliser son intelligence émotionnelle, c’est développer sa capacité à percevoir les
+émotions, les siennes ou celles des autres, et à les intégrer dans sa communication et dans
+sa prise de décision. Les enjeux sont importants : qualité des relations, efficacité collective,
+coopération et engagement, gestion du stress et des tensions, qualité du service, influence
+et leadership…
+Cet ouvrage permettra au manager mais aussi aux collaborateurs, de développer leur
+agilité émotionnelle et de la mettre au service de la performance collective :
+Comprendre et accueillir ses émotions sans se laisser submerger par elles.
+Comprendre les émotions des autres afin d’entretenir de meilleures relations.
+Porter un nouveau regard sur soi, réinterroger ses pratiques.
+Savoir exprimer son ressenti, réguler ses émotions et celles des autres.
+Renforcer son intelligence émotionnelle pour révéler ses talents !
+Régis Rossi est conférencier professionnel. Il démontre, à partir des mécanismes de
+l’illusion, comment les émotions conditionnent nos perceptions, nos prises de décision et
+nos comportements. Sa conférence «  Le pouvoir de l’intelligence émotionnelle  » a déjà
+séduit plus de 100 000 collaborateurs d’entreprises de toutes tailles.
+Claire Lauzol accompagne, grâce au coaching, les managers, les dirigeants et les experts
+dans le développement de leur intelligence émotionnelle. Associée chez Pragma
+Management, elle pilote les practices expertise et coaching.
+Didier Noyé est un expert en management et en développement des ressources humaines.
+Auteur de nombreux ouvrages sur la communication et le management, il est aussi membre
+de la Faculty CrossKnowledge.

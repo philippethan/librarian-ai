@@ -1,66 +1,36 @@
-Excel VBA
-Notes for Professionals
-Excel
-® VBA
-Notes for Professionals
-GoalKicker.com
-Free Programming Books
-Disclaimer
-This is an unocial free book created for educational purposes and is
-not aliated with ocial Excel® VBA group(s) or company(s).
-All trademarks and registered trademarks are
-the property of their respective owners
-100+ pages
-of professional hints and tricks
-Contents
-About 
-1
- ................................................................................................................................................................................... 
-Chapter 1: Getting started with Excel VBA 
-2
- ....................................................................................................... 
-Section 1.1: Opening the Visual Basic Editor (VBE) 
-3
- ..................................................................................................... 
-Section 1.2: Declaring Variables 
-5
- ................................................................................................................................... 
-Section 1.3: Adding a new Object Library Reference 
-6
- ................................................................................................. 
-Section 1.4: Hello World 
-10
- .............................................................................................................................................. 
-Section 1.5: Getting Started with the Excel Object Model 
-12
- ........................................................................................ 
-Chapter 2: Debugging and Troubleshooting 
-16
- ................................................................................................ 
-Section 2.1: Immediate Window 
-16
- ................................................................................................................................. 
-Section 2.2: Use Timer to Find Bottlenecks in Performance 
-17
- .................................................................................. 
-Section 2.3: Debugger Locals Window 
-17
- ...................................................................................................................... 
-Section 2.4: Debug.Print 
-18
- .............................................................................................................................................. 
-Section 2.5: Stop 
-19
- .......................................................................................................................................................... 
-Section 2.6: Adding a Breakpoint to your code 
-19
- ....................................................................................................... 
-Chapter 3: Methods for Finding the Last Used Row or Column in a Worksheet 
-20
- ........................ 
-Section 3.1: Find the Last Non-Empty Cell in a Column 
-20
- ........................................................................................... 
-Section 3.2: Find the Last Non-Empty Row in Worksheet 
-20
- ....................
+Computer Networking
+A Top-Down Approach
+EIGHTH EDITION
+James F. Kurose • Keith W. Ross
+GLOBAL 
+EDITION
+DIGITAL RESOURCES FOR STUDENTS
+Your new textbook provides 12-month access to digital resources that may include 
+VideoNotes (illustrating key concepts from the text), interactive exercises, interactive 
+animations, quizzes, and more. Refer to the preface in the textbook for a detailed list of 
+resources.
+Follow the instructions below to register for the Companion Website for James F. Kurose 
+and Keith W. Ross’s Computer Networking: A Top-Down Approach, Eighth Edition, Global 
+Edition.
+1	
+Go to www.pearsonglobaleditions.com.
+2	
+Enter the title of your textbook or browse by author name.
+3	
+Click Companion Website.
+4	
+Click Register and follow the on-screen instructions to create a login name and 
+password.
+ Use the login name and password you created during registration to 
+start using the digital resources that accompany your textbook.
+For technical support go to https://support.pearson.com/getsupport
+ISSJKK-FROMM-DAIRY-CUPPA-PLUSH-POSES
+COMPUTER 
+NETWORKING
+A Top-Down Approach
+EIGHTH EDITION
+GLOBAL EDITION
+James F. Kurose
+University of Massachusetts, Amherst
+Keith W. Ross
+NYU and NYU Shanghai

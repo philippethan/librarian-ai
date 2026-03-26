@@ -1,1 +1,80 @@
-Front Matter Cover Page Praise for Industrial Devops Full Title Copyright Contents Figures & Tables Foreword by Mik Kersten Foreword by Dean Leffingwell Preface Introduction Part I: Applying the Success of Agile/DevOps to Cyber-Physical Systems Chapter 1: Toward a Practice of Industrial DevOps Chapter 2: Benefits of Industrial DevOps Chapter 3: Misconceptions about Industrial DevOps Part II: The Principles and Practices of Industrial DevOps Chapter 4: Organize for the Flow of Value Chapter 5: Apply Multiple Horizons of Planning Chapter 6: Implement Data-Driven Decisions Chapter 7: Architect for Change and Speed Chapter 8: Iterate, Manage Queues, Create Flow Chapter 9: Establish Cadence and Synchronization Chapter 10: Integrate Early and Often Chapter 11: Shift Left Chapter 12: Apply a Growth Mindset Part III: Forging the Path Forward Chapter 13: Bringing It All Together Chapter 14: Barriers to Change and Adoption Conclusion Appendix A: CubeSat 101 Appendix B: Industrial DevOps Bodies of Knowledge Appendix C: Tools: Quick Reference Guide Bibliography Notes Index Acknowledgments About the AuthorsPraise for Industrial DevOps “ Industrial DevOps unveils the hidden strategies behind the remarkable success of the world’s top-performing companies. Dr. Suzette Johnson and Robin Yeman have masterfully crafted a comprehensive and actionable guide, empowering organizations to establish teams and capabilities that surpass the competition in both insight and agility.” —Kyle Fox , SOSi CTO “Applying established DevOps processes and practices to cyber-physical systems can present significant challenges or limited practices. I am thrilled to see that Industrial DevOps not only recognizes these challenges but also provides actionable guidance based on well-practiced approaches to overcome them.” —Hasan Yasar , Technical Director and Teaching Professor, Carnegie Mellon University “Suzette and Robin have created an essential guide to building cyber-physical systems. … This book is a great addition for anyone wanting to deliver higher-quality products faster and more predictably. Complete with thought-provoking discussion questions and coaching tips, this book is a significant work that kicks off the era of Industrial DevOps!” —Jeff Boleng , Aircraft Cybersecurity Lead, Joby Aviation “ Industrial DevOps is an important book and topic for anyone helping steer their cyber-physical organization into the age of digital engineering. Using in-depth case studies and sweat-equity observations from years of relevant product development, this duo of top-level engineers helps your organization become both agile and speedy.” —Dr. Steve Simske , Systems and Mechanical Engineering, Colorado State University “ Industrial DevOps clearly articulates what businesses must do to revolutionize the way they work and stay relevant in the digital age and beyond. The book is brilliantly laid out, explaining why change is necessary, identifying key principles and concepts to consider when im
+National Aeronautics and
+ Space Administration
+NASA
+SYSTEMS ENGINEERING
+HANDBOOK
+design
+test
+integrate
+fly
+www.nasa.gov
+NASA SP-2016-6105 Rev2 supersedes SP-2007-6105 Rev 1 dated December, 2007.
+Cover photos: Top left: In this photo, engineers led by researcher Greg Gatlin have sprayed fluorescent oil on a 5.8 percent scale 
+model of a futuristic hybrid wing body during tests in the 14- by 22-Foot Subsonic Wind Tunnel at NASA’s Langley Research Center 
+in Hampton, VA. The oil helps researchers “see” the flow patterns when air passes over and around the model. (NASA Langley/
+Preston Martin) Top right: Water impact test of a test version of the Orion spacecraft took place on August 24, 2016, at NASA 
+Langley Research Center (NASA) Bottom left: two test mirror segments are placed onto the support structure that will hold them. 
+(NASA/Chris Gunn) Bottom right: This self-portrait of NASA’s Curiosity Mars rover shows the vehicle at the “Mojave” site, where its 
+drill collected the mission’s second taste of Mount Sharp. (NASA/JPL-Caltech/MSSS)
+Comments, questions, and suggestions regarding this document can be sent to:
+Steven R. Hirshorn
+Chief Engineer, Aeronautics Research Mission Directorate (ARMD)
+Office of the Chief Engineer
+NASA Headquarters, Room 6D37
+300 E St SW
+Washington, DC 20546-0001
+202-358-0775
+steven.r.hirshorn@nasa.gov
+iii
+NASA SYSTEMS ENGINEERING HANDBOOK
+Table of Contents
+Preface.  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . viii
+Acknowledgments.  .   .   .   .   .   .   .   .   .   .   .   .   .   . ix
+1.0	 Introduction	
+1
+1.1	
+Purpose.  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  1
+1.2	
+Scope and Depth .  .   .   .   .   .   .   .   .   .   .   .  1
+2.0	Fundamentals of Systems Engineering	 3
+2.1	
+The Common Technical Processes 
+and the SE Engine .  .   .   .   .   .   .   .   .   .   .   . 5
+2.2	
+An Overview of the SE Engine by 
+Project Phase .  .   .   .   .   .   .   .   .   .   .   .   .   .  8
+2.3	
+Example of Using the SE Engine.  .   .   .   10
+2.4	
+Distinctions between Product 
+Verification and Product Validation.  .   .   11
+2.5	
+Cost Effectiveness Considerations.  .   .   11
+2.6	
+Human Systems Integration (HSI) 
+in the SE Process .  .   .   .   .   .   .   .   .   .   .   . 12
+2.7	
+Competency Model for 
+Systems Engineers.  .   .   .   .   .   .   .   .   .   .   13
+3.0	NASA Program/Project Life Cycle	
+17
+3.1	
+Program Formulation.  .   .   .   .   .   .   .   .   .  20
+3.2	
+Program Implementation.  .   .   .   .   .   .   .  20
+3.3	
+Project Pre-Phase A: Concept Studies.  21
+3.4	
+Project Phase A: Concept and 
+Technology Development.  .   .   .   .   .   .   .  23
+3.5	
+Project Phase B: Preliminary Design 
+and Technology Completion .  .   .   .   .   .   25
+3.6	
+Project Phase C: Final Design and 
+Fabrication.  .   .   .   .   .   .   .   .   .   .   .   .   .   .   27
+3.7	
+Project Phase D: System Assembly, 
+Integration and Test, Launch.  .   .   .   .   .  29
+3.8	
+Project Phase E: O

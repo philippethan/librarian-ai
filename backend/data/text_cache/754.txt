@@ -1,1 +1,15 @@
-Du même auteur Ce que je cherche , Fayard, 2024.À la France qui travaille. Humble et silencieuse.La plus haute forme d’espérance, c’est le désespoir surmonté. GEORGES BERNANOS, La Liberté, pour quoi faire ?Prologue Q U’EST-CE DONC QU’UN PAYS SI ce n’est les visages, les voix et les destins de ceux qui l’habitent ? En politique, pourtant, la vraie vie a disparu. L’agenda médiatique et la cadence infernale des publications sur les réseaux sociaux ont eu raison du temps long. Chaque semaine apporte son nouveau scandale, chaque jour ses nouvelles urgences. Telle une machine qui broie, la pauvre « démocratie 2.0 » écrase tout sur son passage : les réflexions de fond, la nuance, l’esprit critique, la capacité à voir loin, la vérité parfois, sans oublier la politesse. Ainsi, on gouverne dans l’instant, plutôt que de gouverner pour l’histoire. Alors oui, la vie politique et ceux qui la portent avec courage ont gagné en visibilité. Les débats, souvent enflammés, de plus en plus manichéens, résonnent plus fort, et plus vite. Mais qu’en retient-on vraiment ? Pendant ce temps, à l’extérieur de l’arène, dans une indifférence de plus en plus marquée, un silence que plus personne ne remarque, il y a les Français, humbles, lucides, courageux. Il y a ceux pour qui la vie ne se pense pas en « séquences de communication », mais plutôt en termes de fins de mois à boucler, de factures à payer, d’enfants à élever, de projets de vie à bâtir, de « paperasse » à remplir, de patrimoine à transmettre – aussi modeste soit-il. Les Français le ressentent : ce temps politique n’est plus le leur, et un gouffre abyssal les en sépare. Leurs inquiétudes, leurs difficultés, leurs angoisses, mais également leurs attentes et leurs espoirs ont disparu de l’agenda des dirigeants politiques. Il y a aussi ce sentiment plus dur encore : tout ce qui se décide l’est, à chaque fois, en dépit du bon sens le plus élémentaire. Les Français désirent des services de santé solides, mais on ferme des lits d’hôpitaux. Ils exigent l’ordre et la sécurité, mais la justice relâche bien trop vite les délinquants et les criminels. Les Français sont invités à faire des économies, mais on gaspille leur argent dans d’innombrables gabegies. Ils veulent travailler, mais on les écrase de taxes et de normes. En somme, ils paient toujours plus d’impôts, pour moins recevoir en retour. Après bientôt deux quinquennats d’une politique qui aura résolument ignoré les Français et affaibli la France, notre pays est à la croisée des chemins. Dès lors, humblement, j’ai voulu rendre du temps au temps. Pendant près d’un an, je suis allé frapper à la porte des Français. Je m’y suis rendu seul, sans caméra de télévision, sans appareil photo, sans reporter d’images, avec mon seul cahier de notes en main. Depuis mes premiers pas en politique il y a plus de dix ans dans cette cité HLM de Saint-Denis qui m’a tant appris jusqu’à aujourd’hui, je sillonne notre beau pays avec l’espoir de pouvoir un jour contribuer à lui apporter les 
+Systèmes d'exploitation
+Les processus
+Thomas Ropars
+Email: 
+Website: 
+thomas.ropars@univ-grenoble-alpes.fr
+tropars.github.io
+1 .  1
+Dans ce cours
+fork()
+wait()
+exec()
+2
+Le concept de processus
+3

@@ -1,165 +1,33 @@
-VECTOR DERIVATIVES
-Cartesian
-dl = dx ˆx + dy ˆy + dzˆz,
-dτ = dx dy dz
-Gradient:
-∇t = ∂t
-∂xˆx + ∂t
-∂yˆy + ∂t
-∂zˆz
-Divergence:
-∇· v = ∂vx
-∂x + ∂vy
-∂y + ∂vz
-∂z
-Curl:
-∇× v =
- ∂vz
-∂y −∂vy
-∂z
-
-ˆx +
- ∂vx
-∂z −∂vz
-∂x
-
-ˆy +
- ∂vy
-∂x −∂vx
-∂y
-
-ˆz
-Laplacian:
-∇2t = ∂2t
-∂x2 + ∂2t
-∂y2 + ∂2t
-∂z2
-Spherical
-dl = drˆr + r dθ ˆθ + r sin θ dφ ˆφ,
-dτ = r2 sin θ dr dθ dφ
-Gradient:
-∇t = ∂t
-∂rˆr + 1
-r
-∂t
-∂θ
-ˆθ +
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction
+La nouvelle science de l’attachement chez l’adulte
+
+
+
+
+
+
+
+
 1
-r sin θ
-∂t
-∂φ
-ˆφ
-Divergence:
-∇· v = 1
-r2
-∂
-∂r (r2vr) +
-1
-r sin θ
-∂
-∂θ (sin θ vθ) +
-1
-r sin θ
-∂vφ
-∂φ
-Curl:
-∇× v =
-1
-r sin θ
- ∂
-∂θ (sin θ vφ) −∂vθ
-∂φ
-
-ˆr
-+ 1
-r
-
-1
-sin θ
-∂vr
-∂φ −∂
-∂r (rvφ)
- ˆθ+ 1
-r
- ∂
-∂r (rvθ) −∂vr
-∂θ
- ˆφ
-Laplacian:
-∇2t = 1
-r2
-∂
-∂r
-
-r2 ∂t
-∂r
-
-+
-1
-r2 sin θ
-∂
-∂θ
-
-sin θ ∂t
-∂θ
-
-+
-1
-r2 sin2 θ
-∂2t
-∂φ2
-Cylindrical
-dl = dsˆs + s dφ ˆφ + dzˆz,
-dτ = s ds dφ dz
-Gradient:
-∇t = ∂t
-∂sˆs + 1
-s
-∂t
-∂φ
-ˆφ + ∂t
-∂zˆz
-Divergence:
-∇· v = 1
-s
-∂
-∂s (svs) + 1
-s
-∂vφ
-∂φ + ∂vz
-∂z
-Curl:
-∇× v =
-1
-s
-∂vz
-∂φ −
-∂vφ
-∂z
-
-ˆs +
- ∂vs
-∂z −∂vz
-∂s
- ˆφ
-+ 1
-s
- ∂
-∂s (svφ) −∂vs
-∂φ
-
-ˆz
-Laplacian:
-∇2t = 1
-s
-∂
-∂s
-
-s ∂t
-∂s
-
-+ 1
-s2
-∂2t
-∂φ2 + ∂2t
-∂z2
+Décodage du comportement amoureux
+
+Ça ne fait que deux semaines que je sors avec ce garçon et je m’inquiète déjà à l’idée qu’il ne me trouve pas assez jolie et qu’il ne me rappelle pas ! Je sais qu’une fois encore ma peur de ne pas être à la hauteur va gâcher cette chance de bâtir une relation amoureuse !
+Qu’est-ce qui ne va pas chez moi ? Je suis pas mal, intelligent et je gagne bien ma vie. J’ai plein de choses à offrir à une femme. Je suis sorti avec des filles formidables. Mais, chaque fois, au bout de quelques semaines, elles ne m’intéressaient plus et je me sentais piégé. Pourquoi est-ce si compliqué de trouver la personne avec laquelle je pourrais être compatible ?
+Je suis mariée depuis des années, pourtant je me sens seule. Mon mari n’a jamais aimé parler de notre relation ou de ses sentiments, et ça ne fait qu’empirer. Presque tous les soirs, il rentre tard du travail. Et le week-end, soit il joue au golf avec des amis, soit il regarde du sport à la télé. On ne partage rien. Je serais sans doute mieux toute seule.
+
+Chacun de ces problèmes est douloureux, car il nous touche au plus profond de notre être. Pourtant, il n’y a pas d’explication ou de solution toute trouvée. Chaque cas semble particulier ; chacun plonge ses racines dans une infinité de causes possibles. Les déchiffrer demanderait de bien connaître les protagonistes. Le passé, les relations précédentes et la personnalité ne sont que quelques-unes des voies qu’un thérapeute chercherait à explorer. C’est en tout cas ce que nous, les psychologues, avons appris et ce à quoi nous avons cru, jusqu’à ce qu’une découverte mette en lumière les trois phénomènes décrits ci-dessus. Dans ce livre, nous vous raconterons la genèse de cette découverte et ses répercussions.
+Suffit-il d’être amoureux ?
+Il y a quelques années, notre amie Tamara est sortie avec Greg :
+La première fois que j’ai vu Greg, c’était à une soirée chez un ami. Il était incroyablement beau et j’ai été extrêmement flattée qu’il s’intéresse à moi. Quelques jours plus tard, nous sommes sortis dîner avec des amis. L’étincelle qui brillait dans son regard lorsqu’il me regardait était irrésistible. Mais ce qui m’a le plus séduite, ce sont ses mots et la promesse implicite d’intimité qu’ils communiquaient. Il m’a dit : « Tamara, ne reste pas toute seule chez toi toute la journée. Viens travailler chez moi. Tu peux m’appeler quand tu veux. » Ces paroles étaient apaisantes : elles offraient le réconfort de fusionner avec quelqu’un, de ne plus être seule au monde. Si je l’avais écouté plus attentivement, j’aurais pu entendre un autre message qui était en désaccord avec cette promesse, un message qui disait clairement que Greg avait peur d’être trop proche et qu’il ne voulait pas s’engager. Il a mentionné à plusieurs reprises qu’il n’avait jamais connu de relation stable. Pour une raison ou pour une autre, il se lassait toujours de ses petites amies

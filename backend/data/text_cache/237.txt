@@ -1,61 +1,41 @@
-SECOND EDITION 2017
-Plant &
-Design Build
-Conditions of 
-Contract for
-GENERAL CONDITIONS
-GUIDANCE FOR THE PREPARATION
-OF PARTICULAR CONDITIONS AND ANNEXES:
-FORMS OF SECURITIES
-FORMS OF LETTER OF TENDER, LETTER OF
-ACCEPTANCE, CONTRACT AGREEMENT AND DISPUTE
-ADJUDICATION/AVOIDANCE AGREEMENT
-ISBN 978-2-88432-082-5
-This document is restricted for distribution within the Lexis Nexis platform - NOT FOR CONTRACT USE AND NOT PRINTABLE - ORIGINAL FOR SALE AT www.fidic.org
-FIDIC® Conditions of Contract for
-PLANT and DESIGN-BUILD
-FOR ELECTRICAL & MECHANICAL PLANT, 
-AND FOR BUILDING AND ENGINEERING 
-WORKS, DESIGNED BY THE CONTRACTOR
-Second Edition 2017
-ISBN 978-2-88432-082-5
-FEDERATION INTERNATIONALE DES INGENIEURS-CONSEILS
-INTERNATIONAL FEDERATION OF CONSULTING ENGINEERS
-INTERNATIONALE VEREINIGUNG BERATENDER INGENIEURE
-FEDERACION INTERNACIONAL DE INGENIEROS CONSULTORES
-GENERAL CONDITIONS
-GUIDANCE FOR THE 
-PREPARATION OF 
-PARTICULAR CONDITIONS 
-AND ANNEXES: FORMS 
-OF SECURITIES
-FORMS OF LETTER OF 
-TENDER, LETTER OF 
-ACCEPTANCE, CONTRACT 
-AGREEMENT AND 
-DISPUTE ADJUDICATION/
-AVOIDANCE AGREEMENT
-This document is restricted for distribution within the Lexis Nexis platform - NOT FOR CONTRACT USE AND NOT PRINTABLE - ORIGINAL FOR SALE AT www.fidic.org
-© FIDIC 2017
-COPYRIGHT
-Copyright © 2017 FIDIC, World Trade Center II, 29 route de Prés-Bois, Geneva Airport, CH-1215 
-Geneva, Switzerland. All rights reserved.
-FIDIC is the only Copyright owner of FIDIC publications, which are protected by the Berne 
-Convention for the Protection of Literary and Artistic Works, international conventions such 
-as TRIPS and the WIPO copyright treaty and national intellectual property laws. No part of 
-a FIDIC publication can be reproduced, translated, adapted, stored in a retrieval system or 
-communicated, in any form or by any means, mechanical, electronic, magnetic, photocopying, 
-recording or otherwise, without prior permission in writing from FIDIC. The version in English is 
-considered by FIDIC as the official and authentic text for the purposes of translation.
-TERMS AND CONDITIONS
-The widespread dissemination, acceptance and use of FIDIC publications and their translations 
-are important means for accomplishing FIDIC’s mission and are therefore actively promoted by 
-FIDIC. The sale of FIDIC publications and their translations is an important source of revenue for 
-FIDIC and its Member Associations. It creates resources for providing a wide range of services 
-meeting the business needs of member firms. All steps, starting with the initial drafting of 
-publications, often require considerable effort and expense.
-FIDIC regularly updates and reissues publications so that users can profit from the state-of-the-art. 
-By supplying publications, FIDIC does not grant any intellectual property rights. The purchase or 
-supply of a FIDIC publication, including forms for completion by a purchaser or authorised user, 
-does not confer author’s rights under any circumstances. 
-Users rely on the co
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10750_CUM_.indb 2 05/08/2019 15:57
+
+
+
+
+
+
+
+
+
+
+
+CONSTRUIRE,RÉNOVER ET AMÉNAGERune maison10750_CUM_.indb 3 05/08/2019 15:57
+
+
+
+
+
+
+
+
+
+
+
+Directrice des éditions : Claire de GramontDirecteur éditorial : Thierry KremerMaquette, conception et coordination graphique : Alain Bouteveille SandersRéalisation des illustrations : Alain et Ursula Bouteveille Sanders, Rachid Maraï, STDI (Shishu Vilmain, Kathy Lesueur)Illustrations de couverture : Alain Bouteveille Sanders et Rachid MaraïMise en page et couverture : STDI (Stéphanie Bourdais, Charlène Pineau, Claire Anne)Fabrication : Isabelle FontaineAvertissementLes cotes, dimensions et informations sont données à titre indicatif et n’engagent ni la responsabilité des auteurs ni celle de l’éditeur ; elles ne dispensent pas de se reporter aux normes et à la réglementation régissant la construction. Le plus grand soin a été apporté à mentionner dans la bibliographie l’ensemble des sources utilisées ; nous vous remercions de nous signaler toute omission ou toute mention qui serait erronée.© Éditions du Moniteur, Antony Parc 2, 10 place du Général de Gaulle, BP 20156, 92186 Antony Cedex, 2019.ISBN de la version papier : 978-2-281-14302-7ISBN de la version numérique : 978-2-281-14311-9Aux termes du Code de la propriété intellectuelle, toute reproduction ou représentation, intégrale ou partielle, de la présente publica-tion, faite par quelque procédé que ce soit (reprographie, microﬁ lmage, scannérisation, numérisation…) sans le consentement de l’auteur ou de ses ayants-droit ou ayants-cause est illicite et constitue une contrefaçon sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle. Toutefois, l’autorisation d’effectuer des reproductions par reprographie peut être obtenue auprès du Centre français d’exploitation du droit de copie (CFC), 20, rue des Grands-Augustins, 75006 Paris, tél. : 01 44 07 47 70, télécopie : 01 46 34 67 19.RemerciementsAujourd’hui, à une époque où tout bouge, où tout va vite et où l’accès rapide à l’information est devenu une nécessité, on n’illustre plus mais on « écrit par le dessin ». Face à la complexité des normes et de la réglementation, mais aussi pour lever les doutes plus rapidement lors des chantiers, « un bon croquis vaut mieux qu’un long discours ». Ainsi est née l’idée de rassembler dans un seul ouvrage, sous forme d’images à jour des normes et DTU, toutes les informations néces-saires à la construction, la rénovation et l’aménagement d’une maison.Merci aux éditions du Moniteur d’avoir soutenu ce projet et aux éditeurs pour leurs encouragements. Merci à l’équipe commerciale pour son enthousiasme et à la formidable équipe d’illustrateurs sans lesquels cet ouvrage n’aurait pas vu le jour. Merci aux architectes, ingénieurs, professeurs, membres des bureaux de contrôle, juristes ainsi qu’à tous les profes-sionnels qui ont pris le temps de relire ces pages, malgré un emploi du temps souvent chargé, pour apporter leur expé-rience précie

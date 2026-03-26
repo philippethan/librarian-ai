@@ -1,48 +1,124 @@
-© Lothar Thiele
-Computer Engineering and Networks Laboratory
-Embedded Systems
-1 - Introduction
-Michele Magno
-D-ITET Center for project-based Learning 
-1 - 2
-Organization
-WWW: 
-https://pbl.ee.ethz.ch/education/embedded-systems.html
-Lecture: 
-Michele Magno <michele.magno@pbl.ee.ethz.ch>; Lothar Thiele, 
-thiele@ethz.ch;
-Coordination: 
-Seonyeong Heo (ETZ D97.7) <seoheo@ethz.ch>
-References:
-▪
-P. Marwedel: Embedded System Design, Springer, ISBN 978-3-319-85812-8/978-3-030-
-60909-2, 2018/2021. You can find it also as open access!
-▪
-G.C. Buttazzo: Hard Real-Time Computing Systems. Springer Verlag, ISBN 978-1-4614-
-0676-1, 2011.
-▪
-Edward A. Lee and Sanjit A. Seshia: Introduction to Embedded Systems, A Cyber-
-Physical Systems Approach, Second Edition, MIT Press, ISBN 978-0-262-53381-2, 2017.
-Sources: 
-The slides contain ideas and material of J. Rabaey, K. Keuzer, M. Wolf, P. 
-Marwedel, P. Koopman, E. Lee, P. Dutta, S. Seshia,  and from the above cited books.
-1 - 3
-Organization Summary 
-▪
-Lectures are held on Mondays from 14:15 to 16:00 in ETF C1 until further notice. Life streaming 
-and slides are available via the web page of the lecture from the previous year (some part will 
-be new!!). In addition, you find audio and video recordings of most of the slides as well as 
-recordings of this years and last years life streams on the web page of the lecture.
-▪
-Exercises: The exercises are made available before the date of the exercise. During an exercise, 
-teaching assistants will summarize the lecture material required to solve the exercise questions, 
-give hints how to approach the solution, answer your questions and discuss the correct solution 
-at the end of the exercise. The electronic version of the exercise questions and solutions will be 
-placed online after the exercise has been conducted. Exercises will take place from 4pm - 6pm 
-on Wednesdays and Fridays as indicated in the timetable.
-▪
-Laboratory: Laboratory exercises will be conducted in teams of 2 people. Due to the large 
-number of students, there will be two successive ES-​Lab sessions at the days of the ES-​Lab (see 
-timetable): Session A from 4pm - 6pm on Wednesday and session B from 4pm - 6pm on Friday. 
-Both sessions will take place in rooms D61.1 and D96. If you still need to sign up you can do this 
-in the lecture (preferred) or via email to the lecture coordinator.
+* Al
+Grammaire
+essentielle
+du français
+550
+exercices
+Gram maire
+essentielle  
+du français  
+A1
+Clémence Fafa, Yves Loiseau et Violette Petitmengin
+Asmaa El Assal, Yekaterina García Márkina, Odile Rimbert, Wei Xia
+pour la grammaire contrastive
+Crédits photographiques : p. 17 : sester1848-Fotolia.com - p. 74 : Cultura Creative (RF)/Alamy - p. 53: Création Yves Beaujard © La Poste, 2018 -
+p. 57 : oka-Fotolia.com - p. 61 (hd) : miceking/123rf ; (hm) Mr_Vector/123rf - p. 94 (hd) : Thawat Tanhai/123rf ; (md) Udo Schotten/123rf - p. 100 : 
+P666-Fotolia. - p. 105 : 1xpert/123rf.com - p. 119 (4d) : Magalice-Fotolia.com ; (4g) : ziggymars/123rf ; (4md) : Juice Images/Alamy ; 4 (mg) : afxhome-Fotolia.com.
+La grammaire en jeux (PUG)
+Violette Petitmengin, Clémence Fafa
+Un outil clés en main pour enseigner la grammaire par le jeu !
+Destiné aux formateurs de français langue étrangère et de français langue 
+seconde, débutants ou expérimentés, ce recueil propose une grande 
+diversité de jeux à faire en petits groupes ou en classe entière à tous 
+niveaux : mémorisation, réflexion, créativité, imagination, rapidité, plateau, 
+etc. Une manière efficace d’apprendre dans une atmosphère détendue.
+À vous de jouer !
+arler
+uter - lir
+e - écri
+re - p
+arler 
+- éc
+out
+er 
+- li
+re
+ -
+ é
+cr
+ir
+e 
+- 
+p
+a
+rl
+e
+r
+lir
+e -
+ éc
+ri
+re
+ -
+ 
+p
+arl
+er -
+ éco
+uter
+li
+r
+e 
+- 
+é
+cr
+ir
+e 
+- 
+p
+ar
+le
+r
+ -
+ 
+é
+c
+o
+u
+te
+r -
+ li
+re 
+- éc
+rire - parler
+ -
+ é
+c
+o
+u
+t
+e
+r - l
+ir
+e 
+- 
+é
+c
+ri
+r
+e
+ -
+ 
+p
+a
+rle
+r -
+Des outils pratiques pour animer la classe
+Les Outils malins
+du FLE
+La grammaire 
+en jeux
+V. Petitmengin, C. Fafa
+Édition : Clothilde Mabille / Illustrations : Joëlle Passeron / Couverture : olo.éditions / 
+Maquette : amarantedesign, adaptation de Créator’s Studio / Mise en page : www.creatorsstudio.net
+« Le photocopillage, c’est l’usage abusif et collectif de la photocopie sans autorisation des auteurs et des éditeurs. Largement répandu dans 
+les établissements d’enseignement, le photocopillage menace l’avenir du livre, car il met en danger son équilibre économique. Il prive les 
+auteurs d’une juste rémunération. En dehors de l’usage privé du copiste, toute reproduction totale ou partielle de cet ouvrage est interdite. 
+» « La loi du 11 mars 1957 n’autorisant, au terme des alinéas 2 et 3 de l’article 41, d’une part, que les copies ou reproductions strictement 
+réservées à l’usage privé du copiste et non destinées à une utilisation collective » et, d’autre part, que les analyses et les courtes citations 
+dans un but d’exemple et d’illustration, « toute représentation ou reproduction intégrale, ou partielle, faite sans le consentement de l’auteur 
+ou de ses ayants droit ou ayants cause, est illicite. » (alinéa 1er de l’article 40) – « Cette représentation ou reproduction, par quelque procédé 
+que ce soit, constituerait donc une contrefaçon sanctionnée par les articles 425 et suivants du Code pénal. »
+© Les Éditions Didier, Paris, 2018 
+ISBN 978-2-278-09094-5 
+Achevé d’imprimer en Espagne pa

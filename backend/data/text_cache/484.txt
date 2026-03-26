@@ -1,1 +1,53 @@
-Principles of Cyber-Physical Systems
+Daniel Kleppner 
+Associate Professor of Physics 
+Massachusetts Institute 
+of Technology 
+Robert J. Kolenkow 
+Formerly Associate Professor 
+of Physics, Massachusett s 
+Institute of Technology 
+AN 
+INTRODUCTION 
+TO 
+MECHANICS 
+Boston, Massachusetts 
+Burr Ridge, Illinois 
+Dubuque, Iowa 
+Madison, Wisconsin 
+New York, New York 
+San Francisco, California 
+St. Louis, Missouri 
+AN 
+INTRODUCTION 
+TO 
+MECHANICS 
+McGraw-Hill 
+A Division ofTheMcGraw·HiUCompanies 
+Copyright © 1973 by McGraw-Hili, Inc. 
+All rights reserved. PrInted in the United States of America. Except as permitted 
+under the Copyright Act of 1976, no part of this publication may be reproduced or 
+distributed in any form or by any means, or stored in a data base or retrieval 
+system, without the prior written permission of the publisher. 
+Printed and bound by Book-mart Press, Inc. 
+30 31 32 33 34 35 36 37 38 39 
+BKM BKM 
+0 9 8 
+This book was set in News Gothic by The Maple Press Company.' 
+The editors were Jack L. Farnsworth and J. W. Maisel; 
+the designer was Edward A. Butler; 
+and the production supervisor was Sally Ellyson. 
+The drawings were done by Felix Cooper. 
+Library of Congress Cataloging in Publication Data 
+Kleppner. Daniel. 
+An introduction to mechanics. 
+1. 
+Mechanics. 
+QA805.K62 
+I. 
+Kolenkow. Robert. joint author. 
+531 
+72·11770 
+ISBN·13: 978·0'()7·035048-9 
+ISBN·IO: 0·07·035048·5 
+II 
+Title. 

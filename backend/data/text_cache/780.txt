@@ -1,1 +1,29 @@
-Dopamine Detox A Short Guide to Eliminate Distractions and Train Your Brain to Do Hard Things Thibaut MeurisseContents Who is this book for? Introduction Your Free Step-by-Step Workbook Your Productivity Series I. Dopamine and the Role it Plays II. The Problem III. The Benefits of a Detox IV. A Three-Step Method for a Successful Detox V. Doing the Work (and Overcoming Procrastination) VI. Avoiding “Dopamine Relapse” Conclusion Other Books By The Authors: Your Productivity Series About the AuthorWho is this book for? Do you keep procrastinating on important jobs? Do you often feel restless and unable to focus on the task at hand? Do you have trouble getting excited about the important goals that could improve your life? If so, you might need a dopamine detox. In today’s world where distractions are everywhere, our ability to focus has become a scarce commodity. We’re constantly being stimulated, feeling restless, often without knowing why. When the time comes to focus on the key tasks that would enable us to make progress toward our goals, we can often find a plethora of other things to do. Instead of working toward our goals, we might pop out for a walk, grab a coffee, check our emails or reorganize our files instead. Everything seems like a great idea—everything except the very thing we should be doing. As we repeat this same pattern every day, we can let our biggest goals and loftier dreams slip between our fingers. We underperform and accomplish far less than we’re capable of. And deep down we know it, which erodes our self-esteem and creates frustration, disappointment, apathy, jealousy, or even anger. But it doesn’t have to be this way. When you learn to remove distractions and move away from this constant state of stimulation and restlessness, you can accomplish most of your challenging tasks. By doing so consistently, you will become more productive—and much happier as a result. Are you ready to let go of unnecessary stimulations and reclaim your focus so that you can achieve your goals? More specifically, in the 48h Dopamine Detox, you’ll learn how to: Remove overstimulation and feel focused and peaceful during work, Feel naturally motivated to work on the key tasks that will enable you to reach your biggest goals (instead of procrastinating), Eliminate unproductive activities and distractions, and skyrocket your ability to focus, and much more. If any of the above lessons interest you, read on.Introduction Tell me if this is you: You know that if you could tackle just one specific task, it would have a massive impact on your overall levels of productivity. Perhaps it would improve your chances of earning a promotion. Or perhaps it would enhance your mental or physical well-being. But you never seem to start. Instead of working on your goal first thing in the morning, you end up checking your emails, looking at your stock portfolio, or scrolling your Facebook newsfeed instead. Soon enough, that important task will appear less and less app
+Michael Kofler
+Scripting
+Automation with Bash, PowerShell, and Python
+Imprint
+This e-book is a publication many contributed to, specifically:
+Editor   Megan Fuerst
+Acquisitions Editor   Hareem Shafi
+German Edition Editor   Christoph Meister
+Copyeditor   Yvette Chin
+Translation   Winema Language Services, Inc.
+Cover Design   Graham Geary
+Photo Credit   
+Shutterstock: 2197648801/© Dima Zel, iStockphoto:
+165687831/© enjoynz
+Production E-Book   Graham Geary
+Typesetting E-Book   III-satz, Germany
+We hope that you liked this e-book. Please share your feedback with
+us and read the
+Service Pages to find out how to contact us.
+
+The Library of Congress Cataloging-in-Publication Control
+Number for the printed edition
+is as follows:
+ISBN 978-1-4932-2556-9 (print)
+ISBN 978-1-4932-2557-6 (e-book)
+ISBN 978-1-4932-2558-3 (print and e-book)
+
+© 2024 by Rheinwerk Publishing Inc., Boston (MA)
+1st edition 2024

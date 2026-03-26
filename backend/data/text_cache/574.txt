@@ -1,23 +1,49 @@
-Insights You Need from Harvard Business Review
-Business is changing. Will you adapt or be left behind?
-Get up to speed and deepen your understanding of the topics that are shaping your company’s future
-with the Insights You Need from Harvard Business Review series. Featuring HBR’s smartest thinking on fast-
-moving issues—blockchain, cybersecurity, AI, and more—each book provides the foundational
-introduction and practical case studies your organization needs to compete today and collects the best
-research, interviews, and analysis to get it ready for tomorrow.
-You can’t afford to ignore how these issues will transform the landscape of business and society.
-The Insights You Need series will help you grasp these critical ideas—and prepare you and your
-company for the future.
-Books in the series include:
-Agile
-Artificial Intelligence
-Blockchain
-Climate Change
-Customer Data and Privacy
-Cybersecurity
-Monopolies and Tech Giants
-Strategic Analytics
-The Year in Tech, 2021
-STRATEGIC ANALYTICS
-Harvard Business Review Press
-Boston, Massachusetts
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRAISE
+“I love this book—Dominica DeGrandis talks about the chronic problems we all have in knowledge work and technology work in a way that is breezy, familiar, and often irreverent, but also shows off decades of learnings and concrete techniques we can quickly adopt, both at work and at home. Also wonderfully rewarding is when DeGrandis describes the theory of why these practices work, in a way that is accessible and enlightening.”
+GENE KIM, researcher, founder of IT Revolution, and coauthor of The DevOps Handbook and The Phoenix Project
+“The most practical book I’ve seen on making processes lean. Dominica’s deep experience coaching companies is fully on display as she walks the reader through a series of exercises to find waste and eliminate it—or, in her terms, to catch those sneaky ‘time thieves’ in the act. Read this on a Sunday and you’ll want to start trying out the exercises on Monday!”
+MARK SCHWARTZ, former CIO of US Citizenship and Immigration Services and author of The Art of Business Value and A Seat at the Table
+“It is about time someone addresses time theft (aka the perfect crime) head on. Not only does Dominica provide a lot of the why behind the forces that cause us to make bad decisions about our time, she also provides ideas of what to do about them. I wish I had this book when I took my first management job!”
+JULIA WESTER, Lean Consultant and Blogger at EverydayKanban.com
+“Many of us wear our busyness as a badge of honor. In Making Work Visible, Dominica DeGrandis shows us how we can make hidden work-in-process visible, to clearly see the effect it has on our ability to get things done. Once we can see it, she dives deep into the hidden aspects of our WIP that steal our time, energy, and productivity, along with strategies for combating each of them. Making Work Visible helps us to take a step back from all that busyness and really see.”
+CHRIS HEFLEY, Chief Revenue Officer, Retrium
+
+
+
+
+
+
+MakingWorkVisible
+
+EXPOSINGTIME THEFT TOOPTIMIZEWORK & FLOW
+DOMINICA DEGRANDIS
+FOREWORD BY TONIANNE DEMARIA
+
+IT REVOLUTION PRESSPORTLAND, OR
+
+
+
+
+
+
+25 NW 23rd Pl, Suite 6314Portland, OR 97210
+Copyright © 2017 by Dominica DeGrandis
+All rights reserved, for information about permission to reproduce selections from this book, write toPermissions, IT Revolution Press, LLC, 25 NW 23rd Pl, Suite 6314, Portland, OR 97210
+First EditionPrinted in the United States of America10 9 8 7 6 5 4 3 2 1
+Cover and interior book design by Belinda Bowling, Joy Stauber, and Richard Weaver, Stauber Brand StudioCover and interior illustrations by Dominica DeGrandisAuthor photograph by Laurence G. Cohen
+Library of Congress Control Number: 2017948984
+ISBN: 978-1942788157ePub ISBN: 978-1942788164Kindle ISBN: 978-1942788188Web PDF ISBN: 978-1942788171
+Publisher’s note to readers: Many of the ideas, quotations, and paraphrases attributed to different thinkers and industry leaders herein are excerpted from informal conversations, correspondence, interviews, con

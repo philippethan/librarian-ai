@@ -1,60 +1,7 @@
-HAL Id: tel-03937132
-https://theses.hal.science/tel-03937132v1
-Submitted on 13 Jan 2023
-HAL is a multi-disciplinary open access
-archive for the deposit and dissemination of sci-
-entific research documents, whether they are pub-
-lished or not.
-The documents may come from
-teaching and research institutions in France or
-abroad, or from public or private research centers.
-L’archive ouverte pluridisciplinaire HAL, est
-destinée au dépôt et à la diffusion de documents
-scientifiques de niveau recherche, publiés ou non,
-émanant des établissements d’enseignement et de
-recherche français ou étrangers, des laboratoires
-publics ou privés.
-Détection d’intrusions dans les objets connectés par des
-techniques d’apprentissage automatique : étude dans les
-domaines de l’éducation et des voitures connectées
-Arnaud Rosay
-To cite this version:
-Arnaud Rosay. Détection d’intrusions dans les objets connectés par des techniques d’apprentissage
-automatique : étude dans les domaines de l’éducation et des voitures connectées. Réseau de neurones
-[cs.NE]. Le Mans Université, 2022. Français. ￿NNT : 2022LEMA1044￿. ￿tel-03937132￿
-THÈSE DE DOCTORAT EN INFORMATIQUE
-LE MANS UNIVERSITÉ
-ÉCOLE DOCTORALE NO 603
-Éducation, Cognition, Langages, Interactions, Santé
-Spécialité : Informatique
-Par
-Arnaud ROSAY
-Détection d’intrusions dans les objets connectés par des tech-
-niques d’apprentissage automatique
-Étude dans les domaines de l’éducation et des voitures connectées
-Thèse présentée et soutenue à Le Mans, le 5 décembre 2022
-Unité de recherche : CREN – Centre de Recherche en Éducation de Nantes
-Thèse No : 2022LEMA1044
-Rapporteurs avant soutenance :
-Sébastien PILLEMENT
-Professeur des Universités, Nantes Université, IETR
-Gilles Grimaud
-Professeur des Universités, Université de Lille, CRIStAL
-Composition du Jury :
-Président :
-Sébastien PILLEMENT
-Professeur des Universités, Nantes Université, IETR
-Examinateurs :
-Isabelle CHRISMENT
-Professeur des Universités, Université de Lorraine, LORIA
-Ludovic MÉ
-Habilité à diriger des recherches, Cybersécurité INRIA
-Directeur de thèse :
-Pascal LEROUX
-Professeur des Universités, Le Mans Université
-Encadrant de thèse :
-Florent CARLIER
-Maître de conférences, Le Mans Université
-Invité(s) :
-Franck GENDROT
-Directeur adjoint du site STMicroelectronics du Mans
+ATLAS
+MON PREMIER
+DU MONDE
+Cartographie de Jean-Pierre Crivellari
+Illustré par Laurent Audouin
+Françoise Bouron
+Catherine David

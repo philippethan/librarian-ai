@@ -1,85 +1,112 @@
-Sandra Thibaudeau • Michelle Fayet 
-avec la collaboration de Pascale About
-Écrire en anglais 
-professionnel
+FLUORESCIENCES
 DUNOD
-Copyright © 2014 Dunod.
-Tout le catalogue sur
+Albane Douillet
+Catherine Even-Beaudoin
+Nathalie Lebrun
+Nathalie Lidgi-Guigui
+Nicolas Vernier
+Physique
+Phy
+© Dunod, 2017, 2024
+11, rue Paul Bert, 92240 Malako
 www.dunod.com
-ÉDITEUR DE SAVOIRS
-Le 
-pictogramme 
-qui 
-figure 
-ci-contre 
-mérite une explication. Son objet est 
-d'alerter le lecteur sur la menace que 
-représente pour l'avenir de l'écrit, 
-particulièrement dans le domaine 
-de l'édition technique et universi­
-taire, le développement massif du 
-photocopillage.
-Le Code de la propriété intellec­
-tuelle du 1er juillet 1992 interdit 
-en effet expressément la photoco­
-pie à usage collectif sans autori­
-sation des ayants droit. O r, cette pratique 
-s'est généralisée dans les établissements
-d'enseignement supérieur, provoquant une 
-baisse brutale des achats de livres et de 
-revues, au point que la possibilité même pour 
-les auteurs de créer des oeuvres 
-nouvelles et de les faire éditer cor­
-rectement est aujourd'hui menacée. 
-Nous rappelons donc que toute 
-reproduction, partielle ou totale, 
-de la présente publication est 
-interdite 
-sans 
-autorisation 
-de 
-l'auteur, de son éditeur ou du 
-Centre français d'exploitation du 
-droit 
-de 
-copie 
-(CFC, 
-20, 
-rue 
-des 
-Grands-Augustins, 75006 Paris).
-DANGER
-LE PHOTOCOPILLAGE
-Itue le livre.
-© Dunod, Paris, 2014
-5 rue Laromiguière, 75005 Paris 
-www.dunod.com
-ISBN 978-2-10-071869-6
-Le C o d e  d e  la  p ro p rié té  intelle ctu elle  n 'a u to risa n t, 
-a u x  term es de  l'a rtic le  
-L. 1 2 2 -5 , 2 ° et 3 ° a), d 'u n e  part, q u e  les « c o p ie s  ou re p ro d u ctio n s strictem ent 
-réservées à l'u sa g e  p rivé  du co piste  et non destinées à une u tilisa tio n  co lle ctive  » 
-et, d 'a u tre  p a rt, q ue les analyses et les courtes cita tion s d a n s un but d 'e x e m p le  et 
-d 'illu s tra tio n , « toute repré se n ta tion  ou re p ro d u ctio n  in té g ra le  ou p a rtie lle  fa ite  
-sans le consentem ent d e  l'a u te u r ou  de ses ayants d ro it ou ayants cause est 
-illicite  » (art. L. 122-4).
-C ette repré se n ta tion  ou re p ro d u ctio n , p a r q u e lq ue  p ro cé d é  q ue ce soit, constitue­
-ra it d o n c une co n tre fa ço n  sa nctio n n ée  p a r les a rticle s L. 3 3 5 -2  et suivants du 
-C o d e  de  la p ro p rié té  intellectuelle.
-Copyright © 2014 Dunod.
-Nous tenons à remercier Marion Ruhemann et Marlène Reux
-pour la qualité de leurs relectures.
-Des mêmes ouleures
-Sandra Thibaudeau
-Guide de la communication écrite en anglais, Éditions Québec 
-Amérique, 2012. Disponible en ligne.
-How to Make a Million Dollar First Impression, avec Lynda Berish, 
-Éditions Business Class Publishers, 2002, traduit en français, espagnol, 
-indonésien et mandarin.
-English Fast Forward 2 and J, 2e édition, avec Lynda Berish, Éditions 
-Prentice Hall Allyn and Bacon Canada, 1998-99.
-Amazing Stories to Tell and Retell 1 - 3 ,  avec Lynda Berish, 
-Houghton Mifflin Company, 1999.
-Canadian Concepts 1 - 6 ,  2e édition, avec Lynda Berish, Éditions 
-Prentice Hall Allyn and Bacon Canada, 1997.
-Gr
+ISBN 978-2-10-086757-8
+Conception graphique de la couverture : Hokus Pokus Créations
+Création graphique de la maquee intérieure : Marse
+Les + en ligne
+Retrouvez sur la page dédiée à l’ouvrage sur le site dunod.com :
+Pourlesenseignants:unesélectiondeguresdel’ouvragepour
+projection en cours.
+Pour les étudiants :
+✓Des compléments de cours pour aller plus loin.
+✓Des liens commentés vers des vidéos et sites internet.
+www
+Table des matières
+
+VI
+Avant-propos
+1
+1
+CHAPITRE
+INTRODUCTION À LA MESURE PHYSIQUE
+2
+1
+La mesure
+4
+2
+La dimension
+7
+3
+Erreur et incertitude
+9
+1
+PARTIE
+2
+CHAPITRE
+ÉQUILIBRE STATIQUE 
+20
+Les notions fondamentales
+22
+Les forces les plus usuelles
+26
+Équilibre statique d’un corps matériel 
+31
+3
+CHAPITRE
+CINÉMATIQUE 
+56
+Référentiel, trajectoire
+58
+Variations algébriques
+59
+Grandeurs vectorielles
+71
+Changement de référentiel
+80
+4
+CHAPITRE
+DYNAMIQUE 
+90
+Les lois du mouvement
+92
+Le frottement dynamique
+102
+Les forces d’inertie
+108
+Cinétique de la rotation
+122
+5
+CHAPITRE
+ÉNERGIE ET COLLISION 
+132
+L’énergie
+134
+Les collisions
+148
+6
+CHAPITRE
+LES OSCILLATIONS HARMONIQUES
+162
+L’oscillation libre
+164
+Les oscillations amorties 
+171
+Les oscillations forcées 
+179
+1
+2
+3
+1
+2
+3
+4
+1
+2
+3
+4
+1
+2
+1
+2
+3
+III

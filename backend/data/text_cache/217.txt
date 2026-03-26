@@ -1,75 +1,359 @@
-Energy performance of buildings - 
-Method for calculation of system energy 
-requirements and system efficiencies
-Part 3: Space distribution systems (DHW, heating 
-and cooling), Module M3-6, M4-6, M8-6
-BS EN 15316-3:2017
-BSI Standards Publication
-National foreword
-This British Standard is the UK implementation of EN 15316-3:2017. It 
-supersedes BS EN 15316-2-3:2007 and BS EN 15316-3-2:2007, which 
-are withdrawn.
-The UK participation in its preparation was entrusted to Technical 
-Committee RHE/24, Heating systems and water based cooling systems 
-in buildings.
-A list of organizations represented on this committee can be obtained on 
-request to its secretary.
-This publication does not purport to include all the necessary provisions 
-of a contract. Users are responsible for its correct application.
-© The British Standards Institution 2017
-Published by BSI Standards Limited 2017
-ISBN 978 0 580 87455 0
-ICS 91.140.30; 91.140.65; 91.140.10
-Compliance with a British Standard cannot confer immunity from 
-legal obligations. 
-This British Standard was published under the authority of the 
-Standards Policy and Strategy Committee on 30 June 2017.
-Amendments/corrigenda issued since publication
-Date
-Text affected
-BRITISH STANDARD
- 
- 
- 
-EUROPEAN STANDARD 
-NORME EUROPÉENNE 
-EUROPÄISCHE NORM 
- 
- EN 15316-3 
- 
- 
- 
- 
-April 2017 
-ICS 91.140.10; 91.140.30; 91.140.65 
-Supersedes EN 15316-2-3:2007, EN 15316-3-2:2007
-English Version 
- 
-Energy performance of buildings - Method for calculation 
-of system energy requirements and system efficiencies - 
-Part 3: Space distribution systems (DHW, heating and 
-cooling), Module M3-6, M4-6, M8-6 
-Performance énergétique des bâtiments - Méthode de 
-calcul des besoins énergétiques et des rendements des 
-systèmes - Partie 3 : Systèmes de distribution des 
-locaux (eau chaude sanitaire, chauffage et 
-refroidissement), Module M3-6, M4-6, M8-6 
- 
-Energetische Bewertung von Gebäuden - Verfahren zur 
-Berechnung der Energieanforderungen und 
-Nutzungsgrade der Anlagen - Teil 3: 
-Wärmeverteilungssysteme (Trinkwassererwärmung, 
-Heizung und Kühlung), Module M3-6, M4-6, M8-6 
-This European Standard was approved by CEN on 27 February 2017.  
- 
-CEN members are bound to comply with the CEN/CENELEC Internal Regulations which stipulate the conditions for giving this 
-European Standard the status of a national standard without any alteration. Up-to-date lists and bibliographical references 
-concerning such national standards may be obtained on application to the CEN-CENELEC Management Centre or to any CEN 
-member. 
- 
-This European Standard exists in three official versions (English, French, German). A version in any other language made by 
-translation under the responsibility of a CEN member into its own language and notified to the CEN-CENELEC Management 
-Centre has the same status as the official versions. 
- 
-CEN members are the national standards bodies of Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, 
-Finland, Former 
+
+
+
+
+
+Contents
+
+Cover
+Title Page
+Copyright
+Contents
+Introduction
+The Essentials
+Transport
+In the Home
+At the Shops
+Day-to-Day
+Leisure
+Sport
+Health
+Planet Earth
+Celebrations and Festivals
+Acknowledgements
+Photo Credits
+About the Publisher
+
+
+
+
+Guide
+
+Cover
+Contents
+Introduction
+
+
+
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+COPYRIGHT
+Published by Collins
+An imprint of HarperCollins Publishers
+Westerhill Road
+Bishopbriggs
+Glasgow G64 2QT
+First Edition 2019
+© HarperCollins Publishers 2019
+Collins® is a registered trademark of HarperCollins Publishers Limited
+Ebook Edition © March 2019
+ISBN: 9780008319991
+Version: 2019-03-13
+All rights reserved under International and Pan-American Copyright Conventions. By payment of the required fees, you have been granted the non-exclusive, non-transferable right to access and read the text of this ebook on screen. No part of this text may be reproduced, transmitted, downloaded, decompiled, reverse engineered, or stored in or introduced into any information storage and retrieval system, in any form or by any means, whether electronic or mechanical, now known or hereafter invented, without the express written permission of HarperCollins.
+Entered words that we have reason to believe constitute trademarks have been designated as such. However, neither the presence nor absence of such designation should be regarded as affecting the legal status of any trademark.
+HarperCollins does not warrant that any website mentioned in this title will be provided uninterrupted, than any website will be error free, that defects will be corrected, or that the website or the server that makes it available are free of viruses or bugs. For full terms and conditions please refer to the site terms provided on the website.
+If you would like to comment on any aspect of this book, please contact us at the given address or online.
+E-mail dictionaries@harpercollins.co.uk
+ www.facebook.com/collinsdictionary
+ @collinsdict
+
+
+
+
+
+
+CONTENTS
+COVER
+TITLE PAGE
+COPYRIGHT
+INTRODUCTION
+THE ESSENTIALS
+TRANSPORT
+IN THE HOME
+AT THE SHOPS
+DAY-TO-DAY
+LEISURE
+SPORT
+HEALTH
+PLANET EAR

@@ -1,15 +1,33 @@
-Systèmes d'exploitation
-Les processus
-Thomas Ropars
-Email: 
-Website: 
-thomas.ropars@univ-grenoble-alpes.fr
-tropars.github.io
-1 .  1
-Dans ce cours
-fork()
-wait()
-exec()
-2
-Le concept de processus
-3
+Choisissez W 
+EDITION 
+25 
+L'Original 
+CODES 
+ROUSSEAU 
+-O 
+Vous cherchez 
+une auto-école ? 
+auto-ecole.codesrousseau.fr 
+Les meilleures auto-écoles 
+de votre ville 
+recommandées 
+par Codes Rousseau 
+et notées par leurs élèves. 
+LES 
+Se es 
+Ton code 
+où tu veux, 
+quand tu A 
+COURS, TESTS & EXAMENS BLANCS 
+? 
+| ss 
+Cours thématiques 
+2400 questions 
+6 examens blancs 
+CODES 
+[7 Codes d'accès en vente dans votre auto-école 
+ROUSSEAU 
+RS 
+= 
+L.….) 
+Ou sur auto ecole.codesrousseau.fr 

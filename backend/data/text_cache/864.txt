@@ -1,1 +1,108 @@
-Autrice de best-sellers internationaux traduits dans 41 langues, Mel Robbins est l’une des oratrices les plus motivantes au monde. Avec plus de 16 millions d’abonnés et des milliards de vidéos visionnées à son actif, elle est renommée pour sa capacité à transformer des sujets complexes en actions pratiques quotidiennes. La Théorie Let Them est son livre le plus puissant et le plus profond à ce jour. Cette œuvre est protégée par le droit d’auteur et strictement réservée à l’usage privé du client. Toute reproduction ou diffusion au profit de tiers, à titre gratuit ou onéreux, de tout ou partie de cette œuvre est strictement interdite et constitue une contrefaçon prévue par les articles L 335-2 et suivants du Code de la propriété intellectuelle. L’éditeur se réserve le droit de poursuivre toute atteinte à ses droits de propriété intellectuelle devant les juridictions civiles ou pénales. OPPOSITION À LA FOUILLE DE TEXTES ET DE DONNÉES À DES FINS DIVERSES En application de l'article L. 122-5-3, III du Code de la propriété intellectuelle, le traducteur s’oppose aux copies, utilisations ou reproductions numériques de la traduction réalisées en vue de moissonnage et fouilles de textes et de données, à l’exception de celles menées aux seules fins de la recherche scientifique par les organismes visés à l’article L. 122-5-3, II du Code précité. L’éditeur s’engage à mettre en œuvre lui-même ou par l’intermédiaire de ses cocontractants tous les moyens appropriés permettant de notifier cette opposition, au moyen notamment de procédés lisibles par machine, y compris des métadonnées, et en le mentionnant sur les conditions générales d'utilisation de son site internet. Notamment, l’éditeur exprimera la volonté d’opposition de l’Auteur par les termes « TDM-RESERVATION : 1 ». L’éditeur s’engage à faire une mise à jour des moyens employés dès lors que les technologies seront devenues obsolètes. L’Éditeur n’est pas autorisé à copier, utiliser ou reproduire la traduction, directement ou par voie de cession à un tiers, à des fins d'entraînement de technologies d'intelligence artificielle générative, sans l’accord préalable et exprès du traducteur. Titre original : The Let Them Theory © 2024 Mel Robbins Première publication aux États-Unis par Hay House LLC Conseil éditorial : Pascale Senk Maquette : Fabrice Del Rio Ruiz Relecture : Audrey Peuportier Couverture : Olivier Frenot, pour l’adaptation française Design original : Pete Garceau Illustration de couverture : iStock/Getty Images Les vers de Jour d’été de Mary Oliver sont reproduits avec l’autorisation de The Charlotte Sheedy Literary Agency en tant qu’agent de l’auteur. Copyright © 1990, 2006, 2008, 2017 Mary Oliver avec l’autorisation de Bill Reichblum. Traduction : Patrick Thonart, 2023 © 2025 Éditions Leduc (ISBN : 979-10-285-3292-5) édition numérique de l’édition imprimée © 2025 Éditions Leduc (ISBN : 979-10-285-3417-2). Rendez-vous en fin d’ouvrage pour en savoir plus sur les éditions LeducÀ ma fille Sawyer, q
+The Cyber Security
+Body of Knowledge
+Version 1.1.0
+31st July 2021
+https://www.cybok.org/
+EDITORS
+Awais Rashid
+University of Bristol
+Howard Chivers
+University of York
+Emil Lupu
+Imperial College London
+Andrew Martin
+University of Oxford
+Steve Schneider
+University of Surrey
+PROJECT MANAGERS
+Helen Jones
+University of Bristol
+Yvonne Rigby
+University of Bristol
+PRODUCTION
+Chao Chen
+University of Bristol
+Joseph Hallett
+University of Bristol
+The Cyber Security Body Of Knowledge
+www.cybok.org
+COPYRIGHT
+© Crown Copyright, The National Cyber Security Centre 2021. This information is licensed
+under the Open Government Licence v3.0. To view this licence, visit:
+https://www.nationalarchives.gov.uk/doc/open-government-licence/
+When you use this information under the Open Government Licence, you should include the
+following attribution: CyBOK Version 1.1.0 © Crown Copyright, The National Cyber Security
+Centre 2021, licensed under the Open Government Licence: https://www.nationalarchives.gov.uk/
+doc/open-government-licence/.
+The CyBOK project would like to understand how the CyBOK is being used and its uptake.
+The project would like organisations using, or intending to use, CyBOK for the purposes
+of education, training, course development, professional development etc. to contact it at
+contact@cybok.org to let the project know how they are using CyBOK.
+KA | July 2021
+Page 2
+The Cyber Security Body Of Knowledge
+www.cybok.org
+CHANGELOG
+Introduction
+Version date
+Version number
+Changes made
+July 2021
+1.1.0
+Updated copyright statement; amended “issue” to “ver-
+sion”; added references to new KAs; updated diagram;
+removed Formal Methods cross-cutting topic.
+October 2019
+1.0
+Risk Management and Governance
+Version date
+Version number
+Changes made
+July 2021
+1.1.1
+Amended “issue” to “version”
+March 2021
+1.1.0
+Updated copyright statement; added new section on
+Vulnerability Management; corrected typos
+October 2019
+1.0
+Law & Regulation
+Version date
+Version number
+Changes made
+July 2021
+1.0.2
+Amended “issue” to “version”; corrected typos
+March 2021
+1.0.1
+Updated copyright statement; in Section 3.6.6 amended
+“contacting parties” to “contracting parties”
+October 2019
+1.0
+Human Factors
+Version date
+Version number
+Changes made
+July 2021
+1.0.1
+Updated copyright statement; amended “issue” to “ver-
+sion”; amended typos
+October 2019
+1.0
+Privacy & Online Rights
+Version date
+Version number
+Changes made
+July 2021
+1.0.2
+Amended “issue” to “version”; corrected typos
+March 2021
+1.0.1
+Updated copyright statement; amended spelling error
+in Section 5.1.2: “patters” to “patterns”; added missing
+word in Section 5.1.2: “On the hand” to “On the one hand”
+October 2019
+1.0
+KA | July 2021
+Page 3

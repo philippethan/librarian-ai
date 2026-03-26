@@ -1,54 +1,192 @@
-Lecture Notes in Electrical Engineering 1209
-Limin Jia
-Said Easa
-Yong Qin   Editors
-Developments and 
-Applications in 
-SmartRail, Traffic, 
-and Transportation 
-Engineering
-Proceedings of ICSTTE 2023
-Lecture Notes in Electrical Engineering
-1209
-Series Editors
-Leopoldo Angrisani, Department of Electrical and Information Technologies Engineering, University of
-Napoli Federico II, Napoli, Italy
-Marco Arteaga, Departament de Control y Robótica, Universidad Nacional Autónoma de México,
-Coyoacán, Mexico
-Samarjit Chakraborty, Fakultät für Elektrotechnik und Informationstechnik, TU München, München,
-Germany
-Shanben Chen, School of Materials Science and Engineering, Shanghai Jiao Tong University, Shanghai,
-China
-Tan Kay Chen, Department of Electrical and Computer Engineering, National University of Singapore,
-Singapore, Hong Kong
-Rüdiger Dillmann, University of Karlsruhe (TH) IAIM, Karlsruhe, Germany
-Haibin Duan, Beijing University of Aeronautics and Astronautics, Beijing, China
-Gianluigi Ferrari, Dipartimento di Ingegneria dell’Informazione, Sede Scientiﬁca Università degli Studi di
-Parma, Parma, Italy
-Manuel Ferre, Centre for Automation and Robotics CAR (UPM-CSIC), Universidad Politécnica de Madrid,
-Madrid, Spain
-Sandra Hirche, Department of Electrical Engineering and Information Science, Technische Universität
-München, München, Germany
-Faryar Jabbari, Department of Mechanical and Aerospace Engineering, University of California, Irvine, USA
-Limin Jia, State Key Laboratory of Rail Trafﬁc Control and Safety, Beijing Jiaotong University, Beijing,
-China
-Janusz Kacprzyk, Intelligent Systems Laboratory, Systems Research Institute, Polish Academy of Sciences,
-Warsaw, Poland
-Alaa Khamis, Department of Mechatronics Engineering, German University in Egypt El Tagamoa El
-Khames, New Cairo City, Egypt
-Torsten Kroeger, Intrinsic Innovation, Mountain View, USA
-Yong Li, College of Electrical and Information Engineering, Hunan University, Changsha, China
-Qilian Liang, Department of Electrical Engineering, University of Texas at Arlington, Arlington, USA
-Ferran Martín, Departament d’Enginyeria Electrònica, Universitat Autònoma de Barcelona, Bellaterra,
-Spain
-Tan Cher Ming, College of Engineering, Nanyang Technological University, Singapore, Singapore
-Wolfgang Minker, Institute of Information Technology, University of Ulm, Ulm, Germany
-Pradeep Misra, Department of Electrical Engineering, Wright State University, Dayton, USA
-Subhas Mukhopadhyay, School of Engineering, Macquarie University, Sydney, New Zealand
-Cun-Zheng Ning, Department of Electrical Engineering, Arizona State University, Tempe, China
-Toyoaki Nishida, Department of Intelligence Science and Technology, Kyoto University, Kyoto, Japan
-Luca Oneto, Department of Informatics, Bioengineering, Robotics and Systems Engineering, University of
-Genova, Genova, Italy
-Bijaya Ketan Panigrahi, Department of Electrical Engineering, Indian Institute of Technology Delhi,
-New Delhi, India
-Federica Pascucci, Department di Ingegn
+CAVTnRIDGE
+If,
+Tf,
+I
+n
+If,
+T
+n
+Describing 
+technical
+functions and
+applications
+Explaining how technology
+works
+Emphasising 
+technical
+advantages
+Simplifying 
+and illustrating
+technical explanations
+Describing specific
+materials
+Categorising 
+materials
+SpeciÍying 
+and describing
+properties
+Discussing 
+quality issues
+Describing component
+shapes and features
+Explaining and assessing
+manufacturing
+techniques
+Explaining 
+jointing and
+fixing techniques
+Describing positions of
+assembled components
+Working with drawings
+Discussing 
+dimensions 
+and
+precision
+Describing design phases
+and procedures
+Resolving design problems
+Describing types of
+technical problem
+Assessing and interpreting
+faults
+Describing the causes of
+faults
+Discussing 
+repairs and
+maintenance
+Words stemming from use
+allow, enable, permit, ensure,
+prevent
+Verbs to describe movement
+Verbs and adjectives 
+to describe
+advantages
+Adverbs for adding emphasis
+Phrases for simplifying 
+and
+rephrasing
+Common materials
+Categories of materials
+consist of, comprise, made of, made
+from, mode out of
+Properties of materials
+Phrases for describing requirements
+Compounds oÍ resistant
+Adverbs of degree
+Shapes and 3D features
+Words to describe machining
+Phrases for describing suitability
+Verbs and nouns to describe joints
+and fixings
+Prepositions 
+of position
+Views on technical drawings
+Phrases related to scole
+Phrases related to tolerance
+length, width, thickness, etc.
+Drawing types and versions
+Verbs for describing stages of a
+design process
+Verbs and nouns for describing
+design problems
+Verbs and adjectives 
+for describing
+technical problems
+Words for describing faults and
+their severity
+Phrases for describing certainty/
+uncertainty
+Adjectives with prefixes for
+describing 
+technical problems
+Verbs for describing repairs and
+maintenance
+Listening
+GPS applications
+Space elevators
+Advantages 
+of a new pump
+A guided tour
+Reading
+Space elevators
+Otis lift technology
+Pile foundations
+Listening
+An environmental 
+audit
+Specialised 
+tools
+H igh-performance 
+watches
+Reading
+Materials recycling
+Regenerative 
+brakes
+Kevlar
+Listening
+A project briefing
+Electrical plugs and sockets
+Metal fabrication
+UHP waterjet cutting
+Options for fixing
+Cluster ballooning
+Reading
+Cutting operations
+Flow waterjet technology
+Joints and fixings
+The flying garden chair
+Listening
+A drawing query
+Scale
+A floor design
+Design procedures
+Revising a detail
+Reading
+Superflat floors
+Oueries and instructions
+Listening
+A racing car test session
+Test session problems
+Technical 
+help{ine
+Tyre pressure problems
+A maintenance 
+check
+Reading
+Air Transat Flight 236
+I
+Contents
+t
+nry
+nffi
+Tf,
+ITEf,
+ET
+n
+Discussing 
+technical
+requirements
+Suggesting 
+ideas and
+solutions
+Assessing feasibility
+Describing improvements
+and redesigns
+Describing health and
+safety precautions
+Emphasising 
+the
+importance 
+of
+precautions
+Discussing 
+regulations 
+and
+standards
+Working with written
+instructions 
+and notices
+Describing automated
+systems
+Referring to measurable
+param

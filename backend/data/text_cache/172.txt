@@ -1,28 +1,41 @@
-1
-MO103 
-Introduction à 
-l’ingénierie système 
-Thibault Toralba
- 
-MO103 – Introduction à l’ingénierie système 
- 
-Une école en 
-mouvement 
-2
-➢L’ingénierie dans les projets étudiants
-Conception de robots pour la Coupe de France de Robotique
-➢Formation à l’Ingénierie Système
-Introduction : à propos des systèmes
-Emergence et expression des besoins
-Passage du besoin à l’exigence
-Rédaction d’une Spécification Technique du Besoin
-Conception de l’architecture
-Tests, vérifications et validations
-➢Semaine projet
-Projet robot sumo
-MO103 – Introduction à l’ingénierie système 
-Agenda
-3
-MO103 – Introduction à l’ingénierie système 
-Conception de robots
-pour la Coupe de France de Robotique
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PORTFOLIO / PENGUINAn imprint of Penguin Random House LLCpenguinrandomhouse.comCopyright © 2023 by ACB Ideas LLC and Harpo, Inc.Penguin Random House supports copyright. Copyright fuels creativity, encourages diverse voices, promotes free speech, and creates a vibrant culture. Thank you for buying an authorized edition of this book and for complying with copyright laws by not reproducing, scanning, or distributing any part of it in any form without permission. You are supporting writers and allowing Penguin Random House to continue to publish books for every reader.Library of Congress Cataloging-in-Publication DataNames: Brooks, Arthur C., 1964- author. | Winfrey, Oprah, author.Title: Build the life you want : the art and science of getting happier /Arthur C. Brooks and Oprah Winfrey.Description: New York : Portfolio/Penguin, [2023] |Includes bibliographical references.Identifiers: LCCN 2023019086 (print) | LCCN 2023019087 (ebook) |ISBN 9780593545409 (hardcover) | ISBN 9780593545416 (ebook) |ISBN 9780593716250 (international edition)Subjects: LCSH: Happiness. | Change (Psychology) | Self-realization.Classification: LCC BF575.H27 B759 2023 (print) |LCC BF575.H27 (ebook) | DDC 158—dc23/eng/20230504LC record available at https://lccn.loc.gov/2023019086LC ebook record available at https://lccn.loc.gov/2023019087Cover design: Jennifer HeuerCover art: Lvqi Peng / iStock / Getty Images PlusBOOK DESIGN BY MEIGHAN CAVANAUGH, ADAPTED FOR EBOOK BY ESTELLE MALMEDpid_prh_6.1_144870801_c0_r0
+
+
+
+
+
+
+
+
+We dedicate this book to you on your life’s journey. May you get happier, year after year, and bring greater happiness to others.
+
+
+
+
+
+
+ContentsA Note from OprahA Note from ArthurIntroductionAlbina’s SecretOneHappiness Is Not the Goal, and Unhappiness Is Not the EnemyManaging Your EmotionsA Note from OprahTwoThe Power of MetacognitionThreeChoose a Better EmotionFourFocus Less on YourselfBuilding What MattersA Note from OprahFiveBuild Your Imperfect FamilySixFriendship That Is Deeply RealSevenWork That Is Love Made VisibleEightFind Your Amazing GraceA Note from OprahConclusionNow, Become the TeacherAcknowledgmentsNotes_144870801_
+
+
+
+
+
+
+A Note from OprahOne of the many things I got from doing The Oprah Winfrey Show for twenty-five years was a front-row seat to unhappiness. Of every, and I mean every, kind. My guests included people devastated by tragedy, or betrayal, or deep disappointment. Angry people and people who held grudges. People full of regret and guilt, shame and fear. People doing everything in their power to numb their unhappiness but waking up each day unhappy anyway.I also witnessed abundant happiness. People who had found love and friendship. People using their talents and abilities to do good things. People who reaped the rewards of selflessness and giving, including one person who’d even donated a kidney to a stranger he’d recently met. People with a spiritual side that brought richer meaning to their lives. People who’d been given a

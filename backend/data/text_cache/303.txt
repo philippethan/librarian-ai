@@ -1,34 +1,99 @@
-Communications-
-Based Train Control 
-(CBTC)
-Lars Schnieder
-Komponenten, Funktionen 
-und Betrieb
-4. Auflage
-Communications-Based Train Control (CBTC)
-SN Flashcards Microlearning
-Schnelles und effi  zientes Lernen mit digitalen Karteikarten – 
-für Arbeit oder Schule!
-Diese Möglichkeiten bieten Ihnen die SN Flashcards:
-•
-Jederzeit und überall auf Ihrem Smartphone, Tablet oder Computerlernen
-•
-Den Inhalt des Buches lernen und Ihr Wissen testen
-•
-Sich durch verschiedene, mit multimedialen Komponenten angereicherte
-Fragetypen motivieren lassen und zwischen drei Lernalgorithmen
-(Langzeit gedächtnis-, Kurzzeitgedächtnis- oder Prüfungs-Modus) wählen
-•
-Ihre eigenen Fragen-Sets erstellen, um Ihre Lernerfahrung zu personalisieren
-So greifen Sie auf Ihre SN Flashcards zu:
-1. Gehen Sie auf die 1. Seite des 1. Kapitels dieses Buches und folgen Sie den 
-Anweisungen in der Box, um sich für einen SN Flashcards-Account anzumelden 
-und auf die Flashcards-Inhalte für dieses Buch zuzugreifen.
-2. Laden Sie die SN Flashcards Mobile App aus dem Apple App Store oder
-Google Play Store herunter, öffnen Sie die App und folgen Sie den Anweisungen 
-in der App.
-3. Wählen Sie in der mobilen App oder der Web-App die Lernkarten für dieses Buch 
-aus und beginnen Sie zu lernen!
-Sollten Sie Schwierigkeiten haben, auf die SN Flashcards zuzugreifen, schreiben 
-Sie bitte eine E-Mail an customerservice@springernature.com und geben Sie in der 
-Betreff zeile SN Flashcards und den Buchtitel an.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thank you for downloading this Simon & Schuster ebook.
+
+Get a FREE ebook when you join our mailing list. Plus, get updates on new releases, deals, recommended reads, and more from Simon & Schuster. Click below to sign up and see terms and conditions.
+
+
+CLICK HERE TO SIGN UP
+
+
+Already a subscriber? Provide your email again so we can register this ebook and send you more of what you like to read. You will continue to receive exclusive offers in your inbox.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents
+Prologue: “Call it a war”
+Part One: The Education of an Engineer
+1. “The sea was all around” (1890–1909)
+2. “The man I wanted to be” (1909–18)
+3. “Blow for blow” (1919–32)
+4. “Versatile, not superficial” (1932–38)
+Part Two: Preparing for War
+5. “The minor miracles” (1939–40)
+6. “Don’t let the bastards get you down” (1940–41)
+Part Three: Modern Arms and Free Men
+7. “The man who may win or lose the war” (1942–43)
+8. “A race between techniques” (1943–44)
+9. “This uranium headache!” (1939–45)
+10. “The endless frontier” (1944–45)
+11. “After peace returns” (1945)
+12. “As we may think” (1945)
+Part Four: The New World
+13. “A carry-over from the war” (1945–46)
+14. “So doggone weary” (1946–48)
+15. “The grim world” (1949–54)
+16. “Crying in the wilderness” (1955–70)
+Postscript: “Earlier than we think”
+Photographs
+Acknowledgments
+About the Author
+List of Abbreviations
+Notes
+Principal Sources
+Index
+
+
+
+
+
+
+To my Parents, Rosalyn and Michael, and to Stanley Goldberg (1934–96)
+
+
+
+
+
+
+Prologue
+“Call it a war”
+If we are really well armed the Reds will not force a world war on us.
+—Vannevar Bush
+For these men the war had never ended.
+On a quiet Monday night in Washington, D.C., Dwight Eisenhower, Carl Spaatz and Chester Nimitz, the chiefs of the world’s strongest military power, slipped into the Carlton Hotel for a private party. Joining them were their civilian bosses, Navy Secretary James Forrestal and Army Secretary Robert Patterson.
+It was January 20, 1947. The hot fight against the Germans and the Japanese had given way to an insecure world, in which U.S. atomic bombs symbolized the nation’s unsurpassed military and industrial strength but did not guarantee peace.
+No one knew when a new world war might come. But if it did—no, when it did—the old soldiers dining in the Carlton Hotel knew they must have more than God and Capitalism on their side. They must have Technology, too.
+Make no mistake: the outcome of war was now decided, as much as anything, by a nation’s scientific and engineering wizards. This was the lesson of World War II. The laboratory, as much as the factory, proved to be the great arsenal of democracy. Radar. Missiles. Radio-controlled fuzes. Mass-produced penicillin. The atomic bomb. Never had a nation at war harvested the knowledge and inventiveness of its people on such a grand scale. Never had scientists and engineers so altered the face of battle.
+And never had any army or navy relied so heavily on civilians to make the basic tools of war—and form 

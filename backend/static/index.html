@@ -77,7 +77,32 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   outline: none;
 }
 #filterbar label { font-size: 0.8rem; color: #666; }
-#filter-count { margin-left: auto; font-size: 0.78rem; color: #888; }
+#filter-count { font-size: 0.78rem; color: #888; }
+#batch-actions { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+#btn-reprocess-selected {
+  background: #e8f0fe;
+  color: #1a4aaa;
+  border: 1px solid #b0c4f8;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+}
+#btn-reprocess-selected:hover { background: #d0e0fc; }
+#btn-reprocess-all {
+  background: #fff3cc;
+  color: #7a5200;
+  border: 1px solid #e0c060;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+#btn-reprocess-all:hover { background: #ffe8a0; }
+#batch-progress { font-size: 0.78rem; color: #1a7a4a; font-weight: 600; display: none; }
 
 /* Main layout */
 #main {
@@ -121,6 +146,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 #book-table tbody tr:hover { background: #f8f8fc; }
 #book-table tbody tr.selected { background: #eeeeff; }
 #book-table td { padding: 7px 10px; vertical-align: middle; }
+#book-table .check-cell { width: 36px; padding: 4px 8px; text-align: center; }
+#book-table .check-cell input[type=checkbox] { cursor: pointer; width: 15px; height: 15px; }
+#book-table thead th.check-cell { cursor: default; }
 #book-table .cover-cell { width: 44px; padding: 4px 8px; }
 #book-table .cover-cell img { width: 32px; height: 44px; object-fit: cover; border-radius: 2px; background: #ddd; display: block; }
 #book-table .cover-cell .no-cover { width: 32px; height: 44px; background: #e0e0ec; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #999; }
@@ -391,6 +419,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <option value="abandoned">Abandoned</option>
   </select>
   <span id="filter-count"></span>
+  <div id="batch-actions">
+    <span id="batch-progress"></span>
+    <button id="btn-reprocess-selected" onclick="reprocessSelected()">Reprocess Selected (<span id="sel-count">0</span>)</button>
+    <button id="btn-reprocess-all" onclick="reprocessAllFiltered()">Reprocess All Filtered</button>
+  </div>
 </div>
 
 <!-- Main -->
@@ -399,6 +432,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <table id="book-table">
       <thead>
         <tr>
+          <th class="check-cell"><input type="checkbox" id="chk-all" onclick="toggleSelectAll(this)" title="Select all"></th>
           <th style="width:44px"></th>
           <th onclick="sortBy('title')">Title</th>
           <th onclick="sortBy('author')">Author</th>
@@ -492,6 +526,8 @@ let filteredBooks = [];
 let selectedBookId = null;
 let sortCol = 'added_at';
 let sortDir = -1;
+let selectedIds = new Set();
+let autoRefreshTimer = null;
 
 // ---- Init ----
 async function init() {
@@ -515,8 +551,19 @@ async function loadBooks() {
   try {
     allBooks = await apiFetch('/api/books');
     applyFilters();
+    scheduleAutoRefresh();
   } catch(e) {
     showToast('Failed to load books: ' + e.message, true);
+  }
+}
+
+function scheduleAutoRefresh() {
+  const hasPending = allBooks.some(b => b.status === 'pending' || b.status === 'processing');
+  clearTimeout(autoRefreshTimer);
+  if (hasPending) {
+    autoRefreshTimer = setTimeout(async () => {
+      await Promise.all([loadBooks(), loadStats()]);
+    }, 4000);
   }
 }
 
@@ -593,6 +640,10 @@ function renderTable() {
 
   tbody.innerHTML = filteredBooks.map(b => `
     <tr class="${b.id === selectedBookId ? 'selected' : ''}" onclick="selectBook(${b.id})">
+      <td class="check-cell" onclick="event.stopPropagation()">
+        <input type="checkbox" class="row-chk" data-id="${b.id}" ${selectedIds.has(b.id) ? 'checked' : ''}
+          onchange="toggleRowCheck(${b.id}, this.checked)">
+      </td>
       <td class="cover-cell">
         ${b.cover_path
           ? `<img src="${API}/api/books/${b.id}/cover" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
@@ -763,6 +814,75 @@ async function reprocessBookById(id) {
     showToast('Queued for reprocessing');
   } catch(e) {
     showToast('Reprocess failed: ' + e.message, true);
+  }
+}
+
+// ---- Checkbox selection ----
+function toggleRowCheck(id, checked) {
+  if (checked) selectedIds.add(id);
+  else selectedIds.delete(id);
+  updateBatchUI();
+}
+
+function toggleSelectAll(chk) {
+  if (chk.checked) filteredBooks.forEach(b => selectedIds.add(b.id));
+  else selectedIds.clear();
+  renderTable();
+  updateBatchUI();
+}
+
+function updateBatchUI() {
+  const btn = document.getElementById('btn-reprocess-selected');
+  const countEl = document.getElementById('sel-count');
+  const n = selectedIds.size;
+  countEl.textContent = n;
+  btn.style.display = n > 0 ? '' : 'none';
+  // update select-all state
+  const chkAll = document.getElementById('chk-all');
+  if (chkAll) {
+    chkAll.checked = filteredBooks.length > 0 && filteredBooks.every(b => selectedIds.has(b.id));
+    chkAll.indeterminate = n > 0 && !chkAll.checked;
+  }
+}
+
+// ---- Batch reprocess ----
+async function reprocessSelected() {
+  const ids = [...selectedIds];
+  if (!ids.length) return;
+  await runBatchReprocess(ids);
+  selectedIds.clear();
+  updateBatchUI();
+}
+
+async function reprocessAllFiltered() {
+  const ids = filteredBooks.map(b => b.id);
+  if (!ids.length) return;
+  await runBatchReprocess(ids);
+}
+
+async function runBatchReprocess(ids) {
+  const prog = document.getElementById('batch-progress');
+  prog.style.display = '';
+  prog.textContent = `Queuing ${ids.length} book(s)...`;
+  try {
+    const res = await apiFetch('/api/reprocess-batch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ids }),
+    });
+    // Update local status to pending
+    ids.forEach(id => {
+      const b = allBooks.find(x => x.id === id);
+      if (b) b.status = 'pending';
+    });
+    applyFilters();
+    prog.textContent = `Queued ${res.queued} book(s) - processing...`;
+    scheduleAutoRefresh();
+    showToast(`Queued ${res.queued} book(s) for reprocessing`);
+    setTimeout(() => { prog.style.display = 'none'; }, 8000);
+  } catch(e) {
+    prog.style.display = 'none';
+    showToast('Batch reprocess failed: ' + e.message, true);
   }
 }
 

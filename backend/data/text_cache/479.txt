@@ -1,99 +1,109 @@
-IET ENERGY ENGINEERING SERIES 241
-Power Electronic
-Converters and Systems,
-2nd Edition
-Other volumes in this series:
-Volume 1
-Power Circuit Breaker Theory and Design C.H. Flurscheim (Editor)
-Volume 4
-Industrial Microwave Heating A.C. Metaxas and R.J. Meredith
-Volume 7
-Insulators for High Voltages J.S.T. Looms
-Volume 8
-Variable Frequency AC Motor Drive Systems D. Finney
-Volume 10
-SF6 Switchgear
-H.M. Ryan and G.R. Jones
-Volume 11
-Conduction and Induction Heating E.J. Davies
-Volume 13
-Statistical Techniques for High Voltage Engineering W. Hauschild and
-W. Mosch
-Volume 14
-Uninterruptible Power Supplies J. Platts and J.D. St Aubyn (Editors)
-Volume 15
-Digital Protection for Power Systems A.T. Johns and S.K. Salman
-Volume 16
-Electricity Economics and Planning T.W. Berrie
-Volume 18
-Vacuum Switchgear A. Greenwood
-Volume 19
-Electrical Safety: A guide to causes and prevention of hazards J. Maxwell
-Adams
-Volume 21
-Electricity Distribution Network Design, 2nd Edition E. Lakervi and
-E.J. Holmes
-Volume 22
-Artificial Intelligence Techniques in Power Systems K. Warwick, A.O. Ekwue
-and R. Aggarwal (Editors)
-Volume 24
-Power System Commissioning and Maintenance Practice K. Harker
-Volume 25
-Engineers’ Handbook of Industrial Microwave Heating R.J. Meredith
-Volume 26
-Small Electric Motors H. Moczala et al.
-Volume 27
-AC–DC Power System Analysis J. Arrillaga and B.C. Smith
-Volume 29
-High Voltage Direct Current Transmission, 2nd Edition J. Arrillaga
-Volume 30
-Flexible AC Transmission Systems (FACTS) Y.-H. Song (Editor)
-Volume 31
-Embedded Generation N. Jenkins et al.
-Volume 32
-High Voltage Engineering and Testing, 2nd Edition H.M. Ryan (Editor)
-Volume 33
-Overvoltage Protection of Low-Voltage Systems, Revised Edition P. Hasse
-Volume 36
-Voltage Quality in Electrical Power Systems J. Schlabbach et al.
-Volume 37
-Electrical Steels for Rotating Machines P. Beckley
-Volume 38
-The Electric Car: Development and future of battery, hybrid and fuel-cell
-cars M. Westbrook
-Volume 39
-Power Systems Electromagnetic Transients Simulation J. Arrillaga and
-N. Watson
-Volume 40
-Advances in High Voltage Engineering M. Haddad and D. Warne
-Volume 41
-Electrical Operation of Electrostatic Precipitators K. Parker
-Volume 43
-Thermal Power Plant Simulation and Control D. Flynn
-Volume 44
-Economic Evaluation of Projects in the Electricity Supply Industry
-H. Khatib
-Volume 45
-Propulsion Systems for Hybrid Vehicles J. Miller
-Volume 46
-Distribution Switchgear S. Stewart
-Volume 47
-Protection of Electricity Distribution Networks, 2nd Edition J. Gers and
-E. Holmes
-Volume 48
-Wood Pole Overhead Lines B. Wareing
-Volume 49
-Electric Fuses, 3rd Edition A. Wright and G. Newbery
-Volume 50
-Wind Power Integration: Connection and system operational aspects
-B. Fox et al.
-Volume 51
-Short Circuit Currents J. Schlabbach
-Volume 52
-Nuclear Power J. Wood
-Volume 53
-Condition Assessment of High Voltage Insulation in Power System
-Equipment R.E. James and Q. Su
-Volume 55
-Local Energy: Distributed generation of heat and power J. Wood
-V
+
+
+
+
+Kamputckéa
+ 
+
+
+
+
+
+
+
+    AUX ÉDITIONS DU SEUIL,
+  
+
+    COLLECTION « Fiction & Cie »
+  
+Pura vida
+  Vie & mort de William Walker
+  2004
+  et « Points », n°P2165
+La Tentation des armes à feu
+  2006
+Équatoria
+  2009
+
+    AUX ÉDITIONS DE MINUIT
+  
+Cordon-bleu
+  1987
+Longue vue
+  1988
+Le Feu d’artifice
+  1992
+La Femme parfaite
+  1995
+Ces deux-là
+  2000
+
+    AUX ÉDITIONS PUBLIE. NET
+  
+Vie & mort de sainte Tina l’Exilée
+  2011
+
+
+
+
+
+
+
+Fiction and Cie
+
+
+
+
+     Patrick Deville
+  
+
+    KAMPUCHÉA
+  
+
+    Seuil
+Prospéro's books
+
+
+
+
+
+
+
+
+
+
+COLLECTION
+    « Fiction & Cie »
+    fondée par Denis Roche
+    dirigée par Bernard Comment
+
+
+Citation en exergue extraite
+    de La Voie royale d’André Malraux
+    © Grasset, 1996
+
+isbn 978-2-02-099207-7
+  © Éditions du Seuil, septembre 2011
+
+
+
+
+
+
+
+
+
+
+     Des cérébraux, reprit Perken. Et elles ont raison. Il n’y a qu’une seule « perversion sexuelle » comme disent les imbéciles : c’est le développement de l’imagination, l’inaptitude à l’assouvissement. Là-bas, à Bangkok, j’ai connu un homme qui se faisait attacher, nu, par une femme, dans une chambre obscure, pendant une heure.
+  
+Malraux
+
+
+
+
+
+
+chez l’aviateur
+À l’écart du village, j’ai posé mes sacs dans le bungalow sur pilotis du Viking. Des singes à moitié domestiqués mangent sur l’herbe les fruits qu’il vient de leur lancer. Sur une table un exemplaire du Bangkok Post de la veille. Assis à son bureau, le Viking tousse devant un ordinateur. Il est vêtu d’un paréo à fleurs, le torse colossal nu et ridé, les muscles avachis brûlés de soleil, les cheveux longs et blanchis, quelque chose d’un hippie très vieux. Il a finalement accepté de dresser pour moi des listes de lieux, de noms, de téléphones. Une longue pipe en ivoire sur son reposoir. Il a le corps qu’aurait eu l’aventurier Perken si Malraux l’avait laissé vivre encore. L’avait laissé devenir roi des Sedangs, comme Mayrena.
+Depuis la terrasse, on voit les colonnes noires de la pluie à l’horizon sur les montagnes birmanes. La passe des Trois-Pagodes, tout au bout de ces lignes de chemin de fer construites par les Japonais pour attaquer l’Inde des Anglais. Vieilles images d’un cadavre par traverse, dit l’aviateur. La jungle émeraude engloutit dans sa masse spongieuse des locomotives noires, des rafiots échoués, des baraquements fantômes dont les cloisons béantes claquent aux vents des typhons. Les coolies morts des fièvres dans les marais du railway Siam-Cambodge. Dans le Kampuchéa démocratique des Khmers rouges, la déportation du Peuple nouveau. Les esclaves épuisés tombés le long de la ligne de Pursat. Et sur les grands murs d’Angkor où sont gravés les batailles, les éléphants pavoisés et les vaincus en convois, manquent les avions, les cuirassés, les rails, les locomotives noires.
+À la sortie de la gare, j’étais descendu au bord de l’eau. Sur la rivière voletaient des papillons jaunes. S’abreuvaient des buffles. S’enflammaient des bougainvillées rouges. Vibraient des libellules. Si

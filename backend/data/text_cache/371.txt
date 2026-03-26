@@ -1,17 +1,62 @@
-A Practical Guide to Network Design,
-Control, and Management
-Eiji Oki
-Linear
-Programming
-and Algorithms for
-Communication
-Networks
-Linear
-Programming
-and Algorithms for
-Communication
-Networks
-A Practical Guide to Network Design,
-Control, and Management
-This page intentionally left blank
-This page intentionally left blank
+
+
+
+
+Table of contentsChapter 1: Introduction to Go LanguageChapter 2: Variables and Data TypesChapter 3: Operators and ExpressionsChapter 4: Control Flow StatementsChapter 5: Functions in GoChapter 6: Working with Arrays and SlicesChapter 7: Maps and StructsChapter 8: Object-Oriented Programming in GoChapter 9: File HandlingChapter 10: Concurrency in GoChapter 11: Networking and HTTPChapter 12: Error Handling and DebuggingIntroductionChapter 13: Testing in GoChapter 14: Modules and PackagesUnderstanding Go ModulesCreating and Importing PackagesDependency ManagementConclusionChapter 15: Advanced Topics in Go5 ProjectsProject 1 - CRUD API with Go and MySQLProject 2: Go Web Scraper - Scrape and Analyze Data from WebsitesProject 3: Real-Time Chat Application with WebSockets in GoProject 4: File Management SystemProject 5: Go-based Microservices with gRPC
+GuideCoverBeginningTable of Contents
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table of contents
+Chapter 1: Introduction to Go Language
+Chapter 2: Variables and Data Types
+Chapter 3: Operators and Expressions
+Chapter 4: Control Flow Statements
+Chapter 5: Functions in Go
+Chapter 6: Working with Arrays and Slices
+Chapter 7: Maps and Structs
+Chapter 8: Object-Oriented Programming in Go
+Chapter 9: File Handling
+Chapter 10: Concurrency in Go
+Chapter 11: Networking and HTTP
+Chapter 12: Error Handling and Debugging
+Introduction
+Chapter 13: Testing in Go
+Chapter 14: Modules and Packages
+Understanding Go Modules
+Creating and Importing Packages
+Dependency Management
+Conclusion
+Chapter 15: Advanced Topics in Go
+5 Projects
+Project 1 - CRUD API with Go and MySQL
+Project 2: Go Web Scraper - Scrape and Analyze Data from Websites
+Project 3: Real-Time Chat Application with WebSockets in Go
+Project 4: File Management System
+Project 5: Go-based Microservices with gRPC
+
+
+
+
+
+
+Chapter 1: Introduction to Go Language
+1. History and Overview of Go
+Go, often referred to as Golang, is an open-source programming language designed for simplicity, efficiency, and scalability. It was developed by Robert Griesemer, Rob Pike, and Ken Thompson at Google in 2007 and publicly released in 2009. The creators designed Go to address common issues in software development, such as long compilation times, complex dependency management, and runtime inefficiencies.
+Key characteristics of Go include:
+●      Statically Typed and Compiled: Go is statically typed, meaning type checking occurs at compile time. This ensures robustness and fewer runtime errors.
+●      Simplicity and Readability: The language emphasizes clean syntax and simple constructs, making it easier to learn and 

@@ -1,43 +1,34 @@
-ថាមពលអគ្គិសនី
-មុខវិជា្ជរូបវិទយថា្នក់ទី៩
-អ្នក្រគȪ ឡុចសុជាតា
-កញ្ចប់សិកǜ ឌី˪្លូមនិេទ្ទសល្អ២០២៥
-ឡុចសុជាតា
-រូបវិទយថា្នក់ទី៩ជំពូកទី៣េមេរៀនទី១
-១៩កុម្ភៈ២០២៥
-1 / 49
-េគាលបំណង
-បនា្ទប់ពីសិកǜេមេរៀនេនះចប់˪្អូនៗអាច៖
-ឲ្យនិយមន័យចរន្តអគ្គិសនី
-ឲ្យនិយមន័យតង់ស្យុងឬផលសងប៉ូតង់ែស្យលអគ្គិសនី
-សា្គល់ពីទំនាក់ទំនងរវាងបន្ទុកតង់ស្យុងនិងថាមពលអគ្គិសនី
-ឲ្យនិយមន័យៃនរសុីស្ដង់
-េចះេ្របីរូបមន្ត𝑅= 𝜌𝑙
-𝐴ស្រមាប់គណនាេរសុីស្ដង់ៃនែខ្សចម្លង
-ឲ្យនិយមន័យចបប់អូម
-បក្រសាយអានុភាពៃនេ្រគឿងទទួលអគ្គិសនី
-គណនាបរិមាណកេម្ដែដលភាយេចញពីែខ្សចម្លងអគ្គិសនីតាមរូបមន្ត𝐸= 𝑅𝐼2𝑡
-បងា្ហញពីទំនាក់ទំនងថាមពលអគ្គិសនីនិងថាមពលកេម្ដតាមរូបមន្ត𝑅𝐼2𝑡= 𝑚𝑐Δ𝑡
-គណនាតៃម្លេ្របី្របាស់ថាមពលអគ្គិសនី
-ឡុចសុជាតា
-រូបវិទយថា្នក់ទី៩ជំពូកទី៣េមេរៀនទី១
-១៩កុម្ភៈ២០២៥
-2 / 49
-មាតិកា
-1
-ថាមពលអគ្គិសនី
-ចរន្តអគ្គិសនី
-តង់ស្យុងនិងថាមពលអគ្គិសនី
-េរសុីស្ដង់អគ្គិសនី
-ចបប់អូម
-ថាមពលអគ្គិសនីនិងការគណនាតៃម្លថាមពលអគ្គិសនី
-អានុភាពៃនេ្រគឿងទទួលអគ្គិសនី
-ទំនាក់ទំនងរវាងថាមពលអគ្គិសនីនិងថាមពលកេម្ដ
-2
-សំណួរនិងលំហាត់
-3
-កិច្ចការផ្ទះ
-ឡុចសុជាតា
-រូបវិទយថា្នក់ទី៩ជំពូកទី៣េមេរៀនទី១
-១៩កុម្ភៈ២០២៥
-3 / 49
+Communications-
+Based Train Control 
+(CBTC)
+Lars Schnieder
+Komponenten, Funktionen 
+und Betrieb
+4. Auflage
+Communications-Based Train Control (CBTC)
+SN Flashcards Microlearning
+Schnelles und effi  zientes Lernen mit digitalen Karteikarten – 
+für Arbeit oder Schule!
+Diese Möglichkeiten bieten Ihnen die SN Flashcards:
+•
+Jederzeit und überall auf Ihrem Smartphone, Tablet oder Computerlernen
+•
+Den Inhalt des Buches lernen und Ihr Wissen testen
+•
+Sich durch verschiedene, mit multimedialen Komponenten angereicherte
+Fragetypen motivieren lassen und zwischen drei Lernalgorithmen
+(Langzeit gedächtnis-, Kurzzeitgedächtnis- oder Prüfungs-Modus) wählen
+•
+Ihre eigenen Fragen-Sets erstellen, um Ihre Lernerfahrung zu personalisieren
+So greifen Sie auf Ihre SN Flashcards zu:
+1. Gehen Sie auf die 1. Seite des 1. Kapitels dieses Buches und folgen Sie den 
+Anweisungen in der Box, um sich für einen SN Flashcards-Account anzumelden 
+und auf die Flashcards-Inhalte für dieses Buch zuzugreifen.
+2. Laden Sie die SN Flashcards Mobile App aus dem Apple App Store oder
+Google Play Store herunter, öffnen Sie die App und folgen Sie den Anweisungen 
+in der App.
+3. Wählen Sie in der mobilen App oder der Web-App die Lernkarten für dieses Buch 
+aus und beginnen Sie zu lernen!
+Sollten Sie Schwierigkeiten haben, auf die SN Flashcards zuzugreifen, schreiben 
+Sie bitte eine E-Mail an customerservice@springernature.com und geben Sie in der 
+Betreff zeile SN Flashcards und den Buchtitel an.

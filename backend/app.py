@@ -644,6 +644,24 @@ def reprocess_book(book_id: int):
     return {"queued": book_id}
 
 
+class ReprocessBatchRequest(BaseModel):
+    ids: List[int]
+
+
+@app.post("/api/reprocess-batch")
+def reprocess_batch(req: ReprocessBatchRequest):
+    if not req.ids:
+        raise HTTPException(status_code=400, detail="No IDs provided")
+    placeholders = ",".join("?" * len(req.ids))
+    with get_db() as conn:
+        conn.execute(
+            f"UPDATE books SET status='pending' WHERE id IN ({placeholders})",
+            req.ids,
+        )
+        conn.commit()
+    return {"queued": len(req.ids)}
+
+
 @app.post("/api/books/{book_id}/extract-test")
 def extract_test(book_id: int):
     with get_db() as conn:

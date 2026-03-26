@@ -1,59 +1,23 @@
-Physics
-The Higgs Boson 
-and Beyond 
-Subtopic
-Professor Sean Carroll
-California Institute of Technology
-Science  
-& Mathematics
-Topic
-Course Guidebook
-PUBLISHED BY:
-THE GREAT COURSES
-Corporate Headquarters
-4840 Westfields Boulevard, Suite 500
-Chantilly, Virginia 20151-2299
-Phone: 1-800-832-2412
-Fax: 703-378-3819
-www.thegreatcourses.com
-Copyright © The Teaching Company, 2015
-Printed in the United States of America
-This book is in copyright. All rights reserved. 
-Without limiting the rights under copyright reserved above,
-no part of this publication may be reproduced, stored in 
-or introduced into a retrieval system, or transmitted, 
-in any form, or by any means 
-(electronic, mechanical, photocopying, recording, or otherwise), 
-without the prior written permission of
-The Teaching Company.
-i
-Sean Carroll, Ph.D.
-Research Professor of Physics 
-California Institute of Technology
-P
-rofessor Sean Carroll is a Research 
-Professor of Physics at the California 
-Institute of Technology. He did his 
-undergraduate work at Villanova University and 
-received his Ph.D. in Astrophysics from Harvard 
-in 1993. His research involves theoretical physics 
-DQG DVWURSK\VLFV ZLWK D IRFXV RQ LVVXHV LQ FRVPRORJ\ ¿HOG WKHRU\ 
-and gravitation.
-Prior to arriving at Caltech, Professor Carroll taught and did research at the 
-Massachusetts Institute of Technology; the Kavli Institute for Theoretical 
-Physics at the University of California, Santa Barbara; and the University 
-of Chicago. His major contributions have included models of interactions 
-among dark matter, dark energy, and ordinary matter; alternative theories 
-of gravity; and violations of fundamental symmetries. His current research 
-LQYROYHVWKHIRXQGDWLRQVRITXDQWXPPHFKDQLFVWKHSK\VLFVRILQÀDWLRQDU\
-cosmology, and the origin of time asymmetry.
-While at MIT, Professor Carroll won the Graduate Student Council Teaching 
-Award for his course on general relativity, the lecture notes of which were 
-expanded into the textbook Spacetime and Geometry: An Introduction to 
-General Relativity, published in 2003. In 2006, he received the College of 
-Liberal Arts and Sciences Alumni Medallion from Villanova University, and 
-in 2010, he was elected a Fellow of the American Physical Society.
-Professor Carroll is the author of From Eternity to Here: The Quest for the 
-Ultimate Theory of Time, a popular book on cosmology and time. His latest 
-book is The Particle at the End of the Universe, about the Higgs boson and 
-the Large Hadron Collider. 
+Modern  
+Communications
+A Systematic 
+Introduction
+Daniel W. Bliss
+Modern Communications
+Designed for a single-semester course, this concise and approachable text covers
+all of the essential concepts needed to understand modern communications systems.
+Balancing theory with practical implementation, it presents key ideas as a chain of
+functions for a transmitter and receiver, covering topics such as ampliﬁcation, up-
+and down-conversion, modulation, dispersive channel compensation, error correct-
+ing codes, acquisition, multiple-antenna and multiple-input multiple-output antenna
+techniques, and higher-level communications functions. Analog modulations are also
+presented, and all of the basic and advanced mathematics, statistics, and Fourier the-
+ory needed to understand the concepts covered are included. Supported online with
+PowerPoint slides, a solutions manual, and additional MATLAB®-based simulation
+problems, it is ideal for a ﬁrst course in communications for senior undergraduate
+and graduate students.
+Daniel W. Bliss is a professor in the School of Electrical, Computer, and Energy Engi-
+neering at Arizona State University (ASU), and is the Director of ASU’s Center for
+Wireless Information Systems and Computational Architectures. He is a co-author
+of Adaptive Wireless Communications: MIMO Channels and Networks (Cambridge
+University Press, 2013).

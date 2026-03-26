@@ -1,1 +1,66 @@
-Collection sous la direction de SOLANGE CORMIER et ANDRÉ-A. LAFRANCE Vous désirez avoir de l’information à la fine pointe de votre champ d’action, mais vous ne disposez que de peu de temps ? Les auteurs de la collection PratiCom ont tenu compte des exigences de votre situation dans la rédaction de leurs ouvrages. Des spécialistes en communication répondent aux questions immédiates des décideurs dans leurs actions quotidiennes et leur planification stratégique. Présentés de façon concise, ces ouvrages peuvent être lus et relus comme une réflexion à moyen terme ou consultés comme une solution urgente à court terme.Rédaction efficace, courriels et médias sociaux Suivi de Rédiger avec concisionPresses de l’Université du Québec Édifice Fleurie, 480, rue de la Chapelle, bureau F015, Québec (Québec) G1K 0B6 Téléphone : 418 657-4399 – Télécopieur : 418 657-2096 Courriel : puq@puq.ca – Internet : www.puq.ca Diffusion / Distribution : CANADA Prologue inc., 1650, boulevard Lionel-Bertrand Boisbriand (Québec) J7H 1N7 – Tél. : 450 434-0306 / 1 800 363-2864 FRANCE ET BELGIQUE Sofédis, 11, rue Soufflot 75005 Paris, France – Tél. : 01 53 10 25 25 Sodis, 128, avenue du Maréchal de Lattre de Tassigny 77403 Lagny, France – Tél. : 01 60 07 82 99 SUISSE Servidis SA, chemin des Chalets 7 1279 Chavannes-de-Bogis, Suisse – Tél. : 022 960.95.25 La Loi sur le droit d’auteur interdit la reproduction des œuvres sans autorisation des titulaires de droits. Or, la photocopie non autorisée — le « photocopillage »— s’est généralisée, provoquant une baisse des ventes de livres et compromettant la rédaction et la production de nouveaux ouvrages par des professionnels. L’objet du logo apparaissant ci-contre est d’alerter le lecteur sur la menace que représente pour l’avenir de l’écrit le développement massif du « photocopillage ».Nathalène armand Rédaction efficace, courriels et médias sociaux Suivi de Rédiger avec concision 2 e édition Préface de Claire BourgetCatalogage avant publication de Bibliothèque et Archives nationales du Québec et Bibliothèque et Archives Canada Titre : Rédaction efficace, courriels et médias sociaux ; suivi de, Rédiger avec concision / Nathalène Armand. Autres titres : Rédaction de courriels efficaces (Compilation) Noms : Armand, Nathalène, 1970- auteur. | Armand, Nathalène, 1970- Rédaction de courriels efficaces. | Armand, Nathalène, 1970- Rédiger avec concision. Collections : PRATICOM. Description : 2e édition. | Mention de collection : Praticom | Publié antérieurement sous le titre : Rédaction de courriels efficaces ; suivi de, Rédiger avec concision. | Comprend des références bibliographiques. Identifiants : Canadiana (livre imprimé) 20250028794 | Canadiana (livre numérique) 20250028808 | ISBN 9782760562295 (couverture souple) | ISBN 9782760562301 (PDF) | ISBN 9782760562318 (EPUB) Vedettes-matière : RVM : Courrier électronique. | RVM : Correspondance commerciale. | RVM : Style commercial. Classification : LCC HE7551.A75 2025 | CDD 384.3/4—dc23 Révisi
+ 
+System Energy Optimisation Strategies for 
+DC Railway Traction Power Networks  
+by 
+Zhongbei Tian 
+A thesis submitted to  
+the University of Birmingham  
+for the degree of 
+DOCTOR OF PHILOSOPHY 
+ 
+ 
+Department of Electronic, Electrical and Systems Engineering 
+College of Engineering and Physical Sciences 
+University of Birmingham, UK 
+June 2017 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+University of Birmingham Research Archive 
+ 
+e-theses repository 
+ 
+ 
+This unpublished thesis/dissertation is copyright of the author and/or third 
+parties. The intellectual property rights of the author or third parties in respect 
+of this work are as defined by The Copyright Designs and Patents Act 1988 or 
+as modified by any successor legislation.   
+ 
+Any use made of information contained in this thesis/dissertation must be in 
+accordance with that legislation and must be properly acknowledged.  Further 
+distribution or reproduction in any format is prohibited without the permission 
+of the copyright holder.  
+ 
+ 
+ 
+Abstract 
+i 
+ 
+ 
+Abstract 
+As a result of rapid global urbanisation, energy and environmental sustainability are 
+becoming increasingly significant. According to the Rail Transport and Environment 
+Report published by International Union of Railways in 2015, energy used in the 
+transportation sector accounts for approximately 32% of final energy consumption in the 
+EU. Railway, representing over 8.5% of the total traffic in volume, shares less than 2% of 
+the transport energy consumption. Railway plays an important role in reducing energy 
+usage and CO2 emissions, compared with other transport modes such as road transport. 
+However, despite the inherent efficiency, the energy used by the rail industry is still high, 
+making the study of railway energy efficiency of global importance. Previous studies have 
+investigated train driving strategies for traction energy saving. However, few of them 
+consider the overall system energy optimisation, which depends on various factors 
+including driving styles and timetables. This thesis aims to find a system energy 
+optimisation solution for urban railways. 
+This thesis begins with a review of the main arrangement of the railway systems and 
+literature on energy optimisation studies in railways. The development of the energy 
+evaluation simulation software for DC-fed railway systems is demonstrated. The train 
+movement model and railway power network model are integrated into the simulator. This 
+energy simulator is able to calculate the energy flow of the whole system according to 
+multiple-train driving controls and timetables.  

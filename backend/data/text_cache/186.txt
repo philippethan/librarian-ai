@@ -1,18 +1,7 @@
-books
-Develop and Operate Your
-LoRaWAN IoT Nodes
-Claus Kühnel
-Ready-to-use devices and self-built
-Arduino nodes in the "The Things Network"
-End-Device
-Gateway
-Connection LoRa
-Connection IP
-Application
-Server
-twork
-Develop and Operate Your
-LoRaWAN IoT Nodes
-Ready-to-use devices and self-built Arduino nodes in the "The Things Network"
-●
-Dr. Claus Kühnel
+ECONOMIC DEVELOPMENT 
+Edited by 
+DETH SOK UDOM
+BRADLEY J. MURG
+OU VIRAK 
+MICHAEL RENFREW
+CAMBODIA 2040

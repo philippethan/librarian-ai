@@ -1,66 +1,68 @@
-BSI Standards Publication
-Universal serial bus interfaces for data and power
-Part 1-3: Common components – USB Type-CTM Cable and 
-Connector Specification (IEC 62680-1-3:2018)
-BS EN IEC 62680-1-3:2018
-National foreword
-This British Standard is the UK implementation of 
-EN IEC 62680‑1‑3:2018. It is identical to IEC 62680‑1‑3:2018. It 
-supersedes BS EN 62680‑1‑3:2017, which will be withdrawn on 
-28 June 2021.
-The UK participation in its preparation was entrusted to Technical 
-Committee EPL/100, Audio, video and multimedia systems 
-and equipment.
-A list of organizations represented on this committee can be obtained on 
-request to its secretary.
-This publication does not purport to include all the necessary provisions 
-of a contract. Users are responsible for its correct application.
-© The British Standards Institution 2018 
-Published by BSI Standards Limited 2018
-ISBN 978 0 580 51801 0
-ICS 33.120.20; 33.120.30; 35.200
-Compliance with a British Standard cannot confer immunity from 
-legal obligations.
-This British Standard was published under the authority of the 
-Standards Policy and Strategy Committee on 31 August 2018.
-Amendments/corrigenda issued since publication
-Date
-Text affected
-BRITISH STANDARD
-BS EN IEC 62680‑1‑3:2018
- 
- 
-EUROPEAN STANDARD 
-NORME EUROPÉENNE 
-EUROPÄISCHE NORM 
-EN IEC 62680-1-3 
- 
-August 201 8 
-ICS 33.1 20.20; 33.1 20.30; 35.200 
- Supersedes  EN 62680-1 -3:201 7
-English Version 
- 
-Universal serial bus interfaces for data and power -  
-Part 1 -3: Common components - USB Type-CTM Cable and 
-Connector Specification 
-(IEC 62680-1 -3:201 8) 
- 
-Interfaces de bus universel en série pour les données et 
-l'alimentation électrique - Partie 1 -3: Composants communs 
-- Spécification des câbles et connecteurs USB de type CTM 
-(IEC 62680-1 -3:201 8) 
- 
-Schnittstellen des Universellen Seriellen Busses für Daten 
-und Energie - Teil 1 -3: Gemeinsame Bauteile - Festlegung 
-für USB-Typ-CTM-Kabel und -Steckverbinder 
-(IEC 62680-1 -3:201 8) 
-This European Standard was approved by CENELEC on 201 8-06-28. CENELEC members are bound to comply with the CEN/CENELEC 
-Internal Regulations which stipulate the conditions for giving this European Standard the status of a national standard without any alteration. 
-Up-to-date lists and bibliographical references concerning such national standards may be obtained on application to the CEN-CENELEC 
-Management Centre or to any CENELEC member.  
-This European Standard exists in three official versions (English, French, German). A version in any other language made by translation 
-under the responsibility of a CENELEC member into its own language and notified to the CEN-CENELEC Management Centre has the 
-same status as the official versions. 
-CENELEC members are the national electrotechnical committees of Austria, Belgium, Bulgaria, Croatia, Cyprus, the Czech Republic, 
-Denmark, Estonia, Finland, Former Yugoslav Republic of Macedonia, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, 
-Lithuania, Lu
+Mystère sur 
+le Vieux-Port
+Pascale Paoli
+achette
+ANCAIS LANGUE ETRANGERE
+c
+CD audio
+Durée : 1 h 21
+Format MP3 : les MP3 s’écoutent sur ordinateurs, baladeurs, 
+autoradios, lecteurs CD et DVD fabriqués depuis 2004.
+Réalisation sonore : Malek Duchesne / LBP Studio
+Comédien voix : Stéphane Ronchewski
+Piste 1
+Prologue
+Piste 2
+Chapitre 1
+Piste 3
+Chapitre 2
+Piste 4
+Chapitre 3
+Piste 5
+Chapitre 4
+Piste 6
+Chapitre 5
+Piste 7
+Chapitre 6
+Piste 8
+Epilogue
+■ * /  ^
+Couverture : Nicolas Piroux 
+Maquette intérieure : Amarante 
+Illustrations : Nikita 
+Mise en pages : Médiamax 
+Secrétariat d’édition : Anne Andrault
+Rédaction du dossier pédagogique : Pascale Trévisiol Pascale Paoli
+ISBN : 978-2-01-155738-4
+© HACHETTE LIVRE 2010, 43, quai de Grenelle, 75905 Paris CEDEX 15.
+Tous les droits de traduction, de reproduction et d’adaptation réservés pour tout pays. La loi du 
+11 mars 1957 n’autorisant, aux termes des alinéas 2 et 3 de l’article 41, d’une part, que « les copies ou 
+reproductions strictement réservées à l’usage privé du copiste et non destinées à une utilisation collective » 
+et, d’autre part, que « les analyses et les courtes citations » dans un but d’exemple et d’illustration, 
+« toute représentation ou reproduction intégrale ou partielle, faite sans le consentement de l’auteur 
+ou de ses ayants droit ou ayants cause, est illicite » (Alinéa 1 de l’article 40). Cette représentation ou 
+reproduction, par quelque procédé que ce soit, sans autorisation de l’éditeur ou du Centre français de 
+l’exploitation du droit de copie (20, rue des Grands-Augustins, 75006 Paris), constituerait donc une 
+contrefaçon sanctionnée par les articles 425 et suivants du Code pénal.
+S o m m a ir e
+L’ŒUVRE
+Prologue ...
+Chapitre 1 
+Chapitre 2 ... 
+Chapitre 3 ... 
+Chapitre 4... 
+Chapitre 5 ... 
+Chapitre 6 ... 
+Épilogue....
+ACTIVITÉS
+Prologue ...
+Chapitre 1 ... 
+Chapitre 2 ... 
+Chapitre 3 ... 
+Chapitre 4... 
+Chapitre 5 ... 
+Chapitre 6 
+Épilogue....
+Fiche
+La Provence
+Corrigés des activités

@@ -1,44 +1,45 @@
-Information technology — Data centre 
-facilities and infrastructures
-Part 1: General concepts
-PD ISO/IEC TS 22237‑1:2018
-BSI Standards Publication
-National foreword
-This Published Document is the UK implementation of 
-ISO/IEC TS 22237‑1:2018.
-The UK participation in its preparation was entrusted to Technical 
-Committee IST/46, Sustainability for, and by IT.
-A list of organizations represented on this committee can be obtained on 
-request to its secretary.
-This publication does not purport to include all the necessary provisions 
-of a contract. Users are responsible for its correct application.
-© The British Standards Institution 2018
-Published by BSI Standards Limited 2018
-ISBN 978 0 580 99297 1
-ICS 35.020
- Compliance with a British Standard cannot confer immunity from 
-legal obligations. 
-This Published Document was published under the authority of the 
-Standards Policy and Strategy Committee on 31 May 2018.
-Amendments/corrigenda issued since publication
-Date
-Text affected
-PUBLISHED DOCUMENT
-PD ISO/IEC TS 22237‑1:2018
-Information technology — Data centre 
-facilities and infrastructures —
-Part 1:
-General concepts
-Technologie de l’information — Installation et infrastructures de 
-centres de traitement de données —
-Partie 1: Concepts généraux
-ISO/IEC TS
-22237-1
-First edition
-2018-05-01
-Reference number
-ISO/IEC TS 22237-1:2018(E)
-TECHNICAL 
-SPECIFICATION
-© ISO/IEC 2018
-PD ISO/IEC TS 22237‑1:2018
+English for IT Communication
+English for IT Communication  provides a comprehensive introduction for students and 
+professionals studying IT or computer science and covers all forms of technical communication 
+from emails and memos through procedures to reports and design specs. In each case, the book 
+offers multiple real-world examples, looking at who the texts are written for, what their purpose 
+is, and how these affect what is on the page.
+Key features of this book include
+•	 How to write for different audiences and purposes
+•	 How to design documents for ease of access and understanding
+•	 How to communicate in multimodal media
+•	 How to reference in IEEE
+•	 Multiple different examples and breakdowns of common text types to show how they are 
+written and to produce an understanding of quality in each
+•	 Online support material including authentic examples of different workplace genres and 
+a reference section covering relevant research studies and weblinks for readers to better 
+understand the topics covered in each chapter
+•	 Internationalized coverage of IT communication exemplars
+This book is an accessible guide to writing effective forms of IT communications of the kind 
+needed for all IT degree programmes which aim to prepare students for the modern workplace. 
+Practical and clearly written, it is designed to introduce readers to features of the most common 
+genres in IT and computer science.
+Tony Myers has worked for over 15 years in the tertiary sector helping learners develop skills 
+in academic and technical writing. He is currently an assistant professor teaching at Zayed 
+University, specializing in ESAP. He has previously written books on academic writing, 
+psychoanalysis, and literature for Routledge and for Bloomsbury Academic and has published 
+articles on genre pedagogy, feedback literacy, and remote learning.
+Jaime Buchanan is a senior lecturer at Zayed University who has taught academic and technical 
+writing in higher education since 2010. She has published articles on subjects as diverse as 
+pedagogy, feedback literacy, and remote learning. She is passionate about developing an awareness 
+of effective writing strategies in her students to promote best practice communication in IT.
+Routledge Applied English Language Introductions
+Series Editor: Prithvi Shrestha
+The Open University, UK
+Routledge Applied English Language Introductions is a series of practical and accessible 
+textbooks which introduce spoken and written English for a specific discipline, covering 
+elements such as academic writing, email communication, presentations, writing up reports, 
+and job applications.
+The books are designed for students and professionals who aim to refine their English skills 
+for their chosen field and professional career.
+English for Business Communication
+Mable Chan
+English for IT Communication
+Tony Myers and Jaime Buchanan
+More information about this series can be found at www.routledge.com/Routledge-Applied-English-
+Language-Int

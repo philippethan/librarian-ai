@@ -1,99 +1,315 @@
-IET ENERGY ENGINEERING SERIES 241
-Power Electronic
-Converters and Systems,
-2nd Edition
-Other volumes in this series:
-Volume 1
-Power Circuit Breaker Theory and Design C.H. Flurscheim (Editor)
-Volume 4
-Industrial Microwave Heating A.C. Metaxas and R.J. Meredith
-Volume 7
-Insulators for High Voltages J.S.T. Looms
-Volume 8
-Variable Frequency AC Motor Drive Systems D. Finney
-Volume 10
-SF6 Switchgear
-H.M. Ryan and G.R. Jones
-Volume 11
-Conduction and Induction Heating E.J. Davies
-Volume 13
-Statistical Techniques for High Voltage Engineering W. Hauschild and
-W. Mosch
-Volume 14
-Uninterruptible Power Supplies J. Platts and J.D. St Aubyn (Editors)
-Volume 15
-Digital Protection for Power Systems A.T. Johns and S.K. Salman
-Volume 16
-Electricity Economics and Planning T.W. Berrie
-Volume 18
-Vacuum Switchgear A. Greenwood
-Volume 19
-Electrical Safety: A guide to causes and prevention of hazards J. Maxwell
-Adams
-Volume 21
-Electricity Distribution Network Design, 2nd Edition E. Lakervi and
-E.J. Holmes
-Volume 22
-Artificial Intelligence Techniques in Power Systems K. Warwick, A.O. Ekwue
-and R. Aggarwal (Editors)
-Volume 24
-Power System Commissioning and Maintenance Practice K. Harker
-Volume 25
-Engineers’ Handbook of Industrial Microwave Heating R.J. Meredith
-Volume 26
-Small Electric Motors H. Moczala et al.
-Volume 27
-AC–DC Power System Analysis J. Arrillaga and B.C. Smith
-Volume 29
-High Voltage Direct Current Transmission, 2nd Edition J. Arrillaga
-Volume 30
-Flexible AC Transmission Systems (FACTS) Y.-H. Song (Editor)
-Volume 31
-Embedded Generation N. Jenkins et al.
-Volume 32
-High Voltage Engineering and Testing, 2nd Edition H.M. Ryan (Editor)
-Volume 33
-Overvoltage Protection of Low-Voltage Systems, Revised Edition P. Hasse
-Volume 36
-Voltage Quality in Electrical Power Systems J. Schlabbach et al.
-Volume 37
-Electrical Steels for Rotating Machines P. Beckley
-Volume 38
-The Electric Car: Development and future of battery, hybrid and fuel-cell
-cars M. Westbrook
-Volume 39
-Power Systems Electromagnetic Transients Simulation J. Arrillaga and
-N. Watson
-Volume 40
-Advances in High Voltage Engineering M. Haddad and D. Warne
-Volume 41
-Electrical Operation of Electrostatic Precipitators K. Parker
-Volume 43
-Thermal Power Plant Simulation and Control D. Flynn
-Volume 44
-Economic Evaluation of Projects in the Electricity Supply Industry
-H. Khatib
-Volume 45
-Propulsion Systems for Hybrid Vehicles J. Miller
-Volume 46
-Distribution Switchgear S. Stewart
-Volume 47
-Protection of Electricity Distribution Networks, 2nd Edition J. Gers and
-E. Holmes
-Volume 48
-Wood Pole Overhead Lines B. Wareing
-Volume 49
-Electric Fuses, 3rd Edition A. Wright and G. Newbery
-Volume 50
-Wind Power Integration: Connection and system operational aspects
-B. Fox et al.
-Volume 51
-Short Circuit Currents J. Schlabbach
-Volume 52
-Nuclear Power J. Wood
-Volume 53
-Condition Assessment of High Voltage Insulation in Power System
-Equipment R.E. James and Q. Su
-Volume 55
-Local Energy: Distributed generation of heat and power J. Wood
-V
+
+
+
+
+Sommaire
+Couverture
+Page de titre
+Copyright
+Table des matières
+Préface
+Avant-propos
+Premiers pas avec Kanban
+1 C'est quoi ce tableau ?
+2 Origines de Kanban
+3 Mais alors pourquoi Kanban ?
+Kanban : déploiement et amélioration continue
+4 Parcourir les éléments du Kanban
+5 Définir le cadre du système kanban
+6 Définir les éléments de travail
+7 Définir le flux de valeur, de travail
+8 Définir les règles du système kanban
+9 Visualiser le système kanban
+10 Mettre en œuvre le système kanban
+11 Définir les limites kanban
+12 Définir les cadences du système kanban
+13 Le développement en flux tiré
+14 Suivre au quotidien le système kanban
+La boîte à outils Kanban
+15 Les valeurs de Kanban
+16 Mesurer les impacts globaux des changements locaux
+17 Identifier les comportements émergents
+18 Mesurer la performance du système kanban
+19 Ajuster les règles du système kanban
+20 Étudier un système kanban variable
+21 Diminuer les délais par la résolution des blocages
+22 Boucles de feedback (ou boucles de rétroaction)
+23 Le kanban portfolio, une vue d'ensemble
+24 Approche orientée service
+Kanban, scénarios d'entreprises
+25 Étudier un système kanban globalement saturé
+26 Étudier un système kanban localement saturé
+27 Des limites trop hautes pour la capacité
+28 Un Kanban adapté aux valeurs profondes de l'organisation, La nature de votre organisation ?
+29 Le kanban Ops pour les activités de production
+30 La culture de votre organisation ?
+31 Scénarios liés à la culture d'entreprise
+32 Scénarios fictifs de cette orchestration liés à la maturité de l'entreprise
+Conclusion
+Références bibliographiques
+Pagination de l'édition papier
+1
+2
+5
+6
+7
+11
+12
+13
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+33
+34
+35
+36
+37
+38
+39
+40
+41
+43
+44
+45
+46
+47
+48
+49
+50
+51
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+121
+122
+123
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+169
+170
+171
+173
+174
+175
+176
+177
+178
+179
+181
+182
+183
+184
+186
+187
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+211
+212
+213
+214
+215
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250GuideCouvertureKanbanDébut du contenuSommaire
+
+
+
+
+
+
+
+
+Édition : Matthieu Daniel et Aleksandra CzarneckaDirection et conception graphiques de la couverture :Nicolas Wiel – Florie Bauduin
+
+
+© Dunod, 202511 rue Paul Bert, 92240 Malakoffwww.dunod.com
+
+
+ISBN : 978-2-10-088531-2
+
+
+Ce document numérique a été réalisé par PCA
+
+
+
+
+
+
+
+
+
+
+
+
+
+Préface
+
+
+Le magasin en ligne Hermes.com est né en 2002. En 2015, ce magasin charme encore ses clients, mais doit être modernisé et rénové puisqu’il n’a pas été conçu pour le mobile, et doit pouvoir soutenir une fo

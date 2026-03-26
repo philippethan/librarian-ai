@@ -1,46 +1,20 @@
-Principles of Computer 
-System Design 
-An Introduction 
-Part II 
-Chapters 7–11 
-Jerome H. Saltzer 
-M. Frans Kaashoek 
-Massachusetts Institute of Technology 
-Version 5.0  
-Saltzer & Kaashoek Ch. Part II, p. i 
-June 24, 2009 12:14 am 
-Copyright © 2009 by Jerome H. Saltzer and M. Frans Kaashoek. Some Rights Reserved. 
-This work is licensed under a 
-Creative Commons Attribution-Non­
-commercial-Share Alike 3.0 United States License. For more information on what this 
-license means, visit http://creativecommons.org/licenses/by-nc-sa/3.0/us/ 
-Designations used by companies to distinguish their products are often claimed as trade­
-marks or registered trademarks. In all instances in which the authors are aware of a claim, 
-the product names appear in initial capital or all capital letters. All trademarks that 
-appear or are otherwise referred to in this work belong to their respective owners. 
-Suggestions, Comments, Corrections, and Requests to waive license restrictions: 
-Please send correspondence by electronic mail to: 
-Saltzer@mit.edu 
-and 
-kaashoek@mit.edu 
-Saltzer & Kaashoek Ch. Part II, p. ii 
-June 24, 2009 12:14 am 
-CHAPTER
-Contents 
-PART I [In Printed Textbook] 
-List of Sidebars. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xix  
-Preface. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxvii  
-Where to Find Part II and other On-line Materials . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxxvii  
-Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xxxix  
-Computer System Design Principles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xliii  
-CHAPTER 1 Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1  
-Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2  
-1.1. Systems and Complexity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3  
-1.1.1 Common Problems of Systems in Many Fields. . . . . . . . . . . . . . . . . . 3  
-1.1.2 Systems, Components, Interfaces and Environments . . . . . . . . . . . . . 8  
-1.1.3 Complexity. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10  
-1.2. Sources of Complexity. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13  
-1.2.1 Cascading and Interacting Requirements . . . . . . . . . . . . . . . . . . . . . 13  
-1.2.2 Maintaining High Utilization. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17  
-1.3. Coping with Complexity I. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19  
-1.3.1 Modularit
+PRAISE FOR KILLED BY A TRAFFIC ENGINEER
+“A blistering critique of the disconnect between what transportation engineers do and what the
+research tells us about traffic safety. This eminently readable book is a wake-up call for all of us.”
+—Susan Handy, Professor, University of California, Davis; author of Shifting Gears: Toward a
+New Way of Thinking about Transportation
+“In Killed by a Traffic Engineer, Wes Marshall lays bare the dogmas that give traffic engineering
+an appearance of objective scientific authority. A century of lavish investment in the most costly and
+extensive road network in the world has given Americans the worst traffic safety record among high-
+income countries.
+As a trained and experienced expert, Wes is an insider who proves his loyalty to the profession by
+exposing its departure from its own avowed purposes. He reveals how engineering standards that are
+supposed to make streets safer or more efficient actually do neither. They invite speeding, make
+walking more dangerous, and often don’t even save drivers' time. Wes is a constructive critic who
+offers remedies for the afflictions he diagnoses.
+Killed by a Traffic Engineer is serious but readable, disturbing but witty. Wes exposes the
+exclusive traffic engineering establishment to the people who actually need transportation, equipping
+us as citizens to demand the reforms we need. In writing it, he has done us all a uniquely valuable
+service.”
+—Peter Norton, Associate Professor of History, Department of Engineering and Society,
+University of Virginia; author of Fighting Traffic and Autonorama

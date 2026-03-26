@@ -1,1 +1,161 @@
-www. dk5wor ds.com/u s FREE A UDIO website and app F F O O R R E E V V E E R R Y Y O O N N E E JUNIOR 5 WORDS A DA Y FRENCHContents Maria Max Week 1 Week 2 Week 3 Week 4 Week 5 Week 6 Week 7 Week 8 Week 9 Week 10 Week 11 Week 12 Week 13 Week 14 Week 15 Week 16 Week 17 Week 18 Week 19 Week 20 Week 21 Week 22 Week 23 Week 24 6 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 DK LONDON Proj ect Editors Sophie Adam, Elizabet h Blakemore Editor Ben Ffrancon Davies Proje ct Art Edit or Anna Scully Designer Annabel Schick Illustrators Amy Child, Gus S cott Managing Editor Christine Stroyan Managing Art Editor Anna Hall Produ ction Editor Kavita V arm a Produ ction Contro ller Samantha Cross Senior Jacke t Designer Suhita Dharamjit Jacket Design Development Manager Sophia MTT Publ isher Andrew Macintyre Art Director Karen S elf Publ ishing Director Jonathan Metcalf Tra nslation Andiamo! Language Services Ltd DK INDIA Pre-P rodu ction Manager Sunil Sharma DTP Designers Manish Chandra Upre ti, Umesh Singh Rawat First A merican Edition, 2021 Pub lished in the United States by DK Pu blishing 1450 Broadway , Su ite 801, New Y or k, NY 10018 Copyright © 2021 Dorling Kindersley Limited DK, a Div ision of P en guin Random House LLC 21 22 23 24 25 10 9 8 7 6 5 4 3 2 1 001–323272–Jul/2021 All rights reserved. Without limiting the rights under the copyright reserved above, no part of this pub lication may be re produced, stored in or intr oduced into a r etrieval system, or transmitted, in a ny form, or by any means (electronic, mechanical, photocopying, recordi ng, or otherwise), without the prior written permission of the copyright owner. Pub lished in Grea t Britain by Dorling Kindersley Limited A catalog r ecord for this book is available from the Libr ary of Co ngress. ISBN: 978-0-7440-3678-7 DK books are available at special discounts when purchased in bulk for sales pr omotions, pre miums, fund-raising, or e ducational use. Fo r details, contact: DK Pu blishing Special Markets, 1450 Broadway , Su ite 801, New Y or k, NY 10018 SpecialSales@dk.com Prin ted and bound in China www.dk.com This book was made with F or est Stewardship Co uncil ™ certified paper – one small step in DK's commitment to a sustainable future. For more informat ion go to www.dk .com/our-gr een-pledge Salut! Comment t’ ap pelles tu ? Je m’a ppelle Mar ia . How to use th is bookBen Andy Sof ia Sara Week 25 Week 26 Week 27 Week 28 Week 29 Week 30 Week 31 Week 32 Week 33 Week 34 Week 35 Week 36 Week 37 Week 38 Week 39 Week 40 Week 41 Week 42 Week 43 Week 44 Week 45 Week 46 Week 47 Week 48 104 108 112 116 120 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 217 218 224 231 232 240 Week 49 Week 50 Week 51 Week 52 Numbers Days and month s English wor d list French wo rd list Common subjec ts Answers Acknowledgmen ts Comment ça va ? Ça va bie n, mer ci. Quel â ge as-t u ? J’ ai 7 ans.6 Learn ing new vocabul ary On Days 1–4 , t
+Dernière mise à jour 
+Informatique 
+Denis DEFAUCHY 
+14/02/2022 
+Dérivation - Euler 
+TD – Résolution vectorielle – Brown 
+ 
+Page 1 sur 4 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+TD 
+Résolution vectorielle 
+Mouvement brownien 
+ 
+ 
+ 
+ 
+ 
+ 
+Informatique 
+Dernière mise à jour 
+Informatique 
+Denis DEFAUCHY 
+14/02/2022 
+Dérivation - Euler 
+TD – Résolution vectorielle – Brown 
+ 
+Page 2 sur 4 
+ 
+Exercice 1:   Résolution vectorielle 
+ 
+Ce sujet est inspiré de l’épreuve d’informatique Mines ponts 2021. 
+ 
+Introduction 
+ 
+De petites particules en suspension dans un liquide se déplacent spontanément sous l’effet de 
+l’agitation thermique du milieu environnant, donnant ainsi naissance à des trajectoires apparemment 
+chaotiques et peu régulières. Ce phénomène est à la base de la vie : l’agitation incessante des protéines 
+permet aux réactions biochimiques de se produire à l’intérieur de nos cellules. Il a été observé 
+expérimentalement en 1827 sur des grains de pollen en suspension dans l’eau par le botaniste Robert 
+Brown, d’où le nom de mouvement brownien. Son étude théorique par Albert Einstein en 1905 a 
+permis au physicien Jean Perrin d’estimer la valeur du nombre d’Avogadro dans une série 
+d’expériences menées entre 1907 et 1909. 
+ 
+Modèle d’étude 
+ 
+Dans cette partie, on s’intéresse à un modèle du mouvement brownien proposé par Paul Langevin en 
+1908. Dans ce modèle, la particule étudiée est supposée soumise à deux actions de la part du fluide : 
+- 
+Une force de frottement fluide : 𝑓𝑓⃗⃗⃗ = −𝛼𝑉(𝑡)
+⃗⃗⃗⃗⃗⃗⃗⃗  
+- 
+Une force aléatoire 𝑓𝐵
+⃗⃗⃗  changeant à chaque pas d’intégration simulant l’action désordonnée 
+des molécules d’eau sur la particule telle que : 𝑓𝐵
+⃗⃗⃗ = 𝑁𝑢⃗  avec : 
+o 𝑁= ‖𝑓𝐵
+⃗⃗⃗ ‖ suivant une loi gaussienne d’espérance 𝜇 et de variance 𝜎2 (écart type 𝜎) 
+telle que 𝑁= |𝒩([𝜇, 𝜎2])| 
+o 𝑢⃗ = [cos 𝜃
+sin𝜃]
+𝔅
+ , 𝜃 suivant une loi de probabilité uniforme 𝜃= 𝒰([𝑂, 2𝜋]) 
+ 
+On note 𝑋(𝑡) et 𝑉(𝑡) la position et la vitesse de la particule à l’instant 𝑡 : 
+𝑋(𝑡) = [𝑥
+𝑦]
+𝔅
+     ;      𝑉(𝑡) = [𝑥̇
+𝑦̇]
+𝔅
+ 
+On obtient alors l’équation différentielle issue de l’application du PFD : 
+𝑚𝑑𝑉(𝑡)
+⃗⃗⃗⃗⃗⃗⃗⃗ 
+𝑑𝑡
+= 𝑓𝑓⃗⃗⃗ + 𝑓𝐵
+⃗⃗⃗  
+ 
+ 
+Dernière mise à jour 
+Informatique 
+Denis DEFAUCHY 
+14/02/2022 
+Dérivation - Euler 
+TD – Résolution vectorielle – Brown 
+ 
+Page 3 sur 4 
+ 
+Données numériques 
+On définit le vecteur d’état : 𝐸= [
+𝑥
+𝑦
+𝑥̇
+𝑦̇
+]
+𝔅
+ et sa dérivée 𝐸̇ = [
+𝑥̇
+𝑦̇
+𝑥̈
+𝑦̈
+]
+𝔅
+ 
+On prendra : 
+- 
+𝛼= 10−5 𝑘𝑔. 𝑠−1 
+- 
+𝑚= 10−6 𝑘𝑔 
+- 
+𝜇= 0 
+- 
+𝜎= 10−8 𝑁 
+- 
+𝑑𝑡= 0,002 𝑠 
+- 
+𝐸(0) = 𝐸0 = [
+0
+0
+0
+0
+]
+𝔅
+ 
+- 
+𝑛= 5000 𝑝𝑎𝑠 𝑑𝑒 𝑡𝑒𝑚𝑝𝑠 
+ 
+Modules random de python 
+ 
+Le module random de Python fournit les fonctions : 
+- 
+uniform(bi,bs) qui renvoie un flottant aléatoire entre les valeurs bi et bs incluses en utilisant 
+une densité de probabilité uniforme 
+- 
+gauss(mu,sigma) qui renvoie un flottant aléatoire en utilisant une densité de probabilité 
+gaussienne d’espérance mu et d’écart-type sigma 
+ 
+Mise en place des fonctions 
+ 
+Question 1:  Proposer une fonction Somme(v1,v2) prenant en argume

@@ -1,8 +1,76 @@
-Les mots pour convaincre
-Stéphane Wattier
-Les mots pour convaincre
-© Stéphane Wattier, septembre 2019
-Couverture et composition de Stéphane Wattier
-pour Commun français
-Contacter l'auteur :
-contact@communfrancais.com
+(/) 
+Q) 
+Daniel GAUDE 
+, 
+ELECTROTECHNIQUE 
+Physique appliquée 
+à la conversion et à la distribution 
+de l'énergie électrique 
+1 Cours complet 
+illustré de 96 exercices résolus 
+EYROLLES 
+• 
+'
+Agrégé de physique et docteur en génie 
+électrique. Daniel Gaude enseigne ces 
+disciplines à l'IUT de Lyon-Villeurbanne. 
+D'abord professeur de physique dans le 
+Secondaire. il exerça ensuite à l'université 
+Claude Bernard/Lyon-1 comme enseignant 
+en licence d'ingénierie électrique. en prépa-
+ration du Capet et de l'agrégation de génie 
+électrique. Ses activités de recherche se sont 
+déroulées au laboratoire Ampère (Centrale 
+Lyon/Lyon-1 /Insa). Il a par ailleurs participé 
+à la réalisation d'un didacticiel multimédia 
+d'électricité (Clickelec) ainsi qu'à la rédac-
+tion du nouveau programme pédagogique 
+national des IUT. 
+Publics 
+BTS Électrotechnique 
+DUT Génie électrique et 
+informatique industrielle (GEII) 
+Licences professionnelles 
+Licences sciences & techniques 
+(EEA) 
+Concours d'entrée des écoles 
+d'ingénieurs 
+Formation continue (Cnam) 
+Daniel GAUDE 
+ÉLECTROTECHNIQUE 
+Physique appliquée 
+à la conversion et à la distribution 
+de l'énergie électrique 
+L'électrotechnique est une discipline où la recherche nous apporte pério-
+diquement de nouvelles applications. tandis que de nouveaux besoins ne 
+cessent de se faire jour. 
+L'intérêt que suscite cette discipline déjà classique s'en trouve donc 
+constamment stimulé, invitant tous ceux qui souhaitent suivre cette évolu-
+tion à découvrir ou à redécouvrir ce domaine porteur d'emplois et ouvrant 
+aux nombreuses carrières de techniciens, d'ingénieurs et de chercheurs. 
+Par sa polyvalence et sa souplesse, l'énergie électrique est au cœur des 
+échanges d'énergie. 
+Ce manuel permettra aux étudiants inscrits dans les différents premiers 
+cycles de renseignement supérieur et aux professionnels en formation 
+continue d'étudier -
+avec des méthodes actuelles -
+l'électrotechnique 
+telle qu'on la pratique aujourd'hui; les problèmes reposent donc sur des 
+données industrielles et techniques. 
+La part faite aux études de cas et aux exercices corrigés constitue un des 
+meilleurs atouts de cet ouvrage où r on verra que, chaque fois que cela 
+est possible, le problème précède le cours. Toutefois. pour que r on soit 
+encouragé à le résoudre, la solution est le plus souvent déjà dans l'énoncé. 
+Enfin, pour résoudre les problèmes à la calculatrice ou à l'ordinateur, la 
+simulation informatique et les méthodes de calcul informatisées sont ici 
+très largement utilisées. 
+Sommaire 
+1. L'échange d'énergie dans les systèmes physiques et technologiques 
+Énergie et systèmes • Régimes transitoires. Systèmes bouclés 
+2. L'énergie électromagnétique 
+Champs électromagnétiques et matériaux • Lois physiques de l'électromagné-
+tisme 
+3. La distribution de l'énergie électrique 
+Régimes alternatifs sinusoïdaux • Circuits magnétiques en régime dynamique. 
+Transformateurs • Technologie de la distribution 
+Unités du SI • Notations • Bibliographie

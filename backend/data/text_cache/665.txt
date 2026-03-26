@@ -1,38 +1,43 @@
-BSI Standards Publication
-Work breakdown structures for project 
-and programme management
-BS ISO 21511:2018
-National foreword
-This British Standard is the UK implementation of ISO 21511:2018. 
-The UK participation in its preparation was entrusted to Technical 
-Committee MS/2, Project, programme and portfolio management.
-A list of organizations represented on this committee can be obtained on 
-request to its secretary.
-This publication does not purport to include all the necessary provisions 
-of a contract. Users are responsible for its correct application.
-© The British Standards Institution 2018
-Published by BSI Standards Limited 2018
-ISBN 978 0 580 94148 1
-ICS 03.100.40
-Compliance with a British Standard cannot confer immunity from 
-legal obligations.
-This British Standard was published under the authority of the 
-Standards Policy and Strategy Committee on 31 May 2018.
-Amendments/corrigenda issued since publication
-Date
-Text affected
-BRITISH STANDARD
-BS ISO 21511:2018
-© ISO 2018
-Work breakdown structures for 
-project and programme management
-Organigramme des tâches en management de projet et de programme
-INTERNATIONAL 
-STANDARD
-ISO
-21511
-First edition
-2018-05-30
-Reference number
-ISO 21511:2018(E)
-BS ISO 21511:2018
+﻿
+DOUGLAS GIANCOLI
+PHYSICS
+for SCIENTISTS and ENGINEERS
+ 
+5th EDITION
+﻿
+Editorial Director: Jeanne Zalesky
+Content Development: Margy Kuntz, Andrea Giancoli
+Project Managers: Cynthia Rae Abbott, Elisa Mandelbaum, Francesca Monaco, Karen Misler, Rebecca Dunn
+Production Vendor: CodeMantra 
+Interior Composition: Preparé Italia, Battipaglia (SA), Italy 
+Copyeditor: Joanna Dinesmore 
+Proofreaders: Andrea Giancoli, Carol Reitz, and Clare Romeo 
+Art House: Lachina Creative 
+Design Managers: Mark Ong, Derek Bacchus, Emily Friel, SPi Global 
+Rights & Permissions Manager: Ben Ferrini 
+SPi Global Photo Researcher: Eric Schrader and Mary Teresa Giancoli 
+Manufacturing Buyer: Stacey Wienberger 
+Copyright © 2020, 2008, 2000, 1989, 1984 by Douglas C. Giancoli. Published by Pearson Education, Inc. All 
+Rights Reserved. Printed in the United States of America. This publication is protected by copyright, and 
+permission should be obtained from the publisher prior to any prohibited reproduction, storage in a retrieval 
+system, or transmission in any form or by any means, electronic, mechanical, photocopying, recording, or 
+otherwise. For information regarding permissions, request forms and the appropriate contacts within the 
+Pearson Education Global Rights & Permissions department, please visit www.pearsoned.com/permissions/.
+Photo credits appear on page A – 77, which constitutes a continuation of this copyright page.
+PEARSON, ALWAYS LEARNING and Mastering™ Physics are exclusive trademarks in the U.S. and/or 
+other countries owned by Pearson Education, Inc. or its affiliates.
+Unless otherwise indicated herein, any third-party trademarks that may appear in this work are the property 
+of their respective owners and any references to third-party trademarks, logos or other trade dress are for 
+demonstrative or descriptive purposes only. Such references are not intended to imply any sponsorship, 
+endorsement, authorization, or promotion of Pearson’s products by the owners of such marks, or any 
+relationship between the owner and Pearson Education, Inc. or its affiliates, authors, licensees or distributors.
+Library of Congress Cataloging-in-Publication Data
+Giancoli, Douglas C., author.
+Title: Physics for scientists & engineers with modern physics/Douglas C. Giancoli.
+Other titles: Physics for scientists and engineers with modern physics
+Description: Fifth edition. | Upper Saddle River, N.J. : Pearson Education, Inc., [2019] | Includes bibliographical references and index.  
+Contents: Introduction, measurement, estimating — Describing motion: kinematics in one dimension — Kinematics in two or 
+three dimensions; vectors — Dynamics: Newton’s laws of motion — Using Newton’s laws: friction, circular motion, drag forces — 
+Gravitation and Newton’s synthesis — Work and energy — Conservation of energy — Linear momentum — Rotational motion — 
+Angular momentum; general rotation — Static equilibrium; elasticity and fracture — Fluids — Oscillations — Wave motion — Sound 
+— Tempera

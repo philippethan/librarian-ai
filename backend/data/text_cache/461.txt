@@ -1,40 +1,39 @@
- © Hachette Livre, Physique 1re S, Livre du professeur. La photocopie non autorisée est un délit. 
-1
-Maquette : Nicolas Piroux.
-Composition et mise en page : CMB Graphic
-Schémas : Corédoc
-www.hachette-education.com
-© HACHETTE LIVRE 2005, 43, quai de Grenelle, F 75905 Paris Cedex 15.
-I.S.B.N. 2.01.13.5383.1
-Tous droits de traduction, de reproduction et d’adaptation réservés pour tous pays.
-Le Code de la propriété intellectuelle n’autorisant, aux termes des articles L. 122-4 et L. 122-5, d’une part, que les « copies ou reproductions strictement réservées à l’usage 
-privé du copiste et non destinées à une utilisation collective », et, d’autre part, que « les analyses et les courtes citations » dans un but d’exemple et d’illustration, « toute 
-représentation ou reproduction intégrale ou partielle, faite sans le consentement de l’auteur ou de ses ayants droit ou ayants cause, est illicite ».
-Cette représentation ou reproduction, par quelque procédé que ce soit, sans autorisation de l’éditeur ou du Centre français de l’exploitation du droit de copie (20, rue des 
-Grands-Augustins, 75006 Paris), constituerait donc une contrefaçon sanctionnée par les articles 425 et suivants du Code pénal.
-1.  Ces interactions qui gouvernent le monde . . . . . . . . . . . . . . . . . . . . 
-7
-2.  Mouvement d’un solide indéformable . . . . . . . . . . . . . . . . . . . . . . . . . 
-14
-3.  Forces s’exerçant sur un solide . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-23
-4.  Les lois de NEWTON . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-37
-5.  Travail mécanique et puissance  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-48
-6.  Le travail, un mode de transfert d’énergie . . . . . . . . . . . . . . . . . . . . 
-54
-7.  Transferts d’énergie et énergie interne . . . . . . . . . . . . . . . . . . . . . . . 
-67
-8.  Transferts d’énergie dans un circuit électrique . . . . . . . . . . . . . . . . 
-76
-9.  Comportement global d’un circuit électrique . . . . . . . . . . . . . . . . . . 
-87
-10.  Magnétisme . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-96
-11.  Forces électromagnétiques  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
-12.  Propagation de la lumière. Visibilité d’un objet . . . . . . . . . . . . . . 118
-13.  Miroirs plans et lentilles convergentes  . . . . . . . . . . . . . . . . . . . . . . 127
-14.  Quelques instruments d’optique  . . . . . . . . . . . . . . . . . . . . . . . . . . . . 136
-Sommaire
-Sommaire
+Alexandra Bélanger, sexologue
+Préface de Catherine Éthier
+Le guide pédagogique 
+d’éducation à la sexualité
+1er cycle
+6-8 ans
+Le guide pédagogique 
+d’éducation à la sexualité
+Données de catalogage disponibles dans la base de données
+de Bibliothèque et Archives nationales du Québec
+Les éditions Marcel Didier bénéficient du soutien financier 
+du gouvernement du Québec par l’entremise du programme de crédit 
+d’impôt pour l’édition de livres etde la Société de développement 
+des entreprises culturelles du Québec (SODEC).
+Édition : Marylène Mayer
+Préface : Catherine Éthier
+Révision pédagogique : Gabrielle Morin, Ph. D. (c) en éducation
+Révision linguistique : Magali Bourquin
+Correction d’épreuves : Mélissa Roy
+Conception graphique et réalisation de l’intérieur : Antoneine Lussier
+Conception graphique et réalisation de la couverture : Antoneine Lussier
+Illustrations : Éloïse Marseille
+Copyright © 2025, Marcel Didier inc. 
+ISBN version imprimée : 978-2-89837-242-1
+ISBN version numérique (PDF) : 978-2-89837-267-4
+Dépôt légal – 4e trimestre 2025
+Bibliothèque et Archives nationales du Québec
+Bibliothèque et Archives Canada
+Diffusion-distribution en Amérique du Nord :
+Distribution HMH
+1815, avenue De Lorimier
+Montréal (Québec)  H2K 3W6
+www.distributionhmh.com
+Diffusion-distribution en Europe : 
+www.librairieduquebec.fr
+Diffusion-distribution en Suisse : 
+www.servidis.ch
+Imprimé en Chine
+www.editionsmd.com

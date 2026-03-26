@@ -1,94 +1,117 @@
-Cable and
-Wireless Networks
-Mário Marques da Silva
-Theory and Practice
-Cable and
-Wireless Networks
-Theory and Practice
-OTHER COMMUNICATIONS BOOKS FROM AUERBACH
-Analytical Evaluation of Nonlinear Distortion 
-Effects on Multicarrier Signals
-Theresa Araújo
-ISBN 978-1-4822-1594-6
-Architecting Software Intensive Systems:  
-A Practitioners Guide
-Anthony J. Lattanze
-ISBN 978-1-4200-4569-7
-Cognitive Radio Networks: Efficient Resource 
-Allocation in Cooperative Sensing, Cellular 
-Communications, High-Speed Vehicles,  
-and Smart Grid
-Tao Jiang, Zhiqiang Wang, and Yang Cao
-ISBN 978-1-4987-2113-4
-Complex Networks: An Algorithmic Perspective
-Kayhan Erciyes
-ISBN 978-1-4665-7166-2
-Data Privacy for the Smart Grid
-Rebecca Herold and Christine Hertzog
-ISBN 978-1-4665-7337-6
-Generic and Energy-Efficient Context-Aware 
-Mobile Sensing
-Ozgur Yurur and Chi Harold Liu
-ISBN 978-1-4987-0010-8
-Machine-to-Machine Communications: 
-Architectures, Technology, Standards, and 
-Applications
-Vojislav B. Misic and Jelena Misic
-ISBN 978-1-4665-6123-6
-Managing the PSTN Transformation:  
-A Blueprint for a Successful Migration to  
-IP-Based Networks
-Sandra Dornheim
-ISBN 978-1-4987-0103-7
-MIMO Processing for 4G and Beyond: 
-Fundamentals and Evolution
-Edited by Mário Marques da Silva and  
-Francisco A. Monteiro
-ISBN 978-1-4665-9807-2
-Mobile Evolution: Insights on Connectivity  
-and Service
-Sebastian Thalanany
-ISBN 978-1-4822-2480-1
-Network Innovation through OpenFlow and SDN: 
-Principles and Design
-Edited by Fei Hu
-ISBN 978-1-4665-7209-6
-Neural Networks for Applied Sciences and 
-Engineering: From Fundamentals to Complex 
-Pattern Recognition
-Sandhya Samarasinghe
-ISBN 978-0-8493-3375-0
-Rare Earth Materials: Properties and Applications
-A.R. Jha
-ISBN 978-1-4665-6402-2
-Requirements Engineering for Software and 
-Systems, Second Edition
-Phillip A. Laplante
-ISBN 978-1-4665-6081-9
-Security for Multihop Wireless Networks
-Edited by Shafiullah Khan and Jaime Lloret Mauri
-ISBN 9781466578036
-Software Testing: A Craftsman’s Approach,  
-Fourth Edition
-Paul C. Jorgensen
-ISBN 978-1-46656068-0
-The Future of Wireless Networks: Architectures, 
-Protocols, and Services
-Edited by Mohesen Guizani, Hsiao-Hwa Chen,  
-and Chonggang Wang
-ISBN 978-1-4822-2094-0
-The Internet of Things in the Cloud:  
-A Middleware Perspective
-Honbo Zhou
-ISBN 978-1-4398-9299-2
-The State of the Art in Intrusion Prevention  
-and Detection
-Al-Sakib Khan Pathan
-ISBN 978-1-4822-0351-6
-ZigBee® Network Protocols and Applications
-Edited by Chonggang Wang, Tao Jiang,  
-and Qian Zhang
-ISBN 978-1-4398-1601-1
-AUERBACH PUBLICATIONS
-www.auerbach-publications.com
-To Order Call: 1-800-272-7737 •   Fax: 1-800-374-3401 •  E-mail: orders@crcpress.com
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Infographie : Nord Compo
+    Conception graphique de la couverture : Ann-Sophie Caouette
+
+
+    ISBN : 978-2-89826-269-2
+    ISBN (EPUB) : 978-2-89826-270-8
+    Dépôt légal – Bibliothèque et Archives nationales du Québec, 2025
+    Dépôt légal – Bibliothèque et Archives Canada, 2025
+
+    Titre original : OPTIMAL
+    Éditeur original : HarperCollins Publishers
+
+    © Daniel Goleman, 2024
+    © Éditions J’ai lu, 2025 pour la traduction française
+    © Madrigall Canada inc. – Édito, 2025 pour la présente édition
+
+    Tous droits réservés
+
+    Imprimé au Québec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sommaire
+Introduction Votre zone optimale
+Partie I De l'intelligence émotionnelle à la performance optimale
+1 Votre moi optimal
+2 Les bénéfices de l'intelligence émotionnelle
+Partie II L'intelligence émotionnelle en détail
+1 L'intelligence émotionnelle, nouvelle formule
+2 Développer concrètement la conscience de soi
+3 La maîtrise de soi
+4 Du burn-out à la résilience
+5 L'empathie
+6 Gérez vos relations
+Partie III L'intelligence émotionnelle au travail
+1 Les différentes appellations de l'intelligence émotionnelle
+2 Diriger avec l'intelligence émotionnelle
+3 L'intelligence émotionnelle dans le travail d'équipe
+4 Une formation efficace pour développer l'intelligence émotionnelle
+5 Construire une culture de l'intelligence émotionnelle
+Partie IV L'avenir de l'intelligence émotionnelle
+1 Le mélange décisif
+2 Innovation et systèmes
+Remerciements
+À propos des auteurs
+Notes
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction
+
+
+
+Votre zone optimale
+
+
+
+Imaginez-vous à la place d’Ajla Tomljanović, qui a battu Serena Williams au cours de ce qui était annoncé comme le dernier match de sa carrière, lors du troisième tour de l’US Open de tennis 2022. Ce jour-là, Williams, la légende aux 23 victoires en Grand Chelem, est à son apogée. Elle est incontestablement la grande favorite des 24 000 supporters entassés dans les gradins du plus grand stade de tennis au monde.
+Tous ou presque encouragent Serena Williams, tandis que des millions d’autres suivent le match sur Internet. Imaginez « le bruit, la clameur pour Serena Williams, les acclamations inconvenantes à chaque service manqué de Tomljanović, les nombreuses célébrités présentes dans les tribunes et toutes les vidéos en l’honneur de Williams1 ».
+Mais Tomljanović a une botte secrète. Son père, ancien champion de handball et son premier entraîneur, lui a appris à conserver son calme grâce à la concentration. « Il lui a montré le film For Love of the Game et ce que le joueur de baseball, interprété par Kevin Costner, réussit à accomplir au beau milieu d’un match parfait en concentrant toute son attention sur le gant du receveur et en ignorant tout ce qui se passe dans le stade. » Tomljanović suit les conseils de son père. Elle reste totalement concentrée sur la balle.
+Après le match, elle déclare : « À partir du moment où j’ai mis un pied sur le court, j’ai cessé de regarder ce qui se passait autour de moi. J’étais dans ma bulle. » La joueus
