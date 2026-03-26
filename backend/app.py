@@ -167,14 +167,142 @@ def call_ollama(text: str) -> dict:
         return {}
 
 
-def process_book(book_id: int):
+def call_ollama_filename(filepath: str) -> dict:
+    ollama_url = os.getenv("OLLAMA_URL", "http://localhost:11434")
+    ollama_model = os.getenv("OLLAMA_MODEL", "mistral:7b-instruct")
+    stem = Path(filepath).stem
+    try:
+        file_size = os.path.getsize(filepath)
+    except Exception:
+        file_size = 0
+    prompt = (
+        "You are a librarian metadata extractor. Given only a filename and file size, "
+        "infer book metadata and return it as JSON.\n\n"
+        "Fields to extract:\n"
+        "- title (string)\n"
+        "- author (string)\n"
+        "- year (string, e.g. '2019')\n"
+        "- language (string, e.g. 'English')\n"
+        "- category (pick one from the list below)\n"
+        "- subcategory (string)\n"
+        "- difficulty (one of: Beginner, Intermediate, Advanced, Expert)\n"
+        "- description (1-2 sentence summary)\n"
+        "- tags (JSON array of keyword strings)\n\n"
+        "Category list:\n"
+        "Systems Engineering, Railway & Transport Engineering, Aerospace Engineering, "
+        "Electrical Engineering, Electronics & Embedded Systems, Mechanical Engineering, "
+        "Civil & Structural Engineering, Control & Automation, Software Engineering, "
+        "Computer Science, AI & Machine Learning, Mathematics, Physics, "
+        "Standards & Norms - Railway, Standards & Norms - Safety, "
+        "Project Management, Business & Strategy, Economics & Finance, "
+        "Personal Development, Psychology, History, Philosophy, "
+        "Language Learning, Literature & Fiction, Health & Medicine, Other\n\n"
+        f"Filename: {stem}\n"
+        f"File size: {file_size} bytes\n\n"
+        "Return ONLY valid JSON. No markdown. No explanation."
+    )
+    payload = json.dumps(
+        {"model": ollama_model, "prompt": prompt, "stream": False},
+        ensure_ascii=True,
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        f"{ollama_url}/api/generate",
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            raw_body = resp.read().decode("utf-8")
+        data = json.loads(raw_body)
+        return _parse_llm_json(data.get("response", ""))
+    except Exception as exc:
+        print(f"[call_ollama_filename] error: {exc}")
+        return {}
+
+
+def process_book(book_id: int, filepath: str, file_type: str):
+    # Step 1: set status=processing
     with get_db() as conn:
         conn.execute(
-            "UPDATE books SET status='error', error_msg='not implemented' WHERE id=?",
+            "UPDATE books SET status='processing', error_msg=NULL WHERE id=?",
             (book_id,),
         )
         conn.commit()
-    print(f"[process_book] id={book_id}")
+
+    # Step 2: duplicate check
+    file_hash = hashlib.sha256(Path(filepath).read_bytes()).hexdigest()
+    with get_db() as conn:
+        dup = conn.execute(
+            "SELECT id FROM books WHERE file_hash=? AND dedup_dismissed=0 AND id!=?",
+            (file_hash, book_id),
+        ).fetchone()
+    if dup:
+        with get_db() as conn:
+            conn.execute(
+                "UPDATE books SET status='duplicate', duplicate_of=?, file_hash=? WHERE id=?",
+                (dup["id"], file_hash, book_id),
+            )
+            conn.commit()
+        print(f"[process_book] id={book_id} status=duplicate duplicate_of={dup['id']}")
+        return
+
+    # Step 3: extract text and cache it
+    text = extract_text(filepath, file_type)
+    cache_dir = Path("backend/data/text_cache")
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    (cache_dir / f"{book_id}.txt").write_text(text, encoding="utf-8")
+
+    # Step 4: call ollama
+    if text:
+        meta = call_ollama(text)
+        method = "fitz+ollama"
+    else:
+        meta = call_ollama_filename(filepath)
+        method = "filename_heuristic"
+
+    title = meta.get("title") or ""
+    author = meta.get("author") or ""
+    year = meta.get("year") or ""
+    language = meta.get("language") or ""
+    category = meta.get("category") or ""
+    subcategory = meta.get("subcategory") or ""
+    difficulty = meta.get("difficulty") or ""
+    description = meta.get("description") or ""
+    tags_raw = meta.get("tags", [])
+    tags = json.dumps(tags_raw if isinstance(tags_raw, list) else [], ensure_ascii=True)
+
+    # Step 5: confidence score
+    filled_fields = sum(1 for v in [title, author, year, language, category, subcategory, difficulty, description, tags_raw] if v)
+    confidence_score = (filled_fields / 9) * 0.7 + (1.0 if text else 0.0) * 0.3
+
+    # Step 6: status
+    if confidence_score >= 0.4:
+        status = "done"
+    elif confidence_score > 0:
+        status = "partial"
+    else:
+        status = "error"
+
+    # Step 7: save to DB
+    with get_db() as conn:
+        conn.execute(
+            """UPDATE books SET
+                status=?, file_hash=?,
+                title=?, author=?, year=?, language=?,
+                category=?, subcategory=?, difficulty=?,
+                description=?, tags=?,
+                extraction_method=?, confidence_score=?,
+                processed_at=datetime('now')
+               WHERE id=?""",
+            (status, file_hash, title, author, year, language,
+             category, subcategory, difficulty, description, tags,
+             method, confidence_score, book_id),
+        )
+        conn.commit()
+
+    # Step 8: print
+    print(f"[process_book] id={book_id} status={status} confidence={confidence_score:.2f} title={title!r}")
 
 
 async def background_processor():
@@ -183,10 +311,10 @@ async def background_processor():
         try:
             with get_db() as conn:
                 rows = conn.execute(
-                    "SELECT id FROM books WHERE status='pending' LIMIT 5"
+                    "SELECT id, filepath, file_type FROM books WHERE status='pending' LIMIT 5"
                 ).fetchall()
             for row in rows:
-                process_book(row["id"])
+                process_book(row["id"], row["filepath"], row["file_type"])
         except Exception as exc:
             print(f"[background_processor] error: {exc}")
 
@@ -277,6 +405,34 @@ def get_books():
         books.append(book)
 
     return books
+
+
+@app.get("/api/books/{book_id}")
+def get_book(book_id: int):
+    with get_db() as conn:
+        row = conn.execute("SELECT * FROM books WHERE id=?", (book_id,)).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Book not found")
+    book = dict(row)
+    try:
+        book["tags"] = json.loads(book["tags"] or "[]")
+    except (json.JSONDecodeError, TypeError):
+        book["tags"] = []
+    return book
+
+
+@app.post("/api/books/{book_id}/reprocess")
+def reprocess_book(book_id: int):
+    with get_db() as conn:
+        row = conn.execute(
+            "SELECT filepath, file_type FROM books WHERE id=?", (book_id,)
+        ).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Book not found")
+    with get_db() as conn:
+        conn.execute("UPDATE books SET status='pending' WHERE id=?", (book_id,))
+        conn.commit()
+    return {"queued": book_id}
 
 
 @app.post("/api/books/{book_id}/extract-test")
