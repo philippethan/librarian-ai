@@ -6,6 +6,11 @@ import sqlite3
 from contextlib import asynccontextmanager, contextmanager
 from pathlib import Path
 
+import fitz  # PyMuPDF
+from bs4 import BeautifulSoup
+import ebooklib
+from ebooklib import epub
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -59,6 +64,30 @@ def init_db():
             )
         """)
         conn.commit()
+
+
+def extract_text(filepath: str, file_type: str) -> str:
+    try:
+        if file_type == "pdf":
+            doc = fitz.open(filepath)
+            text = ""
+            for page in doc[:3]:
+                text += page.get_text()
+            doc.close()
+            return text[:3000]
+        elif file_type == "epub":
+            book = epub.read_epub(filepath)
+            text = ""
+            for item in book.get_items_of_type(ebooklib.ITEM_DOCUMENT):
+                soup = BeautifulSoup(item.get_content(), "html.parser")
+                text += soup.get_text()
+                if len(text) >= 3000:
+                    break
+            return text[:3000]
+        return ""
+    except Exception as exc:
+        print(f"[extract_text] {filepath}: {exc}")
+        return ""
 
 
 def process_book(book_id: int):
@@ -171,6 +200,22 @@ def get_books():
         books.append(book)
 
     return books
+
+
+@app.post("/api/books/{book_id}/extract-test")
+def extract_test(book_id: int):
+    with get_db() as conn:
+        row = conn.execute(
+            "SELECT filepath, file_type FROM books WHERE id=?", (book_id,)
+        ).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Book not found")
+    text = extract_text(row["filepath"], row["file_type"])
+    return {
+        "text_length": len(text),
+        "preview": text[:200],
+        "file_type": row["file_type"],
+    }
 
 
 @app.get("/api/stats")
