@@ -102,7 +102,30 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   cursor: pointer;
 }
 #btn-reprocess-all:hover { background: #ffe8a0; }
+#btn-delete-selected {
+  background: #fde0e0;
+  color: #8a0000;
+  border: 1px solid #f0b0b0;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+}
+#btn-delete-selected:hover { background: #fcc; }
 #batch-progress { font-size: 0.78rem; color: #1a7a4a; font-weight: 600; display: none; }
+#btn-stop-batch {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: #666;
+  display: none;
+}
+#btn-stop-batch:hover { border-color: #e74c3c; color: #e74c3c; }
 
 /* Main layout */
 #main {
@@ -421,8 +444,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <span id="filter-count"></span>
   <div id="batch-actions">
     <span id="batch-progress"></span>
+    <button id="btn-stop-batch" onclick="stopBatch()">Stop</button>
     <button id="btn-reprocess-selected" onclick="reprocessSelected()">Reprocess Selected (<span id="sel-count">0</span>)</button>
     <button id="btn-reprocess-all" onclick="reprocessAllFiltered()">Reprocess All Filtered</button>
+    <button id="btn-delete-selected" onclick="deleteSelected()">Delete Selected (<span id="del-count">0</span>)</button>
   </div>
 </div>
 
@@ -832,12 +857,11 @@ function toggleSelectAll(chk) {
 }
 
 function updateBatchUI() {
-  const btn = document.getElementById('btn-reprocess-selected');
-  const countEl = document.getElementById('sel-count');
   const n = selectedIds.size;
-  countEl.textContent = n;
-  btn.style.display = n > 0 ? '' : 'none';
-  // update select-all state
+  document.getElementById('sel-count').textContent = n;
+  document.getElementById('del-count').textContent = n;
+  document.getElementById('btn-reprocess-selected').style.display = n > 0 ? '' : 'none';
+  document.getElementById('btn-delete-selected').style.display = n > 0 ? '' : 'none';
   const chkAll = document.getElementById('chk-all');
   if (chkAll) {
     chkAll.checked = filteredBooks.length > 0 && filteredBooks.every(b => selectedIds.has(b.id));
@@ -860,29 +884,104 @@ async function reprocessAllFiltered() {
   await runBatchReprocess(ids);
 }
 
+let batchStopped = false;
+
 async function runBatchReprocess(ids) {
+  const CHUNK = 5;
   const prog = document.getElementById('batch-progress');
+  const stopBtn = document.getElementById('btn-stop-batch');
+  const total = ids.length;
+  let done = 0;
+  batchStopped = false;
+
   prog.style.display = '';
-  prog.textContent = `Queuing ${ids.length} book(s)...`;
+  stopBtn.style.display = '';
+
+  const chunks = [];
+  for (let i = 0; i < ids.length; i += CHUNK) chunks.push(ids.slice(i, i + CHUNK));
+
+  for (let i = 0; i < chunks.length; i++) {
+    if (batchStopped) {
+      prog.textContent = `Stopped at batch ${i}/${chunks.length} (${done}/${total} done)`;
+      break;
+    }
+    const chunk = chunks[i];
+    prog.textContent = `Batch ${i + 1}/${chunks.length} - sending ${chunk.length} books...`;
+    try {
+      await apiFetch('/api/reprocess-batch', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: chunk }),
+      });
+      chunk.forEach(id => {
+        const b = allBooks.find(x => x.id === id);
+        if (b) b.status = 'pending';
+      });
+      applyFilters();
+    } catch(e) {
+      showToast('Batch error: ' + e.message, true);
+      break;
+    }
+
+    // Wait for this chunk to finish before sending next
+    prog.textContent = `Batch ${i + 1}/${chunks.length} - waiting for completion...`;
+    await waitForChunkDone(chunk);
+    done += chunk.length;
+    prog.textContent = `Done ${done}/${total} books (batch ${i + 1}/${chunks.length})`;
+    await loadBooks();
+  }
+
+  if (!batchStopped) {
+    prog.textContent = `Finished: ${done}/${total} books reprocessed`;
+    showToast(`Reprocessed ${done} book(s)`);
+  }
+  stopBtn.style.display = 'none';
+  setTimeout(() => { prog.style.display = 'none'; }, 6000);
+}
+
+async function waitForChunkDone(ids) {
+  while (!batchStopped) {
+    await new Promise(r => setTimeout(r, 4500));
+    try {
+      // Refresh just these books' statuses
+      const fresh = await apiFetch('/api/books');
+      fresh.forEach(b => {
+        const idx = allBooks.findIndex(x => x.id === b.id);
+        if (idx !== -1) allBooks[idx] = b;
+      });
+      const stillRunning = ids.some(id => {
+        const b = allBooks.find(x => x.id === id);
+        return b && (b.status === 'pending' || b.status === 'processing');
+      });
+      if (!stillRunning) break;
+    } catch(e) { break; }
+  }
+}
+
+function stopBatch() {
+  batchStopped = true;
+  document.getElementById('btn-stop-batch').style.display = 'none';
+}
+
+// ---- Delete selected ----
+async function deleteSelected() {
+  const ids = [...selectedIds];
+  if (!ids.length) return;
+  if (!confirm(`Remove ${ids.length} book(s) from the library?\n\nFiles on disk will NOT be deleted.`)) return;
   try {
-    const res = await apiFetch('/api/reprocess-batch', {
+    const res = await apiFetch('/api/delete-batch', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ids }),
+      body: JSON.stringify({ ids, delete_files: false }),
     });
-    // Update local status to pending
-    ids.forEach(id => {
-      const b = allBooks.find(x => x.id === id);
-      if (b) b.status = 'pending';
-    });
+    allBooks = allBooks.filter(b => !ids.includes(b.id));
+    selectedIds.clear();
+    if (selectedBookId && ids.includes(selectedBookId)) closeDetail();
     applyFilters();
-    prog.textContent = `Queued ${res.queued} book(s) - processing...`;
-    scheduleAutoRefresh();
-    showToast(`Queued ${res.queued} book(s) for reprocessing`);
-    setTimeout(() => { prog.style.display = 'none'; }, 8000);
+    updateBatchUI();
+    showToast(`Deleted ${res.deleted} book(s) from library`);
   } catch(e) {
-    prog.style.display = 'none';
-    showToast('Batch reprocess failed: ' + e.message, true);
+    showToast('Delete failed: ' + e.message, true);
   }
 }
 

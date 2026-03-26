@@ -662,6 +662,32 @@ def reprocess_batch(req: ReprocessBatchRequest):
     return {"queued": len(req.ids)}
 
 
+class DeleteBatchRequest(BaseModel):
+    ids: List[int]
+    delete_files: bool = False
+
+
+@app.post("/api/delete-batch")
+def delete_batch(req: DeleteBatchRequest):
+    if not req.ids:
+        raise HTTPException(status_code=400, detail="No IDs provided")
+    placeholders = ",".join("?" * len(req.ids))
+    with get_db() as conn:
+        rows = conn.execute(
+            f"SELECT id, filepath FROM books WHERE id IN ({placeholders})", req.ids
+        ).fetchall()
+    if req.delete_files:
+        for row in rows:
+            try:
+                Path(row["filepath"]).unlink(missing_ok=True)
+            except Exception:
+                pass
+    with get_db() as conn:
+        conn.execute(f"DELETE FROM books WHERE id IN ({placeholders})", req.ids)
+        conn.commit()
+    return {"deleted": len(rows)}
+
+
 @app.post("/api/books/{book_id}/extract-test")
 def extract_test(book_id: int):
     with get_db() as conn:
