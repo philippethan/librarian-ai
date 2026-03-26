@@ -2,7 +2,9 @@ import asyncio
 import hashlib
 import json
 import os
+import re
 import sqlite3
+import urllib.request
 from contextlib import asynccontextmanager, contextmanager
 from pathlib import Path
 
@@ -88,6 +90,81 @@ def extract_text(filepath: str, file_type: str) -> str:
     except Exception as exc:
         print(f"[extract_text] {filepath}: {exc}")
         return ""
+
+
+def _parse_llm_json(raw: str) -> dict:
+    # Step 1: strip ``` fences
+    text = re.sub(r"```[a-zA-Z]*", "", raw).replace("```", "").strip()
+    # Step 2: direct parse
+    try:
+        return json.loads(text)
+    except Exception:
+        pass
+    # Step 3: regex extract {...}
+    m = re.search(r"\{.*\}", text, re.DOTALL)
+    if m:
+        try:
+            return json.loads(m.group())
+        except Exception:
+            pass
+    # Step 4: json_repair fallback
+    try:
+        import json_repair
+        result = json_repair.repair_json(text, return_objects=True)
+        if isinstance(result, dict):
+            return result
+    except Exception:
+        pass
+    return {}
+
+
+def call_ollama(text: str) -> dict:
+    ollama_url = os.getenv("OLLAMA_URL", "http://localhost:11434")
+    ollama_model = os.getenv("OLLAMA_MODEL", "mistral:7b-instruct")
+    snippet = text[:1500]
+    prompt = (
+        "You are a librarian metadata extractor. Given the following book text, "
+        "extract metadata and return it as JSON.\n\n"
+        "Fields to extract:\n"
+        "- title (string)\n"
+        "- author (string)\n"
+        "- year (string, e.g. '2019')\n"
+        "- language (string, e.g. 'English')\n"
+        "- category (pick one from the list below)\n"
+        "- subcategory (string)\n"
+        "- difficulty (one of: Beginner, Intermediate, Advanced, Expert)\n"
+        "- description (1-2 sentence summary)\n"
+        "- tags (JSON array of keyword strings)\n\n"
+        "Category list:\n"
+        "Systems Engineering, Railway & Transport Engineering, Aerospace Engineering, "
+        "Electrical Engineering, Electronics & Embedded Systems, Mechanical Engineering, "
+        "Civil & Structural Engineering, Control & Automation, Software Engineering, "
+        "Computer Science, AI & Machine Learning, Mathematics, Physics, "
+        "Standards & Norms - Railway, Standards & Norms - Safety, "
+        "Project Management, Business & Strategy, Economics & Finance, "
+        "Personal Development, Psychology, History, Philosophy, "
+        "Language Learning, Literature & Fiction, Health & Medicine, Other\n\n"
+        f"Book text:\n{snippet}\n\n"
+        "Return ONLY valid JSON. No markdown. No explanation."
+    )
+    payload = json.dumps(
+        {"model": ollama_model, "prompt": prompt, "stream": False},
+        ensure_ascii=True,
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        f"{ollama_url}/api/generate",
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            raw_body = resp.read().decode("utf-8")
+        data = json.loads(raw_body)
+        return _parse_llm_json(data.get("response", ""))
+    except Exception as exc:
+        print(f"[call_ollama] error: {exc}")
+        return {}
 
 
 def process_book(book_id: int):
@@ -216,6 +293,21 @@ def extract_test(book_id: int):
         "preview": text[:200],
         "file_type": row["file_type"],
     }
+
+
+@app.post("/api/books/{book_id}/ollama-test")
+def ollama_test(book_id: int):
+    with get_db() as conn:
+        row = conn.execute(
+            "SELECT filepath, file_type FROM books WHERE id=?", (book_id,)
+        ).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Book not found")
+    text = extract_text(row["filepath"], row["file_type"])
+    if not text:
+        raise HTTPException(status_code=422, detail="No text extracted from book")
+    metadata = call_ollama(text)
+    return metadata
 
 
 @app.get("/api/stats")
