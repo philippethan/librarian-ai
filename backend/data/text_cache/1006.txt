@@ -1,1 +1,86 @@
-WRITING TO LEARN WILLIAM ZINSSERContents Preface PART I 1. Hermes and the Periodic Table 2. Writing Across the Curriculum 3. A Liberal Education 4. Writing to Learn 5. Crotchets and Convictions PART II 6. Earth, Sea and Sky 7. Art and Artists 8. The Natural World 9. Writing Mathematics 10. Man, Woman and Child 11. Writing Physics and Chemistry 12. Worlds of Music Acknowledgments Sources and Notes Searchable Terms Back Ad About the Author Books by William Zinsser Copyright About the PublisherBooks by William Zinsser On Writing Well Writing to Learn Mitchell & Ruff Spring Training American Places Easy to Remember: The Great American Songwriters and Their Songs Writing About Your Life Speaking of Journalism Writing with a Word Processor Writing Places Edited by William Zinsser Inventing the Truth: The Art and Craft of Memoir Worlds of Childhood: The Art and Craft of Writing for Children Going on Faith: Writing as a Spiritual QuestCopyright Copyright acknowledgments will be found in Sources and Notes, beginning on here . A hardcover edition of this book was published in 1988 by Harper & Row, Publishers. WRITING TO LEARN . Copyright © 1988 by William K. Zinsser. All rights reserved under International and Pan-American Copyright Conventions. By payment of the required fees, you have been granted the non-exclusive, non-transferable right to access and read the text of this ebook on-screen. No part of this text may be reproduced, transmitted, down-loaded, decompiled, reverse engineered, or stored in or introduced into any information storage and retrieval system, in any form or by any means, whether electronic or mechanical, now known or hereinafter invented, without the express written permission of HarperCollins ebooks. First PERENNIAL LIBRARY edition published 1989. Library of Congress Cataloging-in-Publication Data Zinsser, William Knowlton. Writing to learn. “Perennial Library.” Bibliography: p. Includes index. 1. English language—Rhetoric—Study and teaching. 2. Interdisciplinary approach in education. I. Title. PE1404.Z56   1989      808’.042’07      87-45825 ISBN 0-06-272040-6 (pbk.)        08 07 06 05 RRD 30 29 28 27 26 25 24 23 22 21 EPub Edition © MAY 2013 ISBN: 9780062244697Preface I wrote this book to try to ease two fears that American education seems to inflict on all of us in some form. One is the fear of writing. Most people have to do some kind of writing just to get through the day—a memo, a report, a letter—and would almost rather die than do it. The other is the fear of subjects we don’t think we have an aptitude for. Students with a bent for the humanities are terrified of science and mathematics, and students with an aptitude for science and mathematics are terrified of the humanities—all those subjects like English and philosophy and the arts that can’t be pinned down with numbers or formulas. I now think that these fears are largely unnecessary burdens to lug through life. This book is a personal journey in which I confronted some
+Lecture Notes for Machine Learning and Data
+Science Courses
+Information School, University of Washington
+Ott Toomet
+May 27, 2025
+ii
+Preface
+This is a collection of notes made for INFO370, INFO371, IMT573 and IMT574
+courses, taught at the Information School, University of Washington. It began as a
+collection of topics where I could not find another suitable material. Later I have
+also added some material where other good source exist, mainly to force me to think
+through how I present these topics, and to simplify the reading materials. The pdf is
+available at my UW faculty page.
+I have chosen to collect related topics under the same sections, even if I do not
+teach them at the same time. For instance, conditional probability is in Section 1.4,
+even if I teach it either for Naive Bayes (Section 8.5) or Fairness (Section 13.3.3). I
+believe that this approach makes this textbook more flexible and allows to pick topics
+in a different order.
+Check also out the python companion (preliminary) and R companion (even more
+preliminary).
+The source of these notes is available at it’s bitbucket repo, feel free to leave
+feedback in it’s issue tracker.
+The text is licensed as CC BY 4.0, the images have different copyrights, see the
+captions and the readme files in the corresponding folders in the Bitbucket repo.
+I am grateful to Yuemin Cao and Chesie Yu for help with illustrations.
+Contents
+Preface
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+ii
+0.1
+Notation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+vi
+1
+Introduction to Statistics
+1
+1.1
+Different Kind of Values . . . . . . . . . . . . . . . . . . . . . . . . . .
+2
+1.2
+Data about data
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+1.3
+Descriptive statistics . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+16
+1.4
+Basics of Probability Theory
+. . . . . . . . . . . . . . . . . . . . . . .
+35
+1.5
+Probability distributions . . . . . . . . . . . . . . . . . . . . . . . . . .
+68
+1.6
+Statistical Inference
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+88
+1.7
+Lies, Damned Lies, and Statistics . . . . . . . . . . . . . . . . . . . . . 114
+2
+Regression Models
+123
+2.1
+Linear Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+2.2
+Logistic Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174
+2.3
+Linear probability model . . . . . . . . . . . . . . . . . . . . . . . . . . 186
+3
+Causality
+187
+3.1
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+3.2
+What is cause? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 189
+3.3
+Causality with data: three explanations
+. . . . . . . . . . . . . . . . . 190
+3.4
+Strategies for Causal Inference
+. . . . . . . . . . . . . . . . . . . . . . 195
+3.5
+Causal inference in linear regression framework . . . . . . . . . . . . . 202
+3.6
+A Few Popular Estimators . . . . . . . . . . . . . . . . . . . . . . . . . 209
+3.7
+Cogniti
