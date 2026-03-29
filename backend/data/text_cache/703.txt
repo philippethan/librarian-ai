@@ -1,1 +1,46 @@
-12 STRAT ÉGIES POUR DEVENIR LIBRE FINANCIÈREMENT Aurélien GRANDINCopyright © 2023 Aurélien Grandin Tous droits réservés. Aucune partie de cette publication ne peut être reproduite sous aucune forme, par aucun moyen, incluant enregistrement ou toute autre méthode électronique sans autorisation écrite préalable de l’auteure, excepté dans le cas de brèves citations autorisées par la loi sur le copyright. Les informations contenues dans ce livre sont de nature informative et générique, elles doivent donc être utilisées uniquement à des fins éducatives et non pas pour établir un diagnostic sur soi-même ou sur d’autres personnes, ni à des fins thérapeutiques, ni pour l’automédication. À propos de l’auteur Après avoir étudié la gestion de patrimoine, Aurélien Grandin a décidé de se mettre au service de ses clients afin de leur transmettre les clés leur permettant de se libérer d’un emploi aliénant. Aujourd’hui Aurélien est à la tête d’un patrimoine immobilier locatif, de portefeuilles boursiers et de plusieurs business en ligne. Son objectif est d’aider ses clients à atteindre leurs rêves.12 stratégies pour devenir libre financièrement Libérez-vous définitivement de la routine du salariat en développant des revenus alternatifs ! Ce livre est destiné aux personnes qui cherchent un autre chemin que celui du métro, boulot, dodo. En effet, durant plus de 40 ans, la majorité de la population doit travailler. Cela est souvent épuisant en plus d’être inintéressant. Finalement, la seule chose attendue est une retraite hypothétique dont le montant est bien en deçà des besoins et qui recule d’année en année au gré des réformes gouvernementales. Ainsi, cet ouvrage permettra à ceux qui ont en marre de subir leur vie et qui souhaitent plus que tout accéder à la liberté financière de connaitre et d’appliquer 12 stratégies pouvant leur permettre d’accéder à leurs rêves. Ne les laissez plus la société aliénante vous voler vos plus belles années. Prenez votre destinée financière en main !Table des matières Avant-propos Stratégie 1 : L’immobilier, un chemin vers la liberté financière Stratégie 2 : La freelance, c’est relax ! Stratégie 3 : Faire du marketing d’affiliation Stratégie 4 : Le trading en ligne Stratégie 5 : Investir dans le PEA Stratégie 6 : Investissez dans les ETF ! Stratégie 7 : Le dropshipping : un facteur clé de succès Stratégie 8 : Enchaînez les investissements pour créer un cercle vertueux Stratégie 9 : Diversifiez ! Stratégie 10 : Les objectifs S.M.A.R.T, ça compte ! Stratégie 11 : Adoptez le frugalisme Stratégie 12 : La confiance en soi, c’est nécessaire ! ConclusionAvant-propos Chaque jour qui passe, nous sommes frustrés de ne pouvoir prendre que 30 jours [1] de congé annuel en raison de notre travail. Effectivement, ce dernier ne nous laisse pas suffisamment de temps libre à consacrer aux personnes et activités qui comptent réellement pour nous et qui nous rendent heureux. Nous en avons assez d’avoir un patron qui est constamment sur notre dos et à 
+Principles of Computer 
+System Design 
+An Introduction 
+Part II 
+Chapters 7–11 
+Jerome H. Saltzer 
+M. Frans Kaashoek 
+Massachusetts Institute of Technology 
+Version 5.0  
+Saltzer & Kaashoek Ch. Part II, p. i 
+June 24, 2009 12:14 am 
+Copyright © 2009 by Jerome H. Saltzer and M. Frans Kaashoek. Some Rights Reserved. 
+This work is licensed under a 
+Creative Commons Attribution-Non­
+commercial-Share Alike 3.0 United States License. For more information on what this 
+license means, visit http://creativecommons.org/licenses/by-nc-sa/3.0/us/ 
+Designations used by companies to distinguish their products are often claimed as trade­
+marks or registered trademarks. In all instances in which the authors are aware of a claim, 
+the product names appear in initial capital or all capital letters. All trademarks that 
+appear or are otherwise referred to in this work belong to their respective owners. 
+Suggestions, Comments, Corrections, and Requests to waive license restrictions: 
+Please send correspondence by electronic mail to: 
+Saltzer@mit.edu 
+and 
+kaashoek@mit.edu 
+Saltzer & Kaashoek Ch. Part II, p. ii 
+June 24, 2009 12:14 am 
+CHAPTER
+Contents 
+PART I [In Printed Textbook] 
+List of Sidebars. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xix  
+Preface. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxvii  
+Where to Find Part II and other On-line Materials . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxxvii  
+Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .xxxix  
+Computer System Design Principles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xliii  
+CHAPTER 1 Systems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1  
+Overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2  
+1.1. Systems and Complexity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3  
+1.1.1 Common Problems of Systems in Many Fields. . . . . . . . . . . . . . . . . . 3  
+1.1.2 Systems, Components, Interfaces and Environments . . . . . . . . . . . . . 8  
+1.1.3 Complexity. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10  
+1.2. Sources of Complexity. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13  
+1.2.1 Cascading and Interacting Requirements . . . . . . . . . . . . . . . . . . . . . 13  
+1.2.2 Maintaining High Utilization. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17  
+1.3. Coping with Complexity I. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19  
+1.3.1 Modularit

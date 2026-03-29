@@ -1,1 +1,96 @@
-Table of Contents Titre Copyright Commencements Chapitre 1 - L’intelligence naturelle et la logique de la conscience Chapitre 2 - Les énigmes de la conscience Chapitre 3 - Une méthode et un plan Partie I - Générer la conscience : le problème et une ébauche de solutions possibles Chapitre 4 - Je est un autre : combien d’esprits pour un moi ? Chapitre 5 - L’esprit intégré moderne Chapitre 6 - Le sentiment d’existence Chapitre 7 - Le monde alentour et le monde intérieur Chapitre 8 - Les prodiges de l’intéroception Chapitre 9 - La logique de la conscience concerne la régulation de la vie Chapitre 10 - Comment la conscience est-elle possible ? Partie II - Au cœur des mécanismes Chapitre 11 - Que la conscience commence Chapitre 12 - L’émergence de la conscience Chapitre 13 - Neurobiologie de l’intéroception Chapitre 14 - De la conscience et de l’esprit Chapitre 15 - La conscience et sa perte Chapitre 16 - De la température du corps et de la respiration Chapitre 17 - De la faim et de la soif Chapitre 18 - De la douleur et des nausées Partie III - Maintenant que nous savons Chapitre 19 - L’existence sensorielle des plantes et des arbres Chapitre 20 - Y a-t-il une conscience chez les bactéries ? Chapitre 21 - Les phénomènes sociaux dans la perspective de l’homéostasie Chapitre 22 - Intelligence artificielle Chapitre 23 - En hommage à nos ancêtres, à nos pairs et à nos descendants Partie IV - Réflexions après coup Chapitre 24 - Une note sur l’histoire de la vie Chapitre 25 - Devenir vivant Chapitre 26 - De la vie, de l’intelligence et de l’esprit Chapitre 27 - Commentaires sur un mot problème Chapitre 28 - L’aube de la conscience Chapitre 29 - La chaîne vitale Chapitre 30 - Qui l’aurait cru ? Bibliographie Sommaire Du même auteur chez Odile JacobParution de la version américaine originale en 2026 sous le titre : Natural Intelligence and the Logic of Consciousness (Pantheon Books, New York) © 2026 by Antonio Damasio Pour la traduction française : © O DILE J ACOB , janvier 2026 3, rue Auguste-Comte, 75006 Paris www.odilejacob.fr ISBN : 978-2-4150-1150-5 Le code de la propriété intellectuelle n'autorisant, aux termes de l'article L. 122-5 et 3 a, d'une part, que les « copies ou reproductions strictement réservées à l'usage du copiste et non destinées à une utilisation collective » et, d'autre part, que les analyses et les courtes citations dans un but d'exemple et d'illustration, « toute représentation ou réproduction intégrale ou partielle faite sans le consentement de l'auteur ou de ses ayants droit ou ayants cause est illicite » (art. L. 122-4). Cette représentation ou reproduction donc une contrefaçon sanctionnée par les articles L. 335-2 et suivants du Code de la propriété intellectuelle. Ce document numérique a été réalisé par Nord Compo .CommencementsCHAPITRE 1 L’intelligence naturelle et la logique de la conscience Ce livre raconte les aventures de l’intelligence naturelle. Leur véritable commencement coïncide avec l’émergence de la vie. Ce fut un évé
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Product is Docs
+
+Writing technical documentation in a product development group
+
+Christopher Gales and the Splunk Documentation Team
+
+
+
+
+
+
+
+
+Copyright © 2020 Christopher Gales
+All rights reserved.Splunk® is a registered trademark of Splunk Inc. in the United States and other countries. All other brand names, product names, or trademarks belong to their respective owners. Any use of a trademarked name without a trademark symbol is for readability purposes only.
+
+
+
+
+
+
+
+
+Contents
+
+
+Title Page
+Copyright
+Preface to the Second Edition
+1.   Introduction
+2.   Agile
+3.   Audience
+4.   Collaborative Authoring
+5.   Customer Feedback and Community
+6.   Documentation Decisions
+7.   Documenting Third-party Products
+8.   Hiring, Training, and Managing Documentation Teams
+9.   Learning Objectives
+10.    Maintaining Existing Content
+11.    Measuring Success
+12.    Organizing Documentation Tiger Teams
+13.    Research for Technical Writers
+14.    Scenario-driven Information Development
+15.    Technical Editing
+16.    Technical Verification
+17.    Tools and Content Delivery
+18.    Working with Customer Support
+19.    Working with Engineers
+20.    Working with the Field
+21.    Working with Marketing
+22.    Working with Product Management
+23.    Working with Remote Teams
+24.    Working with User Experience and Design
+25.    Writing SaaS Documentation
+26.    Afterword and Acknowledgments
+
+
+
+
+
+
+
+
+Preface to the Second Edition
+
+In the two years since we first published The Product is Docs, the book has found an enthusiastic audience of documentarians, designers, product managers, developers, customer success managers, sales engineers, teachers of technical writing, and more. The royalties from the book have enabled us to donate thousands of dollars to a dozen different charities. And most important, the book has had the effect we hoped it would: to spark productive discussions in teams and companies around the world—and in the technical writing profession itself—about how to write technical documentation in a product development group. As just one example, two months before the publication of this second edition, a collection of Write the Docs community members gathered in a Slack channel to read a chapter every day and discuss it. We avidly followed that conversation and took a lot of notes, many of which are incorporated into this volume.
+The other changes and additions are the result of the past two years of experience within our team and our products group, and also because we thought of a few things we just plain missed the first time.
+Here are the new chapters:
+
+
+Chapter 6, “Documentation Decisions”
+Chapter 12, “Organizing Documentation Tiger Teams”
+Chapter 20, “Working with the Field”
+Chapter 25, “Writing SaaS Documentation”
+
+In addition, we made substantial revisions to the following chapters:
+
+
+Chapter 5, “Customer Feedback and Community”.We added a new section about working with the community and retitled the chapter accordingly.
+Chapter 7, 

@@ -6,6 +6,7 @@ import json
 import os
 import re
 import sqlite3
+import urllib.parse
 import urllib.request
 from contextlib import asynccontextmanager, contextmanager
 from pathlib import Path
@@ -23,13 +24,85 @@ from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
+FIXED_TAXONOMY = {
+    "Personal Development": [
+        "Self-help", "Psychology", "Mental Health", "Relationships",
+        "Communication", "Emotional Intelligence", "Productivity",
+        "Time Management", "Motivation", "Finance & Money",
+        "Career Development", "Spirituality",
+    ],
+    "Literature & Fiction": [
+        "Novels", "Romance", "Contemporary Fiction", "Memoir",
+        "Short Stories", "Thriller", "Young Adult", "World Literature",
+    ],
+    "Language Learning": [
+        "French", "English", "Grammar", "Vocabulary",
+        "Exam Preparation", "Dictionaries", "Conversation", "Linguistics",
+    ],
+    "Science": [
+        "Physics", "Chemistry", "Biology", "Earth Science", "General Science",
+    ],
+    "Mathematics": [
+        "Calculus", "Algebra", "Statistics", "Geometry",
+        "Optimization", "Trigonometry",
+    ],
+    "Computer & Software": [
+        "Programming", "Software Engineering", "Computer Science",
+        "AI & Machine Learning", "Cybersecurity", "Networking",
+        "Data Engineering", "Cloud Computing",
+    ],
+    "Engineering": [
+        "Mechanical Engineering", "Electrical Engineering",
+        "Electronics & Embedded Systems", "Systems Engineering",
+        "Civil Engineering", "Aerospace Engineering", "Transport Engineering",
+    ],
+    "Business & Management": [
+        "Entrepreneurship", "Leadership", "Management", "Marketing",
+        "Finance", "Economics", "Project Management", "Communication Skills",
+    ],
+    "History & Politics": [
+        "Modern History", "Asian History", "Cambodian History",
+        "Islamic History", "Politics", "International Relations",
+    ],
+    "Health & Medicine": [
+        "Nutrition", "Mental Health", "Anatomy",
+        "Medical Education", "Sexual Health",
+    ],
+    "Philosophy": [
+        "Stoicism", "Ancient Philosophy", "Metaphysics", "Ethics",
+    ],
+    "Law": [
+        "Contract Law", "Employment Law", "Intellectual Property Law",
+    ],
+    "Career & Job Hunting": [
+        "Job Search", "Career Guides",
+    ],
+    "Sexuality & Relationships": [
+        "LGBTQ+", "Female Sexuality", "Adolescent Sexuality",
+    ],
+    "Tourism & Travel": [
+        "Travel Guides", "Tourism Management",
+    ],
+    "Communication & Writing": [
+        "Academic Writing", "Technical Writing",
+        "Professional Communication", "Essay & Memoir",
+    ],
+    "Art & Design": [
+        "Visual Arts", "Architecture", "UX Design",
+    ],
+    "Miscellaneous": [
+        "Uncategorized", "Other",
+    ],
+}
+
 DB_PATH = os.environ.get("DB_PATH", "backend/data/librarian.db")
 BOOKS_PATH = os.environ.get("BOOKS_PATH", "C:/Users/posen/Documents/Books")
 BOOKS_ROOT = Path(BOOKS_PATH)
 COVERS_DIR = Path("backend/data/covers")
 
 PATCHABLE_FIELDS = {"title", "author", "year", "language", "category",
-                    "subcategory", "difficulty", "description", "tags"}
+                    "subcategory", "difficulty", "description", "tags", "hint",
+                    "fixed_category", "fixed_subcategory"}
 
 os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 COVERS_DIR.mkdir(parents=True, exist_ok=True)
@@ -46,6 +119,10 @@ def get_db():
 
 
 def init_db():
+    with get_db() as conn:
+        # Reset any books stuck in 'processing' from a previous crashed run
+        conn.execute("UPDATE books SET status='pending' WHERE status='processing'")
+        conn.commit()
     with get_db() as conn:
         conn.execute("""
             CREATE TABLE IF NOT EXISTS books (
@@ -74,9 +151,22 @@ def init_db():
                 duplicate_of      INTEGER,
                 dedup_dismissed   INTEGER DEFAULT 0,
                 added_at          TEXT DEFAULT (datetime('now')),
-                processed_at      TEXT
+                processed_at      TEXT,
+                hint              TEXT,
+                fixed_category    TEXT,
+                fixed_subcategory TEXT
             )
         """)
+        for col, typedef in [
+            ("hint", "TEXT"),
+            ("fixed_category", "TEXT"),
+            ("fixed_subcategory", "TEXT"),
+        ]:
+            try:
+                conn.execute(f"ALTER TABLE books ADD COLUMN {col} {typedef}")
+                conn.commit()
+            except Exception:
+                pass
         conn.execute("""
             CREATE TABLE IF NOT EXISTS shelves (
                 id         INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -187,35 +277,418 @@ def _parse_llm_json(raw: str) -> dict:
     return {}
 
 
-def call_ollama(text: str) -> dict:
+_FIELDS_BLOCK = (
+    "Return a JSON object with these fields:\n"
+    "- title (string)\n"
+    "- author (string)\n"
+    "- year (string, e.g. '2019')\n"
+    "- language (string, e.g. 'English')\n"
+    "- category (pick ONE from: Systems Engineering, Railway & Transport Engineering, "
+    "Aerospace Engineering, Electrical Engineering, Electronics & Embedded Systems, "
+    "Mechanical Engineering, Civil & Structural Engineering, Control & Automation, "
+    "Software Engineering, Computer Science, AI & Machine Learning, Mathematics, Physics, "
+    "Standards & Norms - Railway, Standards & Norms - Safety, Project Management, "
+    "Business & Strategy, Economics & Finance, Personal Development, Psychology, "
+    "History, Philosophy, Language Learning, Literature & Fiction, Health & Medicine, Other)\n"
+    "- subcategory (string)\n"
+    "- difficulty (one of: Beginner, Intermediate, Advanced, Expert)\n"
+    "- description (1-2 sentence summary)\n"
+    "- tags (JSON array of keyword strings)\n\n"
+    "Return ONLY valid JSON. No markdown. No explanation.\n\n"
+)
+
+
+def _build_prompt(snippet: str, hint: str = "") -> str:
+    if hint and snippet:
+        content = (
+            f"USER HINT - use this as the primary source of truth:\n{hint}\n\n"
+            f"Supporting book text (use only to fill gaps not covered by the hint):\n{snippet[:800]}\n\n"
+        )
+    elif hint:
+        content = f"USER HINT - extract all metadata from this description:\n{hint}\n\n"
+    else:
+        content = f"Book text:\n{snippet[:1500]}\n\n"
+    return (
+        "You are a librarian metadata extractor. "
+        + _FIELDS_BLOCK
+        + content
+    )
+
+
+_LANG_CODES = {
+    "eng": "English", "fre": "French", "fra": "French", "spa": "Spanish",
+    "ger": "German", "deu": "German", "ara": "Arabic", "ita": "Italian",
+    "por": "Portuguese", "jpn": "Japanese", "chi": "Chinese", "zho": "Chinese",
+    "kor": "Korean", "rus": "Russian", "hin": "Hindi", "khm": "Khmer",
+    "en": "English", "fr": "French", "es": "Spanish", "de": "German",
+    "ar": "Arabic", "it": "Italian", "pt": "Portuguese", "ja": "Japanese",
+    "zh": "Chinese", "ko": "Korean", "ru": "Russian",
+}
+
+
+def _parse_filename(filepath: str) -> tuple:
+    """
+    Extract (title, author) from common e-book filename conventions.
+
+    Handles patterns like:
+      [Series 01] • When the War Was Over (Becker, Elizabeth) (Z-Library).epub
+      Learning Python (Lutz, Mark) (z-lib.org).pdf
+      The Great Gatsby - F. Scott Fitzgerald.epub
+      Author Name - Book Title.pdf
+    Returns (title, author) both as clean strings.
+    """
+    stem = Path(filepath).stem
+
+    # 0. Normalise separators
+    stem = stem.replace('_', ' ').replace('.', ' ')
+    stem = re.sub(r'\s+', ' ', stem).strip()
+
+    # 1. Remove known noise tokens (case-insensitive)
+    noise = [
+        r'\(Z-Library\)', r'\(z-lib\.org\)', r'\(zlibrary\.org\)',
+        r'\(z-lib\)', r'\(zlib\)', r'\(libgen\)', r'\(epub\)', r'\(pdf\)',
+        r'\bZ-Library\b', r'\bLibGen\b',
+    ]
+    for p in noise:
+        stem = re.sub(p, '', stem, flags=re.IGNORECASE)
+
+    # 2. Remove leading series tags like [Series Name 01] or [01]
+    stem = re.sub(r'^\s*\[[^\]]*\]\s*', '', stem)
+    stem = re.sub(r'^\s*•\s*', '', stem)   # leading bullet
+
+    # 3. Extract author from (LastName, FirstName) parenthetical
+    author = ""
+    m = re.search(r'\(\s*([A-Z][a-zA-Z\-\']+),\s*([A-Z][a-zA-Z\s\-\'\.]+)\s*\)', stem)
+    if m:
+        last, first = m.group(1).strip(), m.group(2).strip()
+        author = f"{first} {last}"
+        stem = stem[:m.start()] + stem[m.end():]
+
+    # 4. Handle "Author - Title" or "Title - Author" dash-separated format
+    _articles = {'the', 'a', 'an', 'le', 'la', 'les', 'un', 'une', 'des'}
+    if not author:
+        parts = re.split(r'\s+[-–]\s+', stem, maxsplit=1)
+        if len(parts) == 2:
+            a, b = parts[0].strip(), parts[1].strip()
+            a_words = a.split()
+            b_words = b.split()
+            # Author heuristic: short, doesn't start with an article, has no article as first word
+            a_looks_author = len(a_words) <= 4 and a_words[0].lower() not in _articles
+            b_looks_author = len(b_words) <= 4 and b_words[0].lower() not in _articles
+            if a_looks_author and not b_looks_author:
+                author, stem = a, b
+            elif b_looks_author and not a_looks_author:
+                author, stem = b, a
+            elif a_looks_author and b_looks_author:
+                # Both short — "Title - Author" is the dominant format, so right side = author
+                author, stem = b, a
+
+    # 5. Clean up title
+    title = re.sub(r'\([^)]*\)', '', stem).strip()   # remove remaining parentheticals
+    title = re.sub(r'\s+', ' ', title).strip(' •-–_')
+
+    return title, author
+
+
+def _norm(s: str) -> str:
+    """Normalise a string for deduplication comparison."""
+    return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
+
+def _search_open_library(title: str, author: str = "") -> list:
+    try:
+        params = {"limit": 5, "fields": "title,author_name,first_publish_year,language,subject"}
+        if title:
+            params["title"] = title
+        if author:
+            params["author"] = author
+        url = "https://openlibrary.org/search.json?" + urllib.parse.urlencode(params)
+        req = urllib.request.Request(url, headers={"User-Agent": "LibrarianAI/1.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+        results = []
+        for doc in (data.get("docs") or []):
+            raw_lang = (doc.get("language") or [""])[0]
+            results.append({
+                "title": doc.get("title", ""),
+                "author": ", ".join(doc.get("author_name") or []),
+                "year": str(doc.get("first_publish_year", "")),
+                "language": _LANG_CODES.get(raw_lang, raw_lang),
+                "subjects": (doc.get("subject") or [])[:20],
+                "source": "Open Library",
+            })
+        return results
+    except Exception as exc:
+        print(f"[open_library] {exc}")
+        return []
+
+
+def _search_google_books(title: str, author: str = "") -> list:
+    try:
+        q = f'intitle:"{title}"'
+        if author:
+            q += f' inauthor:"{author}"'
+        url = "https://www.googleapis.com/books/v1/volumes?" + urllib.parse.urlencode(
+            {"q": q, "maxResults": 5, "printType": "all"}
+        )
+        req = urllib.request.Request(url, headers={"User-Agent": "LibrarianAI/1.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+        results = []
+        for item in (data.get("items") or []):
+            info = item.get("volumeInfo", {})
+            raw_lang = info.get("language", "")
+            results.append({
+                "title": info.get("title", ""),
+                "author": ", ".join(info.get("authors") or []),
+                "year": (info.get("publishedDate") or "")[:4],
+                "language": _LANG_CODES.get(raw_lang, raw_lang),
+                "description": info.get("description", ""),
+                "subjects": info.get("categories") or [],
+                "source": "Google Books",
+            })
+        return results
+    except Exception as exc:
+        print(f"[google_books] {exc}")
+        return []
+
+
+def _search_crossref(title: str, author: str = "") -> list:
+    try:
+        params = {
+            "query.title": title,
+            "rows": 5,
+            "select": "title,author,published,subject,abstract,type,container-title,language",
+        }
+        if author:
+            params["query.author"] = author
+        url = "https://api.crossref.org/works?" + urllib.parse.urlencode(params)
+        req = urllib.request.Request(url, headers={"User-Agent": "LibrarianAI/1.0 (mailto:librarian@example.com)"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+        results = []
+        for item in ((data.get("message") or {}).get("items") or []):
+            titles = item.get("title") or []
+            authors = [
+                " ".join(filter(None, [a.get("given", ""), a.get("family", "")]))
+                for a in (item.get("author") or [])
+            ]
+            date_parts = ((item.get("published") or {}).get("date-parts") or [[]])[0]
+            year = str(date_parts[0]) if date_parts else ""
+            container = (item.get("container-title") or [""])[0]
+            abstract = re.sub(r"<[^>]+>", " ", item.get("abstract", "") or "").strip()
+            raw_lang = item.get("language", "")
+            subjects = list(item.get("subject") or [])
+            if container:
+                subjects.insert(0, container)
+            results.append({
+                "title": titles[0] if titles else "",
+                "author": ", ".join(authors),
+                "year": year,
+                "language": _LANG_CODES.get(raw_lang, raw_lang),
+                "description": abstract,
+                "subjects": subjects[:20],
+                "container": container,
+                "source": "CrossRef",
+            })
+        return results
+    except Exception as exc:
+        print(f"[crossref] {exc}")
+        return []
+
+
+def _search_internet_archive(title: str, author: str = "") -> list:
+    try:
+        q = f'title:("{title}")'
+        if author:
+            q += f' AND creator:("{author}")'
+        url = "https://archive.org/advancedsearch.php?" + urllib.parse.urlencode({
+            "q": q,
+            "fl[]": ["title", "creator", "date", "subject", "description", "language"],
+            "rows": 5,
+            "page": 1,
+            "output": "json",
+        })
+        req = urllib.request.Request(url, headers={"User-Agent": "LibrarianAI/1.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+        results = []
+        for doc in ((data.get("response") or {}).get("docs") or []):
+            creator = doc.get("creator", "")
+            if isinstance(creator, list):
+                creator = ", ".join(creator)
+            subjects = doc.get("subject") or []
+            if isinstance(subjects, str):
+                subjects = [subjects]
+            raw_lang = doc.get("language", "")
+            if isinstance(raw_lang, list):
+                raw_lang = raw_lang[0] if raw_lang else ""
+            year = str(doc.get("date", "") or "")[:4]
+            desc = doc.get("description", "")
+            if isinstance(desc, list):
+                desc = " ".join(desc)
+            results.append({
+                "title": doc.get("title", ""),
+                "author": creator,
+                "year": year,
+                "language": _LANG_CODES.get(raw_lang, raw_lang),
+                "description": desc[:500],
+                "subjects": subjects[:20],
+                "source": "Internet Archive",
+            })
+        return results
+    except Exception as exc:
+        print(f"[internet_archive] {exc}")
+        return []
+
+
+def _search_openalex(title: str, author: str = "") -> list:
+    try:
+        search = f"{title} {author}".strip()
+        url = "https://api.openalex.org/works?" + urllib.parse.urlencode({
+            "search": search,
+            "per-page": 5,
+            "select": "title,authorships,publication_year,language,topics,primary_location",
+        })
+        req = urllib.request.Request(url, headers={"User-Agent": "LibrarianAI/1.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+        results = []
+        for item in (data.get("results") or []):
+            authors = [
+                a.get("author", {}).get("display_name", "")
+                for a in (item.get("authorships") or [])[:3]
+            ]
+            topics = [t.get("display_name", "") for t in (item.get("topics") or [])[:10]]
+            source_name = ((item.get("primary_location") or {}).get("source") or {}).get("display_name", "")
+            if source_name:
+                topics.insert(0, source_name)
+            raw_lang = item.get("language") or ""
+            results.append({
+                "title": item.get("title", ""),
+                "author": ", ".join(filter(None, authors)),
+                "year": str(item.get("publication_year", "") or ""),
+                "language": _LANG_CODES.get(raw_lang, raw_lang),
+                "subjects": topics,
+                "source": "OpenAlex",
+            })
+        return results
+    except Exception as exc:
+        print(f"[openalex] {exc}")
+        return []
+
+
+def _collect_candidates(title: str, author: str) -> list:
+    """Gather results from all sources, deduplicate, return ranked list."""
+    all_results = []
+    for fn, src in [
+        (_search_open_library,    "OL"),
+        (_search_google_books,    "GB"),
+        (_search_crossref,        "CR"),
+        (_search_internet_archive,"IA"),
+        (_search_openalex,        "OAX"),
+    ]:
+        try:
+            for item in fn(title, author):
+                if item.get("title"):
+                    all_results.append(item)
+        except Exception:
+            pass
+
+    # Deduplicate: merge items with same normalised title+author
+    merged: dict = {}
+    for item in all_results:
+        key = _norm(item.get("title", "")) + "|" + _norm(item.get("author", ""))
+        if key not in merged:
+            merged[key] = dict(item)
+            merged[key]["sources"] = [item["source"]]
+        else:
+            existing = merged[key]
+            # Enrich with longer values
+            for field in ("description", "author", "year", "language"):
+                if len(str(item.get(field, "") or "")) > len(str(existing.get(field, "") or "")):
+                    existing[field] = item[field]
+            # Union subjects
+            seen_subs = {_norm(s) for s in (existing.get("subjects") or [])}
+            for s in (item.get("subjects") or []):
+                if _norm(s) not in seen_subs:
+                    existing.setdefault("subjects", []).append(s)
+                    seen_subs.add(_norm(s))
+            if item["source"] not in existing["sources"]:
+                existing["sources"].append(item["source"])
+
+    candidates = list(merged.values())
+
+    # Score: boost candidates whose title matches the search title closely
+    search_norm = _norm(title)
+    for c in candidates:
+        c_norm = _norm(c.get("title", ""))
+        c["_score"] = (
+            (3 if c_norm == search_norm else 1 if search_norm in c_norm else 0)
+            + len(c.get("sources", []))
+            + (1 if c.get("description") else 0)
+        )
+
+    candidates.sort(key=lambda x: -x.get("_score", 0))
+    # Remove internal score field
+    for c in candidates:
+        c.pop("_score", None)
+
+    return candidates[:8]
+
+
+def _map_to_fixed_category(subjects: list) -> tuple:
+    """Try to map a list of subjects to FIXED_TAXONOMY via simple keyword matching."""
+    if not subjects:
+        return "", ""
+    text = " ".join(subjects).lower()
+    scores = {}
+    for cat, subs in FIXED_TAXONOMY.items():
+        score = 0
+        if cat.lower() in text:
+            score += 3
+        for sub in subs:
+            if sub.lower() in text:
+                score += 2
+        # keyword hints per category
+        hints = {
+            "Computer & Software": ["python", "java", "programming", "software", "algorithm", "computer", "code", "web", "database", "linux"],
+            "Engineering": ["engineering", "mechanical", "electrical", "civil", "aerospace", "embedded", "signal"],
+            "Mathematics": ["mathematics", "calculus", "algebra", "statistics", "geometry", "math"],
+            "Science": ["physics", "chemistry", "biology", "science", "quantum", "thermodynamics"],
+            "Business & Management": ["business", "management", "marketing", "leadership", "economics", "entrepreneurship"],
+            "Personal Development": ["self-help", "motivation", "productivity", "psychology", "mindset"],
+            "History & Politics": ["history", "politics", "war", "civilization", "government"],
+            "Language Learning": ["language", "grammar", "french", "english", "vocabulary", "linguistics"],
+            "Literature & Fiction": ["novel", "fiction", "romance", "thriller", "poetry", "literature"],
+            "Health & Medicine": ["medicine", "health", "anatomy", "nutrition", "medical"],
+            "Philosophy": ["philosophy", "ethics", "stoicism", "metaphysics"],
+            "Law": ["law", "legal", "contract", "rights"],
+        }
+        for kw in hints.get(cat, []):
+            if kw in text:
+                score += 1
+        if score > 0:
+            scores[cat] = score
+    if not scores:
+        return "Miscellaneous", "Other"
+    best_cat = max(scores, key=lambda k: scores[k])
+    # Find best subcategory
+    best_sub = ""
+    best_sub_score = 0
+    for sub in FIXED_TAXONOMY.get(best_cat, []):
+        s = sum(1 for kw in sub.lower().split() if kw in text)
+        if s > best_sub_score:
+            best_sub_score = s
+            best_sub = sub
+    return best_cat, best_sub
+
+
+def call_ollama(text: str, hint: str = "") -> dict:
     ollama_url = os.getenv("OLLAMA_URL", "http://localhost:11434")
     ollama_model = os.getenv("OLLAMA_MODEL", "mistral:7b-instruct")
     snippet = text[:1500]
-    prompt = (
-        "You are a librarian metadata extractor. Given the following book text, "
-        "extract metadata and return it as JSON.\n\n"
-        "Fields to extract:\n"
-        "- title (string)\n"
-        "- author (string)\n"
-        "- year (string, e.g. '2019')\n"
-        "- language (string, e.g. 'English')\n"
-        "- category (pick one from the list below)\n"
-        "- subcategory (string)\n"
-        "- difficulty (one of: Beginner, Intermediate, Advanced, Expert)\n"
-        "- description (1-2 sentence summary)\n"
-        "- tags (JSON array of keyword strings)\n\n"
-        "Category list:\n"
-        "Systems Engineering, Railway & Transport Engineering, Aerospace Engineering, "
-        "Electrical Engineering, Electronics & Embedded Systems, Mechanical Engineering, "
-        "Civil & Structural Engineering, Control & Automation, Software Engineering, "
-        "Computer Science, AI & Machine Learning, Mathematics, Physics, "
-        "Standards & Norms - Railway, Standards & Norms - Safety, "
-        "Project Management, Business & Strategy, Economics & Finance, "
-        "Personal Development, Psychology, History, Philosophy, "
-        "Language Learning, Literature & Fiction, Health & Medicine, Other\n\n"
-        f"Book text:\n{snippet}\n\n"
-        "Return ONLY valid JSON. No markdown. No explanation."
-    )
+    prompt = _build_prompt(snippet, hint)
     payload = json.dumps(
         {"model": ollama_model, "prompt": prompt, "stream": False},
         ensure_ascii=True,
@@ -236,7 +709,7 @@ def call_ollama(text: str) -> dict:
         return {}
 
 
-def call_ollama_filename(filepath: str) -> dict:
+def call_ollama_filename(filepath: str, hint: str = "") -> dict:
     ollama_url = os.getenv("OLLAMA_URL", "http://localhost:11434")
     ollama_model = os.getenv("OLLAMA_MODEL", "mistral:7b-instruct")
     stem = Path(filepath).stem
@@ -244,6 +717,10 @@ def call_ollama_filename(filepath: str) -> dict:
         file_size = os.path.getsize(filepath)
     except Exception:
         file_size = 0
+    hint_section = (
+        f"User hint (treat as high-priority context):\n{hint}\n\n"
+        if hint else ""
+    )
     prompt = (
         "You are a librarian metadata extractor. Given only a filename and file size, "
         "infer book metadata and return it as JSON.\n\n"
@@ -266,7 +743,8 @@ def call_ollama_filename(filepath: str) -> dict:
         "Project Management, Business & Strategy, Economics & Finance, "
         "Personal Development, Psychology, History, Philosophy, "
         "Language Learning, Literature & Fiction, Health & Medicine, Other\n\n"
-        f"Filename: {stem}\n"
+        + hint_section
+        + f"Filename: {stem}\n"
         f"File size: {file_size} bytes\n\n"
         "Return ONLY valid JSON. No markdown. No explanation."
     )
@@ -291,13 +769,15 @@ def call_ollama_filename(filepath: str) -> dict:
 
 
 def process_book(book_id: int, filepath: str, file_type: str):
-    # Step 1: set status=processing
+    # Step 1: set status=processing, read hint
     with get_db() as conn:
         conn.execute(
             "UPDATE books SET status='processing', error_msg=NULL WHERE id=?",
             (book_id,),
         )
         conn.commit()
+        hint_row = conn.execute("SELECT hint FROM books WHERE id=?", (book_id,)).fetchone()
+    hint = (hint_row["hint"] or "").strip() if hint_row else ""
 
     # Step 2: duplicate check
     file_hash = hashlib.sha256(Path(filepath).read_bytes()).hexdigest()
@@ -323,21 +803,26 @@ def process_book(book_id: int, filepath: str, file_type: str):
     (cache_dir / f"{book_id}.txt").write_text(text, encoding="utf-8")
 
     # Step 4: call ollama
-    if text:
-        meta = call_ollama(text)
-        method = "fitz+ollama"
+    if text or hint:
+        meta = call_ollama(text, hint=hint)
+        method = "hint+ollama" if (hint and not text) else "fitz+ollama"
     else:
         meta = call_ollama_filename(filepath)
         method = "filename_heuristic"
 
-    title = meta.get("title") or ""
-    author = meta.get("author") or ""
-    year = meta.get("year") or ""
-    language = meta.get("language") or ""
-    category = meta.get("category") or ""
-    subcategory = meta.get("subcategory") or ""
-    difficulty = meta.get("difficulty") or ""
-    description = meta.get("description") or ""
+    def _str(v):
+        if isinstance(v, list):
+            return ", ".join(str(x) for x in v if x)
+        return str(v).strip() if v else ""
+
+    title = _str(meta.get("title"))
+    author = _str(meta.get("author"))
+    year = _str(meta.get("year"))
+    language = _str(meta.get("language"))
+    category = _str(meta.get("category"))
+    subcategory = _str(meta.get("subcategory"))
+    difficulty = _str(meta.get("difficulty"))
+    description = _str(meta.get("description"))
     tags_raw = meta.get("tags", [])
     tags = json.dumps(tags_raw if isinstance(tags_raw, list) else [], ensure_ascii=True)
 
@@ -516,6 +1001,9 @@ class PatchBookRequest(BaseModel):
     difficulty: Optional[str] = None
     description: Optional[str] = None
     tags: Optional[List[str]] = None
+    hint: Optional[str] = None
+    fixed_category: Optional[str] = None
+    fixed_subcategory: Optional[str] = None
 
 
 @app.patch("/api/books/{book_id}")
@@ -546,6 +1034,57 @@ def patch_book(book_id: int, req: PatchBookRequest):
     except (json.JSONDecodeError, TypeError):
         book["tags"] = []
     return book
+
+
+class RenameRequest(BaseModel):
+    new_filename: str
+
+
+@app.post("/api/books/{book_id}/rename")
+def rename_book_file(book_id: int, req: RenameRequest):
+    new_name = req.new_filename.strip()
+
+    # Reject path traversal or empty names
+    if not new_name or any(c in new_name for c in r'/\:*?"<>|'):
+        raise HTTPException(status_code=400, detail="Invalid filename")
+
+    with get_db() as conn:
+        row = conn.execute("SELECT filepath, filename FROM books WHERE id=?", (book_id,)).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Book not found")
+
+    old_path = Path(row["filepath"])
+    if not old_path.exists():
+        raise HTTPException(status_code=404, detail="File not found on disk")
+
+    # Keep original extension if user omitted it
+    old_ext = old_path.suffix.lower()
+    if not new_name.lower().endswith(old_ext):
+        new_name = new_name + old_ext
+
+    new_path = old_path.parent / new_name
+    if new_path.exists() and new_path != old_path:
+        raise HTTPException(status_code=409, detail=f"A file named '{new_name}' already exists in that folder")
+
+    old_path.rename(new_path)
+    new_path_str = str(new_path).replace("\\", "/")
+
+    with get_db() as conn:
+        conn.execute(
+            "UPDATE books SET filepath=?, filename=? WHERE id=?",
+            (new_path_str, new_name, book_id),
+        )
+        conn.commit()
+        row = conn.execute("SELECT * FROM books WHERE id=?", (book_id,)).fetchone()
+
+    result = dict(row)
+    try:
+        result["tags"] = json.loads(result["tags"] or "[]")
+    except (json.JSONDecodeError, TypeError):
+        result["tags"] = []
+
+    print(f"[rename] id={book_id} {old_path.name!r} -> {new_name!r}")
+    return result
 
 
 @app.delete("/api/books/{book_id}")
@@ -628,6 +1167,98 @@ def open_book(book_id: int):
 
     os.startfile(str(resolved))
     return {"opened": str(resolved)}
+
+
+@app.post("/api/books/{book_id}/online-lookup")
+def online_lookup(book_id: int):
+    with get_db() as conn:
+        row = conn.execute("SELECT * FROM books WHERE id=?", (book_id,)).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Book not found")
+
+    book = dict(row)
+
+    # Filename is the primary source — parse it for clean title + author
+    fn_title, fn_author = _parse_filename(book.get("filepath", ""))
+
+    # Use filename-derived values as primary; fall back to DB values only if filename gave nothing
+    title  = fn_title  or (book.get("title")  or "").strip()
+    author = fn_author or (book.get("author") or "").strip()
+
+    print(f"[online_lookup] id={book_id} title={title!r} author={author!r}")
+
+    candidates = _collect_candidates(title, author)
+
+    print(f"[online_lookup] id={book_id} found {len(candidates)} candidates")
+
+    if not candidates:
+        raise HTTPException(status_code=404, detail="No results found online for this book")
+
+    return {"candidates": candidates, "query_title": title, "query_author": author}
+
+
+class CandidateApply(BaseModel):
+    title: Optional[str] = None
+    author: Optional[str] = None
+    year: Optional[str] = None
+    language: Optional[str] = None
+    description: Optional[str] = None
+    subjects: Optional[List[str]] = None
+    sources: Optional[List[str]] = None
+
+
+@app.post("/api/books/{book_id}/online-lookup/apply")
+def online_lookup_apply(book_id: int, candidate: CandidateApply):
+    with get_db() as conn:
+        row = conn.execute("SELECT id FROM books WHERE id=?", (book_id,)).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Book not found")
+
+    subjects = candidate.subjects or []
+    fixed_cat, fixed_sub = _map_to_fixed_category(subjects)
+    tags = [s.title() for s in subjects[:8] if len(s) < 40]
+    source_note = ", ".join(candidate.sources or [])
+
+    with get_db() as conn:
+        conn.execute(
+            """UPDATE books SET
+                title=COALESCE(NULLIF(?, ''), title),
+                author=COALESCE(NULLIF(?, ''), author),
+                year=COALESCE(NULLIF(?, ''), year),
+                language=COALESCE(NULLIF(?, ''), language),
+                description=COALESCE(NULLIF(?, ''), description),
+                tags=?,
+                fixed_category=COALESCE(NULLIF(?, ''), fixed_category),
+                fixed_subcategory=COALESCE(NULLIF(?, ''), fixed_subcategory),
+                confidence_score=1.0,
+                extraction_method=?,
+                status='done',
+                processed_at=datetime('now')
+               WHERE id=?""",
+            (
+                candidate.title or "",
+                candidate.author or "",
+                candidate.year or "",
+                candidate.language or "",
+                candidate.description or "",
+                json.dumps(tags, ensure_ascii=True),
+                fixed_cat,
+                fixed_sub,
+                f"online:{source_note}",
+                book_id,
+            ),
+        )
+        conn.commit()
+        updated = conn.execute("SELECT * FROM books WHERE id=?", (book_id,)).fetchone()
+
+    result = dict(updated)
+    try:
+        result["tags"] = json.loads(result["tags"] or "[]")
+    except (json.JSONDecodeError, TypeError):
+        result["tags"] = []
+
+    print(f"[online_lookup_apply] id={book_id} applied: {result['title']!r}")
+    return result
 
 
 @app.post("/api/books/{book_id}/reprocess")
@@ -1062,6 +1693,11 @@ def get_analytics():
     }
 
 
+@app.get("/api/fixed-taxonomy")
+def get_fixed_taxonomy():
+    return FIXED_TAXONOMY
+
+
 @app.get("/api/categories")
 def get_categories():
     with get_db() as conn:
@@ -1069,6 +1705,39 @@ def get_categories():
             "SELECT DISTINCT category FROM books WHERE category IS NOT NULL AND category != '' ORDER BY category"
         ).fetchall()
     return [row["category"] for row in rows]
+
+
+@app.get("/api/taxonomy")
+def get_taxonomy():
+    with get_db() as conn:
+        # All (category, subcategory) pairs with counts
+        rows = conn.execute(
+            """
+            SELECT
+                COALESCE(category, '') AS category,
+                COALESCE(subcategory, '') AS subcategory,
+                COUNT(*) AS cnt
+            FROM books
+            GROUP BY category, subcategory
+            ORDER BY category, subcategory
+            """
+        ).fetchall()
+
+    tree = {}
+    for row in rows:
+        cat = row["category"] or "(no category)"
+        sub = row["subcategory"] or ""
+        cnt = row["cnt"]
+        if cat not in tree:
+            tree[cat] = {"name": cat, "count": 0, "subcategories": []}
+        tree[cat]["count"] += cnt
+        if sub:
+            tree[cat]["subcategories"].append({"name": sub, "count": cnt})
+
+    result = sorted(tree.values(), key=lambda x: -x["count"])
+    for item in result:
+        item["subcategories"].sort(key=lambda x: -x["count"])
+    return result
 
 
 os.makedirs("backend/static", exist_ok=True)

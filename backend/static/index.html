@@ -47,6 +47,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   white-space: nowrap;
 }
 #btn-scan:hover { background: #5c65f5; }
+#btn-taxonomy {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+#btn-taxonomy:hover { background: rgba(255,255,255,0.2); }
 #stats-bar {
   display: flex;
   gap: 16px;
@@ -373,6 +385,79 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 #scan-modal .modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
 #scan-result { font-size: 0.83rem; color: #2ecc71; margin-top: 10px; min-height: 20px; }
 
+/* Taxonomy modal */
+#taxonomy-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0;
+  width: 700px;
+  max-width: 96vw;
+  max-height: 85vh;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#taxonomy-header {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+#taxonomy-header h2 { font-size: 1rem; flex: 1; }
+#taxonomy-header .tax-actions { display: flex; gap: 8px; }
+#taxonomy-body { overflow-y: auto; padding: 16px 20px; flex: 1; }
+#taxonomy-search {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d0d0da;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+  outline: none;
+  font-family: inherit;
+}
+#taxonomy-search:focus { border-color: #7c83fd; }
+.tax-summary { font-size: 0.78rem; color: #888; margin-bottom: 12px; }
+.tax-cat {
+  margin-bottom: 6px;
+  border: 1px solid #e8e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.tax-cat-header {
+  display: flex;
+  align-items: center;
+  padding: 9px 12px;
+  background: #f4f4fb;
+  cursor: pointer;
+  user-select: none;
+  gap: 8px;
+}
+.tax-cat-header:hover { background: #eeeeff; }
+.tax-cat-name { flex: 1; font-weight: 600; font-size: 0.85rem; color: #1a1a2e; }
+.tax-cat-count { font-size: 0.75rem; background: #1a1a2e; color: #fff; padding: 2px 8px; border-radius: 10px; }
+.tax-cat-toggle { font-size: 0.75rem; color: #999; width: 14px; }
+.tax-subs { border-top: 1px solid #e8e8f0; display: none; }
+.tax-subs.open { display: block; }
+.tax-sub-row {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px 6px 28px;
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 0.82rem;
+  color: #444;
+  gap: 8px;
+}
+.tax-sub-row:last-child { border-bottom: none; }
+.tax-sub-name { flex: 1; }
+.tax-sub-count { font-size: 0.72rem; color: #888; }
+.tax-no-sub { padding: 6px 12px 6px 28px; font-size: 0.78rem; color: #bbb; font-style: italic; }
+#taxonomy-footer { padding: 12px 20px; border-top: 1px solid #e0e0e8; display: flex; gap: 10px; justify-content: flex-end; flex-shrink: 0; }
+
 /* Toast */
 #toast {
   position: fixed;
@@ -401,6 +486,74 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 ::-webkit-scrollbar-track { background: #f0f0f0; }
 ::-webkit-scrollbar-thumb { background: #c0c0d0; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #a0a0c0; }
+
+/* Candidate picker modal */
+#candidate-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 600;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 48px;
+  overflow-y: auto;
+}
+#candidate-overlay.open { display: flex; }
+#candidate-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 28px 24px;
+  width: 720px;
+  max-width: 96vw;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  margin-bottom: 48px;
+}
+#candidate-modal h2 { font-size: 1rem; color: #1a1a2e; margin-bottom: 4px; }
+#candidate-modal .cq-subtitle { font-size: 0.8rem; color: #888; margin-bottom: 18px; }
+#candidate-modal .cq-subtitle strong { color: #444; }
+.candidate-card {
+  border: 1px solid #e0e0ec;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.candidate-card:hover { border-color: #7c83fd; background: #f8f8ff; }
+.candidate-card .cc-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 6px; }
+.candidate-card .cc-title { font-weight: 700; color: #1a1a2e; font-size: 0.92rem; flex: 1; }
+.candidate-card .cc-year { color: #888; font-size: 0.82rem; white-space: nowrap; }
+.candidate-card .cc-author { font-size: 0.83rem; color: #444; margin-bottom: 5px; }
+.candidate-card .cc-lang { display: inline-block; font-size: 0.72rem; background: #e8f0fe; color: #1a4aaa; border-radius: 4px; padding: 1px 7px; margin-right: 4px; }
+.candidate-card .cc-desc { font-size: 0.78rem; color: #666; line-height: 1.4; margin-top: 5px; max-height: 3.5em; overflow: hidden; }
+.cc-sources { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+.cc-src-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #f0f0f8;
+  color: #555;
+  border-radius: 3px;
+  padding: 1px 6px;
+  border: 1px solid #d8d8e8;
+}
+.cc-subjects { font-size: 0.72rem; color: #888; margin-top: 4px; }
+.candidate-card .cc-apply-btn {
+  margin-top: 10px;
+  background: #7c83fd;
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.candidate-card .cc-apply-btn:hover { background: #5c65f5; }
+#candidate-modal .cq-footer { display: flex; justify-content: flex-end; padding-top: 8px; border-top: 1px solid #f0f0f0; margin-top: 8px; }
+#candidate-modal .cq-cancel { background: none; border: 1px solid #ccc; padding: 7px 18px; border-radius: 6px; font-size: 0.85rem; cursor: pointer; color: #555; }
+#candidate-modal .cq-cancel:hover { border-color: #888; color: #222; }
 </style>
 </head>
 <body>
@@ -415,6 +568,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="stat">Pending: <strong id="stat-pending">-</strong></div>
     <div class="stat">Processing: <strong id="stat-processing">-</strong></div>
   </div>
+  <button id="btn-taxonomy" onclick="openTaxonomyModal()">Categories</button>
   <button id="btn-scan" onclick="openScanModal()">+ Scan Folder</button>
 </div>
 
@@ -494,8 +648,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       <div class="field-group"><label>Author</label><input id="d-author" type="text"></div>
       <div class="field-group"><label>Year</label><input id="d-year" type="text"></div>
       <div class="field-group"><label>Language</label><input id="d-language" type="text"></div>
-      <div class="field-group"><label>Category</label><input id="d-category" type="text"></div>
-      <div class="field-group"><label>Subcategory</label><input id="d-subcategory" type="text"></div>
+      <div class="field-group"><label>Category <span style="font-size:0.68rem;color:#aaa;font-weight:400">(LLM)</span></label><input id="d-category" type="text"></div>
+      <div class="field-group"><label>Subcategory <span style="font-size:0.68rem;color:#aaa;font-weight:400">(LLM)</span></label><input id="d-subcategory" type="text"></div>
+      <div class="field-group" style="border-left:3px solid #7c83fd;padding-left:8px">
+        <label style="color:#7c83fd">Fixed Category</label>
+        <select id="d-fixed-category" onchange="onFixedCategoryChange()">
+          <option value="">-- select --</option>
+        </select>
+      </div>
+      <div class="field-group" style="border-left:3px solid #7c83fd;padding-left:8px">
+        <label style="color:#7c83fd">Fixed Subcategory</label>
+        <select id="d-fixed-subcategory">
+          <option value="">-- select --</option>
+        </select>
+      </div>
       <div class="field-group"><label>Difficulty</label>
         <select id="d-difficulty">
           <option value="">Unknown</option>
@@ -514,15 +680,45 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       </div>
       <div class="field-group"><label>Tags (comma-separated)</label><input id="d-tags" type="text"></div>
       <div class="field-group"><label>Description</label><textarea id="d-description"></textarea></div>
+      <div class="field-group" style="margin-top:14px;padding-top:12px;border-top:1px dashed #e0e0e8">
+        <label style="color:#7c83fd">LLM Hint</label>
+        <textarea id="d-hint" placeholder="e.g. Python book by Mark Lutz, 2013, beginner level, covers OOP and scripting" style="min-height:60px"></textarea>
+        <div style="font-size:0.72rem;color:#aaa;margin-top:3px">Save then Reprocess - the LLM will use this as priority context.</div>
+      </div>
       <div style="font-size:0.72rem;color:#aaa;margin-top:8px">
         <div id="d-filepath" style="word-break:break-all;margin-bottom:4px"></div>
         <div id="d-meta"></div>
+      </div>
+    </div>
+    <div id="rename-section" style="padding:10px 16px;border-top:1px solid #e0e0e8;background:#fafafa">
+      <div style="font-size:0.75rem;font-weight:600;color:#666;text-transform:uppercase;margin-bottom:5px">
+        File Name
+        <span style="font-weight:400;color:#aaa;font-size:0.7rem;margin-left:6px">Edit then click Rename to apply on disk</span>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center">
+        <input id="d-filename" type="text" style="flex:1;padding:6px 9px;border:1px solid #d8d8e4;border-radius:5px;font-size:0.8rem;font-family:monospace;background:#fff;outline:none" spellcheck="false">
+        <button onclick="renameFile()" style="background:#1a1a2e;color:#fff;border:none;padding:6px 12px;border-radius:5px;cursor:pointer;font-size:0.78rem;font-weight:600;white-space:nowrap">Rename</button>
       </div>
     </div>
     <div id="detail-footer">
       <button class="btn-primary" onclick="saveBook()">Save</button>
       <button class="btn-secondary" onclick="openBook()">Open File</button>
       <button class="btn-secondary" onclick="reprocessBook()">Reprocess</button>
+      <button id="btn-online-lookup" onclick="onlineLookup()" title="Search Open Library + Google Books for complete metadata" style="background:#fff8e8;color:#7a4a00;border:1px solid #e0c060;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:0.83rem;font-weight:600;white-space:nowrap">
+        Online Lookup
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Candidate picker modal -->
+<div id="candidate-overlay">
+  <div id="candidate-modal" onclick="event.stopPropagation()">
+    <h2>Online Lookup — Choose a Result</h2>
+    <div class="cq-subtitle" id="cq-subtitle"></div>
+    <div id="candidate-list"></div>
+    <div class="cq-footer">
+      <button class="cq-cancel" onclick="closeCandidateModal()">Cancel</button>
     </div>
   </div>
 </div>
@@ -541,6 +737,30 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   </div>
 </div>
 
+<!-- Taxonomy modal -->
+<div id="taxonomy-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:500;align-items:center;justify-content:center;" onclick="if(event.target===this)closeTaxonomyModal()">
+  <div id="taxonomy-modal" onclick="event.stopPropagation()">
+    <div id="taxonomy-header">
+      <h2>Category Taxonomy</h2>
+      <button id="btn-close-tax" style="background:none;border:none;color:rgba(255,255,255,0.7);cursor:pointer;font-size:1.2rem;padding:2px 6px;margin-left:auto" onclick="closeTaxonomyModal()">&#x2715;</button>
+    </div>
+    <div id="taxonomy-body">
+      <div style="display:flex;gap:8px;margin-bottom:12px">
+        <button id="tab-llm" class="btn-primary" style="font-size:0.8rem;padding:5px 14px" onclick="switchTaxTab('llm')">LLM Categories</button>
+        <button id="tab-fixed" class="btn-secondary" style="font-size:0.8rem;padding:5px 14px" onclick="switchTaxTab('fixed')">Fixed Taxonomy</button>
+      </div>
+      <input id="taxonomy-search" type="search" placeholder="Filter categories...">
+      <div id="tax-summary" class="tax-summary"></div>
+      <div id="tax-tree"></div>
+    </div>
+    <div id="taxonomy-footer">
+      <button class="btn-secondary" onclick="copyTaxonomy()">Copy as Text</button>
+      <button class="btn-secondary" onclick="exportTaxonomyCSV()">Export CSV</button>
+      <button class="btn-primary" onclick="closeTaxonomyModal()">Close</button>
+    </div>
+  </div>
+</div>
+
 <div id="toast"></div>
 
 <script>
@@ -553,12 +773,24 @@ let sortCol = 'added_at';
 let sortDir = -1;
 let selectedIds = new Set();
 let autoRefreshTimer = null;
+let fixedTaxonomy = {};
 
 // ---- Init ----
 async function init() {
-  await Promise.all([loadBooks(), loadStats(), loadCategories()]);
+  await Promise.all([loadBooks(), loadStats(), loadFixedTaxonomy()]);
   setInterval(loadStats, 5000);
   document.getElementById('search-input').addEventListener('input', applyFilters);
+}
+
+function onFixedCategoryChange() {
+  const cat = document.getElementById('d-fixed-category').value;
+  const subSel = document.getElementById('d-fixed-subcategory');
+  subSel.innerHTML = '<option value="">-- select --</option>';
+  (fixedTaxonomy[cat] || []).forEach(sub => {
+    const opt = document.createElement('option');
+    opt.value = sub; opt.textContent = sub;
+    subSel.appendChild(opt);
+  });
 }
 
 // ---- API helpers ----
@@ -604,14 +836,24 @@ async function loadStats() {
 }
 
 // ---- Load categories ----
-async function loadCategories() {
+async function loadFixedTaxonomy() {
   try {
-    const cats = await apiFetch('/api/categories');
+    fixedTaxonomy = await apiFetch('/api/fixed-taxonomy');
+    // Populate filter-category dropdown with fixed taxonomy
     const sel = document.getElementById('filter-category');
-    cats.forEach(c => {
+    sel.innerHTML = '<option value="">All</option>';
+    Object.keys(fixedTaxonomy).forEach(cat => {
       const opt = document.createElement('option');
-      opt.value = c; opt.textContent = c;
+      opt.value = cat; opt.textContent = cat;
       sel.appendChild(opt);
+    });
+    // Populate detail panel fixed-category dropdown
+    const fcSel = document.getElementById('d-fixed-category');
+    fcSel.innerHTML = '<option value="">-- select --</option>';
+    Object.keys(fixedTaxonomy).forEach(cat => {
+      const opt = document.createElement('option');
+      opt.value = cat; opt.textContent = cat;
+      fcSel.appendChild(opt);
     });
   } catch(e) { /* ignore */ }
 }
@@ -625,10 +867,13 @@ function applyFilters() {
 
   filteredBooks = allBooks.filter(b => {
     if (status && b.status !== status) return false;
-    if (category && b.category !== category) return false;
+    if (category) {
+      const bookCat = b.fixed_category || b.category || '';
+      if (bookCat !== category) return false;
+    }
     if (reading && b.reading_status !== reading) return false;
     if (q) {
-      const haystack = [b.title, b.author, b.category, b.filename].join(' ').toLowerCase();
+      const haystack = [b.title, b.author, b.fixed_category, b.category, b.filename].join(' ').toLowerCase();
       if (!haystack.includes(q)) return false;
     }
     return true;
@@ -658,7 +903,7 @@ function renderTable() {
 
   if (!filteredBooks.length) {
     tbody.innerHTML = '';
-    empty.style.display = '';
+    empty.style.display = 'block';
     return;
   }
   empty.style.display = 'none';
@@ -729,7 +974,14 @@ function openDetail(book) {
   document.getElementById('d-reading-status').value = book.reading_status || 'to-read';
   document.getElementById('d-tags').value = Array.isArray(book.tags) ? book.tags.join(', ') : '';
   document.getElementById('d-description').value = book.description || '';
+  document.getElementById('d-hint').value = book.hint || '';
+  // Fixed category cascade
+  const fcSel = document.getElementById('d-fixed-category');
+  fcSel.value = book.fixed_category || '';
+  onFixedCategoryChange();
+  document.getElementById('d-fixed-subcategory').value = book.fixed_subcategory || '';
   document.getElementById('d-filepath').textContent = book.filepath || '';
+  document.getElementById('d-filename').value = book.filename || '';
   document.getElementById('d-meta').textContent = `Status: ${book.status} | Type: ${book.file_type || '-'} | Added: ${(book.added_at || '').slice(0,10)}`;
 
   // Confidence bar
@@ -774,6 +1026,10 @@ async function saveBook() {
     subcategory: document.getElementById('d-subcategory').value || null,
     difficulty: document.getElementById('d-difficulty').value || null,
     description: document.getElementById('d-description').value || null,
+    hint: document.getElementById('d-hint').value || null,
+    fixed_category: document.getElementById('d-fixed-category').value || null,
+    fixed_subcategory: document.getElementById('d-fixed-subcategory').value || null,
+
     tags,
   };
   // Remove null fields
@@ -842,6 +1098,50 @@ async function reprocessBookById(id) {
   }
 }
 
+// ---- Rename file ----
+async function renameFile() {
+  if (!selectedBookId) return;
+  const newName = document.getElementById('d-filename').value.trim();
+  if (!newName) return;
+  const book = allBooks.find(b => b.id === selectedBookId);
+  if (book && newName === book.filename) return; // no change
+  try {
+    const updated = await apiFetch(`/api/books/${selectedBookId}/rename`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ new_filename: newName }),
+    });
+    const idx = allBooks.findIndex(b => b.id === selectedBookId);
+    if (idx !== -1) allBooks[idx] = updated;
+    applyFilters();
+    // Refresh detail with updated data
+    document.getElementById('d-filename').value = updated.filename || '';
+    document.getElementById('d-filepath').textContent = updated.filepath || '';
+    document.getElementById('detail-title').textContent = updated.title || updated.filename;
+    showToast(`Renamed to: ${updated.filename}`);
+  } catch(e) {
+    showToast('Rename failed: ' + e.message, true);
+  }
+}
+
+// ---- Online Lookup ----
+async function onlineLookup() {
+  if (!selectedBookId) return;
+  const btn = document.getElementById('btn-online-lookup');
+  const orig = btn.textContent;
+  btn.textContent = 'Searching...';
+  btn.disabled = true;
+  try {
+    const data = await apiFetch(`/api/books/${selectedBookId}/online-lookup`, { method: 'POST' });
+    showCandidateModal(selectedBookId, data);
+  } catch(e) {
+    showToast('Online lookup failed: ' + e.message, true);
+  } finally {
+    btn.textContent = orig;
+    btn.disabled = false;
+  }
+}
+
 // ---- Checkbox selection ----
 function toggleRowCheck(id, checked) {
   if (checked) selectedIds.add(id);
@@ -860,8 +1160,8 @@ function updateBatchUI() {
   const n = selectedIds.size;
   document.getElementById('sel-count').textContent = n;
   document.getElementById('del-count').textContent = n;
-  document.getElementById('btn-reprocess-selected').style.display = n > 0 ? '' : 'none';
-  document.getElementById('btn-delete-selected').style.display = n > 0 ? '' : 'none';
+  document.getElementById('btn-reprocess-selected').style.display = n > 0 ? 'inline-block' : 'none';
+  document.getElementById('btn-delete-selected').style.display = n > 0 ? 'inline-block' : 'none';
   const chkAll = document.getElementById('chk-all');
   if (chkAll) {
     chkAll.checked = filteredBooks.length > 0 && filteredBooks.every(b => selectedIds.has(b.id));
@@ -894,8 +1194,8 @@ async function runBatchReprocess(ids) {
   let done = 0;
   batchStopped = false;
 
-  prog.style.display = '';
-  stopBtn.style.display = '';
+  prog.style.display = 'inline-block';
+  stopBtn.style.display = 'inline-block';
 
   const chunks = [];
   for (let i = 0; i < ids.length; i += CHUNK) chunks.push(ids.slice(i, i + CHUNK));
@@ -967,12 +1267,12 @@ function stopBatch() {
 async function deleteSelected() {
   const ids = [...selectedIds];
   if (!ids.length) return;
-  if (!confirm(`Remove ${ids.length} book(s) from the library?\n\nFiles on disk will NOT be deleted.`)) return;
+  if (!confirm(`Delete ${ids.length} book(s)?\n\nThis will remove them from the library AND delete the files from disk. This cannot be undone.`)) return;
   try {
     const res = await apiFetch('/api/delete-batch', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ids, delete_files: false }),
+      body: JSON.stringify({ ids, delete_files: true }),
     });
     allBooks = allBooks.filter(b => !ids.includes(b.id));
     selectedIds.clear();
@@ -1035,7 +1335,255 @@ function showToast(msg, isError = false) {
   toastTimer = setTimeout(() => { el.className = ''; }, 3000);
 }
 
+// ---- Taxonomy modal ----
+let taxonomyData = [];
+let currentTaxTab = 'llm';
+
+async function openTaxonomyModal() {
+  document.getElementById('taxonomy-overlay').style.display = 'flex';
+  document.getElementById('tax-tree').innerHTML = '<div style="padding:20px;color:#aaa;text-align:center">Loading...</div>';
+  document.getElementById('taxonomy-search').value = '';
+  switchTaxTab('llm');
+  try {
+    taxonomyData = await apiFetch('/api/taxonomy');
+    renderTaxonomy(taxonomyData);
+  } catch(e) {
+    document.getElementById('tax-tree').innerHTML = '<div style="padding:20px;color:#e74c3c">Failed to load: ' + e.message + '</div>';
+  }
+}
+
+function switchTaxTab(tab) {
+  currentTaxTab = tab;
+  document.getElementById('tab-llm').className = tab === 'llm' ? 'btn-primary' : 'btn-secondary';
+  document.getElementById('tab-llm').style.fontSize = '0.8rem';
+  document.getElementById('tab-llm').style.padding = '5px 14px';
+  document.getElementById('tab-fixed').className = tab === 'fixed' ? 'btn-primary' : 'btn-secondary';
+  document.getElementById('tab-fixed').style.fontSize = '0.8rem';
+  document.getElementById('tab-fixed').style.padding = '5px 14px';
+  document.getElementById('taxonomy-search').value = '';
+  if (tab === 'llm') {
+    renderTaxonomy(taxonomyData);
+  } else {
+    renderFixedTaxonomy();
+  }
+}
+
+function closeTaxonomyModal() {
+  document.getElementById('taxonomy-overlay').style.display = 'none';
+}
+
+function renderTaxonomy(data) {
+  const totalCats = data.length;
+  const totalSubs = data.reduce((s, c) => s + c.subcategories.length, 0);
+  const totalBooks = data.reduce((s, c) => s + c.count, 0);
+  document.getElementById('tax-summary').textContent =
+    `${totalCats} categories - ${totalSubs} subcategories - ${totalBooks} books`;
+
+  const tree = document.getElementById('tax-tree');
+  if (!data.length) {
+    tree.innerHTML = '<div style="padding:20px;color:#aaa;text-align:center">No categories found.</div>';
+    return;
+  }
+
+  tree.innerHTML = data.map((cat, i) => `
+    <div class="tax-cat">
+      <div class="tax-cat-header" onclick="toggleCat(${i})">
+        <span class="tax-cat-toggle" id="tax-tog-${i}">+</span>
+        <span class="tax-cat-name">${esc(cat.name)}</span>
+        <span class="tax-cat-count">${cat.count}</span>
+      </div>
+      <div class="tax-subs" id="tax-subs-${i}">
+        ${cat.subcategories.length
+          ? cat.subcategories.map(s => `
+              <div class="tax-sub-row">
+                <span class="tax-sub-name">${esc(s.name)}</span>
+                <span class="tax-sub-count">${s.count} book${s.count !== 1 ? 's' : ''}</span>
+              </div>`).join('')
+          : '<div class="tax-no-sub">no subcategories</div>'
+        }
+      </div>
+    </div>
+  `).join('');
+}
+
+function toggleCat(i) {
+  const subs = document.getElementById(`tax-subs-${i}`);
+  const tog = document.getElementById(`tax-tog-${i}`);
+  const isOpen = subs.classList.toggle('open');
+  tog.textContent = isOpen ? '-' : '+';
+}
+
+function renderFixedTaxonomy() {
+  const totalCats = Object.keys(fixedTaxonomy).length;
+  const totalSubs = Object.values(fixedTaxonomy).reduce((s, v) => s + v.length, 0);
+  document.getElementById('tax-summary').textContent =
+    `${totalCats} categories - ${totalSubs} subcategories (fixed taxonomy)`;
+  const tree = document.getElementById('tax-tree');
+  tree.innerHTML = Object.entries(fixedTaxonomy).map(([cat, subs], i) => `
+    <div class="tax-cat">
+      <div class="tax-cat-header" onclick="toggleCat('f${i}')">
+        <span class="tax-cat-toggle" id="tax-tog-f${i}">+</span>
+        <span class="tax-cat-name">${esc(cat)}</span>
+        <span class="tax-cat-count" style="background:#7c83fd">${subs.length} subs</span>
+      </div>
+      <div class="tax-subs" id="tax-subs-f${i}">
+        ${subs.map(s => `
+          <div class="tax-sub-row">
+            <span class="tax-sub-name">${esc(s)}</span>
+          </div>`).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+document.getElementById('taxonomy-search').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  if (currentTaxTab === 'fixed') {
+    renderFixedTaxonomy();
+    return;
+  }
+  if (!q) { renderTaxonomy(taxonomyData); return; }
+  const filtered = taxonomyData
+    .filter(c => c.name.toLowerCase().includes(q) ||
+                 c.subcategories.some(s => s.name.toLowerCase().includes(q)))
+    .map(c => ({
+      ...c,
+      subcategories: c.subcategories.filter(s => s.name.toLowerCase().includes(q) || c.name.toLowerCase().includes(q))
+    }));
+  renderTaxonomy(filtered);
+});
+
+function copyTaxonomy() {
+  const lines = [];
+  if (currentTaxTab === 'fixed') {
+    Object.entries(fixedTaxonomy).forEach(([cat, subs]) => {
+      lines.push(cat);
+      subs.forEach(s => lines.push(`  - ${s}`));
+    });
+  } else {
+    taxonomyData.forEach(cat => {
+      lines.push(`${cat.name} (${cat.count} books)`);
+      cat.subcategories.forEach(s => lines.push(`  - ${s.name} (${s.count})`));
+    });
+  }
+  navigator.clipboard.writeText(lines.join('\n'))
+    .then(() => showToast('Copied to clipboard'))
+    .catch(() => showToast('Copy failed', true));
+}
+
+function exportTaxonomyCSV() {
+  let rows, filename;
+  if (currentTaxTab === 'fixed') {
+    rows = [['category', 'subcategory']];
+    Object.entries(fixedTaxonomy).forEach(([cat, subs]) => {
+      subs.forEach(s => rows.push([cat, s]));
+    });
+    filename = 'fixed_taxonomy.csv';
+  } else {
+    rows = [['category', 'subcategory', 'book_count']];
+    taxonomyData.forEach(cat => {
+      if (!cat.subcategories.length) {
+        rows.push([cat.name, '', cat.count]);
+      } else {
+        cat.subcategories.forEach(s => rows.push([cat.name, s.name, s.count]));
+      }
+    });
+    filename = 'librarian_taxonomy.csv';
+  }
+  const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\n');
+  const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+  showToast('CSV downloaded');
+}
+
 init();
+
+// ---- Candidate Picker Modal ----
+let _candidateBookId = null;
+
+function closeCandidateModal() {
+  document.getElementById('candidate-overlay').classList.remove('open');
+  _candidateBookId = null;
+}
+
+function showCandidateModal(bookId, data) {
+  _candidateBookId = bookId;
+  const { candidates, query_title, query_author } = data;
+
+  document.getElementById('cq-subtitle').innerHTML =
+    `Searched for: <strong>${esc(query_title)}</strong>` +
+    (query_author ? ` by <strong>${esc(query_author)}</strong>` : '') +
+    ` &mdash; ${candidates.length} result${candidates.length !== 1 ? 's' : ''} found`;
+
+  const list = document.getElementById('candidate-list');
+  list.innerHTML = '';
+
+  candidates.forEach((c, i) => {
+    const subjects = (c.subjects || []).slice(0, 6).join(', ');
+    const sources  = (c.sources  || []);
+    const srcBadges = sources.map(s => `<span class="cc-src-badge">${esc(s)}</span>`).join('');
+    const desc = c.description
+      ? `<div class="cc-desc">${esc(c.description)}</div>` : '';
+    const subj = subjects
+      ? `<div class="cc-subjects">Subjects: ${esc(subjects)}</div>` : '';
+    const lang = c.language
+      ? `<span class="cc-lang">${esc(c.language)}</span>` : '';
+
+    const card = document.createElement('div');
+    card.className = 'candidate-card';
+    card.innerHTML = `
+      <div class="cc-header">
+        <div class="cc-title">${esc(c.title || '(no title)')}</div>
+        <div class="cc-year">${esc(c.year || '')}</div>
+      </div>
+      <div class="cc-author">${c.author ? esc(c.author) : '<em style="color:#bbb">Author unknown</em>'}</div>
+      ${lang}
+      ${desc}
+      ${subj}
+      <div class="cc-sources">${srcBadges}</div>
+      <button class="cc-apply-btn" onclick="applyCandidate(${i})">Apply This</button>
+    `;
+    list.appendChild(card);
+  });
+
+  // stash candidates on window for applyCandidate
+  window._candidates = candidates;
+  document.getElementById('candidate-overlay').classList.add('open');
+}
+
+async function applyCandidate(index) {
+  const c = window._candidates[index];
+  if (!c || !_candidateBookId) return;
+
+  const btn = document.querySelector(`#candidate-list .candidate-card:nth-child(${index + 1}) .cc-apply-btn`);
+  if (btn) { btn.textContent = 'Applying...'; btn.disabled = true; }
+
+  try {
+    const updated = await apiFetch(`/api/books/${_candidateBookId}/online-lookup/apply`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(c),
+    });
+    closeCandidateModal();
+    const idx = allBooks.findIndex(b => b.id === _candidateBookId);
+    if (idx !== -1) allBooks[idx] = updated;
+    applyFilters();
+    openDetail(updated);
+    const src = (updated.extraction_method || '').replace('online:', '');
+    showToast(`Applied: "${updated.title}" (${src})`);
+  } catch(e) {
+    showToast('Failed to apply: ' + e.message, true);
+    if (btn) { btn.textContent = 'Apply This'; btn.disabled = false; }
+  }
+}
+
+document.getElementById('candidate-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeCandidateModal();
+});
 </script>
 </body>
 </html>
