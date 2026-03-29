@@ -1,0 +1,39 @@
+Research Article
+Modeling and Analysis of Safety Messages Propagation in
+Platoon-Based Vehicular Cyber-Physical Systems
+Liqiang Qiao,1 Yan Shi
+,1 Shanzhi Chen,2 and Wei Gao1
+1State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications,
+Beijing 100876, China
+2State Key Laboratory of Wireless Mobile Communications, China Academy of Telecommunications Technology, Beijing 100083, China
+Correspondence should be addressed to Yan Shi; shiyan@bupt.edu.cn
+Received 3 November 2017; Accepted 10 January 2018; Published 8 February 2018
+Academic Editor: Hongwei Wang
+Copyright © 2018 Liqiang Qiao et al. This is an open access article distributed under the Creative Commons Attribution License,
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+Safety messages propagation is the major task for Vehicular Cyber-Physical Systems in order to improve the safety of roads
+and passengers. However, reducing traffic and car accidents can only be achieved by disseminating safety messages in a timely
+manner with high reliability. Although mathematical modeling of the delay of safety messages is extremely beneficial, analyzing
+the safety messages propagation is considerably complex due to the high dynamics of vehicles. Moreover, most previous works
+assume vehicles drive independently and the interaction between vehicles is not taken into consideration. In this paper, we
+proposed an analytical model to describe the performance of safety messages propagation in the VCPSs under platoon-based
+driving pattern. Infrastructure-less and RSU-supported scenarios are evaluated independently. The analytical model also takes into
+account different transmission situations and various system parameters, such as communication range, traffic flow, and platoon
+size. The effectiveness of the analytical model is verified through simulation and the impacts of different parameters on the expected
+transmission delay are investigated. The results will help determine the system design parameters to satisfy the delay requirement
+for safety applications in VCPSs.
+1. Introduction
+Vehicular Cyber-Physical Systems (VCPSs), which take
+advantage of the latest advances in communication, comput-
+ing, sensing, control, and so on, have attracted the attention
+of many researchers, for the great potential of providing
+different applications, such as safety-related services, traffic
+information services, and entertainment services [1–5]. In a
+typical VCPS, moving vehicles are all equipped with various
+sensors to collect the up-to-date information about the road
+and disseminate the collected information to all neighbor
+vehicles in order to avoid the traffic jam, reduce car accidents,
+and save fuel consumption [6]. Generally, a platoon-based
+VCPS consists of two main processes: the platoon mobility
+process which describes the platoon mobility pattern under
+a control strategy and the communicat

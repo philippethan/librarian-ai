@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Better Embedded System Software
+
+
+
+
+
+
+Philip Koopman, Ph.D.
+Carnegie Mellon University
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Cindy, Moira, Brynn, and Ben.
+
+
+
+
+First Edition, revised 2021.  (Version 1.1.03)
+
+Copyright © 2010, 2021 by Philip Koopman
+
+All rights reserved.
+
+No part of this publication may be reproduced or transmitted in any 
+form or by any means, including photocopy, scanning, recording, or 
+any information storage and retrieval system, without permission in 
+writing from the copyright holder.
+Use as a licensed, fee-paid e-book by the purchaser is permitted.
+
+
+
+
+Warranty and disclaimers:
+THE SOFTWARE LISTINGS AND OTHER INFORMATION IN THIS BOOK ARE PROVIDED 
+“AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR PUBLISHER BE LIABLE FOR ANY DIRECT, 
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR OTHER 
+DAMAGES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THE 
+INFORMATION AND SOFTWARE LISTINGS IN THIS BOOK ARE NOT INTENDED FOR 
+USE IN LIFE CRITICAL OR OTHER CRITICAL APPLICATIONS. BY OPENING THIS 
+BOOK, THE READER AGREES TO THESE TERMS AND ACCEPTS SOLE RESPONSIBILITY 
+FOR ANY AND ALL DIRECT AND INDIRECT USES OF ITS CONTENTS.
+
+
+
+
+
+
+
+
+
+Chapter List
+1. Introduction
+Software Development Process
+2. Written Development Plan
+3. How Much Paper Is Enough?
+4. How Much Paper Is Too Much?
+Requirements & Architecture
+5. Written Requirements
+6. Measurable Requirements
+7. Tracing Requirements To Test
+8. Non-Functional Requirements
+9. Requirement churn
+10. Software Architecture
+11. Modularity
+Design
+12. Software Design
+13. Statecharts and Modes
+14. Real Time
+15. User Interface Design
+Implementation
+16. How Much Assembly Language Is Enough?
+17. Coding Style 
+18. The Cost of Nearly Full Resources
+19. Global Variables Are Evil
+20. Mutexes and Data Access Concurrency
+Verification & Validation
+21. Static Checking and Compiler Warnings
+22. Peer Reviews
+23. Testing and Test Plans
+24. Issue Tracking & Analysis
+25. Run-Time Error Logs
+Critical System Properties
+26. Dependability
+27. Security
+28. Safety
+29. Watchdog Timers
+30. System Reset
+31. Conclusions
+
+
+
+
+
+
+Preface
+I wrote this book to help embedded software developers 
+reduce risk and create better products. The topics and ideas are the 
+distillation of more than a decade of experience performing 90+ design 
+reviews on embedded system products across a range of industries. 
+Every chapter in this book contains ideas and methods corresponding 
+to the recommendations of design reviews on real embedded system products. 
+
+
+If you find even one chapter useful, that should make owning this 
+book worthwhile. But, we hope that you’ll keep this book in your 
+library and find many chapters that are useful in various future projects. 
+To help you do this, the book is organized to let you dive into any 
+chapter for a relatively self-contained chunk of good embedded software 
+practice. Some chapters will be more helpful than others depending 
+on your particu

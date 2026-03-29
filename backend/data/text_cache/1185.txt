@@ -1,0 +1,67 @@
+Softw Syst Model (2011) 10:55–62
+DOI 10.1007/s10270-009-0135-2
+EXPERT’S VOICE
+Modeling NASA swarm-based systems: using agent-oriented
+software engineering and formal methods
+Joaquin Peña · Christopher A. Rouff ·
+Mike Hinchey · Antonio Ruiz-Cortés
+Received: 15 September 2009 / Accepted: 22 September 2009 / Published online: 9 October 2009
+© Springer-Verlag 2009
+Abstract
+The need to collect new data and perform new
+science is causing the complexity of NASA missions to con-
+tinually increase. This complexity needs to be controlled
+via new technological advancements and balanced with a
+reduction in mission and operation costs. Planned and
+hypothesized missions involve self-management, biological-
+inspiration based on swarms, and autonomous operation as a
+means of achieving these goals. We consider a tailored soft-
+ware engineering approach to developing such systems based
+on agent-oriented software engineering and formal methods.
+Communicated by Robert France.
+The work reported in this article was supported by the Spanish
+Research Projects TIN2006-00472, TIN2009-07366 and
+P07-TIC-02533, by the NASA Software Engineering Laboratory,
+NASA Goddard Space Flight Center, Greenbelt, MD, USA, and by
+the NASA Ofﬁce of Safety and Mission Assurance (OSMA) Software
+Assurance Research Program (SARP) and by Science Foundation
+Ireland grant number 03/CE2/I303-1 to Lero—the Irish Software
+Engineering Research Centre.
+J. Peña
+University of Seville, Seville, Spain
+e-mail: joaquinp@us.es
+C. A. Rouff
+Lockheed Martin Corporation,
+Advanced Technology Laboratories,
+Arlington, VA, USA
+e-mail: christopher.rouff@lmco.com
+M. Hinchey (B)
+Lero-the Irish Software Engineering Research Centre,
+University of Limerick, Limerick, Ireland
+e-mail: mike.hinchey@lero.ie
+A. Ruiz-Cortés
+University of Seville, Seville, Spain
+e-mail: aruiz@us.es
+We report on advances in modeling, implementing, and
+testing NASA swarm-based concept missions.
+Keywords
+Swarms · Emergent behavior · Agent-oriented
+software engineering · Formal methods
+1 Introduction
+NASA is investigating new concepts for future space
+exploration to conduct new science and reduce costs. Poten-
+tial new mission concepts include the use of multiple space-
+craft, unmanned autonomous vehicles (UAVs) and armies
+of robots, operating like swarms in nature [3], to explore
+harsh remote environments. Such missions will be neces-
+sarily unmanned and highly autonomous, exhibiting the
+properties of autonomic systems, being self-protecting, self-
+healing, self-conﬁguring, and self-optimizing [16].
+Swarms [1,5] consist of a large number of simple agents
+that have local interactions (between each other and the envi-
+ronment). There is no central controller directing the swarm
+and no one agent has a global view; they are self-organizing
+based on the emergent behaviors of the simple interactions.
+This kind of system has many advantages since complex
+behaviors emerge from the definition of simple individual
+behaviors, thus reducing the design effort. I

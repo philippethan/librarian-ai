@@ -1,0 +1,55 @@
+Database System Concepts
+S E V E N T H  E D I T I O N
+Abraham Silberschatz 
+Henry F. Korth 
+S. Sudarshan
+DATABASE
+SYSTEM CONCEPTS
+S I X T H  E D I T I O N
+Abraham Silberschatz
+Yale University
+Henry F. Korth
+Lehigh University
+S. Sudarshan
+Indian Institute of Technology, Bombay
+S E V E N T H  E D I T I O N
+DATABASE SYSTEM CONCEPTS, SEVENTH EDITION 
+Published by McGraw-Hill Education, 2 Penn Plaza, New York, NY 10121. Copyright © 2020 by 
+McGraw-Hill Education. All rights reserved. Printed in the United States of America. Previous 
+editions © 2011, 2006, and 2002. No part of this publication may be reproduced or distributed in 
+any form or by any means, or stored in a database or retrieval system, without the prior written 
+consent of McGraw-Hill Education, including, but not limited to, in any network or other 
+electronic storage or transmission, or broadcast for distance learning.
+Some ancillaries, including electronic and print components, may not be available to customers 
+outside the United States.
+This book is printed on acid-free paper. 
+1 2 3 4 5 6 7 8 9 LCR 21 20 19 
+ISBN 978-0-07-802215-9 (bound edition)
+MHID 0-07-802215-0 (bound edition)
+ISBN 978-1-260-51504-6 (loose-leaf edition)
+MHID 1-260-51504-4 (loose-leaf edition)
+Portfolio Manager: Thomas Scaife Ph.D.
+Product Developers: Tina Bower & Megan Platt
+Marketing Manager: Shannon O’Donnell
+Content Project Managers: Laura Bies & Sandra Schnee
+Buyer: Susan K. Culbertson
+Design: Egzon Shaqiri
+Content Licensing Specialists: Shawntel Schmitt & Lorraine Buczek
+Cover Image: © Pavel Nesvadba/Shutterstock
+Compositor: Aptara®, Inc.
+All credits appearing on page or at the end of the book are considered to be an extension  
+of the copyright page.
+Library of Congress Cataloging-in-Publication Data
+Names: Silberschatz, Abraham, author. | Korth, Henry F., author. | Sudarshan, S., author.
+Title: Database system concepts/Abraham Silberschatz, Yale University, Henry F. Korth,  
+  Lehigh University, S. Sudarshan, Indian Institute of Technology, Bombay.
+Description: Seventh edition. | New York, NY: McGraw-Hill, [2020] | Includes bibliographical  
+  references.
+Identifiers: LCCN 2018060474 | ISBN 9780078022159 (alk. paper) | ISBN 0078022150 (alk. paper)
+Subjects:  LCSH: Database management.
+Classification: LCC QA76.9.D3 S5637 2020 | DDC 005.74—dc23 LC record available at  
+  https://lccn.loc.gov/2018060474
+The Internet addresses listed in the text were accurate at the time of publication. The inclusion of 
+a website does not indicate an endorsement by the authors or McGraw-Hill Education, and 
+McGraw-Hill Education does not guarantee the accuracy of the information presented at these sites.
+mheducation.com/highered

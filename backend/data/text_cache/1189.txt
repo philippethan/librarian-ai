@@ -1,0 +1,148 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Modern Software Engineering
+Doing What Works to Build Better Software Faster
+David Farley
+
+
+
+
+
+
+
+
+
+Contents
+Foreword
+Preface
+Acknowledgments
+About the Author
+Part I: What Is Software Engineering?
+1. Introduction
+2. What Is Engineering?
+3. Fundamentals of an Engineering Approach
+Part II: Optimize for Learning
+4. Working Iteratively
+5. Feedback
+6. Incrementalism
+7. Empiricism
+8. Experimental
+Part III: Optimize for Managing Complexity
+9. Modularity
+10. Cohesion
+11. Separation of Concerns
+12. Information Hiding and Abstraction
+13. Managing Coupling
+Part IV: Tools to Support Engineering in Software
+14. Tools of an Engineering Discipline
+15. The Modern Software Engineer
+
+
+
+
+
+
+
+
+Table of Contents
+Foreword
+Preface
+A Definition of Software Engineering?
+What Is in This Book?
+Acknowledgments
+About the Author
+Part I: What Is Software Engineering?
+1. Introduction
+Engineering—The Practical Application of Science
+What Is Software Engineering?
+Reclaiming “Software Engineering”
+The Birth of Software Engineering
+Shifting the Paradigm
+Summary
+2. What Is Engineering?
+Production Is Not Our Problem
+Design Engineering, Not Production Engineering
+A Working Definition of Engineering
+Engineering != Code
+Why Does Engineering Matter?
+The Limits of “Craft”
+Precision and Scalability
+Managing Complexity
+Repeatability and Accuracy of Measurement
+Engineering, Creativity, and Craft
+Why What We Do Is Not Software Engineering
+Trade-Offs
+The Illusion of Progress
+The Journey from Craft to Engineering
+Craft Is Not Enough
+Time for a Rethink?
+Summary
+3. Fundamentals of an Engineering Approach
+An Industry of Change?
+The Importance of Measurement
+Applying Stability and Throughput
+The Foundations of a Software Engineering Discipline
+Experts at Learning
+Experts at Managing Complexity
+Summary
+Part II: Optimize for Learning
+4. Working Iteratively
+Practical Advantages of Working Iteratively
+Iteration as a Defensive Design Strategy
+The Lure of the Plan
+Practicalities of Working Iteratively
+Summary
+5. Feedback
+A Practical Example of the Importance of Feedback
+Feedback in Coding
+Feedback in Integration
+Feedback in Design
+Feedback in Architecture
+Prefer Early Feedback
+Feedback in Product Design
+Feedback in Organization and Culture
+Summary
+6. Incrementalism
+Importance of Modularity
+Organizational Incrementalism
+Tools of Incrementalism
+Limiting the Impact of Change
+Incremental Design
+Summary
+7. Empiricism
+Grounded in Reality
+Separating Empirical from Experimental
+“I Know That Bug!”
+Avoiding Self-Deception
+Inventing a Reality to Suit Our Argument
+Guided by Reality
+Summary
+8. Experimental
+What Does “Being Experimental” Mean?
+Feedback
+Hypothesis
+Measurement
+Controlling the Variables
+Automated Testing as Experiments
+Putting the Experimental Results of Testing into Context
+Scope of an Experiment
+Summary
+Part III: Optimize for Managing Complexity
+9. Modularity
+Hallmarks of Modularity
+Undervaluing the Importance of Good Design
+The Importance of Testability
+Designing for Testability Improves 

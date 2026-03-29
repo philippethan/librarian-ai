@@ -1,0 +1,60 @@
+Newnes is an imprint of Elsevier
+30 Corporate Drive, Suite 400, Burlington, MA 01803, USA
+Linacre House, Jordan Hill, Oxford OX2 8DP, UK
+# 2010 Elsevier Inc. All rights reserved.
+Exception:
+Case Study 6.8 on page 555 # 2009 by Paul Gartz. Used with permission. All rights reserved.
+No part of this publication may be reproduced or transmitted in any form or by any means, electronic
+or mechanical, including photocopying, recording, or any information storage and retrieval system,
+without permission in writing from the publisher. Details on how to seek permission, further
+information about the Publisher’s permissions policies and our arrangements with organizations such
+as the Copyright Clearance Center and the Copyright Licensing Agency, can be found at our
+website: www.elsevier.com/permissions.
+This book and the individual contributions contained in it are protected under copyright by the
+Publisher (other than as may be noted herein).
+Notices
+Knowledge and best practice in this field are constantly changing. As new research and
+experience broaden our understanding, changes in research methods, professional practices, or
+medical treatment may become necessary.
+Practitioners and researchers must always rely on their own experience and knowledge in
+evaluating and using any information, methods, compounds, or experiments described herein.
+In using such information or methods they should be mindful of their own safety and the
+safety of others, including parties for whom they have a professional responsibility.
+To the fullest extent of the law, neither the Publisher nor the authors, contributors, or
+editors, assume any liability for any injury and/or damage to persons or property as a matter of
+products liability, negligence or otherwise, or from any use or operation of any methods,
+products, instructions, or ideas contained in the material herein.
+Library of Congress Cataloging-in-Publication Data
+Mission-critical and safety-critical systems handbook : design and development for embedded
+applications / edited by Kim Fowler ; technical consultant, Sharfus Draid, Inc.
+p. cm.
+Includes bibliographical references and index.
+ISBN 978-0-7506-8567-2 (alk. paper)
+1. Reliability (Engineering) 2. Fault tolerance (Engineering) 3. Embedded computer systems–
+Design and construction. 4. Safety factor in engineering. I. Fowler, Kim.
+TA169.M574 2010
+620’.00452–dc22
+2009038373
+British Library Cataloguing-in-Publication Data
+A catalogue record for this book is available from the British Library.
+For information on all Newnes publications
+visit our Web site at www.elsevierdirect.com
+08
+09
+10
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Printed in the United States of America
+About the Editor
+Kim Fowler has spent 27 years in the design, development, and project management of
+medical, military, and satellite equipment. He cofounded Stimsoft, a medical products
+company, in 1998 and sold it in 2003; he has also worked for JHU/APL and Ixthos. Kim
+currently consults in technical development for both co

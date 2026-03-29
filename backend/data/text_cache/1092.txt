@@ -1,0 +1,201 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contents In Detail
+
+Title Page
+Copyright
+Dedication
+Also by Chet Haase
+About the Author
+Cast
+ACKS
+Introduction
+
+Challenges 
+Implementation Details
+And So It Began
+
+
+Part I: In the Beginning
+
+Chapter 1: Android the . . . Camera OS?
+Chapter 2: The Farm Team
+
+Be, Inc.
+WebTV/Microsoft
+Danger, Inc.
+Nick Sears and Mobile Data
+All Together Now
+
+
+Chapter 3: Growing the Team
+
+Brian Swetland, Android’s First Engineer
+Andy McFadden and the Demo
+Ficus Kirkpatrick, the Startup’s Last Employee
+
+
+Chapter 4: The Pitch
+
+Demo Time
+The Mobile Opportunity
+An Open Opportunity
+Making Money
+Pitching the Dream
+
+
+Chapter 5: The Acquisition
+Chapter 6: Life at Google
+
+Hiring at Google
+Chris DiBona and the Hiring Solution
+Tom Moss and Hiring in Tokyo
+
+
+
+
+Part II: Building the Platform
+
+Chapter 7: The Systems Team
+
+Brian Swetland and the Kernel
+Ficus Kirkpatrick and Drivers
+Arve Hjønnevåg and Communication
+Iliyan Malchev and Bluetooth
+Nick Pelly and Bluetooth
+San Mehat and the SD Robot
+Post-G1: Sapphire and Droid
+Rebecca Zavin and the Unloved Device
+That Embarrassing Root Bug
+Mike Chan and the B Team
+Security Blanket
+The B Team
+Building a Robust System
+
+
+Chapter 8: Java
+
+Language Choices
+Runtimes
+Dan Bornstein and the Dalvik Runtime
+Zygote
+
+
+Chapter 9: Core Libraries
+
+Bob Lee and the Java Libraries
+Jesse Wilson and the Terrible APIs
+
+
+Chapter 10: Infrastructure
+
+Joe Onorato and the Build
+Ed Heyl and Android Infrastructure
+Testing, Testing
+Lean Infrastructure
+
+
+Chapter 11: Graphics
+
+Mathias Agopian and Android Graphics
+The Basics
+PixelFlinger
+SurfaceFlinger
+Hardware Composer
+Mike Reed and Skia
+
+
+Chapter 12: Media
+
+Dave Sparks and Ringtones
+Marco Nelissen and Audio
+AudioFlinger
+The Video Code Nobody Liked
+
+
+Chapter 13: Framework
+
+Dianne Hackborn and the Android Framework
+Activities
+Resources
+WindowManager
+Soft Keyboard
+Jeff Hamilton Works His Way Up the Stack
+Binder
+Database
+Contacts and Other Apps
+Jason Parks Broke It
+Frameworking
+
+
+Chapter 14: UI Toolkit
+
+Mike Cleron and the UI Toolkit Rewrite
+Eric Fischer and TextView
+Romain Guy and UI Toolkit Performance
+Launcher and Apps
+Manifest Density
+Toolkit Performance
+
+
+Chapter 15: System UI and Launcher
+
+Launcher
+Notifications
+Live Wallpapers
+The Face of Android
+
+
+Chapter 16: Design
+
+Irina Blok and the Android Mascot
+Given the Green Light
+Jeff Yaksick and UI Design
+Toys
+
+
+Chapter 17: The Android Browser
+
+The Great Browser Wars
+Android Needs a Browser
+Wei Huang and the Android Browser
+Rich Miner Builds the Team
+Grace Kloba, WebView, and the Android Browser
+Cary Clark and Browser Graphics
+
+
+Chapter 18: London Calling
+
+Dave Burke and the London Mobile Team
+Andrei Popescu and the London Browser Team
+Nicolas Roard, Gearing Up
+Android and Web Apps
+
+
+Chapter 19: Applications
+
+The Mobile Application Ecosystem
+Cédric Beust and Gmail
+
+
+Chapter 20: Android Services
+
+Debajit Ghosh and Calendar
+Michael Morrissey and the Services Team
+Launch Fire Drill
+Dan Egnor and OTAs
+Chiu-Ki Chan and the Check-In Service
+Distinguished Service
+

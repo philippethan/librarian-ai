@@ -1,0 +1,174 @@
+CONTENTS
+INTRODUCTION TO SYSTEMS ENGINEERING
+l.l
+What is a System?
+1.1.1 Definition of a System
+1.1.2 Types of Systems
+1.1.3 A System and its Environment
+1.1.4 A System as a Product
+1.1.5 A System as a Capability-A Capability System
+1.1.6 Logical and Physical Descriptions of a System
+1.1.7 Hierarchical Descriptions of a System
+1.1.8 System-of-Systems (SoS)
+1.1.9 Problem Domain and Solution Domain
+1.2 System Life Cycle
+1.2.1 Parties Involved
+1.3
+Acquisition and Utilization Phases
+l.3.1 Acquisition Phase
+l.3.2 Utilization Phase and Retirement Phase
+1.4 Systems Engineering and Development Approaches
+1.5 What is Systems Engineering?
+1.5.1 Top-Down Approach
+1.5.2 Requirements Engineering
+1.5.3 Focus on Life Cycle
+1.5.4 System Optimization and Balance
+1.5.5 Integration of Disciplines and Specializations
+1.5.6 Management
+1.6 Systems Engineering Relevance
+1.7 Systems Engineering Benefits
+1.8
+Analysis, Synthesis, and Evaluation
+1.8.1 Analysis
+1.8.2 Synthesis
+1.8.3 Evaluation
+1.9 A Systems Engineering Framework
+1.9.1 Systems Engineering Processes
+1.9.2 Systems Engineering Management
+1.9.3 Systems Engineering Tools
+1.9.4 Related Disciplines
+1.10 Summary
+1.11 Revision Questions
+1
+2
+2
+3
+4
+5
+6
+7
+9
+11
+12
+12
+14
+15
+16
+19
+19
+20
+20
+23
+24
+25
+25
+26
+26
+27
+30
+30
+31
+31
+31
+33
+34
+34
+34
+35
+35
+2
+REQUIREMENTS ENGINEERING FRAMEWORK
+2.1
+Introduction
+43
+2.1.1 Needs and Requirements Documentation
+43
+2.1.2 What is a Requirement?
+47
+2.1.3 Requirements Characteristics and Attributes
+47
+2.1.4 What Not How
+50
+2.1.5 Emergent Properties
+51
+2.2
+What Is Requirements Engineering?
+52
+2.2.1 Why We Need Requirements
+53
+2.2.2 Why We Need Requirements Engineering
+53
+2.3
+Requirements Elicitation and Elaboration
+54
+2.3.1 Difficulties in Eliciting and Elaborating Requirements
+56
+2.3.2 Techniques for Eliciting/Generating Requirements
+58
+2.4
+Requirements Validation
+65
+2.5
+Requirements Documentation
+66
+2.6
+Requirements Management
+67
+2.6.1 Requirements Change Management
+67
+2.6.2 Change Management-Traceability
+67
+2.6.3 Requirements Management Tools
+68
+2.7
+Requirements-Engineering Tools
+70
+2.7.1 Requirements Breakdown Structure (RBS)
+70
+2.7.2 Functional Flow Block Diagrams (FFBD)
+72
+2.8
+Summary
+73
+2.9
+Review Questions
+74
+3
+CONCEPTUAL DESIGN
+3.1
+Introduction
+81
+3.2
+CI-Define Business Needs and Requirements
+82
+3.2.1 Cl.I-Identify Major Stakeholders and Constraints
+83
+3.2.2 Cl.2-Elicit Business Needs
+86
+3.2.3 Cl.3-Scope System
+98
+3.2.4 CIA-Define Business Requirements
+103
+3.2.5 Cl.5-Finalise Business Needs and Requirements (BNR)
+107
+3.3
+C2-Define Stakeholder Needs and Requirements
+107
+3.3.1 C2.1-Define Stakeholder Needs
+108
+3.3.2 C2.2-Define Stakeholders Requirements
+108
+3.3.3 C2.3-Finalise Stakeholder Needs and Requirements (SNR)
+110
+3.4
+C3-Define System Requirements
+111
+3.4.1 C3 . I-Establish Requirements Framework
+113
+3.4.2 C3.2-Perform Requirements Analysis and Allocation
+113
+3.4.3 C3.3-Draft System Requirement Specification (SyRS)
+117
+3.4.4 C3A-Define Technical Performance Measures (TPM)
+119
+3.4.5 C3

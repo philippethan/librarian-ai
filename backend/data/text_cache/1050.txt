@@ -1,0 +1,40 @@
+Research Article
+A Novel Approach to Enhance the Physical Layer Channel
+Security of Wireless Cooperative Vehicular Communication
+Using Decode-and-Forward Best Relaying Selection
+Esraa M. Ghourab
+,1 Mohamed Azab,2,3 Mohamed F. Feteiha,2,4,5 and Hesham El-Sayed6
+1Electrical Engineering Department, Alexandria University, Alexandria, Egypt
+2Informatics Research Institute, The City of Scientific Research and Technological Applications, Alexandria, Egypt
+3ACIS, Electrical and Computer Engineering, University of Florida, Gainesville, FL, USA
+4Electrical and Computer Engineering Department, Faculty of Engineering, University of Waterloo, Waterloo, Ontario, Canada
+5Systems Design Engineering Department, Smart-Nations Technology Development Inc., Ontario, Canada
+6Computer and Network Engineering Department, United Arab Emirates University, Al-Ain, UAE
+Correspondence should be addressed to Esraa M. Ghourab; esraa.m.ghourab@mena.vt.edu
+Received 24 October 2017; Revised 30 January 2018; Accepted 15 April 2018; Published 28 May 2018
+Academic Editor: Hongwei Wang
+Copyright © 2018 Esraa M. Ghourab et al. This is an open access article distributed under the Creative Commons Attribution
+License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly
+cited.
+This paper proposes a novel approach to enhance wireless vehicle-to-vehicle channel-secrecy capacity by imposing signal
+transmission diversity. This work exploits cooperative vehicular relaying to extract the associated underlying multipath and Doppler
+diversity using precoding techniques. We evaluated the capacity and diversity gain for the presented approach to ensure its
+effectiveness and efficiency. The abundance of moving vehicles, operating in an ad hoc fashion, can eliminate the need to establish a
+dedicated relaying infrastructure.A relay selection schemeis deployed, taking advantage of the potentially large number of available
+relaying vehicles. Further, we derivate a closed-form mathematical expression for the channel-secrecy capacity, diversity order
+gain, and the intercept probability. We used the direct transmission scenario as a reference to assess our analysis. Our analytical
+and simulation results for the presented model showed that channel-secrecy capacity and performance-indicators improved
+significantly.
+1. Introduction
+In large cities, the complex network of diverse people and
+the exponentially increasing service demands urge leading
+telecommunication networking to improve the communica-
+tion capabilities.
+In the search for ways to enhance network performance
+and security, researchers and practitioners started to consider
+offloading such heavy burden to road-traveling vehicles. The
+abundant on-vehicle computing resources may be underuti-
+lized by the traditional vehicular applications. Many wireless
+communication technologies are available for “Vehicular
+Ad hoc Networks (VANETs)” communications, including
+traditional wireless techn

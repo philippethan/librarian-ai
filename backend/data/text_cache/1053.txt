@@ -1,0 +1,56 @@
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=tjor20
+Journal of the Operational Research Society
+ISSN: 0160-5682 (Print) 1476-9360 (Online) Journal homepage: https://www.tandfonline.com/loi/tjor20
+A constructive framework for the preventive
+signalling maintenance crew scheduling problem
+in the Danish railway system
+Shahrzad M. Pour, Kourosh Marjani Rasmussen, John H. Drake & Edmund K.
+Burke
+To cite this article: Shahrzad M. Pour, Kourosh Marjani Rasmussen, John H. Drake & Edmund
+K. Burke (2019): A constructive framework for the preventive signalling maintenance crew
+scheduling problem in the Danish railway system, Journal of the Operational Research Society,
+DOI: 10.1080/01605682.2018.1507423
+To link to this article:  https://doi.org/10.1080/01605682.2018.1507423
+© 2019 The Author(s). Published by Informa
+UK Limited, trading as Taylor & Francis
+Group
+Published online: 16 May 2019.
+Submit your article to this journal 
+Article views: 141
+View related articles 
+View Crossmark data
+A constructive framework for the preventive signalling maintenance crew
+scheduling problem in the Danish railway system
+Shahrzad M. Poura, Kourosh Marjani Rasmussena, John H. Drakeb and Edmund K. Burkeb
+aDTU Management Engineering, Technical University of Denmark, Produktionstorvet, Denmark; bOperational Research Group,
+Queen Mary University of London, London, UK
+ABSTRACT
+In this article, we consider the problem of planning preventive maintenance of railway sig-
+nals in Denmark. This case is particularly relevant as the entire railway signalling system is
+currently being upgraded to the new European Railway Traffic Management System (ERTMS)
+standard. This upgrade has significant implications for signal maintenance scheduling in the
+system. We formulate the problem as a multi-depot vehicle routing and scheduling problem
+with time windows and synchronisation constraints, in a multi-day time schedule. The
+requirement that some tasks require the simultaneous presence of more than one engineer
+means that task synchronisation must be considered. A multi-stage constructive framework
+is proposed, which first distributes maintenance tasks using a clustering formulation.
+Following this, a Constraint Programming (CP) based approach is used to generate feasible
+monthly plans for large instances of practical interest. Experimental results indicate that the
+proposed framework can generate feasible solutions and schedule a monthly plan of up to
+1000 tasks for eight crew members, in a reasonable amount of computational time.
+ARTICLE HISTORY
+Received 15 December 2016
+Revised 18 June 2018
+Accepted 26 July 2018
+KEYWORDS
+Railway signal maintenance;
+personnel scheduling;
+vehicle routing: ERTMS;
+constraint programming;
+synchronisation; clustering
+1. Introduction
+The European Rail Traffic Management System
+(ERTMS) (Bloomfield, 2006) is the new generation
+of rail communication and control signalling sys-
+tems introduced

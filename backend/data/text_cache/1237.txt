@@ -1,0 +1,62 @@
+REVIEW ARTICLES
+Survey on Driverless Train Operation for Urban
+Rail Transit Systems
+Yihui Wang1 • Miao Zhang1 • Jiaqi Ma2 • Xuesong Zhou3
+Received: 12 July 2016 / Revised: 30 November 2016 / Accepted: 4 December 2016 / Published online: 18 December 2016
+ The Author(s) 2016. This article is published with open access at Springerlink.com
+Abstract The length of metro lines with driverless train
+operation (DTO) systems is increasing globally and is
+predicted to triple in the next 10 years. This paper gives the
+history and future trend of the DTO systems. The oppor-
+tunities provided by the DTO systems, such as lower
+operation costs, increased capacity, and energy efﬁciency,
+are explained and the relevant research are reviewed.
+Furthermore, the challenges faced by the DTO systems are
+analyzed, such as safety issues, train control technology,
+and emergency situations.
+Keywords Driverless train operation  Urban rail transit 
+Energy efﬁciency  Safety  Capacity
+1 Introduction
+Technical developments in the last century have made the
+operation of driverless train operation (DTO) possible. For
+urban rail transit systems, there is a growing trend to
+employ DTO globally. As reported in the annual world
+report of metro automation [1], in 2013, there are 674 km
+of automated metro in operation consisting of 48 lines in 32
+cities, where 40 and 32% of the automated lines are con-
+centrated in Asia and Europe, respectively. In addition, the
+report stated that the observatory data for new DTO pro-
+jects highlight a trend for exponential growth in metro
+automation and the kilometers of fully automated lines is
+expected to reach over 1800 km by 2025 [1].
+According to the International Electro-Technical Com-
+mission (IEC) standard IEC 62290-1 [2], there is a clear
+classiﬁcation of the grade of automation (GoA) for urban
+rail transit systems as shown in Fig. 1:
+1.
+GoA 1: Non-automated train operation (NTO)
+There is a driver in the cabin, who is responsible for
+driving trains based on wayside or cabin signal,
+opening and closing door, observing the guideway,
+and stopping trains in case of emergency. In addition,
+automatic train protection (ATP) system prevents
+unsafe movements of trains in respect of the signals
+and the train speed.
+2.
+GoA 2: Semi-automated train operation (STO)
+Automatic train operation (ATO) system controls the
+train movement by the acceleration and deceleration
+commands. The movement of the train is supervised by
+the ATP system. The driver in the cabin observes the
+guideway and stops the train in case of a hazardous
+situation. The opening and closing of doors may be
+done automatically or performed by the driver.
+3.
+GoA 3: DTO
+Compared with GoA 2, there is no driver in the cabin
+to observe the guideway and stop the train in case of a
+hazardous situation. There is an operation staff on
+board. Safe departure of the train from a station,
+including door closing, could be the responsibility of
+the operation staff or may be done automatically.
+& Yihui Wa

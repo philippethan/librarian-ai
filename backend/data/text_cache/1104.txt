@@ -1,0 +1,35 @@
+This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/
+This article has been accepted for publication in a future issue of this journal, but has not been fully edited. Content may change prior to final publication. Citation information: DOI
+10.1109/ACCESS.2021.3091550, IEEE Access
+ 
+1 
+ 
+Date of publication xxxx 00, 0000, date of current version xxxx 00, 0000. 
+Digital Object Identifier 10.1109/ACCESS.2017.Doi Number 
+Deployment of Autonomous Trains in Rail 
+Transportation: Current Trends and Existing 
+Challenges 
+Prashant Singh1, Maxim A. Dulebenets1, (Member, IEEE), Junayed Pasha1, Ernesto D.R. 
+Santibanez Gonzalez2, Yui-yip Lau3, and Raphael Kampmann1 
+1Department of Civil & Environmental Engineering, Florida A&M University-Florida State University (FAMU-FSU) College of Engineering, Tallahassee, FL 32310 USA 
+2Department of Industrial Engineering, University of Talca, Curicó, Maule, Chile 
+3Division of Business and Hospitality Management, The Hong Kong Polytechnic University, Hong Kong 
+Corresponding author: Maxim A. Dulebenets (e-mail: mdulebenets@eng.famu.fsu.edu). 
+This work was supported in part by the Florida Department of Transportation under grants BDV30-977-26 and BDV30-977-33. The opinions, findings and 
+conclusions expressed in this publication are those of the authors and not necessarily those of the Florida Department of Transportation or the U.S. 
+Department of Transportation. 
+ABSTRACT Automation is expected to effectively address the growing demand for passenger and freight 
+transportation, safety issues, human errors, and increasing congestion. The growth of autonomous vehicles 
+using the state-of-the-art connected vehicle technologies has paved the way for the development of 
+passenger and freight autonomous trains (ATs), also known as driverless trains. ATs are fully automated 
+trains that are centrally controlled using advanced communication and internet technologies, such as high-
+speed internet (5G) technology, Internet of Things, dedicated short range communications, digital video 
+detection cameras, and artificial intelligence-based methods. The current study focuses on a detailed up-to-
+date review of the existing trends, technologies, advancements, and challenges in the deployment of ATs 
+with a full automation level in rail transportation. The basic AT features along with the key technologies 
+that are instrumental for the AT deployment and operations are discussed in detail. Furthermore, a 
+comprehensive evaluation of the state-of-the-art research efforts is performed as well with a specific 
+emphasis on the issues associated with the AT deployment, user perception and outlook for ATs, innovative 
+concepts and models that could be used for the AT design, and the AT operations at highway-rail grade 
+crossings. Based on the conducted review, this study determines the main advantages and challenges from 
+the AT deployment. The identi

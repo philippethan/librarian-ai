@@ -1,0 +1,50 @@
+ 
+ 
+2 
+Topological Analysis of Tokyo  
+Metropolitan Railway System 
+Takeshi Ozeki 
+Faculty of Science and Technology, Sophia University 
+Japan 
+1. Introduction 
+1.1 Railway system reflects the real world 
+Leading concept of the topological analysis of railway network systems is based on the fact 
+that the topology of railway networks reflects the real world. It is believed because strong 
+mutual interactions between railway systems and real worlds continue through longer 
+periods of their growth: An eventual growth in a regional economy due to opening such a 
+new shopping plaza may require extension of a railway system, verves, a scheduled 
+extension of a railway may result in a growth in regional economy due to rapid increase in 
+town population, for instance. In this way, the growth of railway system and regional 
+activity affects their growth mutually. In context, the railway system topology reflects the 
+real world: In other words, they “entangle” each other.  
+This leading concept agrees with that of Brin and Page, co-founders of Google:  they 
+reported, in their first paper on “Google”(Page and et al, 1990), that it was a great surprise 
+the PageRank is obtained purely mechanically from the topology of Web page links. Their 
+surprise is the discovery of the fact that the network is entangled with real world. The 
+“Google” approximates a Web surfer as a random walker in Markov process and combines 
+the dominant eigenvector of Markov process with a list of coincidence for a inquiry as the 
+PageRank (Langville-Mayer, 2006) 
+This leading concept grows up as a mathematical platform using multimodal non-linear 
+Markov process approximation so that it is applied to analyse Tokyo Metropolitan Railway 
+System.  
+It is no doubt that there have been established platforms to analyse the dynamics of railway 
+network systems based on growing supercomputer power. On contrary, our platform can be 
+said as providing abstractive viewpoint based only on network topology so that it is 
+expected to illustrate different new worlds for the railway system engineers.     
+1.2 Family network approximation: Rosary network 
+Network topologies have been discussed as scale free networks mainly in a field of complex 
+systems from the end of the previous century. The scale free network science is expected to 
+provide potential methods to analyse various network characteristics of complex systems. 
+www.intechopen.com
+ 
+Infrastructure Design, Signalling and Security in Railway 
+ 
+26
+However, there is no network model suitable for analysing railway systems. Then, the 
+rosary network in series of family the network was proposed as suitable one for railway 
+system networks as shown in Fig.1.1 (Ozeki, 2006). 
+ 
+Fig. 1.1. Family network Series including Rosary Networks 
+Historical flows of complex systems are very interesting competitions between abstraction 
+and computation: Origin of complex systems was introduced by Prigogine based on 
+coupled nonlinear differential equations

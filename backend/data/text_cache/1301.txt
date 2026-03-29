@@ -1,0 +1,67 @@
+ 
+N° d’ordre : 372 
+ 
+CENTRALE LILLE 
+ 
+THÈSE 
+ 
+Présentée en vue d’obtenir le grade de 
+ 
+DOCTEUR 
+ 
+En 
+ 
+Spécialité : Automatique, Génie informatique, Traitement du signal et des images 
+ 
+Par 
+ 
+Yuchen XIE 
+ 
+DOCTORAT DÉLIVRÉ PAR CENTRALE LILLE 
+ 
+Titre de la thèse : 
+ 
+Formal Modeling and Verification of Train Control Systems 
+ 
+Modélisation et Vérification Formelles de Systèmes de Contrôle de Trains 
+ 
+ 
+Soutenue le 14 Février 2019 devant le jury d’examen : 
+ 
+Président, Rapporteur 
+Jean-François PETIN, Professeur, Université de Lorraine 
+Rapporteur 
+Audine SUBIAS, Maître de Conférences HDR, INSA de Toulouse 
+Examinateur 
+Pascal BERRUET, Professeur, IUT de Lorient 
+Examinateur 
+Thomas BOURDEAUD'HUY, Maître de Conférences, Centrale Lille 
+Directeur de thèse 
+Armand TOGUYENI, Professeur, Centrale Lille 
+Co-encadrante de thèse 
+Manel KHLIF-BOUASSIDA, Maître de Conférences, Centrale Lille 
+ 
+Thèse préparée au Centre de Recherche en Informatique, Signal et Automatique de Lille, 
+CRIStAL, CNRS UMR 9189 
+ 
+Ecole Doctorale Sciences Pour l'Ingénieur (ED SPI 072) 
+ 
+i 
+CONTENTS 
+CONTENTS ....................................................................................................................... I 
+LIST OF FIGURES ............................................................................................................ VII 
+LIST OF TABLES .............................................................................................................. XI 
+LIST OF TERMINOLOGIES .............................................................................................. XIII 
+CHAPTER 1 
+INTRODUCTION ........................................................................................ 1 
+1.1 APPLICATION FRAMEWORK AND MOTIVATION ........................................................................ 1 
+1.1.1 Safety-critical Systems .......................................................................................... 1 
+1.1.2 Autonomous Trains .............................................................................................. 2 
+1.1.3 Difficulties and Current Situation of Applying Autonomous Trains ...................... 3 
+1.2 THEORETICAL FRAMEWORK ................................................................................................. 5 
+1.2.1 Modeling of Discrete Event System (DES) ............................................................ 5 
+1.2.2 Verification of Discrete Event System (DES) ......................................................... 5 
+1.3 PROBLEM STATEMENT ........................................................................................................ 6 
+1.4 CONTRIBUTION OF THE DISSERTATION ................................................................................... 8 
+1.4.1 Methodological Contributions .............................................................................. 8 
+1.4.2 Technical Contributions ....................................................................

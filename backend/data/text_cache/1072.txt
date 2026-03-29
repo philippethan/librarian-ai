@@ -1,0 +1,85 @@
+     
+ 
+This project has received funding from the Shift2Rail Joint 
+Undertaking under the European Union’s Horizon 2020 research and 
+innovation programme under grant agreement No 881826 
+ 
+Project n°881826 
+ 
+Page 1 of 45 
+Diffusable SNCF RESEAU 
+LINX4RAIL 
+Project Title: 
+System architecture and Conceptual Data Model for railway, 
+common data dictionary and global system modelling 
+specifications 
+Starting date:  
+2019-12-01 
+Duration in months:  
+36 
+Call (part) identifier:  
+S2R-CFM-IPX-CCA-01-2019 
+Grant agreement no:  
+881826 
+ 
+Deliverable D5.3 
+First release of the System Functional Architecture 
+ 
+Deliverable 
+Responsible partner 
+SNCF-R 
+Revision: 
+2.0 
+Document Status: 
+Validated 
+Due date: 
+2020-11-30 
+Actual date: 
+2020-11-30 
+Dissemination Level: 
+PU 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimer: 
+The information and views set out in this document are those of the author(s) and do not necessarily reflect the 
+official opinion of Shift2Rail Joint Undertaking. The JU does not guarantee the accuracy of the data included in this 
+article. Neither the JU nor any person acting on the JU’s behalf may be held responsible for the use which may be 
+made of the information contained therein. 
+Ref. Ares(2021)6512816 - 22/10/2021
+LinX4Rail 
+D5.3 First release of LinX4Rail architecture [Railway System Architecture 0.1] 
+Project n°881826 
+ 
+Page 2 of 45 
+Diffusable SNCF RESEAU 
+Table of Contents 
+1 
+Executive summary ................................................................................................................................ 5 
+2 
+List of abbreviations & Definitions ........................................................................................................ 6 
+2.1 
+Abbreviations ............................................................................................................................ 6 
+2.2 
+Definitions ................................................................................................................................. 6 
+3 
+Purpose of the document ...................................................................................................................... 8 
+4 
+Problem statement ................................................................................................................................ 9 
+4.1 
+No generally agreed architecture for the railway system exists today .................................... 9 
+4.2 
+A number of existing initiatives inside and outside Shift2Rail................................................10 
+4.3 
+Need for a more global vision of the system, supported by all involved stakeholders..........11 
+5 
+Approach, process and development method ....................................................................................14 
+5.1 
+An Architecture approach .......................................................................................................14 
+5.2 
+An Architecture (/ Architecting) iterative process .......................................

@@ -1,0 +1,44 @@
+International Journal of Applied Science and Technology            Vol. 9, No. 1, March 2019             doi:10.30845/ijast.v9n1p1 
+ 
+1 
+ 
+Evaluating the Performance of the Erlang Models for Call Centers 
+ 
+Thomas R. Robbins 
+East Carolina University 
+College of Business 
+Department of Marketing and Supply Chain 
+3136 Bate Building 
+Greenville, NC 27858-4353, USA 
+ 
+Abstract 
+ 
+In this paper we evaluate two queuing models used to analyze call centers; the Erlang C and Erlang A models.  The 
+Erlang C is a simple model that ignores caller abandonment and is the most commonly used model.  The Erlang A 
+model allows for abandonment, but performance measures are more difficult to calculate.  We compare the theoretical 
+performance predictions of these models to a steady state simulation model where many of the simplifying assumptions 
+used in standard analytical models are relaxed.  Our findings support the assertion that the Erlang A model is more 
+accurate, but we find that in contrast to the Erlang C model, Erlang A tends to be optimistically biased.  Our findings 
+indicate that neither model clearly dominates the other in all situations and that care must be taken to select the correct 
+model based on call center conditions and the intended purpose of the model. 
+ 
+Keywords: Call Centers, Queuing Models. Simulation Analysis 
+ 
+Introduction 
+ 
+Call centers are examples of queuing systems; calls arrive, wait in a queue, and are then serviced by an agent.  Call 
+centers are typically modeled using the M/M/N queuing model, or in industry standard terminology - the Erlang C 
+model. The Erlang C model makes many assumptions which are questionable in the context of a call center 
+environment.  Specifically, the Erlang C model assumes that calls arrive at a Poisson process with a known average 
+rate, and that they are serviced by a defined number of statistically identical agents with service times that follow an 
+exponential distribution.  Most significantly, Erlang C assumes no abandonment.  The model is used widely by both 
+practitioners and academics.   
+ 
+Recognizing the deficiencies of the Erlang C model, many papers have advocated using alternative queuing models and 
+staffing heuristics which account for conditions ignored in the Erlang C model.   The most popular alternative is the 
+Erlang A model, an extension of the Erlang C model that allows for caller abandonment.  For example, in a widely 
+cited review of the call center literature (Gans et al., 2003) , the authors state “For this reason, we recommend the use 
+of Erlang A as the standard to replace the prevalent Erlang C model.”  Another widely cited paper examines empirical 
+data collected from a call center (Brown et al., 2005) and these authors make a similar statement; “using Erlang-A for 
+capacity-planning purposes could and should improve operational performance. Indeed, the model is already beyond 
+typical current practice (which is Erlang-C dominated), and one aim of this article is 

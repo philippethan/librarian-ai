@@ -1,0 +1,24 @@
+REAL-TIME SYSTEMS 
+DESIGN AND ANALYSIS
+IEEE Press
+445 Hoes Lane
+Piscataway, NJ 08854
+IEEE Press Editorial Board
+Lajos Hanzo, Editor in Chief
+ R. Abhari
+M. El-Hawary
+O. P. Malik
+J. Anderson
+B-M. Haemmerli
+S. Nahavandi
+G. W. Arnold
+M. Lanzerotti
+T. Samad
+F. Canavero
+D. Jacobson
+G. Zobrist
+Kenneth Moore, Director of IEEE Book and Information Services (BIS) 
+Technical Reviewers
+Larry Bernstein, Stevens Institute of Technology 
+Bernard Sick, University of Kassel 
+Olli Vainio, Tampere University of Technology

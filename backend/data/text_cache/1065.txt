@@ -1,0 +1,38 @@
+172
+FEB 2021
+Appendix G: Benefits of Automation
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+TII210 MetroLink Operations 
+Advisor 
+The Benefits of Automation 
+Transport Infrastructure Ireland 
+12th November 2020 
+ 
+ 
+ 
+Introduction 
+The MetroLink project is being designed to make full use of automation in the 
+operation of trains (fully unattended operation i.e. Grade of Automation Level 4), at 
+the control centre and in the operation of stations. TII requested that the Operations 
+Advisor produce a report that illustrates the benefits (compared to a conventional 
+metro system) that this level of automation brings to the operation of the MetroLink 
+system. 
+ 
+This paper explains the benefits of automation through: 
+• An illustration of a typical “day in the life” of an automated metro; 
+• An explanation of the benefits of automation; 
+• An explanation of the components of automation. 

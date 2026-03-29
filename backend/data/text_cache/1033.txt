@@ -1,0 +1,38 @@
+Research Article
+QoS-Aware Resource Allocation for Network Virtualization in
+an Integrated Train Ground Communication System
+Li Zhu
+,1 Fei Wang,2 and Hongli Zhao3
+1State Key Laboratory of Rail Traffic Control and Safety, Beijing Jiaotong University, Beijing, China
+2Signal and Communication Research Institute, China Academy of Railway Sciences, Beijing, China
+3National Engineering Research Center of Rail Transportation Operation and Control System, Beijing Jiaotong University,
+Beijing, China
+Correspondence should be addressed to Li Zhu; zhulibjtu@gmail.com
+Received 28 October 2017; Revised 26 January 2018; Accepted 11 February 2018; Published 3 May 2018
+Academic Editor: Daniele Pinchera
+Copyright © 2018 Li Zhu et al. This is an open access article distributed under the Creative Commons Attribution License, which
+permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+Urban rail transit plays an increasingly important role in urbanization processes. Communications-Based Train Control (CBTC)
+Systems, Passenger Information Systems (PIS), and Closed Circuit Television (CCTV) are key applications of urban rail transit
+to ensure its normal operation. In existing urban rail transit systems, different applications are deployed with independent train
+ground communication systems. When the train ground communication systems are built repeatedly, limited wireless spectrum
+will be wasted, and the maintenance work will also become complicated. In this paper, we design a network virtualization based
+integrated train ground communication system, in which all the applications in urban rail transit can share the same physical
+infrastructure. In order to better satisfy the Quality of Service (QoS) requirement of each application, this paper proposes a virtual
+resource allocation algorithm based on QoS guarantee, base station load balance, and application station fairness. Moreover, with
+the latest achievement of distributed convex optimization, we exploit a novel distributed optimization method based on alternating
+direction method of multipliers (ADMM) to solve the virtual resource allocation problem. Extensive simulation results indicate
+that the QoS of the designed integrated train ground communication system can be improved significantly using the proposed
+algorithm.
+1. Introduction
+With the city expansion and urban population explosion, the
+traditional road traffic facilities cannot satisfy the demand of
+modern society. Energetically developing urban rail transit
+system and improving the speed and capacity of rail transit
+have become desirable all over the world. Studies of urban rail
+transit have become a research focus among engineers and
+researchers all over the world.
+The train ground communication is a key technology to
+ensure the normal operation of urban rail transit [1]. Most of
+the urban rail transit applications, such as Communications-
+Based Train Control (CBTC) Systems [2], Passenger Inf

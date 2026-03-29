@@ -1,0 +1,44 @@
+Research Article
+Propagation at mmW Band in Metropolitan Railway Tunnels
+Ana González-Plaza
+,1 César Calvo-Ramírez,1 César Briso-Rodríguez
+,1
+Juan Moreno García-Loygorri,1 David Oliva,2 and José I. Alonso2
+1Departamento de Teor´ıa de la Se˜nal y Comunicaciones, ETSIS de Telecomunicaci´on,
+Universidad Polit´ecnica de Madrid, Madrid, Spain
+2Departamento de SSR, ETSI de Telecomunicaci´on, Universidad Polit´ecnica de Madrid, Madrid, Spain
+Correspondence should be addressed to Ana Gonz´alez-Plaza; gonzalezplaza.ana@gmail.com
+Received 3 November 2017; Revised 17 January 2018; Accepted 14 February 2018; Published 26 March 2018
+Academic Editor: Eva Antonino-Daviu
+Copyright © 2018 Ana Gonz´alez-Plaza et al. This is an open access article distributed under the Creative Commons Attribution
+License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly
+cited.
+The next generation of mobile communications, 5G, will provide a wideband network based on microwave and millimeter-wave
+(mmW) communication radio links with the goal of fulfilling the strict and severe requirements of the future test cases. In particular,
+this paper research is focused on mmW bands in metropolitan railway tunnels. For that purpose, a propagation measurement
+campaign was performed at 24 GHz band in a passenger train on a realist subway environment, and these results were combined
+with simulations ad hoc for tunnels and a theoretical modal propagation model. A narrowband and a wideband study have been
+conducted with the aim of obtaining the path loss, fading, power-delay profile, and angle of arrival, taking into consideration
+horizontal and vertical polarization in the receiving and transmitting antennas. This validation can be used to design and deploy
+wideband mobile communication networks at mmW bands in railway scenarios.
+1. Introduction
+The anticipated increase in demand for data traffic is one
+of the key requirements of the upcoming years in mobile
+communication technologies. The fifth generation (5G) aims
+to provide considerable broader bandwidths and a network
+capable of offering a flexible technology for very different
+cases studies [1].
+In this context, 5G could be the most disruptive technol-
+ogy in railways since it can allow the addition of new services
+and applications that make railway a more efficient, safer, and
+profitable transportation option [2].
+However, there are important challenges to overcome:
+The first one is to provide a wideband service for the plenty
+of passengers who will demand a large capacity. The second
+one is the critical signalling control applications which will
+require very high quality of service and moderate data rate to
+allow real-time applications such as high definition video for
+automatic driving and surveillance [3, 4].
+In the case of signalling, current railway mobile com-
+munication systems such as GSM-R are not able to provide
+such ambitious features [5]. For this reason, LTE-R

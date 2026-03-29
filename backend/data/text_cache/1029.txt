@@ -1,0 +1,45 @@
+Research Article
+A Resilience-Based Security Assessment Approach for
+CBTC Systems
+Ruiming Lu
+,1 Huiyu Dong
+,1 Hongwei Wang
+,2 Dongliang Cui
+,3 Li Zhu
+,4
+and Xi Wang
+4
+1National Research Center of Railway Safety Assessment, Beijing Jiaotong University, Beijing, China
+2State Key Laboratory of Rail Traﬃc Control and Safety, Beijing Jiaotong University, Beijing, China
+3State Key Laboratory of Synthetical Automation for Process Industries, Northeastern University, Shenyang, China
+4State Key Laboratory of Rail Traﬃc Control and Safety, Beijing Jiaotong University, Beijing, China
+Correspondence should be addressed to Hongwei Wang; hwwang@bjtu.edu.cn
+Received 29 June 2021; Accepted 28 September 2021; Published 21 October 2021
+Academic Editor: Xuzhen Zhu
+Copyright © 2021 Ruiming Lu et al. Tis is an open access article distributed under the Creative Commons Attribution License,
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+With the rapid development of urban rail transit systems, large amounts of information technologies are applied to increase
+eﬃciency of train control systems, such as general computers, communication protocols, and operation systems. With the
+continuous exposure of information technology vulnerabilities, security risks are increasing, and information is easy to use by
+malicious attackers, which can bring huge property and economic losses. Te communication-based train control (CBTC) system
+is the most important subsystem of urban rail transit. Te CBTC system ensures safe and eﬃcient operation of trains, so the
+quantitative assessment of cyber security is quite necessary. In this paper, a resilience-based assessment method is proposed to
+analyze the security level of CBTC systems based on indicators of both the cyber domain and the physical domain. Te proposed
+method can demonstrate the robustness and recovery ability of CBTC systems under diﬀerent security attacks. Based on the
+structural information entropy, the fusion of diﬀerent indicators is achieved. Two typical attacking scenarios are analyzed, and the
+simulation results illustrate the eﬀectiveness of the proposed assessment approach.
+1. Introduction
+At present, railway is developing rapidly around the world,
+especially in China, where the high-speed railway (HSR) has
+a total length of 35,000 kilometers, accounting for ap-
+proximately 66.7% of the world’s high-speed railways [1].
+China has also made signiﬁcant progress in urban rail
+transit; there are more than 200 lines, and the total operation
+length is more than 6000 km [2]. Ensuring the punctuality of
+trains is the most signiﬁcant goal of railways, and it can
+promote the sustainable development and bring the
+maintenance of social stabilization.
+Communication-based train control (CBTC) is the key
+technology of urban rail transit to keep trains operation safe
+and eﬃcient, which can provide real-time operation in-
+formation for trains and generate control

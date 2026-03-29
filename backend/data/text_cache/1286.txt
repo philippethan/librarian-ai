@@ -1,0 +1,51 @@
+Autonomous Intelligent
+Systems
+Tang et al. Autonomous Intelligent Systems            (2022) 2:25 
+https://doi.org/10.1007/s43684-022-00043-1
+O R I G I N A L A R T I C L E
+Open Access
+Urban rail transit FAO system: technological
+development and trends
+Tao Tang1, Wentao Liu1, Shukui Ding3, Chunhai Gao4 and Shuai Su1,2*
+Abstract
+This paper introduces the worldwide history of fully automatic operation (FAO) system in urban rail transit, followed
+by the development status in China. Then, the architecture and characteristics of the FAO system are described, and
+the analysis method of system design requirements is proposed based on the human factors engineering. The key
+technologies are introduced from the aspects of signaling system, vehicle system, communication system, traﬃc
+integrated automation system and reliability, availability, maintainability, and safety (RAMS) assurance. Furthermore,
+based on the independent practical experience of the FAO system, this paper summarizes the management
+methods for the construction and operation of FAO lines and prospects its future development trends toward a
+more intelligent urban rail transit system.
+Keywords: Urban rail transit, Fully automatic operation, Independent innovation, Intelligent rail transit system
+1 Introduction
+The fully automatic operation (FAO) system is a new gen-
+eration of train control system in urban rail transit that au-
+tomates the whole process of train operation based on ad-
+vanced technologies such as modern computer, commu-
+nication, control and system integration [1]. The FAO sys-
+tem is of great signiﬁcance for further improving the safety
+and eﬃciency of urban rail transit, reducing operational
+costs, and improving the automation and intelligence level
+of the equipment. As shown in Fig. 1, the International
+Union of Public Transport deﬁnes the grade of automa-
+tion (GoA) of train operation into four grades [2]. Both
+the GoA3 and GoA4 are collectively referred to as FAO.
+The diﬀerence is that there are crew attendants on trains
+to monitor the closing of train doors and handle inter-
+ference events with GoA3. Trains running with GoA4 do
+not require on-board crew attendants, which is highly au-
+tonomous and unmanned. When a fault or failure occurs,
+*Correspondence: shuaisu@bjtu.edu.cn
+1State Key Laboratory of Rail Traﬃc Control and Safety, Beijing Jiaotong
+University, Beijing, 100044, China
+2Frontiers Science Center for Smart High-speed Railway System, Beijing
+Jiaotong University, Beijing, 100044, China
+Full list of author information is available at the end of the article
+the ground personnel will be sent to the train to deal with
+it [3]. The FAO system has the following advantages com-
+pared to the Communication Based Train Control (CBTC)
+system. From the technical aspect, the FAO technology
+improves the automation level of the urban rail transit sys-
+tem, which reduces the labor intensity of operators and hu-
+man errors. Moreover, the FAO technology increases the
+uniformity of t

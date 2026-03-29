@@ -1,0 +1,52 @@
+Journal of Traffic and Transportation Engineering 7 (2019) 145-156 
+doi: 10.17265/2328-2142/2019.04.001 
+Interlocking System for CBTC (Communication Based 
+Train Control) System 
+Tetsuya Takata1, Akira Asano1 and Hideo Nakamura2 
+1. Kyosan Electric Mfg. Co., Ltd, Yokohama 230-0031, Japan 
+2. Graduate School of Frontier Science, The University of Tokyo, Chiba 277-8561, Japan 
+ 
+Abstract: In recent years, the environment of railways and the systems such as CBTC (communication based train control) have been 
+changing. To respond the changes and the needs of customers, a UTCS (unified train control system) has been developed to realize a 
+system that evolves with customers. Previous type systems consist of independent components such as ATC (Automatic train control) 
+system, electronic interlocking system, and facility monitoring system, and there are a complicated overlap of system configurations 
+and functions and difference in concept between the systems. On the other hand, the integrated train control system consists of 
+horizontal layers such as function layer, network layer, and terminal layer. Therefore, the system has been developed to make it simple 
+with no unnecessary redundancy and evolving to meet the needs of customers. In this paper, we explain a method that realizes the 
+interlocking function for CBTC system in the function layer based on the concept of “securing a train travelling path” including path 
+blocking and routing, and evaluate the safety of the method using STAMP/STPA. 
+ 
+Key words: Railway signaling, interlocking system, safety assessment, train control system, CBTC, UTCS, FMEA (fault tree analysis), 
+STAMP/STPA. 
+ 
+1. Introduction 
+Interlocking system is a train control system that 
+realizes collaborative control of branching direction or 
+permission for trains to travel, in order to prevent 
+collision or derailment of trains. 
+As a result of individual development of block 
+system, ATC system, interlocking system, and facility 
+monitoring system, the train control system consists of 
+vertically-divided independent components. Integrated 
+train control system is developed by reorganizing the 
+train control system to have horizontally-divided layers 
+including function layer, network layer, and terminal 
+layer [1, 2]. The reorganization of the system 
+incorporates the control logic into the function layer 
+and therefore the interface between the systems is 
+rational. 
+Integrated train control system is developed by 
+reorganizing the train control system to have 
+                                                          
+Corresponding author: Tetsuya Takata, B. Engineering, 
+research field: railway signaling. 
+ 
+horizontally-divided 
+layers 
+in 
+“hierarchical 
+configuration” including function layer, network layer, 
+and terminal layer. This reorganization of the system 
+not only integrates the functions and reduces on-site 
+facilities, improving the system reliability, but also 
+incorporates all the control logics into the

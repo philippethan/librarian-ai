@@ -1,0 +1,23 @@
+Functions
+of an
+Operating
+System
+Security
+File
+Management
+Error
+Detection
+Processor
+Management
+Memory
+Management
+Modern Operating Systems
+FIFTH  EDITION
+Tanenbaum • Bos
+GLOBAL 
+EDITION
+MODERN
+OPERATING SYSTEMS
+FIFTH EDITION
+GLOBAL EDITION
+This page is intentionally left blank

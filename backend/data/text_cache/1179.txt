@@ -1,0 +1,57 @@
+Citation: Felez, J.; Vaquero-Serrano,
+M.A. Virtual Coupling in Railways:
+A Comprehensive Review. Machines
+2023, 11, 521. https://doi.org/
+10.3390/machines11050521
+Academic Editors: Peter Gaspar and
+Junnian Wang
+Received: 24 March 2023
+Revised: 27 April 2023
+Accepted: 29 April 2023
+Published: 1 May 2023
+Copyright:
+© 2023 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+machines
+Review
+Virtual Coupling in Railways: A Comprehensive Review
+Jesus Felez *
+and Miguel Angel Vaquero-Serrano
+Mechanical Engineering Department, Universidad Politécnica de Madrid, Jose Gutierrez Abascal 2,
+28006 Madrid, Spain; miguel.vaquero.serrano@upm.es
+* Correspondence: jesus.felez@upm.es
+Abstract: The current mobility situation is constantly changing as people are increasingly moving to
+urban areas. Therefore, a ﬂexible mode of transport with high-capacity passenger trains and a high
+degree of modularity in the trains’ composition is necessary. Virtual coupling (VC) is a promising
+solution to this problem because it signiﬁcantly increases the capacity of a line and provides a more
+ﬂexible mode of operation than conventional signaling systems. This novel review, in which approxi-
+mately 200 papers were analyzed, identiﬁes the main topics of current railway-related VC research,
+and represents the ﬁrst step toward the implementation of VC in future railways. It was found that
+industry research has mainly focused on the feasibility of VC implementation and operation, whereas
+in academia, which is coordinated with industry, research has focused on control and communication
+systems. From a technological perspective, the main challenges for VC were identiﬁed with regard to
+aspects such as safety, control technology, interlocking, vehicle-to-vehicle communication, coopera-
+tive train protection and control, and integrated trafﬁc management. The important directions for
+future research that have been identiﬁed for future development include complete dynamic mod-
+els, real-time controllers, reliable and secure communication, different communication topologies,
+cybersecurity, intelligent control, reinforcement learning, and Big Data analytics.
+Keywords: virtual coupling; railway operation; moving block; rail control systems; optimal control;
+robust control; model predictive control; intelligent control
+1. Introduction
+The current mobility situation is constantly changing as people are increasingly mov-
+ing to urban areas. Meanwhile, people living in city centers and metropolitan areas tend
+not to use cars; thus, there is an increasing demand for efﬁcient, modern, punctual, and
+environmentally sustainable transportation.
+This growth in the demand for rail transport was reported in [1]. According to this
+report, which describes the increase in the number of passengers (in short scale billions) per
+kilo

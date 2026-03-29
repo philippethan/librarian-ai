@@ -1,0 +1,67 @@
+Citation: Purwanto, Y.; Ruriawan,
+M.F.; Alamsyah, A.; Wijaya, F.P.;
+Husna, D.N.; Kridanto, A.; Nugroho,
+F.; Fakhrudin, A.; Itqon, M.;
+Febrianta, M.Y.; et al. Security
+Architecture for Secure Train Control
+and Monitoring System. Sensors 2023,
+23, 1341. https://doi.org/10.3390/
+s23031341
+Academic Editors: Leandros
+Maglaras, Helge Janicke and
+Mohamed Amine Ferrag
+Received: 12 December 2022
+Revised: 18 January 2023
+Accepted: 19 January 2023
+Published: 25 January 2023
+Copyright:
+© 2023 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+sensors
+Article
+Security Architecture for Secure Train Control and
+Monitoring System
+Yudha Purwanto 1,*
+, Muhammad Faris Ruriawan 1, Andry Alamsyah 2
+, Febry Pandu Wijaya 3,
+Dewi Nala Husna 3, Agri Kridanto 3, Fiﬁn Nugroho 3, Anang Fakhrudin 3, Mu’ammar Itqon 3,
+Mochamad Yudha Febrianta 2
+, Sri Widiyanesti 2, Fussy Mentari 1, Alﬁan Akbar Gozali 4
+and Ade Romadhony 4
+1
+School of Electrical Engineering, Telkom University, Jl. Telekomunikasi No. 1, Bandung 40257, Indonesia
+2
+School of Economics and Business, Telkom University, Jl. Telekomunikasi No. 1, Bandung 40257, Indonesia
+3
+Indonesian Rolling Stock Industry, Jl. Yos Sudarso No. 71, Madiun 63122, Indonesia
+4
+School of Applied Science, Telkom University, Jl. Telekomunikasi, Bandung 40257, Indonesia
+*
+Correspondence: omyudha@telkomuniversity.ac.id
+Abstract: A Train Control and Monitoring System (TCMS) is a vital part of monitoring sensors in
+a train. The data output of sensors is sent wirelessly to the data server for monitoring. However,
+as the wireless channel used to send the data is a shared public network, the transmitted data are
+prone to hackers and attacks. This paper proposes the Securebox architecture to manage secure data
+transfer from the onboard Vehicle Control Unit (VCU) to the data server in TCMS. The architecture is
+comprised of four main functions: network management, buffer management, data management,
+and security management. The architecture has been successfully developed in an HSM (Hardware
+Security Modul) and veriﬁed using alpha and beta software testing to form a secure TCMS. From the
+real-time testing phase in an electric-diesel train, the average performance of the AES-based HSM
+showed 55% faster time processing with unnoticed 0.1% added memory usage compared to the 3DES.
+The secure TCMS also withstands MITM attack and provides end-to-end data security compared to
+the (Mobile Station) MS to Base Station (BS) only in GSM-R.
+Keywords: train control; monitoring system; railway security; cryptography; system architecture
+1. Introduction
+In addition to traditional signaling for communication between trains and dispatchers,
+the railway system also requires an automated monitoring system to ensure the reliability of
+the moving railway system. The Train Control and Monitor

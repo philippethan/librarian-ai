@@ -1,0 +1,63 @@
+Innovations Syst Softw Eng (2007) 3:75–102
+DOI 10.1007/s11334-006-0011-y
+ORIGINAL
+PAPER
+Model-driven architecture-centric engineering of (embedded)
+software intensive systems: modeling theories and architectural
+milestones
+Manfred Broy
+Received: 14 April 2006 / Accepted: 18 August 2006 / Published online: 15 November 2006
+© Springer-Verlag London Limited 2006
+Abstract
+Today, in general, embedded software is
+distributed onto networks and structured into logical
+components that interact asynchronously by exchanging
+messages. The software system is connected to sensors,
+actuators, human machine interfaces and networks. In
+this paper we study fundamental models of composed
+embedded software systems and their properties, iden-
+tify and describe various basic views, and show how
+they are related. We consider, in particular, models of
+data, states, interfaces, functionality, hierarchically com-
+posed systems, and processes. We study relationships by
+abstraction and reﬁnement as well as forms of composi-
+tion and modularity. In particular, we introduce a com-
+prehensive mathematical model and a corresponding
+mathematical theory for composed systems, its essential
+views and their relationships. We introduce two meth-
+odologically essential, complementary and orthogonal
+concepts for the structured modeling of multifunctional
+embedded systems in software and systems engineering
+and their scientiﬁc foundation. One approach addresses
+mainly tasks in requirements engineering and the speci-
+ﬁcation of the comprehensive user functionality of mul-
+tifunctional systems in terms of their functions, features
+and services. The other approach essentially addresses
+the design phase with its task to develop logical archi-
+tectures formed by networks of interactive components
+that are speciﬁed by their interface behavior.
+M. Broy (B)
+Institut für Informatik, Technische Universität München,
+80290 München, Germany
+e-mail: broy@in.tum.de
+URL: http://wwwbroy.informatik.tu-muenchen.de
+1 Motivation
+Development of software in general, and in particular
+of embedded software, is today one of the most com-
+plex but at the same time most effective tasks in the
+engineering of innovative applications. Software drives
+innovation in many application domains. Modern soft-
+ware systems are typically embedded in technical or
+organizational processes, distributed, dynamic, and ac-
+cessed concurrently by a variety of independent user
+interfaces. Just by constructing appropriate software we
+can provide engineering solutions that can calculate re-
+sults, communicate messages, control devices, and illus-
+trate and animate all kinds of information.
+Making embedded systems and their development
+more accessible and reducing their complexity in terms
+of development, operation, and maintenance we use
+classical concepts from engineering, namely abstraction,
+the separation of issues, and appropriate ways of struc-
+turing software. Well-chosen models and their theo-
+ries support such concepts. Also so

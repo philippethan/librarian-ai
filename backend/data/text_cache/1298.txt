@@ -1,0 +1,62 @@
+HAL Id: hal-01345425
+https://inria.hal.science/hal-01345425
+Submitted on 22 Sep 2016
+HAL is a multi-disciplinary open access
+archive for the deposit and dissemination of sci-
+entific research documents, whether they are pub-
+lished or not.
+The documents may come from
+teaching and research institutions in France or
+abroad, or from public or private research centers.
+L’archive ouverte pluridisciplinaire HAL, est
+destinée au dépôt et à la diffusion de documents
+scientifiques de niveau recherche, publiés ou non,
+émanant des établissements d’enseignement et de
+recherche français ou étrangers, des laboratoires
+publics ou privés.
+ns-3 Based Framework for Simulating Communication
+Based Train Control (CBTC) Systems
+Abdulhalim Dandoush, Alina Tuholukova, Sara Alouf, Giovanni Neglia,
+Sebastien Simoens, Pascal Derouet, Pierre Dersin
+To cite this version:
+Abdulhalim Dandoush, Alina Tuholukova, Sara Alouf, Giovanni Neglia, Sebastien Simoens, et al.. ns-
+3 Based Framework for Simulating Communication Based Train Control (CBTC) Systems. Workshop
+on ns-3 (WNS3 ’16), Jun 2016, Seattle, WA, United States. pp.116-123, ￿10.1145/2915371.2915378￿.
+￿hal-01345425￿
+ns-3 Based Framework for Simulating Communication Based Train Control
+(CBTC) Systems
+Abdulhalim Dandoushy, Alina Tuholukova, Sara Alouf, Giovanni Neglia
+Inria, Sophia Antipolis, France
+name.surname@inria.fr
+Sebastien Simoens, Pascal Derouet, Pierre Dersin
+Alstom Transport, France
+name.surname@transport.alstom.com
+Abstract
+In a Communication Based Train Control System (CBTC), a
+central zone controller server (ZC) exchanges signaling mes-
+sages with on-board carborne controllers (CC) inside the
+trains through a wireless technology. The ZC calculates and
+sends periodically to each train its Limit of Movement Au-
+thority (LMA), i.e. how far the train can proceed. A CC
+triggers an emergency break (EB) if no message is received
+within a certain time interval to avoid collision. Clearly, it is
+not desired to have an EB due to signaling messages losses
+(called spurious EB) and not to real risks for the trains.
+Quantifying the rate of spurious EBs and predicting cor-
+rectly CBTC system performance are hard tasks with im-
+portant industrial relevance.
+This work aims at lling this gap using simulation to bet-
+ter predict CBTC system performance and avoid extra pro-
+visioning before deployment. A typical CBTC system im-
+plementation for metro by Alstom Transport is considered.
+New ns-3 modules (CBTC protocol, Video trac genera-
+tor, multi-channel scanning mechanism, 3D antennas pat-
+terns) are developed and a piece of existing code is enhanced.
+The simulation is also used to investigate the dimension of
+the radio access networks in a realistic environment (specic
+modems and access point antennas, radio frequencies, train
+and track models), another aspect also ignored in the previ-
+ous literature. Last, our approach can be useful to validate
+some analytical works.
+Keywords
+Communication Based Train Control, Signaling Sy

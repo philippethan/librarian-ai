@@ -1,0 +1,64 @@
+4
+SOFTWARE REQUIREMENTS
+ENGINEERING
+4.1
+REQUIREMENTS-ENGINEERING PROCESS
+Requirements engineering is the subdiscipline of software engineering that is
+concerned with determining the goals, functions, and constraints of software sys-
+tems and the representation of these aspects in forms amenable to modeling and
+analysis. The goal is to create a requirements speciﬁcation that is complete, cor-
+rect, and understandable to both customers and developers. This last goal creates
+somewhat of a dilemma, as it indicates the duality of purpose of requirements
+documents: to provide insight for the customers to ensure the product under
+development meets their needs and expectations, and as a complete representa-
+tion of the functions and constraints of the system as a basis for developers. In
+the real-time system domain this is further complicated by the need to represent
+timing and performance constraints as well as the more readily elicited functional
+requirements.
+A generalized workﬂow for the requirements engineering phase is shown in
+Figure 4.1, where activities are represented as smoothed rectangles and the docu-
+ments resulting from those activities are rectangles. The requirements engineering
+process begins with a preliminary study. This is an investigation into the motiva-
+tion for the project and the nature of the problem. This investigation may consist
+of stakeholder perspectives and constraints, determination of project scope and
+feature priorities and, in real-time systems, some early analysis of the temporal
+Some of this chapter has been adapted from Phillip A. Laplante, Software Engineering for Image
+Processing, CRC Press, Boca Raton, FL 2003.
+Real-Time Systems Design and Analysis, By Phillip A. Laplante
+ISBN 0-471-22855-9 2004 Institute of Electrical and Electronics Engineers
+161
+162
+4
+SOFTWARE REQUIREMENTS ENGINEERING
+Preliminary
+Study
+Requirements
+Validation
+Requirements
+Definition
+Requirements
+Elicitation
+Feasibility
+Report
+Domain
+Model
+Requirements
+Document
+Definition of
+Requirements
+Requirements
+Specification
+Figure 4.1
+The requirements-engineering process depicting documentation in rectangles and
+activities in smoothed rectangles. Adapted from Sommerville [Sommerville00].
+constraints imposed upon the system. One of the major deliverables of the pre-
+liminary study is a feasibility report that may advise discontinuing development
+of the software product. Most of the time this will not be the case, and the
+preliminary study will be followed by requirements elicitation.
+Requirements elicitation involves gathering requirements through a variety of
+techniques that may include stakeholder interviews and questionnaires, focus
+groups, workshops, and prototyping. While requirements can be expressed in
+many forms ranging from standard text through mathematical formalisms, it is
+usual for requirements to be represented in the form of a domain model, that
+is, a model of the problem domain that may include such artifacts as use cases,
+entity-relatio

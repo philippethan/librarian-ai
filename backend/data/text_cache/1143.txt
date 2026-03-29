@@ -1,0 +1,122 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guide de démarrage rapide pour calibre
+Quatrième Édition
+
+
+
+Par : John Schember
+
+
+
+
+Copyright © 2010-2014 John Schember
+Traduction: Transifex Calibre Translation Group
+Sous licence Creative Commons Attribution-ShareAlike 4.0 International License.
+
+
+
+
+
+
+Table des Matières
+
+
+Introduction
+
+
+Installer calibre
+
+
+L'écran principal de la bibliothèque, nommé aussi le GUI
+
+
+Activités courantes
+
+
+Tâche 1 : Organiser
+
+
+Tâche 2 : Convertir
+
+
+2.1 : Arrière-plan
+
+
+2.2 : Pourquoi il y a-t-il différents formats numériques ?
+
+
+2.3 : Les bases de la conversion
+
+
+2.4 : Conversion automatique
+
+
+2.5 : Conversion plus robuste
+
+
+2.6 : Les limitations de la conversion
+
+
+2.7 : DRM : le fléau de la conversion
+
+
+
+
+Tâche 3 : Editer des livres
+
+
+Tâche 4 : Télécharger des informations
+
+
+Tâche 5 : Interagir avec les appareils de lecture
+
+
+5.1 : Transférer un livre sur votre appareil de lecture
+
+
+5.2 : configuration optionnelle d'un appareil de lecture
+
+
+
+
+Tâche 6 : Visualiser de livres numériques
+
+
+
+
+Où trouver de l'aide
+
+
+
+
+
+
+
+
+Introduction
+calibre est un outil open source de gestion de livres numériques. Pour faire simple, calibre vous permet d'organiser votre bibliothèque numérique, de convertir des livres numériques vers de nomnbreux formats, et d'interagir avec votre appareil de lecture, le tout d'une manière intuitive et conviviale. Il est compatible avec Microsoft Windows – XP, Vista, 7, et 8 – ainsi qu'avec l'OS X d'Apple (et différentes versions de Linux). Il a été créé par Kovid Goyal, qui gère toujours son développement. Un certain nombre de personnes à travers le monde, moi y compris, contribuent au développement de calibre. Au travers de ce guide et des documents en ligne vous verrez « calibre » au lieu de « Calibre ». C'est la convention que Kovid a choisie, de sorte que c'est celle-ci que nous emploierons.
+L'objectif de calibre est de simplifier la gestion de votre bibliothèque numérique. Il fait cela de différentes manières :
+
+calibre organise votre bibliothèque comme une base de données pour que vous puissiez trouver le livre que vous voulez quand vous le voulez. Calibre gère sans problème n'importe quelle taille de bibliothèque et peut modifier les métadonnées d'un livre numérique – titre, auteur, appréciation notée, etc….
+calibre peut faire des conversions entre les multiples formats numériques.
+calibre est compatible avec de plus en plus d'appareils de lecture, dont Kindle, Kobo, Nook, et beaucoup d'autres.
+
+calibre est composé de trois groupes fonctionnels :
+
+L'interface graphique (GUI). C'est le mode principal d'interaction entre vous et votre bibliothèque. Toutes les fonctionnalités principales de calibre sont disponibles via l'interface graphique.
+Une collection d'utilitaires en ligne de commande (CLI) pour les opérations avancées de calibre. Par exemple, les outils en ligne de commande sont employés par le service  ManyBooks  quand il est nécessaire de faire une conversion.
+Des outils GUI additionnels comme le lecteur de livres et l'édi

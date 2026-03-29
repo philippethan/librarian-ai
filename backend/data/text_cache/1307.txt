@@ -1,0 +1,50 @@
+Product Line Engineering
+Applied to CBTC Systems Development
+Alessio Ferrari1, Giorgio O. Spagnolo1,
+Giacomo Martelli2, and Simone Menabeni2
+1 ISTI-CNR, Via G. Moruzzi 1, Pisa, ITALY,
+{lastname}@isti.cnr.it,
+WWW home page: http://www.isti.cnr.it/
+2 DSI, Universit`a degli Studi di Firenze, Via di S.Marta 3, Firenze, ITALY,
+{lastname}@dsi.unifi.it,
+WWW home page: http://www.dsi.unifi.it/
+Abstract. The degree of automation in rail transport systems is con-
+stantly increasing. The gradual replacement of the control role of the
+human agent requires these systems to guarantee an enhanced level of
+safety and reliability. On the other hand, increased automation implies
+increased complexity. Dealing with such complexity requires to analyse
+the diﬀerent system aspects at the proper level of abstraction.
+The semi-formal and formal modelling methods can provide crucial sup-
+port to meet the safety and reliability requirements and ensure that a
+proper degree of abstraction is maintained during the analysis. Further-
+more, the product line engineering technology provides a suitable tool to
+integrate formal modelling with system modularity.
+Communications-based Train Control (CBTC) systems are the new fron-
+tier of automated train control and operation. Currently developed CBTC
+platforms are actually very complex systems including several function-
+alities, and every installed system, developed by a diﬀerent company,
+varies in extent, scope, number, and even names of the implemented
+functionalities. International standards have emerged, but they remain
+at a quite abstract level, mostly setting terminology.
+This paper reports intermediate results in an eﬀort aimed at deﬁning
+a global model of CBTC, by mixing formal modelling and product line
+engineering. The eﬀort has been based on an in-depth market analysis,
+not limiting to particular aspects but considering as far as possible the
+whole picture. The adopted methodology is discussed and a preliminary
+model is presented.
+Introduction
+Communications-based Train Control (CBTC) is the last technological frontier
+for signalling and train control in the metro market [19, 11]. CBTC systems oﬀer
+ﬂexible degrees of automation, from enforcing control over dangerous operations
+acted by the driver, to the complete replacement of the driver role with an
+automatic pilot and an automatic on-board monitoring system.
+2
+Depending on the speciﬁc installation, diﬀerent degrees of automation might
+be required. Furthermore, companies shall be able to provide complete CBTC
+systems, but also subsets of systems. The aim is to satisfy the needs of green-ﬁeld
+installations, and address the concerns of the operators who wish to renew only
+a part of an already installed system. In this sense, the product line engineering
+technology provides a natural tool to address the need for modularity required
+by a market of this type [6, 9].
+Entering the CBTC market with a novel product requires such a product to
+be compliant with the existing standa

@@ -1,0 +1,61 @@
+INFRASTRUCTURE DESIGN, 
+SIGNALLING AND SECURITY 
+IN RAILWAY 
+ 
+Edited by Xavier Perpinya 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Infrastructure Design, Signalling and Security in Railway 
+Edited by Xavier Perpinya 
+ 
+ 
+Published by InTech 
+Janeza Trdine 9, 51000 Rijeka, Croatia 
+ 
+Copyright © 2012 InTech 
+All chapters are Open Access distributed under the Creative Commons Attribution 3.0 
+license, which allows users to download, copy and build upon published articles even for 
+commercial purposes, as long as the author and publisher are properly credited, which 
+ensures maximum dissemination and a wider impact of our publications. After this work 
+has been published by InTech, authors have the right to republish it, in whole or part, in 
+any publication of which they are the author, and to make other personal use of the 
+work. Any republication, referencing or personal use of the work must explicitly identify 
+the original source. 
+ 
+As for readers, this license allows users to download, copy and build upon published 
+chapters even for commercial purposes, as long as the author and publisher are properly 
+credited, which ensures maximum dissemination and a wider impact of our publications. 
+ 
+Notice 
+Statements and opinions expressed in the chapters are these of the individual contributors 
+and not necessarily those of the editors or publisher. No responsibility is accepted for the 
+accuracy of information contained in the published chapters. The publisher assumes no 
+responsibility for any damage or injury to persons or property arising out of the use of any 
+materials, instructions, methods or ideas contained in the book. 
+  
+Publishing Process Manager Sasa Leporic 
+Technical Editor Teodora Smiljanic 
+Cover Designer InTech Design Team 
+ 
+First published March, 2012 
+Printed in Croatia 
+ 
+A free online edition of this book is available at www.intechopen.com 
+Additional hard copies can be obtained from orders@intechopen.com 
+ 
+ 
+Infrastructure Design, Signalling and Security in Railway, Edited by Xavier Perpinya  
+    p. cm.  
+ISBN 978-953-51-0448-3 
+ 
+ 
+ 

@@ -1,0 +1,46 @@
+Guide to Achieving 
+Functional Safety in 
+Railway Software
+How to Satisfy EN 50128 Requirements
+T E C H N I C A L  W H I T E PA P E R
+Guide to Achieving Functional Safety in Railway Software
+Whitepaper
+2
+INTRODUCTION
+With the growing reliance on software components in embedded systems, quality has become 
+an ever-increasing concern. Long-standing quality strategies, such as testing with a debugger, are 
+no longer efficient or sufficient. To further complicate matters, many developers cannot readily 
+run a test program in the actual deployment environment because they lack access to the final 
+system hardware. To address these challenges, code quality needs to be addressed throughout the 
+development lifecycle using a synergy of proven techniques for early defect prevention, assisted by 
+automation for implementation and monitoring.
+Software for mechatronic implementations is becoming increasingly complex, raising the risks of 
+systematic and random hardware failures. The EN 50128 standard includes guidance for reducing 
+these risks to a tolerable level by providing feasible requirements and processes for the software 
+aspect of railway applications. C/C++test, Parasoft’s development testing solution for C and C++ 
+software, not only facilitates the application of EN 50128, it also enables teams to produce better code 
+for embedded systems, test it more efficiently, and consistently monitor progress towards their quality 
+goals. With Parasoft, quality activities, such as static analysis, unit and component testing, coverage 
+analysis, and more, are automated throughout the development cycle, including on the software 
+engineer’s desktop to prevent the injection of coding patterns associated with software defects.
+Analysis results, test data, coverage, and other quality metrics generated during manual and fully 
+automated execution within regression and continuous integration environments can also be sent 
+to DTP, Parasoft's reporting and anlytics platform. DTP collects code analysis and quality data, 
+correlates it with other data generated throughout the development lifecycle, and returns intelligent, 
+actionable SDLC analytics that enable you to implement a true defect prevention strategy.
+This paper describes how Parasoft can help software development teams meet requirements for 
+particular SIL levels as defined by the EN 50128 standard.
+Guide to Achieving Functional Safety in Railway Software
+Whitepaper
+3
+ABOUT EN 50128
+EN 50128 is part of a group of related European Standards that define requirements for railway 
+applications. Other standards in the group are:
+	»
+EN 50126 “The Specification and Demonstration of Reliability, Availability, Maintainability and 
+Safety (RAMS)”
+	»
+EN 50129 “Communication, Signaling and Processing Systems – Safety-Related Electronic Systems 
+for Signaling”
+EN 50128 is titled, “Communication, Signaling and Processing Systems - Software for Railway Control 
+and Protection Systems” and specifically addresses the softw

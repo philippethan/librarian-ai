@@ -1,0 +1,46 @@
+Research Article
+Adaptive Equalizer Design for Unmanned Aircraft Vehicle
+Image Transmission over Relay Channels
+Huang Wenqian
+and Ding Wenrui
+School of Electronic and Information Engineering, Beihang University, Beijing, China
+Correspondence should be addressed to Huang Wenqian; huangwenqian@buaa.edu.cn
+Received 8 December 2017; Revised 23 February 2018; Accepted 5 March 2018; Published 11 April 2018
+Academic Editor: Hongwei Wang
+Copyright © 2018 Huang Wenqian and Ding Wenrui. This is an open access article distributed under the Creative Commons
+Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is
+properly cited.
+A novel length adaptive method is proposed for time domain equalizer by taking the channel attenuation ratio between different
+multipath components into account in UAV-UAV and UAV-ground channels. Then, considering received image quality, the
+minimum bit error ratio (MBER) criterion is exploited to design adaptive equalizers for both amplify-and-forward (AF) and
+decode-and-forward (DF) relaying systems by the proposed length adaptive method. Results show that proposed MBER adaptive
+equalizers outperform the traditional ones in both AF relaying and DF relaying as channel attenuation ratio in UAV-ground channel
+increases. Moreover, DF outperforms AF as channel attenuation ratio in UAV-UAV channel increases. Furthermore, bit error ratio
+(BER) and peak signal-to-noise ratio (PSNR) performances in both AF and DF are evaluated to show the enhancement by the
+proposed MBER adaptive equalizers.
+1. Introduction
+With the explosive growth of using unmanned aircraft vehi-
+cle (UAV) for various applications, there is a tremendous
+demand for image wireless transmission in UAV remote
+sensing system [1, 2]. The performance of traditional direct
+UAV-to-ground communication is severely degraded by the
+fading of the wireless channel and can be easily shadowed
+by buildings in urban areas or by mountains in rural areas,
+leading to drop in the quality of the received images. Thus it
+is imperative to develop the future communication schemes
+to mitigate the impact caused by the fading and shadowing.
+Relaying as an approach to increase the reliability and
+extend the coverage area of the UAV remote sensing system,
+as depicted in Figure 1, has attracted a huge interest [3–5].
+In [3], UAVs are deployed as flying relays between aerial and
+ground mesh networks in an emergency scenario. Reference
+[5] investigated how to deploy UAVs as flying relays to
+increase coverage in the wireless network. Generally, there
+are mainly two widely used relaying schemes: amplify-and-
+forward (AF) and decode-and-forward (DF). In AF, the relay
+amplifies and retransmits the received signal from the source
+to the destination. In DF, the relay decodes the signal and then
+forwards it to the destination.
+According to recent measurement campaign and litera-
+tures [6–8], UAV-to-ground and UAV-to-UAV channels, two
+kinds 

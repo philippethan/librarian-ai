@@ -1,0 +1,44 @@
+Research Article
+An Operation Control Strategy for the Connected Maglev Trains
+Based on Vehicle-Borne Battery Condition Monitoring
+Wenjing Zhang
+, Wenjun Wei, Yifan Yang, and Nan Nan
+School of Electronic and Information Engineering, Beijing Jiaotong University, Beijing 100044, China
+Correspondence should be addressed to Wenjing Zhang; zhangwj@bjtu.edu.cn
+Received 8 December 2017; Accepted 7 March 2018; Published 12 April 2018
+Academic Editor: Cesar Briso-Rodriguez
+Copyright © 2018 Wenjing Zhang et al. This is an open access article distributed under the Creative Commons Attribution License,
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+Vehicle-borne battery condition is an important factor affecting the efficiency of the maglev train operation and other connected
+ones. To effectively eliminate the influence of the battery condition and improve the operation efficiency of the connected maglev
+trains, an operation control strategy is proposed to guarantee train operation safety. First, based on Internet of Things, a sensor
+network is designed to monitor vehicle-borne battery condition in each vehicle of the train. Second, the train Operation Control
+System collects battery data of all vehicles in a maglev train by Train Communication Network. Third, all connected maglev trains
+share the battery data via a 38 GHz directional Radio Communication System and adjust operation control strategy accordingly.
+Simulation results indicate that the proposed strategy can guarantee the operation safety of the connected maglev trains.
+1. Introduction
+After the introduction of high-speed maglev train Transrapid-08
+into Shanghai in 2002 and with the operations of both Airport
+Line of Changsha in 2016 and S1 Line of Beijing in 2017,
+maglev transportation system has received more and more
+attention in China [1, 2]. Compared with the conventional
+wheel-rail transportation systems, the maglev transportation
+system has many excellent features such as low environmental
+noise, small turning radius, high climbing slope ability, strong
+weather resistance, low maintenance cost, and long life-span
+[3].
+Normally, based on five speed curve limits including the
+minimum speed-up limit, the minimum levitation limit, the
+maximum safety braking limit, the maximum speed running
+limit, and the maximum speed limit, the train Operation
+Control System (OCS), which has four subsystems including
+Central Control System (CCS), Decentralization Control
+System (DCS), Vehicle Control System (VCS), and 38 GHz
+directional Radio Communication System (RCS), formulates
+an operation control strategy real-timely to guarantee train
+operation safety [4].
+However, for construction cost consideration, only sta-
+tion decentralizations and Auxiliary Stopping Area (ASA) of
+section decentralizations are equipped with Power Rail (PR),
+making it discontinuous. In case of emergency, VCS requests
+DCS to shut off the Propulsion Power-Sup

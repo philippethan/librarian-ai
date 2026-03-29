@@ -1,0 +1,85 @@
+6/15/23, 11:16 AM
+Specification of Communication Based Train Control System Using AADL | SpringerLink
+https://link.springer.com/chapter/10.1007/978-3-642-40675-1_10
+1/6
+Specification of Communication Based
+Train Control System Using AADL
+Lichen Zhang
+ & Bingqing Xu 
+Conference paper
+2675 Accesses
+Part of the Lecture Notes in Electrical Engineering book
+series (LNEE,volume 274)
+Abstract
+The development of railway cyber physical systems
+is a challenging process. In this paper we present
+our current effort to extend AADL to include new
+features for separation of concerns of railway cyber
+physical systems, we extend AADL in spatial aspect,
+dynamic continuous aspect, physical world
+modeling aspect. Finally, we illustrate the proposed
+method via an example of specification of
+communication based train control system.
+Home 
+ Mobile, Ubiquitous, and Intelligent Computing 
+ Conference paper
+Log in
+Menu
+Search
+Mobile, Ubiquitous, and Intelligent Computing pp 63–68
+6/15/23, 11:16 AM
+Specification of Communication Based Train Control System Using AADL | SpringerLink
+https://link.springer.com/chapter/10.1007/978-3-642-40675-1_10
+2/6
+Keywords
+AADL Railroad system
+Train control system
+component
+OSATE
+This is a preview of subscription content, access via
+your institution.
+Chapter
+EUR   29.95
+Price includes VAT (France)
+Buy Chapter
+eBook
+EUR   160.49
+Softcover Book
+EUR   210.99
+Hardcover Book
+EUR   210.99
+Tax calculation will be finalised at checkout
+Purchases are for personal use only
+Learn about institutional subscriptions
+Preview
+Unable to display preview. Download preview PDF.
+References
+Available as PDF
+Read on any device
+Instant download
+Own it forever
+6/15/23, 11:16 AM
+Specification of Communication Based Train Control System Using AADL | SpringerLink
+https://link.springer.com/chapter/10.1007/978-3-642-40675-1_10
+3/6
+1. IEC62278:2002, Railway applications:
+Specification and demonstration of reliability,
+availability, maintainability and safety (RAMS)
+2. IEC62279:2002, Railway applications:
+Communications, signaling and processing
+systems–Software for railway control and
+protection systems
+3. EC62280:2002, Railway applications:
+Communication, signaling and processing
+systems–Safety related electronic systems for
+signaling
+4. Laprie, J.C. (ed.): Dependability: Basic Concepts
+and Terminology. Springer, Secaucus (1992)
+5. Avizienis, A., Laprie, J.-C., Randell, B.:
+Dependability of computer systems:
+Fundamental concepts, terminology, and
+examples (2000)
+6. Hudak, J.J., Feiler, P.H.: Developing aadl models
+for control systems: A practitioner’s guide (2007)
+7. Feiler, P.H., Gluch, D.P.: Model-Based
+Engineering with AADL: An Introduction to the

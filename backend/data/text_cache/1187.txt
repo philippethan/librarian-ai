@@ -1,0 +1,56 @@
+Modelling of Track Layout for Intelligent Railway
+Signalling System: A Machine Learning Application
+Y. Baviskar∗, U. Suryawanshi†, A. Sheikh
+EED, VJTI, Mumbai, India.
+Email:∗baviskaryogendra@gmail.com
+†ussuryawanshi_m17@ee.vjti.ac.in
+Abstract—The railway signalling domain is a complex critical
+infrastructure, linking communication and number of control
+elements. Ensuring safety in railway signalling system is always
+considered as a guarantee of intact operation of the railway.
+Current signalling system composes of centralized controllers
+which provide a single feature such as interlocking, and
+level crossing control. The Indian Railways (IR) uses Panel
+Interlocking (PI), Route Relay Interlocking (RRI), and Solid
+State Interlocking (SSI) or Electronic Interlocking (EI) for
+signalling safety, however, permitting movement of the trains
+lies in the hands of a human. The main challenge is to combine
+multiple sources of data and deﬁne a system which can intensify
+the functionality of the system. This paper mainly focuses on
+development of an automated model, beneﬁcial to Intelligent
+Signalling System (ISS). Assessing its ability to take a decision
+which authorizes the movement of trains according to the
+timetable and modify it depending on real-time information
+using Machine Learning (ML). For modelling, IR standard
+single line station layout is considered and graphical model-
+based design techniques are implied. For analysis consider
+the track sections as nodes, signals as the start point and the
+end point linked to speciﬁc routes and assessing the developed
+model for various operating scenarios keeping a strict check on
+completeness and consistency. Implementation of such system
+in the railway network will not only provide a comprehensive
+level of safety in railway transportation but also takes a step
+forward towards systematizing various methods and strategies
+such as rescheduling system, monitoring performance under one
+roof using ML
+Keywords: Intelligent
+Signalling system,
+Machine Learning,
+Route, Signalling principles.
+I. INTRODUCTION
+With rise in demand of Railway transportation being more
+energy efﬁcient, safe, and environment friendly compared to
+other modes of transport [1]. A train cannot proceed on the
+portion of the track which is occupied by another train, hence,
+for the movement of a train the system has to ensure the track
+clearance before the signal is approved. Railway Signalling
+and Control is complex and latches onto the subject, with
+a history stretching back to the dawn of the Railway Age
+180 years ago. From the 1920s, the track circuit rapidly
+gained ground as the essential safety feature of a signalling
+system as schemes grew in size and complexity. Solid State
+Interlocking (SSI) remains the system of choice due to equip-
+ment modularity, high system availability, ease of application,
+good maintainability and cost effectiveness [2]. To monitor
+the operational status of railway signalling systems, various
+monitoring and recording

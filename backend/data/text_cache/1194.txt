@@ -1,0 +1,82 @@
+Computer Networking : Principles,
+Protocols and Practice
+Release 0.25
+Olivier Bonaventure
+October 30, 2011
+Saylor URL: http://www.saylor.org/courses/cs402/
+The Saylor Foundation
+Saylor URL: http://www.saylor.org/courses/cs402/
+The Saylor Foundation
+Information on The Saylor Foundation’s Open Textbook Challenge can be found at www.saylor.org/otc/.
+Computer Networking: Principles, Protocols, and Practice was written by Dr. Olivier Bonaventure of the 
+Université catholique de Louvain for teaching Local Area Networks. After The Saylor Foundation accepted 
+his submission to Wave I of the Open Textbook Challenge, this textbook was relicensed as CC-BY 3.0.  
+Computer Networking: Principles, Protocols and Practices © October 31, 2011 by Olivier Bonaventure, is 
+licensed under a Creative Commons Attribution (CC BY) license made possible by funding from The Saylor 
+Foundation's Open Textbook Challenge in order to be incorporated into Saylor.org's collection of open courses 
+available at: http://www.saylor.org. Full license terms may be viewed at: http://creativecommons.org/licenses/
+by/3.0/legalcode
+Contents
+1
+Preface
+3
+2
+Introduction
+5
+2.1
+Services and protocols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11
+2.2
+The reference models
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+20
+2.3
+Organisation of the book . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+25
+3
+The application Layer
+27
+3.1
+Principles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+27
+3.2
+Application-level protocols
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+32
+3.3
+Writing simple networked applications
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+55
+3.4
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+61
+3.5
+Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+61
+4
+The transport layer
+67
+4.1
+Principles of a reliable transport protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+67
+4.2
+The User Datagram Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+87
+4.3
+The Transmission Control Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+89
+4.4
+Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+4.5
+Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+5
+The network layer
+127
+5.1
+Principles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+5.2
+Internet Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+5.3
+Routing in IP networks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 170
+5.4
+Summary . . . .

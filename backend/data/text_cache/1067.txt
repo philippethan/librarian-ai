@@ -1,0 +1,66 @@
+Citation: Petrovi´c, A.D.; Bani´c, M.;
+Simonovi´c, M.; Stamenkovi´c, D.;
+Miltenovi´c, A.; Adamovi´c, G.;
+Rangelov, D. Integration of Computer
+Vision and Convolutional Neural
+Networks in the System for Detection
+of Rail Track and Signals on the
+Railway. Appl. Sci. 2022, 12, 6045.
+https://doi.org/10.3390/
+app12126045
+Academic Editor: Amerigo Capria
+Received: 1 May 2022
+Accepted: 10 June 2022
+Published: 14 June 2022
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright:
+© 2022 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+applied  
+sciences
+Article
+Integration of Computer Vision and Convolutional Neural
+Networks in the System for Detection of Rail Track and Signals
+on the Railway
+Aleksandar Dragan Petrovi´c 1,*
+, Milan Bani´c 1
+, Miloš Simonovi´c 1
+, Dušan Stamenkovi´c 1,
+Aleksandar Miltenovi´c 1
+, Gavrilo Adamovi´c 2 and Damjan Rangelov 1
+1
+Faculty of Mechanical Engineering, University of Niš, 18000 Nis, Serbia; milan.banic@masfak.ni.ac.rs (M.B.);
+milos.simonovic@masfak.ni.ac.rs (M.S.); dusan.stamenkovic@masfak.ni.ac.rs (D.S.);
+aleksandar.miltenovic@masfak.ni.ac.rs (A.M.); damjan.rangelov@masfak.ni.ac.rs (D.R.)
+2
+Department of Computer Science, Faculty of Science and Mathematics, University of Niš, 18000 Nis, Serbia;
+gavrilo.adamovic@pmf.edu.rs
+*
+Correspondence: aleksandar.petrovic@masfak.ni.ac.rs; Tel.: +381-(0)-63205202
+Abstract: One of the most challenging technical implementations of today is self-driving vehicles. An
+important segment of self-driving is the ability of the computer to “see/detect” objects of interest at a
+distance which enables safe vehicle operation. An algorithm for the detection of railway infrastructure
+objects, namely, track and signals, is proposed in this paper to enable detection of signals which
+are relevant for the track the train is moving along. The algorithm integrates traditional computer
+vision (CV) algorithms, including Canny edge detection, Hough transform, and You Only Look Once
+(YOLO) algorithm, based on convolutional neural networks (CNNs). Each of the concepts (CV and
+CNNs) deals with a different object of detection which together form a unique system that aims to
+detect both the rails and the relevant signals. This approach ensures that the artiﬁcial intelligence (AI)
+system is “aware” of which route the signal belongs to. The reliability of the proposed algorithm in
+detection of a relevant signal, veriﬁed by the performed tests, is up to 99.7%. The metric method used
+for validation was intersection over union (IoU). The obtained value of IoU applied on the entire
+validation dataset exceeds 0.7. Calculated values of average precision and recall were 0.89 and 0.76,
+respectively. The algorithm created in this way solves the problem of detectio

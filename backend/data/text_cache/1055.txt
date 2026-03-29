@@ -1,0 +1,66 @@
+eBOOK
+INSIDE
+Lars Schnieder
+COMMUNICATIONS- 
+BASED TRAIN CONTROL 
+(CBTC)
+Components – Functions – Operations
+8
+Content
+Summary................................................................................................................................5
+Foreword................................................................................................................................7
+1	
+Motivation and Background......................................................... 11
+1.1	
+Development of Urban Mobility............................................................................11
+1.2	
+Advantages of Automated Urban Rail Transport Systems..................................12
+2	
+System Components and Surrounding Systems of Automatic 
+Train Control Systems................................................................... 16
+2.1	
+System Components of Automatic Train Control Systems.................................16
+2.1.1	
+Trainborne Equipment.............................................................................................17
+2.1.2	
+Wayside Equipment.................................................................................................18
+2.1.3	
+Data Communication System..................................................................................19
+2.1.4	
+Operations Control System......................................................................................22
+2.2	
+Surrounding Systems of Automatic Train Control Systems................................23
+3	
+Grades of Automation (GoA)........................................................ 27
+3.1	
+Grade of Automation 0: Train Operations on Sight (TOS)...................................27
+3.2	
+Grade of Automation 1: Manual Train Operations (MTO)....................................27
+3.3	
+Grade of Automation 2: Semi-Automatic Train Operations (STO).......................29
+3.4	
+Grade of Automation 3: Driverless Train Operations (DTO).................................29
+3.5	
+Grade of Automation 4: Unmanned Train Operations (UTO)...............................29
+4	
+Operating Modes and Mode Transitions..................................... 30
+4.1	
+Transition between Manual Train Operations  
+and Semi-Automatic Train Operations.................................................................30
+4.2	
+Transitions between Semi-Automatic Train Operations  
+and Unmanned Train Operations..........................................................................30
+4.3	
+Degraded Operations in Case of Failures of Onboard  
+and/or Wayside Equipment..................................................................................32
+Content
+9
+Content
+5	
+Basic Functions of Automatic Train Control Systems................. 33
+5.1	
+Protection of Train Movements............................................................................33
+5.2	
+Drive the Train........................................................................................................40
+5.3	
+Supervise Passenger Tr

@@ -1,0 +1,37 @@
+ 
+1 
+ 
+Interne 
+LinX4Rail: Towards the European Railway System Architecture 
+Pierre-Etienne GAUTIER1, Marc SANGO2, Jean-Baptiste SIMONNET2, Fabien LETOURNEAUX2,  
+Christophe CHERON2, Judicaël DEHOTIN ADOUNVO1 
+1SNCF Réseau / DGII, Saint-Denis, France  
+2SNCF / DTIPG, Saint-Denis, France 
+Corresponding Author: Marc Sango (marc.sango@sncf.fr) 
+Abstract 
+Several architecture initiatives for the railway system are currently in progress in Shift2Rail programme (e.g., 
+ATO projects, CONNECTA, etc.) and other European initiatives (e.g., EULYNX, RCA, OCORA, etc.). However, these 
+initiatives mostly address the architecture in a fragmented way, focusing on their specific system-of-interest 
+(CCS, ATO, TCMS, Energy, etc.). An overall architecture is required to support an evolution of the railway system 
+towards digitized systems, migration of the legacy systems and significant breakthroughs introduction. The 
+objective of LinX4Rail project is to develop the European Railway System Architecture, federating the already 
+existing initiatives and capitalising on lessons learned from other sectors. This paper presents the methodology 
+used to set up the preliminary description of this reference railway system architecture in three layers: services, 
+operations and assets. This accepted divisions of the railway system in three layers are seen as a tool for simple 
+architecture description and should allow iteratively description and refinement of services, operations, assets 
+and their interfaces. LinX4Rail is an ongoing Shift2Rail project, and it is executed according to the system 
+architecting process that is developed for the purpose of the System Pillar in Europe’s Rail Joint Undertaking 
+programme, the successor of Shift2Rail programme. The methodology will be continuously revisited to adapt it 
+whenever required and align the work programme with System Pillar requirements. 
+Keywords: Railway; System; Architecture; Integration; Interoperability 
+1. Introduction 
+In the railway sector, there are several architecture initiatives within Shift2Rail programme [1] or in the frame 
+of other European collaborations, such as wayside Control Command System (CCS) in RCA [2], CCS on-board in 
+OCORA [3]. These projects mostly address the architecture in a fragmented and isolated way, focusing on their 
+specific system-of-interest, while an overarching architecture is required to support an evolution of the railway 
+system towards digitized systems, migration of the legacy systems and significant breakthroughs 
+introduction. The objective of LinX4Rail project is to build a reference architecture covering the entire railway 
+system, supported by all involved stakeholders, and allowing all the current related architectures of subsystems 
+(CCS, ATO, TCMS, Energy, …) to be situated in this reference architecture. In addition, a reference architecture 
+may supplement the structure and interoperability requirements presented in the TSI (Technical Specifications 
+for Interope

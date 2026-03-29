@@ -1,0 +1,64 @@
+Article
+The Function Design for the Communication-Based Train
+Control (CBTC) System: How to Solve the Problems in the
+Underground Mine Rail Transportation?
+Haoxuan Yu 1,2
+and Shuai Li 1,*
+
+
+Citation: Yu, H.; Li, S. The Function
+Design for the Communication-Based
+Train Control (CBTC) System: How to
+Solve the Problems in the Underground
+Mine Rail Transportation? Appl. Syst.
+Innov. 2021, 4, 31. https://doi.org/
+10.3390/asi4020031
+Received: 14 April 2021
+Accepted: 26 April 2021
+Published: 27 April 2021
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright: © 2021 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+1
+School of Resources and Safety Engineering, Central South University, Changsha 410083, China;
+yuhaoxuan@csu.edu.cn
+2
+Institute of Electrical and Electronics Engineers (IEEE), New York, NY 10001, USA
+*
+Correspondence: shuaige@csu.edu.cn
+Abstract: With the continuous development of the mining industry, the world’s major mines have
+gradually entered the intelligent stage. In intelligent underground mines, the operation roads of the
+underground transportation equipment are very complicated, and the monitoring and control of the
+underground trafﬁc have become the problems to be solved in the intelligent underground mines.
+Therefore, on the basis of solving the practical problems of underground mines, the concept paper
+discusses the possibility of the communication-based train control (CBTC) system being applied
+to underground mines through the summary and induction of the related literature. As mining
+engineers, we have proposed the function design for the CBTC system to solve the problems in
+underground mine rail transportation, but we still need to continue to work hard for the future
+development of the underground mines. The concept paper serves as a guide to the Tossing out a
+brick to get a jade gem, and it has implications for the development and the future of underground
+mine transportation.
+Keywords: underground mines; rail transportation; underground transportation; monitoring and
+control system; mining industry
+1. Introduction: The Development of the Mining Industry and the CBTC System
+With the rapid development of mining science and technology, the underground
+mines all over the world are gradually stepping into the intelligent stage.
+Although the intelligentization is the ultimate goal of mine development, underground
+mine faces many challenges in the process of developing toward the intelligentization,
+especially underground transportation. Frankly speaking, in the past 20 years, many
+researchers have devoted themselves to the research of intelligent underground mines,
+including the research of intelligent underground mine transportation [1].
+In the year 20

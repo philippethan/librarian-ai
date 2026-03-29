@@ -1,0 +1,44 @@
+Physics 
+Physics: A Focused Introduction provides a thorough overview of the principles and practical 
+applications of introductory undergraduate physics. Featuring a streamlined narrative, it 
+encourages active engagement between fundamental concepts and fully worked examples.
+Major topics such as motion (kinematics, forces, and conservation of momentum and energy), 
+thermodynamics, waves, optics, electricity and magnetism are covered, in addition to the foun-
+dations of modern physics.
+Key features:
+•  More than 200 fully worked examples and 1,000 end-of-chapter problems
+•  Learning Objectives at the start of each chapter
+•  An appendix which introduces key mathematical content ranging from scientific notation and 
+the metric system to geometry, trigonometry, and techniques for solving systems of equations
+•  Calculus is introduced and used as a tool to clarify the physics; examples and problems that
+require proficiency in calculus are clearly marked
+•  Supported by modular lab activities developed at the University of Mount Union, detailed
+lecture notes, and a comprehensive solution manual available to instructors
+Written in a relaxed and engaging style, this textbook is suitable for students of science and engi-
+neering who require a concise introduction to the field, as well as students of both algebra-based 
+and calculus-based courses.
+Colin Campbell is an Associate Professor of Physics and Data Science at the University of 
+Mount Union, USA, where he teaches at all levels of the undergraduate curriculum. He earned 
+his B.S. from Westminster College and his Ph.D. from the Pennsylvania State University. He has 
+received multiple honors for his teaching, including the University of Mount Union’s Distin-
+guished Teaching Award.
+Textbook Series in Physical Sciences
+This textbook series offers pedagogical resources for the physical sciences. It publishes high-quality, high-
+impact texts to improve understanding of fundamental and cutting-edge topics, as well as to facilitate 
+instruction. The authors are encouraged to incorporate numerous problems and worked examples, as well 
+as making available solutions manuals for undergraduate and graduate level course adoptions. The format 
+makes these texts useful as professional self-study and refresher guides as well. Subject areas covered in this 
+series include condensed matter physics, quantum sciences, atomic, molecular, and plasma physics, energy 
+science, nanoscience, spectroscopy, mathematical physics, geophysics, environmental physics, and so on, 
+in terms of both theory and experiment.
+Understanding Nanomaterials
+Malkiat S. Johal
+Concise Optics: Concepts, Examples, and Problems
+Ajawad I. Haija, M. Z. Numan, W. Larry Freeman
+A Mathematica Primer for Physicists
+Jim Napolitano
+Understanding Nanomaterials, Second Edition 
+Malkiat S. Johal, Lewis E. Johnson
+Physics for Technology, Second Edition: With Applications in Industrial Control Electronics
+Daniel H. Nichols
+Time-Resolved Spectroscopy: An Exp

@@ -1,0 +1,64 @@
+Citation: He, Y.; Lv, J.; Tang, T.
+Communication-Based Train Control
+with Dynamic Headway Based on
+Trajectory Prediction. Actuators 2022,
+11, 237. https://doi.org/10.3390/
+act11080237
+Academic Editor: André Preumont
+Received: 4 July 2022
+Accepted: 15 August 2022
+Published: 18 August 2022
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright:
+© 2022 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+actuators
+Article
+Communication-Based Train Control with Dynamic Headway
+Based on Trajectory Prediction
+Yijuan He 1
+, Jidong Lv 1,*
+and Tao Tang 2
+1
+National Engineering Research Center of Rail Transportation Operation and Control System,
+Beijing Jiaotong University, Beijing 100044, China
+2
+State Key Lab of Rail Trafﬁc Control & Safety, Beijing Jiaotong University, Beijing 100044, China
+*
+Correspondence: jdlv@bjtu.edu.cn
+Abstract: Rail transit plays a signiﬁcant role in the operation of an efﬁcient and effective urban
+public transportation system. Safety and capacity are some of the most crucial objectives in railway
+operations. The communication-based train control (CBTC) system is a continuous and automatic
+train control system that realizes constant and high-capacity train ground two-way communication.
+In this study, a dynamic headway model of the ‘softwall’ moving-block approach is proposed for
+CBTC to increase the track capacity and improve dispatching efﬁciency based on the train trajectory
+prediction. For this precise trajectory prediction task, we introduce a hybrid trajectory prediction
+model to combine Long Short-term memory (LSTM) and Kalman Filter (KF) to extract the train’s
+local data features and learn the long-term dependencies, respectively. Then we present a dynamic
+headway model to maximize the train headway and reduce the track distance. The leading trains’
+information is used to construct the iterative learning control strategy, and the predicted trajectory
+is input into the algorithm of the headway model. We use a simulation model of the rail network
+in Chengdu to demonstrate the effectiveness of our proposed approach. The results show the
+Mean Absolute Error (MAE) of the predicted trajectory retreated to 93.97 cm and reductions in
+operation headway of at least 64.33% under the dynamic headway model versus the traditional
+moving-block model.
+Keywords: LSTM-KF model; relative moving block; dynamic headway
+1. Introduction
+The urban railway has been developed in recent decades with outstanding achieve-
+ments worldwide. However, the existing operating capacity has dramatically hindered
+the transportation efﬁciency and development of urban rail transit. The limited operating
+capacity has led to trafﬁc congestion, especially during the peak hours of the metropo-
+lis. The increa

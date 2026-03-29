@@ -1,0 +1,44 @@
+Safety and Availability – Basic Attributes
+of Safety-Related Electronic Systems
+for Railway Signalling
+Karol Rástočný and Emília Bubeníková(&)
+University of Žilina, Univerzitná 8215/1, 010 26 Žilina, Slovak Republic
+{karol.rastocny,emilia.bubenikova}@fel.uniza.sk
+Abstract. At the moment, we are exposed to very rapid technological changes.
+Railway industry must adequately respond to these changes. New technologies
+will require new approaches, with the result that gradually there is a change of
+views on processes related not only to the development of these systems but also
+to their operation and maintenance. Validation that the requirements for the
+dependability and safety of the safety-related electronic system for railway
+signalling have been satisﬁed (i.e. parameters RAMS) is a necessary condition
+for its implementation to operation. This article provides a conceptual view of
+the changes in risk analysis, deﬁnition requirements for availability and safety,
+and in particular, the safety evaluation safety-related electronic systems for
+railway signalling.
+Keywords: Signalling system  Risk  Safety  Availability
+1
+Introduction
+Transport of passengers and goods by railway is associated with some risk as an
+undesirable event that may result in personal injury, signiﬁcant material damage,
+environmental damage and other adverse consequences. Various safety measures can be
+used to eliminate (reduce) the occurrence of these undesirable events. Requirements for
+these measures and their implementation and evaluation of their quality have always
+been and are also dependent on the existing technology, knowledge and opinions.
+According to [1] is a railway signalling system (RSS) considered a safety-related
+system, which operates in a continuous mode of operation.
+Dependability and safety are two distinct quality attributes of the RSS and must be
+distinguished between them. Although these are different RSS attributes, they affect
+each other and are related to each other. The dependability properties of the restored
+object being (hence RSS also) are comprehensively evaluated through the availability.
+There are cases where there is “overlap” of dependability and safety requirements
+(e.g. safety reasons) are under the continuous mode of process control desired the
+greatest possible availability of the RSS. If the RSS is capable of operation, respon-
+sibility is assumed by a person, and its error rate is usually substantially greater than the
+© Springer Nature Switzerland AG 2019
+J. Mikulski (Ed.): TST 2019, CCIS 1049, pp. 69–82, 2019.
+https://doi.org/10.1007/978-3-030-27547-1_6
+failure rate of the RSS. There are also some cases where it is desirable to terminate the
+service provision, which is contrary to the dependability requirement - to continuously
+provide the required service. Meeting these conﬂicting requirements for safety and
+availability leads to a compromise that affects the choice of the RSS architecture.
+The safety and dependability features of the

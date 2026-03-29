@@ -1,0 +1,387 @@
+
+
+
+
+Contents
+
+
+Cover
+Title
+Contents
+Introduction
+Part 1: Hacking 101
+
+1. What Is Hacking?
+2. Hacking Systems
+3. What Is a System?
+4. The Hacking Life Cycle
+5. The Ubiquity of Hacking
+
+Part 2: Basic Hacks and Defenses
+
+6. ATM Hacks
+7. Casino Hacks
+8. Airline Frequent-Flier Hacks
+9. Sports Hacks
+10. Hacks Are Parasitical
+11. Defending against Hacks
+12. More Subtle Hacking Defenses
+13. Removing Potential Hacks in the Design Phase
+14. The Economics of Defense
+15. Resilience
+
+Part 3: Hacking Financial Systems
+
+16. Hacking Heaven
+17. Hacking Banking
+18. Hacking Financial Exchanges
+19. Hacking Computerized Financial Exchanges
+20. Luxury Real Estate
+21. Societal Hacks Are Often Normalized
+22. Hacking the Market
+23. “Too Big to Fail”
+24. Venture Capital and Private Equity
+25. Hacking and Wealth
+
+Part 4: Hacking Legal Systems
+
+26. Hacking Laws
+27. Legal Loopholes
+28. Hacking Bureaucracy
+29. Hacking and Power
+30. Undermining Regulations
+31. Jurisdictional Interactions
+32. Administrative Burdens
+33. Hacking Common Law
+34. Hacking as Evolution
+
+Part 5: Hacking Political Systems
+
+35. Hidden Provisions in Legislation
+36. Must-Pass Legislation
+37. Delegating and Delaying Legislation
+38. The Context of a Hack
+39. Hacking Voting Eligibility
+40. Other Election Hacks
+41. Money in Politics
+42. Hacking to Destruction
+
+Part 6: Hacking Cognitive Systems
+
+43. Cognitive Hacks
+44. Attention and Addiction
+45. Persuasion
+46. Trust and Authority
+47. Fear and Risk
+48. Defending against Cognitive Hacks
+49. A Hierarchy of Hacking
+
+Part 7: Hacking AI Systems
+
+50. Artificial Intelligence and Robotics
+51. Hacking AI
+52. The Explainability Problem
+53. Humanizing AI
+54. AI and Robots Hacking Us
+55. Computers and AI Are Accelerating Societal Hacking
+56. When AIs Become Hackers
+57. Reward Hacking
+58. Defending against AI Hackers
+59. A Future of AI Hackers
+60. Governance Systems for Hacking
+
+Concluding Thoughts
+Acknowledgments
+Notes
+Index
+Also by Bruce Schneier
+Copyright
+
+
+
+Guide
+
+Cover
+Title
+Contents
+
+
+
+Page List
+
+v
+vii
+viii
+ix
+x
+xi
+xii
+xiii
+xiv
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+26

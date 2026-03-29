@@ -1,0 +1,49 @@
+Information and Software Technology 75 (2016) 71–89 
+Contents lists available at ScienceDirect 
+Information and Software Technology 
+journal homepage: www.elsevier.com/locate/infsof 
+Requirements engineering for safety-critical systems: A systematic 
+literature review 
+Luiz Eduardo G. Martins a , ∗, Tony Gorschek b 
+a Department of Science and Technology, Federal University of São Paulo, São José dos Campos, Brazil 
+b Software Engineering Research Lab, Blekinge Institute of Technology, Karlskrona, Sweden 
+a r t i c l e 
+i n f o 
+Article history: 
+Received 15 October 2015 
+Revised 23 March 2016 
+Accepted 3 April 2016 
+Available online 12 April 2016 
+Keywords: 
+Safety requirements 
+Safety-critical systems 
+Hazard 
+Accident 
+Systematic literature review 
+Requirements engineering 
+a b s t r a c t 
+Context: Safety-Critical Systems (SCS) are becoming increasingly present in our society. A considerable 
+amount of research effort has been invested into improving the SCS requirements engineering process as 
+it is critical to the successful development of SCS and, in particular, the engineering of safety aspects. 
+Objective: This article aims to investigate which approaches have been proposed to elicit, model, specify 
+and validate safety requirements in the context of SCS, as well as to what extent such approaches have 
+been validated in industrial settings. The paper will also investigate how the usability and usefulness of 
+the reported approaches have been explored, and to what extent they enable requirements communica- 
+tion among the development project/team actors in the development of SCS. 
+Method: We conducted a systematic literature review by selecting 151 papers published between 1983 
+and 2014. The research methodology to conduct the SLR was based on the guidelines proposed by 
+Kitchenham and Biolchini. 
+Results: The results of this systematic review should encourage further research into the design of studies 
+to improve the requirements engineering for SCS, particularly to enable the communication of the safety 
+requirements among the project team actors, and the adoption of other models for hazard and accident 
+models. The presented results point to the need for more industry-oriented studies, particularly with 
+more participation of practitioners in the validation of new approaches. 
+Conclusion: The most relevant ﬁndings from this review and their implications for further research are as 
+follows: integration between requirements engineering and safety engineering areas; dominance of the 
+traditional approaches; early mortality of new approaches; need for industry validation; lack of evidence 
+for the usefulness and usability of most approaches; and the lack of studies that investigate how to im- 
+prove the communication process throughout the lifecycle. Based on the ﬁndings, we suggest a research 
+agenda to the community of researchers and advices to SCS practitioners. 
+© 2016 Elsevier B.V. All rights reserved. 
+1. Introduction 
+Computing 

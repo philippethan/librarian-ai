@@ -1,0 +1,44 @@
+Research Article
+An Efficient Traffic Congestion Monitoring System on
+Internet of Vehicles
+Duc-Binh Nguyen
+, Chyi-Ren Dow
+, and Shiow-Fen Hwang
+Department of Information Engineering and Computer Science, Feng Chia University, Taichung, Taiwan
+Correspondence should be addressed to Chyi-Ren Dow; crdow@mail.fcu.edu.tw
+Received 4 December 2017; Revised 4 March 2018; Accepted 2 April 2018; Published 20 May 2018
+Academic Editor: Li Zhu
+Copyright © 2018 Duc-Binh Nguyen et al. This is an open access article distributed under the Creative Commons Attribution
+License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly
+cited.
+Existing intelligent transport systems (ITS) do not fully consider and resolve accuracy, instantaneity, and compatibility challenges
+while resolving traffic congestion in Internet of Vehicles (IoV) environments. This paper proposes a traffic congestion monitoring
+system, which includes data collection, segmented structure establishment, traffic-flow modelling, local segment traffic congestion
+prediction, and origin-destination traffic congestion service for drivers. Macroscopic model-based traffic-flow factors were
+formalized on the basis of the analysis results. Fuzzy rules-based local segment traffic congestion prediction was performed to
+determine the traffic congestion state. To enhance prediction efficiency, this paper presents a verification process for minimizing
+false predictions which is based on the Rankine-Hugoniot condition and an origin-destination traffic congestion service is also
+provided. To verify the feasibility of the proposed system, a prototype was implemented. The experimental results demonstrate that
+the proposed scheme can effectively monitor traffic congestion in terms of accuracy and system response time.
+1. Introduction
+Over the last few decades, traffic congestion has become a
+serious problem in cities, which not only negatively affects
+the daily lives of humans but also impedes stable economic
+and societal development. Traffic congestion increases air
+pollution, travel time, and economic losses. Governments
+increasingly strive to monitor and resolve traffic congestion,
+but the task is difficult because of the complexity of the
+problem; specifically, traffic congestion is difficult to predict.
+The complexity of traffic congestion is also reflected in
+its dynamic and interrelated characteristics. Traffic con-
+gestion can propagate from a congested road segment to
+neighboring road segments. Because of these complexities,
+fully automatic analysis of traffic congestion is difficult to
+achieve.
+Currently, two major challenges must be addressed to
+facilitate traffic congestion estimation and monitoring. The
+first challenge is formalizing the basic factors for estimating
+and forecasting traffic congestion on a large-scale road net-
+work. Several researchers have proposed solutions to resolve
+the problem, which can be grouped into two approaches,
+nam

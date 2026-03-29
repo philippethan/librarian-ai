@@ -1,0 +1,149 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INTRODUCTION TO
+SYSTEMS ENGINEERING 
+R. Ian Faulconbridge
+Michael J. Ryan
+ 
+ 
+ 
+© 2015 R. Ian Faulconbridge and
+Michael J. Ryan
+ISBN: 9781921138089
+
+Cover design by Tim Ryan
+Published by Argos Press,
+Canberra, Australia
+www.argospress.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+PREFACE
+This e-book
+provides a basic coverage of the discipline known as systems engineering.
+The e-book supports the Massive Open Online Course (MOOC) that the authors
+deliver regularly through the Coursera platform and is an overview of our more-comprehensive
+physical text Systems Engineering
+Practice. Here, we offer a framework encapsulating the entire systems
+engineering discipline, clearly showing where the multitude of associated
+activities fits within the overall effort, providing an ideal vehicle for
+understanding the complex discipline. 
+Chapter 1 introduces systems engineering
+and related issues and Chapter 2 provides an overview of
+requirements-engineering and its application to systems development. Chapters 3
+and 4 examine in more detail the issues associated with Conceptual Design and
+Preliminary Design. Emphasis is given to these early activities, as they have
+the greatest impact on the system development. Chapters 5, 6 and 7 deal with
+respectively Detailed Design and Development, Construction and/or Production,
+and Operational Use and Support. Chapter 8 deals with the broad topic of
+systems engineering management and details some of the associated activities. 
+ 
+Ian
+Faulconbridge
+Mike
+Ryan
+Canberra,
+2015
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONTENTS
+ 
+1 SYSTEMS
+AND SYSTEMS ENGINEERING
+1.1         WHAT
+IS A SYSTEM?
+1.1.1      Definition of a System
+1.1.2      Types of Systems
+1.1.3      A System and its
+Environment
+1.1.4      A System as a Product
+1.1.5      A System as a Capability—A
+Capability System
+1.1.6      Logical and Physical
+Descriptions of a System
+1.1.7      Hierarchical Descriptions
+of a System
+1.1.8      System-of-systems (SoS)
+1.2         SYSTEM
+LIFE CYCLE
+1.2.1      Parties Involved
+1.3         ACQUISITION
+AND UTILIZATION PHASES
+1.3.1      Acquisition Phase
+1.3.2      Utilization Phase and
+Retirement Phase
+1.4         SYSTEMS
+ENGINEERING AND DEVELOPMENT APPROACHES
+1.5         WHAT
+IS SYSTEMS ENGINEERING?
+1.5.1      Top-down Approach
+1.5.2      Requirements Engineering
+1.5.3      Focus on Life Cycle
+1.5.4      System Optimization and
+Balance
+1.5.5      Integration of Disciplines
+and Specializations
+1.5.6      Management
+1.6         SYSTEMS
+ENGINEERING RELEVANCE
+1.7         SYSTEMS
+ENGINEERING BENEFITS
+2
+REQUIREMENTS ENGINEERING FRAMEWORK
+2.1         INTRODUCTION
+2.1.1      Needs and Requirements
+Documentation
+2.1.2      What is a Requirement?
+2.1.3      What not How
+2.1.4      Emergent Properties
+2.2         WHAT
+IS REQUIREMENTS ENGINEERING?
+2.2.1      Why We Need Requirements
+2.2.2      Why We Need Requirements
+Engineering
+2.3         REQUIREMENTS
+ELICITATION AND ELABORATION
+2.4         REQUIREMENTS
+VALIDATION
+2.5         REQUIREMENTS
+DOCUMENTATION
+2.6         REQUIREMENTS
+MA

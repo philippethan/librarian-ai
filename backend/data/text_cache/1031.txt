@@ -1,0 +1,43 @@
+Research Article
+Study on Formal Modeling and Safety Verification of
+Train-to-Train Communication
+Haonan Feng
+1,2
+1Signal and Communication Research Institute, China Academy of Railway Sciences, Beijing 10081, China
+2The Center of National Railway Intelligent Transportation System Engineering and Technology, Beijing 10081, China
+Correspondence should be addressed to Haonan Feng; fhn02212005@163.com
+Received 6 December 2017; Revised 20 March 2018; Accepted 23 April 2018; Published 4 June 2018
+Academic Editor: Li Zhu
+Copyright © 2018 Haonan Feng. This is an open access article distributed under the Creative Commons Attribution License, which
+permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+VBTC (vehicle-to-vehicle communication based train control) has gradually become an important research trend in the field of rail
+transit. This has resulted in advantages of decreasing the number of pieces of wayside equipment and improving the efficiency of real-
+time system communication. Characteristics and mechanism of train-to-train communication, as key implementation technology
+of safety critical system, are given and discussed. A new method, based on the LTS (labelled transition system) model checking,
+is proposed for verifying the safety properties in the communication procedure. The LTS method is adapted to model system
+behaviours; analysis and safety verification are checked by means of LTSA (labelled transition system analyzer) software. The results
+show that it is an efficient method to verify safety properties, as well as to assist the complex system’s design and development.
+1. Introduction
+With rapid development of urbanization, demands from
+increased living standards and travel lead to requirement of
+rapid development of urban transit transport. Signal system,
+as an important role of traffic safety, is to ensure traffic safety,
+shorten the operation interval, and improve traffic efficiency
+[1]. CBTC (communication based on train control) system
+adding wireless communication technology into traditional
+ground interlocking control system, which makes moving
+block operation mode under double protection of ground
+ATP (automatic train protection) and vehicle ATP, provides
+protective speed based on real-time speed from vehicle [2, 3].
+CBTC system has a great advantage in terms of transportation
+capacity and system safety, and its great development in urban
+transit signalling system contributes to lower the urban traffic
+pressure [4, 5].
+The next generation of train control system welcomes a
+new research field that follows on from the mature develop-
+ment of CBTC system and modern communication technol-
+ogy. VBTC system is a good example in attractive research
+trend [6]. The system is designed to improve train automotive
+control, reduce system coupling for better efficiency, and
+lower cost [7]. Train-to-train communication is the main
+supporting architecture in VBTC, whose simple struc

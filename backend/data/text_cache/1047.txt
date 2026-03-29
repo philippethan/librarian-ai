@@ -1,0 +1,84 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+General rights 
+Copyright and moral rights for the publications made accessible in the public portal are retained by the authors and/or other copyright owners 
+and it is a condition of accessing publications that users recognise and abide by the legal requirements associated with these rights. 
+ 
+• Users may download and print one copy of any publication from the public portal for the purpose of private study or research. 
+• You may not further distribute the material or use it for any profit-making activity or commercial gain 
+• You may freely distribute the URL identifying the publication in the public portal  
+ 
+If you believe that this document breaches copyright please contact us providing details, and we will remove access to the work immediately 
+and investigate your claim. 
+   
+ 
+Downloaded from orbit.dtu.dk on: Dec 18, 2017
+Radio communication for Communications-Based Train Control (CBTC): A tutorial and
+survey
+Farooq, Jahanzeb; Soler, José
+Published in:
+IEEE Communications Surveys and Tutorials
+Link to article, DOI:
+10.1109/COMST.2017.2661384
+Publication date:
+2017
+Document Version
+Peer reviewed version
+Link back to DTU Orbit
+Citation (APA):
+Farooq, J., & Soler, J. (2017). Radio communication for Communications-Based Train Control (CBTC): A tutorial
+and survey. IEEE Communications Surveys and Tutorials, 19(3), 1377-1402. DOI:
+10.1109/COMST.2017.2661384
+1
+Radio communication for Communications-Based
+Train Control (CBTC): A tutorial and survey
+Jahanzeb Farooq, Member, IEEE, and José Soler, Member, IEEE
+Abstract—Over the last decade, railway industry has seen
+a huge transition from conventional railway signalling sys-
+tems
+to
+modern,
+communication-based
+signalling
+systems.
+Communications-Based Train Control (CBTC) is a modern
+communication-based system that uses radio communication to
+transfer timely and accurate train control information. CBTC
+is the choice of mass-transit railway operators today, with over
+a hundred systems currently installed worldwide. The safety-
+related, time-critical applications such as train control impose
+stringent reliability and availability requirements on the radio
+communication technology used. IEEE 802.11 Wi-Fi, despite
+being originally developed for stationary users within a limited
+area, has prevailed as the de-facto radio technology for CBTC.
+Unfortunately, very limited literature is publicly available on this
+topic due to the highly competitive nature of the railway industry.
+We believe that this paper ﬁlls the much-needed gap. It aims to
+present a comprehensive tutorial, as well as a survey of the state-
+of-the-art, of CBTC and the role of radio communication in it.
+The operation and fundamental components of a CBTC system
+are discussed. A summary of the evolution of the communication
+technologies used for modern railway signalling is presented.
+The beneﬁts and drawbacks of using a radio communication
+technology, particularly Wi-Fi, and the challenges it in

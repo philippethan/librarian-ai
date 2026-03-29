@@ -1,0 +1,49 @@
+1
+3DS.COM © Dassault Systèmes | Confidential Information | 4/3/2023 | ref.: 3DS_Document_2020
+MBSE, Requirements Engineering and Test Automation:
+The new Paradigm 
+yves.genevaux [at] 3ds.com
+2
+3DS.COM © Dassault Systèmes | Confidential Information | 4/3/2023 | ref.: 3DS_Document_2020
+•
+End-to-End MBSE Workflow
+•
+Functional Requirements Simulation
+•
+Functional Test Automation
+•
+Automatic HIL Test Log File Analysis
+Agenda
+3
+3DS.COM © Dassault Systèmes | Confidential Information | 4/3/2023 | ref.: 3DS_Document_2020
+Classic MBSE
+Concept
+Exploration
+Concept of 
+Operations
+System
+Architecture & 
+Requirements
+High-Level
+Design
+Detailed
+Design
+SW / HW 
+Development
+Unit
+Testing
+Subsystem
+Verification
+System
+Validation
+Operations & 
+Maintenance
+SIL Tests
+HIL Tests
+MIL Tests
+High-Level Specification
+Detailed Specification, Functional 
+Requirements & Validation Plan
+CATIA Magic
+Problem analysis and 
+architecture definition 

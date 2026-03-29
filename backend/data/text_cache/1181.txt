@@ -1,0 +1,45 @@
+John P. Gallagher, Rob van Glabbeek and Wendelin Serwe (Eds):
+Models for Formal Analysis of Real Systems (MARS’18)
+and Veriﬁcation and Program Transformation (VPT’18)
+EPTCS 268, 2018, pp. 104–149, doi:10.4204/EPTCS.268.4
+c⃝F. Mazzanti & A. Ferrari
+This work is licensed under the
+Creative Commons Attribution License.
+Ten Diverse Formal Models
+for a CBTC Automatic Train Supervision System
+Franco Mazzanti
+CNR-ISTI
+Pisa, Italy
+franco.mazzanti@isti.cnr.it
+Alessio Ferrari
+CNR-ISTI
+Pisa, Italy
+alessio.ferrari@isti.cnr.it
+Communications-based Train Control (CBTC) systems are metro signalling platforms, which coordi-
+nate and protect the movements of trains within the tracks of a station, and between different stations.
+In CBTC platforms, a prominent role is played by the Automatic Train Supervision (ATS) system,
+which automatically dispatches and routes trains within the metro network. Among the various func-
+tions, an ATS needs to avoid deadlock situations, i.e., cases in which a group of trains block each
+other. In the context of a technology transfer study, we designed an algorithm for deadlock avoidance
+in train scheduling. In this paper, we present a case study in which the algorithm has been applied.
+The case study has been encoded using ten different formal veriﬁcation environments, namely UMC,
+SPIN, NuSMV/nuXmv, mCRL2, CPN Tools, FDR4, CADP, TLA+, UPPAAL and ProB. Based on
+our experience, we observe commonalities and differences among the modelling languages consid-
+ered, and we highlight the impact of the speciﬁc characteristics of each language on the presented
+models.
+1
+Introduction
+Communications-based Train Control (CBTC) systems are the de-facto standard for metro signalling and
+control, including several interacting wayside and onboard components that ensure safety and availability
+of trains within the metro network. In the context of a technology transfer project named TRACE-IT,
+the authors of the current paper, together with representatives of a large railway company, designed one
+of the main components of a CBTC system prototype, namely the Automatic Train Supervision (ATS)
+system [10]. This is a wayside system that dispatches and monitor trains along the metro network,
+according to a set of predeﬁned missions. The ATS includes a scheduling kernel, which shall ensure
+that, regardless of train delays, no deadlock situation occurs, i.e., the missions are designed in such
+a way that it never happens that two or more trains block each other from completing their missions.
+In the context of the project, we applied formal methods to design and verify a scheduling algorithm
+that addresses the deadlock avoidance problem [25]. The application of the algorithm to the TRACE-
+IT case study was initially modelled and veriﬁed by means of the UMC tool [30, 4, 20]. Then, the
+design of the case study was replicated with other six different formal frameworks – i.e., SPIN [16, 29],
+NuSMV/nuXmv [5, 18], mCRL2 [14, 9], CPN Tools [17, 31], FDR4 [13, 27] and 

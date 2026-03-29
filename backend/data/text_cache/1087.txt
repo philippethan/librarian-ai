@@ -1,0 +1,159 @@
+CAR 2 CAR Communication Consortium 
+ 
+ 
+ C2CCC_TR_2053_Urban_Rail.doc 
+28/01/2019 
+Page 1 of 69 
+ 
+Urban Rail integration into ITS-G5 
+CAR 2 CAR Communication Consortium 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+About the C2C-CC 
+Enhancing road safety and traffic efficiency by means of Cooperative Intelligent Transport 
+Systems and Services (C-ITS) is the dedicated goal of the CAR 2 CAR Communication 
+Consortium. The industrial driven, non-commercial association was founded in 2002 by vehicle 
+manufacturers affiliated with the idea of cooperative road traffic based on Vehicle-to-Vehicle 
+Communications (V2V) and supported by Vehicle-to-Infrastructure Communications (V2I). 
+Today, the Consortium comprises 88 members, with 18 vehicle manufacturers, 39 equipment 
+suppliers and 31 research organisations.  
+Over the years, the CAR 2 CAR Communication Consortium has evolved to be one of the key 
+players in preparing the initial deployment of C-ITS in Europe and the subsequent innovation 
+phases. CAR 2 CAR members focus on wireless V2V communication applications based on 
+ITS-G5 and concentrate all efforts on creating standards to ensure the interoperability of 
+cooperative systems, spanning all vehicle classes across borders and brands. As a key 
+contributor, the CAR 2 CAR Communication Consortium works in close cooperation with the 
+European and international standardisation organisations such as ETSI and CEN.  
+Disclaimer 
+The present document has been developed within the CAR 2 CAR Communication Consortium and might be further 
+elaborated within the CAR 2 CAR Communication Consortium. The CAR 2 CAR Communication Consortium and its 
+members accept no liability for any use of this document and other documents from the CAR 2 CAR Communication 
+Consortium for implementation. CAR 2 CAR Communication Consortium documents should be obtained directly from 
+the CAR 2 CAR Communication Consortium. 
+Copyright Notification: No part may be reproduced except as authorized by written permission. The copyright and the 
+foregoing restriction extend to reproduction in all media. © 2019, CAR 2 CAR Communication Consortium. 
+CAR 2 CAR Communication Consortium 
+ 
+ 
+ C2CCC_TR_2053_Urban_Rail.doc 
+28/01/2019 
+Page 2 of 69 
+Document information 
+ 
+Number:  TR 2053 
+Version: 
+1.0.0 
+Date:  
+2019 – 01 – 11 
+Title:  
+Urban Rail integration into ITS-G5 
+Document  
+Type:  
+Report 
+Release: 28 January 2019 
+Release  
+Status: 
+Released for publishing 
+Status:  
+Completed 
+ 
+Author: 
+ 
+Company 
+/Institute 
+Author 
+Chapter 
+FBConsluting Sarl 
+Friedbert Berens 
+ 
+Commsignia 
+András Edelmayer, András Váradi 
+ 
+Netellany 
+Michelle Wetterwald 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Approval: 
+ 
+Function 
+Name, Company 
+Date 
+Signature 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Outstanding Issues 
+ 
+Issue 
+Author 
+Chapter 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CAR 2 CAR Communication Consortium 
+ 
+ 
+ C2CCC_TR_2053_Urban_Rail.doc 
+28/01/2019 
+Page 3 of 69 
+ 
+Changes since last version 
+ 
+Title: 
+ 
+Explanatory 
+notes: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

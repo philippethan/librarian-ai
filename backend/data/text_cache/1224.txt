@@ -1,0 +1,74 @@
+1 
+ 
+Project Report on 
+Communication-Based Train Control 
+System 
+ 
+Submitted by 
+Vaneetpal Singh 
+In partial fulfillment for the award of the degree 
+Master of Science in Internetworking 
+(From University of Alberta) 
+Under the guidance of 
+Juned Noonari 
+ 
+September 2018 – March 2019 
+ 
+2 
+ 
+ABSTRACT 
+ 
+The primary purpose of this report is to study different LRT components generally 
+related to telecommunications/data networking such as CBTC (Communications-
+Based Train Control).  
+CBTC have a significant advantage over traditional signaling systems when it comes 
+to the real detection position of trains on the track. Traditional methods used to 
+divide the track into fixed blocks while in CBTC the block moves along with the 
+train giving us more accurate position increasing the overall capacity of the trains as 
+the time between two trains get reduced. Other subsystems include ATP (Automatic 
+Train Protection) and ATO (Automatic Train Operation). Other components include 
+interlocking which is communication of different switches and signals at the 
+crossings that prevents adverse movements. 
+For the report, I will be discussing train communication systems and related sub-
+systems in detail. Also highlighting some of the shortcomings of these systems and 
+discussing technologies practiced in today’s LRT system along with their vendors 
+in brief. 
+ 
+ 
+3 
+ 
+Acknowledgment 
+ 
+First, I want to thank the All-Powerful God without whom nothing is possible. 
+I want to express my most profound appreciation to all those who provided me the 
+possibility to complete my report. Special gratitude I would like to give to my project 
+mentor Mr. Juned Noonari, this project could not have been possible without his 
+valuable 
+contribution, 
+encouragement 
+and 
+stimulating 
+suggestions. 
+His 
+approachability and co-operation provided me great confidence throughout this 
+project. 
+I am very grateful to Mr. Shahnawaz Mir for his guidance and helping me choose 
+my project, his cooperation in providing all the necessary information about the pr
+oject and also for his support in the project. 
+I would like to thank my parents for their kind cooperation and support throughout 
+my project, which has kept me motivated and helped me complete my project. 
+My thanks and appreciations also go to my classmates who willingly helped me    
+with their skills. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Vaneetpal Singh

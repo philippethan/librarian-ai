@@ -1,0 +1,85 @@
+HAL Id: tel-01812510
+https://centralesupelec.hal.science/tel-01812510
+Submitted on 11 Jun 2018
+HAL is a multi-disciplinary open access
+archive for the deposit and dissemination of sci-
+entific research documents, whether they are pub-
+lished or not.
+The documents may come from
+teaching and research institutions in France or
+abroad, or from public or private research centers.
+L’archive ouverte pluridisciplinaire HAL, est
+destinée au dépôt et à la diffusion de documents
+scientifiques de niveau recherche, publiés ou non,
+émanant des établissements d’enseignement et de
+recherche français ou étrangers, des laboratoires
+publics ou privés.
+Evaluation de performance d’une ligne ferroviaire
+suburbaine partiellement équipée d’un automatisme
+CBTC
+Juliette Pochet
+To cite this version:
+Juliette Pochet. Evaluation de performance d’une ligne ferroviaire suburbaine partiellement équipée
+d’un automatisme CBTC. Automatique / Robotique. Université Paris Saclay, 2018. Français. ￿NNT :
+￿. ￿tel-01812510￿
+Evaluation de performance d’une 
+ligne ferroviaire suburbaine 
+partiellement équipée d’un 
+automatisme CBTC
+Thèse de doctorat de l'Université Paris-Saclay 
+préparée à CentraleSupélec 
+École doctorale n°580 Sciences et technologies de l'information et de 
+la communication (STIC) 
+Spécialité de doctorat: Automatique 
+Thèse présentée et soutenue à Gif-sur-Yvette, le 12 janvier 2018, par 
+ Juliette POCHET  
+Composition du Jury : 
+Sihem Tebbani 
+Professeur, CentraleSupelec (L2S)  
+ 
+ 
+ 
+Présidente 
+Joaquin Rodriguez 
+Directeur de Recherche, IFSTTAR (ESTAS)  
+ 
+ 
+Rapporteur 
+François Delmotte 
+Professeur, Université d’Artois 
+ 
+ 
+                
+Rapporteur 
+                                        
+Evguenia Dmitrieva  
+Ingénieur, RATP  
+ 
+                                                         Examinatrice 
+Sylvain Baro  
+Ingénieur, SNCF Réseau  
+ 
+                                           Examinateur 
+Guillaume Sandou 
+Professeur, CentraleSupelec (L2S)  
+ 
+ 
+              Directeur de thèse 
+NNT : 2018SACLC005
+1 
+Table des matières 
+Introduction ...................................................................................................................11
+Chapitre 1
+Système ferroviaire .................................................................................16
+1.1
+Signalisation ferroviaire ..................................................................................... 17
+1.1.1
+Signalisation ferroviaire classique .................................................................... 17
+1.1.2
+Système « CBTC » ........................................................................................... 31
+1.2
+Exploitation ferroviaire ...................................................................................... 37
+1.2.1
+Généralités ........................................................................................................ 37
+1.2.2
+Exploitation en zone dense ...................................................................

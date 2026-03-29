@@ -1,0 +1,41 @@
+Research Article
+A Road Layout Based Broadcast Mechanism for
+Urban Vehicular Ad Hoc Networks
+Yoonyoung Sung
+and Meejeong Lee
+Department of Computer Science and Engineering, Ewha Womans University, Daehyun-dong 11-1, Seoul, Republic of Korea
+Correspondence should be addressed to Meejeong Lee; lmj@ewha.ac.kr
+Received 18 September 2017; Accepted 2 January 2018; Published 30 January 2018
+Academic Editor: Hongwei Wang
+Copyright © 2018 Yoonyoung Sung and Meejeong Lee. This is an open access article distributed under the Creative Commons
+Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is
+properly cited.
+Safety services of Vehicular Ad Hoc Network (VANET) require reliable broadcasts. We propose a reliable broadcast mechanism for
+urban roads called VANET Broadcasting for Urban areas based on Road Layout (VBURL), which tries to minimize the dependency
+on information that may become inaccurate to maximize the efficiency of broadcast. Specifically, the proposed mechanism takes
+into account the road layout information accessible from the digital map and only the real-time information obtained from the
+broadcast messages or beacons. VBURL basically makes the vehicle that is farthest from the current forwarding vehicle take the
+role of next forwarding vehicle and, if possible, makes an additional broadcast happen at the intersections where the effect of signal
+attenuation caused by the road side obstacles is low in order to have prompt and reliable dissemination of safety messages towards
+all roads connected to the intersections. The simulation results verified that VBURL achieves the same high performance as that
+of the compared legacy schemes in terms of reliability with much higher efficiency. Even though the message reception delay of
+VBURL is slightly longer than those of compared schemes, it is far less significant to impair the original purpose of safety message.
+1. Introduction
+The Vehicular Ad Hoc Network (VANET) consists of vehicles
+that use mobile communications and enables communication
+between vehicles or between vehicles and fixed infrastructure
+along the road. The road condition and traffic information
+collected through various sensors installed in vehicles and on
+road side units are transmitted in real time through VANET.
+The IEEE 802.11p standard and the IEEE 1609 working
+group defined technologies for Wireless Access in Vehicular
+Environments (WAVE) [1, 2]. In particular, 802.11p defines
+the MAC and PHY layers, and 1609.4 defines multichannel
+operation. For multichannel operation, it is specified to use
+the control channel (CCH) for safety services, as well as
+system control such as beacons, and the service channels
+(SCHs) for general commercial services. The Synchronization
+Interval (SI) of 100 ms is divided into an equal length of a
+CCH interval and an SCH interval.
+VANET enables the provision of services to improve
+passenger safety and traffic flow through the pro

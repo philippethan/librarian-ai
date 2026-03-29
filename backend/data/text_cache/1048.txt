@@ -1,0 +1,42 @@
+Research Article
+LTE-U based Train to Train Communication System in CBTC:
+System Desin and Reliability Analysis
+Hao Liang
+,1 Hongli Zhao
+,2 Shuo Wang
+,1 and Yong Zhang
+1
+1School of Electronics and Information, Beijing Jiaotong University, 100044 Beijing, China
+2State Key Laboratory of Rail Traﬃc Control and Safety, Beijing Jiaotong University, 100044 Beijing, China
+Correspondence should be addressed to Hongli Zhao; hlzhao@bjtu.edu.cn
+Received 23 August 2020; Revised 8 December 2020; Accepted 14 December 2020; Published 31 December 2020
+Academic Editor: Changqing Luo
+Copyright © 2020 Hao Liang et al. This is an open access article distributed under the Creative Commons Attribution License,
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+Communication-Based Train Control (CBTC) system is a critical signal system to ensure rail transit’s safe operation. Compared
+with the train-ground CBTC system, the train control system based on train-to-train (T2T) communication has the advantages
+of fast response speed, simple structure, and low operating cost. As the core part of the train control system based on T2T
+communication, the reliability of the data communication system (DCS) is of great signiﬁcance to ensure the train’s safe and
+eﬃcient operation. According to the T2T communication system requirements, this paper adopts Long-Term Evolution-
+Unlicensed (LTE-U) technology to design the DCS structure and establishes the reliability model of the communication system
+based on Deterministic and Stochastic Petri Nets (DSPN). Based on testing the real line’s communication performance
+parameters, the DSPN model is simulated and solved by π-tool, and the reliability index of the system is obtained. The research
+results show that the LTE-U-based T2T communication system designed in this paper meets the train control system’s needs for
+communication transmission. This paper’s reliability evaluation method can complete the reliability modeling of train control
+DCS based on T2T communication. The research in this paper will provide a strong practical and theoretical basis for the
+design and optimization of train control DCS based on T2T communication.
+1. Introduction
+Today, the CBTC system has been widely used in urban rail
+transit systems [1]. The existing CBTC system is technically
+very mature. However, there are still certain shortcomings:
+the system structure is involved, which leads to too many
+interfaces between subsystems; the information transmission
+process is cumbersome, and the on-board equipment cannot
+directly obtain relevant information, which limits the
+increase in train speed; the system consists of more equip-
+ment, resulting in higher system construction and operating
+costs, which is not conducive to the large-scale development
+of urban rail transit [2].
+As an improvement of the train control system based on
+train-to-ground communication, the train control system
+based on 

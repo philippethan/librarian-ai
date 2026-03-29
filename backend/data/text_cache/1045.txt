@@ -1,0 +1,41 @@
+Research Article
+A New Movement Authority Based on Vehicle-Centric
+Communication
+Tuo Shen
+1 and Haifeng Song
+2
+1School of Optical-Electrical and Computer Engineering, University of Shanghai for Science and Technology, Shanghai 200093, China
+2Institute for Traffic Safety and Automation Engineering, Technische Universit¨at Braunschweig, 38108 Braunschweig, Germany
+Correspondence should be addressed to Haifeng Song; h.song@tu-braunschweig.de
+Received 7 December 2017; Revised 16 February 2018; Accepted 4 March 2018; Published 4 April 2018
+Academic Editor: Li Zhu
+Copyright © 2018 Tuo Shen and Haifeng Song. This is an open access article distributed under the Creative Commons Attribution
+License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly
+cited.
+The communication system that is presently applied in the European Train Control System can only support data exchange between
+vehicles and ground, but the direct vehicle-to-vehicle communication is not available. The details of interlocking information and
+other vehicles’ movements are invisible to drivers who are the last defense to prevent unsafe scenarios. As connected vehicles have
+been envisioned to enhance transportation efficiency and improve safety, the direct vehicle-to-vehicle communication network is
+involved in this paper to increase the safety of railway transport. In this paper, a new train movement authority (MA+) is proposed.
+Apart from a wireless communication unit, this system does not require any other infrastructure. With the assistance of vehicle-
+centric communication technology, MA+ can detect the condition of switches and trains within a certain scope. In this paper, the
+system structure of MA+ is proposed. Additionally, different implementation scenarios are also discussed. The detection range is
+estimated and validated based on mathematical calculation and experimental equations. An application demo of MA+ is presented
+on the Driver Machine Interface of the onboard equipment. The results indicate that MA+ can be a flexible and scalable system for
+furthering the improvement of railway safety.
+1. Introduction
+To guarantee railway transport safety, various technologies
+have been applied. The latest European Train Control System
+(ETCS), which is based on the moving block principle, safely
+optimizes the maximum capacity of the rail network. Dif-
+ferent kinds of data are submitted to the Centralized Traffic
+Control (CTC) system, such as the interlocking information,
+train position, and train diagram. Hence, CTC has a “God’s
+view” of all trains and interlocking details [1]. The Radio
+Block Center (RBC) transfers the movement authority (MA)
+to the trains in its scope of jurisdiction. The train vehicles can
+only passively move based on the MA. Once the MA is a fault,
+it may lead to a risk scenario, which results in catastrophic
+consequences.
+For instance, in the 2016 Berlin Tram-Crash, two com-
+muter trains collided on a

@@ -1,0 +1,180 @@
+ 
+     
+ 
+Project funded under the Shift2Rail Joint Undertaking 
+Grant Agreement n°881826 
+ 
+Project n°881826 
+ 
+Page 1 of 39 
+LINX4RAIL 
+Project Title: 
+System architecture and Conceptual Data Model for railway, 
+common data dictionary and global system modelling 
+specifications 
+Starting date:  
+2019-12-01 
+Duration in months:  
+36 
+Call (part) identifier:  
+S2R-CFM-IPX-CCA-01-2019 
+Grant agreement no:  
+881826 
+ 
+Deliverable D2.3 
+Final version of the dictionary 
+Deliverable 
+Responsible partner 
+UIC 
+Revision: 
+1.1 
+Document Status: 
+Final 
+Due date: 
+July 31, 2021 
+Actual date: 
+December 20, 2021 
+Dissemination Level: 
+PU 
+ 
+Disclaimer 
+The information in this document is provided “as is”, and no guarantee or warranty is given that the information is fit 
+for any particular purpose. The content of this document reflects only the author’s view – the Joint Undertaking is not 
+responsible for any use that may be made of the information it contains. The users use the information at their sole 
+risk and liability. 
+The content of this deliverable does not reflect the official opinion of the Shift2Rail Joint Undertaking (S2R JU). 
+Responsibility for the information and views expressed in the deliverable therein lies entirely with the author(s).  
+ 
+Ref. Ares(2022)3030998 - 14/04/2022
+LINX4RAIL 
+D2.3 Final version of Dictionary 
+LINX4RAIL project n°881826 
+ 
+Page 2 of 39 
+Table of Contents 
+1 
+History of changes 
+4 
+2 
+Authors 
+5 
+3 
+Summary 
+6 
+4 
+List of Figures 
+7 
+5 
+List of abbreviations 
+9 
+6 
+Introduction 
+10 
+7 
+OntoRail, the knowledge engine 
+11 
+7.1 
+Architecture 
+11 
+7.1.1 
+Overall architecture 
+11 
+7.1.2 
+Deployment considerations 
+12 
+7.1.3 
+A note on MediaWiki / Semantic MediaWiki 
+12 
+7.2 
+OntoRail Functional Modules 
+13 
+7.2.1 
+Import 
+13 
+7.2.2 
+General interface (web application) 
+13 
+7.2.3 
+Browsing module 
+14 
+7.2.4 
+Relations management module 
+15 
+7.2.5 
+Export 
+17 
+7.2.6 
+User documentation 
+17 
+8 
+Building the Dictionary 
+18 
+8.1 
+Importing source models 
+18 
+8.1.1 
+Status of imports into the Dictionary 
+18 
+8.1.2 
+On formats of the source models 
+19 
+8.1.2.1 UML source models 
+19 
+8.1.2.2 Ontology source models 
+20 
+8.1.2.3 Encourage source ontology extraction 
+20 
+8.1.3 
+Faithfulness of imports 
+21 
+8.2 
+Versioning (of source models) 
+21 
+8.2.1 
+Versioning and relations between concepts: CDM Governance impacts 
+21 
+8.2.2 
+CDM impacts (from version to version…) 
+22 
+8.3 
+A Dictionary geared towards serving the CDM 
+22 
+8.3.1 
+hasPublicDefinition 
+22 
+LINX4RAIL 
+D2.3 Final version of Dictionary 
+LINX4RAIL project n°881826 
+ 
+Page 3 of 39 
+8.3.2 
+Built-in documentation 
+23 
+8.4 
+Extending the Dictionary 
+24 
+8.4.1 
+Introduction of new stand-alone concepts 
+24 
+8.4.2 
+New domains 
+25 
+9 
+Using the Dictionary: browsing 
+26 
+9.1 
+Search functionalities 
+26 
+9.2 
+Unified tree browser interface over concepts of a source model 
+27 
+9.3 
+Graph browser for context 
+27 
+9.4 
+Parallel browsing 
+28 
+9.5 
+From browsing to linking 
+29 
+10

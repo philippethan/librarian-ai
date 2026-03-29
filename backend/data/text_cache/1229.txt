@@ -1,0 +1,65 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/364416900
+Standardisation Considerations for Autonomous Train Control
+Chapter · October 2022
+DOI: 10.1007/978-3-031-19762-8_22
+CITATIONS
+2
+READS
+64
+3 authors:
+Some of the authors of this publication are also working on these related projects:
+LCHIP: Low Cost, High Integrity Platform View project
+AMASS - Architecture-driven, Multi-concern and Seamless Assurance and Certification of Cyber-Physical Systems View project
+Jan Peleska
+Universität Bremen
+147 PUBLICATIONS   1,999 CITATIONS   
+SEE PROFILE
+Anne Haxthausen
+Technical University of Denmark
+97 PUBLICATIONS   1,396 CITATIONS   
+SEE PROFILE
+Thierry Lecomte
+ClearSy System Engineering
+54 PUBLICATIONS   418 CITATIONS   
+SEE PROFILE
+All content following this page was uploaded by Thierry Lecomte on 02 November 2022.
+The user has requested enhancement of the downloaded file.
+Standardisation Considerations
+for Autonomous Train Control
+Jan Peleska1(B)
+, Anne E. Haxthausen2
+, and Thierry Lecomte3
+1 Department of Mathematics and Computer Science, University of Bremen,
+Bremen, Germany
+peleska@uni-bremen.de
+2 DTU Compute, Technical University of Denmark, Kongens Lyngby, Denmark
+aeha@dtu.dk
+3 CLEARSY, Aix en Provence, France
+thierry.lecomte@clearsy.com
+Abstract. In this paper, we review software-based technologies already
+known to be, or expected to become essential for autonomous train
+control systems with grade of automation GoA 4 (unattended train
+operation) in existing open railway environments. It is discussed which
+types of technology can be developed and certiﬁed already today on the
+basis of existing railway standards. Other essential technologies, how-
+ever, require modiﬁcations or extensions of existing standards, in order
+to provide a certiﬁcation basis for introducing these technologies into
+non-experimental “real-world” rail operation. Regarding these, we check
+the novel pre-standard ANSI/UL 4600 with respect to suitability as a
+certiﬁcation basis for safety-critical autonomous train control functions
+based on methods from artiﬁcial intelligence. As a thought experiment,
+we propose a novel autonomous train controller design and perform an
+evaluation according to ANSI/UL 4600. This results in the insight that
+autonomous freight trains and metro trains using this design could be
+evaluated and certiﬁed on the basis of ANSI/UL 4600.
+Keywords: Autonomous train control · Standards · Certiﬁcation ·
+Veriﬁcation · Validation
+1
+Introduction
+Motivation. Recently, the investigation of autonomous trains has received
+increasing attention, following the achievements of research and development
+for autonomous vehicles in the automotive domain. The business cases for
+autonomous train control are very attractive, in particular for autonomous
+rolling stock and metro trains [23].
+However, several essential characteristics of autonomous transportation sys-
+tems are not addressed in the standards serving toda

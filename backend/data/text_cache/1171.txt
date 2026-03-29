@@ -1,0 +1,20 @@
+Reliability and Availability Engineering
+Do you need to know what technique to use to evaluate the reliability of an
+engineered system? This self-contained guide provides comprehensive coverage of
+all the analytical and modeling techniques currently in use, from classical non-state
+and state space approaches, to newer and more advanced methods such as binary
+decision diagrams, dynamic fault trees, Bayesian belief networks, stochastic Petri nets,
+non-homogeneous Markov chains, semi-Markov processes, and phase type expansions.
+You will quickly understand the relative pros and cons of each technique, as well as
+how to combine different models together to address complex, real-world modeling
+scenarios. Numerous examples, case studies, and problems provided throughout help
+you put knowledge into practice, and a solutions manual and Powerpoint slides for
+instructors accompany the book online.
+This is the ideal self-study guide for students, researchers, and practitioners in
+engineering and computer science.
+Kishor S. Trivedi is a Professor of Electrical and Computer Engineering at Duke
+University, and a Life Fellow of the IEEE and a recipient of the IEEE Computer
+Society’s Technical Achievement Award.
+Andrea Bobbio is a Professor of Computer Science in the Dipartimento di Scienze e
+Innovazione Tecnologica at the Università degli Studi del Piemonte Orientale, Italy, and
+a senior member of IEEE.

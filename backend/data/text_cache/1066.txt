@@ -1,0 +1,64 @@
+
+
+Citation: Pencheva, E.; Atanasov, I.;
+Trifonov, V. Towards Intelligent,
+Programmable, and Open Railway
+Networks. Appl. Sci. 2022, 12, 4062.
+https://doi.org/10.3390/
+app12084062
+Academic Editors: Valerio De
+Martinis and Raimond
+Matthias Wüst
+Received: 23 March 2022
+Accepted: 15 April 2022
+Published: 17 April 2022
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright:
+© 2022 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+applied  
+sciences
+Article
+Towards Intelligent, Programmable, and Open Railway Networks
+Evelina Pencheva 1,*, Ivaylo Atanasov 2 and Ventsislav Trifonov 2
+1
+Telecommunications Department, Faculty of Telecommunications and Electrical Equipment in Transport,
+“Todor Kableshkov” University of Transport, 1574 Soﬁa, Bulgaria
+2
+Communication Networks Department, Faculty of Telecommunications, Technical University of Soﬁa,
+1756 Soﬁa, Bulgaria; iia@tu-soﬁa.bg (I.A.); vgt@tu-soﬁa.bg (V.T.)
+*
+Correspondence: evelina.nik.pencheva@gmail.com
+Abstract: The virtualization and automation of network functions will be key features of future
+high-speed railway networks, which have to provide dependable, safe, and secure services. The
+virtualization of railway network functions will enable functions such as train control, train integrity
+protection, shunting control, and trackside monitoring and maintenance to be virtualized and to be
+run on general-purpose hardware. Network function virtualization combined with edge computing
+can deliver dynamic, low-latency, and reliable services. The automation of railway operations
+can be achieved by embedding intelligence into the network to optimize the railway operation
+performance and to enhance the passenger experience. This paper presents an innovative railway
+network architecture that features distributed intelligence, function cloudiﬁcation and virtualization,
+openness, and programmability. The focus is on time-tolerant and time-sensitive intelligent services
+designed to follow the principles of service-oriented architecture. The interaction between identiﬁed
+logical identities is illustrated by use cases. The paper provides some details of the design of the
+interface between distributed intelligent services and presents the results of an emulation of the
+interface performance.
+Keywords: European Train Control System; artiﬁcial intelligence; network function virtualization;
+service-oriented architecture; concurrent process modeling; key performance indicators
+1. Introduction
+The digitalization and embedding of innovation technologies are expected to enhance
+the capacity and optimize the performance of railway operations and to improve the quality
+of experience for passengers [1]. At the same time, the environmental requirement

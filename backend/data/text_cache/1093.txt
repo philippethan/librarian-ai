@@ -1,0 +1,55 @@
+Classiﬁcation of railway level crossing barrier and
+light signalling system using YOLOv3
+Pavel Sikora∗, Martin Kiac∗, Malay Kishore Dutta†
+∗Department of Telecommunications, Brno University of Technology, Brno, Czech Republic
+†Centre for Advanced Studies, Dr. A.P.J.Abdul Kalam Technical University, Lucknow, India.
+Email: xsikor14@stud.feec.vutbr.cz, xkiacm00@stud.feec.vutbr.cz
+Abstract—Nowadays, the world is experiencing an increasing
+boom in deep learning. This is more and more used in many
+areas such as medicine, robotics, industry, security systems, etc.
+This article deals with the detection and classiﬁcation of railway
+barriers at level crossings, railway warnings, and light signaling
+systems. The evaluation system uses cameras, which are suitably
+positioned to capture the entire scene at a given railway level
+crossing. The detection itself is done using image processing
+techniques and deep neural networks. The proposed system uses
+the GPU acceleration to achieve real-time capability.
+Keywords—object detection; railway level crossing barrier;
+train; trafﬁc light; yolo
+I. INTRODUCTION
+In the last few years, the world has been experiencing
+an increasing boom in deep learning. It is widespread in
+many industries, for example in medicine, autonomous driving,
+converting speech to text, security systems and also in other
+areas.
+Thanks to increasing computing power, deep learning be-
+comes more and more accessible in everyday life. Many
+devices have already implemented deep learning algorithms
+without the users of these devices knowing about it. Deep
+learning is a very complex technique that can replace classic
+algorithms.
+In the Czech Republic railway level crossings may include
+a warning board or a combination of a warning board and a
+physical avoidance in the form of barriers preventing the entry
+of any road user to the railway level crossing. However, this
+solution is not able to identify entrance of careless road users
+or persons on the railway level crossing. This will endanger
+both persons and road users on the railway level crossing and
+train passengers as well.
+This situation can be evaluated by a device in the form of
+a camera system located at the railway level crossing. With
+a camera, the system can evaluate the entire situation which
+is taking place in the ﬁeld of view of the camera, i.e. on the
+entire railway level crossing. If an unusual situation occurs,
+the camera system is able to evaluate the threat and trigger
+the alarm.
+Numerous scientiﬁc articles deal with the detection of peo-
+ple and vehicles of various types. Similarly, many researchers
+This work was supported by the Czech Ministry of Industry and Trade
+(MPO) under Grant FV40372.
+already dealt with the problems of detection and classiﬁcation
+of light signaling systems [1], [2]. We focused on the detection
+and classiﬁcation of railway level crossing barriers together
+with the detection and evaluation of the light signaling systems
+and warning boards.
+This article focuses on d

@@ -1,0 +1,87 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Requirements Engineering for Software and Systems
+
+
+
+
+
+
+
+
+
+
+Requirements Engineering for Software and Systems
+Fourth Edition
+Phillip A. Laplante
+Mohamad H. Kassab
+
+
+
+
+
+
+
+
+
+
+
+Fourth Edition published 2022
+by CRC Press
+6000 Broken Sound Parkway NW, Suite 300, Boca Raton, FL 33487-2742
+and by CRC Press
+4 Park Square, Milton Park, Abingdon, Oxon, OX14 4RN
+First edition published by CRC Press 2009
+CRC Press is an imprint of Taylor & Francis Group, LLC
+© 2022 Phillip A. Laplante and Mohamad H. Kassab
+Reasonable efforts have been made to publish reliable data and information, but the author and publisher cannot assume responsibility for the validity of all materials or the consequences of their use. The authors and publishers have attempted to trace the copyright holders of all material reproduced in this publication and apologize to copyright holders if permission to publish in this form has not been obtained. If any copyright material has not been acknowledged please write and let us know so we may rectify in any future reprint.
+Except as permitted under U.S. Copyright Law, no part of this book may be reprinted, reproduced, transmitted, or utilized in any form by any electronic, mechanical, or other means, now known or hereafter invented, including photocopying, microfilming, and recording, or in any information storage or retrieval system, without written permission from the publishers.
+For permission to photocopy or use material electronically from this work, access www.copyright.com or contact the Copyright Clearance Center, Inc. (CCC), 222 Rosewood Drive, Danvers, MA 01923, 978-750-8400. For works that are not available on CCC please contact mpkbookspermissions@tandf.co.uk
+Trademark notice: Product or corporate names may be trademarks or registered trademarks and are used only for identification and explanation without intent to infringe.
+Library of Congress Cataloging‑in‑Publication Data
+Names: Laplante, Phillip A., author. | Kassab, Mohamad, author.
+Title: Requirements engineering for software and systems / Phillip A. Laplante and Mohamad H. Kassab.
+Description: Boca Raton, FL : CRC Press, 2022. | Series: Applied software engineering series | Includes bibliographical references and index.
+Identifiers: LCCN 2022000663 | ISBN 9780367654528 (hbk) | ISBN 9781032275994 (pbk) | ISBN 9781003129509 (ebk)
+Subjects: LCSH: Computer programs—Specifications. | Computer software—Development. | Software engineering. | Requirements engineering.
+Classification: LCC QA76.76.S73 L37 2022 | DDC 005.1068—dc23/eng/20220322
+LC record available at https://lccn.loc.gov/2022000663
+ISBN: 978-0-367-65452-8 (hbk)
+ISBN: 978-1-032-27599-4 (pbk)
+ISBN: 978-1-003-12950-9 (ebk)
+DOI: 10.1201/9781003129509
+Typeset in Garamond
+by codeMantra
+
+
+
+
+
+
+
+
+
+
+Contents
+Preface
+Acknowledgments
+Authors
+1 Introduction to Requirements Engineering
+Motivation
+What Is Requirements Engineering?
+You Probably Don’t Do Enough Requirements Engineering
+What Are Requirements?
+Requirements vs

@@ -1,0 +1,62 @@
+IET Intelligent Transport Systems
+Research Article
+Enterprise architecture within railway
+systems engineering
+ISSN 1751-956X
+Received on 21st March 2018
+Revised 15th August 2018
+Accepted on 29th October 2018
+E-First on 18th June 2019
+doi: 10.1049/iet-its.2018.5062
+www.ietdl.org
+Silvia Umiliacchi1 , Davinder Bhatia1, Andrew Brownlee1, Colin Brown1
+1Network Rail, Enterprise House – 167-169 Westbourne Terrace, London, UK
+ E-mail: silvia.umiliacchi@networkrail.co.uk
+Abstract: Owing to the complexity of the railway system, introducing new technologies or upgrading existing systems requires a
+whole system approach, ensuring effective integration and alignment with business needs. Enterprise architecture has been
+used to address this complexity, but there are currently no standardised enterprise architecture frameworks for the railway. The
+authors define an approach for building a whole railway system architecture framework by identifying architectural needs,
+analysing existing frameworks, and developing a proposed solution. The case study to support this work, taken from the GB
+Digital Railway programme, is an application of the proposed solution for producing requirements.
+1 Introduction
+1.1 Background and motivation
+In the context of a continuous evolution of technology and business
+needs, it is becoming challenging for the railway to keep pace.
+New ways of thinking and system design are essential. It
+becomes important to understand and design a system as a whole in
+its environment, including all of its dimensions: business,
+processes, people, and technology, and their interconnections. A
+whole system approach is necessary to develop whole system
+emerging properties that go beyond each individual system; whole
+system emerging properties are features that are meaningful to the
+whole system rather than its parts [1].
+In addition, a formal and precise language for describing a
+whole system and its context is crucial to avoid the ambiguity
+intrinsic to natural language.
+Finally, in order to be able to develop ever more complex
+systems in acceptable timeframes, it is fundamental to be able to
+design 
+systems 
+iteratively 
+at 
+different 
+levels 
+of 
+detail
+simultaneously.
+1.2 Objective
+The objective of this work is to develop a novel ontology-based
+enterprise architecture framework that implements a whole system
+approach to address the complexity of the railway system.
+The framework enables understanding and design of the key
+aspects of a complex system as a whole, alignment of solution/
+technology to business needs, and ability to assess the impact of
+changes and modify designs or requirements with minimal effort
+and cost.
+1.3 Paper structure
+The rest of this paper is organised as follows: Section 2 provides a
+definition of the main concepts used in this paper; Section 3
+discusses the most well-known frameworks and formal languages
+available in the railway industry using the identified needs as
+assessment criteria; Section 4 provides an overview of the
+fr

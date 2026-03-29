@@ -1,0 +1,104 @@
+DESIGN AND
+DEVELOPMENT OF
+AIRCRAFT SYSTEMS
+Aerospace Series List
+Understanding Aerodynamics: Arguing from the
+Real Physics
+McLean
+November 2012
+Introduction to UAV Systems, 4th Edition
+Fahlstrom and Gleason
+August 2012
+Theory of Lift: Introductory Computational
+Aerodynamics with MATLAB and Octave
+McBain
+August 2012
+Sense and Avoid in UAS: Research and
+Applications
+Angelov
+April 2012
+Morphing Aerospace Vehicles and Structures
+Valasek
+April 2012
+Gas Turbine Propulsion Systems
+MacIsaac and Langton
+July 2011
+Basic Helicopter Aerodynamics, 3rd Edition
+Seddon and Newman
+July 2011
+Advanced Control of Aircraft, Spacecraft and
+Rockets
+Tewari
+July 2011
+Cooperative Path Planning of Unmanned Aerial
+Vehicles
+Tsourdos et al
+November 2010
+Principles of Flight for Pilots
+Swatton
+October 2010
+Air Travel and Health: A Systems Perspective
+Seabridge et al
+September 2010
+Design and Analysis of Composite Structures:
+With applications to aerospace Structures
+Kassapoglou
+September 2010
+Unmanned Aircraft Systems: UAVS Design,
+Development and Deployment
+Austin
+April 2010
+Introduction to Antenna Placement &
+Installations
+Macnamara
+April 2010
+Principles of Flight Simulation
+Allerton
+October 2009
+Aircraft Fuel Systems
+Langton et al
+May 2009
+The Global Airline Industry
+Belobaba
+April 2009
+Computational Modelling and Simulation of
+Aircraft and the Environment: Volume 1 -
+Platform Kinematics and Synthetic
+Environment
+Diston
+April 2009
+Handbook of Space Technology
+Ley, Wittmann Hallmann
+April 2009
+Aircraft Performance Theory and Practice for
+Pilots
+Swatton
+August 2008
+Surrogate Modelling in Engineering Design: A
+Practical Guide
+Forrester, Sobester, Keane
+August 2008
+Aircraft Systems, 3rd Edition
+Moir & Seabridge
+March 2008
+Introduction to Aircraft Aeroelasticity And Loads
+Wright & Cooper
+December 2007
+Stability and Control of Aircraft Systems
+Langton
+September 2006
+Military Avionics Systems
+Moir & Seabridge
+February 2006
+Design and Development of Aircraft Systems
+Moir & Seabridge
+June 2004
+Aircraft Loading and Structural Layout
+Howe
+May 2004
+Aircraft Display Systems
+Jukes
+December 2003
+Civil Avionics Systems
+Moir & Seabridge
+December 2002

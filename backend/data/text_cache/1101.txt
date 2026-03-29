@@ -1,0 +1,65 @@
+ 
+1 
+ 
+Business Aligned IT Strategy | 
+System Operator 
+ 
+Data Architecture Reference 
+Model 
+ 
+ 
+ 
+ 
+ 
+ 
+V1.0 
+ 
+ 
+ 
+2 
+ 
+ 
+Executive Summary 
+System Operator exists to plan changes to the GB railway ‘system’ to balance the needs 
+of passengers and freight customers and support economic growth. Its vision is to 
+become the recognised expert; trusted by decision makers to plan the GB railway, and its 
+primary output is the national timetable.  
+ 
+It is not realistic to expect industry timetable planners to produce robust and resilient 
+timetables in the timescales set out in the network code using the same manual 
+techniques applied today e.g. manual data entry, visually reviewing train graphs, cross 
+referencing against paper-based reference documents, manual validation of junctions 
+using sectional appendix/unstructured TPR datasets/unstructured WON etc., manual stock 
+and crew diagrams. 
+ 
+It has been observed that the level of data maturity is low. There is not a common 
+industry data platform, taxonomy or full industry data standard in place. Governed 
+sharing of and access to data is too inconsistent to enable systemisation, and automation 
+of activities associated with timetable production. Furthermore, there is no mandatory 
+exchange format of the data between NR and TOC/FOCs to ensure it is aligned. 
+ 
+There are many cultural, process and application issues that account for the current 
+situation but at the root of all of these is the use and quality of the data that underpins 
+all our activities. This data architecture reference model sets out our understanding of the 
+current and future data needs, culminating in the Problem Statements and Target State 
+sections which provide a series of options to consider and a forward view of change across 
+CP6. The problem statements are extensive, but have been summarised under the 
+following themes: 
+ 
+The Culture of Data: A transformational change in how data is managed and governed 
+requires a culture shift within the industry. Addressing quality issues on the core datasets 
+that the industry use requires a clear vision, committed leadership and the right level of 
+resourcing to succeed. 
+ 
+Doing Things Differently: Throughout the timetable development process, there are 
+opportunities to change to better support the sharing and exchange of information at a 
+people and system level. Without changing the way we do things; improved data quality 
+will only deliver some of the potential benefits. 
+ 
+Embracing Data Ownership: Data ownership is currently very immature. Linked closely 
+with the change in culture, a shift is needed to make people take data governance 
+seriously. If our data is key to developing the timetable, then we must put as much effort 
+into managing it through its full lifecycle as we do the timetable itself. 
+ 
+Better Data, Better Timetable: Data quality issues exist throughout our data landscape. 
+Much of this is managed through skilled teams manually correcting or interpreting

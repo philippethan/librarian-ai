@@ -1,0 +1,35 @@
+http://freepdf-books.com
+Foreword By Whitfield Diffie 
+The literature of cryptography has a curious history. Secrecy, of course, has always played a central 
+role, but until the First World War, important developments appeared in print in a more or less 
+timely fashion and the field moved forward in much the same way as other specialized disciplines. 
+As late as 1918, one of the most influential cryptanalytic papers of the twentieth century, William F. 
+Friedman’s monograph The Index of Coincidence and Its Applications in Cryptography, appeared as 
+a research report of the private Riverbank Laboratories [577]. And this, despite the fact that the work 
+had been done as part of the war effort. In the same year Edward H. Hebern of Oakland, California 
+filed the first patent for a rotor machine [710], the device destined to be a mainstay of military 
+cryptography for nearly 50 years. 
+After the First World War, however, things began to change. U.S. Army and Navy organizations, 
+working entirely in secret, began to make fundamental advances in cryptography. During the thirties 
+and forties a few basic papers did appear in the open literature and several treatises on the subject 
+were published, but the latter were farther and farther behind the state of the art. By the end of the 
+war the transition was complete. With one notable exception, the public literature had died. That 
+exception was Claude Shannon’s paper “The Communication Theory of Secrecy Systems,” which 
+appeared in the Bell System Technical Journal in 1949 [1432]. It was similar to Friedman’s 1918 
+paper, in that it grew out of wartime work of Shannon’s. After the Second World War ended it was 
+declassified, possibly by mistake. 
+From 1949 until 1967 the cryptographic literature was barren. In that year a different sort of 
+contribution appeared: David Kahn’s history, The Codebreakers [794]. It didn’t contain any new 
+technical ideas, but it did contain a remarkably complete history of what had gone before, including 
+mention of some things that the government still considered secret. The significance of The 
+Codebreakers lay not just in its remarkable scope, but also in the fact that it enjoyed good sales and 
+made tens of thousands of people, who had never given the matter a moment’s thought, aware of 
+cryptography. A trickle of new cryptographic papers began to be written. 
+At about the same time, Horst Feistel, who had earlier worked on identification friend or foe devices 
+for the Air Force, took his lifelong passion for cryptography to the IBM Watson Laboratory in 
+Yorktown Heights, New York. There, he began development of what was to become the U.S. Data 
+Encryption Standard; by the early 1970s several technical reports on this subject by Feistel and his 
+colleagues had been made public by IBM [1482,1484,552]. 
+This was the situation when I entered the field in late 1972. The cryptographic literature wasn’t 
+abundant, but what there was included some very shiny nuggets. 
+Cryptolog

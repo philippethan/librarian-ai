@@ -1,0 +1,51 @@
+Research Article
+Wideband Channel Modeling for mm-Wave inside Trains for
+5G-Related Applications
+Juan Moreno García-Loygorri
+,1 César Briso-Rodríguez
+,1
+Israel Arnedo
+,2 César Calvo
+,1 Miguel A. G. Laso
+,2 Danping He,3
+Florentino Jiménez,1 and Vicente González Posadas1
+1TSC Department, ETSIST, Universidad Polit´ecnica de Madrid, Madrid, Spain
+2Universidad P´ublica de Navarra, Pamplona, Spain
+3Beijing Jiaotong University, Beijing, China
+Correspondence should be addressed to Juan Moreno Garc´ıa-Loygorri; juanmorenogl@diac.upm.es
+Received 2 November 2017; Accepted 14 February 2018; Published 15 April 2018
+Academic Editor: Dajana Cassioli
+Copyright © 2018 Juan Moreno Garc´ıa-Loygorri et al. This is an open access article distributed under the Creative Commons
+Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is
+properly cited.
+Passenger trains and especially metro trains have been identified as one of the key scenarios for 5G deployments. The wireless
+channel inside a train car is reported in the frequency range between 26.5 GHz and 40 GHz. These bands have received a lot of
+interest for high-density scenarios with a high-traffic demand, two of the most relevant aspects of a 5G network. In this paper we
+provide a full description of the wideband channel estimating Power-Delay Profiles (PDP), Saleh-Valenzuela model parameters,
+time-of-arrival (TOA) ranging, and path-loss results. Moreover, the performance of an automatic clustering algorithm is evaluated.
+The results show a remarkable degree of coherence and general conclusions are obtained.
+1. Introduction
+Metro lines are one of the most acknowledged high-density
+scenarios, as well as stadiums and other large venues. These
+places are a clear target for 5G mobile [1] deployments,
+which is intended to provide very large throughputs and
+ultra-low latencies in dense environments and sustain a
+high number of simultaneous connections, among others.
+It is noteworthy that it is possible to have more than 1200
+people inside a 120-meter long train, which means around
+5 persons/m2. There are many railway-related applications
+like Train-to-Ground, Train-to-Train, Train-to-Car, Train-to-
+Satellite, intratrain communications, and so on, which are
+usually grouped under the T2X notation, or perhaps in the
+more generic V2X notation, where “V” stands for vehicular.
+In this paper we focus on the intratrain channel, which has an
+enormous importance to provide connectivity to passengers.
+Also, this wireless channel could be used for the internal
+communications of the train, which is one of the objectives
+of the EU-H2020 Roll2Rail Project [2].
+There is still some vagueness in the frequency bands
+to be assigned, but some things are clear: there will be 5G
+deployments both above and below 6 GHz [3]. This fact
+has attracted much attention on millimeter waves (mm-
+wave) in order to have larger bandwidths than in lower
+frequencies, where the entire spe

@@ -861,7 +861,7 @@ def process_book(book_id: int, filepath: str, file_type: str):
 
 async def background_processor():
     while True:
-        await asyncio.sleep(20)
+        await asyncio.sleep(2)
         try:
             with get_db() as conn:
                 rows = conn.execute(

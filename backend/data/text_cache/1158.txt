@@ -1,0 +1,39 @@
+WK,0(.27&:RUNVKRSRQ7HFKQLFDO'LDJQRVWLFV
+New Perspectives in Measurements, Tools and Techniques for Industrial Applications
+-XQH)ORUHQFH,WDO\
+Design of an Automatic Train Operation (ATO) system based on CBTC for 
+the management of driverless suburban railways 
+%HQHGHWWR$OORWWD/XLJL&KLVFL3LHUOXFD'
+$GDPLR6XVDQQD3DSLQL/XFD3XJL
+
+1 8QLYHUVLW\RI)ORUHQFH'HSDUWPHQWRI,QGXVWULDO(QJLQHHULQJ0'0/DEYLD6DQWD0DUWD)ORUHQFH
+,7$/<EHQHGHWWRDOORWWD#XQLILLW
+2 8QLYHUVLW\RI)ORUHQFH'HSDUWPHQWRI6\VWHPVDQG&RPSXWHU6FLHQFHYLD6DQWD0DUWD)ORUHQFH
+,7$/<
+Abstract- The interest of train signaling vendors in systems for driverless operation is gradually 
+increasing in order to reduce the operational costs and improving the frequency of service. Many 
+examples of installations all over the world follow the different available standards: VAL (Torino, Lille, 
+Rennes), SelTrac (London, Vancouver, Shangai), etc. In this paper the focus is placed on the 
+Communications-Based Train Control (CBTC) system, which is based on moving-block signaling. In 
+particular, a design solution for the Automatic Train Operation (ATO) subsystem is presented. Numerical 
+simulations in Matlab-SimulinkTM obtained through the modeling of the train and of the track make it 
+possible to compare the provided control logics, under realistic conditions including the presence of 
+constraints imposed by the safety subsystems. 
+This work is part of the TRACE-IT project (Train Control Enhancement via Information Technology)
+financed by the Regione Toscana and that has ECM RAILWAY EVOLUTION company as leader
+project. 
+
+Keywords- CBTC system, safety subsystem, moving-block signaling.
+
+I.     Introduction
+&RPPXQLFDWLRQV%DVHG 7UDLQ &RQWURO &%7& V\VWHPV WKURXJK WKH PRYLQJ EORFN VLJQDOLQJ RYHUFRPH WKH
+OLPLWDWLRQV RI V\VWHPV EDVHG RQ WUDFN FLUFXLWV PDLQO\ UHO\LQJ RQ WKH VR FDOOHG ³&RQYHQWLRQDO )L[HG %ORFN
+6\VWHP´DQGDOORZDPRUHHIIHFWLYHXVHRIWKHWUDQVLWLQIUDVWUXFWXUHDVZHOODVDQLQFUHDVHLQWKHGHQVLW\RIUDLO
+WUDIILF $V GHILQHG LQ WKH ,(((  VWDQGDUG >@ &%7& LV DQ DXWRPDWLF WUDLQ FRQWURO V\VWHP FDSDEOH RI
+LPSOHPHQWLQJ $XWRPDWLF 7UDLQ 3URWHFWLRQ $73 IXQFWLRQV DV ZHOO DV RSWLRQDO $XWRPDWLF 7UDLQ 2SHUDWLRQ
+$72 DQG $XWRPDWLF 7UDLQ 6XSHUYLVLRQ $76 IXQFWLRQV 7KH SUHVHQW SDSHU LV IRFXVHG RQ VRPH GHVLJQ
+VROXWLRQVIRUWKH$72PRGXOHRIDPHWURWUDLQ)LUVWLWKDVEHHQGHFLGHGWKDWWKH$72VXEV\VWHPVKRXOGDOORZ
+WKH PD[LPXP GHJUHH RI DXWRPDWLRQ RI WKH MRXUQH\ PDQDJHPHQW VR DV WR PDNH WKH GULYHU¶V SUHVHQFH
+XQQHFHVVDU\ 7KH V\VWHP KDV EHHQ GHVLJQHG WR SHUIRUP LQ D FRPSOHWHO\ DXWRQRPRXV ZD\ VSHHG WUDFNLQJ
+VFKHGXOHGVWRSSLQJDQGFRQWURORIWUDLQDFFHVVWKURXJKGRRUV6SHFLILFDOO\WZRGLIIHUHQWFRQWUROOHUVKDYHEHHQ
+LPSOHPHQWHGDVSHHGFRQWUROOHUDFWLYHXSWRDFHUWDLQGLVWDQFHIURPWKH

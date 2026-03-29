@@ -1,0 +1,37 @@
+AVIONICS
+ELEMENTS, SOFTWARE AND FUNCTIONS
+Digital Avionics Handbook
+SECOND EDITION
+The Electrical Engineering Handbook Series
+Series Editor
+Richard C. Dorf
+University of California, Davis
+Titles Included in the Series
+The Handbook of Ad Hoc Wireless Networks, Mohammad Ilyas
+The Biomedical Engineering Handbook, Third Edition, Joseph D. Bronzino
+The Circuits and Filters Handbook, Second Edition, Wai-Kai Chen
+The Communications Handbook, Second Edition, Jerry Gibson
+The Computer Engineering Handbook, Vojin G. Oklobdzija
+The Control Handbook, William S. Levine
+The CRC Handbook of Engineering Tables, Richard C. Dorf
+The Digital Avionics Handbook, Second Edition Cary R. Spitzer
+The Digital Signal Processing Handbook, Vijay K. Madisetti and Douglas Williams
+The Electrical Engineering Handbook, Second Edition, Richard C. Dorf
+The Electric Power Engineering Handbook, Leo L. Grigsby
+The Electronics Handbook, Second Edition, Jerry C. Whitaker
+The Engineering Handbook, Third Edition, Richard C. Dorf
+The Handbook of Formulas and Tables for Signal Processing, Alexander D. Poularikas
+The Handbook of Nanoscience, Engineering, and Technology, William A. Goddard, III,
+Donald W. Brenner, Sergey E. Lyshevski, and Gerald J. Iafrate
+The Handbook of Optical Communication Networks, Mohammad Ilyas and
+Hussein T. Mouftah
+The Industrial Electronics Handbook, J. David Irwin
+The Measurement, Instrumentation, and Sensors Handbook, John G. Webster
+The Mechanical Systems Design Handbook, Osita D.I. Nwokah and Yidirim Hurmuzlu
+The Mechatronics Handbook, Robert H. Bishop
+The Mobile Communications Handbook, Second Edition, Jerry D. Gibson
+The Ocean Engineering Handbook, Ferial El-Hawary
+The RF and Microwave Handbook, Mike Golio
+The Technology Management Handbook, Richard C. Dorf
+The Transforms and Applications Handbook, Second Edition, Alexander D. Poularikas
+The VLSI Handbook, Wai-Kai Chen

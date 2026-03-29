@@ -1,0 +1,35 @@
+46
+Design of a system with a higher safety integrity level out 
+of components with an insufficient safety integrity level
+Scha..be Hendrik, TÜV Rheinland InterTraffic, Cologne, Germany
+Abstract. Aim. Technical systems are becoming more and more complex. An increasing 
+number of technical systems contains electronic equipment and software, thus their functional 
+safety is of utmost importance. The safety integrity level is defined by a discrete number that 
+characterizes the set of measures against random and systematic failures depending on the 
+specified risk reduction requirements. The concept of safety integrity levels (SIL) was devel-
+oped as part of various systems of standards. While the safety architecture of a system is con-
+sidered, the main question arises: how systems with higher SIL are made out of components 
+and subsystems with low SIL. The answer to that question will allow using existing and certified 
+components in the development of systems with specified safety integrity levels, probably with 
+higher SIL than the SIL of the components. Methods. The paper analyzes and compares the 
+existing rules of system combination with safety integrity levels set forth in various functional 
+safety standards, e.g. EN 50126/8/9, ISO 26262, IEC 61508, DEF-STAN-00-56, SIRF and the 
+Yellow Book. Beside the tolerable failure rates, the system design requirements must make 
+provisions for combining low SIL subsystems to make higher SIL systems. The widest set of 
+methods is defined for SIL 4 compliance. However, this set of methods cannot be reworked 
+for all possible systems into a simple rule for the combination of systems with lower SIL into 
+systems with higher SIL. In general, the combination of systems into a serial structure will make 
+a system with the safety integrity level equivalent to the lowest subsystem safety integrity level. 
+Tentatively, we can assume that by combining two subsystems with the same safety integrity 
+level we can create a system with a safety integrity level one step higher. Results. It is shown 
+that the general SIL allocation rule established in the DEF-STAN-00-56, the Yellow Book or 
+the SIRF standards cannot be recommended for all countries and any situations. Failure rate 
+and/or observation intervals must be taken into consideration. Its is proven that general rules 
+can only be given for subsystems connected in parallel and some SIL combinations (see e.g. 
+the Yellow Book, SIRF). In each case common failures must be taken into consideration. The 
+general rule may be as follows: in order to achieve system SIL one level higher than the initial 
+level, two component subsystems with the SIL one level lower must be connected in parallel. 
+Other system architectures must be thoroughly studied.
+Keywords: safety integrity level, combination of subsystems, allowable failure rate.
+For citation: Schäbe H. Design of a system with a higher safety integrity level out of com-
+ponents with an insufficient safety integrity le

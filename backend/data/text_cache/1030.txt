@@ -1,0 +1,35 @@
+Research Article
+The QoS Indicators Analysis of Integrated
+EUHT Wireless Communication System Based on Urban
+Rail Transit in High-Speed Scenario
+Xiaoxuan Wang
+,1 Hailin Jiang,2 Tao Tang,1 and Hongli Zhao1
+1State Key Laboratory of Rail Traffic Control and Safety, Beijing Jiaotong University, Beijing 100044, China
+2National Engineering Research Center of Rail Transportation Operation and Control System, Beijing Jiaotong University,
+Beijing 100044, China
+Correspondence should be addressed to Xiaoxuan Wang; wangxiaoxuan@bjtu.edu.cn
+Received 2 November 2017; Accepted 15 February 2018; Published 3 April 2018
+Academic Editor: Yan Zhang
+Copyright © 2018 Xiaoxuan Wang et al. This is an open access article distributed under the Creative Commons Attribution License,
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+Nowadays, in urban rail transit systems, train wayside communication system uses Wireless Local Area Network (WLAN) as
+wireless technologies to achieve safety-related information exchange between trains and wayside equipment. However, according
+to the high speed mobility of trains and the limitations of frequency band, WLAN is unable to meet the demands of future intracity
+and intercity rail transit. And although the Time Division-Long Term Evolution (TD-LTE) technology has high performance
+compared with WLAN, only 20 MHz bandwidth can be used at most. Moreover, in high-speed scenario over 300 km/h, TD-LTE
+can hardly meet the future requirement as well. The equipment based on Enhanced Ultra High Throughput (EUHT) technology
+can achieve a better performance in high-speed scenario compared with WLAN and TD-LTE. Furthermore, it allows using the
+frequency resource flexibly based on 5.8 GHz, such as 20 MHz, 40 MHz, and 80 MHz. In this paper, we set up an EUHT wireless
+communication system for urban rail transit in high-speed scenario integrated all the traffics of it. An outdoor testing environment
+in Beijing-Tianjin High-speed Railway is set up to measure the performance of integrated EUHT wireless communication system
+based on urban rail transit. The communication delay, handoff latency, and throughput of this system are analyzed. Extensive
+testing results show that the Quality of Service (QoS) of the designed integrated EUHT wireless communication system satisfies
+the requirements of urban rail transit system in high-speed scenario. Moreover, compared with testing results of TD-LTE which
+we got before, the maximum handoff latency of safety-critical traffics can be decreased from 225 ms to 150 ms. The performance
+of throughput-critical traffics can achieve 2-way 2 Mbps CCTV and 1-way 8 Mbps PIS which are much better than 2-way 1 Mbps
+CCTV and 1-way 2 Mbps PIS in TD-LTE.
+1. Introduction
+With the rapid development of the city size, the urban rail
+transit becomes the main trip mode of human beings which
+could provide safe, punctual passenger services within urban
+areas and interc

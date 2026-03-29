@@ -1,0 +1,58 @@
+P. 1
+SAFETY RAILWAY ENGINEERING AND PRODUCTS I
+Informations confidentielles I Propriété of CLEARSY
+AIX
+LYON
+PARIS
+STRASBOURG
+WWW.CLEARSY.COM
+PROJET
+DEC 2020
+Safety railway 
+engineering and products
+CLEARSY
+—
+CONTACT@CLEARSY.COM
+P. 2
+SAFETY RAILWAY ENGINEERING AND PRODUCTS I
+Informations confidentielles I Propriété of CLEARSY
+Independent French Company
+►
+Created in 2001 by the team authors of the ATELIER B, famous 
+formal method tool
+►
+90% of the shares owned by employees
+►
+2019 turnover: 15M€, 140 engineers & PhDs
+►
+25% abroad: Brazil, Chile, Luxembourg, Sweden, Norway, 
+Switzerland, Belgium, Germany, Azerbaijan, Cameroun, Macao, 
+Japan, USA, Canada, Italy …
+►
+Partnership with Paris metro (RATP) to develop and deploy 
+innovative custom safety solutions
+►
+Partnership with factories to provide industrial equipment and local 
+companies for exportation/distribution
+Strasbourg
+Paris
+Lyon
+Aix en Provence
+P. 3
+SAFETY RAILWAY ENGINEERING AND PRODUCTS I
+Informations confidentielles I Propriété of CLEARSY
+We are designer
+CLEARSY Offer
+Range of safety-critical systems designed by CLEARSY
+▷Supply of safety systems already developed and in revenue service
+▷Adaption of existing systems to specific requirements
+Safety critical-systems design 
+▷Design of turn-key safety critical systems (hardware and  software) certified SIL2 to SIL4
+▷Prototype of safety critical systems and proof of concept
+Safety critical-software design 
+▷Usage of the B formal method to develop safety critical software and to prove system 
+specifications: formal specification and code verification
+▷Support for the software development toolkit: Atelier B, used by Alstom and Siemens to develop ATP 
+safety critical systems
+▷Design of supervision and simulation systems
+▷Safety critical data validation

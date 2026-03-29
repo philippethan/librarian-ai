@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+@namespace h "http://www.w3.org/1999/xhtml"; .calibre { display: block; font-size: 1em; margin-bottom: 0; margin-left: 5pt; margin-right: 5pt; margin-top: 0; page-break-before: always; text-align: left } .calibre1 { height: auto; width: auto } .calibre2 { border: 1px inset; color: gray; display: block; height: 2px; margin-bottom: 0.5em; margin-left: auto; margin-right: auto; margin-top: 0.5em } .calibre3 { display: block; margin-bottom: 1em; margin-left: 0; margin-right: 0; margin-top: 1em } .calibre4 { display: block; font-size: 1.125em; font-weight: bold; margin-bottom: 1em; margin-left: 0; margin-right: 0; margin-top: 1em } a { color: inherit; text-decoration: inherit; cursor: default } a[href] { color: blue; text-decoration: underline; cursor: pointer } 
+Think and Grow Rich by Napoleon Hill
+1938
+---
+Scanned at sacred-texts.com, July 2006. Proofed and formatted by John Bruno Hare. This text is in the public domain in the United States by the terms of the Digital Millennium Copyright Act because it was published between 1923 and 1964 inclusive, and not renewed at the US Copyright office in a timely fashion. These files may be used for any non-commercial purpose, provided this notice of attribution is left intact in all copies. This electronic edition is not sponsored or endorsed by, or otherwise affiliated with Napoleon Hill, his family and heirs, the Napoleon Hill Foundation, the Ralston Society, or any past or present publishers of this book.
+---
+* FOREWORD
+* PUBLISHER'S PREFACE
+* AUTHOR'S PREFACE
+* CHAPTER 1
+* CHAPTER 2
+* CHAPTER 3
+* CHAPTER 4
+* CHAPTER 5
+* CHAPTER 6
+* CHAPTER 7
+* CHAPTER 8
+* CHAPTER 9
+* CHAPTER 10
+* CHAPTER 11
+* CHAPTER 12
+* CHAPTER 13
+* CHAPTER 14
+* CHAPTER 15
+FOREWORD
+WHAT DO YOU WANT MOST?
+Is It Money, Fame, Power, Contentment, Personality, Peace of Mind, Happiness?
+The Thirteen Steps to Riches described in this book offer the shortest dependable philosophy of individual achievement ever presented for the benefit of the man or woman who is searching for a definite goal in life.
+Before beginning the book you will profit greatly if you recognize the fact that the book was not written to entertain. You cannot digest the contents properly in a week or a month. After reading the book thoroughly, Dr. Miller Reese Hutchison, nationally known Consulting Engineer and long-time associate of Thomas A. Edison, said-- "This is not a novel. It is a textbook on individual achievement that came directly from the experiences of hundreds of America's most successful men. It should be studied, digested, and meditated upon. No more than one chapter should be read in a single night. The reader should underline the sentences which impress him most. Later, he should go back to these marked lines and read them again. A real student will not merely read this book, he will absorb its contents and make them his own. This book should be adopted by all high schools and no boy or girl should be permitted to graduate without having satisf

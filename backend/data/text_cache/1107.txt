@@ -1,0 +1,68 @@
+1 0
+1 0
+1 0
+1 0
+1 0
+QR of RTRI, Vol. 42, No. 1, Mar. 2001
+PAPER
+PAPER
+PAPER
+PAPER
+PAPER
+Development of Compact Maintenance System for Railway Signalling
+Development of Compact Maintenance System for Railway Signalling
+Development of Compact Maintenance System for Railway Signalling
+Development of Compact Maintenance System for Railway Signalling
+Development of Compact Maintenance System for Railway Signalling
+Equipment using Multiplex System and FFT Analysis
+Equipment using Multiplex System and FFT Analysis
+Equipment using Multiplex System and FFT Analysis
+Equipment using Multiplex System and FFT Analysis
+Equipment using Multiplex System and FFT Analysis
+1.  Introduction
+1.  Introduction
+1.  Introduction
+1.  Introduction
+1.  Introduction
+To ensure the safety of train operation, signalling
+equipment is installed along railway lines.  A great deal
+of maintenance labor is required for the equipment.  For
+example, Japan Railway Companies (JRs) have intro-
+duced the Automatic Train Stop (ATS) system into all line
+sections.  We have to measure the resonance frequency
+(f0) and the radical degree (Q) of ground coils for ATS.
+Moreover, we have to measure the track circuit current
+and the sensitivity of electronic train detectors for level
+crossing.  By analyzing the measured data, we can pre-
+vent problems from occurring in that equipment1).
+For the maintenance of this signalling equipment, a
+dedicated train called an "electric testing car" has been
+used on JR lines.  This train was made in the 1970s.  It
+mounts sensors and processing parts for measuring vari-
+ous items separately, and these devices are extremely
+large in size.  The running cost is high, because the train
+is a specialized one.  It is operated on the individual sec-
+tions only twice a year, and it takes skill to analyze and
+grade the collected data.
+The organization of maintenance and surrounding
+environment is becoming increasingly difficult for rail-
+way companies in recent years and there is a great de-
+mand for a new maintenance system which can save la-
+bor and measure the signalling equipment more fre-
+quently.  So we have developed a compact maintenance
+system that can be mounted on the underfloor plate of a
+commercial train.
+The new system shares a single sensor to measure
+ground coils for ATS, track circuits and electronic train
+detectors for level crossing.  Accordingly, a large space is
+not required for installation on an underfloor plate of a
+train.  It refines the measuring method.  The primary
+coil of the sensor can transmit a multi-carrier wave si-
+multaneously, and the secondary coil can receive mixed
+multi-carrier wave induced by coupling with ground coils
+for ATS.  This system calculates f0 and Q of ground coils
+by FFT analyzing mixed multi-carrier wave using a Digi-
+tal Signal Processor (DSP). Using simultaneous multi-
+carrier wave and digital signal processing, it can mea-
+sure signalling equipment precisely, if the train runs at
+high speed.  Moreover, we can analyze th

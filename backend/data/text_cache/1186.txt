@@ -1,0 +1,44 @@
+International Journal on Software Tools for Technology Transfer
+https://doi.org/10.1007/s10009-018-0482-9
+FORMAL METHODS FOR TRANSPORT SYSTEMS
+Modelling and simulating a Thai railway signalling system using
+Coloured Petri Nets
+Somsak Vanit-Anunchai1
+© Springer-Verlag GmbH Germany, part of Springer Nature 2018
+Abstract
+It is well known that formal veriﬁcation of a large railway signalling system encounters the state explosion problem. To alleviate
+the problem, researchers usually concentrate on only route interlocking and abstract away other properties. Besides the route
+interlocking, there are also other vital properties to which failure to comply could potentially lead to danger. According to
+our experience, most of train accidents often involve human error and errors in other properties rather than errors in the route
+interlocking. Thus, we encounter a dilemma between fully automated validation of an incomplete model or partial validation
+of a complete model. We argue that formally modelling the complete model will be more valuable for the on-going projects
+of the State Railway of Thailand (SRT) because it provides insights and can be used to train new signal engineers. This
+paper focuses on the complete Coloured Petri Net model of a typical Thai railway signalling system: a double-line station
+with one passing loop. The model includes train movements that can be simulated and graphically visualized. According to
+SRT’s signalling principles, we have identiﬁed nine properties: route interlocking, alternative overlap, ﬂank protection, aspect
+sequence, approach signal release, approach lock, back lock, sectional route release and quick route release. Lessons learnt
+from using CPN Tools to model and validate the railway signalling systems are also discussed.
+Keywords Interlocking tables · Route-based Interlocking · Approach lock · Back lock · Visualization extension
+1 Introduction
+Currently, the State Railway of Thailand (SRT) is undertak-
+ing several projects expanding and upgrading their railway
+lines. These projects involve design and installation of new
+signalling systems. Although SRT and contractors have been
+working together, the line of responsibility between both
+parties is quite clear. Usually SRT works on functional
+requirement and speciﬁcations that are arranged in the form
+of interlocking tables. The tables are the tabular representa-
+tion specifying the routes (the allowed passage of the train)
+and the states/actions of all related signalling equipment.
+Taking the approved interlocking tables as their input, the
+contractors are more interested in providing the hardware
+and software that conform to the tables. For example, based
+on the approved interlocking table, the contractors create the
+B Somsak Vanit-Anunchai
+somsav@sut.ac.th
+1
+School of Telecommunication Engineering, Institute of
+Engineering, Suranaree University of Technology, Muang,
+Nakhon Ratchasima, Thailand
+ladder logic diagrams and rigorously test them using their
+simulator

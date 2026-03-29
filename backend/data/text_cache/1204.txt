@@ -1,0 +1,45 @@
+7 
+Power System Modelling for Urban Massive 
+Transportation Systems 
+Mario A. Ríos and Gustavo Ramos 
+Universidad de los Andes, Bogotá, D.C.,  
+Colombia 
+1. Introduction 
+Urban Massive Transportation Systems (UMTS), like metro, tramway, light train; requires 
+the supply of electric power with high standards of reliability. So, an important step in the 
+development of these transportation systems is the electric power supply system planning 
+and design. 
+Normally, the trains of a UMTS requires a DC power supply by means of rectifier AC/DC 
+substations, know as traction substations (TS); that are connected to the electric HV/MV 
+distribution system of a city.   The DC system feeds catenaries of tramways or the third rail 
+of metros, for example.  The DC voltage is selected according to the system taking into 
+account power demand and length of the railway’s lines.  Typically, a 600 Vdc – 750 Vdc is 
+used in tramways; while 1500 Vdc is used in a metro system.  Some interurban-urban 
+systems use a 3000 Vdc supply to the trains. 
+Fig. 1 presents an electric scheme of a typical traction substation (TS) with its main 
+components: AC breakers at MV, MV/LV transformers, AC/DC rectifiers, DC breakers, 
+traction DC breakers. As, it is shown, a redundant supply system is placed at each traction 
+substation in order to improve reliability. In addition, some electric schemes allow the 
+power supply of the catenaries connected to a specific traction substation (A) since the 
+neighbour traction substation (B) by closing the traction sectioning between A and B and 
+opening the traction DC breakers.  In this way, the reliability supply is improved and allows 
+flexibility for maintenance of TS. 
+So, an important aspect for the planning and design of this electric power supply is a good 
+estimation of power demand required by the traction system that will determine the 
+required number, size and capacity of AC/DC rectifier substations. On the other hand, the 
+design of the system requires studying impacts of the traction system on the performance of 
+the distribution system and vice versa.  Power quality disturbances are present in the 
+operation of these systems that could affect the performance of the traction system.   
+This chapter presents useful tools for modelling, analysis and system design of Electric 
+Massive Railway Transportation Systems (EMRTS) and power supply from Distribution 
+Companies (DisCo) or Electric Power Utilities.  Firstly, a section depicting the modelling 
+and simulation of the power demand is developed. Then, a section about the computation of 
+www.intechopen.com
+ 
+Infrastructure Design, Signalling and Security in Railway 
+ 
+180 
+the placement and sizing of TS for urban railway systems is presented where the modelling 
+is based on the power demand model of the previous section. After that, two sections about 
+the power quality (PQ) impact of EMRTS on distribution systems and grounding design are 
+presented. Both subjects make use of the l

@@ -1,0 +1,57 @@
+1 
+System Security Assessment for Safety Critical Railway Signalling 
+Systems for the Thameslink Infrastructure Programme  
+Nico J P Tillema* 
+*Principal Design Engineer, Network Rail, Thameslink Programme, London, UK, email: nico.tillema@networkrail.co.uk 
+ 
+ 
+ 
+Keywords: Railway signalling, cyber security, risk based 
+analyses. 
+Abstract 
+In railway signalling there is a shift from bespoke stand-alone 
+technology to commercial-off-the-shelf (COTS) connected 
+devices. In addition, the ownership of assets within one 
+connected system has changed from one to several industry 
+partners, creating a need for a common approach. In addition, 
+the business impact of a potential cyber security attack has 
+increased. The challenges of managing cyber security risk for 
+safety-critical systems, when technology and culture changes, 
+was addressed by using a quantitative assessment method. 
+This was used to develop the cyber security risk register and 
+to design the cyber security architecture. This paper outlines 
+the approach taken by the Network Rail Thameslink 
+Programme. This paper recommends use of a common 
+approach for security risk management in the rail industry. 
+Detailed results on the outcome of the risk assessment cannot 
+be shared due to the sensitive nature of the information.  
+1 Introduction 
+The introduction of new technology in the railway industry 
+has increased the cyber security risk for three reasons: firstly 
+the shift from bespoke to commercial-off-the-shelf (COTS) 
+technology; secondly the shift to open standards in signalling; 
+and thirdly the automation of much larger sections of railway 
+in one control centre increasing the impact of an attack and 
+making it more difficult to operate in degraded mode if 
+required. A cyber security attack has the potential to impact 
+the safety of the railway. For example delay in a systems 
+response can lead to a hazardous condition. In addition, a 
+cyber security attack can affect performance as the 
+Thameslink Programme introduces the capability to run up to 
+24 trains per hour through the core of the network. Any 
+disruption has a greater impact than before in terms of train 
+delay minutes, cost and reputation. Stopping trains on a 
+mainline railway cost Network Rail in compensation 
+payments as well as in reputation. An additional challenge is 
+that, with the advent of in-cab signalling like ETCS, 
+signalling equipment is now owned and managed by several 
+industry partners, and not Network Rail alone.  In summary, 
+there is a technology and cultural change that both increased 
+the cyber security risk. 
+2 Thameslink Programme Challenges 
+The Thameslink corridor through London is being re-
+signalled to meet future passenger demand. Conventional 
+signalling cannot meet predicted levels of passenger traffic, as 
+it limits train paths to 20 trains per hour. To achieve the 
+required passenger flows, it is necessary to be able to robustly 
+signal 24 trains per hour in each direction through the core

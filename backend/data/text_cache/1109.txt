@@ -1,0 +1,20 @@
+SESA Transportation Working Group
+Presentation: 
+‘Establishment of Software 
+Safety Requirements in a Later 
+Phase of Project Life Cycle’
+© Michael Holt
+Why Software
+ Prevalence of Software in transport systems
+ Functionality and flexibility provides benefits
+ Importance for Safety
+© Michael Holt
+© Michael Holt
+Summary
+ Safety Requirements
+ What is SIL
+ Why is Software Different
+ Project Experience
+ Approach to SIL
+ What happened to make it go “wrong”
+ How it was fixed

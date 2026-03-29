@@ -1,0 +1,60 @@
+Caravel Group - 
+for projects  
+that allow no 
+room for error
+T h e  s p e c i a l i s t  f o r  l a r g e  c o m p l e x  m u l t i - d i s c i p l i n e d  p r o j e c t s
+Safety Critical Projects
+LEADING THE WAY IN PROJECTS
+Systems are generally expected to be dependable and solid; none more so, than those that 
+underpin safety critical infrastructure. They are often vital for the common good, however their 
+failure can have catastrophic consequences.
+In order to perform safety critical control functions, these systems usually rely on a technology 
+solution as well as a human element. As such, they also carry within themselves the potential 
+for failure, through technology as well as through human error. Failure of one or both of these 
+aspects can lead to incidents and accidents, often threatening life and property on a mass scale. 
+Any system development or organisational change that is implemented within such an environment 
+is considered a Safety Critical Project - one of the most challenging types of project that an 
+organisation may face or undertake.
+Safety Critical Projects are usually found in infrastructure-related 
+industries such as:
+• 
+Transport (maritime, rail, road, aviation)
+• 
+Utilities (electricity, water & waste, gas, telecommunications)
+• 
+Process industries (particularly petrochemical)
+• 
+Mining industry
+• 
+Emergency services (control rooms etc.)
+The risks are many and various and may lie with the owners of the 
+system or equipment, and impact those that pay to use the services 
+delivered by the system or equipment, or those that operate the 
+system or equipment.
+When Failure is
+Not an Option
+2
+Safe systems 
+Quality systems are often synonymous with minimal re-work. In the same vein, a safe system 
+is also considered to be the most efficient and effective. This is borne out by engineers’ efforts 
+to minimise any downtime of equipment and staff (due to illness or injury) while increasing the 
+availability of services to customers.
+Safety Critical Projects are usually executed in a distinctly multi-faceted environment and have 
+to address a number of factors. For project managers it means that they deal with complex 
+projects that are further complicated by onerous compliance requirements and conditions.
+As a result, Safety Critical Projects share a mix of the following attributes:
+• 
+Industrial electronics development, modification or off-the-shelf supply
+• 
+Software development or modification including embedded systems
+• 
+Systems integration and implementation 
+• 
+Business process innovation to accommodate the new technology
+• 
+Change implementation to manage the transition from old to new
+• 
+Support systems implementation or modification to accommodate the new systems
+• 
+Risk management programme including on-going or in-service risk performance monitoring
+3

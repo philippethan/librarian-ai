@@ -1,0 +1,46 @@
+Research Article
+Comprehensive Analysis on Heterogeneous Wireless Network in
+High-Speed Scenarios
+Yuyang Zhang,1 Tao Zheng
+,1 Ping Dong
+,1 Hongbin Luo,1 and Zhibo Pang
+2
+1Beijing Jiaotong University, China
+2ABB Corporate Research, Sweden
+Correspondence should be addressed to Tao Zheng; zhengtao@bjtu.edu.cn
+Received 4 November 2017; Accepted 16 April 2018; Published 22 May 2018
+Academic Editor: Richard Yu
+Copyright © 2018 Yuyang Zhang et al. This is an open access article distributed under the Creative Commons Attribution License,
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+Greater demands are being placed on the access bandwidth, stability, and delay of network because of the quickening rhythm of
+life and work, especially in mobile scenario. In order to obtain a stable network with low latency and high bandwidth in mobile
+scenario, taking advantage of the wireless heterogeneous network in parallel is a good choice. Nowadays, people are increasingly
+concerned about the network quality under the mobile scenario. Some scholars have done the relevant measurements. However,
+all of those measurements mainly investigate part of the network parameters or part of mobile scenarios. In this paper, we make
+the following contributions. Firstly, in high-speed mobile scenario, the wireless network qualities of different vendors are measured
+synthetically. Secondly, we analyze the benefits of taking advantage of the different vendors. Thirdly, we deploy the replication link
+mechanism in high-speed mobile scenario and propose an algorithm to remove the duplicate packet in high-speed mobile scenario.
+And the algorithm can also be used in another multipath schedule algorithm to improve the reliability.
+1. Introduction
+With the rapid development of high-speed rail technologies,
+high-speed rails have become the main way of daily short or
+medium distance travels [1]. In China, there are 1.713 billion
+trips made in 2017 bringing the total cumulative number
+of trips to 7 billion. Followed by the tremendous passenger
+flow, greater demands are being placed on mobile scenario
+[2, 3].
+Nowadays, cellular network has become the main way for
+people to access the Internet [4]. With the development of
+cellular network, many researchers measure the performance
+of cellular networks from different aspects in different scenar-
+ios. Tan et al. [5] did the research about multiple commercial
+3G UMTS networks. They analyzed their latency, throughput,
+and the performance of different applications. Tso et al. [6]
+analyze the HSPA network in low-speed mobile scenario.
+However, all of those measurements mainly investigate the
+network layer parameters and transport layer parameters.
+And they miss SNR, an important network parameter in
+network access layer. Rodriguez-Pineiro J and Martin-Vega
+pointed out that SNR is an important network parameter
+for analyzing the cellular networks in high-speed mobile
+scenario [7

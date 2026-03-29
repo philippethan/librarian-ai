@@ -1,0 +1,36 @@
+Research Article
+Optimization for Metro Operation Scheme of Suburban Lines: A
+New Method for Dealing with the Imbalanced Passenger Flow
+Xiaobing Ding
+,1 Gan Shi,1 Jiangang Jin,2 Lixing Yang,3 and Zhigang Liu1
+1School of Urban Rail Transportation, Shanghai University of Engineering Science, Shanghai 201620, China
+2School of Naval Architecture Ocean & Civil Engineering, Shanghai Jiaotong University, Shanghai 200241, China
+3State Key Laboratory of Rail Trafc Control and Safety, Beijing Jiaotong University, Beijing 100044, China
+Correspondence should be addressed to Xiaobing Ding; dxbsuda@163.com
+Received 5 October 2022; Revised 26 February 2023; Accepted 1 March 2023; Published 16 March 2023
+Academic Editor: Chung-Cheng Lu
+Copyright © 2023 Xiaobing Ding et al. Tis is an open access article distributed under the Creative Commons Attribution License,
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+Te development of some central cities tends to be saturated, so some mega cities try to adopt the express and local mode of the
+metro. Suburban lines with imbalanced passenger fow between stations will lead to extremely crowded passenger fow in some
+stations, while scarce passenger fow in other stations. To balance the train’s carrying capacity with the imbalanced passenger fow,
+this study explores the collaborative optimization of train operation under the new mode of express and local. First, a time-
+stamped data cropping strategy based on fne-grained time zones as the grid index is developed, which is used to deeply explore the
+OD spatiotemporal representation of passenger fow correlation mapping mechanism based on multisource data; then, the
+calculation model of the proportion of trains matching with the OD temporal and spatial characteristics of suburban passenger
+fow are constructed, and an efcient solution algorithm is developed to solve the problem of interest. Finally, a set of numerical
+experiments with operation data from Shanghai Metro Line 16 are conducted to verify the performance and efectiveness of the
+proposed model and algorithm. Te experimental results show that the proposed approach can efectively realize the collaborative
+optimization of passenger OD prediction, train proportion, stop scheme, and travel time, so as to provide decision-making
+support and method guidance for the optimization of metro organizations in megacities.
+1. Introduction
+As China’s urbanization continues to advance, the pas-
+senger fow between central cities and satellite cities is
+increasing. In addition, the development of central cities
+has been or is close to saturation, and a large number of
+enterprises and institutions have moved to the suburbs, so
+the suburban passenger fow between urban areas and
+suburbs has also increased. In this situation, it will lead to
+uneven passenger fow in sections, which exhibits obvious
+tidal characteristics. Te imbalance of passenger fow be-
+tween station

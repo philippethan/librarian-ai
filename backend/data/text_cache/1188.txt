@@ -1,0 +1,39 @@
+Research Article
+Modelling and Simulation of ERTMS for Current and Future
+Mobile Technologies
+Christian Pinedo, Marina Aguado, Igor Lopez, and Jasone Astorga
+Faculty of Engineering, University of the Basque Country UPV/EHU, Alameda Urquijo s/n, 48013 Bilbao, Spain
+Correspondence should be addressed to Christian Pinedo; christian.pinedo@ehu.eus and Marina Aguado; marina.aguado@ehu.eus
+Received 30 July 2015; Accepted 23 November 2015
+Academic Editor: Nandana Rajatheva
+Copyright © 2015 Christian Pinedo et al. Tis is an open access article distributed under the Creative Commons Attribution
+License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly
+cited.
+Nowadays, train control in-lab simulation tools play a crucial role in reducing extensive and expensive on-site railway testing
+activities. In this paper, we present our contribution in this arena by detailing the internals of our European Railway Train
+Management System in-lab demonstrator. Tis demonstrator is built over a general-purpose simulation framework, Riverbed
+Modeler, previously Opnet Modeler. Our framework models both ERTMS subsystems, the Automatic Train Protection application
+layer based on movement authority message exchange and the telecommunication subsystem based on GSM-R communication
+technology. We provide detailed information on our modelling strategy. We also validate our simulation framework with real
+trace data. To conclude, under current industry migration scenario from GSM-R legacy obsolescence to IP-based heterogeneous
+technologies, our simulation framework represents a singular tool to railway operators. As an example, we present the assessment
+of related performance indicators for a speciﬁc railway network using a candidate replacement technology, LTE, versus current
+legacy technology. To the best of our knowledge, there is no similar initiative able to measure the impact of the telecommunication
+subsystem in the railway network availability.
+1. Introduction
+Te European Commission in partnership with the European
+Railway Industry has just set up the SHIFT2RAIL joint under-
+taking in clear response to the increasing demands for higher
+capacity and higher performance in this domain. One of the
+key identiﬁed research issues is the development of train con-
+trol in-lab demonstrators to minimize on-site testing activi-
+ties. On-site testing activities may degrade performance indi-
+cators in operational railway lines, since they may introduce a
+waste of time and resources. Te ultimate goal of our research
+activity is to reduce the cost of validation and veriﬁcation in
+the development of current and future railway train control
+systems. In this sense, a signiﬁcant eﬀort is to be dedicated to
+the construction of the European Railway Train Management
+System (ERTMS) in-lab tools. Te ERTMS is a standardized
+train control system consisting of two subsystems: the Euro-
+pean Train Control System (ETCS)—the Automatic Tra

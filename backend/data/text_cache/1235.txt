@@ -1,0 +1,48 @@
+No d’ordre : 275
+École Centrale de Lille
+THÈSE
+présentée en vue
+d’obtenir le grade de
+DOCTEUR
+en
+Spécialité : Automatique Génie Informatique, Traitement du Signal et Images
+par
+Pengfei SUN
+DOCTORAT DELIVRE PAR L’ÉCOLE CENTRALE DE LILLE
+Titre de la thèse :
+Ingénierie de modèle pour la sécurité des systèmes critiques ferroviaires
+Model based system engineering for safety of railway critical systems
+Soutenue le 24 juillet 2015 devant le jury d’examen :
+Président
+CR-HDR, Mohamed GHAZEL
+IFSTTAR, Lille
+Rapporteur
+HDR, Hélène WAESELYNCK
+LAAS-CNRS, Toulouse
+Rapporteur
+Pr, Hassane ALLA
+UJF, Grenoble
+Membre
+Pr, Xiaoyun FENG
+SWJTU, Chengdu
+Membre
+Pr, Jinling ZHU
+SWJTU, Chengdu
+Directeur de thèse
+DR, Simon COLLART-DUTILLEUL
+IFSTTAR, Lille
+Co-directeur de thèse
+CR, Philippe BON
+IFSTTAR, Lille
+Thèse préparée dans le Laboratoire d’Évaluation des Systèmes de Transports
+Automatisés et de leur Sécurité
+IFSTTAR, COSYS/ESTAS, Villeneuve d’Ascq
+École Doctorale SPI 072 (EC Lille)
+PRES Université Lille Nord de France
+Je tiens à remercier tous
+ceux qui m’ont soutenu et assisté
+pendant ces années de thèse
+À mes parents adorés
+À mes professeurs
+Et à mes chèr(e)s ami(e)s
+Toute ma reconnaissance au professeur de français
