@@ -1,0 +1,55 @@
+What Every Engineer Should Know About Data-­Driven Analytics provides a com­
+prehensive introduction to the theoretical concepts and approaches of machine learn­
+ing that are used in predictive data analytics. By introducing the theory and providing 
+practical applications, this text can be understood by students of every engineering 
+discipline. It offers a detailed and focused treatment of the important machine learn­
+ing approaches and concepts that can be exploited to build models to enable decision 
+making in different domains.
+	•	 Utilizes practical examples from different disciplines and sectors within 
+engineering and other related technical areas to demonstrate how to go from 
+data, to insight, and to decision making.
+	•	 Introduces various approaches to building models that exploit different 
+algorithms.
+	•	 Discusses predictive models that can be built through machine learning and 
+used to mine patterns from large datasets.
+	•	 Explores the augmentation of technical and mathematical materials with 
+explanatory worked examples.
+	•	 Includes a glossary, self-­assessments, and worked-­out practice exercises.
+Written to be accessible to non-­experts in the subject, this comprehensive introduc­
+tory text is suitable for students, professionals, and researchers in engineering and 
+data science.
+What Every Engineer 
+Should Know About 
+Data-Driven Analytics
+What Every Engineer Should Know
+Series Editor
+Phillip A. Laplante
+Pennsylvania State University
+What Every Engineer Should Know about MATLAB® and Simulink ®
+Adrian B. Biran
+Green Entrepreneur Handbook: The Guide to Building and Growing a Green and 
+Clean Business
+Eric Koester
+What Every Engineer Should Know about Cyber Security and Digital Forensics
+Joanna F. DeFranco
+What Every Engineer Should Know about Modeling and Simulation
+Raymond J. Madachy and Daniel Houston
+What Every Engineer Should Know about Excel, Second Edition
+J.P. Holman and Blake K. Holman
+Technical Writing: A Practical Guide for Engineers, Scientists, and Nontechnical 
+Professionals, Second Edition
+Phillip A. Laplante
+What Every Engineer Should Know about the Internet of Things
+Joanna F. DeFranco and Mohamad Kassab
+What Every Engineer Should Know about Software Engineering
+Phillip A. Laplante and Mohamad Kassab
+What Every Engineer Should Cyber Security and Digital Forensics
+Joanna F. DeFranco and Bob Maley
+Ethical Engineering: A Practical Guide with Case Studies
+Eugene Schlossberger
+What Every Engineer Should Know About Data-Driven Analytics
+Phillip A. Laplante and Satish Mahadevan Srinivasan
+What Every Engineer Should Know About Reliability and Risk Analysis
+Mohammad Modarres and Katrina Groth
+For more information about this se	 ries, please visit: www.routledge.com/What-
+Every-Engineer-Should-Know/book-series/CRCWEESK

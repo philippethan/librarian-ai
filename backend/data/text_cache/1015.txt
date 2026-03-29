@@ -1,0 +1,102 @@
+Technical Writing
+A Practical Guide for 
+Engineers, Scientists, and 
+Nontechnical Professionals 
+Second Edition
+What Every Engineer Should Know
+Series Editor 
+Phillip A. Laplante
+Pennsylvania State University
+What Every Engineer Should Know about 
+Product Liability
+James F. Thorpe and William H. Middendorf
+What Every Engineer Should Know 
+about Inventing
+William H. Middendorf
+What Every Engineer Should Know about Micro
+computer Systems Design and Debugging
+Bill Wray and Bill Crawford
+What Every Engineer Should Know 
+about Robots
+Maurice I. Zeldman
+What Every Engineer Should Know 
+about Engineering Information Resources
+Margaret T. Schenk and James K. Webster
+What Every Engineer Should Know about 
+Microcomputer Software
+Keith R. Wehmeyer
+What Every Engineer Should Know about 
+Computer Modeling and Simulation
+Don M. Ingels
+What Every Engineer Should Know about 
+Practical Engineering Workstations
+Justin E. Harlow III
+What Every Engineer Should Know about 
+Practical Cad/cam Applications
+John Stark
+What Every Engineer Should Know about 
+Data Communications
+Carl Clifton
+What Every Engineer Should Know about 
+Patents, Second Edition
+William G. Konold, Bruce Tittel, Donald F. Frei, and 
+David S. Stallard
+What Every Engineer Should Know about 
+Quality Control
+Thomas Pyzdek 
+What Every Engineer Should Know about 
+Microcomputers: Hardware/Software Design: 
+a Step-by-step Example, Second Edition
+William S. Bennett, Carl F. Evert, Jr., and 
+Leslie C. Lander
+What Every Engineer Should Know 
+about Reliability and Risk Analysis
+Mohammad Modarres
+What Every Engineer Should Know 
+about Accounting and Finance
+Jae K. Shim and Norman Henteleff
+What Every Engineer Should Know about 
+Concurrent Engineering
+Thomas A. Salomone
+What Every Engineer Should Know 
+about Ethics
+Kenneth K. Humphreys
+What Every Engineer Should Know about 
+Software Engineering
+Phillip A. Laplante
+What Every Engineer Should Know about 
+Developing Real-Time Embedded Products
+Kim R. Fowler
+What Every Engineer Should Know about 
+Business Communciation
+John X. Wang
+What Every Engineer Should Know about 
+Career Management
+Mike Ficco
+What Every Engineer Should Know about 
+Starting a High-Tech Business Venture
+Eric Koester
+What Every Engineer Should Know about 
+MATLAB® and Simulink®
+Adrian B. Biran
+Green Entrepreneur Handbook: The Guide 
+to Building and Growing a Green and Clean 
+Business
+Eric Koester
+Technical Writing: A Practical Guide for 
+­Engineers and Scientists
+Phillip A. Laplante
+What Every Engineer Should Know about 
+Cyber Security and Digital Forensics
+Joanna F. DeFranco
+What Every Engineer Should Know about 
+Modeling and Simulation
+Raymond J. Madachy and Daniel Houston
+What Every Engineer Should Know about 
+Excel, Second Edition
+J.P. Holman and Blake K. Holman
+Technical Writing: A Practical Guide for 
+­Engineers, Scientists, and Nontechnical 
+­Professionals, Second Edition
+Phillip A. Laplante
+For more information about this series, please visit: www.crcpress.com
