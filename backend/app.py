@@ -1,3 +1,30 @@
+# =============================================================================
+# LibrarianAI - Backend API
+# =============================================================================
+# Single-file FastAPI backend. All logic lives here by design (see CLAUDE.md).
+#
+# Major sections (search for the banner to jump):
+#   TAXONOMY        - FIXED_TAXONOMY category tree and language code map
+#   CONFIG          - Paths, constants, and directory setup
+#   DATABASE        - get_db() context manager and schema init
+#   EXTRACTION      - Text and cover extraction from PDF/EPUB files
+#   LLM UTILITIES   - Prompt building and JSON parsing for Ollama responses
+#   FILENAME PARSE  - Heuristic title/author extraction from filenames
+#   ONLINE SEARCH   - Multi-source metadata lookup (OpenLibrary, Google, etc.)
+#   TAXONOMY MAP    - Subject list -> FIXED_TAXONOMY category mapping
+#   OLLAMA CALLS    - HTTP calls to local Ollama model
+#   BOOK PIPELINE   - Full process_book() workflow (hash -> extract -> LLM -> save)
+#   BACKGROUND TASK - Async polling loop that processes pending books
+#   APP INIT        - FastAPI app, CORS, and lifespan startup
+#   API: HEALTH     - GET /api/health, POST /api/scan
+#   API: BOOKS      - CRUD endpoints for book records
+#   API: COVERS     - Cover image serve and refresh
+#   API: DEDUP      - Duplicate detection and dismissal
+#   API: SHELVES    - Virtual shelf management
+#   API: EXPORT     - CSV and JSON bulk export
+#   API: ANALYTICS  - Aggregated stats and taxonomy views
+# =============================================================================
+
 import asyncio
 import csv
 import hashlib
@@ -23,6 +50,17 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+
+# =============================================================================
+# TAXONOMY
+# =============================================================================
+# FIXED_TAXONOMY is the canonical category tree used for UI filtering and for
+# mapping raw LLM/subject strings into a consistent hierarchy.
+# Keys are top-level categories; values are lists of valid subcategories.
+#
+# _LANG_CODES (defined later in this section) maps ISO 639-2/1 codes returned
+# by external APIs into human-readable language names.
+# =============================================================================
 
 FIXED_TAXONOMY = {
     "Personal Development": [
@@ -95,6 +133,15 @@ FIXED_TAXONOMY = {
     ],
 }
 
+# =============================================================================
+# CONFIG
+# =============================================================================
+# All paths and whitelists are centralized here.
+# Override DB_PATH or BOOKS_PATH via environment variables (e.g. for testing).
+# PATCHABLE_FIELDS guards the PATCH /api/books/{id} endpoint against arbitrary
+# column writes; add a field here to make it user-editable via the API.
+# =============================================================================
+
 DB_PATH = os.environ.get("DB_PATH", "backend/data/librarian.db")
 BOOKS_PATH = os.environ.get("BOOKS_PATH", "C:/Users/posen/Documents/Books")
 BOOKS_ROOT = Path(BOOKS_PATH)
@@ -104,9 +151,23 @@ PATCHABLE_FIELDS = {"title", "author", "year", "language", "category",
                     "subcategory", "difficulty", "description", "tags", "hint",
                     "fixed_category", "fixed_subcategory"}
 
+# Ensure required directories exist at import time
 os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 COVERS_DIR.mkdir(parents=True, exist_ok=True)
 
+
+# =============================================================================
+# DATABASE
+# =============================================================================
+# get_db() is a simple open/yield/close context manager. A new connection is
+# created for every call — no thread-local or connection pool is used, which
+# keeps things safe under async usage (each sync endpoint runs in a thread).
+#
+# init_db() is called once at startup (inside the lifespan handler). It:
+#   1. Resets any books stuck in 'processing' (from a previous crashed run).
+#   2. Creates all tables if they don't exist.
+#   3. Adds any columns that were introduced after the initial schema (ALTER TABLE).
+# =============================================================================
 
 @contextmanager
 def get_db():
@@ -187,6 +248,21 @@ def init_db():
         conn.commit()
 
 
+# =============================================================================
+# EXTRACTION
+# =============================================================================
+# extract_text()  - reads the first ~3000 chars of content from a PDF or EPUB.
+#   PDF:  uses PyMuPDF (fitz) — first 3 pages only to keep it fast.
+#   EPUB: iterates document items via ebooklib, strips HTML with BeautifulSoup.
+#   Returns "" on any failure so the pipeline can fall back to filename heuristics.
+#
+# extract_cover() - renders/extracts a cover image as a 300x400 JPEG.
+#   PDF:  renders page 0 at 1.5x scale with PyMuPDF.
+#   EPUB: looks for an image item whose name contains "cover"; falls back to
+#         the first image in the archive.
+#   Saves to COVERS_DIR/{book_id}.jpg and returns the path (or None on failure).
+# =============================================================================
+
 def extract_text(filepath: str, file_type: str) -> str:
     try:
         if file_type == "pdf":
@@ -250,6 +326,24 @@ def extract_cover(filepath: str, book_id: int, file_type: str) -> Optional[str]:
         print(f"[extract_cover] id={book_id}: {exc}")
     return None
 
+
+# =============================================================================
+# LLM UTILITIES
+# =============================================================================
+# _parse_llm_json() - robustly parses JSON from raw LLM output.
+#   Tries four strategies in order:
+#     1. Strip markdown fences, then json.loads()
+#     2. Regex-extract the first {...} block, then json.loads()
+#     3. json_repair library as a last resort
+#   Returns {} if all strategies fail.
+#
+# _FIELDS_BLOCK   - reusable prompt fragment that describes the expected JSON
+#                   schema to the model.
+#
+# _build_prompt() - assembles the final prompt from the text snippet and
+#                   an optional user hint. When a hint is supplied it is
+#                   placed first and described as the primary source of truth.
+# =============================================================================
 
 def _parse_llm_json(raw: str) -> dict:
     # Step 1: strip ``` fences
@@ -315,6 +409,8 @@ def _build_prompt(snippet: str, hint: str = "") -> str:
     )
 
 
+# Maps ISO 639-2 (3-letter) and ISO 639-1 (2-letter) language codes to
+# human-readable names. Used when normalizing results from external search APIs.
 _LANG_CODES = {
     "eng": "English", "fre": "French", "fra": "French", "spa": "Spanish",
     "ger": "German", "deu": "German", "ara": "Arabic", "ita": "Italian",
@@ -325,6 +421,22 @@ _LANG_CODES = {
     "zh": "Chinese", "ko": "Korean", "ru": "Russian",
 }
 
+
+# =============================================================================
+# FILENAME PARSE
+# =============================================================================
+# _parse_filename() extracts (title, author) from common e-book filename
+# conventions without any AI calls. It is the cheapest metadata source and
+# is used by online_lookup as the primary search query.
+#
+# Processing order:
+#   0. Normalize whitespace and separators
+#   1. Strip known noise tokens (Z-Library, LibGen watermarks, etc.)
+#   2. Remove leading series tags like [Book 01] or bullets
+#   3. Detect (LastName, FirstName) author parentheticals
+#   4. If no author yet, try heuristics on "Author - Title" dash-split format
+#   5. Clean remaining parentheticals from the title
+# =============================================================================
 
 def _parse_filename(filepath: str) -> tuple:
     """
@@ -389,6 +501,26 @@ def _parse_filename(filepath: str) -> tuple:
 
     return title, author
 
+
+# =============================================================================
+# ONLINE SEARCH
+# =============================================================================
+# Five independent search functions each return a list of candidate dicts with
+# at minimum: title, author, year, language, subjects, source.
+#
+#   _search_open_library()    - Open Library search API
+#   _search_google_books()    - Google Books Volumes API
+#   _search_crossref()        - CrossRef works API (strong for academic books)
+#   _search_internet_archive()- Internet Archive advanced search
+#   _search_openalex()        - OpenAlex works search
+#
+# _collect_candidates() fans out to all five sources concurrently (via loop),
+# deduplicates by normalised title+author, enriches merged records with the
+# longest available values, and scores/ranks by title match quality and
+# number of corroborating sources. Returns the top 8 candidates.
+#
+# _norm() strips all non-alphanumeric characters for fuzzy key comparison.
+# =============================================================================
 
 def _norm(s: str) -> str:
     """Normalise a string for deduplication comparison."""
@@ -637,6 +769,20 @@ def _collect_candidates(title: str, author: str) -> list:
     return candidates[:8]
 
 
+# =============================================================================
+# TAXONOMY MAP
+# =============================================================================
+# _map_to_fixed_category() converts a raw list of subject strings (from
+# external APIs) into a (category, subcategory) pair from FIXED_TAXONOMY.
+#
+# Scoring logic:
+#   +3 if the category name itself appears in the combined subject text
+#   +2 for each matching subcategory string
+#   +1 for each keyword in per-category hint lists
+# The highest-scoring category wins; within it, the subcategory with the most
+# keyword matches in the subject text is chosen.
+# =============================================================================
+
 def _map_to_fixed_category(subjects: list) -> tuple:
     """Try to map a list of subjects to FIXED_TAXONOMY via simple keyword matching."""
     if not subjects:
@@ -683,6 +829,23 @@ def _map_to_fixed_category(subjects: list) -> tuple:
             best_sub = sub
     return best_cat, best_sub
 
+
+# =============================================================================
+# OLLAMA CALLS
+# =============================================================================
+# call_ollama()          - primary path: sends extracted book text (up to 1500
+#                          chars) plus an optional user hint to the local Ollama
+#                          model and returns parsed metadata as a dict.
+#
+# call_ollama_filename() - fallback path: used when no text could be extracted.
+#                          Sends only the filename and file size and asks the
+#                          model to infer metadata from that alone.
+#
+# Both functions read OLLAMA_URL and OLLAMA_MODEL from the environment at call
+# time (not at module load) to support runtime config changes.
+# ensure_ascii=True is required in json.dumps() to avoid encoding issues with
+# the local Ollama HTTP interface.
+# =============================================================================
 
 def call_ollama(text: str, hint: str = "") -> dict:
     ollama_url = os.getenv("OLLAMA_URL", "http://localhost:11434")
@@ -767,6 +930,22 @@ def call_ollama_filename(filepath: str, hint: str = "") -> dict:
         print(f"[call_ollama_filename] error: {exc}")
         return {}
 
+
+# =============================================================================
+# BOOK PIPELINE
+# =============================================================================
+# process_book() is the core synchronous pipeline run for each book.
+# It is called by background_processor() inside a thread (via asyncio.to_thread).
+#
+# Steps:
+#   1. Mark book as 'processing' in DB; read the user's hint (if any).
+#   2. SHA-256 hash check for duplicates — marks as 'duplicate' and returns early.
+#   3. Extract text via PyMuPDF/ebooklib and cache it to backend/data/text_cache/.
+#   4. Call Ollama with text (or filename if no text extracted).
+#   5. Compute a confidence score: (filled_fields / 9) * 0.7 + (has_text) * 0.3
+#   6. Set status: 'done' (>=0.4), 'partial' (>0), or 'error' (0).
+#   7. Persist all metadata to the books table.
+# =============================================================================
 
 def process_book(book_id: int, filepath: str, file_type: str):
     # Step 1: set status=processing, read hint
@@ -859,6 +1038,15 @@ def process_book(book_id: int, filepath: str, file_type: str):
     print(f"[process_book] id={book_id} status={status} confidence={confidence_score:.2f} title={title!r}")
 
 
+# =============================================================================
+# BACKGROUND TASK
+# =============================================================================
+# background_processor() runs as a persistent async task started in lifespan().
+# Every 2 seconds it fetches up to 5 'pending' books and processes each one
+# synchronously via asyncio.to_thread so the event loop stays unblocked.
+# Errors are caught and logged so one bad book can't crash the loop.
+# =============================================================================
+
 async def background_processor():
     while True:
         await asyncio.sleep(2)
@@ -872,6 +1060,17 @@ async def background_processor():
         except Exception as exc:
             print(f"[background_processor] error: {exc}")
 
+
+# =============================================================================
+# APP INIT
+# =============================================================================
+# lifespan() is the FastAPI startup/shutdown hook:
+#   - On startup: runs init_db() then spawns background_processor() as a task.
+#   - On shutdown: cancels the background task cleanly.
+#
+# CORS is restricted to the Vite dev server (localhost:5173).
+# For production, update allow_origins to the actual frontend origin.
+# =============================================================================
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -891,7 +1090,13 @@ app.add_middleware(
 )
 
 
-# ---------- health + scan ----------
+# =============================================================================
+# API: HEALTH + SCAN
+# =============================================================================
+# GET  /api/health  - liveness check; returns model name from env.
+# POST /api/scan    - walks a directory tree, inserts new PDF/EPUB files as
+#                    'pending' rows (skips already-known filepaths).
+# =============================================================================
 
 @app.get("/api/health")
 def health():
@@ -944,7 +1149,13 @@ def scan(req: ScanRequest):
     return {"added": added, "skipped": skipped}
 
 
-# ---------- books list + stats ----------
+# =============================================================================
+# API: BOOKS LIST + STATS
+# =============================================================================
+# GET /api/books  - returns all books ordered by newest first; tags are
+#                  deserialized from JSON string to a Python list.
+# GET /api/stats  - lightweight count by status (no full row fetch).
+# =============================================================================
 
 @app.get("/api/books")
 def get_books():
@@ -975,7 +1186,26 @@ def get_stats():
     return {"total": total, "by_status": by_status}
 
 
-# ---------- Section A: book management ----------
+# =============================================================================
+# API: BOOK MANAGEMENT
+# =============================================================================
+# GET    /api/books/{id}               - fetch a single book record
+# PATCH  /api/books/{id}               - partial update (PATCHABLE_FIELDS only)
+# POST   /api/books/{id}/rename        - rename the physical file on disk + DB
+# DELETE /api/books/{id}               - remove from DB; optionally delete file
+# POST   /api/books/{id}/fix           - mark manual_fixed=1 (user-verified)
+# POST   /api/books/{id}/unfix         - clear manual_fixed flag
+# PATCH  /api/books/{id}/reading-status- update reading progress label
+# POST   /api/books/{id}/open          - os.startfile() to open in native viewer
+# POST   /api/books/{id}/online-lookup - search external APIs for candidates
+# POST   /api/books/{id}/online-lookup/apply - apply a chosen candidate to DB
+# POST   /api/books/{id}/reprocess     - reset to 'pending' for re-extraction
+# POST   /api/reprocess-batch          - reprocess multiple books at once
+# POST   /api/delete-batch             - delete multiple books at once
+# GET    /api/text-previews            - first 300 chars from text cache for all books
+# POST   /api/books/{id}/extract-test  - debug: run extraction only
+# POST   /api/books/{id}/ollama-test   - debug: run extraction + Ollama call
+# =============================================================================
 
 @app.get("/api/books/{book_id}")
 def get_book(book_id: int):
@@ -1366,7 +1596,13 @@ def ollama_test(book_id: int):
     return metadata
 
 
-# ---------- Section B: covers ----------
+# =============================================================================
+# API: COVERS
+# =============================================================================
+# GET  /api/books/{id}/cover         - serve cover JPEG; generates on-the-fly
+#                                      if not cached, then saves path to DB.
+# POST /api/books/{id}/cover/refresh - force re-extraction of the cover image.
+# =============================================================================
 
 @app.get("/api/books/{book_id}/cover")
 def get_cover(book_id: int):
@@ -1412,7 +1648,23 @@ def refresh_cover(book_id: int):
     return {"book_id": book_id, "cover_path": cover}
 
 
-# ---------- Section C: duplicates + shelves ----------
+# =============================================================================
+# API: DUPLICATES + SHELVES
+# =============================================================================
+# Duplicates are detected during process_book() via SHA-256 hash comparison.
+#
+# GET  /api/duplicates               - list undismissed duplicates with their original
+# POST /api/duplicates/dismiss       - mark a hash as dismissed (hide from UI)
+#
+# Shelves are virtual collections of books stored in the shelves + shelf_books tables.
+#
+# GET    /api/shelves                        - list shelves with book counts
+# POST   /api/shelves                        - create a new shelf
+# DELETE /api/shelves/{id}                   - delete shelf (cascades to shelf_books)
+# GET    /api/shelves/{id}/books             - list books on a shelf
+# POST   /api/shelves/{id}/books             - add a book to a shelf
+# DELETE /api/shelves/{id}/books/{book_id}   - remove a book from a shelf
+# =============================================================================
 
 @app.get("/api/duplicates")
 def get_duplicates():
@@ -1555,7 +1807,16 @@ def remove_book_from_shelf(shelf_id: int, book_id: int):
     return {"shelf_id": shelf_id, "book_id": book_id, "removed": True}
 
 
-# ---------- Section D: export ----------
+# =============================================================================
+# API: EXPORT
+# =============================================================================
+# Both endpoints stream output row-by-row to avoid loading all books into memory.
+#
+# GET /api/export/csv  - streams a UTF-8 BOM CSV (Excel-compatible).
+#                        Tags list is joined to a comma-separated string.
+# GET /api/export/json - streams a JSON array. Each book is a full DB row with
+#                        tags deserialized to a list.
+# =============================================================================
 
 CSV_FIELDS = [
     "id", "filename", "filepath", "file_type", "file_size",
@@ -1626,7 +1887,20 @@ def export_json():
     )
 
 
-# ---------- Section E: analytics ----------
+# =============================================================================
+# API: ANALYTICS + TAXONOMY VIEWS
+# =============================================================================
+# GET /api/analytics      - single endpoint that returns all aggregated stats
+#                           in one response: counts by status, category, reading
+#                           status, file type, difficulty, language (top 20),
+#                           average confidence score, total library size, and
+#                           counts of manually-fixed and duplicate books.
+#
+# GET /api/fixed-taxonomy - returns the FIXED_TAXONOMY dict for use by the UI.
+# GET /api/categories     - distinct category values actually in the DB.
+# GET /api/taxonomy       - full (category, subcategory, count) tree from the DB,
+#                           sorted by count descending — used for the filter panel.
+# =============================================================================
 
 @app.get("/api/analytics")
 def get_analytics():
@@ -1755,6 +2029,15 @@ def get_taxonomy():
         item["subcategories"].sort(key=lambda x: -x["count"])
     return result
 
+
+# =============================================================================
+# STATIC FILES
+# =============================================================================
+# The compiled frontend (Vite build output) is served from backend/static/.
+# The mount is at "/" so any path not matched by an API route falls through to
+# index.html — enabling client-side routing in the SPA.
+# This must be the LAST mount so API routes take priority.
+# =============================================================================
 
 os.makedirs("backend/static", exist_ok=True)
 app.mount("/", StaticFiles(directory="backend/static", html=True), name="static")
