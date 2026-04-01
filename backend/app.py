@@ -1319,6 +1319,22 @@ def delete_batch(req: DeleteBatchRequest):
     return {"deleted": len(rows)}
 
 
+@app.get("/api/text-previews")
+def get_text_previews():
+    """Return first 300 chars of cached extracted text for every book that has one."""
+    cache_dir = Path("backend/data/text_cache")
+    result = {}
+    if cache_dir.exists():
+        for txt_file in cache_dir.glob("*.txt"):
+            try:
+                book_id = int(txt_file.stem)
+                text = txt_file.read_text(encoding="utf-8", errors="ignore").strip()
+                result[book_id] = text[:300]
+            except (ValueError, Exception):
+                pass
+    return result
+
+
 @app.post("/api/books/{book_id}/extract-test")
 def extract_test(book_id: int):
     with get_db() as conn:

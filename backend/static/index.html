@@ -554,6 +554,47 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 #candidate-modal .cq-footer { display: flex; justify-content: flex-end; padding-top: 8px; border-top: 1px solid #f0f0f0; margin-top: 8px; }
 #candidate-modal .cq-cancel { background: none; border: 1px solid #ccc; padding: 7px 18px; border-radius: 6px; font-size: 0.85rem; cursor: pointer; color: #555; }
 #candidate-modal .cq-cancel:hover { border-color: #888; color: #222; }
+
+/* Column picker */
+#col-picker-wrap { position: relative; }
+#btn-col-picker {
+  background: #fff;
+  color: #444;
+  border: 1px solid #d0d0da;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#btn-col-picker:hover { background: #f0f0f8; border-color: #7c83fd; color: #5c65f5; }
+#col-picker-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: #fff;
+  border: 1px solid #d0d0da;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 6px 0;
+  z-index: 200;
+  min-width: 160px;
+}
+#col-picker-dropdown.open { display: block; }
+.col-picker-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: #333;
+  user-select: none;
+}
+.col-picker-item:hover { background: #f4f4fb; }
+.col-picker-item input[type=checkbox] { cursor: pointer; width: 14px; height: 14px; }
+.cell-text { max-width: 240px; font-size: 0.72rem; color: #777; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 </style>
 </head>
 <body>
@@ -595,6 +636,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <option value="read">Read</option>
     <option value="abandoned">Abandoned</option>
   </select>
+  <div id="col-picker-wrap">
+    <button id="btn-col-picker" onclick="toggleColPicker(event)">Columns &#9660;</button>
+    <div id="col-picker-dropdown"></div>
+  </div>
   <span id="filter-count"></span>
   <div id="batch-actions">
     <span id="batch-progress"></span>
@@ -612,15 +657,16 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       <thead>
         <tr>
           <th class="check-cell"><input type="checkbox" id="chk-all" onclick="toggleSelectAll(this)" title="Select all"></th>
-          <th style="width:44px"></th>
-          <th onclick="sortBy('title')">Title</th>
-          <th onclick="sortBy('author')">Author</th>
-          <th onclick="sortBy('year')" style="width:60px">Year</th>
-          <th onclick="sortBy('category')">Category</th>
-          <th onclick="sortBy('status')" style="width:90px">Status</th>
-          <th style="width:90px">Confidence</th>
-          <th onclick="sortBy('reading_status')" style="width:90px">Reading</th>
-          <th style="width:130px">Actions</th>
+          <th data-col="cover" style="width:44px"></th>
+          <th data-col="title" onclick="sortBy('title')">Title</th>
+          <th data-col="author" onclick="sortBy('author')">Author</th>
+          <th data-col="year" onclick="sortBy('year')" style="width:60px">Year</th>
+          <th data-col="category" onclick="sortBy('category')">Category</th>
+          <th data-col="status" onclick="sortBy('status')" style="width:90px">Status</th>
+          <th data-col="confidence" style="width:90px">Confidence</th>
+          <th data-col="reading" onclick="sortBy('reading_status')" style="width:90px">Reading</th>
+          <th data-col="text" style="width:220px">Extracted Text</th>
+          <th data-col="actions" style="width:130px">Actions</th>
         </tr>
       </thead>
       <tbody id="book-tbody"></tbody>
@@ -775,8 +821,84 @@ let selectedIds = new Set();
 let autoRefreshTimer = null;
 let fixedTaxonomy = {};
 
+// ---- Column visibility ----
+const COLUMNS = [
+  { id: 'cover',      label: 'Cover' },
+  { id: 'title',      label: 'Title' },
+  { id: 'author',     label: 'Author' },
+  { id: 'year',       label: 'Year' },
+  { id: 'category',   label: 'Category' },
+  { id: 'status',     label: 'Status' },
+  { id: 'confidence', label: 'Confidence' },
+  { id: 'reading',    label: 'Reading' },
+  { id: 'text',       label: 'Extracted Text' },
+  { id: 'actions',    label: 'Actions' },
+];
+let visibleCols = {};
+let textPreviews = {};
+
+function initColVisibility() {
+  try {
+    const saved = localStorage.getItem('librarianai_cols');
+    if (saved) visibleCols = JSON.parse(saved);
+  } catch(e) {}
+  COLUMNS.forEach(c => { if (!(c.id in visibleCols)) visibleCols[c.id] = c.id !== 'text'; });
+  buildColPickerDropdown();
+  applyColumnVisibility();
+  if (visibleCols['text']) loadTextPreviews();
+}
+
+function buildColPickerDropdown() {
+  const dd = document.getElementById('col-picker-dropdown');
+  dd.innerHTML = COLUMNS.map(c => `
+    <label class="col-picker-item">
+      <input type="checkbox" ${visibleCols[c.id] ? 'checked' : ''} onchange="toggleColumn('${c.id}', this.checked)">
+      ${c.label}
+    </label>
+  `).join('');
+}
+
+function applyColumnVisibility() {
+  let css = '';
+  COLUMNS.forEach(c => {
+    if (!visibleCols[c.id]) css += `[data-col="${c.id}"] { display: none; }\n`;
+  });
+  let el = document.getElementById('col-vis-style');
+  if (!el) {
+    el = document.createElement('style');
+    el.id = 'col-vis-style';
+    document.head.appendChild(el);
+  }
+  el.textContent = css;
+}
+
+function toggleColumn(id, visible) {
+  visibleCols[id] = visible;
+  localStorage.setItem('librarianai_cols', JSON.stringify(visibleCols));
+  applyColumnVisibility();
+  if (id === 'text' && visible) loadTextPreviews();
+}
+
+async function loadTextPreviews() {
+  try {
+    textPreviews = await apiFetch('/api/text-previews');
+    renderTable();
+  } catch(e) { /* ignore */ }
+}
+
+function toggleColPicker(event) {
+  event.stopPropagation();
+  document.getElementById('col-picker-dropdown').classList.toggle('open');
+}
+
+document.addEventListener('click', () => {
+  const dd = document.getElementById('col-picker-dropdown');
+  if (dd) dd.classList.remove('open');
+});
+
 // ---- Init ----
 async function init() {
+  initColVisibility();
   await Promise.all([loadBooks(), loadStats(), loadFixedTaxonomy()]);
   setInterval(loadStats, 5000);
   document.getElementById('search-input').addEventListener('input', applyFilters);
@@ -914,25 +1036,26 @@ function renderTable() {
         <input type="checkbox" class="row-chk" data-id="${b.id}" ${selectedIds.has(b.id) ? 'checked' : ''}
           onchange="toggleRowCheck(${b.id}, this.checked)">
       </td>
-      <td class="cover-cell">
+      <td class="cover-cell" data-col="cover">
         ${b.cover_path
           ? `<img src="${API}/api/books/${b.id}/cover" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
           : ''}
         <div class="no-cover" style="${b.cover_path ? 'display:none' : ''}">PDF</div>
       </td>
-      <td class="cell-title">
+      <td class="cell-title" data-col="title">
         <div class="title" title="${esc(b.title || b.filename)}">${esc(b.title || b.filename || '-')}</div>
         <div class="filename" title="${esc(b.filename)}">${esc(b.filename || '')}</div>
       </td>
-      <td class="cell-author" title="${esc(b.author)}">${esc(b.author || '-')}</td>
-      <td class="cell-year">${esc(b.year || '-')}</td>
-      <td class="cell-cat" title="${esc(b.category)}">${esc(b.category || '-')}</td>
-      <td><span class="badge badge-${b.status}">${b.status}</span></td>
-      <td class="conf-bar">
+      <td class="cell-author" data-col="author" title="${esc(b.author)}">${esc(b.author || '-')}</td>
+      <td class="cell-year" data-col="year">${esc(b.year || '-')}</td>
+      <td class="cell-cat" data-col="category" title="${esc(b.category)}">${esc(b.category || '-')}</td>
+      <td data-col="status"><span class="badge badge-${b.status}">${b.status}</span></td>
+      <td class="conf-bar" data-col="confidence">
         ${confBar(b.confidence_score)}
       </td>
-      <td><span class="rs-badge rs-${b.reading_status || 'to-read'}">${b.reading_status || 'to-read'}</span></td>
-      <td onclick="event.stopPropagation()">
+      <td data-col="reading"><span class="rs-badge rs-${b.reading_status || 'to-read'}">${b.reading_status || 'to-read'}</span></td>
+      <td data-col="text" class="cell-text" title="${esc(textPreviews[b.id] || '')}">${esc((textPreviews[b.id] || '').slice(0, 120)) || '<span style="color:#ccc;font-style:italic">—</span>'}</td>
+      <td data-col="actions" onclick="event.stopPropagation()">
         <button class="action-btn" onclick="openBookById(${b.id})">Open</button>
         <button class="action-btn" onclick="reprocessBookById(${b.id})">Reprocess</button>
       </td>
