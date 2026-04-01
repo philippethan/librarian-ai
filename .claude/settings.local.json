@@ -10,7 +10,8 @@
       "Bash(npm create:*)",
       "Bash(npm install:*)",
       "Bash(.venv/Scripts/python -c \"import fitz; print\\(fitz.__version__\\)\")",
-      "Bash(.venv/Scripts/python -m pytest backend/tests/ -v)"
+      "Bash(.venv/Scripts/python -m pytest backend/tests/ -v)",
+      "Bash(powershell.exe -Command \"Get-ChildItem ''C:/Users/posen/librarian-ai/.git/worktrees/lucid-hellman/''\")"
     ]
   }
 }
