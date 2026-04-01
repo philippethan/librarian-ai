@@ -1,0 +1,74 @@
+###############################################################################
+# LibrarianAI — System Architecture (high level)
+# Shows all runtime components and how they connect.
+###############################################################################
+
+title: LibrarianAI — System Architecture {
+  near: top-center
+  shape: text
+  style.font-size: 22
+  style.bold: true
+}
+
+direction: right
+
+user: User {
+  shape: person
+}
+
+browser: Browser {
+  shape: rectangle
+  style.fill: "#dbeafe"
+  label: "Browser\n(React SPA)"
+}
+
+backend: FastAPI Backend {
+  shape: rectangle
+  style.fill: "#dcfce7"
+
+  api: REST API\n(/api/*) {
+    shape: rectangle
+  }
+  bg: Background Processor\n(asyncio loop, 2s poll) {
+    shape: rectangle
+  }
+  static: Static File Server\n(backend/static/) {
+    shape: rectangle
+  }
+}
+
+sqlite: SQLite DB {
+  shape: cylinder
+  style.fill: "#fef9c3"
+  label: "SQLite\nlibrarian.db"
+}
+
+ollama: Ollama {
+  shape: rectangle
+  style.fill: "#fce7f3"
+  label: "Ollama\n(mistral:7b-instruct)\nlocalhost:11434"
+}
+
+disk: File System {
+  shape: rectangle
+  style.fill: "#f3f4f6"
+  label: "Books Folder\n(PDF / EPUB)\n+ covers cache\n+ text cache"
+}
+
+external: External APIs {
+  shape: rectangle
+  style.fill: "#ede9fe"
+  label: "Open Library\nGoogle Books\nCrossRef\nInternet Archive\nOpenAlex"
+}
+
+# Connections
+user -> browser: interacts
+browser -> backend.static: load app (GET /)
+browser -> backend.api: CRUD + actions (JSON)
+backend.api -> sqlite: read / write
+backend.bg -> sqlite: poll pending books
+backend.bg -> disk: extract text & cover
+backend.bg -> ollama: POST /api/generate
+backend.api -> ollama: reprocess / test calls
+backend.api -> external: online lookup
+backend.api -> disk: serve covers, open files

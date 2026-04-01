@@ -1,0 +1,122 @@
+###############################################################################
+# LibrarianAI — Book Processing Pipeline
+# The lifecycle of a single book from scan to 'done'.
+###############################################################################
+
+title: LibrarianAI — Book Processing Pipeline {
+  near: top-center
+  shape: text
+  style.font-size: 22
+  style.bold: true
+}
+
+direction: down
+
+scan: POST /api/scan {
+  shape: rectangle
+  style.fill: "#dbeafe"
+  label: "POST /api/scan\nwalk directory tree\ninsert new files as 'pending'"
+}
+
+db_pending: DB row — status: pending {
+  shape: rectangle
+  style.fill: "#fef9c3"
+}
+
+bg_poll: Background Processor {
+  shape: rectangle
+  style.fill: "#dcfce7"
+  label: "background_processor()\npoll every 2 s — fetch up to 5 pending"
+}
+
+hash_check: SHA-256 hash check {
+  shape: diamond
+  style.fill: "#fce7f3"
+  label: "duplicate\nhash found?"
+}
+
+mark_dup: Mark status: duplicate {
+  shape: rectangle
+  style.fill: "#fee2e2"
+}
+
+extract: Extract text {
+  shape: rectangle
+  style.fill: "#dcfce7"
+  label: "extract_text()\nPDF: PyMuPDF first 3 pages\nEPUB: ebooklib + BeautifulSoup\nCache to text_cache/{id}.txt"
+}
+
+has_text: Has text or hint? {
+  shape: diamond
+  style.fill: "#fce7f3"
+}
+
+ollama_text: call_ollama(text, hint) {
+  shape: rectangle
+  style.fill: "#ede9fe"
+  label: "call_ollama()\ntext + optional user hint\n-> POST Ollama /api/generate"
+}
+
+ollama_file: call_ollama_filename() {
+  shape: rectangle
+  style.fill: "#ede9fe"
+  label: "call_ollama_filename()\nfilename + file size only\n-> POST Ollama /api/generate"
+}
+
+parse_json: Parse LLM JSON response {
+  shape: rectangle
+  style.fill: "#f3f4f6"
+  label: "_parse_llm_json()\nstrip fences -> json.loads\nregex fallback -> json_repair"
+}
+
+confidence: Compute confidence score {
+  shape: rectangle
+  style.fill: "#fef9c3"
+  label: "(filled_fields / 9) * 0.7\n+ (has_text ? 1 : 0) * 0.3"
+}
+
+status_check: confidence >= 0.4? {
+  shape: diamond
+  style.fill: "#fce7f3"
+}
+
+done: status: done {
+  shape: rectangle
+  style.fill: "#dcfce7"
+}
+
+partial: status: partial {
+  shape: rectangle
+  style.fill: "#fef9c3"
+}
+
+error: status: error {
+  shape: rectangle
+  style.fill: "#fee2e2"
+}
+
+save_db: Persist to DB {
+  shape: rectangle
+  style.fill: "#dbeafe"
+  label: "UPDATE books SET title, author, year,\nlanguage, category, subcategory,\ndifficulty, description, tags,\nextraction_method, confidence_score,\nprocessed_at"
+}
+
+# Flow
+scan -> db_pending
+db_pending -> bg_poll
+bg_poll -> hash_check: process_book()
+hash_check -> mark_dup: yes
+hash_check -> extract: no
+extract -> has_text
+has_text -> ollama_text: yes
+has_text -> ollama_file: no
+ollama_text -> parse_json
+ollama_file -> parse_json
+parse_json -> confidence
+confidence -> status_check
+status_check -> done: >= 0.4
+status_check -> partial: > 0
+status_check -> error: == 0
+done -> save_db
+partial -> save_db
+error -> save_db

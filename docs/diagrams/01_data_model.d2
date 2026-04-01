@@ -1,0 +1,90 @@
+###############################################################################
+# LibrarianAI — Data Model
+# Three tables: books (core), shelves (virtual collections), shelf_books (join)
+###############################################################################
+
+title: LibrarianAI — Database Schema {
+  near: top-center
+  shape: text
+  style.font-size: 22
+  style.bold: true
+}
+
+books: books {
+  shape: sql_table
+
+  id: INTEGER \{PK\}
+  filename: TEXT
+  filepath: TEXT \{UNIQUE\}
+  file_type: TEXT
+  file_size: INTEGER
+  file_hash: TEXT
+
+  # Processing pipeline state
+  status: TEXT
+  error_msg: TEXT
+
+  # AI-extracted metadata
+  title: TEXT
+  author: TEXT
+  year: TEXT
+  language: TEXT
+  category: TEXT
+  subcategory: TEXT
+  difficulty: TEXT
+  description: TEXT
+  tags: TEXT
+  extraction_method: TEXT
+  confidence_score: REAL
+
+  # User-override metadata
+  hint: TEXT
+  fixed_category: TEXT
+  fixed_subcategory: TEXT
+  manual_fixed: INTEGER
+
+  # Cover & reading state
+  cover_path: TEXT
+  reading_status: TEXT
+
+  # Deduplication
+  duplicate_of: INTEGER \{FK\}
+  dedup_dismissed: INTEGER
+
+  # Timestamps
+  added_at: TEXT
+  processed_at: TEXT
+}
+
+shelves: shelves {
+  shape: sql_table
+  id: INTEGER \{PK\}
+  name: TEXT \{UNIQUE\}
+  created_at: TEXT
+}
+
+shelf_books: shelf_books {
+  shape: sql_table
+  shelf_id: INTEGER \{FK\}
+  book_id: INTEGER \{FK\}
+  added_at: TEXT
+}
+
+# Relationships
+shelf_books.shelf_id -> shelves.id: CASCADE DELETE
+shelf_books.book_id -> books.id: CASCADE DELETE
+books.duplicate_of -> books.id: self-ref duplicate
+
+# Notes
+status_values: {
+  shape: text
+  style.font-size: 13
+  style.italic: true
+  label: |||md
+    **status** — pending | processing | done | partial | error | duplicate
+
+    **reading_status** — to-read | reading | read | abandoned
+
+    **difficulty** — Beginner | Intermediate | Advanced | Expert
+  |||
+}

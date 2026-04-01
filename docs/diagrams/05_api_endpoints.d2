@@ -1,0 +1,133 @@
+###############################################################################
+# LibrarianAI — API Endpoint Map
+# All REST endpoints grouped by domain.
+###############################################################################
+
+title: LibrarianAI — API Endpoint Map {
+  near: top-center
+  shape: text
+  style.font-size: 22
+  style.bold: true
+}
+
+direction: right
+
+client: Client {
+  shape: rectangle
+  style.fill: "#f3f4f6"
+  label: "React SPA\nor curl"
+}
+
+api: FastAPI {
+  shape: rectangle
+  style.fill: "#dcfce7"
+
+  health: Health & Scan {
+    shape: rectangle
+    style.fill: "#dbeafe"
+    label: |md
+      GET  /api/health
+      POST /api/scan
+    |
+  }
+
+  books: Book CRUD {
+    shape: rectangle
+    style.fill: "#dbeafe"
+    label: |md
+      GET    /api/books
+      GET    /api/books/{id}
+      PATCH  /api/books/{id}
+      DELETE /api/books/{id}
+      POST   /api/books/{id}/rename
+      POST   /api/books/{id}/fix
+      POST   /api/books/{id}/unfix
+      PATCH  /api/books/{id}/reading-status
+      POST   /api/books/{id}/open
+    |
+  }
+
+  processing: Processing {
+    shape: rectangle
+    style.fill: "#dbeafe"
+    label: |md
+      POST /api/books/{id}/reprocess
+      POST /api/reprocess-batch
+      POST /api/delete-batch
+      POST /api/books/{id}/extract-test
+      POST /api/books/{id}/ollama-test
+    |
+  }
+
+  lookup: Online Lookup {
+    shape: rectangle
+    style.fill: "#dbeafe"
+    label: |md
+      POST /api/books/{id}/online-lookup
+      POST /api/books/{id}/online-lookup/apply
+    |
+  }
+
+  covers: Covers {
+    shape: rectangle
+    style.fill: "#dbeafe"
+    label: |md
+      GET  /api/books/{id}/cover
+      POST /api/books/{id}/cover/refresh
+    |
+  }
+
+  dedup: Duplicates {
+    shape: rectangle
+    style.fill: "#dbeafe"
+    label: |md
+      GET  /api/duplicates
+      POST /api/duplicates/dismiss
+    |
+  }
+
+  shelves: Shelves {
+    shape: rectangle
+    style.fill: "#dbeafe"
+    label: |md
+      GET    /api/shelves
+      POST   /api/shelves
+      DELETE /api/shelves/{id}
+      GET    /api/shelves/{id}/books
+      POST   /api/shelves/{id}/books
+      DELETE /api/shelves/{id}/books/{book_id}
+    |
+  }
+
+  export: Export {
+    shape: rectangle
+    style.fill: "#dbeafe"
+    label: |md
+      GET /api/export/csv
+      GET /api/export/json
+    |
+  }
+
+  analytics: Analytics & Taxonomy {
+    shape: rectangle
+    style.fill: "#dbeafe"
+    label: |md
+      GET /api/analytics
+      GET /api/stats
+      GET /api/fixed-taxonomy
+      GET /api/categories
+      GET /api/taxonomy
+      GET /api/text-previews
+    |
+  }
+}
+
+client -> api.health
+client -> api.books
+client -> api.processing
+client -> api.lookup
+client -> api.covers
+client -> api.dedup
+client -> api.shelves
+client -> api.export
+client -> api.analytics

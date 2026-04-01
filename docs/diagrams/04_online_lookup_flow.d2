@@ -1,0 +1,111 @@
+###############################################################################
+# LibrarianAI — Online Lookup Flow
+# How the multi-source metadata enrichment works.
+###############################################################################
+
+title: LibrarianAI — Online Lookup Flow {
+  near: top-center
+  shape: text
+  style.font-size: 22
+  style.bold: true
+}
+
+direction: down
+
+trigger: "POST /api/books/:id/online-lookup" {
+  shape: rectangle
+  style.fill: "#dbeafe"
+}
+
+parse_fn: Parse filename heuristics {
+  shape: rectangle
+  style.fill: "#f3f4f6"
+  label: "_parse_filename()\nextract clean title + author\nfrom filename conventions"
+}
+
+fan_out: Fan out to 5 sources {
+  shape: rectangle
+  style.fill: "#fef9c3"
+  label: "parallel HTTP requests"
+}
+
+ol: Open Library {
+  shape: rectangle
+  style.fill: "#ede9fe"
+  label: "openlibrary.org\n/search.json"
+}
+
+gb: Google Books {
+  shape: rectangle
+  style.fill: "#ede9fe"
+  label: "googleapis.com\n/books/v1/volumes"
+}
+
+cr: CrossRef {
+  shape: rectangle
+  style.fill: "#ede9fe"
+  label: "api.crossref.org\n/works"
+}
+
+ia: Internet Archive {
+  shape: rectangle
+  style.fill: "#ede9fe"
+  label: "archive.org\n/advancedsearch"
+}
+
+oax: OpenAlex {
+  shape: rectangle
+  style.fill: "#ede9fe"
+  label: "api.openalex.org\n/works"
+}
+
+collect: _collect_candidates() {
+  shape: rectangle
+  style.fill: "#dcfce7"
+  label: "Deduplicate by norm(title+author)\nMerge: keep longest field values\nUnion subjects across sources\nScore: title match + source count\nReturn top 8 candidates"
+}
+
+response: Return candidates to UI {
+  shape: rectangle
+  style.fill: "#dbeafe"
+  label: "[\{ title, author, year, language,\n  description, subjects, sources \}, ...]"
+}
+
+user_pick: User selects a candidate {
+  shape: person
+}
+
+apply: "POST /api/books/:id/online-lookup/apply" {
+  shape: rectangle
+  style.fill: "#dbeafe"
+}
+
+map_tax: _map_to_fixed_category(subjects) {
+  shape: rectangle
+  style.fill: "#fce7f3"
+  label: "keyword scoring against\nFIXED_TAXONOMY\n-> (category, subcategory)"
+}
+
+save: UPDATE books — confidence_score=1.0\nstatus='done' {
+  shape: rectangle
+  style.fill: "#dcfce7"
+}
+
+# Flow
+trigger -> parse_fn
+parse_fn -> fan_out
+fan_out -> ol
+fan_out -> gb
+fan_out -> cr
+fan_out -> ia
+fan_out -> oax
+ol -> collect
+gb -> collect
+cr -> collect
+ia -> collect
+oax -> collect
+collect -> response
+response -> user_pick
+user_pick -> apply
+apply -> map_tax
+map_tax -> save
