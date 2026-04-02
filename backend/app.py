@@ -710,22 +710,33 @@ def _search_openalex(title: str, author: str = "") -> list:
         return []
 
 
-def _collect_candidates(title: str, author: str) -> list:
-    """Gather results from all sources, deduplicate, return ranked list."""
+def _collect_candidates(title: str, author: str, year: str = "", alt_title: str = "", alt_author: str = "") -> list:
+    """Gather results from all sources, deduplicate, return ranked list.
+
+    alt_title / alt_author are secondary queries (e.g. from the filename when
+    the primary query comes from DB metadata). Results from both queries are
+    merged before deduplication so we get the best coverage.
+    """
+    queries = [(title, author)]
+    # Add secondary query only when it differs meaningfully from the primary
+    if alt_title and _norm(alt_title) != _norm(title):
+        queries.append((alt_title, alt_author or author))
+
     all_results = []
-    for fn, src in [
-        (_search_open_library,    "OL"),
-        (_search_google_books,    "GB"),
-        (_search_crossref,        "CR"),
-        (_search_internet_archive,"IA"),
-        (_search_openalex,        "OAX"),
-    ]:
-        try:
-            for item in fn(title, author):
-                if item.get("title"):
-                    all_results.append(item)
-        except Exception:
-            pass
+    for q_title, q_author in queries:
+        for fn in [
+            _search_open_library,
+            _search_google_books,
+            _search_crossref,
+            _search_internet_archive,
+            _search_openalex,
+        ]:
+            try:
+                for item in fn(q_title, q_author):
+                    if item.get("title"):
+                        all_results.append(item)
+            except Exception:
+                pass
 
     # Deduplicate: merge items with same normalised title+author
     merged: dict = {}
@@ -751,18 +762,28 @@ def _collect_candidates(title: str, author: str) -> list:
 
     candidates = list(merged.values())
 
-    # Score: boost candidates whose title matches the search title closely
+    # Score: title match + year match + source count + has description
     search_norm = _norm(title)
+    alt_norm    = _norm(alt_title)
+    year_str    = str(year or "").strip()
     for c in candidates:
-        c_norm = _norm(c.get("title", ""))
+        c_norm  = _norm(c.get("title", ""))
+        c_year  = str(c.get("year", "") or "").strip()[:4]
+        title_score = (
+            3 if c_norm == search_norm else
+            2 if alt_norm and c_norm == alt_norm else
+            1 if (search_norm and search_norm in c_norm) or (alt_norm and alt_norm in c_norm) else
+            0
+        )
+        year_score = 2 if (year_str and c_year and c_year == year_str[:4]) else 0
         c["_score"] = (
-            (3 if c_norm == search_norm else 1 if search_norm in c_norm else 0)
+            title_score
+            + year_score
             + len(c.get("sources", []))
             + (1 if c.get("description") else 0)
         )
 
     candidates.sort(key=lambda x: -x.get("_score", 0))
-    # Remove internal score field
     for c in candidates:
         c.pop("_score", None)
 
@@ -1468,23 +1489,37 @@ def online_lookup(book_id: int):
 
     book = dict(row)
 
-    # Filename is the primary source — parse it for clean title + author
+    # Parse filename for title + author heuristics
     fn_title, fn_author = _parse_filename(book.get("filepath", ""))
 
-    # Use filename-derived values as primary; fall back to DB values only if filename gave nothing
-    title  = fn_title  or (book.get("title")  or "").strip()
-    author = fn_author or (book.get("author") or "").strip()
+    db_title  = (book.get("title")  or "").strip()
+    db_author = (book.get("author") or "").strip()
+    db_year   = str(book.get("year") or "").strip()
 
-    print(f"[online_lookup] id={book_id} title={title!r} author={author!r}")
+    # Primary query: prefer DB metadata (set by LLM/previous lookup) over filename heuristics.
+    # Secondary query: filename-derived values when they differ (handled inside _collect_candidates).
+    title  = db_title  or fn_title
+    author = db_author or fn_author
 
-    candidates = _collect_candidates(title, author)
+    # alt_ values are the filename-parsed counterparts used as a secondary search pass
+    alt_title  = fn_title  if fn_title  and _norm(fn_title)  != _norm(title)  else ""
+    alt_author = fn_author if fn_author and _norm(fn_author) != _norm(author) else ""
+
+    print(f"[online_lookup] id={book_id} title={title!r} author={author!r} year={db_year!r} alt_title={alt_title!r}")
+
+    candidates = _collect_candidates(title, author, year=db_year, alt_title=alt_title, alt_author=alt_author)
 
     print(f"[online_lookup] id={book_id} found {len(candidates)} candidates")
 
     if not candidates:
         raise HTTPException(status_code=404, detail="No results found online for this book")
 
-    return {"candidates": candidates, "query_title": title, "query_author": author}
+    return {
+        "candidates": candidates,
+        "query_title": title,
+        "query_author": author,
+        "query_year": db_year,
+    }
 
 
 class CandidateApply(BaseModel):
