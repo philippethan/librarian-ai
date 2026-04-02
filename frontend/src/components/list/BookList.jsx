@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { getCover, listBooks, scanBooks } from '../../api/books';
 import { getStats } from '../../api/stats';
 import DetailPanel from '../detail/DetailPanel';
@@ -24,6 +25,91 @@ function StatusBadge({ status }) {
   return <span className={`badge badge--${status}`}>{status}</span>;
 }
 
+// ── Excel-style column filter popup ──────────────────────────────────────────
+
+function ColFilter({ filter, onFilterChange, type, options = [] }) {
+  const [open, setOpen] = useState(false);
+  const [pos, setPos] = useState({ top: 0, left: 0 });
+  const btnRef = useRef(null);
+  const popupRef = useRef(null);
+  const active = Boolean(filter);
+
+  function handleToggle(e) {
+    e.stopPropagation();
+    if (!open && btnRef.current) {
+      const r = btnRef.current.getBoundingClientRect();
+      setPos({ top: r.bottom + 4, left: r.left });
+    }
+    setOpen(o => !o);
+  }
+
+  useEffect(() => {
+    if (!open) return;
+    function onDown(e) {
+      if (popupRef.current?.contains(e.target)) return;
+      if (btnRef.current?.contains(e.target)) return;
+      setOpen(false);
+    }
+    document.addEventListener('mousedown', onDown);
+    return () => document.removeEventListener('mousedown', onDown);
+  }, [open]);
+
+  return (
+    <>
+      <button
+        ref={btnRef}
+        className={`col-filter__btn${active ? ' col-filter__btn--active' : ''}`}
+        onClick={handleToggle}
+        title={active ? `Filter active: ${filter}` : 'Filter'}
+      >▼</button>
+      {open && createPortal(
+        <div
+          ref={popupRef}
+          className="col-filter__popup"
+          style={{ position: 'fixed', top: pos.top, left: pos.left }}
+          onClick={e => e.stopPropagation()}
+        >
+          {type === 'text' ? (
+            <>
+              <input
+                className="col-filter__input"
+                placeholder="Filter…"
+                value={filter}
+                onChange={e => onFilterChange(e.target.value)}
+                autoFocus
+              />
+              {active && (
+                <button className="col-filter__clear" onClick={() => { onFilterChange(''); setOpen(false); }}>
+                  Clear filter
+                </button>
+              )}
+            </>
+          ) : (
+            <ul className="col-filter__list">
+              <li
+                className={`col-filter__option${!active ? ' col-filter__option--selected' : ''}`}
+                onClick={() => { onFilterChange(''); setOpen(false); }}
+              >
+                (All)
+              </li>
+              {options.map(opt => (
+                <li
+                  key={opt.value}
+                  className={`col-filter__option${filter === opt.value ? ' col-filter__option--selected' : ''}`}
+                  onClick={() => { onFilterChange(active && filter === opt.value ? '' : opt.value); setOpen(false); }}
+                >
+                  {opt.label}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>,
+        document.body
+      )}
+    </>
+  );
+}
+
 const EMPTY_FILTERS = {
   search: '',
   status: '',
@@ -47,7 +133,9 @@ export default function BookList() {
   const [books, setBooks] = useState([]);
   const [stats, setStats] = useState(null);
   const [filters, setFilters] = useState(EMPTY_FILTERS);
-  const [colFilters, setColFilters] = useState({ title: '', author: '' });
+  const [colFilters, setColFilters] = useState({
+    title: '', author: '', confidence: '', status: '', extraction_method: '', reading_status: '',
+  });
   const [sort, setSort] = useState({ col: null, dir: 'asc' });
   const [viewMode, setViewMode] = useState('table');
   const [selectedBook, setSelectedBook] = useState(null);
@@ -61,7 +149,6 @@ export default function BookList() {
   const displayedBooks = useMemo(() => {
     let list = books;
 
-    // Column-level text filters (client-side)
     if (colFilters.title.trim()) {
       const q = colFilters.title.trim().toLowerCase();
       list = list.filter(b => (b.title ?? b.filename ?? '').toLowerCase().includes(q));
@@ -70,8 +157,22 @@ export default function BookList() {
       const q = colFilters.author.trim().toLowerCase();
       list = list.filter(b => (b.author ?? '').toLowerCase().includes(q));
     }
+    if (colFilters.confidence) {
+      list = list.filter(b => {
+        const s = b.confidence_score ?? 0;
+        if (colFilters.confidence === 'high') return s >= 0.7;
+        if (colFilters.confidence === 'mid')  return s >= 0.4 && s < 0.7;
+        if (colFilters.confidence === 'low')  return s < 0.4;
+        return true;
+      });
+    }
+    if (colFilters.status)
+      list = list.filter(b => b.status === colFilters.status);
+    if (colFilters.extraction_method)
+      list = list.filter(b => b.extraction_method === colFilters.extraction_method);
+    if (colFilters.reading_status)
+      list = list.filter(b => (b.reading_status ?? '') === colFilters.reading_status);
 
-    // Sort
     if (sort.col) {
       list = [...list].sort((a, b) => {
         const av = a[sort.col] ?? '';
@@ -84,6 +185,21 @@ export default function BookList() {
     }
     return list;
   }, [books, colFilters, sort]);
+
+  const colOptions = useMemo(() => {
+    const uniq = (field) => [...new Set(books.map(b => b[field]).filter(Boolean))].sort();
+    const label = v => v.charAt(0).toUpperCase() + v.slice(1).replace(/_/g, ' ');
+    return {
+      status:            uniq('status').map(v => ({ value: v, label: label(v) })),
+      extraction_method: uniq('extraction_method').map(v => ({ value: v, label: v })),
+      reading_status:    uniq('reading_status').map(v => ({ value: v, label: label(v) })),
+      confidence: [
+        { value: 'high', label: 'High  ≥ 70%' },
+        { value: 'mid',  label: 'Mid   40–70%' },
+        { value: 'low',  label: 'Low  < 40%'  },
+      ],
+    };
+  }, [books]);
 
   function handleSort(col) {
     setSort(prev => {
@@ -190,46 +306,42 @@ export default function BookList() {
               <tr>
                 <th className="book-table__th book-table__th--cover"></th>
                 <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('title')}>
-                  Title <SortIcon col="title" sortState={sort} />
+                  <span className="book-table__th-inner">
+                    Title <SortIcon col="title" sortState={sort} />
+                    <ColFilter filter={colFilters.title} onFilterChange={v => setColFilters(f => ({ ...f, title: v }))} type="text" />
+                  </span>
                 </th>
                 <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('author')}>
-                  Author <SortIcon col="author" sortState={sort} />
+                  <span className="book-table__th-inner">
+                    Author <SortIcon col="author" sortState={sort} />
+                    <ColFilter filter={colFilters.author} onFilterChange={v => setColFilters(f => ({ ...f, author: v }))} type="text" />
+                  </span>
                 </th>
                 <th className="book-table__th book-table__th--conf book-table__th--sortable" onClick={() => handleSort('confidence_score')}>
-                  Confidence <SortIcon col="confidence_score" sortState={sort} />
+                  <span className="book-table__th-inner">
+                    Confidence <SortIcon col="confidence_score" sortState={sort} />
+                    <ColFilter filter={colFilters.confidence} onFilterChange={v => setColFilters(f => ({ ...f, confidence: v }))} type="select" options={colOptions.confidence} />
+                  </span>
                 </th>
                 <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('status')}>
-                  Status <SortIcon col="status" sortState={sort} />
+                  <span className="book-table__th-inner">
+                    Status <SortIcon col="status" sortState={sort} />
+                    <ColFilter filter={colFilters.status} onFilterChange={v => setColFilters(f => ({ ...f, status: v }))} type="select" options={colOptions.status} />
+                  </span>
                 </th>
                 <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('extraction_method')}>
-                  Method <SortIcon col="extraction_method" sortState={sort} />
+                  <span className="book-table__th-inner">
+                    Method <SortIcon col="extraction_method" sortState={sort} />
+                    <ColFilter filter={colFilters.extraction_method} onFilterChange={v => setColFilters(f => ({ ...f, extraction_method: v }))} type="select" options={colOptions.extraction_method} />
+                  </span>
                 </th>
                 <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('reading_status')}>
-                  Reading <SortIcon col="reading_status" sortState={sort} />
+                  <span className="book-table__th-inner">
+                    Reading <SortIcon col="reading_status" sortState={sort} />
+                    <ColFilter filter={colFilters.reading_status} onFilterChange={v => setColFilters(f => ({ ...f, reading_status: v }))} type="select" options={colOptions.reading_status} />
+                  </span>
                 </th>
                 <th className="book-table__th"></th>
-              </tr>
-              <tr className="book-table__filter-row">
-                <td></td>
-                <td>
-                  <input
-                    className="book-table__col-filter"
-                    placeholder="Filter title…"
-                    value={colFilters.title}
-                    onChange={e => setColFilters(f => ({ ...f, title: e.target.value }))}
-                    onClick={e => e.stopPropagation()}
-                  />
-                </td>
-                <td>
-                  <input
-                    className="book-table__col-filter"
-                    placeholder="Filter author…"
-                    value={colFilters.author}
-                    onChange={e => setColFilters(f => ({ ...f, author: e.target.value }))}
-                    onClick={e => e.stopPropagation()}
-                  />
-                </td>
-                <td colSpan={5}></td>
               </tr>
             </thead>
             <tbody>
