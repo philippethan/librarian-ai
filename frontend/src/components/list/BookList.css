@@ -135,6 +135,55 @@
 .book-table__th--cover { width: 52px; }
 .book-table__th--conf  { width: 100px; }
 
+.book-table__th--sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.book-table__th--sortable:hover {
+  color: var(--text-primary);
+}
+
+.sort-icon {
+  margin-left: 0.25rem;
+  font-size: 0.6875rem;
+}
+
+.sort-icon--idle {
+  opacity: 0.35;
+}
+
+.sort-icon--active {
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* ── Column filter row ── */
+.book-table__filter-row td {
+  padding: 0.25rem 0.375rem;
+  background: var(--bg-surface);
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 33px; /* sits below header row */
+  z-index: 1;
+}
+
+.book-table__col-filter {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  outline: none;
+}
+
+.book-table__col-filter:focus {
+  border-color: var(--accent);
+}
+
 .book-table__row {
   cursor: pointer;
   border-bottom: 1px solid var(--border);

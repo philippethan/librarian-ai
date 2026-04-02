@@ -11,6 +11,9 @@ export const unfixBook = (id) => client.post(`/api/books/${id}/unfix`);
 export const enrichBook = (id) => client.post(`/api/books/${id}/enrich`);
 export const renameBook = (id, dryRun = false) =>
   client.post(`/api/books/${id}/rename`, null, { params: { dry_run: dryRun } });
+export const renameBookAs = (id, filename) =>
+  client.post(`/api/books/${id}/rename`, { new_filename: filename });
+export const renameSuggest = (id) => client.get(`/api/books/${id}/rename-suggest`);
 export const patchReadingStatus = (id, status) =>
   client.patch(`/api/books/${id}/reading-status`, { reading_status: status });
 export const getCover = (id) => {

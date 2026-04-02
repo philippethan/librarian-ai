@@ -192,6 +192,23 @@
 
 .dp-rename-preview__msg {
   margin: 0 0 0.5rem;
+  font-weight: 500;
+}
+
+.dp-rename-preview__input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.375rem;
+}
+
+.dp-rename-preview__hint {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.dp-rename-preview__hint span {
+  font-family: monospace;
 }
 
 .dp-rename-preview__actions {

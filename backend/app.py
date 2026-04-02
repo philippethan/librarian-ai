@@ -1270,29 +1270,89 @@ class RenameRequest(BaseModel):
     new_filename: str
 
 
+def _build_auto_filename(title: Optional[str], author: Optional[str], year: Optional[str], ext: str) -> str:
+    """Build a clean filename from metadata: 'Author - Title (Year).ext'."""
+    _invalid = '/\\:*?"<>|'
+
+    def clean(s: Optional[str]) -> str:
+        if not s:
+            return ""
+        s = str(s).strip()
+        for c in _invalid:
+            s = s.replace(c, "_")
+        return s.strip()
+
+    t = clean(title) or "Untitled"
+    a = clean(author)
+    y = clean(year)
+
+    if a and y:
+        name = f"{a} - {t} ({y})"
+    elif a:
+        name = f"{a} - {t}"
+    elif y:
+        name = f"{t} ({y})"
+    else:
+        name = t
+
+    return name + ext
+
+
+@app.get("/api/books/{book_id}/rename-suggest")
+def rename_suggest(book_id: int):
+    """Return the auto-generated filename (title+author+year) without renaming."""
+    with get_db() as conn:
+        row = conn.execute("SELECT filepath, title, author, year FROM books WHERE id=?", (book_id,)).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Book not found")
+    ext = Path(row["filepath"]).suffix.lower()
+    suggested = _build_auto_filename(row["title"], row["author"], row["year"], ext)
+    return {"suggested_filename": suggested}
+
+
 @app.post("/api/books/{book_id}/rename")
-def rename_book_file(book_id: int, req: RenameRequest):
-    new_name = req.new_filename.strip()
+def rename_book_file(book_id: int, dry_run: bool = Query(False), req: Optional[RenameRequest] = None):
+    with get_db() as conn:
+        row = conn.execute(
+            "SELECT filepath, filename, title, author, year FROM books WHERE id=?", (book_id,)
+        ).fetchone()
+    if not row:
+        raise HTTPException(status_code=404, detail="Book not found")
+
+    old_path = Path(row["filepath"])
+    old_ext = old_path.suffix.lower()
+
+    # Determine new name: explicit request or auto-generated from metadata
+    if req and req.new_filename.strip():
+        new_name = req.new_filename.strip()
+        if not new_name.lower().endswith(old_ext):
+            new_name = new_name + old_ext
+    else:
+        new_name = _build_auto_filename(row["title"], row["author"], row["year"], old_ext)
 
     # Reject path traversal or empty names
     if not new_name or any(c in new_name for c in r'/\:*?"<>|'):
         raise HTTPException(status_code=400, detail="Invalid filename")
 
-    with get_db() as conn:
-        row = conn.execute("SELECT filepath, filename FROM books WHERE id=?", (book_id,)).fetchone()
-    if not row:
-        raise HTTPException(status_code=404, detail="Book not found")
+    # Skip if the name is unchanged
+    if new_name == old_path.name:
+        return {"skipped": True, "reason": "filename unchanged", "new_filename": new_name}
 
-    old_path = Path(row["filepath"])
+    new_path = old_path.parent / new_name
+
+    # Dry-run: return preview without touching disk
+    if dry_run:
+        conflict = new_path.exists() and new_path != old_path
+        return {
+            "skipped": conflict,
+            "reason": f"'{new_name}' already exists" if conflict else None,
+            "new_filename": new_name,
+            "old_filename": old_path.name,
+        }
+
     if not old_path.exists():
         raise HTTPException(status_code=404, detail="File not found on disk")
 
-    # Keep original extension if user omitted it
-    old_ext = old_path.suffix.lower()
-    if not new_name.lower().endswith(old_ext):
-        new_name = new_name + old_ext
-
-    new_path = old_path.parent / new_name
     if new_path.exists() and new_path != old_path:
         raise HTTPException(status_code=409, detail=f"A file named '{new_name}' already exists in that folder")
 

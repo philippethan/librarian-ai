@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import {
-  patchBook, fixBook, enrichBook, renameBook, openBook, refreshCover, getCover,
-  patchReadingStatus, getBook,
+  patchBook, fixBook, enrichBook, renameBook, renameBookAs, renameSuggest,
+  openBook, refreshCover, getCover, patchReadingStatus, getBook,
 } from '../../api/books';
 import { listShelves, addBookToShelf, removeBookFromShelf } from '../../api/shelves';
 import CategoryComboBox from '../shared/CategoryComboBox';
@@ -126,6 +126,7 @@ function EditTab({ book, onBookUpdated, addToast }) {
   const [saving, setSaving] = useState(false);
   const [enriching, setEnriching] = useState(false);
   const [renamePreview, setRenamePreview] = useState(null);
+  const [renameInput, setRenameInput] = useState('');
   const [coverKey, setCoverKey] = useState(0);
   const [currentBook, setCurrentBook] = useState(book);
   const originalRef = useRef({ title: book.title ?? '', author: book.author ?? '' });
@@ -202,6 +203,7 @@ function EditTab({ book, onBookUpdated, addToast }) {
         setSaving(false);
         return;
       }
+      setRenameInput(preview.data.new_filename ?? '');
       setRenamePreview(preview.data);
     } catch (err) {
       addToast(err?.response?.data?.detail ?? 'Save failed', 'error');
@@ -211,7 +213,7 @@ function EditTab({ book, onBookUpdated, addToast }) {
 
   async function confirmRename() {
     try {
-      await renameBook(book.id, false);
+      await renameBookAs(book.id, renameInput);
       setRenamePreview(null);
       reloadBook();
       addToast('File renamed', 'success');
@@ -234,6 +236,19 @@ function EditTab({ book, onBookUpdated, addToast }) {
       addToast(err?.response?.data?.detail ?? 'Enrichment failed', 'error');
     } finally {
       setEnriching(false);
+    }
+  }
+
+  // ── Suggest Rename ────────────────────────────────────────────────────────
+
+  async function handleSuggestRename() {
+    try {
+      const res = await renameSuggest(book.id);
+      const suggested = res.data.suggested_filename ?? '';
+      setRenameInput(suggested);
+      setRenamePreview({ new_filename: suggested, old_filename: book.filename });
+    } catch (err) {
+      addToast(err?.response?.data?.detail ?? 'Could not generate suggestion', 'error');
     }
   }
 
@@ -385,14 +400,22 @@ function EditTab({ book, onBookUpdated, addToast }) {
       {/* Rename confirmation dialog */}
       {renamePreview && (
         <div className="dp-rename-preview">
-          <p className="dp-rename-preview__msg">
-            Rename to <strong>{renamePreview.new_filename}</strong>?
+          <p className="dp-rename-preview__msg">Rename file to:</p>
+          <input
+            className="form-input dp-rename-preview__input"
+            value={renameInput}
+            onChange={e => setRenameInput(e.target.value)}
+            autoFocus
+            onKeyDown={e => { if (e.key === 'Enter') confirmRename(); }}
+          />
+          <p className="dp-rename-preview__hint">
+            Was: <span>{renamePreview.old_filename}</span>
           </p>
           <div className="dp-rename-preview__actions">
             <button className="btn btn--sm btn--secondary" onClick={() => { setRenamePreview(null); setSaving(false); }}>
               Cancel
             </button>
-            <button className="btn btn--sm btn--primary" onClick={confirmRename}>
+            <button className="btn btn--sm btn--primary" onClick={confirmRename} disabled={!renameInput.trim()}>
               Confirm Rename
             </button>
           </div>
@@ -406,6 +429,9 @@ function EditTab({ book, onBookUpdated, addToast }) {
         </button>
         <button className="btn btn--secondary" onClick={handleSaveRename} disabled={saving}>
           Save & Rename File
+        </button>
+        <button className="btn btn--secondary" onClick={handleSuggestRename} disabled={saving}>
+          Suggest Rename
         </button>
         <button className="btn btn--secondary" onClick={handleEnrich} disabled={enriching}>
           {enriching ? 'Enriching…' : 'Enrich with Open Library'}

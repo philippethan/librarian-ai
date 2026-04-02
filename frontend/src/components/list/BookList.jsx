@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { getCover, listBooks, scanBooks } from '../../api/books';
 import { getStats } from '../../api/stats';
 import DetailPanel from '../detail/DetailPanel';
@@ -32,10 +32,23 @@ const EMPTY_FILTERS = {
   shelf_id: '',
 };
 
+function nextDir(current, col, sortState) {
+  if (sortState.col !== col) return 'asc';
+  if (sortState.dir === 'asc') return 'desc';
+  return null; // null = clear sort
+}
+
+function SortIcon({ col, sortState }) {
+  if (sortState.col !== col) return <span className="sort-icon sort-icon--idle">↕</span>;
+  return <span className="sort-icon sort-icon--active">{sortState.dir === 'asc' ? '↑' : '↓'}</span>;
+}
+
 export default function BookList() {
   const [books, setBooks] = useState([]);
   const [stats, setStats] = useState(null);
   const [filters, setFilters] = useState(EMPTY_FILTERS);
+  const [colFilters, setColFilters] = useState({ title: '', author: '' });
+  const [sort, setSort] = useState({ col: null, dir: 'asc' });
   const [viewMode, setViewMode] = useState('table');
   const [selectedBook, setSelectedBook] = useState(null);
   const [scanOpen, setScanOpen] = useState(false);
@@ -44,6 +57,40 @@ export default function BookList() {
   const [loading, setLoading] = useState(true);
   const [scanError, setScanError] = useState('');
   const [scanResult, setScanResult] = useState(null);
+
+  const displayedBooks = useMemo(() => {
+    let list = books;
+
+    // Column-level text filters (client-side)
+    if (colFilters.title.trim()) {
+      const q = colFilters.title.trim().toLowerCase();
+      list = list.filter(b => (b.title ?? b.filename ?? '').toLowerCase().includes(q));
+    }
+    if (colFilters.author.trim()) {
+      const q = colFilters.author.trim().toLowerCase();
+      list = list.filter(b => (b.author ?? '').toLowerCase().includes(q));
+    }
+
+    // Sort
+    if (sort.col) {
+      list = [...list].sort((a, b) => {
+        const av = a[sort.col] ?? '';
+        const bv = b[sort.col] ?? '';
+        const cmp = typeof av === 'number' && typeof bv === 'number'
+          ? av - bv
+          : String(av).localeCompare(String(bv));
+        return sort.dir === 'asc' ? cmp : -cmp;
+      });
+    }
+    return list;
+  }, [books, colFilters, sort]);
+
+  function handleSort(col) {
+    setSort(prev => {
+      const dir = nextDir(null, col, prev);
+      return dir ? { col, dir } : { col: null, dir: 'asc' };
+    });
+  }
 
   const fetchBooks = useCallback(() => {
     const params = {};
@@ -142,17 +189,51 @@ export default function BookList() {
             <thead>
               <tr>
                 <th className="book-table__th book-table__th--cover"></th>
-                <th className="book-table__th">Title</th>
-                <th className="book-table__th">Author</th>
-                <th className="book-table__th book-table__th--conf">Confidence</th>
-                <th className="book-table__th">Status</th>
-                <th className="book-table__th">Method</th>
-                <th className="book-table__th">Reading</th>
+                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('title')}>
+                  Title <SortIcon col="title" sortState={sort} />
+                </th>
+                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('author')}>
+                  Author <SortIcon col="author" sortState={sort} />
+                </th>
+                <th className="book-table__th book-table__th--conf book-table__th--sortable" onClick={() => handleSort('confidence_score')}>
+                  Confidence <SortIcon col="confidence_score" sortState={sort} />
+                </th>
+                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('status')}>
+                  Status <SortIcon col="status" sortState={sort} />
+                </th>
+                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('extraction_method')}>
+                  Method <SortIcon col="extraction_method" sortState={sort} />
+                </th>
+                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('reading_status')}>
+                  Reading <SortIcon col="reading_status" sortState={sort} />
+                </th>
                 <th className="book-table__th"></th>
+              </tr>
+              <tr className="book-table__filter-row">
+                <td></td>
+                <td>
+                  <input
+                    className="book-table__col-filter"
+                    placeholder="Filter title…"
+                    value={colFilters.title}
+                    onChange={e => setColFilters(f => ({ ...f, title: e.target.value }))}
+                    onClick={e => e.stopPropagation()}
+                  />
+                </td>
+                <td>
+                  <input
+                    className="book-table__col-filter"
+                    placeholder="Filter author…"
+                    value={colFilters.author}
+                    onChange={e => setColFilters(f => ({ ...f, author: e.target.value }))}
+                    onClick={e => e.stopPropagation()}
+                  />
+                </td>
+                <td colSpan={5}></td>
               </tr>
             </thead>
             <tbody>
-              {books.map(book => (
+              {displayedBooks.map(book => (
                 <tr
                   key={book.id}
                   className="book-table__row"
@@ -199,7 +280,7 @@ export default function BookList() {
                   </td>
                 </tr>
               ))}
-              {books.length === 0 && (
+              {displayedBooks.length === 0 && (
                 <tr>
                   <td colSpan={8} className="book-table__empty">No books found.</td>
                 </tr>
