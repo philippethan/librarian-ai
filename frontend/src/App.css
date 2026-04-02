@@ -13,7 +13,10 @@
 
 .app-main {
   flex: 1;
-  overflow-y: auto;
+  min-width: 0;
+  min-height: 0;
   background: var(--bg-primary);
   color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
 }

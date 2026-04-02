@@ -118,6 +118,16 @@ const EMPTY_FILTERS = {
   shelf_id: '',
 };
 
+const TABLE_COLS = [
+  { key: 'title',             label: 'Title' },
+  { key: 'author',            label: 'Author' },
+  { key: 'confidence',        label: 'Confidence' },
+  { key: 'status',            label: 'Status' },
+  { key: 'extraction_method', label: 'Method' },
+  { key: 'reading_status',    label: 'Reading' },
+  { key: 'dupe',              label: 'Dupe flag' },
+];
+
 function nextDir(current, col, sortState) {
   if (sortState.col !== col) return 'asc';
   if (sortState.dir === 'asc') return 'desc';
@@ -150,6 +160,19 @@ export default function BookList() {
   const [cleanPreview, setCleanPreview] = useState(null);  // {changes, total}
   const [cleanResult, setCleanResult] = useState(null);    // {renamed, errors}
   const [cleanError, setCleanError] = useState('');
+  const [visibleCols, setVisibleCols] = useState(() => new Set(TABLE_COLS.map(c => c.key)));
+
+  function toggleCol(key) {
+    setVisibleCols(prev => {
+      const next = new Set(prev);
+      if (next.has(key)) {
+        if (next.size > 1) next.delete(key);
+      } else {
+        next.add(key);
+      }
+      return next;
+    });
+  }
 
   const displayedBooks = useMemo(() => {
     let list = books;
@@ -338,6 +361,9 @@ export default function BookList() {
         onViewModeChange={setViewMode}
         onScan={() => setScanOpen(true)}
         onClean={handleOpenClean}
+        allCols={TABLE_COLS}
+        visibleCols={visibleCols}
+        onToggleCol={toggleCol}
       />
 
       {loading && <div className="book-list-page__loading">Loading…</div>}
@@ -348,43 +374,55 @@ export default function BookList() {
             <thead>
               <tr>
                 <th className="book-table__th book-table__th--cover"></th>
-                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('title')}>
-                  <span className="book-table__th-inner">
-                    Title <SortIcon col="title" sortState={sort} />
-                    <ColFilter filter={colFilters.title} onFilterChange={v => setColFilters(f => ({ ...f, title: v }))} type="text" />
-                  </span>
-                </th>
-                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('author')}>
-                  <span className="book-table__th-inner">
-                    Author <SortIcon col="author" sortState={sort} />
-                    <ColFilter filter={colFilters.author} onFilterChange={v => setColFilters(f => ({ ...f, author: v }))} type="text" />
-                  </span>
-                </th>
-                <th className="book-table__th book-table__th--conf book-table__th--sortable" onClick={() => handleSort('confidence_score')}>
-                  <span className="book-table__th-inner">
-                    Confidence <SortIcon col="confidence_score" sortState={sort} />
-                    <ColFilter filter={colFilters.confidence} onFilterChange={v => setColFilters(f => ({ ...f, confidence: v }))} type="select" options={colOptions.confidence} />
-                  </span>
-                </th>
-                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('status')}>
-                  <span className="book-table__th-inner">
-                    Status <SortIcon col="status" sortState={sort} />
-                    <ColFilter filter={colFilters.status} onFilterChange={v => setColFilters(f => ({ ...f, status: v }))} type="select" options={colOptions.status} />
-                  </span>
-                </th>
-                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('extraction_method')}>
-                  <span className="book-table__th-inner">
-                    Method <SortIcon col="extraction_method" sortState={sort} />
-                    <ColFilter filter={colFilters.extraction_method} onFilterChange={v => setColFilters(f => ({ ...f, extraction_method: v }))} type="select" options={colOptions.extraction_method} />
-                  </span>
-                </th>
-                <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('reading_status')}>
-                  <span className="book-table__th-inner">
-                    Reading <SortIcon col="reading_status" sortState={sort} />
-                    <ColFilter filter={colFilters.reading_status} onFilterChange={v => setColFilters(f => ({ ...f, reading_status: v }))} type="select" options={colOptions.reading_status} />
-                  </span>
-                </th>
-                <th className="book-table__th"></th>
+                {visibleCols.has('title') && (
+                  <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('title')}>
+                    <span className="book-table__th-inner">
+                      Title <SortIcon col="title" sortState={sort} />
+                      <ColFilter filter={colFilters.title} onFilterChange={v => setColFilters(f => ({ ...f, title: v }))} type="text" />
+                    </span>
+                  </th>
+                )}
+                {visibleCols.has('author') && (
+                  <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('author')}>
+                    <span className="book-table__th-inner">
+                      Author <SortIcon col="author" sortState={sort} />
+                      <ColFilter filter={colFilters.author} onFilterChange={v => setColFilters(f => ({ ...f, author: v }))} type="text" />
+                    </span>
+                  </th>
+                )}
+                {visibleCols.has('confidence') && (
+                  <th className="book-table__th book-table__th--conf book-table__th--sortable" onClick={() => handleSort('confidence_score')}>
+                    <span className="book-table__th-inner">
+                      Confidence <SortIcon col="confidence_score" sortState={sort} />
+                      <ColFilter filter={colFilters.confidence} onFilterChange={v => setColFilters(f => ({ ...f, confidence: v }))} type="select" options={colOptions.confidence} />
+                    </span>
+                  </th>
+                )}
+                {visibleCols.has('status') && (
+                  <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('status')}>
+                    <span className="book-table__th-inner">
+                      Status <SortIcon col="status" sortState={sort} />
+                      <ColFilter filter={colFilters.status} onFilterChange={v => setColFilters(f => ({ ...f, status: v }))} type="select" options={colOptions.status} />
+                    </span>
+                  </th>
+                )}
+                {visibleCols.has('extraction_method') && (
+                  <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('extraction_method')}>
+                    <span className="book-table__th-inner">
+                      Method <SortIcon col="extraction_method" sortState={sort} />
+                      <ColFilter filter={colFilters.extraction_method} onFilterChange={v => setColFilters(f => ({ ...f, extraction_method: v }))} type="select" options={colOptions.extraction_method} />
+                    </span>
+                  </th>
+                )}
+                {visibleCols.has('reading_status') && (
+                  <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('reading_status')}>
+                    <span className="book-table__th-inner">
+                      Reading <SortIcon col="reading_status" sortState={sort} />
+                      <ColFilter filter={colFilters.reading_status} onFilterChange={v => setColFilters(f => ({ ...f, reading_status: v }))} type="select" options={colOptions.reading_status} />
+                    </span>
+                  </th>
+                )}
+                {visibleCols.has('dupe') && <th className="book-table__th"></th>}
               </tr>
             </thead>
             <tbody>
@@ -404,40 +442,54 @@ export default function BookList() {
                       onError={e => { e.currentTarget.style.display = 'none'; }}
                     />
                   </td>
-                  <td className="book-table__cell book-table__cell--title">
-                    {book.title ?? book.filename}
-                  </td>
-                  <td className="book-table__cell book-table__cell--author">
-                    {book.author ?? '—'}
-                  </td>
-                  <td className="book-table__cell book-table__cell--conf">
-                    <ConfidenceBar score={book.confidence_score ?? 0} />
-                  </td>
-                  <td className="book-table__cell">
-                    <StatusBadge status={book.status} />
-                  </td>
-                  <td className="book-table__cell">
-                    {book.extraction_method && (
-                      <span className="chip">{book.extraction_method}</span>
-                    )}
-                  </td>
-                  <td className="book-table__cell">
-                    {book.reading_status && (
-                      <span className={`badge badge--reading-${book.reading_status}`}>
-                        {book.reading_status}
-                      </span>
-                    )}
-                  </td>
-                  <td className="book-table__cell">
-                    {book.duplicate_of && (
-                      <span className="badge badge--dupe">DUPE</span>
-                    )}
-                  </td>
+                  {visibleCols.has('title') && (
+                    <td className="book-table__cell book-table__cell--title">
+                      {book.title ?? book.filename}
+                    </td>
+                  )}
+                  {visibleCols.has('author') && (
+                    <td className="book-table__cell book-table__cell--author">
+                      {book.author ?? '—'}
+                    </td>
+                  )}
+                  {visibleCols.has('confidence') && (
+                    <td className="book-table__cell book-table__cell--conf">
+                      <ConfidenceBar score={book.confidence_score ?? 0} />
+                    </td>
+                  )}
+                  {visibleCols.has('status') && (
+                    <td className="book-table__cell">
+                      <StatusBadge status={book.status} />
+                    </td>
+                  )}
+                  {visibleCols.has('extraction_method') && (
+                    <td className="book-table__cell">
+                      {book.extraction_method && (
+                        <span className="chip">{book.extraction_method}</span>
+                      )}
+                    </td>
+                  )}
+                  {visibleCols.has('reading_status') && (
+                    <td className="book-table__cell">
+                      {book.reading_status && (
+                        <span className={`badge badge--reading-${book.reading_status}`}>
+                          {book.reading_status}
+                        </span>
+                      )}
+                    </td>
+                  )}
+                  {visibleCols.has('dupe') && (
+                    <td className="book-table__cell">
+                      {book.duplicate_of && (
+                        <span className="badge badge--dupe">DUPE</span>
+                      )}
+                    </td>
+                  )}
                 </tr>
               ))}
               {displayedBooks.length === 0 && (
                 <tr>
-                  <td colSpan={8} className="book-table__empty">No books found.</td>
+                  <td colSpan={1 + visibleCols.size} className="book-table__empty">No books found.</td>
                 </tr>
               )}
             </tbody>
@@ -488,17 +540,14 @@ export default function BookList() {
             ) : (
               <>
                 <div className="scan-result">
-                  <p className="scan-result__row">
-                    <strong>{scanResult.hashed}</strong> files found
+                  <p className="scan-result__row scan-result__row--ok">
+                    <strong>{scanResult.added ?? 0}</strong> new book{(scanResult.added ?? 0) !== 1 ? 's' : ''} queued for extraction
                   </p>
-                  {scanResult.duplicates > 0 && (
-                    <p className="scan-result__row scan-result__row--warn">
-                      <strong>{scanResult.duplicates}</strong> duplicate{scanResult.duplicates !== 1 ? 's' : ''} detected — skipped
+                  {(scanResult.skipped ?? 0) > 0 && (
+                    <p className="scan-result__row">
+                      <strong>{scanResult.skipped}</strong> already in library — skipped
                     </p>
                   )}
-                  <p className="scan-result__row scan-result__row--ok">
-                    <strong>{scanResult.queued}</strong> book{scanResult.queued !== 1 ? 's' : ''} queued for extraction
-                  </p>
                 </div>
                 <div className="modal__actions">
                   <button className="btn btn--primary" onClick={closeScan}>

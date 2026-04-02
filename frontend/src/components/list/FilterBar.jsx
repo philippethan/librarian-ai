@@ -1,8 +1,58 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { listShelves } from '../../api/shelves';
 import './FilterBar.css';
 
-export default function FilterBar({ filters, onFiltersChange, viewMode, onViewModeChange, onScan, onClean }) {
+function ColPicker({ allCols, visibleCols, onToggleCol }) {
+  const [open, setOpen] = useState(false);
+  const [pos, setPos] = useState({ top: 0, left: 0 });
+  const btnRef = useRef(null);
+  const popupRef = useRef(null);
+
+  function handleToggle() {
+    if (!open && btnRef.current) {
+      const r = btnRef.current.getBoundingClientRect();
+      setPos({ top: r.bottom + 4, left: r.left });
+    }
+    setOpen(o => !o);
+  }
+
+  useEffect(() => {
+    if (!open) return;
+    function onDown(e) {
+      if (popupRef.current?.contains(e.target)) return;
+      if (btnRef.current?.contains(e.target)) return;
+      setOpen(false);
+    }
+    document.addEventListener('mousedown', onDown);
+    return () => document.removeEventListener('mousedown', onDown);
+  }, [open]);
+
+  return (
+    <>
+      <button ref={btnRef} className="filter-bar__scan-btn" onClick={handleToggle} title="Show/hide columns">
+        Columns ▾
+      </button>
+      {open && createPortal(
+        <div ref={popupRef} className="col-picker__popup" style={{ position: 'fixed', top: pos.top, left: pos.left }}>
+          {allCols.map(c => (
+            <label key={c.key} className="col-picker__row">
+              <input
+                type="checkbox"
+                checked={visibleCols.has(c.key)}
+                onChange={() => onToggleCol(c.key)}
+              />
+              {c.label}
+            </label>
+          ))}
+        </div>,
+        document.body
+      )}
+    </>
+  );
+}
+
+export default function FilterBar({ filters, onFiltersChange, viewMode, onViewModeChange, onScan, onClean, allCols, visibleCols, onToggleCol }) {
   const [shelves, setShelves] = useState([]);
   const debounceRef = useRef(null);
 
@@ -102,6 +152,9 @@ export default function FilterBar({ filters, onFiltersChange, viewMode, onViewMo
         <button className="filter-bar__scan-btn filter-bar__clean-btn" onClick={onClean} title="Remove z-library / 1lib / z-lib watermarks from all filenames">
           Clean Filenames
         </button>
+        {allCols && visibleCols && onToggleCol && (
+          <ColPicker allCols={allCols} visibleCols={visibleCols} onToggleCol={onToggleCol} />
+        )}
       </div>
     </div>
   );

@@ -16,10 +16,7 @@ export const renameBookAs = (id, filename) =>
 export const renameSuggest = (id) => client.get(`/api/books/${id}/rename-suggest`);
 export const patchReadingStatus = (id, status) =>
   client.patch(`/api/books/${id}/reading-status`, { reading_status: status });
-export const getCover = (id) => {
-  const key = client.defaults.headers['X-API-Key'] ?? '';
-  return `${client.defaults.baseURL}/api/books/${id}/cover?api_key=${encodeURIComponent(key)}`;
-};
+export const getCover = (id) => `/api/books/${id}/cover`;
 export const refreshCover = (id) => client.post(`/api/books/${id}/cover/refresh`);
 export const openBook = (id) => client.post(`/api/books/${id}/open`);
 export const chatBook = (id, message) => client.post(`/api/books/${id}/chat`, { message });
