@@ -222,7 +222,7 @@ export default function BookList() {
     if (filters.shelf_id) params.shelf_id = filters.shelf_id;
     setLoading(true);
     listBooks(params)
-      .then(r => setBooks(r.data.books ?? []))
+      .then(r => setBooks(Array.isArray(r.data) ? r.data : (r.data.books ?? [])))
       .catch(() => {})
       .finally(() => setLoading(false));
   }, [filters]);
