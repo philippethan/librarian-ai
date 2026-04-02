@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { getCover, listBooks, scanBooks } from '../../api/books';
+import { cleanWatermarks, getCover, listBooks, scanBooks } from '../../api/books';
 import { getStats } from '../../api/stats';
 import DetailPanel from '../detail/DetailPanel';
 import BookCard from './BookCard';
@@ -145,6 +145,11 @@ export default function BookList() {
   const [loading, setLoading] = useState(true);
   const [scanError, setScanError] = useState('');
   const [scanResult, setScanResult] = useState(null);
+  const [cleanOpen, setCleanOpen] = useState(false);
+  const [cleanLoading, setCleanLoading] = useState(false);
+  const [cleanPreview, setCleanPreview] = useState(null);  // {changes, total}
+  const [cleanResult, setCleanResult] = useState(null);    // {renamed, errors}
+  const [cleanError, setCleanError] = useState('');
 
   const displayedBooks = useMemo(() => {
     let list = books;
@@ -260,6 +265,43 @@ export default function BookList() {
     setScanResult(null);
   }
 
+  async function handleOpenClean() {
+    setCleanOpen(true);
+    setCleanPreview(null);
+    setCleanResult(null);
+    setCleanError('');
+    setCleanLoading(true);
+    try {
+      const res = await cleanWatermarks(true);
+      setCleanPreview(res.data);
+    } catch (err) {
+      setCleanError(err?.response?.data?.detail ?? 'Preview failed.');
+    } finally {
+      setCleanLoading(false);
+    }
+  }
+
+  async function handleConfirmClean() {
+    setCleanLoading(true);
+    try {
+      const res = await cleanWatermarks(false);
+      setCleanResult(res.data);
+      setCleanPreview(null);
+      fetchBooks();
+    } catch (err) {
+      setCleanError(err?.response?.data?.detail ?? 'Clean failed.');
+    } finally {
+      setCleanLoading(false);
+    }
+  }
+
+  function closeClean() {
+    setCleanOpen(false);
+    setCleanPreview(null);
+    setCleanResult(null);
+    setCleanError('');
+  }
+
   return (
     <div className="book-list-page">
       {stats && (
@@ -295,6 +337,7 @@ export default function BookList() {
         viewMode={viewMode}
         onViewModeChange={setViewMode}
         onScan={() => setScanOpen(true)}
+        onClean={handleOpenClean}
       />
 
       {loading && <div className="book-list-page__loading">Loading…</div>}
@@ -464,6 +507,64 @@ export default function BookList() {
                 </div>
               </>
             )}
+          </div>
+        </div>
+      )}
+
+      {cleanOpen && (
+        <div className="modal-overlay" onClick={closeClean}>
+          <div className="modal modal--wide" onClick={e => e.stopPropagation()}>
+            <h2 className="modal__title">Clean watermark filenames</h2>
+
+            {cleanLoading && <p className="modal__hint">Scanning filenames…</p>}
+            {cleanError  && <p className="modal__error">{cleanError}</p>}
+
+            {cleanResult && (
+              <div className="scan-result">
+                <p className="scan-result__row scan-result__row--ok">
+                  <strong>{cleanResult.renamed}</strong> file{cleanResult.renamed !== 1 ? 's' : ''} renamed successfully.
+                </p>
+                {cleanResult.errors?.length > 0 && (
+                  <p className="scan-result__row scan-result__row--warn">
+                    <strong>{cleanResult.errors.length}</strong> error{cleanResult.errors.length !== 1 ? 's' : ''} — check the console.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {cleanPreview && !cleanResult && (
+              <>
+                {cleanPreview.total === 0 ? (
+                  <p className="modal__hint">No watermark strings found in any filename — nothing to do.</p>
+                ) : (
+                  <>
+                    <p className="modal__hint">
+                      <strong>{cleanPreview.total}</strong> file{cleanPreview.total !== 1 ? 's' : ''} will be renamed:
+                    </p>
+                    <div className="clean-preview-list">
+                      {cleanPreview.changes.map(c => (
+                        <div key={c.id} className="clean-preview-row">
+                          <span className="clean-preview-row__old">{c.old_filename}</span>
+                          <span className="clean-preview-row__arrow">→</span>
+                          <span className="clean-preview-row__new">{c.new_filename}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </>
+            )}
+
+            <div className="modal__actions">
+              <button className="btn btn--secondary" onClick={closeClean}>
+                {cleanResult ? 'Close' : 'Cancel'}
+              </button>
+              {cleanPreview && !cleanResult && cleanPreview.total > 0 && (
+                <button className="btn btn--primary" onClick={handleConfirmClean} disabled={cleanLoading}>
+                  {cleanLoading ? 'Renaming…' : `Rename ${cleanPreview.total} file${cleanPreview.total !== 1 ? 's' : ''}`}
+                </button>
+              )}
+            </div>
           </div>
         </div>
       )}

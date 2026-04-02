@@ -95,3 +95,13 @@
 .filter-bar__scan-btn:hover {
   background: var(--accent-hover);
 }
+
+.filter-bar__clean-btn {
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--btn-secondary-border);
+}
+
+.filter-bar__clean-btn:hover {
+  background: var(--bg-sidebar);
+}

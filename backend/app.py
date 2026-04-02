@@ -1398,6 +1398,81 @@ def rename_book_file(book_id: int, dry_run: bool = Query(False), req: Optional[R
     return result
 
 
+# ── Watermark filename cleaner ────────────────────────────────────────────────
+
+# Matches watermark tokens with optional surrounding brackets, e.g.:
+#   (z-library.sk)   [1lib.sk]   z-lib.sk   ( z-library.sk )
+_WATERMARK_RE = re.compile(
+    r'[\(\[\{]\s*(?:z-library\.sk|1lib\.sk|z-lib\.sk)\s*[\)\]\}]'
+    r'|\s*(?:z-library\.sk|1lib\.sk|z-lib\.sk)\s*',
+    re.IGNORECASE,
+)
+
+
+def _strip_watermark(filename: str) -> str:
+    """Return filename with watermark tokens (and their brackets) removed."""
+    stem = Path(filename).stem
+    ext  = Path(filename).suffix
+
+    cleaned = _WATERMARK_RE.sub('', stem)
+    cleaned = re.sub(r'\s{2,}', ' ', cleaned).strip(' .-_()[]{}')
+
+    return (cleaned + ext) if cleaned else filename
+
+
+@app.post("/api/books/clean-watermarks")
+def clean_watermarks(dry_run: bool = Query(True)):
+    """Remove watermark domain tokens from every book filename.
+
+    dry_run=true  - return preview list of (old, new) pairs, nothing is renamed.
+    dry_run=false - rename files on disk and update DB.
+    """
+    with get_db() as conn:
+        rows = conn.execute("SELECT id, filepath, filename FROM books").fetchall()
+
+    changes = []
+    for row in rows:
+        old_name = row["filename"]
+        new_name = _strip_watermark(old_name)
+        if new_name != old_name:
+            changes.append({
+                "id":           row["id"],
+                "old_filename": old_name,
+                "new_filename": new_name,
+                "filepath":     row["filepath"],
+            })
+
+    if dry_run:
+        return {"dry_run": True, "changes": changes, "total": len(changes)}
+
+    renamed = 0
+    errors  = []
+    for item in changes:
+        old_path = Path(item["filepath"])
+        new_path = old_path.parent / item["new_filename"]
+        try:
+            if not old_path.exists():
+                errors.append({"id": item["id"], "reason": "file not found on disk"})
+                continue
+            if new_path.exists() and new_path != old_path:
+                errors.append({"id": item["id"], "reason": f"'{item['new_filename']}' already exists"})
+                continue
+            old_path.rename(new_path)
+            new_path_str = str(new_path).replace("\\", "/")
+            with get_db() as conn:
+                conn.execute(
+                    "UPDATE books SET filepath=?, filename=? WHERE id=?",
+                    (new_path_str, item["new_filename"], item["id"]),
+                )
+                conn.commit()
+            renamed += 1
+        except Exception as exc:
+            errors.append({"id": item["id"], "reason": str(exc)})
+
+    print(f"[clean_watermarks] renamed={renamed} errors={len(errors)}")
+    return {"dry_run": False, "renamed": renamed, "errors": errors, "total": len(changes)}
+
+
 @app.delete("/api/books/{book_id}")
 def delete_book(book_id: int, delete_file: bool = Query(False)):
     with get_db() as conn:

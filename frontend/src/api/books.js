@@ -25,6 +25,8 @@ export const openBook = (id) => client.post(`/api/books/${id}/open`);
 export const chatBook = (id, message) => client.post(`/api/books/${id}/chat`, { message });
 export const debugBook = (id) => client.get(`/api/books/${id}/debug`);
 export const scanBooks = (data) => client.post('/api/scan', data);
+export const cleanWatermarks = (dryRun = true) =>
+  client.post('/api/books/clean-watermarks', null, { params: { dry_run: dryRun } });
 export const getCategories = () => client.get('/api/categories');
 export const addCategory = (data) => client.post('/api/categories', data);
 export const deleteCategory = (id) => client.delete(`/api/categories/${id}`);

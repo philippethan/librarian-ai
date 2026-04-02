@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { listShelves } from '../../api/shelves';
 import './FilterBar.css';
 
-export default function FilterBar({ filters, onFiltersChange, viewMode, onViewModeChange, onScan }) {
+export default function FilterBar({ filters, onFiltersChange, viewMode, onViewModeChange, onScan, onClean }) {
   const [shelves, setShelves] = useState([]);
   const debounceRef = useRef(null);
 
@@ -98,6 +98,9 @@ export default function FilterBar({ filters, onFiltersChange, viewMode, onViewMo
         </div>
         <button className="filter-bar__scan-btn" onClick={onScan}>
           Scan
+        </button>
+        <button className="filter-bar__scan-btn filter-bar__clean-btn" onClick={onClean} title="Remove z-library / 1lib / z-lib watermarks from all filenames">
+          Clean Filenames
         </button>
       </div>
     </div>
