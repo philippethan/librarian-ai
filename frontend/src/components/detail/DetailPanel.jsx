@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import {
   patchBook, fixBook, enrichBook, renameBook, renameBookAs, renameSuggest,
-  openBook, refreshCover, getCover, patchReadingStatus, getBook,
+  openBook, refreshCover, getCover, patchReadingStatus, getBook, deleteBook,
 } from '../../api/books';
-import { listShelves, addBookToShelf, removeBookFromShelf } from '../../api/shelves';
+import { listShelves, createShelf, addBookToShelf, removeBookFromShelf } from '../../api/shelves';
 import CategoryComboBox from '../shared/CategoryComboBox';
 import LanguagePicker from '../shared/LanguagePicker';
 import SegmentedControl from '../shared/SegmentedControl';
@@ -57,11 +57,14 @@ function ToastList({ toasts }) {
 
 function ShelfManager({ bookId, bookShelves, onChanged }) {
   const [allShelves, setAllShelves] = useState([]);
-  const [adding, setAdding] = useState(false);
+  const [mode, setMode] = useState('idle'); // 'idle' | 'pick' | 'create'
+  const [newShelfName, setNewShelfName] = useState('');
 
-  useEffect(() => {
+  function reloadShelves() {
     listShelves().then(r => setAllShelves(r.data)).catch(() => {});
-  }, []);
+  }
+
+  useEffect(() => { reloadShelves(); }, []);
 
   const currentIds = new Set((bookShelves ?? []).map(s => s.id));
   const available = allShelves.filter(s => !currentIds.has(s.id));
@@ -73,12 +76,25 @@ function ShelfManager({ bookId, bookShelves, onChanged }) {
       await addBookToShelf(shelfId, bookId);
       onChanged();
     } catch {}
-    setAdding(false);
+    setMode('idle');
   }
 
   async function handleRemove(shelfId) {
     try {
       await removeBookFromShelf(shelfId, bookId);
+      onChanged();
+    } catch {}
+  }
+
+  async function handleCreateAndAdd() {
+    const name = newShelfName.trim();
+    if (!name) return;
+    try {
+      const res = await createShelf({ name });
+      await addBookToShelf(res.data.id, bookId);
+      setNewShelfName('');
+      setMode('idle');
+      reloadShelves();
       onChanged();
     } catch {}
   }
@@ -89,30 +105,45 @@ function ShelfManager({ bookId, bookShelves, onChanged }) {
         {(bookShelves ?? []).map(s => (
           <span key={s.id} className="shelf-chip">
             {s.name}
-            <button
-              className="shelf-chip__remove"
-              onClick={() => handleRemove(s.id)}
-              aria-label={`Remove from ${s.name}`}
-            >×</button>
+            <button className="shelf-chip__remove" onClick={() => handleRemove(s.id)} aria-label={`Remove from ${s.name}`}>×</button>
           </span>
         ))}
         {(bookShelves ?? []).length === 0 && (
           <span className="shelf-manager__empty">No shelves</span>
         )}
       </div>
-      {adding ? (
+
+      {mode === 'idle' && (
+        <div className="shelf-manager__btns">
+          {available.length > 0 && (
+            <button className="btn btn--sm btn--ghost" onClick={() => setMode('pick')}>+ Add to shelf</button>
+          )}
+          <button className="btn btn--sm btn--ghost" onClick={() => setMode('create')}>+ New shelf</button>
+        </div>
+      )}
+
+      {mode === 'pick' && (
         <select className="form-select form-select--sm" onChange={handleAdd} autoFocus defaultValue="">
           <option value="">— pick shelf —</option>
-          {available.map(s => (
-            <option key={s.id} value={s.id}>{s.name}</option>
-          ))}
+          {available.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
         </select>
-      ) : (
-        available.length > 0 && (
-          <button className="btn btn--sm btn--ghost" onClick={() => setAdding(true)}>
-            + Add to shelf
+      )}
+
+      {mode === 'create' && (
+        <div className="shelf-manager__create">
+          <input
+            className="form-input form-input--sm"
+            placeholder="New shelf name…"
+            value={newShelfName}
+            onChange={e => setNewShelfName(e.target.value)}
+            autoFocus
+            onKeyDown={e => { if (e.key === 'Enter') handleCreateAndAdd(); if (e.key === 'Escape') setMode('idle'); }}
+          />
+          <button className="btn btn--sm btn--primary" onClick={handleCreateAndAdd} disabled={!newShelfName.trim()}>
+            Create & Add
           </button>
-        )
+          <button className="btn btn--sm btn--ghost" onClick={() => setMode('idle')}>Cancel</button>
+        </div>
       )}
     </div>
   );
@@ -120,7 +151,7 @@ function ShelfManager({ bookId, bookShelves, onChanged }) {
 
 // ── EditTab ───────────────────────────────────────────────────────────────────
 
-function EditTab({ book, onBookUpdated, addToast }) {
+function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
   const [form, setForm] = useState(() => formFromBook(book));
   const [autoLock, setAutoLock] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -129,6 +160,9 @@ function EditTab({ book, onBookUpdated, addToast }) {
   const [renameInput, setRenameInput] = useState('');
   const [coverKey, setCoverKey] = useState(0);
   const [currentBook, setCurrentBook] = useState(book);
+  const [deleteOpen, setDeleteOpen] = useState(false);
+  const [deleteFile, setDeleteFile] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const originalRef = useRef({ title: book.title ?? '', author: book.author ?? '' });
 
   // Reset form when book changes
@@ -273,6 +307,21 @@ function EditTab({ book, onBookUpdated, addToast }) {
       reloadBook();
     } catch (err) {
       addToast(err?.response?.data?.detail ?? 'Status update failed', 'error');
+    }
+  }
+
+  // ── Delete ────────────────────────────────────────────────────────────────
+
+  async function handleDelete() {
+    setDeleting(true);
+    try {
+      await deleteBook(book.id, deleteFile);
+      addToast('Book deleted', 'success');
+      onBookDeleted();
+    } catch (err) {
+      addToast(err?.response?.data?.detail ?? 'Delete failed', 'error');
+      setDeleting(false);
+      setDeleteOpen(false);
     }
   }
 
@@ -439,14 +488,40 @@ function EditTab({ book, onBookUpdated, addToast }) {
         <button className="btn btn--secondary" onClick={handleOpen}>
           Open File
         </button>
+        <button className="btn btn--danger" onClick={() => { setDeleteFile(false); setDeleteOpen(true); }}>
+          Delete
+        </button>
       </div>
+
+      {/* Delete confirmation */}
+      {deleteOpen && (
+        <div className="dp-delete-confirm">
+          <p className="dp-delete-confirm__msg">Remove <strong>{book.title ?? book.filename}</strong> from the library?</p>
+          <label className="dp-delete-confirm__option">
+            <input
+              type="checkbox"
+              checked={deleteFile}
+              onChange={e => setDeleteFile(e.target.checked)}
+            />
+            Also delete the file from disk
+          </label>
+          <div className="dp-delete-confirm__actions">
+            <button className="btn btn--sm btn--secondary" onClick={() => setDeleteOpen(false)} disabled={deleting}>
+              Cancel
+            </button>
+            <button className="btn btn--sm btn--danger" onClick={handleDelete} disabled={deleting}>
+              {deleting ? 'Deleting…' : deleteFile ? 'Delete book & file' : 'Remove from library'}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 // ── DetailPanel ───────────────────────────────────────────────────────────────
 
-export default function DetailPanel({ book, onClose, onBookUpdated }) {
+export default function DetailPanel({ book, onClose, onBookUpdated, onBookDeleted }) {
   const [tab, setTab] = useState('edit');
   const { toasts, addToast } = useToast();
 
@@ -483,7 +558,7 @@ export default function DetailPanel({ book, onClose, onBookUpdated }) {
 
         <div className="detail-panel__body">
           {tab === 'edit' && (
-            <EditTab book={book} onBookUpdated={onBookUpdated} addToast={addToast} />
+            <EditTab book={book} onBookUpdated={onBookUpdated} onBookDeleted={onBookDeleted ?? onClose} addToast={addToast} />
           )}
           {tab === 'debug' && (
             <DebugTab book={book} />

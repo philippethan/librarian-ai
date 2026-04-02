@@ -327,6 +327,12 @@
   min-width: 100px;
 }
 
+.book-table__cell--date {
+  white-space: nowrap;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
 .book-table__empty {
   padding: 2rem;
   text-align: center;
@@ -336,10 +342,12 @@
 /* ── Card grid ── */
 .book-grid {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-auto-rows: minmax(260px, auto);
   gap: 1rem;
   align-content: start;
 }
