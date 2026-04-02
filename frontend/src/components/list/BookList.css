@@ -105,6 +105,23 @@
 .conf-bar__fill--mid  { background: var(--conf-mid); }
 .conf-bar__fill--high { background: var(--conf-high); }
 
+/* ── Bulk action bar ── */
+.bulk-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg-surface));
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+  flex-shrink: 0;
+}
+
+.bulk-bar__count {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
 /* ── Table ── */
 .book-table-wrap {
   flex: 1;
@@ -134,8 +151,30 @@
   vertical-align: middle;
 }
 
+.book-table__th--check { width: 36px; padding: 0.5rem 0.25rem 0.5rem 0.75rem; }
 .book-table__th--cover { width: 52px; }
 .book-table__th--conf  { width: 100px; }
+
+.book-table__check {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  display: block;
+}
+
+.book-table__cell--check {
+  padding: 0.5rem 0.25rem 0.5rem 0.75rem;
+  width: 36px;
+}
+
+.book-table__row--selected {
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg-surface));
+}
+
+.book-table__row--selected:hover {
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg-surface));
+}
 
 .book-table__th--sortable {
   cursor: pointer;
@@ -562,4 +601,25 @@
 
 .btn--secondary:hover:not(:disabled) {
   background: var(--bg-sidebar);
+}
+
+.btn--danger {
+  background: var(--badge-error-bg);
+  color: var(--badge-error-text);
+  border-color: transparent;
+}
+
+.btn--danger:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--bg-sidebar);
+  color: var(--text-primary);
 }

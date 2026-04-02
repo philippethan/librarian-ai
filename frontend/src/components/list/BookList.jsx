@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { cleanWatermarks, getCover, listBooks, scanBooks } from '../../api/books';
+import { cleanWatermarks, deleteBatch, getCover, listBooks, scanBooks } from '../../api/books';
 import { getStats } from '../../api/stats';
 import DetailPanel from '../detail/DetailPanel';
 import BookCard from './BookCard';
@@ -171,6 +171,10 @@ export default function BookList() {
   const [cleanResult, setCleanResult] = useState(null);    // {renamed, errors}
   const [cleanError, setCleanError] = useState('');
   const [visibleCols, setVisibleCols] = useState(() => new Set(TABLE_COLS.map(c => c.key)));
+  const [selectedIds, setSelectedIds] = useState(new Set());
+  const [bulkDeleteOpen, setBulkDeleteOpen] = useState(false);
+  const [bulkDeleteFile, setBulkDeleteFile] = useState(false);
+  const [bulkDeleting, setBulkDeleting] = useState(false);
 
   function toggleCol(key) {
     setVisibleCols(prev => {
@@ -182,6 +186,35 @@ export default function BookList() {
       }
       return next;
     });
+  }
+
+  function toggleSelect(id) {
+    setSelectedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
+  }
+
+  function toggleSelectAll() {
+    const displayedIdSet = new Set(displayedBooks.map(b => b.id));
+    const allSelected = displayedBooks.every(b => selectedIds.has(b.id));
+    if (allSelected) {
+      setSelectedIds(prev => { const next = new Set(prev); displayedIdSet.forEach(id => next.delete(id)); return next; });
+    } else {
+      setSelectedIds(prev => { const next = new Set(prev); displayedIdSet.forEach(id => next.add(id)); return next; });
+    }
+  }
+
+  async function handleBulkDelete() {
+    setBulkDeleting(true);
+    try {
+      await deleteBatch([...selectedIds], bulkDeleteFile);
+      setBooks(prev => prev.filter(b => !selectedIds.has(b.id)));
+      setSelectedIds(new Set());
+      setBulkDeleteOpen(false);
+    } catch {}
+    finally { setBulkDeleting(false); }
   }
 
   const displayedBooks = useMemo(() => {
@@ -385,6 +418,21 @@ export default function BookList() {
         onToggleCol={toggleCol}
       />
 
+      {selectedIds.size > 0 && (
+        <div className="bulk-bar">
+          <span className="bulk-bar__count">{selectedIds.size} selected</span>
+          <button
+            className="btn btn--sm btn--danger"
+            onClick={() => { setBulkDeleteFile(false); setBulkDeleteOpen(true); }}
+          >
+            Delete selected
+          </button>
+          <button className="btn btn--sm btn--ghost" onClick={() => setSelectedIds(new Set())}>
+            Clear selection
+          </button>
+        </div>
+      )}
+
       {loading && <div className="book-list-page__loading">Loading…</div>}
 
       {!loading && viewMode === 'table' && (
@@ -392,6 +440,16 @@ export default function BookList() {
           <table className="book-table">
             <thead>
               <tr>
+                <th className="book-table__th book-table__th--check">
+                  <input
+                    type="checkbox"
+                    className="book-table__check"
+                    checked={displayedBooks.length > 0 && displayedBooks.every(b => selectedIds.has(b.id))}
+                    ref={el => { if (el) el.indeterminate = displayedBooks.some(b => selectedIds.has(b.id)) && !displayedBooks.every(b => selectedIds.has(b.id)); }}
+                    onChange={toggleSelectAll}
+                    title="Select all"
+                  />
+                </th>
                 <th className="book-table__th book-table__th--cover"></th>
                 {visibleCols.has('title') && (
                   <th className="book-table__th book-table__th--sortable" onClick={() => handleSort('title')}>
@@ -487,11 +545,20 @@ export default function BookList() {
               {displayedBooks.map(book => (
                 <tr
                   key={book.id}
-                  className="book-table__row"
+                  className={`book-table__row${selectedIds.has(book.id) ? ' book-table__row--selected' : ''}`}
                   onClick={() => setSelectedBook(book)}
                   tabIndex={0}
                   onKeyDown={e => e.key === 'Enter' && setSelectedBook(book)}
                 >
+                  <td className="book-table__cell book-table__cell--check" onClick={e => { e.stopPropagation(); toggleSelect(book.id); }}>
+                    <input
+                      type="checkbox"
+                      className="book-table__check"
+                      checked={selectedIds.has(book.id)}
+                      onChange={() => toggleSelect(book.id)}
+                      onClick={e => e.stopPropagation()}
+                    />
+                  </td>
                   <td className="book-table__cell book-table__cell--cover">
                     <img
                       src={getCover(book.id)}
@@ -570,7 +637,7 @@ export default function BookList() {
               ))}
               {displayedBooks.length === 0 && (
                 <tr>
-                  <td colSpan={1 + visibleCols.size} className="book-table__empty">No books found.</td>
+                  <td colSpan={2 + visibleCols.size} className="book-table__empty">No books found.</td>
                 </tr>
               )}
             </tbody>
@@ -580,8 +647,14 @@ export default function BookList() {
 
       {!loading && viewMode === 'card' && (
         <div className="book-grid">
-          {books.map(book => (
-            <BookCard key={book.id} book={book} onClick={setSelectedBook} />
+          {displayedBooks.map(book => (
+            <BookCard
+              key={book.id}
+              book={book}
+              onClick={setSelectedBook}
+              selected={selectedIds.has(book.id)}
+              onToggleSelect={toggleSelect}
+            />
           ))}
           {books.length === 0 && (
             <div className="book-grid__empty">No books found.</div>
@@ -694,6 +767,30 @@ export default function BookList() {
                   {cleanLoading ? 'Renaming…' : `Rename ${cleanPreview.total} file${cleanPreview.total !== 1 ? 's' : ''}`}
                 </button>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {bulkDeleteOpen && (
+        <div className="modal-overlay" onClick={() => setBulkDeleteOpen(false)}>
+          <div className="modal" onClick={e => e.stopPropagation()}>
+            <h2 className="modal__title">Delete {selectedIds.size} book{selectedIds.size !== 1 ? 's' : ''}?</h2>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
+              <input
+                type="checkbox"
+                checked={bulkDeleteFile}
+                onChange={e => setBulkDeleteFile(e.target.checked)}
+              />
+              Also delete the files from disk
+            </label>
+            <div className="modal__actions">
+              <button className="btn btn--secondary" onClick={() => setBulkDeleteOpen(false)} disabled={bulkDeleting}>
+                Cancel
+              </button>
+              <button className="btn btn--danger" onClick={handleBulkDelete} disabled={bulkDeleting}>
+                {bulkDeleting ? 'Deleting…' : bulkDeleteFile ? `Delete ${selectedIds.size} book${selectedIds.size !== 1 ? 's' : ''} & files` : `Remove ${selectedIds.size} from library`}
+              </button>
             </div>
           </div>
         </div>

@@ -24,6 +24,8 @@ export const debugBook = (id) => client.get(`/api/books/${id}/debug`);
 export const scanBooks = (data) => client.post('/api/scan', data);
 export const cleanWatermarks = (dryRun = true) =>
   client.post('/api/books/clean-watermarks', null, { params: { dry_run: dryRun } });
+export const deleteBatch = (ids, deleteFiles = false) =>
+  client.post('/api/delete-batch', { ids, delete_files: deleteFiles });
 export const getCategories = () => client.get('/api/categories');
 export const addCategory = (data) => client.post('/api/categories', data);
 export const deleteCategory = (id) => client.delete(`/api/categories/${id}`);

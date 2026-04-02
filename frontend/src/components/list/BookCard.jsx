@@ -13,10 +13,23 @@ function ConfidenceBar({ score }) {
   );
 }
 
-export default function BookCard({ book, onClick }) {
+export default function BookCard({ book, onClick, selected, onToggleSelect }) {
   return (
-    <div className="book-card" onClick={() => onClick(book)} role="button" tabIndex={0}
-      onKeyDown={e => e.key === 'Enter' && onClick(book)}>
+    <div
+      className={`book-card${selected ? ' book-card--selected' : ''}`}
+      onClick={() => onClick(book)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={e => e.key === 'Enter' && onClick(book)}
+    >
+      <input
+        type="checkbox"
+        className="book-card__checkbox"
+        checked={!!selected}
+        onChange={e => { e.stopPropagation(); onToggleSelect(book.id); }}
+        onClick={e => e.stopPropagation()}
+        title="Select"
+      />
       <div className="book-card__cover">
         <img
           src={getCover(book.id)}
