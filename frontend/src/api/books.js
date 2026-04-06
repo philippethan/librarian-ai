@@ -29,3 +29,20 @@ export const deleteBatch = (ids, deleteFiles = false) =>
 export const getCategories = () => client.get('/api/categories');
 export const addCategory = (data) => client.post('/api/categories', data);
 export const deleteCategory = (id) => client.delete(`/api/categories/${id}`);
+
+// LLM-driven categorisation (NoAutoCategorisation feature)
+// Endpoints read existing DB attributes (title, author, description, tags)
+// and call the local Ollama model to assign category + subcategory.
+export const getAppConfig = () => client.get('/api/v1/config');
+export const categorizeDocument = (id, key = '') =>
+  client.post(
+    `/api/v1/documents/${id}/categorize`,
+    null,
+    key ? { headers: { 'X-Categorize-Key': key } } : {},
+  );
+export const bulkCategorize = (ids, key = '') =>
+  client.post(
+    '/api/v1/documents/bulk/categorize',
+    { ids },
+    key ? { headers: { 'X-Categorize-Key': key } } : {},
+  );

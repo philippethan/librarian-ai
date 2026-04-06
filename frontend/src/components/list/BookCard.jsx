@@ -31,11 +31,13 @@ export default function BookCard({ book, onClick, selected, onToggleSelect }) {
         title="Select"
       />
       <div className="book-card__cover">
-        <img
-          src={getCover(book.id)}
-          alt={book.title ?? 'Cover'}
-          onError={e => { e.currentTarget.style.display = 'none'; }}
-        />
+        {!book.no_cover && (
+          <img
+            src={getCover(book.id)}
+            alt={book.title ?? 'Cover'}
+            onError={e => { e.currentTarget.style.display = 'none'; }}
+          />
+        )}
       </div>
       <div className="book-card__body">
         <div className="book-card__title">{book.title ?? book.filename}</div>

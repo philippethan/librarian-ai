@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { cleanWatermarks, deleteBatch, getCover, listBooks, scanBooks } from '../../api/books';
+import { bulkCategorize, cleanWatermarks, deleteBatch, getCover, listBooks, scanBooks } from '../../api/books';
 import { getStats } from '../../api/stats';
 import DetailPanel from '../detail/DetailPanel';
 import BookCard from './BookCard';
@@ -175,6 +175,7 @@ export default function BookList() {
   const [bulkDeleteOpen, setBulkDeleteOpen] = useState(false);
   const [bulkDeleteFile, setBulkDeleteFile] = useState(false);
   const [bulkDeleting, setBulkDeleting] = useState(false);
+  const [bulkCategorizing, setBulkCategorizing] = useState(false);
 
   function toggleCol(key) {
     setVisibleCols(prev => {
@@ -215,6 +216,17 @@ export default function BookList() {
       setBulkDeleteOpen(false);
     } catch {}
     finally { setBulkDeleting(false); }
+  }
+
+  async function handleBulkCategorize() {
+    setBulkCategorizing(true);
+    try {
+      await bulkCategorize([...selectedIds]);
+      // Categories will appear progressively as the LLM finishes each book.
+      // Start polling so the table updates automatically.
+      fetchBooks();
+    } catch {}
+    finally { setBulkCategorizing(false); }
   }
 
   const displayedBooks = useMemo(() => {
@@ -421,6 +433,13 @@ export default function BookList() {
       {selectedIds.size > 0 && (
         <div className="bulk-bar">
           <span className="bulk-bar__count">{selectedIds.size} selected</span>
+          <button
+            className="btn btn--sm btn--primary"
+            onClick={handleBulkCategorize}
+            disabled={bulkCategorizing}
+          >
+            {bulkCategorizing ? 'Queuing…' : 'Categorize selected'}
+          </button>
           <button
             className="btn btn--sm btn--danger"
             onClick={() => { setBulkDeleteFile(false); setBulkDeleteOpen(true); }}

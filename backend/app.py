@@ -45,7 +45,7 @@ import ebooklib
 from ebooklib import epub
 from PIL import Image
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, Header, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
@@ -147,9 +147,20 @@ BOOKS_PATH = os.environ.get("BOOKS_PATH", "C:/Users/posen/Documents/Books")
 BOOKS_ROOT = Path(BOOKS_PATH)
 COVERS_DIR = Path("backend/data/covers")
 
+# Feature flag: set AUTO_CATEGORIZATION_ENABLED=true in env to re-enable
+# automatic LLM categorisation during ingestion. Defaults to false so that
+# newly ingested books arrive without a category until a user with
+# can_categorize permission assigns one manually.
+AUTO_CATEGORIZATION_ENABLED = os.environ.get("AUTO_CATEGORIZATION_ENABLED", "false").lower() == "true"
+
+# Secret that grants can_categorize permission.  Pass as the
+# X-Categorize-Key request header.  If left empty, the permission check
+# is skipped (useful for single-user local installs).
+CATEGORIZE_API_KEY = os.environ.get("CATEGORIZE_API_KEY", "")
+
 PATCHABLE_FIELDS = {"title", "author", "year", "language", "category",
                     "subcategory", "difficulty", "description", "tags", "hint",
-                    "fixed_category", "fixed_subcategory"}
+                    "fixed_category", "fixed_subcategory", "no_cover"}
 
 # Ensure required directories exist at import time
 os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
@@ -222,6 +233,7 @@ def init_db():
             ("hint", "TEXT"),
             ("fixed_category", "TEXT"),
             ("fixed_subcategory", "TEXT"),
+            ("no_cover", "INTEGER DEFAULT 0"),
         ]:
             try:
                 conn.execute(f"ALTER TABLE books ADD COLUMN {col} {typedef}")
@@ -245,6 +257,41 @@ def init_db():
                 FOREIGN KEY (book_id)  REFERENCES books(id)   ON DELETE CASCADE
             )
         """)
+        # --- Manual categorisation tables (NoAutoCategorisation branch) ---
+        # canonical_categories: the authoritative set of category+subcategory
+        # pairs that the UI presents in the categorise modal.
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS canonical_categories (
+                id          INTEGER PRIMARY KEY AUTOINCREMENT,
+                category    TEXT NOT NULL,
+                subcategory TEXT NOT NULL DEFAULT '',
+                UNIQUE (category, subcategory)
+            )
+        """)
+        # document_categories: many-to-many between books and canonical_categories.
+        # Kept separate from the denormalised category/subcategory columns on
+        # books so that legacy data and rollback remain straightforward.
+        conn.execute("""
+            CREATE TABLE IF NOT EXISTS document_categories (
+                book_id     INTEGER NOT NULL,
+                category_id INTEGER NOT NULL,
+                assigned_at TEXT DEFAULT (datetime('now')),
+                assigned_by TEXT DEFAULT 'manual',
+                PRIMARY KEY (book_id, category_id),
+                FOREIGN KEY (book_id)     REFERENCES books(id)                ON DELETE CASCADE,
+                FOREIGN KEY (category_id) REFERENCES canonical_categories(id) ON DELETE CASCADE
+            )
+        """)
+        # Add categorised_at / categorised_by columns to books (idempotent).
+        for col, typedef in [
+            ("categorized_at", "TEXT"),
+            ("categorized_by", "TEXT"),
+        ]:
+            try:
+                conn.execute(f"ALTER TABLE books ADD COLUMN {col} {typedef}")
+                conn.commit()
+            except Exception:
+                pass
         conn.commit()
 
 
@@ -952,6 +999,117 @@ def call_ollama_filename(filepath: str, hint: str = "") -> dict:
         return {}
 
 
+def call_ollama_categorize(title: str, author: str, description: str,
+                           tags: list, language: str) -> dict:
+    """
+    Ask Ollama to assign category + subcategory from FIXED_TAXONOMY using only
+    the book's existing metadata attributes (no raw text needed).
+    Returns a dict with at least 'category' and 'subcategory' keys.
+    """
+    ollama_url = os.getenv("OLLAMA_URL", "http://localhost:11434")
+    ollama_model = os.getenv("OLLAMA_MODEL", "mistral:7b-instruct")
+
+    cat_list = ", ".join(FIXED_TAXONOMY.keys())
+    meta_block = (
+        f"Title: {title or '(unknown)'}\n"
+        f"Author: {author or '(unknown)'}\n"
+        f"Language: {language or '(unknown)'}\n"
+        f"Tags: {', '.join(tags) if tags else '(none)'}\n"
+        f"Description: {description or '(none)'}\n"
+    )
+    prompt = (
+        "You are a librarian. Given the book metadata below, pick the single best "
+        "category and subcategory from the lists provided.\n\n"
+        "Available categories (pick one):\n"
+        f"{cat_list}\n\n"
+        "Subcategory must be one of the subcategories that belong to the chosen category "
+        "in this taxonomy:\n"
+    )
+    for cat, subs in FIXED_TAXONOMY.items():
+        prompt += f"  {cat}: {', '.join(subs)}\n"
+    prompt += (
+        f"\nBook metadata:\n{meta_block}\n"
+        "Return ONLY valid JSON with exactly two fields: "
+        "\"category\" (string) and \"subcategory\" (string). "
+        "No markdown. No explanation."
+    )
+
+    payload = json.dumps(
+        {"model": ollama_model, "prompt": prompt, "stream": False},
+        ensure_ascii=True,
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        f"{ollama_url}/api/generate",
+        data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            raw_body = resp.read().decode("utf-8")
+        data = json.loads(raw_body)
+        return _parse_llm_json(data.get("response", ""))
+    except Exception as exc:
+        print(f"[call_ollama_categorize] error: {exc}")
+        return {}
+
+
+def _categorize_book_by_llm(book_id: int) -> None:
+    """
+    Synchronous helper: read book attributes from DB, call Ollama to get
+    category/subcategory, then write results back.  Clears any previous
+    category values before saving so stale data does not persist.
+    """
+    with get_db() as conn:
+        row = conn.execute(
+            "SELECT title, author, description, tags, language FROM books WHERE id=?",
+            (book_id,),
+        ).fetchone()
+    if not row:
+        return
+
+    title = row["title"] or ""
+    author = row["author"] or ""
+    description = row["description"] or ""
+    language = row["language"] or ""
+    try:
+        tags = json.loads(row["tags"] or "[]")
+        if not isinstance(tags, list):
+            tags = []
+    except (json.JSONDecodeError, TypeError):
+        tags = []
+
+    meta = call_ollama_categorize(title, author, description, tags, language)
+
+    def _str(v):
+        if isinstance(v, list):
+            return ", ".join(str(x) for x in v if x)
+        return str(v).strip() if v else ""
+
+    category = _str(meta.get("category"))
+    subcategory = _str(meta.get("subcategory"))
+
+    # Validate against FIXED_TAXONOMY; fall back to Miscellaneous if unknown
+    if category not in FIXED_TAXONOMY:
+        category = "Miscellaneous"
+        subcategory = "Other"
+    elif subcategory not in FIXED_TAXONOMY.get(category, []):
+        subcategory = FIXED_TAXONOMY[category][0] if FIXED_TAXONOMY[category] else ""
+
+    with get_db() as conn:
+        conn.execute(
+            """UPDATE books SET
+                category=?, subcategory=?,
+                fixed_category=?, fixed_subcategory=?,
+                categorized_at=datetime('now'), categorized_by='llm'
+               WHERE id=?""",
+            (category, subcategory, category, subcategory, book_id),
+        )
+        conn.commit()
+
+    print(f"[categorize_llm] id={book_id} -> {category!r} / {subcategory!r}")
+
+
 # =============================================================================
 # BOOK PIPELINE
 # =============================================================================
@@ -1019,15 +1177,25 @@ def process_book(book_id: int, filepath: str, file_type: str):
     author = _str(meta.get("author"))
     year = _str(meta.get("year"))
     language = _str(meta.get("language"))
-    category = _str(meta.get("category"))
-    subcategory = _str(meta.get("subcategory"))
     difficulty = _str(meta.get("difficulty"))
     description = _str(meta.get("description"))
     tags_raw = meta.get("tags", [])
     tags = json.dumps(tags_raw if isinstance(tags_raw, list) else [], ensure_ascii=True)
 
-    # Step 5: confidence score
-    filled_fields = sum(1 for v in [title, author, year, language, category, subcategory, difficulty, description, tags_raw] if v)
+    # Auto-categorisation gated by feature flag.  When disabled, category and
+    # subcategory are left blank so a human can assign them manually later.
+    if AUTO_CATEGORIZATION_ENABLED:
+        category = _str(meta.get("category"))
+        subcategory = _str(meta.get("subcategory"))
+    else:
+        category = ""
+        subcategory = ""
+
+    # Step 5: confidence score (category/subcategory excluded when auto-cat off)
+    if AUTO_CATEGORIZATION_ENABLED:
+        filled_fields = sum(1 for v in [title, author, year, language, category, subcategory, difficulty, description, tags_raw] if v)
+    else:
+        filled_fields = sum(1 for v in [title, author, year, language, difficulty, description, tags_raw] if v)
     confidence_score = (filled_fields / 9) * 0.7 + (1.0 if text else 0.0) * 0.3
 
     # Step 6: status
@@ -1778,10 +1946,14 @@ def ollama_test(book_id: int):
 def get_cover(book_id: int):
     with get_db() as conn:
         row = conn.execute(
-            "SELECT cover_path, filepath, file_type FROM books WHERE id=?", (book_id,)
+            "SELECT cover_path, filepath, file_type, no_cover FROM books WHERE id=?", (book_id,)
         ).fetchone()
     if not row:
         raise HTTPException(status_code=404, detail="Book not found")
+
+    # Document explicitly marked as having no cover - don't even try.
+    if row["no_cover"]:
+        raise HTTPException(status_code=404, detail="No cover available")
 
     cover = row["cover_path"]
     if not cover or not Path(cover).exists():
@@ -2198,6 +2370,98 @@ def get_taxonomy():
     for item in result:
         item["subcategories"].sort(key=lambda x: -x["count"])
     return result
+
+
+# =============================================================================
+# API: MANUAL CATEGORISATION (NoAutoCategorisation feature)
+# =============================================================================
+# GET  /api/v1/config                       - exposes AUTO_CATEGORIZATION_ENABLED
+# POST /api/v1/documents/{id}/categorize    - assign category to a single book
+# POST /api/v1/documents/bulk/categorize    - assign category to many books
+#
+# Permission: callers must supply X-Categorize-Key matching CATEGORIZE_API_KEY
+# (if CATEGORIZE_API_KEY is empty the check is skipped for local installs).
+# =============================================================================
+
+def _check_categorize_permission(x_categorize_key: str = "") -> None:
+    """Raise 403 if the caller does not have can_categorize permission."""
+    if CATEGORIZE_API_KEY and x_categorize_key != CATEGORIZE_API_KEY:
+        raise HTTPException(status_code=403, detail="Missing or invalid X-Categorize-Key header")
+
+
+@app.get("/api/v1/config")
+def get_config():
+    """Return feature-flag state so the UI can adapt its behaviour."""
+    return {
+        "auto_categorization_enabled": AUTO_CATEGORIZATION_ENABLED,
+        "categorize_key_required": bool(CATEGORIZE_API_KEY),
+    }
+
+
+class BulkCategorizeRequest(BaseModel):
+    ids: List[int]
+
+
+# IMPORTANT: bulk route must be registered BEFORE the {book_id} route so that
+# FastAPI matches the literal path segment "bulk" before trying to coerce it
+# to an integer.
+@app.post("/api/v1/documents/bulk/categorize")
+async def bulk_categorize_documents(
+    req: BulkCategorizeRequest,
+    x_categorize_key: str = Header(default=""),
+):
+    """
+    Queue LLM categorisation for multiple documents.  Each book is processed in
+    a background thread so the endpoint returns immediately.  The frontend can
+    poll GET /api/books to see categories appear as they complete.
+    """
+    _check_categorize_permission(x_categorize_key)
+    if not req.ids:
+        raise HTTPException(status_code=400, detail="No IDs provided")
+
+    # Verify all IDs exist
+    with get_db() as conn:
+        valid_ids = [
+            row["id"]
+            for row in conn.execute(
+                f"SELECT id FROM books WHERE id IN ({','.join('?' * len(req.ids))})",
+                req.ids,
+            ).fetchall()
+        ]
+
+    async def _run_all():
+        for book_id in valid_ids:
+            await asyncio.to_thread(_categorize_book_by_llm, book_id)
+
+    asyncio.create_task(_run_all())
+    print(f"[bulk_categorize_llm] queued ids={valid_ids}")
+    return {"queued": len(valid_ids)}
+
+
+@app.post("/api/v1/documents/{book_id}/categorize")
+def categorize_document(
+    book_id: int,
+    x_categorize_key: str = Header(default=""),
+):
+    """
+    Run LLM categorisation on a single document using its existing DB attributes
+    (title, author, description, tags, language).  Clears any previous category
+    before saving the new one.
+    """
+    _check_categorize_permission(x_categorize_key)
+    with get_db() as conn:
+        if not conn.execute("SELECT id FROM books WHERE id=?", (book_id,)).fetchone():
+            raise HTTPException(status_code=404, detail="Book not found")
+
+    _categorize_book_by_llm(book_id)
+
+    with get_db() as conn:
+        updated = dict(conn.execute("SELECT * FROM books WHERE id=?", (book_id,)).fetchone())
+    try:
+        updated["tags"] = json.loads(updated["tags"] or "[]")
+    except (json.JSONDecodeError, TypeError):
+        updated["tags"] = []
+    return updated
 
 
 # =============================================================================

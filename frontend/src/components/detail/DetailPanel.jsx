@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import {
   patchBook, fixBook, enrichBook, renameBook, renameBookAs, renameSuggest,
   openBook, refreshCover, getCover, patchReadingStatus, getBook, deleteBook,
+  categorizeDocument,
 } from '../../api/books';
 import { listShelves, createShelf, addBookToShelf, removeBookFromShelf } from '../../api/shelves';
 import CategoryComboBox from '../shared/CategoryComboBox';
@@ -163,6 +164,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [deleteFile, setDeleteFile] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [categorizing, setCategorizing] = useState(false);
   const originalRef = useRef({ title: book.title ?? '', author: book.author ?? '' });
 
   // Reset form when book changes
@@ -359,16 +361,35 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
           </div>
         </div>
         <div className="dp-edit__cover-col">
-          <img
-            key={coverKey}
-            src={`${coverUrl}?v=${coverKey}`}
-            alt="Cover"
-            className="dp-edit__cover"
-            onError={e => { e.currentTarget.style.display = 'none'; }}
-          />
-          <button className="btn btn--sm btn--ghost dp-edit__cover-refresh" onClick={handleRefreshCover}>
-            Refresh Cover
-          </button>
+          {!currentBook.no_cover && (
+            <>
+              <img
+                key={coverKey}
+                src={`${coverUrl}?v=${coverKey}`}
+                alt="Cover"
+                className="dp-edit__cover"
+                onError={e => { e.currentTarget.style.display = 'none'; }}
+              />
+              <button className="btn btn--sm btn--ghost dp-edit__cover-refresh" onClick={handleRefreshCover}>
+                Refresh Cover
+              </button>
+            </>
+          )}
+          <label className="dp-edit__no-cover-toggle" title="Mark this document as having no cover (journal, report, etc.)">
+            <input
+              type="checkbox"
+              checked={!!currentBook.no_cover}
+              onChange={async e => {
+                try {
+                  await patchBook(book.id, { no_cover: e.target.checked ? 1 : 0 });
+                  reloadBook();
+                } catch {
+                  addToast('Could not update no-cover flag', 'error');
+                }
+              }}
+            />
+            No cover (journal / document)
+          </label>
         </div>
       </div>
 
@@ -484,6 +505,24 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
         </button>
         <button className="btn btn--secondary" onClick={handleEnrich} disabled={enriching}>
           {enriching ? 'Enriching…' : 'Enrich with Open Library'}
+        </button>
+        <button
+          className="btn btn--secondary"
+          disabled={categorizing}
+          onClick={async () => {
+            setCategorizing(true);
+            try {
+              await categorizeDocument(book.id);
+              reloadBook();
+              addToast('Category assigned by LLM', 'success');
+            } catch {
+              addToast('Categorisation failed', 'error');
+            } finally {
+              setCategorizing(false);
+            }
+          }}
+        >
+          {categorizing ? 'Categorizing…' : 'Categorize'}
         </button>
         <button className="btn btn--secondary" onClick={handleOpen}>
           Open File
