@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import { bulkCategorize, cleanWatermarks, deleteBatch, getCover, listBooks, scanBooks } from '../../api/books';
 import { getStats } from '../../api/stats';
 import DetailPanel from '../detail/DetailPanel';
-import BookCard from './BookCard';
 import FilterBar from './FilterBar';
 import './BookList.css';
 
@@ -157,7 +156,6 @@ export default function BookList() {
     difficulty: '', file_type: '', confidence: '', status: '', extraction_method: '', reading_status: '',
   });
   const [sort, setSort] = useState({ col: null, dir: 'asc' });
-  const [viewMode, setViewMode] = useState('table');
   const [selectedBook, setSelectedBook] = useState(null);
   const [scanOpen, setScanOpen] = useState(false);
   const [scanPath, setScanPath] = useState('');
@@ -170,7 +168,9 @@ export default function BookList() {
   const [cleanPreview, setCleanPreview] = useState(null);  // {changes, total}
   const [cleanResult, setCleanResult] = useState(null);    // {renamed, errors}
   const [cleanError, setCleanError] = useState('');
-  const [visibleCols, setVisibleCols] = useState(() => new Set(TABLE_COLS.map(c => c.key)));
+  const [visibleCols, setVisibleCols] = useState(() => new Set([
+    'title', 'author', 'year', 'category', 'subcategory', 'reading_status', 'status',
+  ]));
   const [selectedIds, setSelectedIds] = useState(new Set());
   const [bulkDeleteOpen, setBulkDeleteOpen] = useState(false);
   const [bulkDeleteFile, setBulkDeleteFile] = useState(false);
@@ -421,8 +421,6 @@ export default function BookList() {
       <FilterBar
         filters={filters}
         onFiltersChange={setFilters}
-        viewMode={viewMode}
-        onViewModeChange={setViewMode}
         onScan={() => setScanOpen(true)}
         onClean={handleOpenClean}
         allCols={TABLE_COLS}
@@ -454,7 +452,7 @@ export default function BookList() {
 
       {loading && <div className="book-list-page__loading">Loading…</div>}
 
-      {!loading && viewMode === 'table' && (
+      {!loading && (
         <div className="book-table-wrap">
           <table className="book-table">
             <thead>
@@ -661,23 +659,6 @@ export default function BookList() {
               )}
             </tbody>
           </table>
-        </div>
-      )}
-
-      {!loading && viewMode === 'card' && (
-        <div className="book-grid">
-          {displayedBooks.map(book => (
-            <BookCard
-              key={book.id}
-              book={book}
-              onClick={setSelectedBook}
-              selected={selectedIds.has(book.id)}
-              onToggleSelect={toggleSelect}
-            />
-          ))}
-          {books.length === 0 && (
-            <div className="book-grid__empty">No books found.</div>
-          )}
         </div>
       )}
 

@@ -14,6 +14,13 @@ import './DetailPanel.css';
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
+function apiErr(err, fallback = 'Request failed') {
+  const d = err?.response?.data?.detail;
+  if (typeof d === 'string') return d;
+  if (Array.isArray(d) && d.length && d[0]?.msg) return d[0].msg;
+  return fallback;
+}
+
 function formFromBook(b) {
   return {
     title:       b.title       ?? '',
@@ -189,7 +196,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
       const payload = {
         title:       form.title       || null,
         author:      form.author      || null,
-        year:        form.year,
+        year:        form.year != null ? String(form.year) : null,
         language:    form.language,
         category:    form.category,
         subcategory: form.subcategory,
@@ -209,7 +216,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
       reloadBook();
       addToast('Saved', 'success');
     } catch (err) {
-      addToast(err?.response?.data?.detail ?? 'Save failed', 'error');
+      addToast(apiErr(err, 'Save failed'), 'error');
     } finally {
       setSaving(false);
     }
@@ -223,7 +230,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
       const payload = {
         title:       form.title       || null,
         author:      form.author      || null,
-        year:        form.year,
+        year:        form.year != null ? String(form.year) : null,
         language:    form.language,
         category:    form.category,
         subcategory: form.subcategory,
@@ -242,7 +249,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
       setRenameInput(preview.data.new_filename ?? '');
       setRenamePreview(preview.data);
     } catch (err) {
-      addToast(err?.response?.data?.detail ?? 'Save failed', 'error');
+      addToast(apiErr(err, 'Save failed'), 'error');
       setSaving(false);
     }
   }
@@ -254,7 +261,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
       reloadBook();
       addToast('File renamed', 'success');
     } catch (err) {
-      addToast(err?.response?.data?.detail ?? 'Rename failed', 'error');
+      addToast(apiErr(err, 'Rename failed'), 'error');
     } finally {
       setSaving(false);
     }
@@ -269,7 +276,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
       reloadBook();
       addToast('Enriched from Open Library', 'success');
     } catch (err) {
-      addToast(err?.response?.data?.detail ?? 'Enrichment failed', 'error');
+      addToast(apiErr(err, 'Enrichment failed'), 'error');
     } finally {
       setEnriching(false);
     }
@@ -284,7 +291,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
       setRenameInput(suggested);
       setRenamePreview({ new_filename: suggested, old_filename: book.filename });
     } catch (err) {
-      addToast(err?.response?.data?.detail ?? 'Could not generate suggestion', 'error');
+      addToast(apiErr(err, 'Could not generate suggestion'), 'error');
     }
   }
 
@@ -294,9 +301,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
     try {
       await openBook(book.id);
     } catch (err) {
-      const status = err?.response?.status;
-      const detail = err?.response?.data?.detail ?? 'Could not open file';
-      addToast(detail, status === 403 || status === 404 ? 'error' : 'error');
+      addToast(apiErr(err, 'Could not open file'), 'error');
     }
   }
 
@@ -308,7 +313,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
       await patchReadingStatus(book.id, val);
       reloadBook();
     } catch (err) {
-      addToast(err?.response?.data?.detail ?? 'Status update failed', 'error');
+      addToast(apiErr(err, 'Status update failed'), 'error');
     }
   }
 
@@ -321,7 +326,7 @@ function EditTab({ book, onBookUpdated, onBookDeleted, addToast }) {
       addToast('Book deleted', 'success');
       onBookDeleted();
     } catch (err) {
-      addToast(err?.response?.data?.detail ?? 'Delete failed', 'error');
+      addToast(apiErr(err, 'Delete failed'), 'error');
       setDeleting(false);
       setDeleteOpen(false);
     }

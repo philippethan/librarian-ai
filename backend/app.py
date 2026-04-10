@@ -1423,6 +1423,7 @@ class PatchBookRequest(BaseModel):
     hint: Optional[str] = None
     fixed_category: Optional[str] = None
     fixed_subcategory: Optional[str] = None
+    no_cover: Optional[int] = None
 
 
 @app.patch("/api/books/{book_id}")

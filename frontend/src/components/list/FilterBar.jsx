@@ -52,7 +52,7 @@ function ColPicker({ allCols, visibleCols, onToggleCol }) {
   );
 }
 
-export default function FilterBar({ filters, onFiltersChange, viewMode, onViewModeChange, onScan, onClean, allCols, visibleCols, onToggleCol }) {
+export default function FilterBar({ filters, onFiltersChange, onScan, onClean, allCols, visibleCols, onToggleCol }) {
   const [shelves, setShelves] = useState([]);
   const debounceRef = useRef(null);
 
@@ -128,24 +128,6 @@ export default function FilterBar({ filters, onFiltersChange, viewMode, onViewMo
         </select>
       </div>
       <div className="filter-bar__right">
-        <div className="filter-bar__view-toggle">
-          <button
-            className={`filter-bar__view-btn${viewMode === 'table' ? ' active' : ''}`}
-            onClick={() => onViewModeChange('table')}
-            title="Table view"
-            aria-label="Table view"
-          >
-            ☰
-          </button>
-          <button
-            className={`filter-bar__view-btn${viewMode === 'card' ? ' active' : ''}`}
-            onClick={() => onViewModeChange('card')}
-            title="Card view"
-            aria-label="Card view"
-          >
-            ⊞
-          </button>
-        </div>
         <button className="filter-bar__scan-btn" onClick={onScan}>
           Scan
         </button>
