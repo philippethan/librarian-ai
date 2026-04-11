@@ -192,6 +192,14 @@ class BookDetailDialog(QDialog):
         self._open_btn.clicked.connect(self._on_open_clicked)
         row.addWidget(self._open_btn)
 
+        self._lookup_btn = QPushButton("Lookup & Categorize…")
+        self._lookup_btn.setToolTip(
+            "Search Open Library, Google Books and other sources for this book,\n"
+            "then use Ollama to suggest a category from the results."
+        )
+        self._lookup_btn.clicked.connect(self._on_lookup_clicked)
+        row.addWidget(self._lookup_btn)
+
         cancel_btn = QPushButton("Cancel")
         cancel_btn.clicked.connect(self.reject)
         row.addWidget(cancel_btn)
@@ -290,6 +298,55 @@ class BookDetailDialog(QDialog):
         self._open_btn.setEnabled(bool(filepath))
         if not filepath:
             self._open_btn.setToolTip("No file path stored for this book")
+
+    # ------------------------------------------------------------------
+    # Online lookup + Ollama categorisation
+    # ------------------------------------------------------------------
+
+    def _on_lookup_clicked(self) -> None:
+        from ui.dialogs.online_lookup_dialog import OnlineLookupDialog  # noqa: PLC0415
+
+        # Pass the current form values (not just the original DB record) so that
+        # any unsaved edits the user has already made are used as the search query.
+        live_book = dict(self._book)
+        live_book["title"]  = self._title.text().strip()  or self._book.get("title")  or ""
+        live_book["author"] = self._author.text().strip() or self._book.get("author") or ""
+        live_book["year"]   = self._year.text().strip()   or self._book.get("year")   or ""
+
+        dlg = OnlineLookupDialog(self._book_id, live_book, self._db_path, parent=self)
+        dlg.applied.connect(self._on_lookup_applied)
+        dlg.exec()
+
+    def _on_lookup_applied(self, updated: dict) -> None:
+        """Refresh form fields from the dict emitted by OnlineLookupDialog.applied."""
+        # Update in-memory book so _collect_edits compares against the new baseline
+        self._book.update(updated)
+        if "tags" in updated:
+            self._book["tags"] = updated["tags"]   # already a list
+
+        # Repopulate form widgets
+        if "title"       in updated: self._title.setText(updated["title"])
+        if "author"      in updated: self._author.setText(updated["author"])
+        if "year"        in updated: self._year.setText(str(updated["year"] or ""))
+        if "language"    in updated: self._language.setText(updated["language"])
+        if "description" in updated: self._description.setPlainText(updated["description"])
+        if "tags"        in updated:
+            self._tags.setText(", ".join(updated["tags"]))
+
+        if "category" in updated:
+            cat = updated["category"]
+            idx = self._category.findText(cat)
+            if idx >= 0:
+                self._category.setCurrentIndex(idx)
+            self._on_category_changed(cat)
+
+        if "subcategory" in updated:
+            sub = updated["subcategory"]
+            idx = self._subcategory.findText(sub)
+            if idx >= 0:
+                self._subcategory.setCurrentIndex(idx)
+
+        log.info("Book id=%d form refreshed after online lookup", self._book_id)
 
     # ------------------------------------------------------------------
     # Open in default application

@@ -16,9 +16,10 @@ import logging
 import os
 from typing import NamedTuple
 
-from PyQt6.QtCore import QModelIndex, QPoint, QRect, Qt, QThread, pyqtSignal
+from PyQt6.QtCore import QModelIndex, QPoint, QRect, QSettings, Qt, QThread, pyqtSignal
 from PyQt6.QtGui import QAction, QBrush, QColor, QFont, QPainter, QPolygon
 from PyQt6.QtWidgets import (
+    QApplication,
     QCheckBox,
     QDialog,
     QHBoxLayout,
@@ -31,6 +32,7 @@ from PyQt6.QtWidgets import (
     QMenu,
     QMessageBox,
     QPushButton,
+    QStackedWidget,
     QStatusBar,
     QTableWidget,
     QTableWidgetItem,
@@ -372,8 +374,13 @@ class MainWindow(QMainWindow):
         self._db_path    = db_path or DB_PATH
         self._all_books: list[BookRow] = []
         self._loader: _BookLoaderThread | None = None
-        # col_index -> frozenset of allowed values (absent = no filter on that col)
         self._col_filters: dict[int, set[str]] = {}
+
+        # Feature state
+        self._settings      = QSettings("LibrarianAI", "Desktop")
+        self._col_visible   = [True] * len(_COLUMNS)   # per-column visibility
+        self._view_mode     = "list"                    # "list" | "cards"
+        self._covers_dir    = os.path.join("backend", "data", "covers")
 
         self._build_ui()
         self._build_menu()
@@ -394,7 +401,69 @@ class MainWindow(QMainWindow):
         vbox.setContentsMargins(8, 8, 8, 4)
         vbox.setSpacing(6)
 
-        # Global search bar
+        # ── Toolbar ───────────────────────────────────────────────────────
+        toolbar = QHBoxLayout()
+        toolbar.setSpacing(4)
+
+        def _tb(label, tip, slot):
+            b = QPushButton(label)
+            b.setToolTip(tip)
+            b.clicked.connect(slot)
+            return b
+
+        toolbar.addWidget(_tb("Scan Library",
+            "Scan the Books directory for new PDF/EPUB files.",
+            self._on_scan_clicked))
+
+        toolbar.addWidget(self._make_separator())
+
+        self._delete_sel_btn = _tb("Delete Selected",
+            "Delete all selected books from the database AND from disk.",
+            self._on_delete_selected)
+        self._delete_sel_btn.setEnabled(False)
+        self._delete_sel_btn.setStyleSheet("color: #c0392b;")
+        toolbar.addWidget(self._delete_sel_btn)
+
+        toolbar.addWidget(self._make_separator())
+
+        self._cols_btn = _tb("Columns \u25bc",
+            "Show or hide individual columns.",
+            self._on_columns_menu)
+        toolbar.addWidget(self._cols_btn)
+
+        toolbar.addWidget(self._make_separator())
+
+        self._view_list_btn = _tb("List",
+            "Show books as a sortable list (table view).",
+            lambda: self._set_view("list"))
+        self._view_list_btn.setCheckable(True)
+        self._view_list_btn.setChecked(True)
+        toolbar.addWidget(self._view_list_btn)
+
+        self._view_card_btn = _tb("Cards",
+            "Show books as a card grid with cover thumbnails.",
+            lambda: self._set_view("cards"))
+        self._view_card_btn.setCheckable(True)
+        toolbar.addWidget(self._view_card_btn)
+
+        toolbar.addWidget(self._make_separator())
+
+        toolbar.addWidget(_tb("A−", "Decrease font size (Ctrl+−).", self._zoom_out))
+        self._zoom_label = QLabel("10 pt")
+        self._zoom_label.setFixedWidth(38)
+        toolbar.addWidget(self._zoom_label)
+        toolbar.addWidget(_tb("A+", "Increase font size (Ctrl++).", self._zoom_in))
+
+        toolbar.addWidget(self._make_separator())
+
+        toolbar.addWidget(_tb("Settings",
+            "Application settings (display font, Khmer font, …).",
+            self._open_settings))
+
+        toolbar.addStretch()
+        vbox.addLayout(toolbar)
+
+        # ── Search bar ────────────────────────────────────────────────────
         hbox = QHBoxLayout()
         hbox.addWidget(QLabel("Search:"))
         self._search = QLineEdit()
@@ -404,48 +473,160 @@ class MainWindow(QMainWindow):
         hbox.addWidget(self._search)
         vbox.addLayout(hbox)
 
-        # Table
+        # ── Stacked view (table | cards) ──────────────────────────────────
+        self._stack = QStackedWidget()
+
+        # Index 0: list/table view
         self._table = QTableWidget(0, len(_COLUMNS))
         self._table.setHorizontalHeaderLabels([c[0] for c in _COLUMNS])
         self._table.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)
+        self._table.setSelectionMode(QTableWidget.SelectionMode.ExtendedSelection)
         self._table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
         self._table.setAlternatingRowColors(True)
         self._table.setWordWrap(False)
         self._table.verticalHeader().setVisible(False)
         self._table.setSortingEnabled(False)
         self._table.doubleClicked.connect(self._on_row_double_clicked)
-        # Right-click context menu
         self._table.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self._table.customContextMenuRequested.connect(self._on_context_menu)
+        self._table.itemSelectionChanged.connect(self._on_table_selection_changed)
 
-        # Install custom header with filter arrows
         self._header = _FilterHeaderView(self._table)
         self._header.filter_requested.connect(self._on_filter_requested)
         self._table.setHorizontalHeader(self._header)
         self._configure_columns()
+        self._stack.addWidget(self._table)   # index 0
 
-        vbox.addWidget(self._table)
+        # Index 1: card/grid view
+        from ui.views.card_view import CardView  # noqa: PLC0415
+        self._card_view = CardView(self._covers_dir, parent=self)
+        self._card_view.book_activated.connect(self._open_book_detail)
+        self._card_view.context_menu_requested.connect(self._on_card_context_menu)
+        self._stack.addWidget(self._card_view)  # index 1
 
-        # Status bar
+        vbox.addWidget(self._stack)
+
+        # ── Status bar ────────────────────────────────────────────────────
         sb = QStatusBar()
         self.setStatusBar(sb)
         self._status_label = QLabel("Loading…")
         sb.addWidget(self._status_label)
 
+        # Apply saved font size to zoom label
+        saved_size = self._settings.value("display/font_size", 10, type=int)
+        self._zoom_label.setText(f"{saved_size} pt")
+
     def _configure_columns(self) -> None:
-        widths = [300, 0, 190, 55, 155, 95]
-        modes  = [
-            QHeaderView.ResizeMode.Interactive,
-            QHeaderView.ResizeMode.Stretch,
-            QHeaderView.ResizeMode.Interactive,
-            QHeaderView.ResizeMode.Fixed,
-            QHeaderView.ResizeMode.Interactive,
-            QHeaderView.ResizeMode.Fixed,
-        ]
-        for i, (w, mode) in enumerate(zip(widths, modes)):
-            self._header.setSectionResizeMode(i, mode)
-            if w:
-                self._table.setColumnWidth(i, w)
+        widths = [300, 340, 190, 55, 155, 95]
+        for i, w in enumerate(widths):
+            self._header.setSectionResizeMode(i, QHeaderView.ResizeMode.Interactive)
+            self._table.setColumnWidth(i, w)
+
+    @staticmethod
+    def _make_separator() -> QWidget:
+        """Thin vertical line used as toolbar separator."""
+        sep = QWidget()
+        sep.setFixedWidth(1)
+        sep.setFixedHeight(20)
+        sep.setStyleSheet("background: #ccc;")
+        return sep
+
+    # ------------------------------------------------------------------
+    # Feature: column visibility
+    # ------------------------------------------------------------------
+
+    def _on_columns_menu(self) -> None:
+        menu = QMenu(self)
+        for col, (label, _) in enumerate(_COLUMNS):
+            action = menu.addAction(label)
+            action.setCheckable(True)
+            action.setChecked(self._col_visible[col])
+            action.setData(col)
+        chosen = menu.exec(
+            self._cols_btn.mapToGlobal(
+                self._cols_btn.rect().bottomLeft()
+            )
+        )
+        if chosen is not None:
+            col = chosen.data()
+            self._col_visible[col] = chosen.isChecked()
+            self._table.setColumnHidden(col, not chosen.isChecked())
+
+    # ------------------------------------------------------------------
+    # Feature: view mode (list / cards)
+    # ------------------------------------------------------------------
+
+    def _set_view(self, mode: str) -> None:
+        self._view_mode = mode
+        if mode == "list":
+            self._stack.setCurrentIndex(0)
+            self._view_list_btn.setChecked(True)
+            self._view_card_btn.setChecked(False)
+        else:
+            self._stack.setCurrentIndex(1)
+            self._view_list_btn.setChecked(False)
+            self._view_card_btn.setChecked(True)
+            # Repopulate cards with the currently visible books
+            self._refresh_card_view()
+
+    def _refresh_card_view(self) -> None:
+        """Populate the card view with the books currently passing all filters."""
+        visible = self._get_visible_books()
+        self._card_view.populate(visible)
+
+    def _get_visible_books(self) -> list[BookRow]:
+        """Return the subset of _all_books that pass the current search + column filters."""
+        query = self._search.text().strip().lower()
+        result = []
+        for book in self._all_books:
+            vals = book.cell_values()
+            if query:
+                if not any(query in vals[c].lower() for c in _SEARCH_COLS):
+                    continue
+            col_ok = True
+            for col, allowed in self._col_filters.items():
+                if vals[col] not in allowed:
+                    col_ok = False
+                    break
+            if col_ok:
+                result.append(book)
+        return result
+
+    # ------------------------------------------------------------------
+    # Feature: font zoom
+    # ------------------------------------------------------------------
+
+    def _zoom_in(self) -> None:
+        self._apply_zoom(+1)
+
+    def _zoom_out(self) -> None:
+        self._apply_zoom(-1)
+
+    def _apply_zoom(self, delta: int) -> None:
+        app  = QApplication.instance()
+        font = app.font()
+        new_size = max(8, min(18, font.pointSize() + delta))
+        font.setPointSize(new_size)
+        app.setFont(font)
+        self._zoom_label.setText(f"{new_size} pt")
+        self._settings.setValue("display/font_size", new_size)
+
+    # ------------------------------------------------------------------
+    # Feature: settings dialog
+    # ------------------------------------------------------------------
+
+    def _open_settings(self) -> None:
+        from ui.dialogs.settings_dialog import SettingsDialog  # noqa: PLC0415
+        dlg = SettingsDialog(parent=self)
+        dlg.settings_changed.connect(self._on_settings_changed)
+        dlg.exec()
+
+    def _on_settings_changed(self) -> None:
+        from ui.dialogs.settings_dialog import apply_settings_to_app  # noqa: PLC0415
+        apply_settings_to_app(QApplication.instance())
+        size = QApplication.instance().font().pointSize()
+        self._zoom_label.setText(f"{size} pt")
+        self._settings.setValue("display/font_size", size)
 
     def _build_menu(self) -> None:
         mb = self.menuBar()
@@ -465,6 +646,20 @@ class MainWindow(QMainWindow):
         dlg.exec()
 
     # ------------------------------------------------------------------
+    # Scan
+    # ------------------------------------------------------------------
+
+    def _on_scan_clicked(self) -> None:
+        """Open the scan dialog and refresh the table when it closes."""
+        from ui.scan.scan_dialog import ScanProgressDialog  # noqa: PLC0415
+        books_path = os.environ.get("BOOKS_PATH", "C:/Users/posen/Documents/Books")
+        dlg = ScanProgressDialog(self._db_path, books_path, parent=self)
+        accepted = dlg.exec()
+        if accepted:
+            self._load_books()
+            self._status_label.setText("Scan complete — library refreshed.")
+
+    # ------------------------------------------------------------------
     # Data loading
     # ------------------------------------------------------------------
 
@@ -478,9 +673,10 @@ class MainWindow(QMainWindow):
     def _on_books_loaded(self, books: list[BookRow]) -> None:
         self._all_books = books
         self._populate_table(books)
-        # Re-apply any active filters after a reload
         if self._col_filters or self._search.text().strip():
             self._apply_all_filters()
+        elif self._view_mode == "cards":
+            self._refresh_card_view()
 
     def _on_load_error(self, message: str) -> None:
         self._status_label.setText("Error loading books")
@@ -561,7 +757,6 @@ class MainWindow(QMainWindow):
         visible = 0
 
         for row in range(self._table.rowCount()):
-            # 1. Global search (filename / title / author)
             if search_query:
                 search_ok = any(
                     search_query in
@@ -571,7 +766,6 @@ class MainWindow(QMainWindow):
             else:
                 search_ok = True
 
-            # 2. Per-column filters (AND logic — all must match)
             col_ok = True
             for col, allowed in self._col_filters.items():
                 cell = self._table.item(row, col)
@@ -587,86 +781,183 @@ class MainWindow(QMainWindow):
 
         self._update_status(visible)
 
+        if self._view_mode == "cards":
+            self._refresh_card_view()
+
+    # ------------------------------------------------------------------
+    # Selection tracking
+    # ------------------------------------------------------------------
+
+    def _on_table_selection_changed(self) -> None:
+        n = len(self._table.selectedItems()) // len(_COLUMNS)
+        self._delete_sel_btn.setEnabled(n > 0)
+        self._delete_sel_btn.setText(
+            f"Delete Selected ({n})" if n > 1 else "Delete Selected"
+        )
+
+    def _selected_book_ids(self) -> list[int]:
+        """Return unique book IDs for all currently selected table rows."""
+        seen: set[int] = set()
+        ids: list[int] = []
+        for item in self._table.selectedItems():
+            if item.column() != 0:
+                continue
+            bid: int | None = item.data(Qt.ItemDataRole.UserRole)
+            if bid is not None and bid not in seen:
+                seen.add(bid)
+                ids.append(bid)
+        return ids
+
     # ------------------------------------------------------------------
     # Context menu
     # ------------------------------------------------------------------
 
     def _on_context_menu(self, pos: QPoint) -> None:
-        row = self._table.rowAt(pos.y())
-        if row < 0:
-            return
-        first = self._table.item(row, 0)
-        if not first:
-            return
-        book_id: int | None = first.data(Qt.ItemDataRole.UserRole)
-        if book_id is None:
+        clicked_row = self._table.rowAt(pos.y())
+        if clicked_row < 0:
             return
 
-        # Ensure the row is selected so the user sees what was right-clicked
-        self._table.selectRow(row)
+        # If the right-clicked row isn't in the current selection, replace selection
+        selected_rows = {idx.row() for idx in self._table.selectedIndexes()}
+        if clicked_row not in selected_rows:
+            self._table.selectRow(clicked_row)
+
+        ids = self._selected_book_ids()
+        if not ids:
+            return
 
         menu = QMenu(self)
-        menu.addAction("Edit Metadata…",
-                       lambda: self._open_book_detail(book_id))
-        menu.addAction("Rename File…",
-                       lambda: self._on_rename_file(book_id))
-        menu.addSeparator()
-        delete_action: QAction = menu.addAction("Delete…")
-        delete_action.triggered.connect(lambda: self._on_delete_book(book_id))
+        if len(ids) == 1:
+            book_id = ids[0]
+            menu.addAction("Edit Metadata…",
+                           lambda: self._open_book_detail(book_id))
+            menu.addAction("Rename File…",
+                           lambda: self._on_rename_file(book_id))
+            menu.addSeparator()
 
+        del_action: QAction = menu.addAction(
+            f"Delete {len(ids)} book(s) from DB + Disk…" if len(ids) > 1
+            else "Delete from DB + Disk…"
+        )
+        del_action.setData(ids)
+        del_action.triggered.connect(lambda: self._on_delete_selected())
         menu.exec(self._table.viewport().mapToGlobal(pos))
 
+    def _on_card_context_menu(self, book_ids: list[int], global_pos: QPoint) -> None:
+        menu = QMenu(self)
+        if len(book_ids) == 1:
+            bid = book_ids[0]
+            menu.addAction("Edit Metadata…", lambda: self._open_book_detail(bid))
+            menu.addSeparator()
+        del_label = (f"Delete {len(book_ids)} books from DB + Disk…"
+                     if len(book_ids) > 1 else "Delete from DB + Disk…")
+        menu.addAction(del_label, lambda: self._delete_books(book_ids))
+        menu.exec(global_pos)
+
     # ------------------------------------------------------------------
-    # Delete
+    # Multi-select delete (DB + disk)
+    # ------------------------------------------------------------------
+
+    def _on_delete_selected(self) -> None:
+        ids = self._selected_book_ids()
+        if not ids:
+            return
+        self._delete_books(ids)
+
+    def _delete_books(self, book_ids: list[int]) -> None:
+        """Delete one or more books from the database AND from disk after confirmation."""
+        if not book_ids:
+            return
+
+        # Fetch book details for confirmation dialog
+        conn = get_conn(self._db_path)
+        placeholders = ",".join("?" * len(book_ids))
+        rows = conn.execute(
+            f"SELECT id, filename, filepath FROM books WHERE id IN ({placeholders})",
+            book_ids,
+        ).fetchall()
+        if not rows:
+            return
+
+        books = [dict(r) for r in rows]
+        n = len(books)
+
+        # Build confirmation message
+        if n == 1:
+            detail = f'"{books[0]["filename"]}"'
+        else:
+            names  = "\n".join(f'  • {b["filename"]}' for b in books[:10])
+            more   = f"\n  … and {n - 10} more" if n > 10 else ""
+            detail = f"{n} books:\n{names}{more}"
+
+        reply = QMessageBox.question(
+            self,
+            "Confirm Delete",
+            f"Permanently delete {detail}\n\n"
+            "This will remove the record from the database AND delete the file(s) from disk.\n\n"
+            "This action cannot be undone.",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Cancel,
+            QMessageBox.StandardButton.Cancel,
+        )
+        if reply != QMessageBox.StandardButton.Yes:
+            return
+
+        errors: list[str] = []
+        deleted_ids: list[int] = []
+
+        for book in books:
+            bid      = book["id"]
+            filepath = (book.get("filepath") or "").strip()
+            try:
+                # Delete file from disk first
+                if filepath:
+                    norm = os.path.normpath(filepath)
+                    if os.path.exists(norm):
+                        os.remove(norm)
+                        log.info("Deleted file: %s", norm)
+                    else:
+                        log.warning("File not found on disk (skipping): %s", norm)
+                # Delete from DB
+                conn = get_conn(self._db_path)
+                conn.execute("DELETE FROM books WHERE id=?", (bid,))
+                conn.commit()
+                deleted_ids.append(bid)
+                log.info("Deleted book id=%d from DB", bid)
+            except PermissionError:
+                errors.append(f"{book['filename']}: file is open in another application")
+            except Exception as exc:
+                log.exception("Delete failed for book id=%d", bid)
+                errors.append(f"{book['filename']}: {exc}")
+
+        # Remove from in-memory list + table + card view
+        for bid in deleted_ids:
+            self._all_books = [b for b in self._all_books if b.id != bid]
+            for table_row in range(self._table.rowCount()):
+                first = self._table.item(table_row, 0)
+                if first and first.data(Qt.ItemDataRole.UserRole) == bid:
+                    self._table.removeRow(table_row)
+                    break
+
+        if self._view_mode == "cards":
+            self._refresh_card_view()
+
+        self._update_status()
+        self._status_label.setText(f"Deleted {len(deleted_ids)} book(s).")
+
+        if errors:
+            QMessageBox.warning(
+                self, "Some Deletions Failed",
+                "The following files could not be deleted:\n\n"
+                + "\n".join(errors),
+            )
+
+    # ------------------------------------------------------------------
+    # Single-book delete (legacy path — kept for row-level helpers)
     # ------------------------------------------------------------------
 
     def _on_delete_book(self, book_id: int) -> None:
-        try:
-            conn = get_conn(self._db_path)
-            row = conn.execute(
-                "SELECT filename, title, author, filepath FROM books WHERE id=?",
-                (book_id,),
-            ).fetchone()
-        except Exception as exc:
-            QMessageBox.critical(self, "Database Error", str(exc))
-            return
-
-        if not row:
-            return
-
-        book = dict(row)
-        dlg  = _DeleteConfirmDialog(book, parent=self)
-        if dlg.exec() != QDialog.DialogCode.Accepted:
-            return
-
-        delete_file = dlg.should_delete_file()
-
-        try:
-            if delete_file:
-                filepath = book.get("filepath") or ""
-                if filepath and os.path.exists(filepath):
-                    os.remove(filepath)
-                    log.info("Deleted file from disk: %s", filepath)
-                elif filepath:
-                    log.warning("File not found on disk (skipping): %s", filepath)
-
-            conn = get_conn(self._db_path)
-            conn.execute("DELETE FROM books WHERE id=?", (book_id,))
-            conn.commit()
-            log.info("Deleted book id=%d from DB", book_id)
-
-            self._remove_book_row(book_id)
-            self._status_label.setText(f"Deleted: {book.get('filename', '')}")
-
-        except PermissionError:
-            QMessageBox.critical(
-                self, "Delete Failed",
-                "Permission denied — the file may be open in another application.\n\n"
-                "Close the file and try again.",
-            )
-        except Exception as exc:
-            log.exception("Delete failed for book id=%d", book_id)
-            QMessageBox.critical(self, "Delete Failed", str(exc))
+        """Single-book delete — routes through the shared multi-delete path."""
+        self._delete_books([book_id])
 
     # ------------------------------------------------------------------
     # Rename file
@@ -807,13 +1098,15 @@ class MainWindow(QMainWindow):
             log.exception("Failed to refresh row book id=%d", book_id)
 
     def _remove_book_row(self, book_id: int) -> None:
-        """Remove a row from the table and the in-memory list."""
+        """Remove a row from the table, the card view, and the in-memory list."""
         self._all_books = [b for b in self._all_books if b.id != book_id]
         for table_row in range(self._table.rowCount()):
             first = self._table.item(table_row, 0)
             if first and first.data(Qt.ItemDataRole.UserRole) == book_id:
                 self._table.removeRow(table_row)
                 break
+        if self._view_mode == "cards":
+            self._refresh_card_view()
         self._update_status()
 
     # ------------------------------------------------------------------
