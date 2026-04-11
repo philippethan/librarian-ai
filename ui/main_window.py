@@ -1258,7 +1258,7 @@ class MainWindow(QMainWindow):
         done:   int       = 0
 
         # Build a quick lookup for filepath by book_id
-        fp_map = {r["id"]: r.get("filepath") or "" for r in rows}
+        fp_map = {r["id"]: (r["filepath"] or "") for r in rows}
 
         for bid, new_name in renames:
             old_filepath = fp_map.get(bid, "")
