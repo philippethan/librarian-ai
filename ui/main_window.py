@@ -1063,7 +1063,8 @@ class MainWindow(QMainWindow):
             return
 
         menu = QMenu(self)
-        if len(ids) == 1:
+        n = len(ids)
+        if n == 1:
             book_id = ids[0]
             menu.addAction("Edit Metadata…",
                            lambda: self._open_book_detail(book_id))
@@ -1071,27 +1072,33 @@ class MainWindow(QMainWindow):
                            lambda: self._on_rename_file(book_id))
             menu.addSeparator()
 
+        self._build_batch_actions(menu, ids)
+        menu.addSeparator()
         self._build_shelf_submenu(menu, ids)
         menu.addSeparator()
 
-        del_action: QAction = menu.addAction(
-            f"Delete {len(ids)} book(s) from DB + Disk…" if len(ids) > 1
-            else "Delete from DB + Disk…"
-        )
+        del_label = (f"Delete {n} book(s) from DB + Disk…" if n > 1
+                     else "Delete from DB + Disk…")
+        del_action: QAction = menu.addAction(del_label)
         del_action.setData(ids)
         del_action.triggered.connect(lambda: self._on_delete_selected())
         menu.exec(self._table.viewport().mapToGlobal(pos))
 
     def _on_card_context_menu(self, book_ids: list[int], global_pos: QPoint) -> None:
         menu = QMenu(self)
-        if len(book_ids) == 1:
+        n = len(book_ids)
+        if n == 1:
             bid = book_ids[0]
             menu.addAction("Edit Metadata…", lambda: self._open_book_detail(bid))
+            menu.addAction("Rename File…",   lambda: self._on_rename_file(bid))
             menu.addSeparator()
+
+        self._build_batch_actions(menu, book_ids)
+        menu.addSeparator()
         self._build_shelf_submenu(menu, book_ids)
         menu.addSeparator()
-        del_label = (f"Delete {len(book_ids)} books from DB + Disk…"
-                     if len(book_ids) > 1 else "Delete from DB + Disk…")
+        del_label = (f"Delete {n} book(s) from DB + Disk…"
+                     if n > 1 else "Delete from DB + Disk…")
         menu.addAction(del_label, lambda: self._delete_books(book_ids))
         menu.exec(global_pos)
 
@@ -1202,6 +1209,159 @@ class MainWindow(QMainWindow):
     def _on_delete_book(self, book_id: int) -> None:
         """Single-book delete — routes through the shared multi-delete path."""
         self._delete_books([book_id])
+
+    # ------------------------------------------------------------------
+    # Batch actions (rename / set author / set category)
+    # ------------------------------------------------------------------
+
+    def _build_batch_actions(self, menu: QMenu, book_ids: list[int]) -> None:
+        """Append bulk-edit actions to *menu* for the given selection."""
+        n = len(book_ids)
+        suffix = f" {n} book(s)" if n > 1 else ""
+        menu.addAction(
+            f"Rename{suffix}\u2026",
+            lambda: self._batch_rename_books(book_ids),
+        )
+        menu.addAction(
+            f"Set Author for{suffix}\u2026",
+            lambda: self._batch_set_author(book_ids),
+        )
+        menu.addAction(
+            f"Set Category for{suffix}\u2026",
+            lambda: self._batch_set_category(book_ids),
+        )
+
+    def _batch_rename_books(self, book_ids: list[int]) -> None:
+        """Open the batch rename dialog for the given book IDs."""
+        from pathlib import Path  # noqa: PLC0415
+        from ui.dialogs.batch_operations_dialog import BatchRenameDialog  # noqa: PLC0415
+
+        # Fetch required metadata from DB
+        conn         = get_conn(self._db_path)
+        ph           = ",".join("?" * len(book_ids))
+        rows         = conn.execute(
+            f"SELECT id, filename, filepath, title, author, year "
+            f"FROM books WHERE id IN ({ph})",
+            book_ids,
+        ).fetchall()
+        books_data   = [dict(r) for r in rows]
+
+        dlg = BatchRenameDialog(books_data, parent=self)
+        if dlg.exec() != QDialog.DialogCode.Accepted:
+            return
+
+        renames = dlg.get_renames()   # [(book_id, new_filename), ...]
+        if not renames:
+            return
+
+        errors: list[str] = []
+        done:   int       = 0
+
+        # Build a quick lookup for filepath by book_id
+        fp_map = {r["id"]: r.get("filepath") or "" for r in rows}
+
+        for bid, new_name in renames:
+            old_filepath = fp_map.get(bid, "")
+            old_path     = Path(old_filepath) if old_filepath else None
+            if old_path is None or not old_path.exists():
+                errors.append(f"File not found: {old_filepath or '(no path)'}")
+                continue
+            new_path = old_path.parent / new_name
+            if new_path.exists() and new_path != old_path:
+                errors.append(
+                    f'"{new_name}" already exists — skipped'
+                )
+                continue
+            try:
+                old_path.rename(new_path)
+                conn = get_conn(self._db_path)
+                conn.execute(
+                    "UPDATE books SET filename=?, filepath=? WHERE id=?",
+                    (new_name, str(new_path).replace("\\", "/"), bid),
+                )
+                conn.commit()
+                self._refresh_book_row(bid)
+                done += 1
+            except PermissionError:
+                errors.append(f'"{old_path.name}" is open — skipped')
+            except Exception as exc:
+                errors.append(f'"{old_path.name}": {exc}')
+
+        self._status_label.setText(f"Renamed {done} file(s).")
+        if errors:
+            QMessageBox.warning(
+                self, "Batch Rename — Partial Failure",
+                "Some files could not be renamed:\n\n" + "\n".join(errors),
+            )
+
+    def _batch_set_author(self, book_ids: list[int]) -> None:
+        """Prompt for an author name and apply it to all selected books."""
+        from PyQt6.QtWidgets import QInputDialog  # noqa: PLC0415
+        n    = len(book_ids)
+        text, ok = QInputDialog.getText(
+            self,
+            "Set Author",
+            f"Author name to apply to {n} selected book(s):",
+        )
+        if not ok:
+            return
+        author = text.strip()
+        try:
+            conn = get_conn(self._db_path)
+            ph   = ",".join("?" * n)
+            conn.execute(
+                f"UPDATE books SET author=? WHERE id IN ({ph})",
+                [author, *book_ids],
+            )
+            conn.commit()
+            for bid in book_ids:
+                self._refresh_book_row(bid)
+            self._status_label.setText(
+                f"Author set to \"{author}\" for {n} book(s)."
+            )
+            if self._view_mode == "cards":
+                self._refresh_card_view()
+        except Exception as exc:
+            QMessageBox.critical(self, "Error", str(exc))
+
+    def _batch_set_category(self, book_ids: list[int]) -> None:
+        """Open the category picker and apply the chosen category to all selected books."""
+        from ui.dialogs.batch_operations_dialog import BatchSetCategoryDialog  # noqa: PLC0415
+        n   = len(book_ids)
+        dlg = BatchSetCategoryDialog(n, parent=self)
+        if dlg.exec() != QDialog.DialogCode.Accepted:
+            return
+        category, subcategory = dlg.get_category()
+        if not category and not subcategory:
+            return
+
+        try:
+            conn  = get_conn(self._db_path)
+            ph    = ",".join("?" * n)
+            parts = []
+            args: list = []
+            if category:
+                parts.append("category=?")
+                args.append(category)
+            if subcategory:
+                parts.append("subcategory=?")
+                args.append(subcategory)
+            args.extend(book_ids)
+            conn.execute(
+                f"UPDATE books SET {', '.join(parts)} WHERE id IN ({ph})",
+                args,
+            )
+            conn.commit()
+            for bid in book_ids:
+                self._refresh_book_row(bid)
+            msg = f"Category set to \"{category}\""
+            if subcategory:
+                msg += f" / \"{subcategory}\""
+            self._status_label.setText(f"{msg} for {n} book(s).")
+            if self._view_mode == "cards":
+                self._refresh_card_view()
+        except Exception as exc:
+            QMessageBox.critical(self, "Error", str(exc))
 
     # ------------------------------------------------------------------
     # Shelf helpers
