@@ -16,9 +16,10 @@ import logging
 import os
 from typing import NamedTuple
 
-from PyQt6.QtCore import QModelIndex, QPoint, QRect, QSettings, QSize, Qt, QThread, pyqtSignal
+from PyQt6.QtCore import QEvent, QModelIndex, QPoint, QRect, QSettings, QSize, Qt, QThread, QTimer, pyqtSignal
 from PyQt6.QtGui import QAction, QBrush, QColor, QFont, QIcon, QImage, QPainter, QPixmap, QPixmapCache, QPolygon
 from PyQt6.QtWidgets import (
+    QAbstractButton,
     QApplication,
     QCheckBox,
     QDialog,
@@ -34,6 +35,8 @@ from PyQt6.QtWidgets import (
     QPushButton,
     QStackedWidget,
     QStatusBar,
+    QStyledItemDelegate,
+    QStyleOptionViewItem,
     QTableWidget,
     QTableWidgetItem,
     QVBoxLayout,
@@ -230,8 +233,11 @@ class _CoverLoader(QThread):
             if os.path.exists(path):
                 img = QImage(path)
                 if not img.isNull():
+                    # Scale to card image area (178×180 px) — large enough to
+                    # look sharp in card view and still fine scaled down as a
+                    # list-view icon.
                     img = img.scaled(
-                        48, 60,
+                        178, 180,
                         Qt.AspectRatioMode.KeepAspectRatio,
                         Qt.TransformationMode.SmoothTransformation,
                     )
@@ -291,7 +297,8 @@ class _FilterHeaderView(QHeaderView):
         cy = arrow_rect.center().y()
         half = 4
 
-        color = QColor("#1a6faf") if active else QColor("#999999")
+        from ui.theme import COLORS as _T  # noqa: PLC0415
+        color = QColor(_T["accent"]) if active else QColor(_T["text_disabled"])
         painter.save()
         painter.setRenderHint(QPainter.RenderHint.Antialiasing)
         painter.setPen(Qt.PenStyle.NoPen)
@@ -494,6 +501,72 @@ class _DeleteConfirmDialog(QDialog):
 
 
 # ---------------------------------------------------------------------------
+# Khmer-aware helpers
+# ---------------------------------------------------------------------------
+
+def _has_khmer(text: str) -> bool:
+    """Return True if *text* contains any Khmer Unicode character (U+1780–U+17FF)."""
+    return any("\u1780" <= ch <= "\u17ff" for ch in (text or ""))
+
+
+def _doc_font(base_size: int, khmer_family: str, text: str, bold: bool = False) -> QFont:
+    """
+    Return the right QFont for a piece of document-info text.
+
+    • Khmer text in title/author/filename → khmer_family (if set), else Segoe UI
+    • Everything else                     → Segoe UI at base_size
+    Bold is honoured for title cells.
+    """
+    if khmer_family and _has_khmer(text):
+        f = QFont(khmer_family, base_size)
+    else:
+        f = QFont("Segoe UI", base_size)
+    f.setBold(bold)
+    return f
+
+
+# ---------------------------------------------------------------------------
+# Custom table delegate — doc-info font size + Khmer font per cell
+# ---------------------------------------------------------------------------
+
+# Column indices that may contain Khmer text (filename=1, title=2, author=3)
+_KHMER_COLS = frozenset({1, 2, 3})
+
+
+class _DocInfoDelegate(QStyledItemDelegate):
+    """
+    Applies document-information font settings to table cells:
+      • doc_size  — point size for all book-info cells
+      • khmer_font — family used when the cell text contains Khmer characters
+                     (only for filename / title / author columns)
+
+    All other columns use Segoe UI at doc_size.
+    The rest of the UI (menus, toolbar, dialogs) is untouched.
+    """
+
+    def __init__(self, doc_size: int, khmer_font: str, parent=None) -> None:
+        super().__init__(parent)
+        self._doc_size   = doc_size
+        self._khmer_font = khmer_font
+
+    def update_settings(self, doc_size: int, khmer_font: str) -> None:
+        self._doc_size   = doc_size
+        self._khmer_font = khmer_font
+
+    def initStyleOption(self, option: QStyleOptionViewItem, index) -> None:  # noqa: N802
+        super().initStyleOption(option, index)
+        col  = index.column()
+        text = index.data(Qt.ItemDataRole.DisplayRole) or ""
+        bold = (col == 2)   # title column bold
+        option.font = _doc_font(
+            self._doc_size,
+            self._khmer_font if col in _KHMER_COLS else "",
+            text,
+            bold,
+        )
+
+
+# ---------------------------------------------------------------------------
 # Main window
 # ---------------------------------------------------------------------------
 
@@ -506,6 +579,9 @@ class MainWindow(QMainWindow):
         self._loader: _BookLoaderThread | None = None
         self._cover_loader: _CoverLoader | None = None
         self._col_filters: dict[int, set[str]] = {}
+        self._book_id_to_row: dict[int, int] = {}   # O(1) table-row lookup by book_id
+        self._covers_loaded: int = 0
+        self._covers_total:  int = 0
 
         # Feature state
         self._settings      = QSettings("LibrarianAI", "Desktop")
@@ -513,8 +589,13 @@ class MainWindow(QMainWindow):
         self._view_mode     = "list"   # "list" | "cards" | "shelves"
         self._covers_dir    = os.path.join("backend", "data", "covers")
 
+        # Raise the pixmap cache limit so card-view covers (≤178×180 px each)
+        # don't evict each other — 100 MB comfortably holds 1 000+ books.
+        QPixmapCache.setCacheLimit(102_400)  # kilobytes
+
         self._build_ui()
         self._build_menu()
+        self._restore_window_state()
         self._load_books()
 
     # ------------------------------------------------------------------
@@ -585,16 +666,8 @@ class MainWindow(QMainWindow):
 
         toolbar.addWidget(self._make_separator())
 
-        toolbar.addWidget(_tb("A−", "Decrease font size (Ctrl+−).", self._zoom_out))
-        self._zoom_label = QLabel("10 pt")
-        self._zoom_label.setFixedWidth(38)
-        toolbar.addWidget(self._zoom_label)
-        toolbar.addWidget(_tb("A+", "Increase font size (Ctrl++).", self._zoom_in))
-
-        toolbar.addWidget(self._make_separator())
-
         toolbar.addWidget(_tb("Settings",
-            "Application settings (display font, Khmer font, …).",
+            "Application and document display settings.",
             self._open_settings))
 
         toolbar.addStretch()
@@ -621,13 +694,35 @@ class MainWindow(QMainWindow):
         self._table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
         self._table.setAlternatingRowColors(True)
         self._table.setWordWrap(False)
-        self._table.verticalHeader().setVisible(False)
+        # Vertical header — visible row numbers, Excel-style drag-to-resize
+        vh = self._table.verticalHeader()
+        vh.setVisible(True)
+        vh.setSectionResizeMode(QHeaderView.ResizeMode.Interactive)
+        vh.setMinimumSectionSize(20)
+        vh.setDefaultSectionSize(64)
+        # Double-click a row number → reset that row to default height
+        vh.sectionDoubleClicked.connect(
+            lambda idx: self._table.verticalHeader().resizeSection(idx, 64)
+        )
+        # Right-click the corner button → reset all rows
+        corner = self._table.findChild(QAbstractButton)
+        if corner:
+            corner.setToolTip("Double-click to reset all row heights")
+            corner.installEventFilter(self)
         self._table.setSortingEnabled(False)
         self._table.doubleClicked.connect(self._on_row_double_clicked)
         self._table.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self._table.customContextMenuRequested.connect(self._on_context_menu)
         self._table.itemSelectionChanged.connect(self._on_table_selection_changed)
         self._table.setIconSize(QSize(48, 60))
+
+        # Doc-info delegate — applies doc font size + Khmer font per cell
+        from ui.dialogs.settings_dialog import load_settings  # noqa: PLC0415
+        _cfg = load_settings()
+        self._doc_delegate = _DocInfoDelegate(
+            _cfg["doc_font_size"], _cfg["khmer_font"], self._table
+        )
+        self._table.setItemDelegate(self._doc_delegate)
 
         self._header = _FilterHeaderView(self._table)
         self._header.filter_requested.connect(self._on_filter_requested)
@@ -637,7 +732,14 @@ class MainWindow(QMainWindow):
 
         # Index 1: card/grid view
         from ui.views.card_view import CardView  # noqa: PLC0415
-        self._card_view = CardView(self._covers_dir, parent=self)
+        from ui.dialogs.settings_dialog import load_settings as _ls  # noqa: PLC0415
+        _s = _ls()
+        self._card_view = CardView(
+            self._covers_dir,
+            doc_size=_s["doc_font_size"],
+            khmer_font=_s["khmer_font"],
+            parent=self,
+        )
         self._card_view.book_activated.connect(self._open_book_detail)
         self._card_view.context_menu_requested.connect(self._on_card_context_menu)
         self._card_view.itemSelectionChanged.connect(self._on_card_selection_changed)
@@ -657,10 +759,6 @@ class MainWindow(QMainWindow):
         self._status_label = QLabel("Loading…")
         sb.addWidget(self._status_label)
 
-        # Apply saved font size to zoom label
-        saved_size = self._settings.value("display/font_size", 10, type=int)
-        self._zoom_label.setText(f"{saved_size} pt")
-
     def _configure_columns(self) -> None:
         non_filterable = {i for i, c in enumerate(_ALL_COLUMNS) if not c.filterable}
         self._header.set_non_filterable(non_filterable)
@@ -676,7 +774,7 @@ class MainWindow(QMainWindow):
         sep = QWidget()
         sep.setFixedWidth(1)
         sep.setFixedHeight(20)
-        sep.setStyleSheet("background: #ccc;")
+        sep.setStyleSheet("background: #253045;")
         return sep
 
     # ------------------------------------------------------------------
@@ -761,40 +859,25 @@ class MainWindow(QMainWindow):
         return result
 
     # ------------------------------------------------------------------
-    # Feature: font zoom
-    # ------------------------------------------------------------------
-
-    def _zoom_in(self) -> None:
-        self._apply_zoom(+1)
-
-    def _zoom_out(self) -> None:
-        self._apply_zoom(-1)
-
-    def _apply_zoom(self, delta: int) -> None:
-        app  = QApplication.instance()
-        font = app.font()
-        new_size = max(8, min(18, font.pointSize() + delta))
-        font.setPointSize(new_size)
-        app.setFont(font)
-        self._zoom_label.setText(f"{new_size} pt")
-        self._settings.setValue("display/font_size", new_size)
-
-    # ------------------------------------------------------------------
     # Feature: settings dialog
     # ------------------------------------------------------------------
 
-    def _open_settings(self) -> None:
+    def _open_settings(self, _section: str = "doc") -> None:
         from ui.dialogs.settings_dialog import SettingsDialog  # noqa: PLC0415
         dlg = SettingsDialog(parent=self)
         dlg.settings_changed.connect(self._on_settings_changed)
         dlg.exec()
 
     def _on_settings_changed(self) -> None:
-        from ui.dialogs.settings_dialog import apply_settings_to_app  # noqa: PLC0415
-        apply_settings_to_app(QApplication.instance())
-        size = QApplication.instance().font().pointSize()
-        self._zoom_label.setText(f"{size} pt")
-        self._settings.setValue("display/font_size", size)
+        from ui.dialogs.settings_dialog import load_settings  # noqa: PLC0415
+        cfg = load_settings()
+        size  = cfg["doc_font_size"]
+        khmer = cfg["khmer_font"]
+        self._doc_delegate.update_settings(size, khmer)
+        self._table.viewport().update()
+        self._card_view.set_doc_font(size, khmer)
+        if self._view_mode == "cards":
+            self._card_view.viewport().update()
 
     def _build_menu(self) -> None:
         mb = self.menuBar()
@@ -802,6 +885,11 @@ class MainWindow(QMainWindow):
         lib_menu.addAction("&Manage Categories…", self._open_category_manager)
         lib_menu.addSeparator()
         lib_menu.addAction("&Clear All Column Filters", self._clear_all_col_filters)
+        lib_menu.addSeparator()
+        lib_menu.addAction("Application Window Settings…",
+                           lambda: self._open_settings("app"))
+        lib_menu.addAction("Document Information Settings…",
+                           lambda: self._open_settings("doc"))
 
     # ------------------------------------------------------------------
     # Category manager
@@ -867,7 +955,9 @@ class MainWindow(QMainWindow):
         self._table.setRowCount(len(books))
         self._table.verticalHeader().setDefaultSectionSize(64)
 
+        self._book_id_to_row = {}
         for row_idx, book in enumerate(books):
+            self._book_id_to_row[book.id] = row_idx
             for col_idx, value in enumerate(book.cell_values()):
                 item = QTableWidgetItem(value)
                 item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsEditable)
@@ -889,8 +979,31 @@ class MainWindow(QMainWindow):
         if self._cover_loader and self._cover_loader.isRunning():
             self._cover_loader.cancel()
             self._cover_loader.wait(500)
+
+        # Count only books that actually have a cover file on disk
+        self._covers_loaded = 0
+        self._covers_total  = sum(
+            1 for b in books
+            if os.path.exists(os.path.join(self._covers_dir, f"{b.id}.jpg"))
+        )
+
+        # Batch card-view repaints: instead of one repaint per cover signal,
+        # fire a single repaint every 150 ms so the UI stays responsive.
+        self._cover_repaint_timer = QTimer(self)
+        self._cover_repaint_timer.setInterval(150)
+        self._cover_repaint_timer.timeout.connect(
+            lambda: self._card_view.viewport().update()
+            if self._view_mode == "cards" else None
+        )
+        if self._covers_total > 0:
+            self._cover_repaint_timer.start()
+            self._status_label.setText(
+                f"Loading covers: 0 / {self._covers_total}"
+            )
+
         self._cover_loader = _CoverLoader(books, self._covers_dir, parent=self)
         self._cover_loader.cover_loaded.connect(self._on_cover_loaded)
+        self._cover_loader.finished.connect(self._on_covers_finished)
         self._cover_loader.start()
 
     def _on_cover_loaded(self, book_id: int, img: QImage) -> None:
@@ -902,17 +1015,36 @@ class MainWindow(QMainWindow):
         # Feed the QPixmapCache so the card delegate can find the cover
         QPixmapCache.insert(cover_key, pm)
 
-        # Update table row icon (only visible if the cover column is shown)
+        # Update table row icon via O(1) lookup (only if cover column is shown).
+        # Falls back to a linear scan if the table was re-sorted since load.
         if self._col_visible[0]:
-            for row in range(self._table.rowCount()):
-                item = self._table.item(row, 0)
-                if item and item.data(Qt.ItemDataRole.UserRole) == book_id:
-                    item.setIcon(icon)
-                    break
+            row = self._book_id_to_row.get(book_id)
+            item = self._table.item(row, 0) if row is not None else None
+            if item and item.data(Qt.ItemDataRole.UserRole) != book_id:
+                # Table was re-sorted; find the real row
+                item = None
+                for r in range(self._table.rowCount()):
+                    it = self._table.item(r, 0)
+                    if it and it.data(Qt.ItemDataRole.UserRole) == book_id:
+                        item = it
+                        self._book_id_to_row[book_id] = r   # update cache
+                        break
+            if item:
+                item.setIcon(icon)
 
-        # If the card view is currently active, repaint it so the new cover appears
+        # Update counter and status bar
+        self._covers_loaded += 1
+        self._status_label.setText(
+            f"Loading covers: {self._covers_loaded} / {self._covers_total}"
+        )
+
+    def _on_covers_finished(self) -> None:
+        """All covers loaded — stop the repaint timer and do one final update."""
+        if hasattr(self, "_cover_repaint_timer"):
+            self._cover_repaint_timer.stop()
         if self._view_mode == "cards":
             self._card_view.viewport().update()
+        self._update_status()   # restore normal status text
 
     # ------------------------------------------------------------------
     # Per-column filter
@@ -1246,8 +1378,25 @@ class MainWindow(QMainWindow):
         ).fetchall()
         books_data   = [dict(r) for r in rows]
 
-        dlg = BatchRenameDialog(books_data, parent=self)
-        if dlg.exec() != QDialog.DialogCode.Accepted:
+        dlg = BatchRenameDialog(books_data, self._db_path, parent=self)
+        accepted = dlg.exec() == QDialog.DialogCode.Accepted
+
+        # Remove any books deleted inside the dialog from main-window state
+        deleted_ids = dlg.get_deleted_ids()
+        if deleted_ids:
+            deleted_set = set(deleted_ids)
+            self._all_books = [b for b in self._all_books if b.id not in deleted_set]
+            for bid in deleted_ids:
+                for table_row in range(self._table.rowCount()):
+                    first = self._table.item(table_row, 0)
+                    if first and first.data(Qt.ItemDataRole.UserRole) == bid:
+                        self._table.removeRow(table_row)
+                        break
+            if self._view_mode == "cards":
+                self._refresh_card_view()
+            self._update_status()
+
+        if not accepted:
             return
 
         renames = dlg.get_renames()   # [(book_id, new_filename), ...]
@@ -1516,12 +1665,12 @@ class MainWindow(QMainWindow):
     def _open_book_detail(self, book_id: int) -> None:
         try:
             from ui.book_detail_dialog import BookDetailDialog  # noqa: PLC0415
-            dlg    = BookDetailDialog(book_id, self._db_path, parent=self)
+            dlg = BookDetailDialog(book_id, self._db_path, parent=self)
+            # Refresh the row each time the user saves (dialog stays open)
+            dlg.book_saved.connect(self._refresh_book_row)
             result = dlg.exec()
             if result == BookDetailDialog.DELETED:
                 self._remove_book_row(book_id)
-            elif result:
-                self._refresh_book_row(book_id)
         except Exception as exc:
             log.exception("Error opening book detail id=%d", book_id)
             QMessageBox.critical(self, "Error", str(exc))
@@ -1638,7 +1787,41 @@ class MainWindow(QMainWindow):
     # Lifecycle
     # ------------------------------------------------------------------
 
+    def eventFilter(self, obj, event) -> bool:  # noqa: N802
+        """Double-click the table corner button to reset all row heights."""
+        if (
+            isinstance(obj, QAbstractButton)
+            and event.type() == QEvent.Type.MouseButtonDblClick
+        ):
+            vh = self._table.verticalHeader()
+            for i in range(self._table.rowCount()):
+                vh.resizeSection(i, vh.defaultSectionSize())
+            return True
+        return super().eventFilter(obj, event)
+
+    def _restore_window_state(self) -> None:
+        """Restore geometry and view mode from previous session (if enabled)."""
+        if self._settings.value("app/remember_geometry", True, type=bool):
+            geom = self._settings.value("app/geometry")
+            if geom:
+                self.restoreGeometry(geom)
+
+        if self._settings.value("app/remember_view", True, type=bool):
+            saved_view = self._settings.value("app/last_view", "", type=str)
+            if saved_view in ("list", "cards", "shelves"):
+                self._set_view(saved_view)
+        else:
+            default_view = self._settings.value("app/default_view", "list", type=str)
+            if default_view in ("list", "cards", "shelves"):
+                self._set_view(default_view)
+
     def closeEvent(self, event) -> None:  # noqa: N802
+        # Save session state
+        if self._settings.value("app/remember_geometry", True, type=bool):
+            self._settings.setValue("app/geometry", self.saveGeometry())
+        if self._settings.value("app/remember_view", True, type=bool):
+            self._settings.setValue("app/last_view", self._view_mode)
+
         if self._loader and self._loader.isRunning():
             self._loader.quit()
             self._loader.wait(2_000)

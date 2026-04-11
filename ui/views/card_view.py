@@ -11,6 +11,11 @@ import os
 from typing import NamedTuple
 
 from PyQt6.QtCore import QPoint, QRect, QRectF, QSize, Qt, pyqtSignal
+from ui.theme import COLORS as _T
+
+# Shared Khmer detection (same logic as in main_window)
+def _has_khmer(text: str) -> bool:
+    return any("\u1780" <= ch <= "\u17ff" for ch in (text or ""))
 from PyQt6.QtGui import (
     QBrush,
     QColor,
@@ -65,6 +70,23 @@ class _CardData(NamedTuple):
 
 class _CardDelegate(QStyledItemDelegate):
 
+    def __init__(self, doc_size: int = 10, khmer_font: str = "", parent=None) -> None:
+        super().__init__(parent)
+        self._doc_size   = doc_size
+        self._khmer_font = khmer_font
+
+    def update_font_settings(self, doc_size: int, khmer_font: str) -> None:
+        self._doc_size   = doc_size
+        self._khmer_font = khmer_font
+
+    def _font_for(self, text: str, bold: bool = False) -> QFont:
+        if self._khmer_font and _has_khmer(text):
+            f = QFont(self._khmer_font, self._doc_size)
+        else:
+            f = QFont("Segoe UI", self._doc_size)
+        f.setBold(bold)
+        return f
+
     def sizeHint(self, option, index) -> QSize:  # noqa: N802
         return QSize(_CW + _SP * 2, _CH + _SP * 2)
 
@@ -80,9 +102,9 @@ class _CardDelegate(QStyledItemDelegate):
         )
 
         selected = bool(option.state & QStyle.StateFlag.State_Selected)
-        bg     = QColor("#ddeeff") if selected else QColor("#ffffff")
-        border = QColor("#1a6faf") if selected else QColor("#d0d7de")
-        shadow = QColor(0, 0, 0, 20)
+        bg     = QColor(_T["bg_selected"]) if selected else QColor(_T["bg_raised"])
+        border = QColor(_T["border_focus"]) if selected else QColor(_T["border"])
+        shadow = QColor(0, 0, 0, 40)
 
         # Drop shadow
         shadow_rect = card.translated(2, 2)
@@ -122,58 +144,49 @@ class _CardDelegate(QStyledItemDelegate):
             painter.drawPixmap(dx, dy, scaled)
             painter.restore()
         else:
-            # Placeholder — soft grey with first letter of title
-            painter.fillRect(img_rect, QColor("#eef1f4"))
-            painter.setPen(QColor("#b0b8c4"))
+            # Placeholder — dark background with first letter of title
+            painter.fillRect(img_rect, QColor(_T["bg_deep"]))
+            painter.setPen(QColor(_T["border"]))
             painter.drawRect(img_rect.adjusted(0, 0, -1, -1))
             if data and data.title:
                 big = QFont(painter.font())
                 big.setPointSize(36)
                 big.setBold(True)
                 painter.setFont(big)
-                painter.setPen(QColor("#c8d2dc"))
+                painter.setPen(QColor(_T["text_disabled"]))
                 painter.drawText(img_rect, Qt.AlignmentFlag.AlignCenter, data.title[0].upper())
 
         # ── Text area ────────────────────────────────────────────────────
         tx = int(card.x()) + _PAD
         ty = int(card.y()) + _PAD + _IH + _PAD
         tw = _CW - _PAD * 2
-        available_h = int(card.bottom()) - ty - _PAD
-
         if not data:
             painter.restore()
             return
 
-        base_font  = option.font
-        small_size = max(7, base_font.pointSize() - 1)
-
-        # Title (bold, up to 2 lines)
-        title_font = QFont(base_font)
-        title_font.setBold(True)
-        title_font.setPointSize(small_size)
-        painter.setFont(title_font)
-        painter.setPen(QColor("#1a1a2e"))
-        title_rect = QRect(tx, ty, tw, 38)
+        # Title (bold, Khmer-aware)
         title_text = data.title or data.filename or "—"
+        painter.setFont(self._font_for(title_text, bold=True))
+        painter.setPen(QColor(_T["text_primary"]))
+        title_rect = QRect(tx, ty, tw, 38)
         painter.drawText(
             title_rect,
             Qt.AlignmentFlag.AlignTop | Qt.AlignmentFlag.AlignLeft | Qt.TextFlag.TextWordWrap,
             title_text,
         )
 
-        # Author
-        normal_font = QFont(base_font)
-        normal_font.setPointSize(small_size - 1)
-        painter.setFont(normal_font)
-        painter.setPen(QColor("#555"))
-        auth_rect = QRect(tx, ty + 42, tw, 16)
+        # Author (Khmer-aware)
         author_text = data.author or ""
+        painter.setFont(self._font_for(author_text))
+        painter.setPen(QColor(_T["text_secondary"]))
+        auth_rect = QRect(tx, ty + 42, tw, 16)
         fm = painter.fontMetrics()
         painter.drawText(auth_rect, Qt.AlignmentFlag.AlignLeft | Qt.TextFlag.TextSingleLine,
                          fm.elidedText(author_text, Qt.TextElideMode.ElideRight, tw))
 
-        # Year
-        painter.setPen(QColor("#888"))
+        # Year — always design font (Latin digits)
+        painter.setFont(QFont("Segoe UI", max(7, self._doc_size - 1)))
+        painter.setPen(QColor(_T["text_dim"]))
         year_rect = QRect(tx, ty + 62, tw // 2, 14)
         painter.drawText(year_rect, Qt.AlignmentFlag.AlignLeft | Qt.TextFlag.TextSingleLine,
                          data.year or "")
@@ -191,9 +204,7 @@ class _CardDelegate(QStyledItemDelegate):
         painter.setBrush(QBrush(QColor(bg_s)))
         painter.drawRoundedRect(badge_rect, 4, 4)
         painter.setPen(QColor(fg))
-        badge_font = QFont(normal_font)
-        badge_font.setPointSize(max(6, small_size - 2))
-        painter.setFont(badge_font)
+        painter.setFont(QFont("Segoe UI", max(6, self._doc_size - 2)))
         painter.drawText(badge_rect, Qt.AlignmentFlag.AlignCenter, status)
 
         painter.restore()
@@ -213,7 +224,8 @@ class CardView(QListWidget):
     book_activated        = pyqtSignal(int)         # book_id
     context_menu_requested = pyqtSignal(list, QPoint)  # [book_id, …], global pos
 
-    def __init__(self, covers_dir: str, parent=None) -> None:
+    def __init__(self, covers_dir: str, doc_size: int = 10,
+                 khmer_font: str = "", parent=None) -> None:
         super().__init__(parent)
         self._covers_dir = covers_dir
 
@@ -226,9 +238,14 @@ class CardView(QListWidget):
         self.setSelectionMode(QAbstractItemView.SelectionMode.ExtendedSelection)
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
 
-        self.setItemDelegate(_CardDelegate(self))
+        self._delegate = _CardDelegate(doc_size, khmer_font, self)
+        self.setItemDelegate(self._delegate)
         self.itemDoubleClicked.connect(self._on_double_clicked)
         self.customContextMenuRequested.connect(self._on_context_menu)
+
+    def set_doc_font(self, doc_size: int, khmer_font: str) -> None:
+        """Update document-info font settings for the card delegate."""
+        self._delegate.update_font_settings(doc_size, khmer_font)
 
     # ------------------------------------------------------------------
     # Population
@@ -246,13 +263,21 @@ class CardView(QListWidget):
             cover_key = f"cover_{book.id}"
 
             # If this book's cover isn't in cache yet, do a quick synchronous
-            # disk check so switching to card view while the loader is still
-            # running still shows covers that are on disk.
+            # disk check so switching to card view while the async loader is
+            # still running still shows covers that are already on disk.
+            # Scale to card image area (178×180) before caching — inserting
+            # full-resolution pixmaps would fill the 100 MB cache after ~50
+            # books and silently drop all remaining covers.
             if not QPixmapCache.find(cover_key):
                 path = os.path.join(self._covers_dir, f"{book.id}.jpg")
                 if os.path.exists(path):
                     pm = QPixmap(path)
                     if not pm.isNull():
+                        pm = pm.scaled(
+                            178, 180,
+                            Qt.AspectRatioMode.KeepAspectRatio,
+                            Qt.TransformationMode.SmoothTransformation,
+                        )
                         QPixmapCache.insert(cover_key, pm)
 
             data = _CardData(

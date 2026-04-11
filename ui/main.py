@@ -13,6 +13,7 @@ import sys
 import traceback
 from pathlib import Path
 
+from PyQt6.QtCore import QEventLoop
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QApplication, QMessageBox
 
@@ -98,19 +99,40 @@ def main() -> int:
     _set_app_icon(app)
     _install_exception_hook(app)
 
-    # Apply saved display font (family + size) from settings
+    # ── Dark theme (applied before any widget is created) ──────────────
+    from ui.theme import apply_dark_theme  # noqa: PLC0415
+    apply_dark_theme(app)
+
+    # ── Splash screen ──────────────────────────────────────────────────
+    from ui.splash_screen import SplashScreen  # noqa: PLC0415
+    splash = SplashScreen()
+    splash.show()
+    app.processEvents()
+
+    # ── Initialisation steps (each updates the splash) ─────────────────
+    splash.set_status("Applying display settings…", progress=15)
     from ui.dialogs.settings_dialog import apply_settings_to_app  # noqa: PLC0415
     apply_settings_to_app(app)
 
-    # Reset any books the backend left stuck at 'processing' after a crash.
+    splash.set_status("Checking database…", progress=35)
     db_path = os.environ.get("DB_PATH", "backend/data/librarian.db")
     _reset_stuck_books(db_path)
 
-    # Import here so PyQt6 is already initialised before Qt widgets are created.
+    splash.set_status("Loading interface…", progress=55)
     from ui.main_window import MainWindow  # noqa: PLC0415
 
+    splash.set_status("Opening library…", progress=80)
     window = MainWindow()
+
+    # Loading done — show "click to continue" prompt and wait for the user
+    splash.set_ready()
+
+    wait = QEventLoop()
+    splash.clicked.connect(wait.quit)
+    wait.exec()   # blocks here until the user clicks the splash
+
     window.show()
+    splash.finish()
 
     log.info("Main window open — entering event loop")
     return app.exec()

@@ -3,10 +3,9 @@ ui/book_detail_dialog.py — Modal dialog for viewing and editing book metadata.
 
 Usage from MainWindow:
     dialog = BookDetailDialog(book_id, db_path, parent=self)
+    dialog.book_saved.connect(self._refresh_book_row)   # fires on each save
     result = dialog.exec()
-    if result == QDialog.DialogCode.Accepted:   # Save pressed
-        self._refresh_book_row(book_id)
-    elif result == BookDetailDialog.DELETED:    # Delete pressed
+    if result == BookDetailDialog.DELETED:    # Delete pressed
         self._remove_book_row(book_id)
 """
 
@@ -14,7 +13,7 @@ import json
 import logging
 import os
 
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import QTimer, Qt, pyqtSignal
 from PyQt6.QtWidgets import (
     QComboBox,
     QDialog,
@@ -63,6 +62,7 @@ class BookDetailDialog(QDialog):
     """Edit a book's metadata.  Returns Accepted on save, DELETED on delete."""
 
     DELETED: int = 2   # custom result code — use with done(DELETED)
+    book_saved = pyqtSignal(int)   # emitted after each successful save (book_id)
 
     def __init__(self, book_id: int, db_path: str | None = None, parent=None) -> None:
         super().__init__(parent)
@@ -462,8 +462,8 @@ class BookDetailDialog(QDialog):
 
         updates = self._collect_edits()
         if not updates:
-            # Nothing changed — treat as cancel so MainWindow doesn't re-fetch
-            self.reject()
+            # Nothing changed — flash a brief indicator and stay open
+            self._flash_save_btn("No changes")
             return
 
         try:
@@ -475,12 +475,24 @@ class BookDetailDialog(QDialog):
             )
             conn.commit()
             log.info("Saved book id=%d  changed=%s", self._book_id, sorted(updates))
-            self.accept()
+            # Update the in-memory snapshot so subsequent saves detect new changes
+            self._book.update(updates)
+            self.book_saved.emit(self._book_id)
+            self._flash_save_btn("Saved ✓")
 
         except Exception as exc:
             log.exception("Save failed for book id=%d", self._book_id)
             QMessageBox.critical(self, "Save Failed",
                                  f"Could not save changes:\n\n{exc}")
+
+    def _flash_save_btn(self, text: str) -> None:
+        """Briefly show *text* on the Save button, then restore the original label."""
+        self._save_btn.setText(text)
+        self._save_btn.setEnabled(False)
+        QTimer.singleShot(1500, lambda: (
+            self._save_btn.setText("Save"),
+            self._save_btn.setEnabled(True),
+        ))
 
     def _validate(self) -> bool:
         """Return True when form data is acceptable; show a warning and return False otherwise."""
