@@ -187,7 +187,7 @@ class ScanService:
                 # so the user sees something useful before Ollama processes the book.
                 hint_title, hint_author = _parse_filename(filepath_str)
 
-                conn.execute(
+                cur = conn.execute(
                     """
                     INSERT INTO books
                         (filename, filepath, file_type, file_size, file_hash, status, title, author)
@@ -203,12 +203,27 @@ class ScanService:
                         hint_author or None,
                     ),
                 )
+                new_id = cur.lastrowid
                 conn.commit()
+
+                # Extract cover image from first page (PDF page 1 / EPUB cover)
+                try:
+                    from backend.app import extract_cover  # noqa: PLC0415
+                    cover_path = extract_cover(filepath_str, new_id, file_type)
+                    if cover_path:
+                        conn.execute(
+                            "UPDATE books SET cover_path=? WHERE id=?",
+                            (cover_path, new_id),
+                        )
+                        conn.commit()
+                        log.debug("Cover extracted: id=%d", new_id)
+                except Exception as ce:  # noqa: BLE001
+                    log.debug("Cover extraction skipped for %s: %s", filename, ce)
 
                 results.inserted += 1
                 indexed_hashes.add(file_hash)
                 indexed_paths.add(filepath_str)
-                log.debug("Inserted: %s", filename)
+                log.debug("Inserted: %s (id=%d)", filename, new_id)
 
             except Exception as exc:  # noqa: BLE001
                 log.warning("Failed to process %s: %s", filename, exc)

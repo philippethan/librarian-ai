@@ -16,8 +16,8 @@ import logging
 import os
 from typing import NamedTuple
 
-from PyQt6.QtCore import QModelIndex, QPoint, QRect, QSettings, Qt, QThread, pyqtSignal
-from PyQt6.QtGui import QAction, QBrush, QColor, QFont, QPainter, QPolygon
+from PyQt6.QtCore import QModelIndex, QPoint, QRect, QSettings, QSize, Qt, QThread, pyqtSignal
+from PyQt6.QtGui import QAction, QBrush, QColor, QFont, QIcon, QImage, QPainter, QPixmap, QPixmapCache, QPolygon
 from PyQt6.QtWidgets import (
     QApplication,
     QCheckBox,
@@ -46,18 +46,39 @@ log = logging.getLogger(__name__)
 
 DB_PATH: str = os.environ.get("DB_PATH", "backend/data/librarian.db")
 
-# (header label, BookRow field name)
-_COLUMNS: list[tuple[str, str]] = [
-    ("Filename", "filename"),
-    ("Title",    "title"),
-    ("Author",   "author"),
-    ("Year",     "year"),
-    ("Category", "category"),
-    ("Status",   "status"),
+
+class ColDef(NamedTuple):
+    header:          str
+    field:           str
+    default_visible: bool
+    width:           int
+    filterable:      bool = True
+
+
+_ALL_COLUMNS: list[ColDef] = [
+    ColDef("Cover",          "cover",             True,   64, False),
+    ColDef("Filename",       "filename",          True,  270, True),
+    ColDef("Title",          "title",             True,  260, True),
+    ColDef("Author",         "author",            True,  170, True),
+    ColDef("Year",           "year",              True,   55, True),
+    ColDef("Language",       "language",          False,  80, True),
+    ColDef("Category",       "category",          True,  145, True),
+    ColDef("Subcategory",    "subcategory",       False, 130, True),
+    ColDef("Difficulty",     "difficulty",        False,  85, True),
+    ColDef("Status",         "status",            True,   90, True),
+    ColDef("Reading",        "reading_status",    False,  80, True),
+    ColDef("File Type",      "file_type",         False,  65, True),
+    ColDef("File Size",      "file_size",         False,  80, False),
+    ColDef("Tags",           "tags",              False, 200, True),
+    ColDef("Confidence",     "confidence_score",  False,  75, False),
+    ColDef("Method",         "extraction_method", False, 115, True),
+    ColDef("Added",          "added_at",          False, 125, True),
+    ColDef("Processed",      "processed_at",      False, 125, True),
 ]
 
-# Columns matched by the global search bar
-_SEARCH_COLS = (0, 1, 2)   # filename, title, author
+# Logical column indices searched by the global search bar
+# Cover=0, Filename=1, Title=2, Author=3
+_SEARCH_COLS = (1, 2, 3)
 
 # Width (px) reserved for the filter-arrow in each column header
 _ARROW_W = 22
@@ -68,17 +89,53 @@ _ARROW_W = 22
 # ---------------------------------------------------------------------------
 
 class BookRow(NamedTuple):
-    id:       int
-    filename: str
-    title:    str
-    author:   str
-    year:     str
-    category: str
-    status:   str
+    id:                int
+    filename:          str
+    title:             str
+    author:            str
+    year:              str
+    language:          str
+    category:          str
+    subcategory:       str
+    difficulty:        str
+    status:            str
+    reading_status:    str
+    file_type:         str
+    file_size:         str   # formatted e.g. "1.2 MB"
+    tags:              str
+    confidence_score:  str
+    extraction_method: str
+    added_at:          str
+    processed_at:      str
+
+    def get_field(self, field: str) -> str:
+        """Return the value for a given _ALL_COLUMNS field name."""
+        if field == "cover":
+            return ""
+        return getattr(self, field, "") or ""
 
     def cell_values(self) -> tuple[str, ...]:
-        return (self.filename, self.title, self.author,
-                self.year, self.category, self.status)
+        """Values in _ALL_COLUMNS order; index 0 (cover) is always empty string."""
+        return (
+            "",                     # 0: cover — icon handled by _CoverLoader
+            self.filename,          # 1
+            self.title,             # 2
+            self.author,            # 3
+            self.year,              # 4
+            self.language,          # 5
+            self.category,          # 6
+            self.subcategory,       # 7
+            self.difficulty,        # 8
+            self.status,            # 9
+            self.reading_status,    # 10
+            self.file_type,         # 11
+            self.file_size,         # 12
+            self.tags,              # 13
+            self.confidence_score,  # 14
+            self.extraction_method, # 15
+            self.added_at,          # 16
+            self.processed_at,      # 17
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -97,18 +154,42 @@ class _BookLoaderThread(QThread):
         try:
             conn = get_conn(self._db_path)
             rows = conn.execute(
-                "SELECT id, filename, title, author, year, category, status "
-                "FROM books ORDER BY filename COLLATE NOCASE"
+                """SELECT id, filename, title, author, year, language,
+                          category, subcategory, difficulty, status,
+                          reading_status, file_type, file_size, tags,
+                          confidence_score, extraction_method, added_at, processed_at
+                   FROM books ORDER BY filename COLLATE NOCASE"""
             ).fetchall()
+
+            def _fmt_size(val) -> str:
+                if not val:
+                    return ""
+                try:
+                    return f"{int(val) / 1_048_576:.1f} MB"
+                except (TypeError, ValueError):
+                    return str(val)
+
             books = [
                 BookRow(
-                    id       = r["id"],
-                    filename = r["filename"] or "",
-                    title    = r["title"]    or "",
-                    author   = r["author"]   or "",
-                    year     = str(r["year"]) if r["year"] else "",
-                    category = r["category"] or "",
-                    status   = r["status"]   or "",
+                    id                = r["id"],
+                    filename          = r["filename"]          or "",
+                    title             = r["title"]             or "",
+                    author            = r["author"]            or "",
+                    year              = str(r["year"]) if r["year"] else "",
+                    language          = r["language"]          or "",
+                    category          = r["category"]          or "",
+                    subcategory       = r["subcategory"]       or "",
+                    difficulty        = r["difficulty"]        or "",
+                    status            = r["status"]            or "",
+                    reading_status    = r["reading_status"]    or "",
+                    file_type         = r["file_type"]         or "",
+                    file_size         = _fmt_size(r["file_size"]),
+                    tags              = r["tags"]              or "",
+                    confidence_score  = (f"{r['confidence_score']:.0%}"
+                                         if r["confidence_score"] else ""),
+                    extraction_method = r["extraction_method"] or "",
+                    added_at          = (r["added_at"]    or "")[:10],
+                    processed_at      = (r["processed_at"] or "")[:10],
                 )
                 for r in rows
             ]
@@ -117,6 +198,44 @@ class _BookLoaderThread(QThread):
         except Exception as exc:
             log.exception("Loader thread failed")
             self.error_occurred.emit(str(exc))
+
+
+# ---------------------------------------------------------------------------
+# Background cover loader
+# ---------------------------------------------------------------------------
+
+class _CoverLoader(QThread):
+    """Loads cover thumbnails as QImage objects (thread-safe) in the background.
+
+    Emits cover_loaded(book_id, QImage) for each cover found.
+    The main thread converts QImage → QPixmap → QIcon and sets it on the row.
+    """
+
+    cover_loaded = pyqtSignal(int, object)   # book_id, QImage
+
+    def __init__(self, books: list, covers_dir: str, parent=None) -> None:
+        super().__init__(parent)
+        self._books      = books
+        self._covers_dir = covers_dir
+        self._cancelled  = False
+
+    def cancel(self) -> None:
+        self._cancelled = True
+
+    def run(self) -> None:
+        for book in self._books:
+            if self._cancelled:
+                break
+            path = os.path.join(self._covers_dir, f"{book.id}.jpg")
+            if os.path.exists(path):
+                img = QImage(path)
+                if not img.isNull():
+                    img = img.scaled(
+                        48, 60,
+                        Qt.AspectRatioMode.KeepAspectRatio,
+                        Qt.TransformationMode.SmoothTransformation,
+                    )
+                    self.cover_loaded.emit(book.id, img)
 
 
 # ---------------------------------------------------------------------------
@@ -133,9 +252,14 @@ class _FilterHeaderView(QHeaderView):
 
     def __init__(self, parent=None) -> None:
         super().__init__(Qt.Orientation.Horizontal, parent)
-        self._filtered: set[int] = set()   # columns with an active filter
+        self._filtered: set[int] = set()        # columns with an active filter
+        self._non_filterable: set[int] = set()  # columns with no filter arrow
         self.setSectionsClickable(True)
         self.setHighlightSections(True)
+
+    def set_non_filterable(self, cols: set[int]) -> None:
+        self._non_filterable = cols
+        self.viewport().update()
 
     # -- public API --------------------------------------------------------
 
@@ -156,9 +280,10 @@ class _FilterHeaderView(QHeaderView):
         super().paintSection(painter, rect, logical_index)
         painter.restore()
 
-        # Draw the filter arrow on the right edge of the section
-        active = logical_index in self._filtered
-        self._paint_arrow(painter, rect, active)
+        # Only draw the filter arrow for filterable columns
+        if logical_index not in self._non_filterable:
+            active = logical_index in self._filtered
+            self._paint_arrow(painter, rect, active)
 
     def _paint_arrow(self, painter: QPainter, rect: QRect, active: bool) -> None:
         arrow_rect = QRect(rect.right() - _ARROW_W, rect.top(), _ARROW_W, rect.height())
@@ -186,6 +311,11 @@ class _FilterHeaderView(QHeaderView):
         pos  = event.pos()
         logi = self.logicalIndexAt(pos)
         if logi < 0:
+            super().mousePressEvent(event)
+            return
+
+        # Non-filterable columns — only sorting, no arrow click
+        if logi in self._non_filterable:
             super().mousePressEvent(event)
             return
 
@@ -374,12 +504,13 @@ class MainWindow(QMainWindow):
         self._db_path    = db_path or DB_PATH
         self._all_books: list[BookRow] = []
         self._loader: _BookLoaderThread | None = None
+        self._cover_loader: _CoverLoader | None = None
         self._col_filters: dict[int, set[str]] = {}
 
         # Feature state
         self._settings      = QSettings("LibrarianAI", "Desktop")
-        self._col_visible   = [True] * len(_COLUMNS)   # per-column visibility
-        self._view_mode     = "list"                    # "list" | "cards"
+        self._col_visible   = [c.default_visible for c in _ALL_COLUMNS]
+        self._view_mode     = "list"   # "list" | "cards" | "shelves"
         self._covers_dir    = os.path.join("backend", "data", "covers")
 
         self._build_ui()
@@ -446,6 +577,12 @@ class MainWindow(QMainWindow):
         self._view_card_btn.setCheckable(True)
         toolbar.addWidget(self._view_card_btn)
 
+        self._view_shelves_btn = _tb("Shelves",
+            "Show virtual shelves — create and browse book collections.",
+            lambda: self._set_view("shelves"))
+        self._view_shelves_btn.setCheckable(True)
+        toolbar.addWidget(self._view_shelves_btn)
+
         toolbar.addWidget(self._make_separator())
 
         toolbar.addWidget(_tb("A−", "Decrease font size (Ctrl+−).", self._zoom_out))
@@ -477,8 +614,8 @@ class MainWindow(QMainWindow):
         self._stack = QStackedWidget()
 
         # Index 0: list/table view
-        self._table = QTableWidget(0, len(_COLUMNS))
-        self._table.setHorizontalHeaderLabels([c[0] for c in _COLUMNS])
+        self._table = QTableWidget(0, len(_ALL_COLUMNS))
+        self._table.setHorizontalHeaderLabels([c.header for c in _ALL_COLUMNS])
         self._table.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)
         self._table.setSelectionMode(QTableWidget.SelectionMode.ExtendedSelection)
         self._table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
@@ -490,6 +627,7 @@ class MainWindow(QMainWindow):
         self._table.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self._table.customContextMenuRequested.connect(self._on_context_menu)
         self._table.itemSelectionChanged.connect(self._on_table_selection_changed)
+        self._table.setIconSize(QSize(48, 60))
 
         self._header = _FilterHeaderView(self._table)
         self._header.filter_requested.connect(self._on_filter_requested)
@@ -502,7 +640,14 @@ class MainWindow(QMainWindow):
         self._card_view = CardView(self._covers_dir, parent=self)
         self._card_view.book_activated.connect(self._open_book_detail)
         self._card_view.context_menu_requested.connect(self._on_card_context_menu)
+        self._card_view.itemSelectionChanged.connect(self._on_card_selection_changed)
         self._stack.addWidget(self._card_view)  # index 1
+
+        # Index 2: shelves view
+        from ui.views.shelf_view import ShelfView  # noqa: PLC0415
+        self._shelf_view = ShelfView(self._db_path, self._covers_dir, parent=self)
+        self._shelf_view.book_activated.connect(self._open_book_detail)
+        self._stack.addWidget(self._shelf_view)  # index 2
 
         vbox.addWidget(self._stack)
 
@@ -517,10 +662,13 @@ class MainWindow(QMainWindow):
         self._zoom_label.setText(f"{saved_size} pt")
 
     def _configure_columns(self) -> None:
-        widths = [300, 340, 190, 55, 155, 95]
-        for i, w in enumerate(widths):
+        non_filterable = {i for i, c in enumerate(_ALL_COLUMNS) if not c.filterable}
+        self._header.set_non_filterable(non_filterable)
+        for i, col in enumerate(_ALL_COLUMNS):
             self._header.setSectionResizeMode(i, QHeaderView.ResizeMode.Interactive)
-            self._table.setColumnWidth(i, w)
+            self._table.setColumnWidth(i, col.width)
+            if not col.default_visible:
+                self._table.setColumnHidden(i, True)
 
     @staticmethod
     def _make_separator() -> QWidget:
@@ -537,8 +685,8 @@ class MainWindow(QMainWindow):
 
     def _on_columns_menu(self) -> None:
         menu = QMenu(self)
-        for col, (label, _) in enumerate(_COLUMNS):
-            action = menu.addAction(label)
+        for col, cdef in enumerate(_ALL_COLUMNS):
+            action = menu.addAction(cdef.header)
             action.setCheckable(True)
             action.setChecked(self._col_visible[col])
             action.setData(col)
@@ -551,6 +699,18 @@ class MainWindow(QMainWindow):
             col = chosen.data()
             self._col_visible[col] = chosen.isChecked()
             self._table.setColumnHidden(col, not chosen.isChecked())
+            # When cover column re-enabled, repopulate table icons from QPixmapCache
+            if col == 0 and chosen.isChecked():
+                for row in range(self._table.rowCount()):
+                    item = self._table.item(row, 0)
+                    if not item:
+                        continue
+                    bid = item.data(Qt.ItemDataRole.UserRole)
+                    if bid is None:
+                        continue
+                    pm = QPixmapCache.find(f"cover_{bid}")
+                    if pm and not pm.isNull():
+                        item.setIcon(QIcon(pm))
 
     # ------------------------------------------------------------------
     # Feature: view mode (list / cards)
@@ -558,16 +718,24 @@ class MainWindow(QMainWindow):
 
     def _set_view(self, mode: str) -> None:
         self._view_mode = mode
+        self._view_list_btn.setChecked(mode == "list")
+        self._view_card_btn.setChecked(mode == "cards")
+        self._view_shelves_btn.setChecked(mode == "shelves")
+
+        # Reset delete button — selection tracking is view-specific
+        self._delete_sel_btn.setEnabled(False)
+        self._delete_sel_btn.setText("Delete Selected")
+
         if mode == "list":
             self._stack.setCurrentIndex(0)
-            self._view_list_btn.setChecked(True)
-            self._view_card_btn.setChecked(False)
-        else:
+            # Re-evaluate table selection in case it was non-empty before switching
+            self._on_table_selection_changed()
+        elif mode == "cards":
             self._stack.setCurrentIndex(1)
-            self._view_list_btn.setChecked(False)
-            self._view_card_btn.setChecked(True)
-            # Repopulate cards with the currently visible books
             self._refresh_card_view()
+        elif mode == "shelves":
+            self._stack.setCurrentIndex(2)
+            self._shelf_view.refresh_shelves()
 
     def _refresh_card_view(self) -> None:
         """Populate the card view with the books currently passing all filters."""
@@ -689,20 +857,62 @@ class MainWindow(QMainWindow):
     # ------------------------------------------------------------------
 
     def _populate_table(self, books: list[BookRow]) -> None:
+        # Cancel any running cover loader before repopulating
+        if self._cover_loader and self._cover_loader.isRunning():
+            self._cover_loader.cancel()
+            self._cover_loader.wait(500)
+
         self._table.setSortingEnabled(False)
         self._table.clearContents()
         self._table.setRowCount(len(books))
+        self._table.verticalHeader().setDefaultSectionSize(64)
 
         for row_idx, book in enumerate(books):
             for col_idx, value in enumerate(book.cell_values()):
                 item = QTableWidgetItem(value)
                 item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsEditable)
                 if col_idx == 0:
+                    # Cover column: store book_id as UserRole; icon set later
                     item.setData(Qt.ItemDataRole.UserRole, book.id)
                 self._table.setItem(row_idx, col_idx, item)
 
         self._table.setSortingEnabled(True)
         self._update_status()
+        self._start_cover_loader(books)
+
+    def _start_cover_loader(self, books: list[BookRow]) -> None:
+        """Start a background thread to load cover thumbnails into QPixmapCache.
+
+        Always runs regardless of cover-column visibility, so the card view
+        always benefits from cached covers.
+        """
+        if self._cover_loader and self._cover_loader.isRunning():
+            self._cover_loader.cancel()
+            self._cover_loader.wait(500)
+        self._cover_loader = _CoverLoader(books, self._covers_dir, parent=self)
+        self._cover_loader.cover_loaded.connect(self._on_cover_loaded)
+        self._cover_loader.start()
+
+    def _on_cover_loaded(self, book_id: int, img: QImage) -> None:
+        """Slot: convert QImage → QPixmap, update table icon + QPixmapCache for cards."""
+        pm        = QPixmap.fromImage(img)
+        icon      = QIcon(pm)
+        cover_key = f"cover_{book_id}"
+
+        # Feed the QPixmapCache so the card delegate can find the cover
+        QPixmapCache.insert(cover_key, pm)
+
+        # Update table row icon (only visible if the cover column is shown)
+        if self._col_visible[0]:
+            for row in range(self._table.rowCount()):
+                item = self._table.item(row, 0)
+                if item and item.data(Qt.ItemDataRole.UserRole) == book_id:
+                    item.setIcon(icon)
+                    break
+
+        # If the card view is currently active, repaint it so the new cover appears
+        if self._view_mode == "cards":
+            self._card_view.viewport().update()
 
     # ------------------------------------------------------------------
     # Per-column filter
@@ -710,6 +920,9 @@ class MainWindow(QMainWindow):
 
     def _on_filter_requested(self, col: int) -> None:
         """Open the column filter popup for *col*."""
+        if col >= len(_ALL_COLUMNS) or not _ALL_COLUMNS[col].filterable:
+            return
+
         # Collect unique values currently in the table for this column
         all_vals: list[str] = sorted(
             {
@@ -723,7 +936,7 @@ class MainWindow(QMainWindow):
 
         current_filter = self._col_filters.get(col)   # None = all selected
         dlg = _ColumnFilterDialog(
-            _COLUMNS[col][0], all_vals, current_filter, parent=self
+            _ALL_COLUMNS[col].header, all_vals, current_filter, parent=self
         )
         if dlg.exec() != QDialog.DialogCode.Accepted:
             return
@@ -789,11 +1002,34 @@ class MainWindow(QMainWindow):
     # ------------------------------------------------------------------
 
     def _on_table_selection_changed(self) -> None:
-        n = len(self._table.selectedItems()) // len(_COLUMNS)
+        if self._view_mode != "list":
+            return
+        n = len(self._selected_book_ids())
         self._delete_sel_btn.setEnabled(n > 0)
         self._delete_sel_btn.setText(
             f"Delete Selected ({n})" if n > 1 else "Delete Selected"
         )
+
+    def _on_card_selection_changed(self) -> None:
+        """Keep the Delete Selected button in sync with card view selection."""
+        if self._view_mode != "cards":
+            return
+        n = len(self._selected_card_ids())
+        self._delete_sel_btn.setEnabled(n > 0)
+        self._delete_sel_btn.setText(
+            f"Delete Selected ({n})" if n > 1 else "Delete Selected"
+        )
+
+    def _selected_card_ids(self) -> list[int]:
+        """Return unique book IDs for all currently selected cards."""
+        seen: set[int] = set()
+        ids: list[int] = []
+        for it in self._card_view.selectedItems():
+            d = it.data(Qt.ItemDataRole.UserRole)
+            if d is not None and hasattr(d, "book_id") and d.book_id not in seen:
+                seen.add(d.book_id)
+                ids.append(d.book_id)
+        return ids
 
     def _selected_book_ids(self) -> list[int]:
         """Return unique book IDs for all currently selected table rows."""
@@ -835,6 +1071,9 @@ class MainWindow(QMainWindow):
                            lambda: self._on_rename_file(book_id))
             menu.addSeparator()
 
+        self._build_shelf_submenu(menu, ids)
+        menu.addSeparator()
+
         del_action: QAction = menu.addAction(
             f"Delete {len(ids)} book(s) from DB + Disk…" if len(ids) > 1
             else "Delete from DB + Disk…"
@@ -849,6 +1088,8 @@ class MainWindow(QMainWindow):
             bid = book_ids[0]
             menu.addAction("Edit Metadata…", lambda: self._open_book_detail(bid))
             menu.addSeparator()
+        self._build_shelf_submenu(menu, book_ids)
+        menu.addSeparator()
         del_label = (f"Delete {len(book_ids)} books from DB + Disk…"
                      if len(book_ids) > 1 else "Delete from DB + Disk…")
         menu.addAction(del_label, lambda: self._delete_books(book_ids))
@@ -859,7 +1100,10 @@ class MainWindow(QMainWindow):
     # ------------------------------------------------------------------
 
     def _on_delete_selected(self) -> None:
-        ids = self._selected_book_ids()
+        if self._view_mode == "cards":
+            ids = self._selected_card_ids()
+        else:
+            ids = self._selected_book_ids()
         if not ids:
             return
         self._delete_books(ids)
@@ -958,6 +1202,71 @@ class MainWindow(QMainWindow):
     def _on_delete_book(self, book_id: int) -> None:
         """Single-book delete — routes through the shared multi-delete path."""
         self._delete_books([book_id])
+
+    # ------------------------------------------------------------------
+    # Shelf helpers
+    # ------------------------------------------------------------------
+
+    def _build_shelf_submenu(self, parent_menu: QMenu, book_ids: list[int]) -> None:
+        """Append an 'Add to Shelf ▶' submenu to *parent_menu*."""
+        sub = parent_menu.addMenu("Add to Shelf \u25b6")
+        # 'New Shelf…' always at the top
+        new_action = sub.addAction("New Shelf\u2026")
+        new_action.triggered.connect(lambda: self._create_shelf_and_add(book_ids))
+        try:
+            conn = get_conn(self._db_path)
+            shelves = conn.execute(
+                "SELECT id, name FROM shelves ORDER BY name COLLATE NOCASE"
+            ).fetchall()
+        except Exception:
+            shelves = []
+        if shelves:
+            sub.addSeparator()
+            for shelf in shelves:
+                sid, sname = shelf["id"], shelf["name"]
+                action = sub.addAction(sname)
+                action.triggered.connect(
+                    lambda checked, s=sid: self._add_books_to_shelf(s, book_ids)
+                )
+
+    def _add_books_to_shelf(self, shelf_id: int, book_ids: list[int]) -> None:
+        """Add one or more books to a shelf (silently ignores duplicates)."""
+        try:
+            conn = get_conn(self._db_path)
+            for bid in book_ids:
+                conn.execute(
+                    "INSERT OR IGNORE INTO shelf_books (shelf_id, book_id) VALUES (?, ?)",
+                    (shelf_id, bid),
+                )
+            conn.commit()
+            n = len(book_ids)
+            self._status_label.setText(
+                f"Added {n} book{'s' if n > 1 else ''} to shelf."
+            )
+            if self._view_mode == "shelves":
+                self._shelf_view.refresh_shelves()
+        except Exception as exc:
+            log.exception("Failed to add books to shelf")
+            QMessageBox.critical(self, "Shelf Error", str(exc))
+
+    def _create_shelf_and_add(self, book_ids: list[int]) -> None:
+        """Prompt for a new shelf name, create it, and add books to it."""
+        from PyQt6.QtWidgets import QInputDialog  # noqa: PLC0415
+        name, ok = QInputDialog.getText(self, "New Shelf", "Shelf name:")
+        if not ok or not name.strip():
+            return
+        name = name.strip()
+        try:
+            conn = get_conn(self._db_path)
+            conn.execute("INSERT INTO shelves (name) VALUES (?)", (name,))
+            conn.commit()
+            row = conn.execute(
+                "SELECT id FROM shelves WHERE name=?", (name,)
+            ).fetchone()
+            if row:
+                self._add_books_to_shelf(row["id"], book_ids)
+        except Exception as exc:
+            QMessageBox.critical(self, "Shelf Error", str(exc))
 
     # ------------------------------------------------------------------
     # Rename file
@@ -1066,21 +1375,44 @@ class MainWindow(QMainWindow):
         try:
             conn = get_conn(self._db_path)
             r = conn.execute(
-                "SELECT id, filename, title, author, year, category, status "
-                "FROM books WHERE id=?",
+                """SELECT id, filename, title, author, year, language,
+                          category, subcategory, difficulty, status,
+                          reading_status, file_type, file_size, tags,
+                          confidence_score, extraction_method, added_at, processed_at
+                   FROM books WHERE id=?""",
                 (book_id,),
             ).fetchone()
             if not r:
                 return
 
+            def _fmt_size(val) -> str:
+                if not val:
+                    return ""
+                try:
+                    return f"{int(val) / 1_048_576:.1f} MB"
+                except (TypeError, ValueError):
+                    return str(val)
+
             updated = BookRow(
-                id       = r["id"],
-                filename = r["filename"] or "",
-                title    = r["title"]    or "",
-                author   = r["author"]   or "",
-                year     = str(r["year"]) if r["year"] else "",
-                category = r["category"] or "",
-                status   = r["status"]   or "",
+                id                = r["id"],
+                filename          = r["filename"]          or "",
+                title             = r["title"]             or "",
+                author            = r["author"]            or "",
+                year              = str(r["year"]) if r["year"] else "",
+                language          = r["language"]          or "",
+                category          = r["category"]          or "",
+                subcategory       = r["subcategory"]       or "",
+                difficulty        = r["difficulty"]        or "",
+                status            = r["status"]            or "",
+                reading_status    = r["reading_status"]    or "",
+                file_type         = r["file_type"]         or "",
+                file_size         = _fmt_size(r["file_size"]),
+                tags              = r["tags"]              or "",
+                confidence_score  = (f"{r['confidence_score']:.0%}"
+                                      if r["confidence_score"] else ""),
+                extraction_method = r["extraction_method"] or "",
+                added_at          = (r["added_at"]    or "")[:10],
+                processed_at      = (r["processed_at"] or "")[:10],
             )
             self._all_books = [
                 updated if b.id == book_id else b for b in self._all_books
@@ -1150,4 +1482,7 @@ class MainWindow(QMainWindow):
         if self._loader and self._loader.isRunning():
             self._loader.quit()
             self._loader.wait(2_000)
+        if self._cover_loader and self._cover_loader.isRunning():
+            self._cover_loader.cancel()
+            self._cover_loader.wait(1_000)
         super().closeEvent(event)

@@ -235,10 +235,19 @@ class CardView(QListWidget):
     # ------------------------------------------------------------------
 
     def populate(self, books) -> None:
-        """Replace all cards with the given list of BookRow objects."""
+        """Replace all cards with the given list of BookRow objects.
+
+        Covers are served from QPixmapCache (populated by _CoverLoader in the
+        main window).  Any cover not yet in cache shows the placeholder; it
+        will appear once the loader emits the cover and calls viewport().update().
+        """
         self.clear()
         for book in books:
             cover_key = f"cover_{book.id}"
+
+            # If this book's cover isn't in cache yet, do a quick synchronous
+            # disk check so switching to card view while the loader is still
+            # running still shows covers that are on disk.
             if not QPixmapCache.find(cover_key):
                 path = os.path.join(self._covers_dir, f"{book.id}.jpg")
                 if os.path.exists(path):
@@ -247,13 +256,13 @@ class CardView(QListWidget):
                         QPixmapCache.insert(cover_key, pm)
 
             data = _CardData(
-                book_id  = book.id,
-                title    = book.title,
-                author   = book.author,
-                year     = book.year,
-                status   = book.status,
-                filename = book.filename,
-                cover_key= cover_key,
+                book_id   = book.id,
+                title     = book.title,
+                author    = book.author,
+                year      = book.year,
+                status    = book.status,
+                filename  = book.filename,
+                cover_key = cover_key,
             )
             item = QListWidgetItem()
             item.setData(Qt.ItemDataRole.UserRole, data)
