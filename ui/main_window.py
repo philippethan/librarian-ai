@@ -16,6 +16,7 @@ from PyQt6.QtWidgets import (
     QLabel,
     QLineEdit,
     QMainWindow,
+    QMenuBar,
     QMessageBox,
     QStatusBar,
     QTableWidget,
@@ -118,6 +119,7 @@ class MainWindow(QMainWindow):
         self._loader: _BookLoaderThread | None = None
 
         self._build_ui()
+        self._build_menu()
         self._load_books()
 
     # ------------------------------------------------------------------
@@ -181,6 +183,23 @@ class MainWindow(QMainWindow):
             h.setSectionResizeMode(i, mode)
             if w:
                 self._table.setColumnWidth(i, w)
+
+    def _build_menu(self) -> None:
+        mb = self.menuBar()
+        lib_menu = mb.addMenu("&Library")
+        lib_menu.addAction("&Manage Categories…", self._open_category_manager)
+
+    def _open_category_manager(self) -> None:
+        from ui.category_manager import CategoryManagerDialog  # noqa: PLC0415
+        dlg = CategoryManagerDialog(self._db_path, parent=self)
+        dlg.categories_updated.connect(self._on_categories_updated)
+        dlg.exec()
+
+    def _on_categories_updated(self) -> None:
+        """Called when CategoryManagerDialog changes the taxonomy."""
+        # Refresh the Category column values visible in the table (books.category
+        # may have been renamed or cleared by the manager).
+        self._load_books()
 
     # ------------------------------------------------------------------
     # Data loading
