@@ -27,6 +27,7 @@ from PyQt6.QtWidgets import (
     QSizePolicy,
     QTextEdit,
     QVBoxLayout,
+    QWidget,
 )
 
 from backend.db import get_conn
@@ -65,9 +66,10 @@ class BookDetailDialog(QDialog):
 
     def __init__(self, book_id: int, db_path: str | None = None, parent=None) -> None:
         super().__init__(parent)
-        self._book_id = book_id
-        self._db_path = db_path or DB_PATH
-        self._book: dict = {}   # populated by _load_book()
+        self._book_id     = book_id
+        self._db_path     = db_path or DB_PATH
+        self._book: dict  = {}   # populated by _load_book()
+        self._file_renamed = False  # set True after a successful disk rename
 
         self.setWindowTitle("Book Details")
         self.setMinimumWidth(580)
@@ -98,12 +100,21 @@ class BookDetailDialog(QDialog):
         form.setLabelAlignment(Qt.AlignmentFlag.AlignRight)
         form.setSpacing(8)
 
-        # Filename — read-only info field
+        # Filename — read-only display + Rename button
+        filename_row = QHBoxLayout()
         self._filename = QLineEdit()
         self._filename.setReadOnly(True)
         self._filename.setStyleSheet("color: palette(mid);")
-        self._filename.setToolTip("Filename cannot be changed here")
-        form.addRow("Filename:", self._filename)
+        self._filename.setToolTip("Current filename on disk")
+        filename_row.addWidget(self._filename)
+
+        self._rename_btn = QPushButton("Rename…")
+        self._rename_btn.setToolTip("Rename the file on disk and update the database")
+        self._rename_btn.setFixedWidth(90)
+        self._rename_btn.clicked.connect(self._on_rename_clicked)
+        filename_row.addWidget(self._rename_btn)
+
+        form.addRow("Filename:", filename_row)
 
         # Title
         self._title = QLineEdit()
@@ -175,6 +186,11 @@ class BookDetailDialog(QDialog):
         row.addWidget(self._delete_btn)
 
         row.addStretch()
+
+        self._open_btn = QPushButton("Open")
+        self._open_btn.setToolTip("Open this file with the default Windows application")
+        self._open_btn.clicked.connect(self._on_open_clicked)
+        row.addWidget(self._open_btn)
 
         cancel_btn = QPushButton("Cancel")
         cancel_btn.clicked.connect(self.reject)
@@ -269,6 +285,116 @@ class BookDetailDialog(QDialog):
         display = b.get("title") or b.get("filename") or f"Book #{self._book_id}"
         self.setWindowTitle(f"Edit — {display}")
 
+        # Enable Open only when there is a filepath we can hand to os.startfile
+        filepath = b.get("filepath") or ""
+        self._open_btn.setEnabled(bool(filepath))
+        if not filepath:
+            self._open_btn.setToolTip("No file path stored for this book")
+
+    # ------------------------------------------------------------------
+    # Open in default application
+    # ------------------------------------------------------------------
+
+    def _on_open_clicked(self) -> None:
+        filepath = self._book.get("filepath") or ""
+        if not filepath:
+            QMessageBox.warning(self, "Cannot Open",
+                                "No file path is stored for this book.")
+            return
+
+        # Normalise forward-slashes → OS path separators
+        path = os.path.normpath(filepath)
+
+        if not os.path.exists(path):
+            QMessageBox.warning(
+                self, "File Not Found",
+                f"The file could not be found on disk:\n\n{path}",
+            )
+            return
+
+        try:
+            os.startfile(path)   # Windows: opens with the registered default app
+            log.info("Opened book id=%d: %s", self._book_id, path)
+        except OSError as exc:
+            log.exception("os.startfile failed for %s", path)
+            QMessageBox.critical(
+                self, "Cannot Open File",
+                f"Windows could not open the file:\n\n{exc}",
+            )
+
+    # ------------------------------------------------------------------
+    # Rename file on disk
+    # ------------------------------------------------------------------
+
+    def _on_rename_clicked(self) -> None:
+        from pathlib import Path  # noqa: PLC0415
+        from ui.dialogs.rename_file_dialog import (  # noqa: PLC0415
+            RenameFileDialog, generate_filename,
+        )
+
+        filepath = self._book.get("filepath") or ""
+        if not filepath:
+            QMessageBox.warning(self, "Cannot Rename",
+                                "No file path is stored for this book.")
+            return
+
+        orig_path = Path(os.path.normpath(filepath))
+        orig_ext  = orig_path.suffix
+
+        suggested = generate_filename(
+            self._book.get("title"),
+            self._book.get("author"),
+            self._book.get("year"),
+            orig_ext,
+        )
+
+        dlg = RenameFileDialog(
+            current_filename   = orig_path.name,
+            suggested_filename = suggested,
+            original_ext       = orig_ext,
+            parent             = self,
+        )
+        if dlg.exec() != QDialog.DialogCode.Accepted:
+            return
+
+        new_name = dlg.get_new_filename()
+        new_path = orig_path.parent / new_name
+
+        if not orig_path.exists():
+            QMessageBox.warning(self, "File Not Found",
+                                f"The original file could not be found:\n{orig_path}")
+            return
+
+        if new_path.exists() and new_path != orig_path:
+            QMessageBox.warning(self, "Name Conflict",
+                                f'A file named "{new_name}" already exists in that folder.')
+            return
+
+        try:
+            orig_path.rename(new_path)
+
+            new_path_str = str(new_path).replace("\\", "/")
+            conn = get_conn(self._db_path)
+            conn.execute(
+                "UPDATE books SET filename=?, filepath=? WHERE id=?",
+                (new_name, new_path_str, self._book_id),
+            )
+            conn.commit()
+
+            # Reflect the change in the in-memory book dict and the UI
+            self._book["filename"] = new_name
+            self._book["filepath"] = new_path_str
+            self._filename.setText(new_name)
+            self._file_renamed = True
+            log.info("Renamed book id=%d: %s → %s", self._book_id, orig_path.name, new_name)
+
+        except PermissionError:
+            QMessageBox.critical(self, "Rename Failed",
+                                 "Permission denied — the file may be open in another app.")
+        except Exception as exc:
+            log.exception("Rename failed for book id=%d", self._book_id)
+            QMessageBox.critical(self, "Rename Failed", str(exc))
+
     # ------------------------------------------------------------------
     # Save
     # ------------------------------------------------------------------
@@ -359,6 +485,14 @@ class BookDetailDialog(QDialog):
             updates["tags"] = new_tags_json   # stored as JSON string
 
         return updates
+
+    def reject(self) -> None:
+        # If a file rename already happened the main window must refresh its
+        # table row even if the user cancelled the metadata edit.
+        if self._file_renamed:
+            self.accept()
+        else:
+            super().reject()
 
     # ------------------------------------------------------------------
     # Delete

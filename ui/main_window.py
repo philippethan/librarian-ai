@@ -166,7 +166,7 @@ class _FilterHeaderView(QHeaderView):
 
         color = QColor("#1a6faf") if active else QColor("#999999")
         painter.save()
-        painter.setRenderHint(QPainter.RenderingHint.Antialiasing)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
         painter.setPen(Qt.PenStyle.NoPen)
         painter.setBrush(QBrush(color))
         # Down-pointing triangle
