@@ -268,14 +268,11 @@ class MainWindow(QMainWindow):
         try:
             from ui.book_detail_dialog import BookDetailDialog  # noqa: PLC0415
             dialog = BookDetailDialog(book_id, self._db_path, parent=self)
-            if dialog.exec():
+            result = dialog.exec()
+            if result == BookDetailDialog.DELETED:
+                self._remove_book_row(book_id)
+            elif result:   # Accepted (saved)
                 self._refresh_book_row(book_id)
-        except ImportError:
-            QMessageBox.information(
-                self,
-                "Coming soon",
-                "BookDetailDialog hasn't been built yet.",
-            )
         except Exception as exc:
             log.exception("Error opening detail for book id=%d", book_id)
             QMessageBox.critical(self, "Error", str(exc))
@@ -320,6 +317,22 @@ class MainWindow(QMainWindow):
 
         except Exception:
             log.exception("Failed to refresh row for book id=%d", book_id)
+
+    def _remove_book_row(self, book_id: int) -> None:
+        """Remove the row for *book_id* from the table and the in-memory list."""
+        self._all_books = [b for b in self._all_books if b.id != book_id]
+
+        for table_row in range(self._table.rowCount()):
+            first = self._table.item(table_row, 0)
+            if first and first.data(Qt.ItemDataRole.UserRole) == book_id:
+                self._table.removeRow(table_row)
+                break
+
+        self._update_status(
+            sum(1 for r in range(self._table.rowCount())
+                if not self._table.isRowHidden(r)),
+            len(self._all_books),
+        )
 
     # ------------------------------------------------------------------
     # Helpers
